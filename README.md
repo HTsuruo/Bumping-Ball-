@@ -8,3 +8,7 @@
 
 ## Library
   * 未定
+
+## coding-rule
+  * [swift-style-guide](github/swift-style-guide)に準拠
+  * [SwiftLint](realm/SwiftLint)の導入
