@@ -10,7 +10,7 @@ import UIKit
 
 class TopViewController: UIViewController {
     
-    let utils = Utis()
+    let utils = Utils()
     
     override func viewDidLoad() {
         super.viewDidLoad()
