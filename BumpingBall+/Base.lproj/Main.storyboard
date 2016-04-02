@@ -9,7 +9,7 @@
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="BumpingBall_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onePlayVC" id="BV1-FR-VrT" customClass="GameViewController" customModule="BumpingBall_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
@@ -37,19 +37,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Bumping Ball +" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4i-4X-9kP">
-                                <rect key="frame" x="20" y="286.5" width="560" height="26.5"/>
+                                <rect key="frame" x="20" y="286" width="560" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsc-yv-aM9">
+                                <rect key="frame" x="260" y="394" width="81" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="One Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onePlayBtnClicked:" destination="FFW-j8-PWE" eventType="touchUpInside" id="BBD-WQ-VsI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="i4i-4X-9kP" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" id="9ch-II-9Ig"/>
                             <constraint firstAttribute="trailingMargin" secondItem="i4i-4X-9kP" secondAttribute="trailing" id="Z5w-CR-igU"/>
+                            <constraint firstItem="v2V-mu-I55" firstAttribute="top" secondItem="dsc-yv-aM9" secondAttribute="bottom" constant="170" id="aHQ-QY-ang"/>
                             <constraint firstItem="i4i-4X-9kP" firstAttribute="centerY" secondItem="OWX-VH-aeT" secondAttribute="centerY" id="bZm-Zr-Xl4"/>
+                            <constraint firstItem="dsc-yv-aM9" firstAttribute="centerX" secondItem="OWX-VH-aeT" secondAttribute="centerX" id="eH0-PO-TKo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="onePlayBtn" destination="dsc-yv-aM9" id="omV-qf-o4R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGT-fT-5fa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
