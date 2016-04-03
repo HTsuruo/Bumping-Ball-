@@ -13,8 +13,8 @@ struct Ball {
     var ballId = 0
     var ball = SKSpriteNode(imageNamed: ballImage.BLUE)
     var ballScale = define.BALL_INIT_SCALE
-    var isFire = false
     var ballSpeed = define.BALL_INIT_SPEED
+    var isFire = false
 }
 
 struct ballImage {

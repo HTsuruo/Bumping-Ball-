@@ -51,6 +51,7 @@ class GameScene: SKScene {
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//        ball.ball.runAction(Sound.launch)
         ball.isFire = true
 //        ball.ball.runAction(actionMove)
 //        print("id : ", ball.ballId, ", num : ", num)
@@ -68,7 +69,6 @@ class GameScene: SKScene {
     
     private func sizeChange() {
 //        let actionScale = SKAction.scaleTo(1.0, duration: 0.5)
-        
         ball.ballScale += 0.015
         if ball.ballScale < 0.7 {
             ball.ballSpeed = define.BALL_INIT_SPEED

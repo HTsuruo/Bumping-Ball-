@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56AC957C1CB16CDC00B31FE3 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AC957B1CB16CDC00B31FE3 /* Sound.swift */; };
+		56AC95801CB16D0000B31FE3 /* bigger.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56AC957E1CB16D0000B31FE3 /* bigger.mp3 */; };
+		56AC95811CB16D0000B31FE3 /* launch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56AC957F1CB16D0000B31FE3 /* launch.mp3 */; };
 		56BB7F301CAD345100675AE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BB7F2F1CAD345100675AE8 /* AppDelegate.swift */; };
 		56BB7F321CAD345100675AE8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 56BB7F311CAD345100675AE8 /* GameScene.sks */; };
 		56BB7F341CAD345100675AE8 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BB7F331CAD345100675AE8 /* GameScene.swift */; };
@@ -44,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		56AC957B1CB16CDC00B31FE3 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		56AC957E1CB16D0000B31FE3 /* bigger.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bigger.mp3; path = sound/bigger.mp3; sourceTree = SOURCE_ROOT; };
+		56AC957F1CB16D0000B31FE3 /* launch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = launch.mp3; path = sound/launch.mp3; sourceTree = SOURCE_ROOT; };
 		56BB7F2C1CAD345100675AE8 /* BumpingBall+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BumpingBall+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BB7F2F1CAD345100675AE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56BB7F311CAD345100675AE8 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -94,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56AC957D1CB16CEF00B31FE3 /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				56AC957E1CB16D0000B31FE3 /* bigger.mp3 */,
+				56AC957F1CB16D0000B31FE3 /* launch.mp3 */,
+			);
+			name = sound;
+			sourceTree = "<group>";
+		};
 		56BB7F231CAD345100675AE8 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +144,8 @@
 				56BB7FCC1CAFFC7D00675AE8 /* Ball.swift */,
 				56BB7FD01CAFFD1400675AE8 /* Enums.swift */,
 				56BB7FB11CAD777A00675AE8 /* Utils.swift */,
+				56AC957B1CB16CDC00B31FE3 /* Sound.swift */,
+				56AC957D1CB16CEF00B31FE3 /* sound */,
 				56BB7FC11CAFC08200675AE8 /* img */,
 			);
 			path = "BumpingBall+";
@@ -269,9 +286,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				56BB7F321CAD345100675AE8 /* GameScene.sks in Resources */,
+				56AC95811CB16D0000B31FE3 /* launch.mp3 in Resources */,
 				56BB7FCB1CAFFC0000675AE8 /* ball_red@2x.png in Resources */,
 				56BB7FC81CAFFC0000675AE8 /* ball_blue@2x.png in Resources */,
 				56BB7F3E1CAD345200675AE8 /* LaunchScreen.storyboard in Resources */,
+				56AC95801CB16D0000B31FE3 /* bigger.mp3 in Resources */,
 				56BB7F3B1CAD345200675AE8 /* Assets.xcassets in Resources */,
 				56BB7F391CAD345200675AE8 /* Main.storyboard in Resources */,
 				56BB7FC91CAFFC0000675AE8 /* ball_green@2x.png in Resources */,
@@ -324,6 +343,7 @@
 				56BB7FD11CAFFD1500675AE8 /* Enums.swift in Sources */,
 				56BB7F361CAD345100675AE8 /* GameViewController.swift in Sources */,
 				56BB7F301CAD345100675AE8 /* AppDelegate.swift in Sources */,
+				56AC957C1CB16CDC00B31FE3 /* Sound.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
