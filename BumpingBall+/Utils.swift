@@ -10,6 +10,9 @@ import UIKit
 
 struct define {
     static let MAX = 20
+    static let BALL_INIT_SCALE = CGFloat(0.5)
+    static let BALL_INIT_SPEED = CGFloat(0.5)
+    static let TOUCH_MARGIN = CGFloat(50.0) //タッチ箇所とボールが被って見難くなってしまうので少しずらします.
 }
 
 class Utils: NSObject {
