@@ -18,6 +18,12 @@
 		56BB7F541CAD345200675AE8 /* BumpingBall_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BB7F531CAD345200675AE8 /* BumpingBall_UITests.swift */; };
 		56BB7FB01CAD766900675AE8 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BB7FAF1CAD766900675AE8 /* TopViewController.swift */; };
 		56BB7FB21CAD777A00675AE8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BB7FB11CAD777A00675AE8 /* Utils.swift */; };
+		56BB7FC81CAFFC0000675AE8 /* ball_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BB7FC41CAFFC0000675AE8 /* ball_blue@2x.png */; };
+		56BB7FC91CAFFC0000675AE8 /* ball_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BB7FC51CAFFC0000675AE8 /* ball_green@2x.png */; };
+		56BB7FCA1CAFFC0000675AE8 /* ball_orange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BB7FC61CAFFC0000675AE8 /* ball_orange@2x.png */; };
+		56BB7FCB1CAFFC0000675AE8 /* ball_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BB7FC71CAFFC0000675AE8 /* ball_red@2x.png */; };
+		56BB7FCD1CAFFC7D00675AE8 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BB7FCC1CAFFC7D00675AE8 /* Ball.swift */; };
+		56BB7FD11CAFFD1500675AE8 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BB7FD01CAFFD1400675AE8 /* Enums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,12 @@
 		56BB7F551CAD345200675AE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56BB7FAF1CAD766900675AE8 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		56BB7FB11CAD777A00675AE8 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		56BB7FC41CAFFC0000675AE8 /* ball_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ball_blue@2x.png"; path = "img/ball_blue@2x.png"; sourceTree = SOURCE_ROOT; };
+		56BB7FC51CAFFC0000675AE8 /* ball_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ball_green@2x.png"; path = "img/ball_green@2x.png"; sourceTree = SOURCE_ROOT; };
+		56BB7FC61CAFFC0000675AE8 /* ball_orange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ball_orange@2x.png"; path = "img/ball_orange@2x.png"; sourceTree = SOURCE_ROOT; };
+		56BB7FC71CAFFC0000675AE8 /* ball_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ball_red@2x.png"; path = "img/ball_red@2x.png"; sourceTree = SOURCE_ROOT; };
+		56BB7FCC1CAFFC7D00675AE8 /* Ball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
+		56BB7FD01CAFFD1400675AE8 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +126,10 @@
 				56BB7F3A1CAD345200675AE8 /* Assets.xcassets */,
 				56BB7F3C1CAD345200675AE8 /* LaunchScreen.storyboard */,
 				56BB7F3F1CAD345200675AE8 /* Info.plist */,
+				56BB7FCC1CAFFC7D00675AE8 /* Ball.swift */,
+				56BB7FD01CAFFD1400675AE8 /* Enums.swift */,
 				56BB7FB11CAD777A00675AE8 /* Utils.swift */,
+				56BB7FC11CAFC08200675AE8 /* img */,
 			);
 			path = "BumpingBall+";
 			sourceTree = "<group>";
@@ -135,6 +150,17 @@
 				56BB7F551CAD345200675AE8 /* Info.plist */,
 			);
 			path = "BumpingBall+UITests";
+			sourceTree = "<group>";
+		};
+		56BB7FC11CAFC08200675AE8 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				56BB7FC41CAFFC0000675AE8 /* ball_blue@2x.png */,
+				56BB7FC51CAFFC0000675AE8 /* ball_green@2x.png */,
+				56BB7FC61CAFFC0000675AE8 /* ball_orange@2x.png */,
+				56BB7FC71CAFFC0000675AE8 /* ball_red@2x.png */,
+			);
+			name = img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,9 +269,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				56BB7F321CAD345100675AE8 /* GameScene.sks in Resources */,
+				56BB7FCB1CAFFC0000675AE8 /* ball_red@2x.png in Resources */,
+				56BB7FC81CAFFC0000675AE8 /* ball_blue@2x.png in Resources */,
 				56BB7F3E1CAD345200675AE8 /* LaunchScreen.storyboard in Resources */,
 				56BB7F3B1CAD345200675AE8 /* Assets.xcassets in Resources */,
 				56BB7F391CAD345200675AE8 /* Main.storyboard in Resources */,
+				56BB7FC91CAFFC0000675AE8 /* ball_green@2x.png in Resources */,
+				56BB7FCA1CAFFC0000675AE8 /* ball_orange@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,9 +317,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56BB7FCD1CAFFC7D00675AE8 /* Ball.swift in Sources */,
 				56BB7FB21CAD777A00675AE8 /* Utils.swift in Sources */,
 				56BB7FB01CAD766900675AE8 /* TopViewController.swift in Sources */,
 				56BB7F341CAD345100675AE8 /* GameScene.swift in Sources */,
+				56BB7FD11CAFFD1500675AE8 /* Enums.swift in Sources */,
 				56BB7F361CAD345100675AE8 /* GameViewController.swift in Sources */,
 				56BB7F301CAD345100675AE8 /* AppDelegate.swift in Sources */,
 			);

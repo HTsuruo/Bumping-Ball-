@@ -8,6 +8,10 @@
 
 import UIKit
 
+struct define {
+    static let MAX = 20
+}
+
 class Utils: NSObject {
     let WIDTH: CGFloat = UIScreen.mainScreen().bounds.size.width
     let HEIGHT: CGFloat = UIScreen.mainScreen().bounds.size.height
