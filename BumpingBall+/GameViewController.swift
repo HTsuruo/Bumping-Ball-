@@ -12,13 +12,16 @@ import SpriteKit
 class GameViewController: UIViewController {
 
     let util = Utils()
+    var skView = SKView()
+    @IBOutlet var pauseMenu: UIView!
+    @IBOutlet weak var resumeBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if let scene = GameScene(fileNamed:"PlayScene") {
             // Configure the view.
-            let skView = self.view as! SKView
+            skView = self.view as! SKView
             skView.showsFPS = true
             skView.showsNodeCount = true
             
@@ -31,9 +34,16 @@ class GameViewController: UIViewController {
             skView.presentScene(scene)
         }
         
-        /*let tmpView = UIView(frame: CGRectMake(0, util.HEIGHT-50, util.WIDTH, 50))
-        tmpView.backgroundColor = UIColor.cyanColor()
-        self.view.addSubview(tmpView)*/
+        //pauseボタン
+        let pauseBtn = UIButton(frame: CGRectMake(0, 10, 100, 10))
+        pauseBtn.tintColor = UIColor.whiteColor()
+        pauseBtn.setTitle("pause", forState: UIControlState.Normal)
+        pauseBtn.addTarget(self, action: "onClickPauseBtn:", forControlEvents: .TouchUpInside)
+        self.view.addSubview(pauseBtn)
+        
+        //pauseMenu
+        pauseMenu = UINib(nibName: "PauseMenu", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! UIView
+        pauseMenu.frame = CGRectMake(0, 0, define.WIDTH, define.HEIGHT)
     }
 
     override func shouldAutorotate() -> Bool {
@@ -56,4 +66,15 @@ class GameViewController: UIViewController {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    
+    internal func onClickPauseBtn(sender: UIButton) {
+        skView.paused = true
+        self.view.addSubview(pauseMenu)
+    }
+    
+    @IBAction func onClickResumeBtn(sender: UIButton) {
+        skView.paused = false
+        pauseMenu.removeFromSuperview()
+    }
+
 }

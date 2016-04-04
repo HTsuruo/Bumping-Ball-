@@ -40,13 +40,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    
+        if self.paused {//ポーズ中は入力出来ないように.
+            return
+        }
         
         for touch in touches {
             let location = touch.locationInNode(self)
+            
             ball = Ball()
             ball.setLocation(location.x, posY: location.y + define.TOUCH_MARGIN)
             ball.setCategory(ballCategory, targetCat: targetBallCategory)
-        
+    
             let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
             ball.ball.runAction(SKAction.repeatActionForever(action))
             self.addChild(ball.ball)
