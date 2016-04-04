@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import UIKit
 
 class GameScene: SKScene {
     
@@ -15,13 +16,13 @@ class GameScene: SKScene {
     let ballUtil = BallUtils()
     
     override func didMoveToView(view: SKView) {
-        self.backgroundColor = UIColor.whiteColor()
+        self.backgroundColor = UIColor.blackColor()
        
         /* Setup your scene here */
         let myLabel = SKLabelNode(fontNamed:"Chalkduster")
         myLabel.text = "score"
         myLabel.fontSize = 30
-        myLabel.fontColor = UIColor.blackColor()
+        myLabel.fontColor = UIColor.whiteColor()
         myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:self.frame.height-30)
         self.addChild(myLabel)
         
@@ -32,6 +33,7 @@ class GameScene: SKScene {
         for touch in touches {
             let location = touch.locationInNode(self)
             ball = Ball()
+            ball.ball.name = "ball"
             ball.ball.position.x = location.x
             ball.ball.position.y = location.y + define.TOUCH_MARGIN
             
@@ -53,18 +55,30 @@ class GameScene: SKScene {
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
 //        ball.ball.runAction(Sound.launch)
         ball.isFire = true
-//        ball.ball.runAction(actionMove)
-//        print("id : ", ball.ballId, ", num : ", num)
         let actionMove = SKAction.moveToY(util.HEIGHT, duration: Double(ball.ballSpeed))
-        ball.ball.runAction(actionMove, completion: {
-            self.ball.ball.removeFromParent()
-        })
+        ball.ball.runAction(actionMove)
     }
    
     override func update(currentTime: CFTimeInterval) {
+        removeBall()
         if  !ball.isFire {
             sizeChange()
         }
+        
+    }
+    
+    private func removeBall() {
+        self.enumerateChildNodesWithName("ball", usingBlock: {
+            node, step in
+            if node is SKSpriteNode {
+                let targetBall = node as! SKSpriteNode
+                if targetBall.position.y >= self.util.HEIGHT {
+                    targetBall.runAction(SKAction.fadeOutWithDuration(0.3), completion: {
+                        targetBall.removeFromParent()
+                    })
+                }
+            }
+        })
     }
     
     private func sizeChange() {
