@@ -156,9 +156,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // ballとtargetballが接触した時の処理
         if firstBody.categoryBitMask & ballCategory != 0 &&
             secondBody.categoryBitMask & targetBallCategory != 0 {
+                removeBothBalls(secondBody.node!)
                 firstBody.node?.removeFromParent()
-                secondBody.node?.removeFromParent()
         }
+    }
+    
+    func removeBothBalls(node: SKNode) {
+        let sparkPath = NSBundle.mainBundle().pathForResource("spark", ofType: "sks")
+        let spark = NSKeyedUnarchiver.unarchiveObjectWithFile(sparkPath!) as! SKEmitterNode
+        spark.position = node.position
+        spark.particleColorSequence = nil
+        spark.particleColorBlendFactor = 1.0
+        spark.particleColor = colorUtils.blue
+        spark.setScale(0.5)
+        self.addChild(spark)
+        
+        let fadeOut = SKAction.fadeOutWithDuration(0.5)
+        let remove = SKAction.removeFromParent()
+        let sequence = SKAction.sequence([fadeOut, remove])
+        spark.runAction(sequence)
+    
+        node.removeFromParent()
     }
     
 }

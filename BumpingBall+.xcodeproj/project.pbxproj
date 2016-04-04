@@ -11,6 +11,8 @@
 		56AC95801CB16D0000B31FE3 /* bigger.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56AC957E1CB16D0000B31FE3 /* bigger.mp3 */; };
 		56AC95811CB16D0000B31FE3 /* launch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56AC957F1CB16D0000B31FE3 /* launch.mp3 */; };
 		56AC95891CB2281B00B31FE3 /* TargetBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AC95881CB2281B00B31FE3 /* TargetBall.swift */; };
+		56AC958C1CB2401500B31FE3 /* spark.sks in Resources */ = {isa = PBXBuildFile; fileRef = 56AC958A1CB2401500B31FE3 /* spark.sks */; };
+		56AC958D1CB2401500B31FE3 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 56AC958B1CB2401500B31FE3 /* spark.png */; };
 		56BB7F301CAD345100675AE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BB7F2F1CAD345100675AE8 /* AppDelegate.swift */; };
 		56BB7F321CAD345100675AE8 /* PlayScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 56BB7F311CAD345100675AE8 /* PlayScene.sks */; };
 		56BB7F341CAD345100675AE8 /* PlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BB7F331CAD345100675AE8 /* PlayScene.swift */; };
@@ -52,6 +54,8 @@
 		56AC957E1CB16D0000B31FE3 /* bigger.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bigger.mp3; path = sound/bigger.mp3; sourceTree = SOURCE_ROOT; };
 		56AC957F1CB16D0000B31FE3 /* launch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = launch.mp3; path = sound/launch.mp3; sourceTree = SOURCE_ROOT; };
 		56AC95881CB2281B00B31FE3 /* TargetBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetBall.swift; sourceTree = "<group>"; };
+		56AC958A1CB2401500B31FE3 /* spark.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = spark.sks; sourceTree = "<group>"; };
+		56AC958B1CB2401500B31FE3 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		56BB7F2C1CAD345100675AE8 /* BumpingBall+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BumpingBall+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BB7F2F1CAD345100675AE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56BB7F311CAD345100675AE8 /* PlayScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PlayScene.sks; sourceTree = "<group>"; };
@@ -111,6 +115,28 @@
 			name = sound;
 			sourceTree = "<group>";
 		};
+		56AC95921CB24A0100B31FE3 /* component */ = {
+			isa = PBXGroup;
+			children = (
+				56BB7FCC1CAFFC7D00675AE8 /* Ball.swift */,
+				56AC95881CB2281B00B31FE3 /* TargetBall.swift */,
+				56BB7FD01CAFFD1400675AE8 /* Enums.swift */,
+				56BB7FB11CAD777A00675AE8 /* Utils.swift */,
+				56AC957B1CB16CDC00B31FE3 /* Sound.swift */,
+			);
+			name = component;
+			sourceTree = "<group>";
+		};
+		56AC95931CB24A1F00B31FE3 /* sks */ = {
+			isa = PBXGroup;
+			children = (
+				56BB7F311CAD345100675AE8 /* PlayScene.sks */,
+				56AC958A1CB2401500B31FE3 /* spark.sks */,
+				56AC958B1CB2401500B31FE3 /* spark.png */,
+			);
+			name = sks;
+			sourceTree = "<group>";
+		};
 		56BB7F231CAD345100675AE8 = {
 			isa = PBXGroup;
 			children = (
@@ -135,7 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				56BB7F2F1CAD345100675AE8 /* AppDelegate.swift */,
-				56BB7F311CAD345100675AE8 /* PlayScene.sks */,
 				56BB7F331CAD345100675AE8 /* PlayScene.swift */,
 				56BB7F351CAD345100675AE8 /* GameViewController.swift */,
 				56BB7FAF1CAD766900675AE8 /* TopViewController.swift */,
@@ -143,11 +168,8 @@
 				56BB7F3A1CAD345200675AE8 /* Assets.xcassets */,
 				56BB7F3C1CAD345200675AE8 /* LaunchScreen.storyboard */,
 				56BB7F3F1CAD345200675AE8 /* Info.plist */,
-				56BB7FCC1CAFFC7D00675AE8 /* Ball.swift */,
-				56AC95881CB2281B00B31FE3 /* TargetBall.swift */,
-				56BB7FD01CAFFD1400675AE8 /* Enums.swift */,
-				56BB7FB11CAD777A00675AE8 /* Utils.swift */,
-				56AC957B1CB16CDC00B31FE3 /* Sound.swift */,
+				56AC95931CB24A1F00B31FE3 /* sks */,
+				56AC95921CB24A0100B31FE3 /* component */,
 				56AC957D1CB16CEF00B31FE3 /* sound */,
 				56BB7FC11CAFC08200675AE8 /* img */,
 			);
@@ -289,11 +311,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				56BB7F321CAD345100675AE8 /* PlayScene.sks in Resources */,
+				56AC958D1CB2401500B31FE3 /* spark.png in Resources */,
 				56AC95811CB16D0000B31FE3 /* launch.mp3 in Resources */,
 				56BB7FCB1CAFFC0000675AE8 /* ball_red@2x.png in Resources */,
 				56BB7FC81CAFFC0000675AE8 /* ball_blue@2x.png in Resources */,
 				56BB7F3E1CAD345200675AE8 /* LaunchScreen.storyboard in Resources */,
 				56AC95801CB16D0000B31FE3 /* bigger.mp3 in Resources */,
+				56AC958C1CB2401500B31FE3 /* spark.sks in Resources */,
 				56BB7F3B1CAD345200675AE8 /* Assets.xcassets in Resources */,
 				56BB7F391CAD345200675AE8 /* Main.storyboard in Resources */,
 				56BB7FC91CAFFC0000675AE8 /* ball_green@2x.png in Resources */,

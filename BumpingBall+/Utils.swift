@@ -28,3 +28,38 @@ class Utils: NSObject {
     }
     
 }
+
+
+struct colorUtils {
+    static let blue = colorWithHexString("2196F3")
+    static let green = colorWithHexString("4CAF50")
+    static let orange = colorWithHexString("FF9800")
+    static let red = colorWithHexString("f44336")
+    
+}
+
+//rgb指定ではなくカラーコードで指定できるようにした.
+func colorWithHexString (hex: String) -> UIColor {
+    
+    let cString: String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).uppercaseString
+    
+    if (cString as String).characters.count != 6 {
+        return UIColor.grayColor()
+    }
+    
+    let rString = (cString as NSString).substringWithRange(NSRange(location: 0, length: 2))
+    let gString = (cString as NSString).substringWithRange(NSRange(location: 2, length: 2))
+    let bString = (cString as NSString).substringWithRange(NSRange(location: 4, length: 2))
+    
+    var r: CUnsignedInt = 0, g: CUnsignedInt = 0, b: CUnsignedInt = 0
+    NSScanner(string: rString).scanHexInt(&r)
+    NSScanner(string: gString).scanHexInt(&g)
+    NSScanner(string: bString).scanHexInt(&b)
+    
+    return UIColor(
+        red: CGFloat(Float(r) / 255.0),
+        green: CGFloat(Float(g) / 255.0),
+        blue: CGFloat(Float(b) / 255.0),
+        alpha: CGFloat(Float(1.0))
+    )
+}
