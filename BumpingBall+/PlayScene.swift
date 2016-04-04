@@ -16,6 +16,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let util = Utils()
     let ballUtil = BallUtils()
     var last: CFTimeInterval!
+    var screenWidth: Int!
     
     // 当たり判定のカテゴリを準備する.
     let ballCategory: UInt32 = 0x1 << 0
@@ -26,6 +27,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self
         
         self.backgroundColor = UIColor.blackColor()
+        self.screenWidth = Int(self.view!.bounds.size.width)
     
         /* Setup your scene here */
         let myLabel = SKLabelNode(fontNamed:"Chalkduster")
@@ -42,17 +44,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for touch in touches {
             let location = touch.locationInNode(self)
             ball = Ball()
-            ball.ball.name = "ball"
-            ball.ball.position.x = location.x
-            ball.ball.position.y = location.y + define.TOUCH_MARGIN
-            ball.ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.ball.size.width / 2.0)
-            ball.ball.physicsBody?.affectedByGravity = false
-            ball.ball.physicsBody?.categoryBitMask = ballCategory
-            ball.ball.physicsBody?.contactTestBitMask = targetBallCategory
-            
+            ball.setLocation(location.x, posY: location.y + define.TOUCH_MARGIN)
+            ball.setCategory(ballCategory, targetCat: targetBallCategory)
+        
             let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
             ball.ball.runAction(SKAction.repeatActionForever(action))
-            
             self.addChild(ball.ball)
         }
     }
@@ -84,7 +80,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         // 1秒おきにtargetBallを作成する.
         if last + 1 <= currentTime {
-            createTargetBall()
+            //targetBallが生成される場所を決める.
+            let targetXPos: UInt! = UInt(CGRectGetMidX(self.frame))
+                + UInt(arc4random_uniform(UInt32(self.screenWidth)))
+                - UInt(self.screenWidth / 2)
+            createTargetBall(targetXPos)
             last = currentTime
         }
     }
@@ -94,7 +94,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             node, step in
             if node is SKSpriteNode {
                 let ball = node as! SKSpriteNode
-//                print("posY : ", ball.position.y, ", height : ", self.util.HEIGHT)
                 //物理演算を取り入れると0.1足りなくなるので
                 if ball.position.y >= self.util.HEIGHT-1 {
                     ball.runAction(SKAction.fadeOutWithDuration(0.3), completion: {
@@ -126,15 +125,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ball.ball.setScale(ball.ballScale)
     }
     
-    private func createTargetBall() {
+    private func createTargetBall(posX: UInt) {
         targetBall = TargetBall()
-        targetBall.ball.name = "t_ball"
-        targetBall.ball.position = CGPoint(x:CGRectGetMidX(self.frame), y:self.frame.height-50)
-        targetBall.ball.physicsBody = SKPhysicsBody(circleOfRadius: targetBall.ball.size.width / 2.0)
-        targetBall.ball.alpha = 0.0
+        targetBall.ball.position = CGPoint(x:CGFloat(posX), y:self.frame.height-50)
         targetBall.ball.physicsBody?.affectedByGravity = true
-        targetBall.ball.physicsBody?.categoryBitMask = targetBallCategory
-        targetBall.ball.physicsBody?.contactTestBitMask = ballCategory
+        targetBall.setCategory(targetBallCategory, targetCat: ballCategory)
         self.addChild(self.targetBall.ball)
         targetBall.ball.runAction(SKAction.fadeInWithDuration(0.5))
     }

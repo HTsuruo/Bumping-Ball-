@@ -9,10 +9,10 @@
 import UIKit
 
 enum BallType: Int {
-    case BLUE = 1
-    case GREEN = 2
-    case ORANGE = 3
-    case RED = 4
+    case BLUE = 0
+    case GREEN = 1
+    case ORANGE = 2
+    case RED = 3
     
     func getImageName(key: BallType) -> String {
         switch self {
@@ -27,16 +27,16 @@ enum BallType: Int {
         }
     }
     
-    func getSize(key: BallType) -> Int {
+    func getSize(key: BallType) -> CGFloat {
         switch self {
         case BLUE:
-            return 20
+            return 20.0
         case GREEN:
-            return 40
+            return 40.0
         case ORANGE:
-            return 60
+            return 60.0
         case RED:
-            return 80
+            return 80.0
         }
     }
     
