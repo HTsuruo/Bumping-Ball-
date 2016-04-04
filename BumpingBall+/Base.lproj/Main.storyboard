@@ -27,7 +27,7 @@
         <!--Top View Controller-->
         <scene sceneID="mg3-mZ-y76">
             <objects>
-                <viewController storyboardIdentifier="top_vc" id="FFW-j8-PWE" customClass="TopViewController" customModule="BumpingBall_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="topVC" id="FFW-j8-PWE" customClass="TopViewController" customModule="BumpingBall_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TWV-0b-y95"/>
                         <viewControllerLayoutGuide type="bottom" id="v2V-mu-I55"/>

@@ -15,6 +15,7 @@ class GameViewController: UIViewController {
     var skView = SKView()
     @IBOutlet var pauseMenu: UIView!
     @IBOutlet weak var resumeBtn: UIButton!
+    @IBOutlet weak var quitBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,4 +78,9 @@ class GameViewController: UIViewController {
         pauseMenu.removeFromSuperview()
     }
 
+    @IBAction func onClickQuitBtn(sender: UIButton) {
+        let topVC = self.storyboard?.instantiateViewControllerWithIdentifier("topVC") as! TopViewController
+        topVC.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        self.presentViewController(topVC, animated: true, completion: nil)
+    }
 }
