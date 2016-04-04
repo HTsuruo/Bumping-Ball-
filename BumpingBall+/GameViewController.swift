@@ -8,6 +8,7 @@
 
 import UIKit
 import SpriteKit
+import AVFoundation
 
 class GameViewController: UIViewController {
 
@@ -69,6 +70,8 @@ class GameViewController: UIViewController {
     }
     
     internal func onClickPauseBtn(sender: UIButton) {
+        Sound.prepareToPlay("pause")
+        Sound.play()
         skView.paused = true
         self.view.addSubview(pauseMenu)
     }

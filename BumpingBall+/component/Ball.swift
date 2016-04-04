@@ -36,6 +36,11 @@ struct Ball {
     func setId(id: Int) {
         self.ball.userData = NSMutableDictionary()
         self.ball.userData?.setValue(id, forKey: "id")
+        self.ball.userData?.setValue(false, forKey: "isFire")
+    }
+    
+    func setIsFire() {
+        self.ball.userData?.setValue(true, forKey: "isFire")
     }
     
 }

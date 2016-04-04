@@ -25,6 +25,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func didMoveToView(view: SKView) {
         //ここは物理世界.
         self.physicsWorld.contactDelegate = self
+        self.physicsWorld.speed = CGFloat(0.8)
         
         self.backgroundColor = UIColor.blackColor()
         self.screenWidth = Int(define.WIDTH)
@@ -69,6 +70,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
 //        ball.ball.runAction(Sound.launch)
         ball.isFire = true
+        ball.setIsFire()
         let actionMove = SKAction.moveToY(define.REMOVE_HEIGHT, duration: Double(ball.ballSpeed))
         ball.ball.runAction(actionMove)
     }
@@ -159,7 +161,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             secondBody = contact.bodyA
         }
         
-        // ballとtargetballが接触した時の処理
+        //消滅させることができるのは発射したボールのみ.
+        let isFire = firstBody.node?.userData?.valueForKey("isFire")
+        if isFire == nil {
+            return
+        }
+        if !(isFire as! Bool) {
+            return
+        }
+        
         let myId = firstBody.node?.userData?.valueForKey("id")
         let targetId = secondBody.node?.userData?.valueForKey("id")
         
@@ -170,6 +180,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             return
         }
         
+        // ballとtargetballが接触した時の処理
         if targetId != nil {
             if firstBody.categoryBitMask & ballCategory != 0 &&
                 secondBody.categoryBitMask & targetBallCategory != 0 {
