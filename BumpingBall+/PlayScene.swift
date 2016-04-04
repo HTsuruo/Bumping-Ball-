@@ -9,15 +9,24 @@
 import SpriteKit
 import UIKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var ball = Ball()
+    var targetBall = TargetBall()
     let util = Utils()
     let ballUtil = BallUtils()
+    var last: CFTimeInterval!
+    
+    // 当たり判定のカテゴリを準備する.
+    let ballCategory: UInt32 = 0x1 << 0
+    let targetBallCategory: UInt32 = 0x1 << 1
     
     override func didMoveToView(view: SKView) {
+        //ここは物理世界.
+        self.physicsWorld.contactDelegate = self
+        
         self.backgroundColor = UIColor.blackColor()
-       
+    
         /* Setup your scene here */
         let myLabel = SKLabelNode(fontNamed:"Chalkduster")
         myLabel.text = "score"
@@ -36,6 +45,10 @@ class GameScene: SKScene {
             ball.ball.name = "ball"
             ball.ball.position.x = location.x
             ball.ball.position.y = location.y + define.TOUCH_MARGIN
+            ball.ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.ball.size.width / 2.0)
+            ball.ball.physicsBody?.affectedByGravity = false
+            ball.ball.physicsBody?.categoryBitMask = ballCategory
+            ball.ball.physicsBody?.contactTestBitMask = targetBallCategory
             
             let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
             ball.ball.runAction(SKAction.repeatActionForever(action))
@@ -65,16 +78,27 @@ class GameScene: SKScene {
             sizeChange()
         }
         
+        // lastが未定義ならば、今の時間を入れる。
+        if last == nil {
+            last = currentTime
+        }
+        // 1秒おきにtargetBallを作成する.
+        if last + 1 <= currentTime {
+            createTargetBall()
+            last = currentTime
+        }
     }
     
     private func removeBall() {
         self.enumerateChildNodesWithName("ball", usingBlock: {
             node, step in
             if node is SKSpriteNode {
-                let targetBall = node as! SKSpriteNode
-                if targetBall.position.y >= self.util.HEIGHT {
-                    targetBall.runAction(SKAction.fadeOutWithDuration(0.3), completion: {
-                        targetBall.removeFromParent()
+                let ball = node as! SKSpriteNode
+//                print("posY : ", ball.position.y, ", height : ", self.util.HEIGHT)
+                //物理演算を取り入れると0.1足りなくなるので
+                if ball.position.y >= self.util.HEIGHT-1 {
+                    ball.runAction(SKAction.fadeOutWithDuration(0.3), completion: {
+                        ball.removeFromParent()
                     })
                 }
             }
@@ -82,7 +106,6 @@ class GameScene: SKScene {
     }
     
     private func sizeChange() {
-//        let actionScale = SKAction.scaleTo(1.0, duration: 0.5)
         ball.ballScale += 0.015
         if ball.ballScale < 0.7 {
             ball.ballSpeed = define.BALL_INIT_SPEED
@@ -101,6 +124,41 @@ class GameScene: SKScene {
             ball.ballSpeed = define.BALL_INIT_SPEED
         }
         ball.ball.setScale(ball.ballScale)
+    }
+    
+    private func createTargetBall() {
+        targetBall = TargetBall()
+        targetBall.ball.name = "t_ball"
+        targetBall.ball.position = CGPoint(x:CGRectGetMidX(self.frame), y:self.frame.height-50)
+        targetBall.ball.physicsBody = SKPhysicsBody(circleOfRadius: targetBall.ball.size.width / 2.0)
+        targetBall.ball.alpha = 0.0
+        targetBall.ball.physicsBody?.affectedByGravity = true
+        targetBall.ball.physicsBody?.categoryBitMask = targetBallCategory
+        targetBall.ball.physicsBody?.contactTestBitMask = ballCategory
+        self.addChild(self.targetBall.ball)
+        targetBall.ball.runAction(SKAction.fadeInWithDuration(0.5))
+    }
+    
+    //衝突したときの処理.
+    func didBeginContact(contact: SKPhysicsContact) {
+        
+        var firstBody, secondBody: SKPhysicsBody
+        
+        // first: ball, second: targetBallとした.
+        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
+            firstBody = contact.bodyA
+            secondBody = contact.bodyB
+        } else {
+            firstBody = contact.bodyB
+            secondBody = contact.bodyA
+        }
+        
+        // ballとtargetballが接触した時の処理
+        if firstBody.categoryBitMask & ballCategory != 0 &&
+            secondBody.categoryBitMask & targetBallCategory != 0 {
+                firstBody.node?.removeFromParent()
+                secondBody.node?.removeFromParent()
+        }
     }
     
 }

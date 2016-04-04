@@ -10,7 +10,6 @@ import UIKit
 import SpriteKit
 
 struct Ball {
-    var ballId = 0
     var ball = SKSpriteNode(imageNamed: ballImage.BLUE)
     var ballScale = define.BALL_INIT_SCALE
     var ballSpeed = define.BALL_INIT_SPEED
