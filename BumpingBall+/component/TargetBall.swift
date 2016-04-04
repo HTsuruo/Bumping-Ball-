@@ -13,6 +13,7 @@ struct TargetBall {
     var ball = SKSpriteNode()
     var ballScale = define.BALL_INIT_SCALE
     var ballSpeed = define.BALL_INIT_SPEED
+    let childBall = SKNode()
     
     init() {
         self.ball.name = "t_ball"
@@ -31,6 +32,9 @@ struct TargetBall {
         default:
             break
         }
+        
+        self.ball.userData = NSMutableDictionary()
+        self.ball.userData?.setValue(randNum, forKey: "id")
         
         //衝突判定用の物理演算
         self.ball.physicsBody = SKPhysicsBody(circleOfRadius: self.ball.size.width / 2.0)

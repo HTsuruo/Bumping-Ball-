@@ -13,10 +13,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var ball = Ball()
     var targetBall = TargetBall()
-    let util = Utils()
     let ballUtil = BallUtils()
     var last: CFTimeInterval!
     var screenWidth: Int!
+    var removeHeight: CGFloat = 0.0
     
     // 当たり判定のカテゴリを準備する.
     let ballCategory: UInt32 = 0x1 << 0
@@ -27,7 +27,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self
         
         self.backgroundColor = UIColor.blackColor()
-        self.screenWidth = Int(self.view!.bounds.size.width)
+        self.screenWidth = Int(define.WIDTH)
     
         /* Setup your scene here */
         let myLabel = SKLabelNode(fontNamed:"Chalkduster")
@@ -64,7 +64,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
 //        ball.ball.runAction(Sound.launch)
         ball.isFire = true
-        let actionMove = SKAction.moveToY(util.HEIGHT, duration: Double(ball.ballSpeed))
+        let actionMove = SKAction.moveToY(define.REMOVE_HEIGHT, duration: Double(ball.ballSpeed))
         ball.ball.runAction(actionMove)
     }
    
@@ -95,7 +95,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if node is SKSpriteNode {
                 let ball = node as! SKSpriteNode
                 //物理演算を取り入れると0.1足りなくなるので
-                if ball.position.y >= self.util.HEIGHT-1 {
+                if ball.position.y >= define.REMOVE_HEIGHT-1 {
                     ball.runAction(SKAction.fadeOutWithDuration(0.3), completion: {
                         ball.removeFromParent()
                     })
@@ -105,22 +105,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     private func sizeChange() {
-        ball.ballScale += 0.015
-        if ball.ballScale < 0.7 {
+        ball.ballScale += 0.025
+        if ball.ballScale < 0.8 {
             ball.ballSpeed = define.BALL_INIT_SPEED
             ball.ball.runAction(ballUtil.setBlue())
-        } else if ball.ballScale < 0.9 {
+            ball.setId(BallType.BLUE.rawValue)
+        } else if ball.ballScale < 1.1 {
             ball.ballSpeed = 0.75
             ball.ball.runAction(ballUtil.setGreen())
-        } else if ball.ballScale < 1.1 {
+            ball.setId(BallType.GREEN.rawValue)
+        } else if ball.ballScale < 1.4 {
             ball.ballSpeed = 1.0
             ball.ball.runAction(ballUtil.setOrange())
-        } else if ball.ballScale < 1.3 {
+            ball.setId(BallType.ORANGE.rawValue)
+        } else if ball.ballScale < 1.7 {
             ball.ballSpeed = 1.25
             ball.ball.runAction(ballUtil.setRed())
+            ball.setId(BallType.RED.rawValue)
         } else {
             ball.ballScale = define.BALL_INIT_SCALE
             ball.ballSpeed = define.BALL_INIT_SPEED
+            ball.ball.runAction(ballUtil.setBlue())
+            ball.setId(BallType.BLUE.rawValue)
         }
         ball.ball.setScale(ball.ballScale)
     }
@@ -149,20 +155,49 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         // ballとtargetballが接触した時の処理
-        if firstBody.categoryBitMask & ballCategory != 0 &&
-            secondBody.categoryBitMask & targetBallCategory != 0 {
-                removeBothBalls(secondBody.node!)
-                firstBody.node?.removeFromParent()
+        let myId = firstBody.node?.userData?.valueForKey("id")
+        let targetId = secondBody.node?.userData?.valueForKey("id")
+        
+        if myId == nil || targetId == nil {
+            return
+        }
+        if myId as! Int != targetId as! Int {
+            return
+        }
+        
+        if targetId != nil {
+            if firstBody.categoryBitMask & ballCategory != 0 &&
+                secondBody.categoryBitMask & targetBallCategory != 0 {
+                    removeBothBalls(secondBody.node!, id: targetId as! Int)
+                    firstBody.node?.removeFromParent()
+            }
         }
     }
     
-    func removeBothBalls(node: SKNode) {
+    func removeBothBalls(node: SKNode, id: Int) {
         let sparkPath = NSBundle.mainBundle().pathForResource("spark", ofType: "sks")
         let spark = NSKeyedUnarchiver.unarchiveObjectWithFile(sparkPath!) as! SKEmitterNode
         spark.position = node.position
         spark.particleColorSequence = nil
         spark.particleColorBlendFactor = 1.0
-        spark.particleColor = colorUtils.blue
+        
+        switch id {
+        case BallType.BLUE.rawValue:
+            spark.particleColor = colorUtils.blue
+            break
+        case BallType.GREEN.rawValue:
+            spark.particleColor = colorUtils.green
+            break
+        case BallType.ORANGE.rawValue:
+            spark.particleColor = colorUtils.orange
+            break
+        case BallType.RED.rawValue:
+            spark.particleColor = colorUtils.red
+            break
+        default:
+            break
+        }
+        
         spark.setScale(0.5)
         self.addChild(spark)
         

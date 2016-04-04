@@ -9,20 +9,21 @@
 import UIKit
 
 struct define {
+    static let WIDTH: CGFloat = UIScreen.mainScreen().bounds.size.width
+    static let HEIGHT: CGFloat = UIScreen.mainScreen().bounds.size.height
+    static let statusHeight: CGFloat = UIApplication.sharedApplication().statusBarFrame.height
     static let MAX = 20
     static let BALL_INIT_SCALE = CGFloat(0.5)
     static let BALL_INIT_SPEED = CGFloat(0.5)
     static let TOUCH_MARGIN = CGFloat(50.0) //タッチ箇所とボールが被って見難くなってしまうので少しずらします.
+    static let REMOVE_HEIGHT = CGFloat(HEIGHT - 80.0)
 }
 
 class Utils: NSObject {
-    let WIDTH: CGFloat = UIScreen.mainScreen().bounds.size.width
-    let HEIGHT: CGFloat = UIScreen.mainScreen().bounds.size.height
-    let statusHeight: CGFloat = UIApplication.sharedApplication().statusBarFrame.height
     
     //status barのところは時刻などを見やすくするためにあけてあげる.
     func setStatusBar(parentView: UIView) {
-        let v: UIView = UIView(frame: CGRectMake(0, 0, WIDTH, statusHeight))
+        let v: UIView = UIView(frame: CGRectMake(0, 0, define.WIDTH, define.statusHeight))
         v.backgroundColor = UIColor.whiteColor()
         parentView.addSubview(v)
     }

@@ -33,6 +33,11 @@ struct Ball {
         self.ball.physicsBody?.contactTestBitMask = targetCat
     }
     
+    func setId(id: Int) {
+        self.ball.userData = NSMutableDictionary()
+        self.ball.userData?.setValue(id, forKey: "id")
+    }
+    
 }
 
 struct ballImage {
