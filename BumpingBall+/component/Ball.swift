@@ -69,4 +69,18 @@ class BallUtils: NSObject {
         let red = SKTexture.init(imageNamed: ballImage.RED)
         return SKAction.setTexture(red, resize: true)
     }
+    func setRebound(node: SKSpriteNode, var posX: UInt) -> UInt {
+        let halfSize = Int(node.size.width/2)
+//        左に見きれてしまうケース.
+        if posX < UInt(halfSize) {
+            posX = UInt(halfSize)
+        }
+        
+//        右に見きれてしまうケース.
+        let sizePlusPosX = Int(posX) + halfSize
+        if sizePlusPosX > Int(define.WIDTH) {
+            posX = UInt(Int(define.WIDTH) - halfSize)
+        }
+        return posX
+    }
 }

@@ -17,13 +17,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var last: CFTimeInterval!
     var screenWidth: Int!
     var removeHeight: CGFloat = 0.0
+    var touchView = UIView()
     
-    // 当たり判定のカテゴリを準備する.
+//     当たり判定のカテゴリを準備する.
     let ballCategory: UInt32 = 0x1 << 0
     let targetBallCategory: UInt32 = 0x1 << 1
     
     override func didMoveToView(view: SKView) {
-        //ここは物理世界.
+//        ここは物理世界.
         self.physicsWorld.contactDelegate = self
         self.physicsWorld.speed = CGFloat(0.8)
         
@@ -38,6 +39,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:self.frame.height-30)
         self.addChild(myLabel)
         
+//         set touch enable area
+        touchView = UIView(frame: CGRectMake(0, define.HEIGHT-70, define.WIDTH, 70))
+        touchView.backgroundColor = UIColor.cyanColor()
+        self.view?.addSubview(touchView)
+        
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -48,6 +54,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         for touch in touches {
             let location = touch.locationInNode(self)
+            
+            if !(define.TOUCH_AREA.contains(location)) {
+                return
+            }
             
             ball = Ball()
             ball.setLocation(location.x, posY: location.y + define.TOUCH_MARGIN)
@@ -62,6 +72,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         for touche in touches {
             let location = touche.locationInNode(self)
+            if !(define.TOUCH_AREA.contains(location)) {
+                return
+            }
             ball.ball.position.x = location.x
             ball.ball.position.y = location.y + define.TOUCH_MARGIN
          }
@@ -80,18 +93,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if  !ball.isFire {
             sizeChange()
         }
-        
-        // lastが未定義ならば、今の時間を入れる。
+    
         if last == nil {
             last = currentTime
         }
-        // 1秒おきにtargetBallを作成する.
+//         1秒おきにtargetBallを作成する.
         if last + 1 <= currentTime {
-            //targetBallが生成される場所を決める.
-            let targetXPos: UInt! = UInt(CGRectGetMidX(self.frame))
-                + UInt(arc4random_uniform(UInt32(self.screenWidth)))
-                - UInt(self.screenWidth / 2)
-            createTargetBall(targetXPos)
+            createTargetBall()
             last = currentTime
         }
     }
@@ -101,7 +109,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             node, step in
             if node is SKSpriteNode {
                 let ball = node as! SKSpriteNode
-                //物理演算を取り入れると0.1足りなくなるので
+//                物理演算を取り入れると0.1足りなくなるので
                 if ball.position.y >= define.REMOVE_HEIGHT-1 {
                     ball.runAction(SKAction.fadeOutWithDuration(0.3), completion: {
                         ball.removeFromParent()
@@ -138,21 +146,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ball.ball.setScale(ball.ballScale)
     }
     
-    private func createTargetBall(posX: UInt) {
+    private func createTargetBall() {
         targetBall = TargetBall()
+        var posX: UInt! = UInt(arc4random_uniform(UInt32(self.screenWidth)))
+        posX = ballUtil.setRebound(targetBall.ball, posX: posX)
+        
         targetBall.ball.position = CGPoint(x:CGFloat(posX), y:self.frame.height-50)
-        targetBall.ball.physicsBody?.affectedByGravity = true
         targetBall.setCategory(targetBallCategory, targetCat: ballCategory)
         self.addChild(self.targetBall.ball)
         targetBall.ball.runAction(SKAction.fadeInWithDuration(0.5))
     }
     
-    //衝突したときの処理.
+//    衝突したときの処理.
     func didBeginContact(contact: SKPhysicsContact) {
         
         var firstBody, secondBody: SKPhysicsBody
         
-        // first: ball, second: targetBallとした.
+//         first: ball, second: targetBallとした.
         if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
             firstBody = contact.bodyA
             secondBody = contact.bodyB
@@ -161,26 +171,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             secondBody = contact.bodyA
         }
         
-        //消滅させることができるのは発射したボールのみ.
+//        消滅させることができるのは発射したボールのみ.
         let isFire = firstBody.node?.userData?.valueForKey("isFire")
-        if isFire == nil {
-            return
-        }
-        if !(isFire as! Bool) {
+        if isFire == nil || !(isFire as! Bool) {
             return
         }
         
         let myId = firstBody.node?.userData?.valueForKey("id")
         let targetId = secondBody.node?.userData?.valueForKey("id")
         
-        if myId == nil || targetId == nil {
-            return
-        }
-        if myId as! Int != targetId as! Int {
+        let isNull = myId == nil || targetId == nil
+        let isSame =  myId as! Int == targetId as! Int
+        
+        if isNull || !(isSame) {
             return
         }
         
-        // ballとtargetballが接触した時の処理
+//         ballとtargetballが接触した時の処理
         if targetId != nil {
             if firstBody.categoryBitMask & ballCategory != 0 &&
                 secondBody.categoryBitMask & targetBallCategory != 0 {

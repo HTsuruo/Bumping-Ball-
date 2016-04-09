@@ -17,6 +17,7 @@ struct define {
     static let BALL_INIT_SPEED = CGFloat(0.5)
     static let TOUCH_MARGIN = CGFloat(50.0) //タッチ箇所とボールが被って見難くなってしまうので少しずらします.
     static let REMOVE_HEIGHT = CGFloat(HEIGHT - 80.0)
+    static let TOUCH_AREA = CGRectMake(0, 0, define.WIDTH, 70)
 }
 
 class Utils: NSObject {
