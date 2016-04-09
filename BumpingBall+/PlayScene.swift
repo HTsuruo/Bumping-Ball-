@@ -11,13 +11,14 @@ import UIKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    var ball = Ball()
+    var playerBall = PlayerBall()
     var targetBall = TargetBall()
     let ballUtil = BallUtils()
     var last: CFTimeInterval!
-    var screenWidth: Int!
     var removeHeight: CGFloat = 0.0
     var touchView = UIView()
+    var score = 0
+    var scoreLabel = SKLabelNode()
     
 //     当たり判定のカテゴリを準備する.
     let ballCategory: UInt32 = 0x1 << 0
@@ -27,23 +28,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 //        ここは物理世界.
         self.physicsWorld.contactDelegate = self
         self.physicsWorld.speed = CGFloat(0.8)
-        
         self.backgroundColor = UIColor.blackColor()
-        self.screenWidth = Int(define.WIDTH)
-    
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "score"
-        myLabel.fontSize = 30
-        myLabel.fontColor = UIColor.whiteColor()
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:self.frame.height-30)
-        self.addChild(myLabel)
+        
+        setupLabels()
         
 //         set touch enable area
         touchView = UIView(frame: CGRectMake(0, define.HEIGHT-70, define.WIDTH, 70))
         touchView.backgroundColor = UIColor.cyanColor()
         self.view?.addSubview(touchView)
-        
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -59,13 +51,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 return
             }
             
-            ball = Ball()
-            ball.setLocation(location.x, posY: location.y + define.TOUCH_MARGIN)
-            ball.setCategory(ballCategory, targetCat: targetBallCategory)
-    
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            ball.ball.runAction(SKAction.repeatActionForever(action))
-            self.addChild(ball.ball)
+            /* setup playerBall */
+            playerBall = PlayerBall()
+            playerBall.setLocation(location.x, posY: location.y + define.TOUCH_MARGIN)
+            playerBall.setCategory(ballCategory, targetCat: targetBallCategory)
+            self.addChild(playerBall.ball)
         }
     }
     
@@ -75,38 +65,39 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if !(define.TOUCH_AREA.contains(location)) {
                 return
             }
-            ball.ball.position.x = location.x
-            ball.ball.position.y = location.y + define.TOUCH_MARGIN
+            playerBall.ball.position.x = location.x
+            playerBall.ball.position.y = location.y + define.TOUCH_MARGIN
          }
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
 //        ball.ball.runAction(Sound.launch)
-        ball.isFire = true
-        ball.setIsFire()
-        let actionMove = SKAction.moveToY(define.REMOVE_HEIGHT, duration: Double(ball.ballSpeed))
-        ball.ball.runAction(actionMove)
+        playerBall.isFire = true
+        playerBall.setIsFire()
+        let actionMove = SKAction.moveToY(define.REMOVE_HEIGHT, duration: Double(playerBall.ballSpeed))
+        playerBall.ball.runAction(actionMove)
     }
    
     override func update(currentTime: CFTimeInterval) {
         removeBall()
-        if  !ball.isFire {
-            sizeChange()
+        if  !playerBall.isFire {
+            playerBall.sizeChange()
         }
     
         if last == nil {
             last = currentTime
         }
-//         1秒おきにtargetBallを作成する.
-        if last + 1 <= currentTime {
+//         1秒毎にtargetBallを作成する.
+        if last + 3 <= currentTime {
             createTargetBall()
             last = currentTime
         }
+        moveTargetBall()
     }
     
     private func removeBall() {
         self.enumerateChildNodesWithName("ball", usingBlock: {
-            node, step in
+            node, stop in
             if node is SKSpriteNode {
                 let ball = node as! SKSpriteNode
 //                物理演算を取り入れると0.1足りなくなるので
@@ -119,37 +110,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         })
     }
     
-    private func sizeChange() {
-        ball.ballScale += 0.025
-        if ball.ballScale < 0.8 {
-            ball.ballSpeed = define.BALL_INIT_SPEED
-            ball.ball.runAction(ballUtil.setBlue())
-            ball.setId(BallType.BLUE.rawValue)
-        } else if ball.ballScale < 1.1 {
-            ball.ballSpeed = 0.75
-            ball.ball.runAction(ballUtil.setGreen())
-            ball.setId(BallType.GREEN.rawValue)
-        } else if ball.ballScale < 1.4 {
-            ball.ballSpeed = 1.0
-            ball.ball.runAction(ballUtil.setOrange())
-            ball.setId(BallType.ORANGE.rawValue)
-        } else if ball.ballScale < 1.7 {
-            ball.ballSpeed = 1.25
-            ball.ball.runAction(ballUtil.setRed())
-            ball.setId(BallType.RED.rawValue)
-        } else {
-            ball.ballScale = define.BALL_INIT_SCALE
-            ball.ballSpeed = define.BALL_INIT_SPEED
-            ball.ball.runAction(ballUtil.setBlue())
-            ball.setId(BallType.BLUE.rawValue)
-        }
-        ball.ball.setScale(ball.ballScale)
-    }
-    
     private func createTargetBall() {
         targetBall = TargetBall()
-        var posX: UInt! = UInt(arc4random_uniform(UInt32(self.screenWidth)))
-        posX = ballUtil.setRebound(targetBall.ball, posX: posX)
+        var posX: UInt! = UInt(arc4random_uniform(UInt32(define.WIDTH)))
+        posX = targetBall.setScreenFit(posX)
         
         targetBall.ball.position = CGPoint(x:CGFloat(posX), y:self.frame.height-50)
         targetBall.setCategory(targetBallCategory, targetCat: ballCategory)
@@ -157,12 +121,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         targetBall.ball.runAction(SKAction.fadeInWithDuration(0.5))
     }
     
-//    衝突したときの処理.
+    private func moveTargetBall() {
+        self.enumerateChildNodesWithName("t_ball", usingBlock: {
+            node, stop in
+            if node is SKSpriteNode {
+                let targetBall = node as! SKSpriteNode
+                if !(self.ballUtil.setRebound(targetBall)) {
+                    let fadeOut = SKAction.fadeOutWithDuration(0.3)
+                    let remove = SKAction.removeFromParent()
+                    let sequence = SKAction.sequence([fadeOut, remove])
+                    targetBall.runAction(sequence)
+                    return
+                }
+                let dx = targetBall.userData?.valueForKey("dx") as! CGFloat
+                targetBall.position.x += dx
+                targetBall.position.y -= 1.0
+            }
+        })
+    }
+    
+//  衝突したときの処理.
     func didBeginContact(contact: SKPhysicsContact) {
         
         var firstBody, secondBody: SKPhysicsBody
         
-//         first: ball, second: targetBallとした.
+//      first: playerBall, second: targetBallとした.
         if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
             firstBody = contact.bodyA
             secondBody = contact.bodyB
@@ -171,7 +154,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             secondBody = contact.bodyA
         }
         
-//        消滅させることができるのは発射したボールのみ.
+//      消滅させることができるのは発射したボールのみ.
         let isFire = firstBody.node?.userData?.valueForKey("isFire")
         if isFire == nil || !(isFire as! Bool) {
             return
@@ -187,12 +170,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             return
         }
         
-//         ballとtargetballが接触した時の処理
+//      ballとtargetballが接触した時の処理
         if targetId != nil {
             if firstBody.categoryBitMask & ballCategory != 0 &&
                 secondBody.categoryBitMask & targetBallCategory != 0 {
                     removeBothBalls(secondBody.node!, id: targetId as! Int)
                     firstBody.node?.removeFromParent()
+                    score++
+                    scoreLabel.text = String(score)
             }
         }
     }
@@ -230,6 +215,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         spark.runAction(sequence)
     
         node.removeFromParent()
+    }
+    
+    func setupLabels() {
+        /* Setup your scene here */
+        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
+        myLabel.text = "score"
+        myLabel.fontSize = 30
+        myLabel.fontColor = UIColor.whiteColor()
+        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:self.frame.height-30)
+        self.addChild(myLabel)
+        
+        scoreLabel = SKLabelNode(fontNamed:"Chalkduster")
+        scoreLabel.text = "0"
+        scoreLabel.fontSize = 30
+        scoreLabel.fontColor = UIColor.whiteColor()
+        scoreLabel.position = CGPoint(x:define.WIDTH - 100, y:self.frame.height-30)
+        self.addChild(scoreLabel)
     }
     
 }

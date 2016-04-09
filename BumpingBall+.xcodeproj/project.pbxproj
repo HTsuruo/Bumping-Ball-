@@ -12,7 +12,7 @@
 		56AC95971CB24B2100B31FE3 /* PlayScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 56AC95941CB24B2100B31FE3 /* PlayScene.sks */; };
 		56AC95981CB24B2100B31FE3 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 56AC95951CB24B2100B31FE3 /* spark.png */; };
 		56AC95991CB24B2100B31FE3 /* spark.sks in Resources */ = {isa = PBXBuildFile; fileRef = 56AC95961CB24B2100B31FE3 /* spark.sks */; };
-		56AC959F1CB24B3000B31FE3 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AC959A1CB24B3000B31FE3 /* Ball.swift */; };
+		56AC959F1CB24B3000B31FE3 /* PlayerBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AC959A1CB24B3000B31FE3 /* PlayerBall.swift */; };
 		56AC95A01CB24B3000B31FE3 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AC959B1CB24B3000B31FE3 /* Enums.swift */; };
 		56AC95A11CB24B3000B31FE3 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AC959C1CB24B3000B31FE3 /* Sound.swift */; };
 		56AC95A21CB24B3000B31FE3 /* TargetBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AC959D1CB24B3000B31FE3 /* TargetBall.swift */; };
@@ -57,7 +57,7 @@
 		56AC95941CB24B2100B31FE3 /* PlayScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = PlayScene.sks; path = sks/PlayScene.sks; sourceTree = "<group>"; };
 		56AC95951CB24B2100B31FE3 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = sks/spark.png; sourceTree = "<group>"; };
 		56AC95961CB24B2100B31FE3 /* spark.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = spark.sks; path = sks/spark.sks; sourceTree = "<group>"; };
-		56AC959A1CB24B3000B31FE3 /* Ball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ball.swift; path = component/Ball.swift; sourceTree = "<group>"; };
+		56AC959A1CB24B3000B31FE3 /* PlayerBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerBall.swift; path = component/PlayerBall.swift; sourceTree = "<group>"; };
 		56AC959B1CB24B3000B31FE3 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Enums.swift; path = component/Enums.swift; sourceTree = "<group>"; };
 		56AC959C1CB24B3000B31FE3 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sound.swift; path = component/Sound.swift; sourceTree = "<group>"; };
 		56AC959D1CB24B3000B31FE3 /* TargetBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TargetBall.swift; path = component/TargetBall.swift; sourceTree = "<group>"; };
@@ -123,10 +123,10 @@
 		56AC95921CB24A0100B31FE3 /* component */ = {
 			isa = PBXGroup;
 			children = (
-				56AC959A1CB24B3000B31FE3 /* Ball.swift */,
+				56AC959A1CB24B3000B31FE3 /* PlayerBall.swift */,
+				56AC959D1CB24B3000B31FE3 /* TargetBall.swift */,
 				56AC959B1CB24B3000B31FE3 /* Enums.swift */,
 				56AC959C1CB24B3000B31FE3 /* Sound.swift */,
-				56AC959D1CB24B3000B31FE3 /* TargetBall.swift */,
 				56AC959E1CB24B3000B31FE3 /* Utils.swift */,
 			);
 			name = component;
@@ -383,7 +383,7 @@
 				56BB7FB01CAD766900675AE8 /* TopViewController.swift in Sources */,
 				56AC95A31CB24B3000B31FE3 /* Utils.swift in Sources */,
 				56BB7F341CAD345100675AE8 /* PlayScene.swift in Sources */,
-				56AC959F1CB24B3000B31FE3 /* Ball.swift in Sources */,
+				56AC959F1CB24B3000B31FE3 /* PlayerBall.swift in Sources */,
 				56BB7F361CAD345100675AE8 /* GameViewController.swift in Sources */,
 				56AC95A21CB24B3000B31FE3 /* TargetBall.swift in Sources */,
 				56AC95A01CB24B3000B31FE3 /* Enums.swift in Sources */,
