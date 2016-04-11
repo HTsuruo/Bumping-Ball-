@@ -13,6 +13,7 @@ struct PlayerBall {
     var id = 0
     var ball = SKSpriteNode(imageNamed: ballImage.BLUE)
     var ballScale = define.BALL_INIT_SCALE
+    //ここでいうballSpeedはdurationなので上に到達するまでにかかる時間
     var ballSpeed = define.BALL_INIT_SPEED
     var isFire = false
     

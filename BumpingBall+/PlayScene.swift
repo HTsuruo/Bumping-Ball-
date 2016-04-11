@@ -9,7 +9,7 @@
 import SpriteKit
 import UIKit
 
-class GameScene: SKScene, SKPhysicsContactDelegate {
+class PlayScene: SKScene, SKPhysicsContactDelegate {
     
     var playerBall = PlayerBall()
     var targetBall = TargetBall()
@@ -27,7 +27,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func didMoveToView(view: SKView) {
 //        ここは物理世界.
         self.physicsWorld.contactDelegate = self
-        self.physicsWorld.speed = CGFloat(0.8)
+        self.physicsWorld.speed = CGFloat(1.0)
         self.backgroundColor = UIColor.blackColor()
         
         setupLabels()
@@ -87,7 +87,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if last == nil {
             last = currentTime
         }
-//         1秒毎にtargetBallを作成する.
+//         3秒毎にtargetBallを作成する.
         if last + 3 <= currentTime {
             createTargetBall()
             last = currentTime
@@ -134,8 +134,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     return
                 }
                 let dx = targetBall.userData?.valueForKey("dx") as! CGFloat
+                let dy = targetBall.userData?.valueForKey("dy") as! CGFloat
                 targetBall.position.x += dx
-                targetBall.position.y -= 1.0
+                targetBall.position.y -= dy
             }
         })
     }

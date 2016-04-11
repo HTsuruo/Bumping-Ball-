@@ -11,8 +11,9 @@ import SpriteKit
 
 struct TargetBall {
     var ball = SKSpriteNode()
-    var ballScale = define.BALL_INIT_SCALE
-    var ballSpeed = define.BALL_INIT_SPEED
+    var ballScale = CGFloat(0.6)
+    var dx = 1.0
+    var dy = 1.0
     let childBall = SKNode()
     
     init() {
@@ -24,19 +25,31 @@ struct TargetBall {
         case BallType.BLUE.rawValue:
             self.ball = SKSpriteNode(imageNamed: ballImage.BLUE)
         case BallType.GREEN.rawValue:
-            self.ball =  SKSpriteNode(imageNamed: ballImage.GREEN)
+            self.ball = SKSpriteNode(imageNamed: ballImage.GREEN)
+            self.dx = 0.8
+            self.dy = 0.8
+            self.ballScale = 0.8
         case BallType.ORANGE.rawValue:
             self.ball =  SKSpriteNode(imageNamed: ballImage.ORANGE)
+            self.dx = 0.6
+            self.dy = 0.6
+            self.ballScale = 1.1
         case BallType.RED.rawValue:
             self.ball =  SKSpriteNode(imageNamed: ballImage.RED)
+            self.dx = 0.4
+            self.dy = 0.4
+            self.ballScale = 1.4
         default:
             break
         }
         
+        self.ball.setScale(self.ballScale)
+        
         self.ball.name = "t_ball"//名前をつけるのはインスタンス化した後
         self.ball.userData = NSMutableDictionary()
         self.ball.userData?.setValue(randNum, forKey: "id")
-        self.ball.userData?.setValue(1.0, forKey: "dx")
+        self.ball.userData?.setValue(self.dx, forKey: "dx")
+        self.ball.userData?.setValue(self.dy, forKey: "dy")
         
         //衝突判定用の物理演算
         self.ball.physicsBody = SKPhysicsBody(circleOfRadius: self.ball.size.width / 2.0)

@@ -21,7 +21,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let scene = GameScene(fileNamed:"PlayScene") {
+        if let scene = PlayScene(fileNamed:"PlayScene") {
             // Configure the view.
             skView = self.view as! SKView
             skView.showsFPS = true
@@ -37,9 +37,9 @@ class GameViewController: UIViewController {
         }
         
         //pauseボタン
-        let pauseBtn = UIButton(frame: CGRectMake(0, 10, 100, 10))
-        pauseBtn.tintColor = UIColor.whiteColor()
-        pauseBtn.setTitle("pause", forState: UIControlState.Normal)
+        let pauseBtn = UIButton(frame: CGRectMake(10, 10, 40, 40))
+        let pauseImage = UIImage(named:"pauseBtn")
+        pauseBtn.setImage(pauseImage, forState: .Normal)
         pauseBtn.addTarget(self, action: "onClickPauseBtn:", forControlEvents: .TouchUpInside)
         self.view.addSubview(pauseBtn)
         
