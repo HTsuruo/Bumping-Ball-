@@ -37,6 +37,7 @@
 		56BD7D3B1CBB9D5B00F9178B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BD7D3A1CBB9D5B00F9178B /* GameScene.swift */; };
 		56BD7D3F1CBB9E0100F9178B /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 56BD7D3E1CBB9E0100F9178B /* GameScene.sks */; };
 		56BD7D411CBB9E2300F9178B /* finishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BD7D401CBB9E2200F9178B /* finishViewController.swift */; };
+		56BD7D4E1CBBEDBB00F9178B /* launch.sks in Resources */ = {isa = PBXBuildFile; fileRef = 56BD7D4C1CBBEDBB00F9178B /* launch.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		56BD7D3A1CBB9D5B00F9178B /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		56BD7D3E1CBB9E0100F9178B /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = GameScene.sks; path = sks/GameScene.sks; sourceTree = "<group>"; };
 		56BD7D401CBB9E2200F9178B /* finishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = finishViewController.swift; sourceTree = "<group>"; };
+		56BD7D4C1CBBEDBB00F9178B /* launch.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = launch.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				56AC95941CB24B2100B31FE3 /* PlayScene.sks */,
 				56AC95951CB24B2100B31FE3 /* spark.png */,
 				56AC95961CB24B2100B31FE3 /* spark.sks */,
+				56BD7D4C1CBBEDBB00F9178B /* launch.sks */,
 			);
 			name = sks;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				56AC95A81CB2BCFD00B31FE3 /* PauseMenu.xib in Resources */,
 				56AC95801CB16D0000B31FE3 /* bigger.mp3 in Resources */,
 				56BB7F3B1CAD345200675AE8 /* Assets.xcassets in Resources */,
+				56BD7D4E1CBBEDBB00F9178B /* launch.sks in Resources */,
 				56BB7F391CAD345200675AE8 /* Main.storyboard in Resources */,
 				56BB7FC91CAFFC0000675AE8 /* ball_green@2x.png in Resources */,
 				56BD7D351CBB995C00F9178B /* pauseBtn@2x.png in Resources */,

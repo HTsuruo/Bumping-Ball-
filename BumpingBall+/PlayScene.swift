@@ -76,6 +76,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         playerBall.setIsFire()
         let actionMove = SKAction.moveToY(define.REMOVE_HEIGHT, duration: Double(playerBall.ballSpeed))
         playerBall.ball.runAction(actionMove)
+        launchAnimation()
     }
    
     override func update(currentTime: CFTimeInterval) {
@@ -233,6 +234,50 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         scoreLabel.fontColor = UIColor.whiteColor()
         scoreLabel.position = CGPoint(x:define.WIDTH - 100, y:self.frame.height-30)
         self.addChild(scoreLabel)
+    }
+    
+    func launchAnimation() {
+        let launchPath = NSBundle.mainBundle().pathForResource("launch", ofType: "sks")
+        let launch = NSKeyedUnarchiver.unarchiveObjectWithFile(launchPath!) as! SKEmitterNode
+        launch.position.x = playerBall.ball.position.x
+        launch.position.y = playerBall.ball.position.y
+        launch.particleColorSequence = nil
+        launch.particleColorBlendFactor = 1.0
+        
+        let id = playerBall.ball.userData?.valueForKey("id") as! CGFloat
+        var launchScale: CGFloat = 1.0
+        
+        switch Int(id) {
+        case BallType.BLUE.rawValue:
+            launch.particleColor = colorUtils.blue
+            break
+        case BallType.GREEN.rawValue:
+            launch.particleColor = colorUtils.green
+            launchScale = 1.1
+            break
+        case BallType.ORANGE.rawValue:
+            launch.particleColor = colorUtils.orange
+            launchScale = 1.2
+            break
+        case BallType.RED.rawValue:
+            launch.particleColor = colorUtils.red
+            launchScale = 1.3
+            break
+        default:
+            break
+        }
+        
+        
+        launch.setScale(launchScale)
+        self.addChild(launch)
+        
+        let fadeOut = SKAction.fadeOutWithDuration(0.5)
+        let move = SKAction.moveToY(playerBall.ball.position.y - 20.0, duration: 0.5)
+        let remove = SKAction.removeFromParent()
+        // 同時実行するグループアクションを作る.
+        let moveFadeOut = SKAction.group([move, fadeOut])
+        let sequence = SKAction.sequence([moveFadeOut, remove])
+        launch.runAction(sequence)
     }
     
 }
