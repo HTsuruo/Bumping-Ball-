@@ -174,8 +174,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
                     updateComboCount(secondBody.node!)
                     removeBothBalls(secondBody.node!, id: targetId as! Int)
                     firstBody.node?.removeFromParent()
-                    score++
-                    scoreLabel.text = String(score)
+                    updateScore()
             }
         }
     }
@@ -186,7 +185,6 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         if comboCount == 1 {
             return
         }
-        
 //        最大で5コンボ
         if comboCount > 6 {
             comboCount = 6
@@ -205,6 +203,11 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         let moveFadeOut = SKAction.group([move, fadeOut])
         let sequence = SKAction.sequence([moveFadeOut, remove])
         comboLabel.runAction(sequence)
+    }
+    
+    func updateScore() {
+        score += ballUtil.getScoreByCombo(comboCount)
+        scoreLabel.text = String(score)
     }
     
     func removeBothBalls(node: SKNode, id: Int) {

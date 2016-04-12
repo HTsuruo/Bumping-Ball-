@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SpriteKit
 
 struct define {
     static let WIDTH: CGFloat = UIScreen.mainScreen().bounds.size.width
@@ -28,8 +29,83 @@ class Utils: NSObject {
         v.backgroundColor = UIColor.whiteColor()
         parentView.addSubview(v)
     }
+}
+
+class BallUtils: NSObject {
+    
+    func setBlue() -> SKAction {
+        let blue = SKTexture.init(imageNamed: ballImage.BLUE)
+        return SKAction.setTexture(blue, resize: true)
+    }
+    
+    func setGreen() -> SKAction {
+        let green = SKTexture.init(imageNamed: ballImage.GREEN)
+        return SKAction.setTexture(green, resize: true)
+    }
+    
+    func setOrange() -> SKAction {
+        let orange = SKTexture.init(imageNamed: ballImage.ORANGE)
+        return SKAction.setTexture(orange, resize: true)
+    }
+    
+    func setRed() -> SKAction {
+        let red = SKTexture.init(imageNamed: ballImage.RED)
+        return SKAction.setTexture(red, resize: true)
+    }
+    
+    //   跳ね返り処理
+    func setRebound(node: SKSpriteNode) {
+        let halfSize = Int(node.size.width/2)
+        var screenCollision = false
+        
+        if node.position.x < CGFloat(halfSize) {
+            node.position.x = CGFloat(halfSize)
+            screenCollision = true
+        }
+        
+        if node.position.x > define.WIDTH - CGFloat(halfSize) {
+            node.position.x = define.WIDTH - CGFloat(halfSize)
+            screenCollision = true
+        }
+        
+        let posX: UInt = UInt(node.position.x)
+        var dx = node.userData?.valueForKey("dx") as! CGFloat
+        
+        if posX < UInt(halfSize) {
+            screenCollision = true
+        }
+        let sizePlusPosX = Int(posX) + halfSize
+        if sizePlusPosX > Int(define.WIDTH) {
+            screenCollision = true
+        }
+        
+        if screenCollision {
+            dx *= -1
+        }
+        node.userData?.setValue(dx, forKey: "dx")
+    }
+    
+    func getScoreByCombo(comboCount: Int) -> Int{
+        switch comboCount {
+        case 1:
+            return 100
+        case 2:
+            return 200
+        case 3:
+            return 300
+        case 4:
+            return 400
+        case 5:
+            return 700
+        case 6:
+            return 1000
+        default:
+            return 0
+        }
+    }
     
 }
+
 
 
 struct colorUtils {
