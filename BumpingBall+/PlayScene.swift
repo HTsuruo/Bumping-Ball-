@@ -198,11 +198,8 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         comboLabel.position = node.position
         self.addChild(comboLabel)
         
-        let fadeOut = SKAction.fadeOutWithDuration(0.8)
-        let move = SKAction.moveToY(node.position.y + 30, duration: 0.5)
-        let remove = SKAction.removeFromParent()
-        let moveFadeOut = SKAction.group([move, fadeOut])
-        let sequence = SKAction.sequence([moveFadeOut, remove])
+        let moveFadeOut = animation.moveToYFadeOut(0.8, yPos: node.position.y + 30, moveToY: 0.5)
+        let sequence = animation.removeAfterAction(moveFadeOut)
         comboLabel.runAction(sequence)
     }
     
@@ -239,50 +236,17 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func launchAnimation() {
-        let launchPath = NSBundle.mainBundle().pathForResource("launch", ofType: "sks")
-        let launch = NSKeyedUnarchiver.unarchiveObjectWithFile(launchPath!) as! SKEmitterNode
-        launch.position.x = playerBall.ball.position.x
-        launch.position.y = playerBall.ball.position.y
-        launch.particleColorSequence = nil
-        launch.particleColorBlendFactor = 1.0
         
         if playerBall.ball.userData?.valueForKey("id") == nil {
             return
         }
         
-        let id = playerBall.ball.userData?.valueForKey("id") as! CGFloat
-        var launchScale: CGFloat = 1.0
-        
-        switch Int(id) {
-        case BallType.BLUE.rawValue:
-            launch.particleColor = colorUtils.blue
-            break
-        case BallType.GREEN.rawValue:
-            launch.particleColor = colorUtils.green
-            launchScale = 1.1
-            break
-        case BallType.ORANGE.rawValue:
-            launch.particleColor = colorUtils.orange
-            launchScale = 1.2
-            break
-        case BallType.RED.rawValue:
-            launch.particleColor = colorUtils.red
-            launchScale = 1.3
-            break
-        default:
-            break
-        }
-        
-        
-        launch.setScale(launchScale)
+        let id = playerBall.ball.userData?.valueForKey("id") as! Int
+        let launch = animation.launchAnimation(playerBall.ball, id: id)
         self.addChild(launch)
         
-        let fadeOut = SKAction.fadeOutWithDuration(0.5)
-        let move = SKAction.moveToY(playerBall.ball.position.y - 20.0, duration: 0.5)
-        let remove = SKAction.removeFromParent()
-        // 同時実行するグループアクションを作る.
-        let moveFadeOut = SKAction.group([move, fadeOut])
-        let sequence = SKAction.sequence([moveFadeOut, remove])
+        let moveFadeOut = animation.moveToYFadeOut(0.5,  yPos: playerBall.ball.position.y - 20.0, moveToY: 0.5)
+        let sequence = animation.removeAfterAction(moveFadeOut)
         launch.runAction(sequence)
     }
     
