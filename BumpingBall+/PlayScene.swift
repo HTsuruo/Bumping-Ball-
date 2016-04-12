@@ -14,6 +14,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     var playerBall = PlayerBall()
     var targetBall = TargetBall()
     let ballUtil = BallUtils()
+    let animation = Animation()
     var last: CFTimeInterval!
     var touchView = UIView()
     var score = 0
@@ -211,37 +212,12 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func removeBothBalls(node: SKNode, id: Int) {
-        let sparkPath = NSBundle.mainBundle().pathForResource("spark", ofType: "sks")
-        let spark = NSKeyedUnarchiver.unarchiveObjectWithFile(sparkPath!) as! SKEmitterNode
-        spark.position = node.position
-        spark.particleColorSequence = nil
-        spark.particleColorBlendFactor = 1.0
-        
-        switch id {
-        case BallType.BLUE.rawValue:
-            spark.particleColor = colorUtils.blue
-            break
-        case BallType.GREEN.rawValue:
-            spark.particleColor = colorUtils.green
-            break
-        case BallType.ORANGE.rawValue:
-            spark.particleColor = colorUtils.orange
-            break
-        case BallType.RED.rawValue:
-            spark.particleColor = colorUtils.red
-            break
-        default:
-            break
-        }
-        
-        spark.setScale(0.5)
+        let spark = animation.sparkAnimation(node, id: id)
         self.addChild(spark)
         
-        let fadeOut = SKAction.fadeOutWithDuration(0.5)
-        let remove = SKAction.removeFromParent()
-        let sequence = SKAction.sequence([fadeOut, remove])
+        let sequence = animation.fadeOutRemove(0.5)
         spark.runAction(sequence)
-    
+        
         node.removeFromParent()
     }
     

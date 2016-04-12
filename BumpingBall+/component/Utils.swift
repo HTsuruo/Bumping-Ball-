@@ -85,7 +85,7 @@ class BallUtils: NSObject {
         node.userData?.setValue(dx, forKey: "dx")
     }
     
-    func getScoreByCombo(comboCount: Int) -> Int{
+    func getScoreByCombo(comboCount: Int) -> Int {
         switch comboCount {
         case 1:
             return 100
