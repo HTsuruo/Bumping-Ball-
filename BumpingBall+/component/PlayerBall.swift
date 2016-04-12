@@ -74,6 +74,19 @@ struct PlayerBall {
         self.ball.setScale(self.ballScale)
     }
     
+    mutating func setGoldBall() {
+        let ballUtil = BallUtils()
+        self.ballSpeed = 4.0
+        self.ball.runAction(ballUtil.setGold())
+        self.setId(BallType.GOLD.rawValue)
+        self.ball.setScale(2.0)
+    }
+    
+    func isGold(node: SKNode) -> Bool{
+        let myId = node.userData?.valueForKey("id")
+        return myId as! Int == BallType.GOLD.rawValue
+    }
+    
 }
 
 struct ballImage {
@@ -81,4 +94,5 @@ struct ballImage {
     static let GREEN = "ball_green"
     static let ORANGE = "ball_orange"
     static let RED = "ball_red"
+    static let GOLD = "ball_gold"
 }

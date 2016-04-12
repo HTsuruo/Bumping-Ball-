@@ -20,6 +20,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     var score = 0
     var scoreLabel = SKLabelNode()
     var comboCount = 0
+    var touchBeginLocation = CGPoint()
     
 //     当たり判定のカテゴリを準備する.
     let ballCategory: UInt32 = 0x1 << 0
@@ -46,15 +47,15 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         }
         
         for touch in touches {
-            let location = touch.locationInNode(self)
+            touchBeginLocation = touch.locationInNode(self)
             
-            if !(define.TOUCH_AREA.contains(location)) {
+            if !(define.TOUCH_AREA.contains(touchBeginLocation)) {
                 return
             }
             
             /* setup playerBall */
             playerBall = PlayerBall()
-            playerBall.setLocation(location.x, posY: location.y + define.TOUCH_MARGIN)
+            playerBall.setLocation(touchBeginLocation.x, posY: touchBeginLocation.y + define.TOUCH_MARGIN)
             playerBall.setCategory(ballCategory, targetCat: targetBallCategory)
             self.addChild(playerBall.ball)
         }
@@ -73,6 +74,13 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
 //        ball.ball.runAction(Sound.launch)
+        for touche in touches {
+            let location = touche.locationInNode(self)
+            if location.y < touchBeginLocation.y && location.y <= 0.5 {
+                playerBall.setGoldBall()
+            }
+        }
+        
         playerBall.isFire = true
         playerBall.setIsFire()
         let actionMove = SKAction.moveToY(define.REMOVE_HEIGHT, duration: Double(playerBall.ballSpeed))
@@ -106,7 +114,9 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
                 if ball.position.y >= define.REMOVE_HEIGHT-1 {
                     ball.runAction(SKAction.fadeOutWithDuration(0.3), completion: {
                         ball.removeFromParent()
-                        self.comboCount = 0
+                        if !self.playerBall.isGold(self.playerBall.ball) {
+                            self.comboCount = 0
+                        }
                     })
                 }
             }
@@ -164,8 +174,10 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         let isNull = myId == nil || targetId == nil
         let isSame =  myId as! Int == targetId as! Int
         
-        if isNull || !(isSame) {
-            return
+        if !playerBall.isGold(firstBody.node!) {
+            if isNull || !(isSame) {
+                return
+            }
         }
         
 //      ballとtargetballが接触した時の処理
@@ -174,7 +186,9 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
                 secondBody.categoryBitMask & targetBallCategory != 0 {
                     updateComboCount(secondBody.node!)
                     removeBothBalls(secondBody.node!, id: targetId as! Int)
-                    firstBody.node?.removeFromParent()
+                    if !playerBall.isGold(firstBody.node!) {
+                        firstBody.node?.removeFromParent()
+                    }
                     updateScore()
             }
         }

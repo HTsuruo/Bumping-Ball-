@@ -53,6 +53,11 @@ class BallUtils: NSObject {
         return SKAction.setTexture(red, resize: true)
     }
     
+    func setGold() -> SKAction {
+        let gold = SKTexture.init(imageNamed: ballImage.GOLD)
+        return SKAction.setTexture(gold, resize: true)
+    }
+    
     //   跳ね返り処理
     func setRebound(node: SKSpriteNode) {
         let halfSize = Int(node.size.width/2)
@@ -113,6 +118,7 @@ struct colorUtils {
     static let green = colorWithHexString("4CAF50")
     static let orange = colorWithHexString("FF9800")
     static let red = colorWithHexString("f44336")
+    static let gold = colorWithHexString("ffd700")
     
 }
 

@@ -81,6 +81,10 @@ class Animation {
             launch.particleColor = colorUtils.red
             launchScale = 1.3
             break
+        case BallType.GOLD.rawValue:
+            launch.particleColor = colorUtils.gold
+            launchScale = 4.0
+            break
         default:
             break
         }

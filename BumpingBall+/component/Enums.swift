@@ -13,6 +13,7 @@ enum BallType: Int {
     case GREEN = 1
     case ORANGE = 2
     case RED = 3
+    case GOLD = 100
     
     func getImageName(key: BallType) -> String {
         switch self {
@@ -24,6 +25,8 @@ enum BallType: Int {
             return "ball_orange"
         case RED:
             return "ball_red"
+        case GOLD:
+            return "ball_gold"
         }
     }
     
@@ -37,6 +40,8 @@ enum BallType: Int {
             return 60.0
         case RED:
             return 80.0
+        case GOLD:
+            return 100.0
         }
     }
     
