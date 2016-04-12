@@ -192,7 +192,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
             comboCount = 6
         }
         
-        let comboLabel = SKLabelNode(fontNamed:"Chalkduster")
+        let comboLabel = SKLabelNode(fontNamed:"ChalkboardSE-Regular")
         comboLabel.text = "combo×"+String(comboCount-1)
         comboLabel.fontColor = UIColor.redColor()
         comboLabel.fontSize = 20
@@ -266,6 +266,10 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         launch.position.y = playerBall.ball.position.y
         launch.particleColorSequence = nil
         launch.particleColorBlendFactor = 1.0
+        
+        if playerBall.ball.userData?.valueForKey("id") == nil {
+            return
+        }
         
         let id = playerBall.ball.userData?.valueForKey("id") as! CGFloat
         var launchScale: CGFloat = 1.0
