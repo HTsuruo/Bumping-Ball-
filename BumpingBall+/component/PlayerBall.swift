@@ -106,16 +106,22 @@ class BallUtils: NSObject {
     }
     
     //   跳ね返り処理
-    func setRebound(node: SKSpriteNode) -> Bool {
+    func setRebound(node: SKSpriteNode) {
         let halfSize = Int(node.size.width/2)
+        var screenCollision = false
         
-        if node.position.x < 0 || node.position.x > define.WIDTH {
-            return false
+        if node.position.x < CGFloat(halfSize) {
+            node.position.x = CGFloat(halfSize)
+            screenCollision = true
+        }
+        
+        if node.position.x > define.WIDTH - CGFloat(halfSize) {
+            node.position.x = define.WIDTH - CGFloat(halfSize)
+            screenCollision = true
         }
         
         let posX: UInt = UInt(node.position.x)
         var dx = node.userData?.valueForKey("dx") as! CGFloat
-        var screenCollision = false
     
         if posX < UInt(halfSize) {
             screenCollision = true
@@ -129,8 +135,6 @@ class BallUtils: NSObject {
             dx *= -1
         }
         node.userData?.setValue(dx, forKey: "dx")
-        
-        return true
     }
     
 }

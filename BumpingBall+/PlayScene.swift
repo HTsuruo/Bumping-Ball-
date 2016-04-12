@@ -127,13 +127,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
             node, stop in
             if node is SKSpriteNode {
                 let targetBall = node as! SKSpriteNode
-                if !(self.ballUtil.setRebound(targetBall)) {
-                    let fadeOut = SKAction.fadeOutWithDuration(0.3)
-                    let remove = SKAction.removeFromParent()
-                    let sequence = SKAction.sequence([fadeOut, remove])
-                    targetBall.runAction(sequence)
-                    return
-                }
+                self.ballUtil.setRebound(targetBall)
                 let dx = targetBall.userData?.valueForKey("dx") as! CGFloat
                 let dy = targetBall.userData?.valueForKey("dy") as! CGFloat
                 targetBall.position.x += dx
