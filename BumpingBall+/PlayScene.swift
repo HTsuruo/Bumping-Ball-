@@ -15,10 +15,10 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     var targetBall = TargetBall()
     let ballUtil = BallUtils()
     var last: CFTimeInterval!
-    var removeHeight: CGFloat = 0.0
     var touchView = UIView()
     var score = 0
     var scoreLabel = SKLabelNode()
+    var comboCount = 0
     
 //     当たり判定のカテゴリを準備する.
     let ballCategory: UInt32 = 0x1 << 0
@@ -105,6 +105,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
                 if ball.position.y >= define.REMOVE_HEIGHT-1 {
                     ball.runAction(SKAction.fadeOutWithDuration(0.3), completion: {
                         ball.removeFromParent()
+                        self.comboCount = 0
                     })
                 }
             }
@@ -170,12 +171,40 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         if targetId != nil {
             if firstBody.categoryBitMask & ballCategory != 0 &&
                 secondBody.categoryBitMask & targetBallCategory != 0 {
+                    updateComboCount(secondBody.node!)
                     removeBothBalls(secondBody.node!, id: targetId as! Int)
                     firstBody.node?.removeFromParent()
                     score++
                     scoreLabel.text = String(score)
             }
         }
+    }
+    
+    func updateComboCount(node: SKNode) {
+        comboCount++
+        
+        if comboCount == 1 {
+            return
+        }
+        
+//        最大で5コンボ
+        if comboCount > 6 {
+            comboCount = 6
+        }
+        
+        let comboLabel = SKLabelNode(fontNamed:"Chalkduster")
+        comboLabel.text = "combo×"+String(comboCount-1)
+        comboLabel.fontColor = UIColor.redColor()
+        comboLabel.fontSize = 20
+        comboLabel.position = node.position
+        self.addChild(comboLabel)
+        
+        let fadeOut = SKAction.fadeOutWithDuration(0.8)
+        let move = SKAction.moveToY(node.position.y + 30, duration: 0.5)
+        let remove = SKAction.removeFromParent()
+        let moveFadeOut = SKAction.group([move, fadeOut])
+        let sequence = SKAction.sequence([moveFadeOut, remove])
+        comboLabel.runAction(sequence)
     }
     
     func removeBothBalls(node: SKNode, id: Int) {
