@@ -236,16 +236,14 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func launchAnimation() {
-        
         if playerBall.ball.userData?.valueForKey("id") == nil {
             return
         }
-        
         let id = playerBall.ball.userData?.valueForKey("id") as! Int
         let launch = animation.launchAnimation(playerBall.ball, id: id)
         self.addChild(launch)
         
-        let moveFadeOut = animation.moveToYFadeOut(0.5,  yPos: playerBall.ball.position.y - 20.0, moveToY: 0.5)
+        let moveFadeOut = animation.moveToYFadeOut(0.5, yPos: playerBall.ball.position.y - 20.0, moveToY: 0.5)
         let sequence = animation.removeAfterAction(moveFadeOut)
         launch.runAction(sequence)
     }
