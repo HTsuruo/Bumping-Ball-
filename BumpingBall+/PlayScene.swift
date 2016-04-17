@@ -76,11 +76,10 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
 //        ball.ball.runAction(Sound.launch)
         for touche in touches {
             let location = touche.locationInNode(self)
-            if location.y < touchBeginLocation.y && location.y <= 0.5 {
+            if location.y < touchBeginLocation.y && location.y < 10 {
                 playerBall.setGoldBall()
             }
         }
-        
         playerBall.isFire = true
         playerBall.setIsFire()
         let actionMove = SKAction.moveToY(define.REMOVE_HEIGHT, duration: Double(playerBall.ballSpeed))
@@ -89,11 +88,9 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     }
    
     override func update(currentTime: CFTimeInterval) {
-        removeBall()
         if  !playerBall.isFire {
             playerBall.sizeChange()
         }
-    
         if last == nil {
             last = currentTime
         }
@@ -102,6 +99,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
             createTargetBall()
             last = currentTime
         }
+        removeBall()
         moveTargetBall()
     }
     

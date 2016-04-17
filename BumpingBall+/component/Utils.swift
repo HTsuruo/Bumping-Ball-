@@ -111,8 +111,6 @@ class BallUtils: NSObject {
     
 }
 
-
-
 struct colorUtils {
     static let blue = colorWithHexString("2196F3")
     static let green = colorWithHexString("4CAF50")

@@ -82,7 +82,7 @@ struct PlayerBall {
         self.ball.setScale(2.0)
     }
     
-    func isGold(node: SKNode) -> Bool{
+    func isGold(node: SKNode) -> Bool {
         let myId = node.userData?.valueForKey("id")
         return myId as! Int == BallType.GOLD.rawValue
     }
