@@ -19,9 +19,9 @@ class TopViewController: UIViewController {
         super.viewDidLoad()
         utils.setStatusBar(self.view)
         
-        if let scene = FinishScene(fileNamed:"FinishScene") {
+        if let scene = TopScene(fileNamed:"TopScene") {
             // Configure the view.
-            skView.frame = CGRectMake(0, define.HEIGHT-50, define.WIDTH, 50)
+            skView.frame = CGRectMake(0, 0, define.WIDTH, define.HEIGHT)
             skView.showsFPS = true
             skView.showsNodeCount = true
             
@@ -31,10 +31,11 @@ class TopViewController: UIViewController {
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .ResizeFill
             
+            skView.allowsTransparency = true
             skView.presentScene(scene)
         }
         self.view.addSubview(skView)
-        
+        self.view.sendSubviewToBack(skView)
     }
     
     override func didReceiveMemoryWarning() {

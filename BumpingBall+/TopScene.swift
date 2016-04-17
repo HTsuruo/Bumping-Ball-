@@ -9,11 +9,12 @@
 import SpriteKit
 import UIKit
 
-class FinishScene: SKScene, SKPhysicsContactDelegate {
+class TopScene: SKScene, SKPhysicsContactDelegate {
     var last: CFTimeInterval!
     
     override func didMoveToView(view: SKView) {
-        print("here is finish view.")
+        print("here is top view.")
+        changeBkColor()
     }
     
     override func update(currentTime: CFTimeInterval) {
@@ -21,12 +22,21 @@ class FinishScene: SKScene, SKPhysicsContactDelegate {
             last = currentTime
         }
         //         3秒毎にtargetBallを作成する.
-        if last + 3 <= currentTime {
+        if last + 7 <= currentTime {
             last = currentTime
         }
     }
     
     func changeBkColor() {
+        let color1 = SKAction.colorizeWithColor(colorUtils.orange, colorBlendFactor: 1.0, duration: 4)
+        let color2 = SKAction.colorizeWithColor(colorUtils.green, colorBlendFactor: 1.0, duration: 4)
+        let color3 = SKAction.colorizeWithColor(colorUtils.blue, colorBlendFactor: 1.0, duration: 4)
+        let sequence  = SKAction.sequence([color1, color2, color3])
+        let foreverChange  = SKAction.repeatActionForever(sequence)
+        self.runAction(foreverChange)
+    }
+    
+    func changeBk() {
         let nextScene = PlayScene()
         nextScene.size = self.size
         let transition = SKTransition.crossFadeWithDuration(2)
