@@ -39,6 +39,8 @@
 		56BD7D351CBB995C00F9178B /* pauseBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BD7D341CBB995C00F9178B /* pauseBtn@2x.png */; };
 		56BD7D3B1CBB9D5B00F9178B /* TopScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BD7D3A1CBB9D5B00F9178B /* TopScene.swift */; };
 		56BD7D3F1CBB9E0100F9178B /* TopScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 56BD7D3E1CBB9E0100F9178B /* TopScene.sks */; };
+		56D160BF1CC49B3A00257404 /* FinishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56D160BE1CC49B3A00257404 /* FinishView.xib */; };
+		56D160C11CC4FCF500257404 /* FinishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D160C01CC4FCF500257404 /* FinishView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		56BD7D341CBB995C00F9178B /* pauseBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pauseBtn@2x.png"; path = "img/pauseBtn@2x.png"; sourceTree = SOURCE_ROOT; };
 		56BD7D3A1CBB9D5B00F9178B /* TopScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopScene.swift; sourceTree = "<group>"; };
 		56BD7D3E1CBB9E0100F9178B /* TopScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = TopScene.sks; path = sks/TopScene.sks; sourceTree = "<group>"; };
+		56D160BE1CC49B3A00257404 /* FinishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FinishView.xib; path = view/FinishView.xib; sourceTree = "<group>"; };
+		56D160C01CC4FCF500257404 /* FinishView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinishView.swift; path = view/FinishView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				56AC95A71CB2BCFD00B31FE3 /* PauseMenu.xib */,
+				56D160BE1CC49B3A00257404 /* FinishView.xib */,
+				56D160C01CC4FCF500257404 /* FinishView.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -360,6 +366,7 @@
 				565DDA571CBD50AF003C9F0D /* ball_gold@2x.png in Resources */,
 				565DDA551CBD4EB0003C9F0D /* launch.sks in Resources */,
 				56BB7F391CAD345200675AE8 /* Main.storyboard in Resources */,
+				56D160BF1CC49B3A00257404 /* FinishView.xib in Resources */,
 				56BB7FC91CAFFC0000675AE8 /* ball_green@2x.png in Resources */,
 				56BD7D351CBB995C00F9178B /* pauseBtn@2x.png in Resources */,
 				56BD7D3F1CBB9E0100F9178B /* TopScene.sks in Resources */,
@@ -416,6 +423,7 @@
 				56AC95A01CB24B3000B31FE3 /* Enums.swift in Sources */,
 				565DDA531CBD4707003C9F0D /* Animation.swift in Sources */,
 				56BB7F301CAD345100675AE8 /* AppDelegate.swift in Sources */,
+				56D160C11CC4FCF500257404 /* FinishView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

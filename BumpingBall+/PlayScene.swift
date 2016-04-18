@@ -38,10 +38,15 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         touchView = UIView(frame: CGRectMake(0, define.HEIGHT-70, define.WIDTH, 70))
         touchView.backgroundColor = UIColor.cyanColor()
         self.view?.addSubview(touchView)
+        
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-    
+        
+        self.view?.userInteractionEnabled = false
+        let finishView = FinishView()
+        self.view?.addSubview(finishView)
+        
         if self.paused {//ポーズ中は入力出来ないように.
             return
         }
