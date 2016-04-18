@@ -17,9 +17,8 @@ class FinishView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         NSBundle.mainBundle().loadNibNamed("FinishView", owner: self, options: nil)
-        finishView.frame = CGRectMake(0, 0, define.WIDTH, define.HEIGHT)
+        finishView.frame = frame
         self.addSubview(finishView)
-        finishView.addSubview(toTopBtn)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -28,10 +27,10 @@ class FinishView: UIView {
     
     @IBAction func onClickToTopBtn(sender: UIButton) {
         print("go to top")
-        /*let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let topVC = storyBoard.instantiateViewControllerWithIdentifier("topVC") as! TopViewController
         topVC.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         let currentVC = GameViewController()
-        currentVC.presentViewController(topVC, animated: true, completion: nil)*/
+        currentVC.presentViewController(topVC, animated: true, completion: nil)
     }
 }

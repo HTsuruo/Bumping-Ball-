@@ -14,6 +14,7 @@ class GameViewController: UIViewController {
 
     let util = Utils()
     var skView = SKView()
+    let finishView = FinishView(frame: CGRectMake(0, 0, define.WIDTH, define.HEIGHT))
     @IBOutlet var pauseMenu: UIView!
     @IBOutlet weak var resumeBtn: UIButton!
     @IBOutlet weak var quitBtn: UIButton!
@@ -86,5 +87,12 @@ class GameViewController: UIViewController {
         let topVC = self.storyboard?.instantiateViewControllerWithIdentifier("topVC") as! TopViewController
         topVC.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         self.presentViewController(topVC, animated: true, completion: nil)
+    }
+    
+//  sceneの中でtarget ballが自陣に侵入するとこのメソッドが呼ばれます.
+    func showFinishView() {
+        print("call")
+        skView.userInteractionEnabled = false
+//        self.view.addSubview(finishView)
     }
 }

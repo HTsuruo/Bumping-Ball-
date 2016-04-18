@@ -17,6 +17,7 @@ class TopViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "topVC"
         utils.setStatusBar(self.view)
         
         if let scene = TopScene(fileNamed:"TopScene") {

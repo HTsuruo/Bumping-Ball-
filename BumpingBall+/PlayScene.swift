@@ -11,6 +11,7 @@ import UIKit
 
 class PlayScene: SKScene, SKPhysicsContactDelegate {
     
+    let parentVC = GameViewController()
     var playerBall = PlayerBall()
     var targetBall = TargetBall()
     let ballUtil = BallUtils()
@@ -43,9 +44,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
-        self.view?.userInteractionEnabled = false
-        let finishView = FinishView()
-        self.view?.addSubview(finishView)
+//        parentVC.showFinishView()
         
         if self.paused {//ポーズ中は入力出来ないように.
             return
