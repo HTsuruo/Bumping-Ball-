@@ -11,14 +11,14 @@ import SpriteKit
 
 class TopViewController: UIViewController {
     
-    let utils = Utils()
+    let util = Utils()
     let skView = SKView()
     @IBOutlet weak var onePlayBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "topVC"
-        utils.setStatusBar(self.view)
+        util.setStatusBar(self.view)
         
         if let scene = TopScene(fileNamed:"TopScene") {
             // Configure the view.

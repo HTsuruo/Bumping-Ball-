@@ -29,6 +29,15 @@ class Utils: NSObject {
         v.backgroundColor = UIColor.whiteColor()
         parentView.addSubview(v)
     }
+    
+    //最前面のビューを取得する
+    func getForegroundViewController()->UIViewController {
+        var tc = UIApplication.sharedApplication().keyWindow?.rootViewController
+        while tc!.presentedViewController != nil {
+            tc = tc!.presentedViewController;
+        }
+        return tc!;
+    }
 }
 
 class BallUtils: NSObject {

@@ -22,6 +22,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     var scoreLabel = SKLabelNode()
     var comboCount = 0
     var touchBeginLocation = CGPoint()
+    let finishView = FinishView(frame: CGRectMake(0, 0, define.WIDTH, define.HEIGHT))
     
 //     当たり判定のカテゴリを準備する.
     let ballCategory: UInt32 = 0x1 << 0
@@ -44,7 +45,8 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
-//        parentVC.showFinishView()
+       // parentVC.showFinishView()
+        self.showFinishView()
         
         if self.paused {//ポーズ中は入力出来ないように.
             return
@@ -262,6 +264,12 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         let moveFadeOut = animation.moveToYFadeOut(0.5, yPos: playerBall.ball.position.y - 20.0, moveToY: 0.5)
         let sequence = animation.removeAfterAction(moveFadeOut)
         launch.runAction(sequence)
+    }
+    
+    //  target ballが自陣に侵入するとこのメソッドが呼ばれます.
+    func showFinishView() {
+        self.userInteractionEnabled = false
+        self.view!.addSubview(finishView)
     }
     
 }

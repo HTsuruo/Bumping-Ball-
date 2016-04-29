@@ -34,6 +34,7 @@
 		56BD7D351CBB995C00F9178B /* pauseBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BD7D341CBB995C00F9178B /* pauseBtn@2x.png */; };
 		56BD7D3B1CBB9D5B00F9178B /* TopScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BD7D3A1CBB9D5B00F9178B /* TopScene.swift */; };
 		56BD7D3F1CBB9E0100F9178B /* TopScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 56BD7D3E1CBB9E0100F9178B /* TopScene.sks */; };
+		56D0B09C1CC60CB2006AF5F8 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D0B09B1CC60CB2006AF5F8 /* FinishViewController.swift */; };
 		56D160BF1CC49B3A00257404 /* FinishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56D160BE1CC49B3A00257404 /* FinishView.xib */; };
 		56D160C11CC4FCF500257404 /* FinishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D160C01CC4FCF500257404 /* FinishView.swift */; };
 		56D160C81CC50E2C00257404 /* ball_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56D160C31CC50E2C00257404 /* ball_blue@2x.png */; };
@@ -97,6 +98,7 @@
 		56BD7D341CBB995C00F9178B /* pauseBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pauseBtn@2x.png"; path = "img/pauseBtn@2x.png"; sourceTree = SOURCE_ROOT; };
 		56BD7D3A1CBB9D5B00F9178B /* TopScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopScene.swift; sourceTree = "<group>"; };
 		56BD7D3E1CBB9E0100F9178B /* TopScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = TopScene.sks; path = sks/TopScene.sks; sourceTree = "<group>"; };
+		56D0B09B1CC60CB2006AF5F8 /* FinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
 		56D160BE1CC49B3A00257404 /* FinishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FinishView.xib; path = view/FinishView.xib; sourceTree = "<group>"; };
 		56D160C01CC4FCF500257404 /* FinishView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinishView.swift; path = view/FinishView.swift; sourceTree = "<group>"; };
 		56D160C31CC50E2C00257404 /* ball_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ball_blue@2x.png"; path = "img/balls/ball_blue@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -207,6 +209,7 @@
 				56BB7F331CAD345100675AE8 /* PlayScene.swift */,
 				56BB7F351CAD345100675AE8 /* GameViewController.swift */,
 				56BB7FAF1CAD766900675AE8 /* TopViewController.swift */,
+				56D0B09B1CC60CB2006AF5F8 /* FinishViewController.swift */,
 				56BB7F371CAD345200675AE8 /* Main.storyboard */,
 				56BB7F3A1CAD345200675AE8 /* Assets.xcassets */,
 				56BB7F3C1CAD345200675AE8 /* LaunchScreen.storyboard */,
@@ -443,6 +446,7 @@
 				56BD7D3B1CBB9D5B00F9178B /* TopScene.swift in Sources */,
 				56AC95A11CB24B3000B31FE3 /* Sound.swift in Sources */,
 				56BB7FB01CAD766900675AE8 /* TopViewController.swift in Sources */,
+				56D0B09C1CC60CB2006AF5F8 /* FinishViewController.swift in Sources */,
 				56AC95A31CB24B3000B31FE3 /* Utils.swift in Sources */,
 				56BB7F341CAD345100675AE8 /* PlayScene.swift in Sources */,
 				56AC959F1CB24B3000B31FE3 /* PlayerBall.swift in Sources */,

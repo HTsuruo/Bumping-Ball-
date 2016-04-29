@@ -13,6 +13,7 @@ class FinishView: UIView {
     
     @IBOutlet var finishView: UIView!
     @IBOutlet weak var toTopBtn: UIButton!
+    let util = Utils()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,7 +31,7 @@ class FinishView: UIView {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let topVC = storyBoard.instantiateViewControllerWithIdentifier("topVC") as! TopViewController
         topVC.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
-        let currentVC = GameViewController()
-        currentVC.presentViewController(topVC, animated: true, completion: nil)
+        let onePlayVC = util.getForegroundViewController()
+        onePlayVC.presentViewController(topVC, animated: true, completion: nil)
     }
 }
