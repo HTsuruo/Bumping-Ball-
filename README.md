@@ -5,6 +5,7 @@
 ## FrameWork
   * SpriteKit
   * GameKit
+  * Social.framework
 
 ## Library
   * 未定

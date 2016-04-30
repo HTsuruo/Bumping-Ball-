@@ -45,8 +45,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
-       // parentVC.showFinishView()
-        self.showFinishView()
+        self.finish()
         
         if self.paused {//ポーズ中は入力出来ないように.
             return
@@ -267,7 +266,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //  target ballが自陣に侵入するとこのメソッドが呼ばれます.
-    func showFinishView() {
+    func finish() {
         self.userInteractionEnabled = false
         self.view!.addSubview(finishView)
     }

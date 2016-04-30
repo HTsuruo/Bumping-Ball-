@@ -31,12 +31,12 @@ class Utils: NSObject {
     }
     
     //最前面のビューを取得する
-    func getForegroundViewController()->UIViewController {
+func getForegroundViewController() -> UIViewController {
         var tc = UIApplication.sharedApplication().keyWindow?.rootViewController
         while tc!.presentedViewController != nil {
-            tc = tc!.presentedViewController;
+            tc = tc!.presentedViewController
         }
-        return tc!;
+        return tc!
     }
 }
 
