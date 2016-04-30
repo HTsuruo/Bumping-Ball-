@@ -17,6 +17,7 @@ class FinishView: UIView {
     @IBOutlet weak var twitterBtn: UIButton!
     @IBOutlet weak var facebookBtn: UIButton!
     @IBOutlet weak var lineBtn: UIButton!
+    @IBOutlet weak var againBtn: UIButton!
     let util = Utils()
     
     override init(frame: CGRect) {
@@ -31,12 +32,14 @@ class FinishView: UIView {
     }
     
     @IBAction func onClickToTopBtn(sender: UIButton) {
-        print("go to top")
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let topVC = storyBoard.instantiateViewControllerWithIdentifier("topVC") as! TopViewController
-        topVC.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         let onePlayVC = util.getForegroundViewController()
-        onePlayVC.presentViewController(topVC, animated: true, completion: nil)
+        onePlayVC.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func onClickAgainBtn(sender: UIButton) {
+        let foregroundVC = util.getForegroundViewController()
+        foregroundVC.loadView()
+        foregroundVC.viewDidLoad()
     }
     
     @IBAction func onClickTwitterBtn(sender: UIButton) {

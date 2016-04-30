@@ -48,8 +48,6 @@ class GameViewController: UIViewController {
         pauseMenu = UINib(nibName: "PauseMenu", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! UIView
         pauseMenu.frame = CGRectMake(0, 0, define.WIDTH, define.HEIGHT)
         
-//        self.view.addSubview(finishView)
-        
     }
 
     override func shouldAutorotate() -> Bool {
@@ -86,8 +84,7 @@ class GameViewController: UIViewController {
     }
 
     @IBAction func onClickQuitBtn(sender: UIButton) {
-        let topVC = self.storyboard?.instantiateViewControllerWithIdentifier("topVC") as! TopViewController
-        topVC.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
-        self.presentViewController(topVC, animated: true, completion: nil)
+        let onePlayVC = util.getForegroundViewController()
+        onePlayVC.dismissViewControllerAnimated(true, completion: nil)
     }
 }

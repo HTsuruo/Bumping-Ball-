@@ -35,7 +35,8 @@
 		56BD7D3B1CBB9D5B00F9178B /* TopScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BD7D3A1CBB9D5B00F9178B /* TopScene.swift */; };
 		56BD7D3F1CBB9E0100F9178B /* TopScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 56BD7D3E1CBB9E0100F9178B /* TopScene.sks */; };
 		56BF57851CD3B35400923509 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BF57841CD3B35400923509 /* Social.framework */; };
-		56BF57871CD4AE3900923509 /* facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57861CD4AE3900923509 /* facebook@2x.png */; };
+		56BF578A1CD4BBBD00923509 /* arrows@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57881CD4BBBD00923509 /* arrows@2x.png */; };
+		56BF578B1CD4BBBD00923509 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57891CD4BBBD00923509 /* home@2x.png */; };
 		56D160BF1CC49B3A00257404 /* FinishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56D160BE1CC49B3A00257404 /* FinishView.xib */; };
 		56D160C11CC4FCF500257404 /* FinishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D160C01CC4FCF500257404 /* FinishView.swift */; };
 		56D160C81CC50E2C00257404 /* ball_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56D160C31CC50E2C00257404 /* ball_blue@2x.png */; };
@@ -99,7 +100,8 @@
 		56BD7D3A1CBB9D5B00F9178B /* TopScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopScene.swift; sourceTree = "<group>"; };
 		56BD7D3E1CBB9E0100F9178B /* TopScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = TopScene.sks; path = sks/TopScene.sks; sourceTree = "<group>"; };
 		56BF57841CD3B35400923509 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		56BF57861CD4AE3900923509 /* facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "facebook@2x.png"; path = "img/sns_icon/facebook@2x.png"; sourceTree = SOURCE_ROOT; };
+		56BF57881CD4BBBD00923509 /* arrows@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrows@2x.png"; path = "img/arrows@2x.png"; sourceTree = SOURCE_ROOT; };
+		56BF57891CD4BBBD00923509 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home@2x.png"; path = "img/home@2x.png"; sourceTree = SOURCE_ROOT; };
 		56D160BE1CC49B3A00257404 /* FinishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FinishView.xib; path = view/FinishView.xib; sourceTree = "<group>"; };
 		56D160C01CC4FCF500257404 /* FinishView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinishView.swift; path = view/FinishView.swift; sourceTree = "<group>"; };
 		56D160C31CC50E2C00257404 /* ball_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ball_blue@2x.png"; path = "img/balls/ball_blue@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -245,6 +247,8 @@
 		56BB7FC11CAFC08200675AE8 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				56BF57881CD4BBBD00923509 /* arrows@2x.png */,
+				56BF57891CD4BBBD00923509 /* home@2x.png */,
 				56D160CD1CC50E3200257404 /* sns_icon */,
 				56D160C21CC50E1B00257404 /* balls */,
 				56BD7D341CBB995C00F9178B /* pauseBtn@2x.png */,
@@ -268,7 +272,6 @@
 		56D160CD1CC50E3200257404 /* sns_icon */ = {
 			isa = PBXGroup;
 			children = (
-				56BF57861CD4AE3900923509 /* facebook@2x.png */,
 				56D160CF1CC50E5300257404 /* line@2x.png */,
 				56D160D01CC50E5300257404 /* twitter@2x.png */,
 			);
@@ -382,7 +385,6 @@
 			files = (
 				56D160D31CC50E5300257404 /* twitter@2x.png in Resources */,
 				56AC95981CB24B2100B31FE3 /* spark.png in Resources */,
-				56BF57871CD4AE3900923509 /* facebook@2x.png in Resources */,
 				56AC95991CB24B2100B31FE3 /* spark.sks in Resources */,
 				56AC95971CB24B2100B31FE3 /* PlayScene.sks in Resources */,
 				56AC95811CB16D0000B31FE3 /* launch.mp3 in Resources */,
@@ -398,9 +400,11 @@
 				56D160CA1CC50E2C00257404 /* ball_green@2x.png in Resources */,
 				565DDA551CBD4EB0003C9F0D /* launch.sks in Resources */,
 				56BB7F391CAD345200675AE8 /* Main.storyboard in Resources */,
+				56BF578B1CD4BBBD00923509 /* home@2x.png in Resources */,
 				56D160BF1CC49B3A00257404 /* FinishView.xib in Resources */,
 				56BD7D351CBB995C00F9178B /* pauseBtn@2x.png in Resources */,
 				56D160CC1CC50E2C00257404 /* ball_red@2x.png in Resources */,
+				56BF578A1CD4BBBD00923509 /* arrows@2x.png in Resources */,
 				56BD7D3F1CBB9E0100F9178B /* TopScene.sks in Resources */,
 				56D160C81CC50E2C00257404 /* ball_blue@2x.png in Resources */,
 			);

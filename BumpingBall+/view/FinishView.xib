@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FinishView" customModule="BumpingBall_" customModuleProvider="target">
             <connections>
+                <outlet property="againBtn" destination="gn5-Kr-wSX" id="Cii-JJ-X6k"/>
                 <outlet property="facebookBtn" destination="Iv0-MI-KxM" id="Ywv-61-sfD"/>
                 <outlet property="finishView" destination="iN0-l3-epB" id="diS-as-eGe"/>
                 <outlet property="lineBtn" destination="07D-l5-Z1Q" id="xvI-GH-86H"/>
@@ -25,10 +26,13 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcR-JK-9bB">
-                    <rect key="frame" x="260" y="454" width="81" height="36"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <state key="normal" title="go to top">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcR-JK-9bB">
+                    <rect key="frame" x="450" y="450" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="M6z-fK-s95"/>
+                        <constraint firstAttribute="width" constant="50" id="rQl-BX-L52"/>
+                    </constraints>
+                    <state key="normal" image="home.png">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     </state>
                     <connections>
@@ -70,36 +74,62 @@
                         <action selector="onClickLineBtn:" destination="-1" eventType="touchUpInside" id="0wU-No-5jY"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gn5-Kr-wSX">
+                    <rect key="frame" x="100" y="450" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Iax-Po-DAy"/>
+                        <constraint firstAttribute="width" constant="50" id="srd-JI-Vo5"/>
+                    </constraints>
+                    <state key="normal" title="Again" image="arrows.png">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onClickAgainBtn:" destination="-1" eventType="touchUpInside" id="5NT-eg-TLq"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.083763638010000002" green="0.085123697920000005" blue="0.084962653779999994" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="07D-l5-Z1Q" secondAttribute="bottom" constant="196" id="10l-oU-GhJ"/>
                 <constraint firstItem="Tdx-ZU-sgJ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="6Z4-xW-0f1"/>
-                <constraint firstAttribute="bottom" secondItem="dcR-JK-9bB" secondAttribute="bottom" constant="110" id="7KB-Il-ehW"/>
+                <constraint firstAttribute="bottom" secondItem="dcR-JK-9bB" secondAttribute="bottom" constant="100" id="7KB-Il-ehW"/>
+                <constraint firstItem="gn5-Kr-wSX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="100" id="7dt-ur-S7J"/>
                 <constraint firstItem="dcR-JK-9bB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9gm-7X-oGm"/>
                 <constraint firstItem="mXX-hl-TYA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ABd-Xx-PNL"/>
                 <constraint firstItem="Tdx-ZU-sgJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="BT9-RS-KA6"/>
                 <constraint firstAttribute="bottom" secondItem="Iv0-MI-KxM" secondAttribute="bottom" constant="196" id="HVd-Oe-FFq"/>
                 <constraint firstAttribute="trailing" secondItem="Iv0-MI-KxM" secondAttribute="trailing" constant="117" id="NA7-Qc-Brt"/>
+                <constraint firstItem="gn5-Kr-wSX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="480" id="QjN-bp-dwa"/>
                 <constraint firstItem="07D-l5-Z1Q" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="374" id="RpA-Pw-0U7"/>
                 <constraint firstItem="dcR-JK-9bB" firstAttribute="top" secondItem="mXX-hl-TYA" secondAttribute="bottom" constant="50" id="UsN-gs-0mN"/>
                 <constraint firstItem="Iv0-MI-KxM" firstAttribute="leading" secondItem="mXX-hl-TYA" secondAttribute="trailing" constant="92" id="WU0-QE-e28"/>
+                <constraint firstAttribute="trailing" secondItem="dcR-JK-9bB" secondAttribute="trailing" constant="100" id="WUz-Xl-DLa"/>
                 <constraint firstItem="Iv0-MI-KxM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="374" id="c3V-rU-bMl"/>
                 <constraint firstAttribute="bottom" secondItem="Iv0-MI-KxM" secondAttribute="bottom" constant="196" id="dYJ-a2-rka"/>
+                <constraint firstAttribute="bottom" secondItem="gn5-Kr-wSX" secondAttribute="bottom" constant="100" id="gef-1C-0Pp"/>
                 <constraint firstItem="07D-l5-Z1Q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="70" id="jjF-Qz-wHR"/>
                 <constraint firstItem="Iv0-MI-KxM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="374" id="mZa-23-jHY"/>
+                <constraint firstAttribute="bottom" secondItem="gn5-Kr-wSX" secondAttribute="bottom" priority="100" constant="100" id="r8b-c3-sby"/>
                 <constraint firstItem="mXX-hl-TYA" firstAttribute="top" secondItem="Tdx-ZU-sgJ" secondAttribute="bottom" constant="48" id="sZU-S3-qON"/>
                 <constraint firstAttribute="trailing" secondItem="Iv0-MI-KxM" secondAttribute="trailing" constant="50" id="uZR-ei-SG9"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="QjN-bp-dwa"/>
+                    <exclude reference="r8b-c3-sby"/>
                     <exclude reference="NA7-Qc-Brt"/>
                     <exclude reference="WU0-QE-e28"/>
                     <exclude reference="dYJ-a2-rka"/>
                     <exclude reference="mZa-23-jHY"/>
+                    <exclude reference="9gm-7X-oGm"/>
+                    <exclude reference="UsN-gs-0mN"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="257" y="288"/>
         </view>
     </objects>
+    <resources>
+        <image name="arrows.png" width="143" height="143"/>
+        <image name="home.png" width="143" height="143"/>
+    </resources>
 </document>
