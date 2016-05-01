@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="pauseMenu" destination="iN0-l3-epB" id="91E-nA-ykb"/>
                 <outlet property="quitBtn" destination="88a-IH-0wC" id="hcK-Nb-yeP"/>
+                <outlet property="restartBtn" destination="1la-av-LCi" id="9tb-v7-hJJ"/>
                 <outlet property="resumeBtn" destination="16Z-ql-lr9" id="mhh-7M-PLt"/>
             </connections>
         </placeholder>
@@ -18,9 +19,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16Z-ql-lr9">
-                    <rect key="frame" x="260" y="170" width="80" height="41"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                    <state key="normal" title="resume">
+                    <rect key="frame" x="250" y="120" width="101" height="46"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                    <state key="normal" title="Resume">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -28,13 +29,23 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88a-IH-0wC">
-                    <rect key="frame" x="279.5" y="381" width="41" height="41"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                    <state key="normal" title="quit">
+                    <rect key="frame" x="274" y="434" width="52" height="46"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                    <state key="normal" title="Quit">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="onClickQuitBtn:" destination="-1" eventType="touchUpInside" id="HX9-ZE-0J0"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1la-av-LCi">
+                    <rect key="frame" x="256" y="277" width="89" height="46"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                    <state key="normal" title="Restart">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="restartBtn:" destination="-1" eventType="touchUpInside" id="uWD-jh-WMx"/>
                     </connections>
                 </button>
             </subviews>
@@ -42,16 +53,24 @@
             <constraints>
                 <constraint firstItem="88a-IH-0wC" firstAttribute="top" secondItem="16Z-ql-lr9" secondAttribute="bottom" constant="170" id="52x-ks-FyN"/>
                 <constraint firstAttribute="bottom" secondItem="88a-IH-0wC" secondAttribute="bottom" constant="170" id="Cp7-DN-r4h"/>
+                <constraint firstItem="1la-av-LCi" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="E8K-Mn-bKt"/>
+                <constraint firstItem="1la-av-LCi" firstAttribute="top" secondItem="16Z-ql-lr9" secondAttribute="bottom" constant="70" id="LD9-xa-7vN"/>
+                <constraint firstItem="1la-av-LCi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Or2-if-Ztr"/>
                 <constraint firstItem="16Z-ql-lr9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Pgv-u6-kqI"/>
                 <constraint firstItem="88a-IH-0wC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="R2X-va-72i"/>
-                <constraint firstItem="16Z-ql-lr9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="170" id="rmn-dR-nvJ"/>
+                <constraint firstAttribute="bottom" secondItem="88a-IH-0wC" secondAttribute="bottom" constant="120" id="mxM-WS-oul"/>
+                <constraint firstItem="16Z-ql-lr9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="120" id="rmn-dR-nvJ"/>
+                <constraint firstItem="1la-av-LCi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="s0f-NA-Spz"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="LD9-xa-7vN"/>
+                    <exclude reference="s0f-NA-Spz"/>
+                    <exclude reference="52x-ks-FyN"/>
                     <exclude reference="Cp7-DN-r4h"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="227" y="189"/>
+            <point key="canvasLocation" x="275" y="203"/>
         </view>
     </objects>
 </document>

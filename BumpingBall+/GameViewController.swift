@@ -18,6 +18,7 @@ class GameViewController: UIViewController {
     @IBOutlet var pauseMenu: UIView!
     @IBOutlet weak var resumeBtn: UIButton!
     @IBOutlet weak var quitBtn: UIButton!
+    @IBOutlet weak var restartBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,4 +88,10 @@ class GameViewController: UIViewController {
         let onePlayVC = util.getForegroundViewController()
         onePlayVC.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    @IBAction func restartBtn(sender: UIButton) {
+        self.loadView()
+        self.viewDidLoad()
+    }
+    
 }

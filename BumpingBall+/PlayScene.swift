@@ -23,6 +23,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     var comboCount = 0
     var touchBeginLocation = CGPoint()
     let finishView = FinishView(frame: CGRectMake(0, 0, define.WIDTH, define.HEIGHT))
+    var isFin = false
     
 //     当たり判定のカテゴリを準備する.
     let ballCategory: UInt32 = 0x1 << 0
@@ -38,14 +39,15 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         
 //         set touch enable area
         touchView = UIView(frame: CGRectMake(0, define.HEIGHT-70, define.WIDTH, 70))
-        touchView.backgroundColor = UIColor.cyanColor()
+        touchView.backgroundColor = UIColor.whiteColor()
+        touchView.alpha = 0.5
         self.view?.addSubview(touchView)
         
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
-        self.finish()
+//        self.finish()
         
         if self.paused {//ポーズ中は入力出来ないように.
             return
@@ -147,6 +149,19 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
                 let dy = targetBall.userData?.valueForKey("dy") as! CGFloat
                 targetBall.position.x += dx
                 targetBall.position.y -= dy
+                
+                if self.isFin {
+                    return
+                }
+                
+                if (define.HEIGHT - self.touchView.frame.origin.y) > targetBall.position.y {
+                    self.isFin = true
+                    self.finish()
+                }
+                
+                /*if CGRectContainsPoint(self.touchView.frame, CGPoint(x: targetBall.position.x, y: targetBall.position.y) ) {
+                        print("hgoehg")
+                }*/
             }
         })
     }
