@@ -18,6 +18,7 @@ class FinishView: UIView {
     @IBOutlet weak var facebookBtn: UIButton!
     @IBOutlet weak var lineBtn: UIButton!
     @IBOutlet weak var againBtn: UIButton!
+    @IBOutlet weak var totalScoreLabel: UILabel!
     let util = Utils()
     
     override init(frame: CGRect) {
@@ -29,6 +30,10 @@ class FinishView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setScoreLabel(totalScore: Int) {
+        totalScoreLabel.text = String(totalScore)
     }
     
     @IBAction func onClickToTopBtn(sender: UIButton) {

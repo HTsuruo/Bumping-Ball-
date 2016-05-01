@@ -12,6 +12,7 @@
                 <outlet property="finishView" destination="iN0-l3-epB" id="diS-as-eGe"/>
                 <outlet property="lineBtn" destination="07D-l5-Z1Q" id="xvI-GH-86H"/>
                 <outlet property="toTopBtn" destination="dcR-JK-9bB" id="OxQ-xZ-3SK"/>
+                <outlet property="totalScoreLabel" destination="mfg-7o-mbd" id="i9t-Bk-kN3"/>
                 <outlet property="twitterBtn" destination="mXX-hl-TYA" id="TM8-lf-kjp"/>
             </connections>
         </placeholder>
@@ -87,6 +88,12 @@
                         <action selector="onClickAgainBtn:" destination="-1" eventType="touchUpInside" id="5NT-eg-TLq"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="totalScore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfg-7o-mbd">
+                    <rect key="frame" x="250.5" y="80" width="99.5" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.083763638010000002" green="0.085123697920000005" blue="0.084962653779999994" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
@@ -104,11 +111,13 @@
                 <constraint firstItem="dcR-JK-9bB" firstAttribute="top" secondItem="mXX-hl-TYA" secondAttribute="bottom" constant="50" id="UsN-gs-0mN"/>
                 <constraint firstItem="Iv0-MI-KxM" firstAttribute="leading" secondItem="mXX-hl-TYA" secondAttribute="trailing" constant="92" id="WU0-QE-e28"/>
                 <constraint firstAttribute="trailing" secondItem="dcR-JK-9bB" secondAttribute="trailing" constant="100" id="WUz-Xl-DLa"/>
+                <constraint firstItem="mfg-7o-mbd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="b57-nv-xah"/>
                 <constraint firstItem="Iv0-MI-KxM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="374" id="c3V-rU-bMl"/>
                 <constraint firstAttribute="bottom" secondItem="Iv0-MI-KxM" secondAttribute="bottom" constant="196" id="dYJ-a2-rka"/>
                 <constraint firstAttribute="bottom" secondItem="gn5-Kr-wSX" secondAttribute="bottom" constant="100" id="gef-1C-0Pp"/>
                 <constraint firstItem="07D-l5-Z1Q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="70" id="jjF-Qz-wHR"/>
                 <constraint firstItem="Iv0-MI-KxM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="374" id="mZa-23-jHY"/>
+                <constraint firstItem="mfg-7o-mbd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oAF-qt-xn1"/>
                 <constraint firstAttribute="bottom" secondItem="gn5-Kr-wSX" secondAttribute="bottom" priority="100" constant="100" id="r8b-c3-sby"/>
                 <constraint firstItem="mXX-hl-TYA" firstAttribute="top" secondItem="Tdx-ZU-sgJ" secondAttribute="bottom" constant="48" id="sZU-S3-qON"/>
                 <constraint firstAttribute="trailing" secondItem="Iv0-MI-KxM" secondAttribute="trailing" constant="50" id="uZR-ei-SG9"/>
@@ -125,7 +134,7 @@
                     <exclude reference="UsN-gs-0mN"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="257" y="288"/>
+            <point key="canvasLocation" x="258" y="95"/>
         </view>
     </objects>
     <resources>

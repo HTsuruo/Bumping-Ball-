@@ -154,14 +154,11 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
                     return
                 }
                 
+//              自陣にボールが入るとゲームオーバーになります.
                 if (define.HEIGHT - self.touchView.frame.origin.y) > targetBall.position.y {
                     self.isFin = true
                     self.finish()
                 }
-                
-                /*if CGRectContainsPoint(self.touchView.frame, CGPoint(x: targetBall.position.x, y: targetBall.position.y) ) {
-                        print("hgoehg")
-                }*/
             }
         })
     }
@@ -280,9 +277,15 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         launch.runAction(sequence)
     }
     
-    //  target ballが自陣に侵入するとこのメソッドが呼ばれます.
+//  ゲームオーバー処理
     func finish() {
+        let ud = NSUserDefaults.standardUserDefaults()
+        let bestScore: Int = ud.integerForKey("bestScore")
+        if score > bestScore {
+            ud.setInteger(score, forKey: "bestScore")
+        }
         self.userInteractionEnabled = false
+        finishView.setScoreLabel(score)
         self.view!.addSubview(finishView)
     }
     
