@@ -13,7 +13,13 @@ import SpriteKit
 class Difficulty {
     var score = 0
     
+    //ボールの速度を上げます.
     func getAccelerationSpped() -> Double {
         return 0.0
+    }
+    
+    //ボールの生成感覚を多くします.
+    func getInterval() -> CFTimeInterval {
+        return 3
     }
 }

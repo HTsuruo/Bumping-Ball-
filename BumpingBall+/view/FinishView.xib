@@ -5,8 +5,8 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Roboto-Bold.ttf">
-            <string>Roboto-Bold</string>
+        <mutableArray key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
         </mutableArray>
     </customFonts>
     <objects>
@@ -94,9 +94,9 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="totalScore" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfg-7o-mbd">
-                    <rect key="frame" x="249" y="80" width="102" height="29.5"/>
-                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="22"/>
-                    <color key="textColor" red="1" green="0.25342893394595811" blue="0.055235469918012869" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="188.5" y="80" width="224" height="66"/>
+                    <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="50"/>
+                    <color key="textColor" red="1" green="0.92016314561473445" blue="0.53812680880995156" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>

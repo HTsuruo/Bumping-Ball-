@@ -49,6 +49,10 @@
 		56BF57C41CD734D900923509 /* ball_green_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57C11CD734D900923509 /* ball_green_3@2x.png */; };
 		56BF57C71CD734DF00923509 /* ball_orange_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57C51CD734DF00923509 /* ball_orange_1@2x.png */; };
 		56BF57C81CD734DF00923509 /* ball_orange_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57C61CD734DF00923509 /* ball_orange_2@2x.png */; };
+		56BF57CF1CD7902000923509 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57CC1CD7902000923509 /* Roboto-Bold.ttf */; };
+		56BF57D01CD7902000923509 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57CD1CD7902000923509 /* Roboto-Light.ttf */; };
+		56BF57D21CD7904700923509 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57CC1CD7902000923509 /* Roboto-Bold.ttf */; };
+		56BF57D31CD7904700923509 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57CD1CD7902000923509 /* Roboto-Light.ttf */; };
 		56D160BF1CC49B3A00257404 /* FinishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56D160BE1CC49B3A00257404 /* FinishView.xib */; };
 		56D160C11CC4FCF500257404 /* FinishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D160C01CC4FCF500257404 /* FinishView.swift */; };
 		56D160C81CC50E2C00257404 /* ball_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56D160C31CC50E2C00257404 /* ball_blue@2x.png */; };
@@ -114,9 +118,6 @@
 		56BF57841CD3B35400923509 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		56BF57881CD4BBBD00923509 /* arrows@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrows@2x.png"; path = "img/arrows@2x.png"; sourceTree = SOURCE_ROOT; };
 		56BF57891CD4BBBD00923509 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home@2x.png"; path = "img/home@2x.png"; sourceTree = SOURCE_ROOT; };
-		56BF57901CD711D100923509 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "font/Roboto-Bold.ttf"; sourceTree = "<group>"; };
-		56BF57911CD711D100923509 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "font/Roboto-Light.ttf"; sourceTree = "<group>"; };
-		56BF57921CD711D100923509 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Regular.ttf"; path = "font/RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		56BF57931CD72C6100923509 /* Difficulty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Difficulty.swift; path = component/Difficulty.swift; sourceTree = "<group>"; };
 		56BF57B31CD7342F00923509 /* BallImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BallImage.swift; path = component/BallImage.swift; sourceTree = "<group>"; };
 		56BF57B51CD734D100923509 /* ball_blue_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball_blue_1@2x.png"; sourceTree = "<group>"; };
@@ -129,6 +130,8 @@
 		56BF57C11CD734D900923509 /* ball_green_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball_green_3@2x.png"; sourceTree = "<group>"; };
 		56BF57C51CD734DF00923509 /* ball_orange_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball_orange_1@2x.png"; sourceTree = "<group>"; };
 		56BF57C61CD734DF00923509 /* ball_orange_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball_orange_2@2x.png"; sourceTree = "<group>"; };
+		56BF57CC1CD7902000923509 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "font/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		56BF57CD1CD7902000923509 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "font/Roboto-Light.ttf"; sourceTree = "<group>"; };
 		56D160BE1CC49B3A00257404 /* FinishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FinishView.xib; path = view/FinishView.xib; sourceTree = "<group>"; };
 		56D160C01CC4FCF500257404 /* FinishView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinishView.swift; path = view/FinishView.swift; sourceTree = "<group>"; };
 		56D160C31CC50E2C00257404 /* ball_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ball_blue@2x.png"; path = "img/balls/ball_blue@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -290,9 +293,8 @@
 		56BF578C1CD710C200923509 /* font */ = {
 			isa = PBXGroup;
 			children = (
-				56BF57901CD711D100923509 /* Roboto-Bold.ttf */,
-				56BF57911CD711D100923509 /* Roboto-Light.ttf */,
-				56BF57921CD711D100923509 /* RobotoCondensed-Regular.ttf */,
+				56BF57CC1CD7902000923509 /* Roboto-Bold.ttf */,
+				56BF57CD1CD7902000923509 /* Roboto-Light.ttf */,
 			);
 			name = font;
 			path = ..;
@@ -473,6 +475,7 @@
 				56AC95971CB24B2100B31FE3 /* PlayScene.sks in Resources */,
 				56AC95811CB16D0000B31FE3 /* launch.mp3 in Resources */,
 				56BD7D331CBB702000F9178B /* spark@2x.png in Resources */,
+				56BF57CF1CD7902000923509 /* Roboto-Bold.ttf in Resources */,
 				56BB7F3E1CAD345200675AE8 /* LaunchScreen.storyboard in Resources */,
 				56BF57BE1CD734D100923509 /* ball_blue_5@2x.png in Resources */,
 				56AC95AA1CB2BDD400B31FE3 /* pause.mp3 in Resources */,
@@ -491,6 +494,7 @@
 				56D160CA1CC50E2C00257404 /* ball_green@2x.png in Resources */,
 				565DDA551CBD4EB0003C9F0D /* launch.sks in Resources */,
 				56BB7F391CAD345200675AE8 /* Main.storyboard in Resources */,
+				56BF57D01CD7902000923509 /* Roboto-Light.ttf in Resources */,
 				56BF578B1CD4BBBD00923509 /* home@2x.png in Resources */,
 				56BF57BA1CD734D100923509 /* ball_blue_1@2x.png in Resources */,
 				56D160BF1CC49B3A00257404 /* FinishView.xib in Resources */,
@@ -514,6 +518,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56BF57D21CD7904700923509 /* Roboto-Bold.ttf in Resources */,
+				56BF57D31CD7904700923509 /* Roboto-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

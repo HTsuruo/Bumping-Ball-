@@ -102,8 +102,8 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         if last == nil {
             last = currentTime
         }
-//         3秒毎にtargetBallを作成する.
-        if last + 3 <= currentTime {
+
+        if last + difficulty.getInterval() <= currentTime {
             createTargetBall()
             last = currentTime
         }
