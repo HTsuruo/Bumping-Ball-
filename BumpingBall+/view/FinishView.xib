@@ -45,39 +45,30 @@
                         <action selector="onClickToTopBtn:" destination="-1" eventType="touchUpInside" id="pu0-uP-scX"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXX-hl-TYA">
-                    <rect key="frame" x="276" y="374" width="48" height="30"/>
-                    <state key="normal" title="Twitter">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXX-hl-TYA">
+                    <rect key="frame" x="277.5" y="385" width="45" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="45" id="Lz2-yR-e8Z"/>
+                        <constraint firstAttribute="height" constant="45" id="htR-YE-Vc8"/>
+                    </constraints>
+                    <state key="normal" title="Twitter" image="twitter.png">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="onClickTwitterBtn:" destination="-1" eventType="touchUpInside" id="Mkp-LW-BFg"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iv0-MI-KxM">
-                    <rect key="frame" x="483" y="374" width="67" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iv0-MI-KxM">
+                    <rect key="frame" x="505" y="385" width="45" height="45"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="67" id="OnK-cl-S4l"/>
-                        <constraint firstAttribute="height" constant="30" id="aba-u2-R3t"/>
+                        <constraint firstAttribute="width" constant="45" id="OnK-cl-S4l"/>
+                        <constraint firstAttribute="height" constant="45" id="aba-u2-R3t"/>
                     </constraints>
-                    <state key="normal" title="Facebook">
+                    <state key="normal" title="Facebook" image="facebook.png">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="onClickFacebookBtn:" destination="-1" eventType="touchUpInside" id="2G5-YL-Znq"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07D-l5-Z1Q">
-                    <rect key="frame" x="70" y="374" width="30" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="30" id="bnp-ND-fWC"/>
-                        <constraint firstAttribute="height" constant="30" id="h3V-CP-TMI"/>
-                    </constraints>
-                    <state key="normal" title="Line">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="onClickLineBtn:" destination="-1" eventType="touchUpInside" id="0wU-No-5jY"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gn5-Kr-wSX">
@@ -94,11 +85,32 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="totalScore" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfg-7o-mbd">
-                    <rect key="frame" x="168" y="80" width="264" height="58"/>
+                    <rect key="frame" x="168" y="80" width="264" height="57.5"/>
                     <fontDescription key="fontDescription" name="CooperBlack" family="Cooper Black" pointSize="50"/>
                     <color key="textColor" red="1" green="0.92016314561473445" blue="0.53812680880995156" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07D-l5-Z1Q">
+                    <rect key="frame" x="50" y="385" width="45" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Jda-5J-yxC"/>
+                        <constraint firstAttribute="width" constant="45" id="bnp-ND-fWC"/>
+                        <constraint firstAttribute="height" constant="45" id="h3V-CP-TMI"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="il1-cA-Hyo"/>
+                    </constraints>
+                    <state key="normal" title="Line" image="line.png">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Jda-5J-yxC"/>
+                            <exclude reference="il1-cA-Hyo"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="onClickLineBtn:" destination="-1" eventType="touchUpInside" id="0wU-No-5jY"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.083763638010000002" green="0.085123697920000005" blue="0.084962653779999994" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
@@ -110,27 +122,33 @@
                 <constraint firstItem="mXX-hl-TYA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ABd-Xx-PNL"/>
                 <constraint firstItem="Tdx-ZU-sgJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="BT9-RS-KA6"/>
                 <constraint firstAttribute="bottom" secondItem="Iv0-MI-KxM" secondAttribute="bottom" constant="196" id="HVd-Oe-FFq"/>
+                <constraint firstItem="mXX-hl-TYA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="385" id="IDt-nB-PgL"/>
                 <constraint firstAttribute="trailing" secondItem="Iv0-MI-KxM" secondAttribute="trailing" constant="117" id="NA7-Qc-Brt"/>
                 <constraint firstItem="gn5-Kr-wSX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="480" id="QjN-bp-dwa"/>
-                <constraint firstItem="07D-l5-Z1Q" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="374" id="RpA-Pw-0U7"/>
+                <constraint firstItem="07D-l5-Z1Q" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="385" id="RpA-Pw-0U7"/>
                 <constraint firstItem="dcR-JK-9bB" firstAttribute="top" secondItem="mXX-hl-TYA" secondAttribute="bottom" constant="50" id="UsN-gs-0mN"/>
                 <constraint firstItem="Iv0-MI-KxM" firstAttribute="leading" secondItem="mXX-hl-TYA" secondAttribute="trailing" constant="92" id="WU0-QE-e28"/>
                 <constraint firstAttribute="trailing" secondItem="dcR-JK-9bB" secondAttribute="trailing" constant="100" id="WUz-Xl-DLa"/>
                 <constraint firstItem="mfg-7o-mbd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="b57-nv-xah"/>
-                <constraint firstItem="Iv0-MI-KxM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="374" id="c3V-rU-bMl"/>
+                <constraint firstItem="Iv0-MI-KxM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="385" id="c3V-rU-bMl"/>
                 <constraint firstAttribute="bottom" secondItem="Iv0-MI-KxM" secondAttribute="bottom" constant="196" id="dYJ-a2-rka"/>
                 <constraint firstAttribute="bottom" secondItem="gn5-Kr-wSX" secondAttribute="bottom" constant="100" id="gef-1C-0Pp"/>
-                <constraint firstItem="07D-l5-Z1Q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="70" id="jjF-Qz-wHR"/>
+                <constraint firstItem="07D-l5-Z1Q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="jjF-Qz-wHR"/>
                 <constraint firstItem="Iv0-MI-KxM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="374" id="mZa-23-jHY"/>
                 <constraint firstItem="mfg-7o-mbd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oAF-qt-xn1"/>
                 <constraint firstAttribute="bottom" secondItem="gn5-Kr-wSX" secondAttribute="bottom" priority="100" constant="100" id="r8b-c3-sby"/>
                 <constraint firstItem="mXX-hl-TYA" firstAttribute="top" secondItem="Tdx-ZU-sgJ" secondAttribute="bottom" constant="48" id="sZU-S3-qON"/>
+                <constraint firstAttribute="bottom" secondItem="mXX-hl-TYA" secondAttribute="bottom" constant="176" id="uVv-fR-vTN"/>
                 <constraint firstAttribute="trailing" secondItem="Iv0-MI-KxM" secondAttribute="trailing" constant="50" id="uZR-ei-SG9"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">
+                    <exclude reference="10l-oU-GhJ"/>
                     <exclude reference="QjN-bp-dwa"/>
                     <exclude reference="r8b-c3-sby"/>
+                    <exclude reference="sZU-S3-qON"/>
+                    <exclude reference="uVv-fR-vTN"/>
+                    <exclude reference="HVd-Oe-FFq"/>
                     <exclude reference="NA7-Qc-Brt"/>
                     <exclude reference="WU0-QE-e28"/>
                     <exclude reference="dYJ-a2-rka"/>
@@ -144,6 +162,9 @@
     </objects>
     <resources>
         <image name="arrows.png" width="143" height="143"/>
+        <image name="facebook.png" width="150" height="150"/>
         <image name="home.png" width="143" height="143"/>
+        <image name="line.png" width="250" height="250"/>
+        <image name="twitter.png" width="150" height="150"/>
     </resources>
 </document>

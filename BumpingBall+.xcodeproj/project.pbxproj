@@ -54,6 +54,7 @@
 		56BF57D21CD7904700923509 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57CC1CD7902000923509 /* Roboto-Bold.ttf */; };
 		56BF57D31CD7904700923509 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57CD1CD7902000923509 /* Roboto-Light.ttf */; };
 		56BF57D61CD798D500923509 /* COOPBL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57D51CD798D500923509 /* COOPBL.ttf */; };
+		56BF57D81CD7ACE200923509 /* facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57D71CD7ACE200923509 /* facebook@2x.png */; };
 		56D160BF1CC49B3A00257404 /* FinishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56D160BE1CC49B3A00257404 /* FinishView.xib */; };
 		56D160C11CC4FCF500257404 /* FinishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D160C01CC4FCF500257404 /* FinishView.swift */; };
 		56D160C81CC50E2C00257404 /* ball_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56D160C31CC50E2C00257404 /* ball_blue@2x.png */; };
@@ -134,6 +135,7 @@
 		56BF57CC1CD7902000923509 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "font/Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		56BF57CD1CD7902000923509 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "font/Roboto-Light.ttf"; sourceTree = "<group>"; };
 		56BF57D51CD798D500923509 /* COOPBL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = COOPBL.ttf; path = font/COOPBL.ttf; sourceTree = "<group>"; };
+		56BF57D71CD7ACE200923509 /* facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook@2x.png"; sourceTree = "<group>"; };
 		56D160BE1CC49B3A00257404 /* FinishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FinishView.xib; path = view/FinishView.xib; sourceTree = "<group>"; };
 		56D160C01CC4FCF500257404 /* FinishView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinishView.swift; path = view/FinishView.swift; sourceTree = "<group>"; };
 		56D160C31CC50E2C00257404 /* ball_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ball_blue@2x.png"; path = "img/balls/ball_blue@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -360,6 +362,7 @@
 		56D160CD1CC50E3200257404 /* sns_icon */ = {
 			isa = PBXGroup;
 			children = (
+				56BF57D71CD7ACE200923509 /* facebook@2x.png */,
 				56D160CF1CC50E5300257404 /* line@2x.png */,
 				56D160D01CC50E5300257404 /* twitter@2x.png */,
 			);
@@ -489,6 +492,7 @@
 				56BF57C41CD734D900923509 /* ball_green_3@2x.png in Resources */,
 				56BF57C31CD734D900923509 /* ball_green_2@2x.png in Resources */,
 				56BF57C81CD734DF00923509 /* ball_orange_2@2x.png in Resources */,
+				56BF57D81CD7ACE200923509 /* facebook@2x.png in Resources */,
 				56BF57BD1CD734D100923509 /* ball_blue_4@2x.png in Resources */,
 				56BF57BB1CD734D100923509 /* ball_blue_2@2x.png in Resources */,
 				56BF57C21CD734D900923509 /* ball_green_1@2x.png in Resources */,
