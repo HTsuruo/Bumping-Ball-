@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Roboto-Light.ttf">
-            <string>Roboto-Light</string>
-            <string>Roboto-Light</string>
-            <string>Roboto-Light</string>
+        <mutableArray key="COOPBL.ttf">
+            <string>CooperBlack</string>
+            <string>CooperBlack</string>
+            <string>CooperBlack</string>
         </mutableArray>
     </customFonts>
     <objects>
@@ -26,8 +26,12 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16Z-ql-lr9">
-                    <rect key="frame" x="249" y="120" width="102" height="49"/>
-                    <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="28"/>
+                    <rect key="frame" x="230" y="120" width="140" height="45"/>
+                    <color key="backgroundColor" red="0.15330817137617225" green="0.61262042689049956" blue="0.72870163690476186" alpha="0.29939088983050849" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="140" id="dJh-mo-hqf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="CooperBlack" family="Cooper Black" pointSize="28"/>
                     <state key="normal" title="Resume">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -36,8 +40,12 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88a-IH-0wC">
-                    <rect key="frame" x="275" y="431" width="50" height="49"/>
-                    <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="28"/>
+                    <rect key="frame" x="230" y="435" width="140" height="45"/>
+                    <color key="backgroundColor" red="0.1533081714" green="0.61262042689999996" blue="0.7287016369" alpha="0.2993908898" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="140" id="aza-hX-h4Q"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="CooperBlack" family="Cooper Black" pointSize="28"/>
                     <state key="normal" title="Quit">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -46,8 +54,12 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1la-av-LCi">
-                    <rect key="frame" x="255" y="275" width="90" height="49"/>
-                    <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="28"/>
+                    <rect key="frame" x="230" y="277" width="140" height="45"/>
+                    <color key="backgroundColor" red="0.1533081714" green="0.61262042689999996" blue="0.7287016369" alpha="0.2993908898" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="140" id="804-vx-VvL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="CooperBlack" family="Cooper Black" pointSize="28"/>
                     <state key="normal" title="Restart">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     </state>
