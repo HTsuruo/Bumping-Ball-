@@ -64,7 +64,7 @@ class FinishView: UIView {
     }
     
     @IBAction func onClickLineBtn(sender: UIButton) {
-        let text: String! = "Message!!"
+        let text: String! = "【Bumping Ball+】"
         let encodeMessage: String! = text.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         let messageURL: NSURL! = NSURL( string: "line://msg/text/" + encodeMessage )
         if UIApplication.sharedApplication().canOpenURL(messageURL) {

@@ -43,6 +43,11 @@ struct TargetBall {
             break
         }
         
+        let difficulty = Difficulty()
+        let speed = difficulty.getAccelerationSpped()
+        self.dx += speed
+        self.dy += speed
+        
         self.ball.setScale(self.ballScale)
         
         self.ball.name = "t_ball"//名前をつけるのはインスタンス化した後

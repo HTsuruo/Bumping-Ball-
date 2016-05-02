@@ -37,6 +37,7 @@
 		56BF57851CD3B35400923509 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BF57841CD3B35400923509 /* Social.framework */; };
 		56BF578A1CD4BBBD00923509 /* arrows@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57881CD4BBBD00923509 /* arrows@2x.png */; };
 		56BF578B1CD4BBBD00923509 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57891CD4BBBD00923509 /* home@2x.png */; };
+		56BF57941CD72C6100923509 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BF57931CD72C6100923509 /* Difficulty.swift */; };
 		56D160BF1CC49B3A00257404 /* FinishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56D160BE1CC49B3A00257404 /* FinishView.xib */; };
 		56D160C11CC4FCF500257404 /* FinishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D160C01CC4FCF500257404 /* FinishView.swift */; };
 		56D160C81CC50E2C00257404 /* ball_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56D160C31CC50E2C00257404 /* ball_blue@2x.png */; };
@@ -102,6 +103,10 @@
 		56BF57841CD3B35400923509 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		56BF57881CD4BBBD00923509 /* arrows@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrows@2x.png"; path = "img/arrows@2x.png"; sourceTree = SOURCE_ROOT; };
 		56BF57891CD4BBBD00923509 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home@2x.png"; path = "img/home@2x.png"; sourceTree = SOURCE_ROOT; };
+		56BF57901CD711D100923509 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "font/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		56BF57911CD711D100923509 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "font/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		56BF57921CD711D100923509 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Regular.ttf"; path = "font/RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		56BF57931CD72C6100923509 /* Difficulty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Difficulty.swift; path = component/Difficulty.swift; sourceTree = "<group>"; };
 		56D160BE1CC49B3A00257404 /* FinishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FinishView.xib; path = view/FinishView.xib; sourceTree = "<group>"; };
 		56D160C01CC4FCF500257404 /* FinishView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinishView.swift; path = view/FinishView.swift; sourceTree = "<group>"; };
 		56D160C31CC50E2C00257404 /* ball_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ball_blue@2x.png"; path = "img/balls/ball_blue@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -158,6 +163,7 @@
 				56AC959C1CB24B3000B31FE3 /* Sound.swift */,
 				56AC959E1CB24B3000B31FE3 /* Utils.swift */,
 				565DDA521CBD4707003C9F0D /* Animation.swift */,
+				56BF57931CD72C6100923509 /* Difficulty.swift */,
 			);
 			name = component;
 			sourceTree = "<group>";
@@ -220,6 +226,7 @@
 				56AC95A61CB2BCF000B31FE3 /* view */,
 				56AC95931CB24A1F00B31FE3 /* sks */,
 				56AC95921CB24A0100B31FE3 /* component */,
+				56BF578C1CD710C200923509 /* font */,
 				56AC957D1CB16CEF00B31FE3 /* sound */,
 				56BB7FC11CAFC08200675AE8 /* img */,
 			);
@@ -255,6 +262,17 @@
 				56BD7D321CBB702000F9178B /* spark@2x.png */,
 			);
 			name = img;
+			sourceTree = "<group>";
+		};
+		56BF578C1CD710C200923509 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				56BF57901CD711D100923509 /* Roboto-Bold.ttf */,
+				56BF57911CD711D100923509 /* Roboto-Light.ttf */,
+				56BF57921CD711D100923509 /* RobotoCondensed-Regular.ttf */,
+			);
+			name = font;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		56D160C21CC50E1B00257404 /* balls */ = {
@@ -460,6 +478,7 @@
 				565DDA531CBD4707003C9F0D /* Animation.swift in Sources */,
 				56BB7F301CAD345100675AE8 /* AppDelegate.swift in Sources */,
 				56D160C11CC4FCF500257404 /* FinishView.swift in Sources */,
+				56BF57941CD72C6100923509 /* Difficulty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

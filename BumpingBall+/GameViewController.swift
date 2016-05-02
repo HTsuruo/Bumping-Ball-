@@ -48,7 +48,6 @@ class GameViewController: UIViewController {
         //pauseMenu
         pauseMenu = UINib(nibName: "PauseMenu", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! UIView
         pauseMenu.frame = CGRectMake(0, 0, define.WIDTH, define.HEIGHT)
-        
     }
 
     override func shouldAutorotate() -> Bool {

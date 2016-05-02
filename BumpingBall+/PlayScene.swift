@@ -16,6 +16,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     var targetBall = TargetBall()
     let ballUtil = BallUtils()
     let animation = Animation()
+    let difficulty = Difficulty()
     var last: CFTimeInterval!
     var touchView = UIView()
     var score = 0
@@ -235,6 +236,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     func updateScore() {
         score += ballUtil.getScoreByCombo(comboCount)
         scoreLabel.text = String(score)
+        difficulty.score = score
     }
     
     func removeBothBalls(node: SKNode, id: Int) {
