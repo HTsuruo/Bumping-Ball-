@@ -38,6 +38,17 @@
 		56BF578A1CD4BBBD00923509 /* arrows@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57881CD4BBBD00923509 /* arrows@2x.png */; };
 		56BF578B1CD4BBBD00923509 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57891CD4BBBD00923509 /* home@2x.png */; };
 		56BF57941CD72C6100923509 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BF57931CD72C6100923509 /* Difficulty.swift */; };
+		56BF57B41CD7342F00923509 /* BallImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BF57B31CD7342F00923509 /* BallImage.swift */; };
+		56BF57BA1CD734D100923509 /* ball_blue_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57B51CD734D100923509 /* ball_blue_1@2x.png */; };
+		56BF57BB1CD734D100923509 /* ball_blue_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57B61CD734D100923509 /* ball_blue_2@2x.png */; };
+		56BF57BC1CD734D100923509 /* ball_blue_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57B71CD734D100923509 /* ball_blue_3@2x.png */; };
+		56BF57BD1CD734D100923509 /* ball_blue_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57B81CD734D100923509 /* ball_blue_4@2x.png */; };
+		56BF57BE1CD734D100923509 /* ball_blue_5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57B91CD734D100923509 /* ball_blue_5@2x.png */; };
+		56BF57C21CD734D900923509 /* ball_green_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57BF1CD734D900923509 /* ball_green_1@2x.png */; };
+		56BF57C31CD734D900923509 /* ball_green_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57C01CD734D900923509 /* ball_green_2@2x.png */; };
+		56BF57C41CD734D900923509 /* ball_green_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57C11CD734D900923509 /* ball_green_3@2x.png */; };
+		56BF57C71CD734DF00923509 /* ball_orange_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57C51CD734DF00923509 /* ball_orange_1@2x.png */; };
+		56BF57C81CD734DF00923509 /* ball_orange_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57C61CD734DF00923509 /* ball_orange_2@2x.png */; };
 		56D160BF1CC49B3A00257404 /* FinishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56D160BE1CC49B3A00257404 /* FinishView.xib */; };
 		56D160C11CC4FCF500257404 /* FinishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D160C01CC4FCF500257404 /* FinishView.swift */; };
 		56D160C81CC50E2C00257404 /* ball_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56D160C31CC50E2C00257404 /* ball_blue@2x.png */; };
@@ -107,6 +118,17 @@
 		56BF57911CD711D100923509 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "font/Roboto-Light.ttf"; sourceTree = "<group>"; };
 		56BF57921CD711D100923509 /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RobotoCondensed-Regular.ttf"; path = "font/RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		56BF57931CD72C6100923509 /* Difficulty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Difficulty.swift; path = component/Difficulty.swift; sourceTree = "<group>"; };
+		56BF57B31CD7342F00923509 /* BallImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BallImage.swift; path = component/BallImage.swift; sourceTree = "<group>"; };
+		56BF57B51CD734D100923509 /* ball_blue_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball_blue_1@2x.png"; sourceTree = "<group>"; };
+		56BF57B61CD734D100923509 /* ball_blue_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball_blue_2@2x.png"; sourceTree = "<group>"; };
+		56BF57B71CD734D100923509 /* ball_blue_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball_blue_3@2x.png"; sourceTree = "<group>"; };
+		56BF57B81CD734D100923509 /* ball_blue_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball_blue_4@2x.png"; sourceTree = "<group>"; };
+		56BF57B91CD734D100923509 /* ball_blue_5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball_blue_5@2x.png"; sourceTree = "<group>"; };
+		56BF57BF1CD734D900923509 /* ball_green_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball_green_1@2x.png"; sourceTree = "<group>"; };
+		56BF57C01CD734D900923509 /* ball_green_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball_green_2@2x.png"; sourceTree = "<group>"; };
+		56BF57C11CD734D900923509 /* ball_green_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball_green_3@2x.png"; sourceTree = "<group>"; };
+		56BF57C51CD734DF00923509 /* ball_orange_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball_orange_1@2x.png"; sourceTree = "<group>"; };
+		56BF57C61CD734DF00923509 /* ball_orange_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball_orange_2@2x.png"; sourceTree = "<group>"; };
 		56D160BE1CC49B3A00257404 /* FinishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FinishView.xib; path = view/FinishView.xib; sourceTree = "<group>"; };
 		56D160C01CC4FCF500257404 /* FinishView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinishView.swift; path = view/FinishView.swift; sourceTree = "<group>"; };
 		56D160C31CC50E2C00257404 /* ball_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ball_blue@2x.png"; path = "img/balls/ball_blue@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -164,6 +186,7 @@
 				56AC959E1CB24B3000B31FE3 /* Utils.swift */,
 				565DDA521CBD4707003C9F0D /* Animation.swift */,
 				56BF57931CD72C6100923509 /* Difficulty.swift */,
+				56BF57B31CD7342F00923509 /* BallImage.swift */,
 			);
 			name = component;
 			sourceTree = "<group>";
@@ -275,9 +298,51 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		56BF57951CD7333A00923509 /* hasNumber */ = {
+			isa = PBXGroup;
+			children = (
+				56BF579E1CD7337800923509 /* orange */,
+				56BF579D1CD7337000923509 /* green */,
+				56BF579C1CD7336D00923509 /* blue */,
+			);
+			name = hasNumber;
+			sourceTree = "<group>";
+		};
+		56BF579C1CD7336D00923509 /* blue */ = {
+			isa = PBXGroup;
+			children = (
+				56BF57B51CD734D100923509 /* ball_blue_1@2x.png */,
+				56BF57B61CD734D100923509 /* ball_blue_2@2x.png */,
+				56BF57B71CD734D100923509 /* ball_blue_3@2x.png */,
+				56BF57B81CD734D100923509 /* ball_blue_4@2x.png */,
+				56BF57B91CD734D100923509 /* ball_blue_5@2x.png */,
+			);
+			name = blue;
+			sourceTree = "<group>";
+		};
+		56BF579D1CD7337000923509 /* green */ = {
+			isa = PBXGroup;
+			children = (
+				56BF57BF1CD734D900923509 /* ball_green_1@2x.png */,
+				56BF57C01CD734D900923509 /* ball_green_2@2x.png */,
+				56BF57C11CD734D900923509 /* ball_green_3@2x.png */,
+			);
+			name = green;
+			sourceTree = "<group>";
+		};
+		56BF579E1CD7337800923509 /* orange */ = {
+			isa = PBXGroup;
+			children = (
+				56BF57C51CD734DF00923509 /* ball_orange_1@2x.png */,
+				56BF57C61CD734DF00923509 /* ball_orange_2@2x.png */,
+			);
+			name = orange;
+			sourceTree = "<group>";
+		};
 		56D160C21CC50E1B00257404 /* balls */ = {
 			isa = PBXGroup;
 			children = (
+				56BF57951CD7333A00923509 /* hasNumber */,
 				56D160C31CC50E2C00257404 /* ball_blue@2x.png */,
 				56D160C41CC50E2C00257404 /* ball_gold@2x.png */,
 				56D160C51CC50E2C00257404 /* ball_green@2x.png */,
@@ -401,6 +466,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56BF57C71CD734DF00923509 /* ball_orange_1@2x.png in Resources */,
 				56D160D31CC50E5300257404 /* twitter@2x.png in Resources */,
 				56AC95981CB24B2100B31FE3 /* spark.png in Resources */,
 				56AC95991CB24B2100B31FE3 /* spark.sks in Resources */,
@@ -408,18 +474,27 @@
 				56AC95811CB16D0000B31FE3 /* launch.mp3 in Resources */,
 				56BD7D331CBB702000F9178B /* spark@2x.png in Resources */,
 				56BB7F3E1CAD345200675AE8 /* LaunchScreen.storyboard in Resources */,
+				56BF57BE1CD734D100923509 /* ball_blue_5@2x.png in Resources */,
 				56AC95AA1CB2BDD400B31FE3 /* pause.mp3 in Resources */,
 				56AC95A81CB2BCFD00B31FE3 /* PauseMenu.xib in Resources */,
 				56D160D21CC50E5300257404 /* line@2x.png in Resources */,
 				56AC95801CB16D0000B31FE3 /* bigger.mp3 in Resources */,
 				56D160CB1CC50E2C00257404 /* ball_orange@2x.png in Resources */,
+				56BF57C41CD734D900923509 /* ball_green_3@2x.png in Resources */,
+				56BF57C31CD734D900923509 /* ball_green_2@2x.png in Resources */,
+				56BF57C81CD734DF00923509 /* ball_orange_2@2x.png in Resources */,
+				56BF57BD1CD734D100923509 /* ball_blue_4@2x.png in Resources */,
+				56BF57BB1CD734D100923509 /* ball_blue_2@2x.png in Resources */,
+				56BF57C21CD734D900923509 /* ball_green_1@2x.png in Resources */,
 				56BB7F3B1CAD345200675AE8 /* Assets.xcassets in Resources */,
 				56D160C91CC50E2C00257404 /* ball_gold@2x.png in Resources */,
 				56D160CA1CC50E2C00257404 /* ball_green@2x.png in Resources */,
 				565DDA551CBD4EB0003C9F0D /* launch.sks in Resources */,
 				56BB7F391CAD345200675AE8 /* Main.storyboard in Resources */,
 				56BF578B1CD4BBBD00923509 /* home@2x.png in Resources */,
+				56BF57BA1CD734D100923509 /* ball_blue_1@2x.png in Resources */,
 				56D160BF1CC49B3A00257404 /* FinishView.xib in Resources */,
+				56BF57BC1CD734D100923509 /* ball_blue_3@2x.png in Resources */,
 				56BD7D351CBB995C00F9178B /* pauseBtn@2x.png in Resources */,
 				56D160CC1CC50E2C00257404 /* ball_red@2x.png in Resources */,
 				56BF578A1CD4BBBD00923509 /* arrows@2x.png in Resources */,
@@ -474,6 +549,7 @@
 				56AC959F1CB24B3000B31FE3 /* PlayerBall.swift in Sources */,
 				56BB7F361CAD345100675AE8 /* GameViewController.swift in Sources */,
 				56AC95A21CB24B3000B31FE3 /* TargetBall.swift in Sources */,
+				56BF57B41CD7342F00923509 /* BallImage.swift in Sources */,
 				56AC95A01CB24B3000B31FE3 /* Enums.swift in Sources */,
 				565DDA531CBD4707003C9F0D /* Animation.swift in Sources */,
 				56BB7F301CAD345100675AE8 /* AppDelegate.swift in Sources */,

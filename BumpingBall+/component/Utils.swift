@@ -118,6 +118,36 @@ class BallUtils: NSObject {
         }
     }
     
+    func getBallImageByNum(id: Int, num: Int) -> SKAction {
+        var texture = SKTexture.init()
+        switch id {
+        case BallType.BLUE.rawValue:
+            texture = SKTexture.init(imageNamed: getBlueBallImageByNum(num))
+            break
+        case BallType.GREEN.rawValue:
+            texture = SKTexture.init(imageNamed: getGreenBallImageByNum(num))
+            break
+        case BallType.ORANGE.rawValue:
+            texture = SKTexture.init(imageNamed: getOrangeBallImageByNum(num))
+            break
+        default:
+            break
+        }
+        return SKAction.setTexture(texture, resize: false)
+    }
+    
+    func getBlueBallImageByNum(num: Int) -> String {
+        return "ball_blue_"+String(num)
+    }
+    
+    func getGreenBallImageByNum(num: Int) -> String {
+        return "ball_green_"+String(num)
+    }
+    
+    func getOrangeBallImageByNum(num: Int) -> String {
+        return "ball_orange_"+String(num)
+    }
+    
 }
 
 struct colorUtils {

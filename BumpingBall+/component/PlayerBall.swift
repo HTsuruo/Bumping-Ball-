@@ -88,11 +88,3 @@ struct PlayerBall {
     }
     
 }
-
-struct ballImage {
-    static let BLUE = "ball_blue"
-    static let GREEN = "ball_green"
-    static let ORANGE = "ball_orange"
-    static let RED = "ball_red"
-    static let GOLD = "ball_gold"
-}

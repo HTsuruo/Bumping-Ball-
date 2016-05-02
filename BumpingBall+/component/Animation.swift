@@ -27,7 +27,7 @@ class Animation {
         return SKAction.group([move, fadeOut]) // 同時実行するグループアクションを作る.
     }
     
-    func sparkAnimation(node: SKNode, id: Int) -> SKEmitterNode {
+    func sparkAnimation(node: SKNode, id: Int, scale: CGFloat) -> SKEmitterNode {
         let sparkPath = NSBundle.mainBundle().pathForResource("spark", ofType: "sks")
         let spark = NSKeyedUnarchiver.unarchiveObjectWithFile(sparkPath!) as! SKEmitterNode
         spark.position = node.position
@@ -51,7 +51,7 @@ class Animation {
             break
         }
         
-        spark.setScale(0.5)
+        spark.setScale(scale)
         return spark
     }
     

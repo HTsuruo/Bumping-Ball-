@@ -196,16 +196,27 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
+        let num = secondBody.node?.userData?.valueForKey("num")
+        if num == nil {
+            return
+        }
+        
 //      ballとtargetballが接触した時の処理
         if targetId != nil {
+            let canRemove = (num as! Int == 1 || playerBall.isGold(firstBody.node!))
+            
             if firstBody.categoryBitMask & ballCategory != 0 &&
                 secondBody.categoryBitMask & targetBallCategory != 0 {
-                    updateComboCount(secondBody.node!)
-                    removeBothBalls(secondBody.node!, id: targetId as! Int)
+                    if canRemove {
+                        updateComboCount(secondBody.node!)
+                        removeTargetBall(secondBody.node!, id: targetId as! Int)
+                        updateScore()
+                    } else {
+                        changeTargetBall(firstBody.node!, tBall: secondBody.node!, id: targetId as! Int)
+                    }
                     if !playerBall.isGold(firstBody.node!) {
                         firstBody.node?.removeFromParent()
                     }
-                    updateScore()
             }
         }
     }
@@ -239,14 +250,26 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         difficulty.score = score
     }
     
-    func removeBothBalls(node: SKNode, id: Int) {
-        let spark = animation.sparkAnimation(node, id: id)
+    func removeTargetBall(node: SKNode, id: Int) {
+        let spark = animation.sparkAnimation(node, id: id, scale: 0.5)
         self.addChild(spark)
-        
         let sequence = animation.fadeOutRemove(0.5)
         spark.runAction(sequence)
-        
         node.removeFromParent()
+    }
+    
+    func changeTargetBall(pBall: SKNode, tBall: SKNode, id: Int) {
+        //アニメーションはplayer ball
+        let spark = animation.sparkAnimation(pBall, id: id, scale: 0.2)
+        self.addChild(spark)
+        let sequence = animation.fadeOutRemove(0.0)
+        spark.runAction(sequence)
+        
+        let num = tBall.userData?.valueForKey("num") as! Int
+        let resNum = num - 1
+        tBall.userData?.setValue(resNum, forKey: "num")
+        let action = ballUtil.getBallImageByNum(id, num: resNum)
+        tBall.runAction(action)
     }
     
     func setupLabels() {
