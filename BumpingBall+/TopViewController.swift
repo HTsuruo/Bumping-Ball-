@@ -45,8 +45,6 @@ class TopViewController: UIViewController {
     }
     
     @IBAction func onePlayBtnClicked(sender: UIButton) {
-        let onePlayVC = self.storyboard?.instantiateViewControllerWithIdentifier("onePlayVC") as! GameViewController
-        onePlayVC.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
-        self.presentViewController(onePlayVC, animated: true, completion: nil)
+        self.performSegueWithIdentifier("toOnePlayVC", sender: self)
     }
 }

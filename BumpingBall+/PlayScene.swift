@@ -222,7 +222,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func updateComboCount(node: SKNode) {
-        comboCount++
+        comboCount += 1
         
         if comboCount == 1 {
             return

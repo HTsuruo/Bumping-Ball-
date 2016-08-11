@@ -18,7 +18,7 @@ class Difficulty {
         return 0.0
     }
     
-    //ボールの生成感覚を多くします.
+    //ボールの生成頻度を多くします.
     func getInterval() -> CFTimeInterval {
         return 3
     }
