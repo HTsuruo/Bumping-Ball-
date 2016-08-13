@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05B8A37EFFAC35F3317F5B04 /* libPods-BumpingBall+UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEEB63EDD71E4E22158CF9F0 /* libPods-BumpingBall+UITests.a */; };
 		565DDA531CBD4707003C9F0D /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565DDA521CBD4707003C9F0D /* Animation.swift */; };
 		565DDA551CBD4EB0003C9F0D /* launch.sks in Resources */ = {isa = PBXBuildFile; fileRef = 565DDA541CBD4EB0003C9F0D /* launch.sks */; };
 		56AC95801CB16D0000B31FE3 /* bigger.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56AC957E1CB16D0000B31FE3 /* bigger.mp3 */; };
@@ -64,6 +65,8 @@
 		56D160CC1CC50E2C00257404 /* ball_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56D160C71CC50E2C00257404 /* ball_red@2x.png */; };
 		56D160D21CC50E5300257404 /* line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56D160CF1CC50E5300257404 /* line@2x.png */; };
 		56D160D31CC50E5300257404 /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56D160D01CC50E5300257404 /* twitter@2x.png */; };
+		F010AAABC8B36D7FEF692CB4 /* libPods-BumpingBall+Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA8343DADD5F6078390F4E4 /* libPods-BumpingBall+Tests.a */; };
+		F94173777AFC40575B0D1D6A /* libPods-BumpingBall+.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E94269DDA3FBE8B6F1072E4 /* libPods-BumpingBall+.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44F957790E5B779DC465ACC5 /* Pods-BumpingBall+.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+/Pods-BumpingBall+.debug.xcconfig"; sourceTree = "<group>"; };
+		4E94269DDA3FBE8B6F1072E4 /* libPods-BumpingBall+.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BumpingBall+.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		565DDA521CBD4707003C9F0D /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = component/Animation.swift; sourceTree = "<group>"; };
 		565DDA541CBD4EB0003C9F0D /* launch.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = launch.sks; path = sks/launch.sks; sourceTree = "<group>"; };
 		56AC957E1CB16D0000B31FE3 /* bigger.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bigger.mp3; path = sound/bigger.mp3; sourceTree = SOURCE_ROOT; };
@@ -145,6 +150,13 @@
 		56D160C71CC50E2C00257404 /* ball_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ball_red@2x.png"; path = "img/balls/ball_red@2x.png"; sourceTree = SOURCE_ROOT; };
 		56D160CF1CC50E5300257404 /* line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "line@2x.png"; path = "img/sns_icon/line@2x.png"; sourceTree = SOURCE_ROOT; };
 		56D160D01CC50E5300257404 /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "twitter@2x.png"; path = "img/sns_icon/twitter@2x.png"; sourceTree = SOURCE_ROOT; };
+		AE00D1DED0B5E6E2BD784D2F /* Pods-BumpingBall+Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+Tests/Pods-BumpingBall+Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B589F870FC4838D38D7DB33B /* Pods-BumpingBall+UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+UITests/Pods-BumpingBall+UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BDA8343DADD5F6078390F4E4 /* libPods-BumpingBall+Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BumpingBall+Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEEB63EDD71E4E22158CF9F0 /* libPods-BumpingBall+UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BumpingBall+UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF7A5C3C7B102B7CD7DD653C /* Pods-BumpingBall+Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+Tests/Pods-BumpingBall+Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		E917CB0D1A81FE1B5F5B5743 /* Pods-BumpingBall+.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+.release.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+/Pods-BumpingBall+.release.xcconfig"; sourceTree = "<group>"; };
+		F0FBC9EA10428232D3AD71F9 /* Pods-BumpingBall+UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+UITests/Pods-BumpingBall+UITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56BF57851CD3B35400923509 /* Social.framework in Frameworks */,
+				F94173777AFC40575B0D1D6A /* libPods-BumpingBall+.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F010AAABC8B36D7FEF692CB4 /* libPods-BumpingBall+Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +181,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05B8A37EFFAC35F3317F5B04 /* libPods-BumpingBall+UITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +243,8 @@
 				56BB7F471CAD345200675AE8 /* BumpingBall+Tests */,
 				56BB7F521CAD345200675AE8 /* BumpingBall+UITests */,
 				56BB7F2D1CAD345100675AE8 /* Products */,
+				E9F37341D0DFAFA518E3A727 /* Pods */,
+				F835E0EBDB089BC50DAF7F06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -369,6 +386,29 @@
 			name = sns_icon;
 			sourceTree = "<group>";
 		};
+		E9F37341D0DFAFA518E3A727 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				44F957790E5B779DC465ACC5 /* Pods-BumpingBall+.debug.xcconfig */,
+				E917CB0D1A81FE1B5F5B5743 /* Pods-BumpingBall+.release.xcconfig */,
+				DF7A5C3C7B102B7CD7DD653C /* Pods-BumpingBall+Tests.debug.xcconfig */,
+				AE00D1DED0B5E6E2BD784D2F /* Pods-BumpingBall+Tests.release.xcconfig */,
+				B589F870FC4838D38D7DB33B /* Pods-BumpingBall+UITests.debug.xcconfig */,
+				F0FBC9EA10428232D3AD71F9 /* Pods-BumpingBall+UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F835E0EBDB089BC50DAF7F06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E94269DDA3FBE8B6F1072E4 /* libPods-BumpingBall+.a */,
+				BDA8343DADD5F6078390F4E4 /* libPods-BumpingBall+Tests.a */,
+				DEEB63EDD71E4E22158CF9F0 /* libPods-BumpingBall+UITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -376,10 +416,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56BB7F581CAD345200675AE8 /* Build configuration list for PBXNativeTarget "BumpingBall+" */;
 			buildPhases = (
+				4007D6C729ADF63A3153FF6E /* [CP] Check Pods Manifest.lock */,
 				56BB7F281CAD345100675AE8 /* Sources */,
 				56BB7F291CAD345100675AE8 /* Frameworks */,
 				56BB7F2A1CAD345100675AE8 /* Resources */,
 				56BB7FB31CAD8C7500675AE8 /* Run Script */,
+				9E651F03F1CD3A24F355EF2D /* [CP] Embed Pods Frameworks */,
+				6CB5C12B88416B9F4608EBE9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -394,9 +437,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56BB7F5B1CAD345200675AE8 /* Build configuration list for PBXNativeTarget "BumpingBall+Tests" */;
 			buildPhases = (
+				87DFF50BD84C3C3A405DC7C7 /* [CP] Check Pods Manifest.lock */,
 				56BB7F401CAD345200675AE8 /* Sources */,
 				56BB7F411CAD345200675AE8 /* Frameworks */,
 				56BB7F421CAD345200675AE8 /* Resources */,
+				10850AEF18806A9714038A7F /* [CP] Embed Pods Frameworks */,
+				C1D86C0F02D1BDFE0529ADBB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -412,9 +458,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56BB7F5E1CAD345200675AE8 /* Build configuration list for PBXNativeTarget "BumpingBall+UITests" */;
 			buildPhases = (
+				8CA837312F75726D11779BFA /* [CP] Check Pods Manifest.lock */,
 				56BB7F4B1CAD345200675AE8 /* Sources */,
 				56BB7F4C1CAD345200675AE8 /* Frameworks */,
 				56BB7F4D1CAD345200675AE8 /* Resources */,
+				DE8894267953BA093D2DB875 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -534,6 +582,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		10850AEF18806A9714038A7F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BumpingBall+Tests/Pods-BumpingBall+Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4007D6C729ADF63A3153FF6E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		56BB7FB31CAD8C7500675AE8 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -547,6 +625,96 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		6CB5C12B88416B9F4608EBE9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BumpingBall+/Pods-BumpingBall+-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87DFF50BD84C3C3A405DC7C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8CA837312F75726D11779BFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9E651F03F1CD3A24F355EF2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BumpingBall+/Pods-BumpingBall+-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1D86C0F02D1BDFE0529ADBB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BumpingBall+Tests/Pods-BumpingBall+Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE8894267953BA093D2DB875 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BumpingBall+UITests/Pods-BumpingBall+UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -706,6 +874,7 @@
 		};
 		56BB7F591CAD345200675AE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44F957790E5B779DC465ACC5 /* Pods-BumpingBall+.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "BumpingBall+/Info.plist";
@@ -717,6 +886,7 @@
 		};
 		56BB7F5A1CAD345200675AE8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E917CB0D1A81FE1B5F5B5743 /* Pods-BumpingBall+.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "BumpingBall+/Info.plist";
@@ -728,6 +898,7 @@
 		};
 		56BB7F5C1CAD345200675AE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF7A5C3C7B102B7CD7DD653C /* Pods-BumpingBall+Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -741,6 +912,7 @@
 		};
 		56BB7F5D1CAD345200675AE8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE00D1DED0B5E6E2BD784D2F /* Pods-BumpingBall+Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "BumpingBall+Tests/Info.plist";
@@ -753,6 +925,7 @@
 		};
 		56BB7F5F1CAD345200675AE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B589F870FC4838D38D7DB33B /* Pods-BumpingBall+UITests.debug.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				INFOPLIST_FILE = "BumpingBall+UITests/Info.plist";
@@ -766,6 +939,7 @@
 		};
 		56BB7F601CAD345200675AE8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0FBC9EA10428232D3AD71F9 /* Pods-BumpingBall+UITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "BumpingBall+UITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

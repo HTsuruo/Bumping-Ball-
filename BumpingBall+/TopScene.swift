@@ -13,7 +13,6 @@ class TopScene: SKScene, SKPhysicsContactDelegate {
     var last: CFTimeInterval!
     
     override func didMoveToView(view: SKView) {
-        print("here is top view.")
         changeBkColor()
     }
     
@@ -26,7 +25,7 @@ class TopScene: SKScene, SKPhysicsContactDelegate {
             last = currentTime
         }
     }
-    
+
     func changeBkColor() {
         let color1 = SKAction.colorizeWithColor(colorUtils.orange, colorBlendFactor: 1.0, duration: 4)
         let color2 = SKAction.colorizeWithColor(colorUtils.green, colorBlendFactor: 1.0, duration: 4)

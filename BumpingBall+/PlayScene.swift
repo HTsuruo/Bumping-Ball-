@@ -25,6 +25,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     var touchBeginLocation = CGPoint()
     let finishView = FinishView(frame: CGRectMake(0, 0, define.WIDTH, define.HEIGHT))
     var isFin = false
+    let MAX_COMBO_COUNT = 5
     
 //     当たり判定のカテゴリを準備する.
     let ballCategory: UInt32 = 0x1 << 0
@@ -61,11 +62,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
                 return
             }
             
-            /* setup playerBall */
-            playerBall = PlayerBall()
-            playerBall.setLocation(touchBeginLocation.x, posY: touchBeginLocation.y + define.TOUCH_MARGIN)
-            playerBall.setCategory(ballCategory, targetCat: targetBallCategory)
-            self.addChild(playerBall.ball)
+            createPlayerBall(touchBeginLocation)
         }
     }
     
@@ -127,6 +124,13 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
         })
+    }
+    
+    private func createPlayerBall(touchPoint: CGPoint) {
+        playerBall = PlayerBall()
+        playerBall.setLocation(touchPoint.x, posY: touchPoint.y + define.TOUCH_MARGIN)
+        playerBall.setCategory(ballCategory, targetCat: targetBallCategory)
+        self.addChild(playerBall.ball)
     }
     
     private func createTargetBall() {
@@ -228,8 +232,8 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
             return
         }
 //        最大で5コンボ
-        if comboCount > 6 {
-            comboCount = 6
+        if comboCount > (MAX_COMBO_COUNT + 1) {
+            comboCount = MAX_COMBO_COUNT + 1
         }
         
         let comboLabel = SKLabelNode(fontNamed:"ChalkboardSE-Regular")
