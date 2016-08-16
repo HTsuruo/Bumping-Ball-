@@ -13,17 +13,11 @@ class TopScene: SKScene, SKPhysicsContactDelegate {
     var last: CFTimeInterval!
     
     override func didMoveToView(view: SKView) {
+        createPlayerBall()
         changeBkColor()
     }
     
     override func update(currentTime: CFTimeInterval) {
-        if last == nil {
-            last = currentTime
-        }
-        //         3秒毎にtargetBallを作成する.
-        if last + 7 <= currentTime {
-            last = currentTime
-        }
     }
 
     func changeBkColor() {
@@ -40,6 +34,17 @@ class TopScene: SKScene, SKPhysicsContactDelegate {
         nextScene.size = self.size
         let transition = SKTransition.crossFadeWithDuration(2)
         self.view?.presentScene(nextScene, transition: transition)
+    }
+    
+    private func createPlayerBall() {
+       let ball = SKSpriteNode(imageNamed: ballImage.RED)
+       ball.position = CGPointMake(300, 100)
+        ball.alpha = 0.8
+       self.addChild(ball)
+       let action = SKAction.rotateByAngle(CGFloat(90 * M_PI / 180), duration: 1)
+       let foreverAction  = SKAction.repeatActionForever(action)
+//       let actionx = SKAction.group([action1,action2])
+       ball.runAction(foreverAction)
     }
 
 }

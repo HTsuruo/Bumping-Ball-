@@ -10,6 +10,8 @@
 		05B8A37EFFAC35F3317F5B04 /* libPods-BumpingBall+UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEEB63EDD71E4E22158CF9F0 /* libPods-BumpingBall+UITests.a */; };
 		565DDA531CBD4707003C9F0D /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565DDA521CBD4707003C9F0D /* Animation.swift */; };
 		565DDA551CBD4EB0003C9F0D /* launch.sks in Resources */ = {isa = PBXBuildFile; fileRef = 565DDA541CBD4EB0003C9F0D /* launch.sks */; };
+		5666F7DB1D63460C001EFC57 /* multiplayBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5666F7D91D63460C001EFC57 /* multiplayBtn@2x.png */; };
+		5666F7DC1D63460C001EFC57 /* oneplayBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5666F7DA1D63460C001EFC57 /* oneplayBtn@2x.png */; };
 		56AC95801CB16D0000B31FE3 /* bigger.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56AC957E1CB16D0000B31FE3 /* bigger.mp3 */; };
 		56AC95811CB16D0000B31FE3 /* launch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56AC957F1CB16D0000B31FE3 /* launch.mp3 */; };
 		56AC95971CB24B2100B31FE3 /* PlayScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 56AC95941CB24B2100B31FE3 /* PlayScene.sks */; };
@@ -91,6 +93,8 @@
 		4E94269DDA3FBE8B6F1072E4 /* libPods-BumpingBall+.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BumpingBall+.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		565DDA521CBD4707003C9F0D /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = component/Animation.swift; sourceTree = "<group>"; };
 		565DDA541CBD4EB0003C9F0D /* launch.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = launch.sks; path = sks/launch.sks; sourceTree = "<group>"; };
+		5666F7D91D63460C001EFC57 /* multiplayBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "multiplayBtn@2x.png"; path = "img/top/multiplayBtn@2x.png"; sourceTree = SOURCE_ROOT; };
+		5666F7DA1D63460C001EFC57 /* oneplayBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "oneplayBtn@2x.png"; path = "img/top/oneplayBtn@2x.png"; sourceTree = SOURCE_ROOT; };
 		56AC957E1CB16D0000B31FE3 /* bigger.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bigger.mp3; path = sound/bigger.mp3; sourceTree = SOURCE_ROOT; };
 		56AC957F1CB16D0000B31FE3 /* launch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = launch.mp3; path = sound/launch.mp3; sourceTree = SOURCE_ROOT; };
 		56AC95941CB24B2100B31FE3 /* PlayScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = PlayScene.sks; path = sks/PlayScene.sks; sourceTree = "<group>"; };
@@ -188,6 +192,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5666F7D81D6345FF001EFC57 /* top */ = {
+			isa = PBXGroup;
+			children = (
+				5666F7D91D63460C001EFC57 /* multiplayBtn@2x.png */,
+				5666F7DA1D63460C001EFC57 /* oneplayBtn@2x.png */,
+			);
+			name = top;
+			sourceTree = "<group>";
+		};
 		56AC957D1CB16CEF00B31FE3 /* sound */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +314,7 @@
 		56BB7FC11CAFC08200675AE8 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				5666F7D81D6345FF001EFC57 /* top */,
 				56BF57881CD4BBBD00923509 /* arrows@2x.png */,
 				56BF57891CD4BBBD00923509 /* home@2x.png */,
 				56D160CD1CC50E3200257404 /* sns_icon */,
@@ -540,6 +554,7 @@
 				56BF57C41CD734D900923509 /* ball_green_3@2x.png in Resources */,
 				56BF57C31CD734D900923509 /* ball_green_2@2x.png in Resources */,
 				56BF57C81CD734DF00923509 /* ball_orange_2@2x.png in Resources */,
+				5666F7DC1D63460C001EFC57 /* oneplayBtn@2x.png in Resources */,
 				56BF57D81CD7ACE200923509 /* facebook@2x.png in Resources */,
 				56BF57BD1CD734D100923509 /* ball_blue_4@2x.png in Resources */,
 				56BF57BB1CD734D100923509 /* ball_blue_2@2x.png in Resources */,
@@ -553,6 +568,7 @@
 				56BF57D01CD7902000923509 /* Roboto-Light.ttf in Resources */,
 				56BF578B1CD4BBBD00923509 /* home@2x.png in Resources */,
 				56BF57BA1CD734D100923509 /* ball_blue_1@2x.png in Resources */,
+				5666F7DB1D63460C001EFC57 /* multiplayBtn@2x.png in Resources */,
 				56D160BF1CC49B3A00257404 /* FinishView.xib in Resources */,
 				56BF57BC1CD734D100923509 /* ball_blue_3@2x.png in Resources */,
 				56BD7D351CBB995C00F9178B /* pauseBtn@2x.png in Resources */,

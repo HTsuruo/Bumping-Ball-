@@ -36,31 +36,90 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Bumping Ball +" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4i-4X-9kP">
-                                <rect key="frame" x="20" y="286" width="560" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bumping Ball +" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i4i-4X-9kP">
+                                <rect key="frame" x="193.5" y="60" width="214" height="38.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="27" id="Foc-Xh-dYQ"/>
+                                    <constraint firstAttribute="height" constant="27" id="VGN-dK-kid"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Foc-Xh-dYQ"/>
+                                        <exclude reference="VGN-dK-kid"/>
+                                    </mask>
+                                </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsc-yv-aM9">
-                                <rect key="frame" x="260" y="394" width="81" height="36"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="One Play">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsc-yv-aM9">
+                                <rect key="frame" x="184" y="195" width="233" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="233" id="U0K-9t-PaA"/>
+                                    <constraint firstAttribute="height" constant="79" id="cJr-bd-xsq"/>
+                                </constraints>
+                                <state key="normal" image="oneplayBtn.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="onePlayBtnClicked:" destination="FFW-j8-PWE" eventType="touchUpInside" id="BBD-WQ-VsI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DC-Gf-4nI">
+                                <rect key="frame" x="184" y="374" width="233" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="233" id="EzX-YK-eNB"/>
+                                    <constraint firstAttribute="height" constant="79" id="WtB-bg-SaO"/>
+                                    <constraint firstAttribute="width" constant="233" id="w3c-0F-Ez1"/>
+                                </constraints>
+                                <state key="normal" image="multiplayBtn.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="EzX-YK-eNB"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="onePlayBtnClicked:" destination="FFW-j8-PWE" eventType="touchUpInside" id="sgK-HJ-ZNr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="i4i-4X-9kP" firstAttribute="centerX" secondItem="OWX-VH-aeT" secondAttribute="centerX" id="6tt-Gq-qtB"/>
+                            <constraint firstItem="i4i-4X-9kP" firstAttribute="top" secondItem="TWV-0b-y95" secondAttribute="bottom" constant="40" id="750-Zm-pOn"/>
+                            <constraint firstItem="i4i-4X-9kP" firstAttribute="centerX" secondItem="OWX-VH-aeT" secondAttribute="centerX" id="8pm-v2-9Mv"/>
                             <constraint firstItem="i4i-4X-9kP" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" id="9ch-II-9Ig"/>
+                            <constraint firstItem="dsc-yv-aM9" firstAttribute="top" secondItem="i4i-4X-9kP" secondAttribute="bottom" constant="93" id="Bch-nG-WiH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dsc-yv-aM9" secondAttribute="trailing" constant="100" id="PMS-vA-xxD"/>
+                            <constraint firstItem="i4i-4X-9kP" firstAttribute="top" secondItem="TWV-0b-y95" secondAttribute="bottom" constant="22" id="PZp-0u-HW6"/>
+                            <constraint firstItem="dsc-yv-aM9" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="101" id="W8X-KQ-iU5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="i4i-4X-9kP" secondAttribute="trailing" id="Z5w-CR-igU"/>
                             <constraint firstItem="v2V-mu-I55" firstAttribute="top" secondItem="dsc-yv-aM9" secondAttribute="bottom" constant="170" id="aHQ-QY-ang"/>
+                            <constraint firstItem="6DC-Gf-4nI" firstAttribute="top" secondItem="dsc-yv-aM9" secondAttribute="bottom" constant="100" id="bS7-YI-R1q"/>
                             <constraint firstItem="i4i-4X-9kP" firstAttribute="centerY" secondItem="OWX-VH-aeT" secondAttribute="centerY" id="bZm-Zr-Xl4"/>
                             <constraint firstItem="dsc-yv-aM9" firstAttribute="centerX" secondItem="OWX-VH-aeT" secondAttribute="centerX" id="eH0-PO-TKo"/>
+                            <constraint firstItem="i4i-4X-9kP" firstAttribute="centerX" secondItem="OWX-VH-aeT" secondAttribute="centerX" id="gt8-2k-W0F"/>
+                            <constraint firstItem="6DC-Gf-4nI" firstAttribute="centerX" secondItem="OWX-VH-aeT" secondAttribute="centerX" id="j6g-89-3Qu"/>
+                            <constraint firstItem="i4i-4X-9kP" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" id="jOc-ls-sB1"/>
+                            <constraint firstItem="dsc-yv-aM9" firstAttribute="top" secondItem="i4i-4X-9kP" secondAttribute="bottom" constant="85" id="q0d-xT-WJw"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6tt-Gq-qtB"/>
+                                <exclude reference="8pm-v2-9Mv"/>
+                                <exclude reference="9ch-II-9Ig"/>
+                                <exclude reference="PZp-0u-HW6"/>
+                                <exclude reference="Z5w-CR-igU"/>
+                                <exclude reference="bZm-Zr-Xl4"/>
+                                <exclude reference="jOc-ls-sB1"/>
+                                <exclude reference="PMS-vA-xxD"/>
+                                <exclude reference="W8X-KQ-iU5"/>
+                                <exclude reference="q0d-xT-WJw"/>
+                                <exclude reference="aHQ-QY-ang"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="onePlayBtn" destination="dsc-yv-aM9" id="omV-qf-o4R"/>
@@ -69,7 +128,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGT-fT-5fa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="266" y="145"/>
+            <point key="canvasLocation" x="282" y="140"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="multiplayBtn.png" width="399" height="130"/>
+        <image name="oneplayBtn.png" width="399" height="130"/>
+    </resources>
 </document>
