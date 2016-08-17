@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountdownView" customModule="BumpingBall_" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="bgf-3l-hGM"/>
-                <outlet property="label" destination="0CM-h5-0za" id="Bt3-hA-zRG"/>
+                <outlet property="imageView" destination="gYV-Uy-0Yx" id="Ack-mJ-dOP"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -16,19 +17,36 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0CM-h5-0za">
-                    <rect key="frame" x="285" y="270" width="30" height="60"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="three.png" translatesAutoresizingMaskIntoConstraints="NO" id="gYV-Uy-0Yx">
+                    <rect key="frame" x="234" y="233" width="133" height="133"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="gYV-Uy-0Yx" secondAttribute="height" multiplier="1:1" id="U6O-e9-tbh"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="0CM-h5-0za" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="89O-cu-qqU"/>
-                <constraint firstItem="0CM-h5-0za" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="FTa-Bi-v1f"/>
+                <constraint firstItem="gYV-Uy-0Yx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="A5i-UX-D9h"/>
+                <constraint firstItem="gYV-Uy-0Yx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ANT-OA-xPB"/>
+                <constraint firstItem="gYV-Uy-0Yx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="N2t-n4-UlX"/>
+                <constraint firstItem="gYV-Uy-0Yx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="100" id="N5C-Z7-ZWz"/>
+                <constraint firstItem="gYV-Uy-0Yx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="WKk-5f-iC0"/>
+                <constraint firstItem="gYV-Uy-0Yx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="r46-sd-X3w"/>
+                <constraint firstAttribute="trailing" secondItem="gYV-Uy-0Yx" secondAttribute="trailing" constant="122" id="x1Z-po-6IZ"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="ANT-OA-xPB"/>
+                    <exclude reference="N2t-n4-UlX"/>
+                    <exclude reference="N5C-Z7-ZWz"/>
+                    <exclude reference="WKk-5f-iC0"/>
+                    <exclude reference="x1Z-po-6IZ"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="628" y="578"/>
         </view>
     </objects>
+    <resources>
+        <image name="three.png" width="133" height="133"/>
+    </resources>
 </document>

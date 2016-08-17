@@ -27,6 +27,10 @@
 		5666F8341D645712001EFC57 /* ball_blue_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5666F82F1D645712001EFC57 /* ball_blue_3@2x.png */; };
 		5666F8351D645712001EFC57 /* ball_blue_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5666F8301D645712001EFC57 /* ball_blue_4@2x.png */; };
 		5666F8361D645712001EFC57 /* ball_blue_5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5666F8311D645712001EFC57 /* ball_blue_5@2x.png */; };
+		5666F83C1D646090001EFC57 /* go@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5666F8381D646090001EFC57 /* go@2x.png */; };
+		5666F83D1D646090001EFC57 /* one@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5666F8391D646090001EFC57 /* one@2x.png */; };
+		5666F83E1D646090001EFC57 /* three@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5666F83A1D646090001EFC57 /* three@2x.png */; };
+		5666F83F1D646090001EFC57 /* two@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5666F83B1D646090001EFC57 /* two@2x.png */; };
 		56AC95801CB16D0000B31FE3 /* bigger.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56AC957E1CB16D0000B31FE3 /* bigger.mp3 */; };
 		56AC95811CB16D0000B31FE3 /* launch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56AC957F1CB16D0000B31FE3 /* launch.mp3 */; };
 		56AC95971CB24B2100B31FE3 /* PlayScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 56AC95941CB24B2100B31FE3 /* PlayScene.sks */; };
@@ -114,6 +118,10 @@
 		5666F82F1D645712001EFC57 /* ball_blue_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ball_blue_3@2x.png"; path = "img/balls/hasNumber/blue/ball_blue_3@2x.png"; sourceTree = SOURCE_ROOT; };
 		5666F8301D645712001EFC57 /* ball_blue_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ball_blue_4@2x.png"; path = "img/balls/hasNumber/blue/ball_blue_4@2x.png"; sourceTree = SOURCE_ROOT; };
 		5666F8311D645712001EFC57 /* ball_blue_5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ball_blue_5@2x.png"; path = "img/balls/hasNumber/blue/ball_blue_5@2x.png"; sourceTree = SOURCE_ROOT; };
+		5666F8381D646090001EFC57 /* go@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "go@2x.png"; path = "img/countdown/go@2x.png"; sourceTree = SOURCE_ROOT; };
+		5666F8391D646090001EFC57 /* one@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "one@2x.png"; path = "img/countdown/one@2x.png"; sourceTree = SOURCE_ROOT; };
+		5666F83A1D646090001EFC57 /* three@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "three@2x.png"; path = "img/countdown/three@2x.png"; sourceTree = SOURCE_ROOT; };
+		5666F83B1D646090001EFC57 /* two@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "two@2x.png"; path = "img/countdown/two@2x.png"; sourceTree = SOURCE_ROOT; };
 		56AC957E1CB16D0000B31FE3 /* bigger.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bigger.mp3; path = sound/bigger.mp3; sourceTree = SOURCE_ROOT; };
 		56AC957F1CB16D0000B31FE3 /* launch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = launch.mp3; path = sound/launch.mp3; sourceTree = SOURCE_ROOT; };
 		56AC95941CB24B2100B31FE3 /* PlayScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = PlayScene.sks; path = sks/PlayScene.sks; sourceTree = "<group>"; };
@@ -209,6 +217,17 @@
 				5666F7DA1D63460C001EFC57 /* oneplayBtn@2x.png */,
 			);
 			name = top;
+			sourceTree = "<group>";
+		};
+		5666F8371D646071001EFC57 /* countdown */ = {
+			isa = PBXGroup;
+			children = (
+				5666F8381D646090001EFC57 /* go@2x.png */,
+				5666F8391D646090001EFC57 /* one@2x.png */,
+				5666F83A1D646090001EFC57 /* three@2x.png */,
+				5666F83B1D646090001EFC57 /* two@2x.png */,
+			);
+			name = countdown;
 			sourceTree = "<group>";
 		};
 		56AC957D1CB16CEF00B31FE3 /* sound */ = {
@@ -326,6 +345,7 @@
 		56BB7FC11CAFC08200675AE8 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				5666F8371D646071001EFC57 /* countdown */,
 				5666F7D81D6345FF001EFC57 /* top */,
 				56BF57881CD4BBBD00923509 /* arrows@2x.png */,
 				56BF57891CD4BBBD00923509 /* home@2x.png */,
@@ -512,6 +532,7 @@
 				TargetAttributes = {
 					56BB7F2B1CAD345100675AE8 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = V7K4H6JY6L;
 					};
 					56BB7F431CAD345200675AE8 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -551,6 +572,7 @@
 				56D160D31CC50E5300257404 /* twitter@2x.png in Resources */,
 				5666F82A1D645702001EFC57 /* ball_green_1@2x.png in Resources */,
 				56AC95981CB24B2100B31FE3 /* spark.png in Resources */,
+				5666F83E1D646090001EFC57 /* three@2x.png in Resources */,
 				56AC95991CB24B2100B31FE3 /* spark.sks in Resources */,
 				5666F8361D645712001EFC57 /* ball_blue_5@2x.png in Resources */,
 				56AC95971CB24B2100B31FE3 /* PlayScene.sks in Resources */,
@@ -576,10 +598,12 @@
 				56D160C91CC50E2C00257404 /* ball_gold@2x.png in Resources */,
 				5666F8321D645712001EFC57 /* ball_blue_1@2x.png in Resources */,
 				5666F8351D645712001EFC57 /* ball_blue_4@2x.png in Resources */,
+				5666F83F1D646090001EFC57 /* two@2x.png in Resources */,
 				56D160CA1CC50E2C00257404 /* ball_green@2x.png in Resources */,
 				5666F8331D645712001EFC57 /* ball_blue_2@2x.png in Resources */,
 				565DDA551CBD4EB0003C9F0D /* launch.sks in Resources */,
 				56BB7F391CAD345200675AE8 /* Main.storyboard in Resources */,
+				5666F83C1D646090001EFC57 /* go@2x.png in Resources */,
 				56BF57D01CD7902000923509 /* Roboto-Light.ttf in Resources */,
 				56BF578B1CD4BBBD00923509 /* home@2x.png in Resources */,
 				5666F7DB1D63460C001EFC57 /* multiplayBtn@2x.png in Resources */,
@@ -590,6 +614,7 @@
 				56D160CC1CC50E2C00257404 /* ball_red@2x.png in Resources */,
 				56BF578A1CD4BBBD00923509 /* arrows@2x.png in Resources */,
 				56BD7D3F1CBB9E0100F9178B /* TopScene.sks in Resources */,
+				5666F83D1D646090001EFC57 /* one@2x.png in Resources */,
 				56D160C81CC50E2C00257404 /* ball_blue@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -909,6 +934,7 @@
 			baseConfigurationReference = 44F957790E5B779DC465ACC5 /* Pods-BumpingBall+.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "BumpingBall+/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tsuruoka.BumpingBall-";
@@ -921,6 +947,7 @@
 			baseConfigurationReference = E917CB0D1A81FE1B5F5B5743 /* Pods-BumpingBall+.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "BumpingBall+/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tsuruoka.BumpingBall-";

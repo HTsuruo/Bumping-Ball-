@@ -13,7 +13,7 @@ class CountdownView: UIView {
     
     
     @IBOutlet var contentView: UIView!
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     var countdownTime = 3
     var countdownTimer = NSTimer()
@@ -22,6 +22,7 @@ class CountdownView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        app.isStart = false
         loadXib()
         start()
     }
@@ -42,14 +43,32 @@ class CountdownView: UIView {
     
     func countdown() { // this is the function called by the timer every second, which causes your "countdownTime" to go down by 1. When it reaches 0, it starts the game.
         countdownTime -= 1
-        if countdownTime > 0 {
-            label.text = String(countdownTime)
-        }
-        if countdownTime == 0 {
-            countdownTimer.invalidate()
-            label.text = "GO!!"
+        
+        switch countdownTime {
+        case 2:
+            imageView.image = UIImage(named: "two")
+            break
+        case 1:
+            imageView.image = UIImage(named: "one")
+            break
+        case 0:
+            imageView.image = UIImage(named: "go")
             app.isStart = true
-            self.removeFromSuperview()
+            let w = imageView.frame.width
+            let h = imageView.frame.height
+            let scale: CGFloat = 2.0
+            UIView.animateWithDuration(1, animations: {
+                self.imageView.frame = CGRectMake(0, 0, w * scale, h * scale)
+                self.imageView.center = CGPointMake(define.WIDTH/2, define.HEIGHT/2)
+                self.imageView.alpha = 0.0
+                self.contentView.alpha = 0.0
+                }, completion: { finished in
+                    self.countdownTimer.invalidate()
+                    self.removeFromSuperview()
+            })
+            break
+        default:
+            break
         }
     }
 
