@@ -2,14 +2,18 @@
 
 空き時間があったら随時更新していく予定.
 
-## FrameWork
-  * SpriteKit
-  * GameKit
-  * Social.framework
+## Env.
+* Xcode 7.3.1
+* Swift 2.2
 
-## Library
-  * 未定
+## FrameWork.
+* SpriteKit
+* GameKit
+* Social.framework
 
-## coding-rule
-  * [swift-style-guide](github/swift-style-guide)に準拠
-  * [SwiftLint](realm/SwiftLint)の導入
+## Libraries.
+* 未定
+
+## Coding Guide.
+* [swift-style-guide](github/swift-style-guide)に準拠
+* [SwiftLint](realm/SwiftLint)の導入
