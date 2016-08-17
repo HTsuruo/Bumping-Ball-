@@ -11,6 +11,7 @@ import UIKit
 
 class PlayScene: SKScene, SKPhysicsContactDelegate {
     
+    var app: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     let parentVC = GameViewController()
     var playerBall = PlayerBall()
     var targetBall = TargetBall()
@@ -24,12 +25,15 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     var comboCount = 0
     var touchBeginLocation = CGPoint()
     let finishView = FinishView(frame: CGRectMake(0, 0, define.WIDTH, define.HEIGHT))
+    let countdownView = CountdownView()
+    var isStart = false
     var isFin = false
     let MAX_COMBO_COUNT = 5
     
 //     当たり判定のカテゴリを準備する.
     let ballCategory: UInt32 = 0x1 << 0
     let targetBallCategory: UInt32 = 0x1 << 1
+    
     
     override func didMoveToView(view: SKView) {
 //        ここは物理世界.
@@ -45,13 +49,16 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         touchView.alpha = 0.5
         self.view?.addSubview(touchView)
         
+        self.view?.addSubview(countdownView)
+        
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
 //        self.finish()
         
-        if self.paused {//ポーズ中は入力出来ないように.
+        let disabled = self.paused || !isStart || isFin //ポーズ中は入力出来ないように.
+        if disabled {
             return
         }
         
@@ -93,6 +100,13 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     }
    
     override func update(currentTime: CFTimeInterval) {
+        if !isStart {
+            if app.isStart != nil && app.isStart! {
+                isStart = true
+            }
+            return
+        }
+        
         if  !playerBall.isFire {
             playerBall.sizeChange()
         }

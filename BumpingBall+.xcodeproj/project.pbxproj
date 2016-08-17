@@ -14,6 +14,8 @@
 		5666F7DC1D63460C001EFC57 /* oneplayBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5666F7DA1D63460C001EFC57 /* oneplayBtn@2x.png */; };
 		5666F7DE1D635A4F001EFC57 /* titleTxt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5666F7DD1D635A4F001EFC57 /* titleTxt@2x.png */; };
 		5666F81A1D643167001EFC57 /* helpBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5666F8191D643167001EFC57 /* helpBtn@2x.png */; };
+		5666F81E1D643CDA001EFC57 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5666F81D1D643CDA001EFC57 /* CountdownView.swift */; };
+		5666F8201D643CF8001EFC57 /* CountdownView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5666F81F1D643CF8001EFC57 /* CountdownView.xib */; };
 		56AC95801CB16D0000B31FE3 /* bigger.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56AC957E1CB16D0000B31FE3 /* bigger.mp3 */; };
 		56AC95811CB16D0000B31FE3 /* launch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56AC957F1CB16D0000B31FE3 /* launch.mp3 */; };
 		56AC95971CB24B2100B31FE3 /* PlayScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 56AC95941CB24B2100B31FE3 /* PlayScene.sks */; };
@@ -99,6 +101,8 @@
 		5666F7DA1D63460C001EFC57 /* oneplayBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "oneplayBtn@2x.png"; path = "img/top/oneplayBtn@2x.png"; sourceTree = SOURCE_ROOT; };
 		5666F7DD1D635A4F001EFC57 /* titleTxt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "titleTxt@2x.png"; path = "img/top/titleTxt@2x.png"; sourceTree = SOURCE_ROOT; };
 		5666F8191D643167001EFC57 /* helpBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "helpBtn@2x.png"; path = "img/top/helpBtn@2x.png"; sourceTree = SOURCE_ROOT; };
+		5666F81D1D643CDA001EFC57 /* CountdownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountdownView.swift; path = view/CountdownView.swift; sourceTree = "<group>"; };
+		5666F81F1D643CF8001EFC57 /* CountdownView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CountdownView.xib; path = view/CountdownView.xib; sourceTree = "<group>"; };
 		56AC957E1CB16D0000B31FE3 /* bigger.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bigger.mp3; path = sound/bigger.mp3; sourceTree = SOURCE_ROOT; };
 		56AC957F1CB16D0000B31FE3 /* launch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = launch.mp3; path = sound/launch.mp3; sourceTree = SOURCE_ROOT; };
 		56AC95941CB24B2100B31FE3 /* PlayScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = PlayScene.sks; path = sks/PlayScene.sks; sourceTree = "<group>"; };
@@ -250,6 +254,8 @@
 				56AC95A71CB2BCFD00B31FE3 /* PauseMenu.xib */,
 				56D160BE1CC49B3A00257404 /* FinishView.xib */,
 				56D160C01CC4FCF500257404 /* FinishView.swift */,
+				5666F81D1D643CDA001EFC57 /* CountdownView.swift */,
+				5666F81F1D643CF8001EFC57 /* CountdownView.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -568,6 +574,7 @@
 				56BF57C21CD734D900923509 /* ball_green_1@2x.png in Resources */,
 				56BF57D61CD798D500923509 /* COOPBL.ttf in Resources */,
 				56BB7F3B1CAD345200675AE8 /* Assets.xcassets in Resources */,
+				5666F8201D643CF8001EFC57 /* CountdownView.xib in Resources */,
 				56D160C91CC50E2C00257404 /* ball_gold@2x.png in Resources */,
 				56D160CA1CC50E2C00257404 /* ball_green@2x.png in Resources */,
 				565DDA551CBD4EB0003C9F0D /* launch.sks in Resources */,
@@ -753,6 +760,7 @@
 				56AC95A31CB24B3000B31FE3 /* Utils.swift in Sources */,
 				56BB7F341CAD345100675AE8 /* PlayScene.swift in Sources */,
 				56AC959F1CB24B3000B31FE3 /* PlayerBall.swift in Sources */,
+				5666F81E1D643CDA001EFC57 /* CountdownView.swift in Sources */,
 				56BB7F361CAD345100675AE8 /* GameViewController.swift in Sources */,
 				56AC95A21CB24B3000B31FE3 /* TargetBall.swift in Sources */,
 				56BF57B41CD7342F00923509 /* BallImage.swift in Sources */,
