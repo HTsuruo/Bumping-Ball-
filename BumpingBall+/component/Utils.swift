@@ -156,7 +156,8 @@ struct colorUtils {
     static let orange = colorWithHexString("FF9800")
     static let red = colorWithHexString("f44336")
     static let gold = colorWithHexString("ffd700")
-    
+    static let navy = colorWithHexString("3F5A70")
+    static let black = colorWithHexString("1D1D1D")
 }
 
 //rgb指定ではなくカラーコードで指定できるようにした.
