@@ -26,6 +26,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     var touchBeginLocation = CGPoint()
     let finishView = FinishView(frame: CGRectMake(0, 0, define.WIDTH, define.HEIGHT))
     let countdownView = CountdownView()
+    let headerView = HeaderView()
     var isStart = false
     var isFin = false
     let MAX_COMBO_COUNT = 5
@@ -42,7 +43,10 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         self.backgroundColor = UIColor.blackColor()
         
         app.score = 0
-        setupLabels()
+        
+        self.view?.addSubview(headerView)
+        
+//        setupLabels()
         
 //         set touch enable area
         touchView = UIView(frame: CGRectMake(0, define.HEIGHT-70, define.WIDTH, 70))
@@ -51,6 +55,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         self.view?.addSubview(touchView)
         
         self.view?.addSubview(countdownView)
+        
         
     }
     

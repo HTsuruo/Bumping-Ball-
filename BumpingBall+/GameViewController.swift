@@ -43,7 +43,7 @@ class GameViewController: UIViewController {
         let pauseImage = UIImage(named:"pauseBtn")
         pauseBtn.setImage(pauseImage, forState: .Normal)
         pauseBtn.addTarget(self, action: "onClickPauseBtn:", forControlEvents: .TouchUpInside)
-        self.view.addSubview(pauseBtn)
+//        self.view.addSubview(pauseBtn)
         
         //pauseMenu
         pauseMenu = UINib(nibName: "PauseMenu", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! UIView
