@@ -58,7 +58,7 @@ struct TargetBall {
         
         //      ボールのスピードを上げます.
         let difficulty = Difficulty()
-        let speed = difficulty.getAccelerationSpped()
+        let speed = difficulty.getAccelerationSpeed()
         self.dx += speed
         self.dy += speed
         

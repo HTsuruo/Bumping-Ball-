@@ -41,6 +41,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.speed = CGFloat(1.0)
         self.backgroundColor = UIColor.blackColor()
         
+        app.score = 0
         setupLabels()
         
 //         set touch enable area
@@ -115,6 +116,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         }
 
         if last + difficulty.getInterval() <= currentTime {
+            print(difficulty.getInterval())
             createTargetBall()
             last = currentTime
         }
@@ -265,7 +267,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     func updateScore() {
         score += ballUtil.getScoreByCombo(comboCount)
         scoreLabel.text = String(score)
-        difficulty.score = score
+        app.score = score
     }
     
     func removeTargetBall(node: SKNode, id: Int) {
