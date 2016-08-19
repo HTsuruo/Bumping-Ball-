@@ -109,6 +109,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         if !isStart {
             if app.isStart != nil && app.isStart! {
                 isStart = true
+                self.view?.addSubview(headerView)
             }
             return
         }

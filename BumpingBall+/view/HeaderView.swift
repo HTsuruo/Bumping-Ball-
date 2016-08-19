@@ -11,13 +11,9 @@ import UIKit
 class HeaderView: UIView {
 
     @IBOutlet var contentView: UIView!
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
+    @IBOutlet weak var pauseBtn: UIButton!
+    let util = Utils()
+    let gamevc = GameViewController()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,5 +30,11 @@ class HeaderView: UIView {
         self.addSubview(contentView)
     }
     
+    @IBAction func onClickPauseBtn(sender: UIButton) {
+        print("pause !!")
+        Sound.prepareToPlay("pause")
+        Sound.play()
+        gamevc.pause()
+    }
 
 }

@@ -78,6 +78,10 @@ class GameViewController: UIViewController {
         self.view.addSubview(pauseMenu)
     }
     
+    internal func pause() {
+        skView.paused = true
+    }
+    
     @IBAction func onClickResumeBtn(sender: UIButton) {
         skView.paused = false
         pauseMenu.removeFromSuperview()
