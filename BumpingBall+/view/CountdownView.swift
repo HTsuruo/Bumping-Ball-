@@ -59,7 +59,7 @@ class CountdownView: UIView {
             let scale: CGFloat = 2.0
             UIView.animateWithDuration(1, animations: {
                 self.imageView.frame = CGRectMake(0, 0, w * scale, h * scale)
-                self.imageView.center = CGPointMake(define.WIDTH/2, define.HEIGHT/2)
+                self.imageView.center = define.CENTER
                 self.imageView.alpha = 0.0
                 self.contentView.alpha = 0.0
                 }, completion: { finished in

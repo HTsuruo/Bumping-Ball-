@@ -13,6 +13,7 @@ struct define {
     static let WIDTH: CGFloat = UIScreen.mainScreen().bounds.size.width
     static let HEIGHT: CGFloat = UIScreen.mainScreen().bounds.size.height
     static let statusHeight: CGFloat = UIApplication.sharedApplication().statusBarFrame.height
+    static let CENTER: CGPoint = CGPointMake(WIDTH/2, HEIGHT/2)
     static let MAX = 20
     static let BALL_INIT_SCALE = CGFloat(0.5)
     static let BALL_INIT_SPEED = CGFloat(0.5)

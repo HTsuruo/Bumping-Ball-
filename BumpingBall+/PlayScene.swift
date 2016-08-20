@@ -113,7 +113,6 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         }
 
         if last + difficulty.getInterval() <= currentTime {
-            print(difficulty.getInterval())
             createTargetBall()
             last = currentTime
         }
@@ -304,14 +303,15 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     
 //  ゲームオーバー処理
     func finish() {
-        let ud = NSUserDefaults.standardUserDefaults()
-        let bestScore: Int = ud.integerForKey("bestScore")
-        if score > bestScore {
-            ud.setInteger(score, forKey: "bestScore")
-        }
         self.userInteractionEnabled = false
         finishView.setScoreLabel(score)
+        finishView.alpha = 0.0
         self.view!.addSubview(finishView)
+        
+        UIView.animateWithDuration(1, animations: {
+            self.finishView.alpha = 1.0
+            }, completion: { finished in
+        })
     }
     
 }
