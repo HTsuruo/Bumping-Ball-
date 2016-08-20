@@ -18,6 +18,13 @@ class TopScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func update(currentTime: CFTimeInterval) {
+        if last == nil {
+            last = currentTime
+        }
+        
+        if last + 3 <= currentTime {
+            last = currentTime
+        }
     }
 
     func changeBkColor() {

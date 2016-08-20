@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		05B8A37EFFAC35F3317F5B04 /* libPods-BumpingBall+UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEEB63EDD71E4E22158CF9F0 /* libPods-BumpingBall+UITests.a */; };
+		5600C3961D688B79009C5883 /* ChargeMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5600C3951D688B79009C5883 /* ChargeMeter.swift */; };
 		565DDA531CBD4707003C9F0D /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565DDA521CBD4707003C9F0D /* Animation.swift */; };
 		565DDA551CBD4EB0003C9F0D /* launch.sks in Resources */ = {isa = PBXBuildFile; fileRef = 565DDA541CBD4EB0003C9F0D /* launch.sks */; };
+		566176EB1D6881EC00AF10BA /* chargeMeter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 566176EA1D6881EC00AF10BA /* chargeMeter@2x.png */; };
 		5666F7DB1D63460C001EFC57 /* multiplayBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5666F7D91D63460C001EFC57 /* multiplayBtn@2x.png */; };
 		5666F7DC1D63460C001EFC57 /* oneplayBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5666F7DA1D63460C001EFC57 /* oneplayBtn@2x.png */; };
 		5666F7DE1D635A4F001EFC57 /* titleTxt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5666F7DD1D635A4F001EFC57 /* titleTxt@2x.png */; };
@@ -102,8 +104,10 @@
 /* Begin PBXFileReference section */
 		44F957790E5B779DC465ACC5 /* Pods-BumpingBall+.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+/Pods-BumpingBall+.debug.xcconfig"; sourceTree = "<group>"; };
 		4E94269DDA3FBE8B6F1072E4 /* libPods-BumpingBall+.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BumpingBall+.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5600C3951D688B79009C5883 /* ChargeMeter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChargeMeter.swift; path = component/ChargeMeter.swift; sourceTree = "<group>"; };
 		565DDA521CBD4707003C9F0D /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = component/Animation.swift; sourceTree = "<group>"; };
 		565DDA541CBD4EB0003C9F0D /* launch.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = launch.sks; path = sks/launch.sks; sourceTree = "<group>"; };
+		566176EA1D6881EC00AF10BA /* chargeMeter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chargeMeter@2x.png"; path = "img/chargeMeter@2x.png"; sourceTree = SOURCE_ROOT; };
 		5666F7D91D63460C001EFC57 /* multiplayBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "multiplayBtn@2x.png"; path = "img/top/multiplayBtn@2x.png"; sourceTree = SOURCE_ROOT; };
 		5666F7DA1D63460C001EFC57 /* oneplayBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "oneplayBtn@2x.png"; path = "img/top/oneplayBtn@2x.png"; sourceTree = SOURCE_ROOT; };
 		5666F7DD1D635A4F001EFC57 /* titleTxt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "titleTxt@2x.png"; path = "img/top/titleTxt@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -257,6 +261,7 @@
 				565DDA521CBD4707003C9F0D /* Animation.swift */,
 				56BF57931CD72C6100923509 /* Difficulty.swift */,
 				56BF57B31CD7342F00923509 /* BallImage.swift */,
+				5600C3951D688B79009C5883 /* ChargeMeter.swift */,
 			);
 			name = component;
 			sourceTree = "<group>";
@@ -353,6 +358,7 @@
 		56BB7FC11CAFC08200675AE8 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				566176EA1D6881EC00AF10BA /* chargeMeter@2x.png */,
 				5666F8371D646071001EFC57 /* countdown */,
 				5666F7D81D6345FF001EFC57 /* top */,
 				56BF57881CD4BBBD00923509 /* arrows@2x.png */,
@@ -578,6 +584,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				566176EB1D6881EC00AF10BA /* chargeMeter@2x.png in Resources */,
 				56B802531D684281007B79A7 /* Candara.ttf in Resources */,
 				56D160D31CC50E5300257404 /* twitter@2x.png in Resources */,
 				5666F82A1D645702001EFC57 /* ball_green_1@2x.png in Resources */,
@@ -805,6 +812,7 @@
 				56BB7F301CAD345100675AE8 /* AppDelegate.swift in Sources */,
 				56D160C11CC4FCF500257404 /* FinishView.swift in Sources */,
 				56BF57941CD72C6100923509 /* Difficulty.swift in Sources */,
+				5600C3961D688B79009C5883 /* ChargeMeter.swift in Sources */,
 				56B802571D684765007B79A7 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -951,6 +959,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tsuruoka.BumpingBall-";
 				PRODUCT_NAME = "BumpingBall+";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -964,6 +973,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tsuruoka.BumpingBall-";
 				PRODUCT_NAME = "BumpingBall+";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

@@ -28,12 +28,12 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     var isStart = false
     var isFin = false
     let MAX_COMBO_COUNT = 5
+    let charge = ChargeMeter()
     
 //     当たり判定のカテゴリを準備する.
     let ballCategory: UInt32 = 0x1 << 0
     let targetBallCategory: UInt32 = 0x1 << 1
-    
-    
+
     override func didMoveToView(view: SKView) {
 //        ここは物理世界.
         self.physicsWorld.contactDelegate = self
@@ -49,6 +49,8 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         self.view?.addSubview(touchView)
         self.view?.addSubview(headerView)
         self.view?.addSubview(countdownView)
+        self.addChild(charge)
+        
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -86,8 +88,10 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
 //        ball.ball.runAction(Sound.launch)
         for touche in touches {
             let location = touche.locationInNode(self)
-            if location.y < touchBeginLocation.y && location.y < 10 {
+            let swipe = location.y < touchBeginLocation.y && location.y < 10
+            if swipe && charge.isFull {
                 playerBall.setGoldBall()
+                charge.reset()
             }
         }
         playerBall.isFire = true
@@ -109,6 +113,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
             playerBall.sizeChange()
         }
         if last == nil {
+            createTargetBall()
             last = currentTime
         }
 
@@ -258,6 +263,10 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         let moveFadeOut = animation.moveToYFadeOut(0.8, yPos: node.position.y + 30, moveToY: 0.5)
         let sequence = animation.removeAfterAction(moveFadeOut)
         comboLabel.runAction(sequence)
+        
+        if !playerBall.isGold(node) {
+            charge.update(comboCount)
+        }
     }
     
     func updateScore() {

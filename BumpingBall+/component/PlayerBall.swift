@@ -76,7 +76,7 @@ struct PlayerBall {
     
     mutating func setGoldBall() {
         let ballUtil = BallUtils()
-        self.ballSpeed = 4.0
+        self.ballSpeed = 3.5
         self.ball.runAction(ballUtil.setGold())
         self.setId(BallType.GOLD.rawValue)
         self.ball.setScale(2.0)
