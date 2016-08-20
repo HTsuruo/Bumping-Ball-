@@ -5,21 +5,51 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Candara.ttf">
+            <string>Candara</string>
+            <string>Candara</string>
+            <string>Candara</string>
+            <string>Candara</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderView" customModule="BumpingBall_" customModuleProvider="target">
             <connections>
-                <outlet property="contentView" destination="iN0-l3-epB" id="9DL-97-cyI"/>
-                <outlet property="pauseBtn" destination="RFi-Fd-2Gm" id="wtw-nc-jpX"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="NyC-hC-qKh"/>
+                <outlet property="highScoreLabel" destination="MvX-FY-7n1" id="c8N-2p-qmg"/>
+                <outlet property="scoreLabel" destination="NAv-ap-v3v" id="3Pm-Ua-og7"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view alpha="0.80000000000000004" contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCq-VM-Xzh">
-                    <rect key="frame" x="251" y="19" width="98" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCq-VM-Xzh">
+                    <rect key="frame" x="90" y="8" width="84" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="bCq-VM-Xzh" secondAttribute="height" multiplier="14:3" id="bh0-Wy-4iD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Candara" family="Candara" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAv-ap-v3v">
+                    <rect key="frame" x="90" y="31" width="84" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="NAv-ap-v3v" secondAttribute="height" multiplier="14:3" id="Uul-Kv-5Uz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Candara" family="Candara" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="high score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKI-cP-JKK">
+                    <rect key="frame" x="466" y="8" width="84" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="jKI-cP-JKK" secondAttribute="height" multiplier="14:3" id="kKf-jd-BRO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Candara" family="Candara" pointSize="18"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -29,29 +59,49 @@
                         <constraint firstAttribute="width" secondItem="RFi-Fd-2Gm" secondAttribute="height" multiplier="1:1" id="1Ed-Rh-4WF"/>
                     </constraints>
                     <state key="normal" image="pauseBtn.png"/>
-                    <connections>
-                        <action selector="onClickPauseBtn:" destination="-1" eventType="touchUpInside" id="Nsn-0K-WxQ"/>
-                    </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvX-FY-7n1">
+                    <rect key="frame" x="466" y="31" width="84" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="MvX-FY-7n1" secondAttribute="height" multiplier="14:3" id="yE2-g0-m2v"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Candara" family="Candara" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" red="0.3425220102" green="0.45475739729999998" blue="0.74768897249999999" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="NAv-ap-v3v" firstAttribute="top" secondItem="bCq-VM-Xzh" secondAttribute="bottom" constant="5" id="0bt-Ob-afb"/>
                 <constraint firstItem="bCq-VM-Xzh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="7rG-0z-o7y"/>
+                <constraint firstItem="MvX-FY-7n1" firstAttribute="top" secondItem="jKI-cP-JKK" secondAttribute="bottom" constant="5" id="GWr-78-6Fl"/>
+                <constraint firstAttribute="trailing" secondItem="MvX-FY-7n1" secondAttribute="trailing" constant="50" id="HZo-nm-Ba0"/>
                 <constraint firstItem="RFi-Fd-2Gm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="Mdm-CE-pL5"/>
+                <constraint firstItem="bCq-VM-Xzh" firstAttribute="leading" secondItem="RFi-Fd-2Gm" secondAttribute="trailing" constant="40" id="NXk-VX-bST"/>
+                <constraint firstItem="bCq-VM-Xzh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="O5C-2o-h8u"/>
                 <constraint firstAttribute="bottom" secondItem="RFi-Fd-2Gm" secondAttribute="bottom" constant="5" id="Ypd-1z-bS4"/>
                 <constraint firstAttribute="bottom" secondItem="RFi-Fd-2Gm" secondAttribute="bottom" constant="10" id="cXx-Qh-4Gr"/>
+                <constraint firstItem="NAv-ap-v3v" firstAttribute="width" secondItem="NAv-ap-v3v" secondAttribute="height" multiplier="14:3" id="ehu-Bw-gON"/>
+                <constraint firstItem="MvX-FY-7n1" firstAttribute="width" secondItem="MvX-FY-7n1" secondAttribute="height" multiplier="14:3" id="ipB-lX-xVH"/>
+                <constraint firstItem="NAv-ap-v3v" firstAttribute="leading" secondItem="RFi-Fd-2Gm" secondAttribute="trailing" constant="40" id="nU6-g0-akF"/>
+                <constraint firstAttribute="trailing" secondItem="jKI-cP-JKK" secondAttribute="trailing" constant="50" id="oou-IN-OLp"/>
                 <constraint firstItem="RFi-Fd-2Gm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="pqF-a8-dHa"/>
                 <constraint firstItem="bCq-VM-Xzh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rDU-pp-eUy"/>
                 <constraint firstItem="RFi-Fd-2Gm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="tSi-YP-RyX"/>
+                <constraint firstItem="jKI-cP-JKK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="wD0-U4-dMa"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="Ypd-1z-bS4"/>
                     <exclude reference="tSi-YP-RyX"/>
+                    <exclude reference="7rG-0z-o7y"/>
+                    <exclude reference="rDU-pp-eUy"/>
+                    <exclude reference="ehu-Bw-gON"/>
+                    <exclude reference="ipB-lX-xVH"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="383" y="554"/>
+            <point key="canvasLocation" x="272" y="553"/>
         </view>
     </objects>
     <resources>

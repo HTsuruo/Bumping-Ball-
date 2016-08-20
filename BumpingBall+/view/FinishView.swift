@@ -34,6 +34,11 @@ class FinishView: UIView {
     
     func setScoreLabel(totalScore: Int) {
         totalScoreLabel.text = String(totalScore)
+        let ud = NSUserDefaults.standardUserDefaults()
+        let highScore = ud.integerForKey("highScore")
+        if totalScore > highScore {
+            ud.setInteger(totalScore, forKey: "highScore")
+        }
     }
     
     @IBAction func onClickToTopBtn(sender: UIButton) {

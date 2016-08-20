@@ -42,10 +42,12 @@ class GameViewController: UIViewController {
         let pauseBtn = UIButton(frame: CGRectMake(10, 10, 40, 40))
         let pauseImage = UIImage(named:"pauseBtn")
         pauseBtn.setImage(pauseImage, forState: .Normal)
-        pauseBtn.addTarget(self, action: "onClickPauseBtn:", forControlEvents: .TouchUpInside)
-//        self.view.addSubview(pauseBtn)
-        
-        //pauseMenu
+        pauseBtn.addTarget(self, action: #selector(GameViewController.onClickPauseBtn(_:)), forControlEvents: .TouchUpInside)
+        self.view.addSubview(pauseBtn)
+        loadNib()
+    }
+    
+    func loadNib() {
         pauseMenu = UINib(nibName: "PauseMenu", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! UIView
         pauseMenu.frame = CGRectMake(0, 0, define.WIDTH, define.HEIGHT)
     }

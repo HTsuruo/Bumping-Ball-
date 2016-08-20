@@ -12,7 +12,6 @@ import UIKit
 class PlayScene: SKScene, SKPhysicsContactDelegate {
     
     var app: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-    let parentVC = GameViewController()
     var playerBall = PlayerBall()
     var targetBall = TargetBall()
     let ballUtil = BallUtils()
@@ -21,7 +20,6 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     var last: CFTimeInterval!
     var touchView = UIView()
     var score = 0
-    var scoreLabel = SKLabelNode()
     var comboCount = 0
     var touchBeginLocation = CGPoint()
     let finishView = FinishView(frame: CGRectMake(0, 0, define.WIDTH, define.HEIGHT))
@@ -44,19 +42,13 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         
         app.score = 0
         
-        self.view?.addSubview(headerView)
-        
-//        setupLabels()
-        
 //         set touch enable area
-        touchView = UIView(frame: CGRectMake(0, define.HEIGHT-70, define.WIDTH, 70))
+        touchView = UIView(frame: CGRectMake(0, define.HEIGHT-define.TOUCH_HEIGHT, define.WIDTH, define.TOUCH_HEIGHT))
         touchView.backgroundColor = UIColor.whiteColor()
         touchView.alpha = 0.5
         self.view?.addSubview(touchView)
-        
+        self.view?.addSubview(headerView)
         self.view?.addSubview(countdownView)
-        
-        
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -109,7 +101,6 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         if !isStart {
             if app.isStart != nil && app.isStart! {
                 isStart = true
-                self.view?.addSubview(headerView)
             }
             return
         }
@@ -272,7 +263,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     
     func updateScore() {
         score += ballUtil.getScoreByCombo(comboCount)
-        scoreLabel.text = String(score)
+        headerView.scoreLabel.text = String(score)
         app.score = score
     }
     
@@ -296,23 +287,6 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         tBall.userData?.setValue(resNum, forKey: "num")
         let action = ballUtil.getBallImageByNum(id, num: resNum)
         tBall.runAction(action)
-    }
-    
-    func setupLabels() {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "score"
-        myLabel.fontSize = 30
-        myLabel.fontColor = UIColor.whiteColor()
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:self.frame.height-30)
-        self.addChild(myLabel)
-        
-        scoreLabel = SKLabelNode(fontNamed:"Chalkduster")
-        scoreLabel.text = "0"
-        scoreLabel.fontSize = 30
-        scoreLabel.fontColor = UIColor.whiteColor()
-        scoreLabel.position = CGPoint(x:define.WIDTH - 100, y:self.frame.height-30)
-        self.addChild(scoreLabel)
     }
     
     func launchAnimation() {

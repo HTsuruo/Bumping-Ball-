@@ -17,8 +17,10 @@ struct define {
     static let BALL_INIT_SCALE = CGFloat(0.5)
     static let BALL_INIT_SPEED = CGFloat(0.5)
     static let TOUCH_MARGIN = CGFloat(50.0) //タッチ箇所とボールが被って見難くなってしまうので少しずらします.
-    static let REMOVE_HEIGHT = CGFloat(HEIGHT - 80.0)
-    static let TOUCH_AREA = CGRectMake(0, 0, define.WIDTH, 70)
+    static let HEADER_HEIGHT: CGFloat = 60.0
+    static let REMOVE_HEIGHT = CGFloat(HEIGHT - (HEADER_HEIGHT))
+    static let TOUCH_HEIGHT: CGFloat = 65.0
+    static let TOUCH_AREA = CGRectMake(0, 0, define.WIDTH, TOUCH_HEIGHT)
 }
 
 class Utils: NSObject {
@@ -31,7 +33,7 @@ class Utils: NSObject {
     }
     
     //最前面のビューを取得する
-func getForegroundViewController() -> UIViewController {
+   func getForegroundViewController() -> UIViewController {
         var tc = UIApplication.sharedApplication().keyWindow?.rootViewController
         while tc!.presentedViewController != nil {
             tc = tc!.presentedViewController

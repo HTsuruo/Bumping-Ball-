@@ -2,7 +2,7 @@
 //  HeaderView.swift
 //  BumpingBall+
 //
-//  Created by Tsuru on H28/08/19.
+//  Created by Tsuru on H28/08/20.
 //  Copyright © 平成28年 Hideki Tsuruoka. All rights reserved.
 //
 
@@ -11,13 +11,13 @@ import UIKit
 class HeaderView: UIView {
 
     @IBOutlet var contentView: UIView!
-    @IBOutlet weak var pauseBtn: UIButton!
-    let util = Utils()
-    let gamevc = GameViewController()
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var highScoreLabel: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadXib()
+        setHighScoreLabel()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -26,15 +26,14 @@ class HeaderView: UIView {
     
     private func loadXib() {
         NSBundle.mainBundle().loadNibNamed("HeaderView", owner: self, options: nil)
-        contentView.frame = CGRectMake(0, 0, define.WIDTH, 60)
+        contentView.frame = CGRectMake(0, 0, define.WIDTH, define.HEADER_HEIGHT)
         self.addSubview(contentView)
     }
     
-    @IBAction func onClickPauseBtn(sender: UIButton) {
-        print("pause !!")
-        Sound.prepareToPlay("pause")
-        Sound.play()
-        gamevc.pause()
+    private func setHighScoreLabel() {
+        let ud = NSUserDefaults.standardUserDefaults()
+        let highScore = ud.integerForKey("highScore")
+        highScoreLabel.text = String(highScore)
     }
 
 }
