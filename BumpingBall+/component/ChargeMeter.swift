@@ -11,16 +11,18 @@ import SpriteKit
 
 class ChargeMeter: SKSpriteNode {
 
-    var initialPos = -(define.WIDTH/2 + 10)
+    var initialPos = -(define.WIDTH/2 + 15)
     static let CHARGE_MAX = 50
     var charge = 0
     var isFull = false
+    let animation = Animation()
     
     init() {
         let texture = SKTexture(imageNamed: "chargeMeter")
-        super.init(texture: texture, color: colorUtils.gold, size: CGSizeMake(define.WIDTH + 20, 5))
+        super.init(texture: texture, color: colorUtils.gold, size: CGSizeMake(define.WIDTH + 30, 5))
         self.position = CGPointMake(initialPos, define.HEIGHT - (define.HEADER_HEIGHT + 2.5))
-        changeColor()
+        let action = animation.chargeMeterAnimation(0.8)
+        self.runAction(action)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -29,7 +31,6 @@ class ChargeMeter: SKSpriteNode {
     
     func update(combo: Int) {
         charge += combo
-        print(charge)
         if isFull {
             return
         }
@@ -44,14 +45,6 @@ class ChargeMeter: SKSpriteNode {
     
     func getIncrement(combo: Int) -> CGFloat {
         return CGFloat(combo) * (define.WIDTH / 50)
-    }
-    
-    func changeColor() {
-        let gold = SKAction.colorizeWithColor(colorUtils.gold, colorBlendFactor: 1.0, duration: 0.8)
-        let orange = SKAction.colorizeWithColor(colorUtils.orange, colorBlendFactor: 1.0, duration: 0.8)
-        let sequence  = SKAction.sequence([gold, orange])
-        let foreverChange  = SKAction.repeatActionForever(sequence)
-        self.runAction(foreverChange)
     }
     
     func reset () {

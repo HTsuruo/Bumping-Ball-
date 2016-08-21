@@ -14,6 +14,7 @@ class GameViewController: UIViewController {
 
     let util = Utils()
     var skView = SKView()
+    let countdownView = CountdownView()
     let finishView = FinishView(frame: CGRectMake(0, 0, define.WIDTH, define.HEIGHT))
     @IBOutlet var pauseMenu: UIView!
     @IBOutlet weak var resumeBtn: UIButton!
@@ -77,11 +78,8 @@ class GameViewController: UIViewController {
         Sound.prepareToPlay("pause")
         Sound.play()
         skView.paused = true
+        countdownView.stop()
         self.view.addSubview(pauseMenu)
-    }
-    
-    internal func pause() {
-        skView.paused = true
     }
     
     @IBAction func onClickResumeBtn(sender: UIButton) {

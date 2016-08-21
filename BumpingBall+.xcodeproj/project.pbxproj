@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		05B8A37EFFAC35F3317F5B04 /* libPods-BumpingBall+UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEEB63EDD71E4E22158CF9F0 /* libPods-BumpingBall+UITests.a */; };
 		5600C3961D688B79009C5883 /* ChargeMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5600C3951D688B79009C5883 /* ChargeMeter.swift */; };
+		561BA20A1D69799B004FC052 /* TouchViewTxt.xib in Resources */ = {isa = PBXBuildFile; fileRef = 561BA2091D69799B004FC052 /* TouchViewTxt.xib */; };
+		561BA20C1D697A62004FC052 /* TouchViewTxt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561BA20B1D697A62004FC052 /* TouchViewTxt.swift */; };
+		561BA20F1D69975D004FC052 /* touchView@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561BA20E1D69975D004FC052 /* touchView@2x.png */; };
+		561BA2111D699774004FC052 /* TouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561BA2101D699774004FC052 /* TouchView.swift */; };
+		561BA2131D699E25004FC052 /* swipeArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561BA2121D699E25004FC052 /* swipeArrow@2x.png */; };
 		565DDA531CBD4707003C9F0D /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565DDA521CBD4707003C9F0D /* Animation.swift */; };
 		565DDA551CBD4EB0003C9F0D /* launch.sks in Resources */ = {isa = PBXBuildFile; fileRef = 565DDA541CBD4EB0003C9F0D /* launch.sks */; };
 		566176EB1D6881EC00AF10BA /* chargeMeter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 566176EA1D6881EC00AF10BA /* chargeMeter@2x.png */; };
@@ -105,6 +110,11 @@
 		44F957790E5B779DC465ACC5 /* Pods-BumpingBall+.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+/Pods-BumpingBall+.debug.xcconfig"; sourceTree = "<group>"; };
 		4E94269DDA3FBE8B6F1072E4 /* libPods-BumpingBall+.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BumpingBall+.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5600C3951D688B79009C5883 /* ChargeMeter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChargeMeter.swift; path = component/ChargeMeter.swift; sourceTree = "<group>"; };
+		561BA2091D69799B004FC052 /* TouchViewTxt.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TouchViewTxt.xib; path = view/TouchViewTxt.xib; sourceTree = "<group>"; };
+		561BA20B1D697A62004FC052 /* TouchViewTxt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchViewTxt.swift; path = view/TouchViewTxt.swift; sourceTree = "<group>"; };
+		561BA20E1D69975D004FC052 /* touchView@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "touchView@2x.png"; path = "img/touch_view/touchView@2x.png"; sourceTree = SOURCE_ROOT; };
+		561BA2101D699774004FC052 /* TouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchView.swift; path = view/TouchView.swift; sourceTree = "<group>"; };
+		561BA2121D699E25004FC052 /* swipeArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "swipeArrow@2x.png"; path = "img/touch_view/swipeArrow@2x.png"; sourceTree = SOURCE_ROOT; };
 		565DDA521CBD4707003C9F0D /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = component/Animation.swift; sourceTree = "<group>"; };
 		565DDA541CBD4EB0003C9F0D /* launch.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = launch.sks; path = sks/launch.sks; sourceTree = "<group>"; };
 		566176EA1D6881EC00AF10BA /* chargeMeter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chargeMeter@2x.png"; path = "img/chargeMeter@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -218,6 +228,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		561BA20D1D69974F004FC052 /* touch_view */ = {
+			isa = PBXGroup;
+			children = (
+				561BA2121D699E25004FC052 /* swipeArrow@2x.png */,
+				561BA20E1D69975D004FC052 /* touchView@2x.png */,
+			);
+			name = touch_view;
+			sourceTree = "<group>";
+		};
 		5666F7D81D6345FF001EFC57 /* top */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +307,9 @@
 				5666F81F1D643CF8001EFC57 /* CountdownView.xib */,
 				56CC4E3E1D67056000434A17 /* HeaderView.xib */,
 				56B802561D684765007B79A7 /* HeaderView.swift */,
+				561BA2091D69799B004FC052 /* TouchViewTxt.xib */,
+				561BA20B1D697A62004FC052 /* TouchViewTxt.swift */,
+				561BA2101D699774004FC052 /* TouchView.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -358,6 +380,7 @@
 		56BB7FC11CAFC08200675AE8 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				561BA20D1D69974F004FC052 /* touch_view */,
 				566176EA1D6881EC00AF10BA /* chargeMeter@2x.png */,
 				5666F8371D646071001EFC57 /* countdown */,
 				5666F7D81D6345FF001EFC57 /* top */,
@@ -586,7 +609,9 @@
 			files = (
 				566176EB1D6881EC00AF10BA /* chargeMeter@2x.png in Resources */,
 				56B802531D684281007B79A7 /* Candara.ttf in Resources */,
+				561BA20A1D69799B004FC052 /* TouchViewTxt.xib in Resources */,
 				56D160D31CC50E5300257404 /* twitter@2x.png in Resources */,
+				561BA2131D699E25004FC052 /* swipeArrow@2x.png in Resources */,
 				5666F82A1D645702001EFC57 /* ball_green_1@2x.png in Resources */,
 				56AC95981CB24B2100B31FE3 /* spark.png in Resources */,
 				56CC4E3F1D67056000434A17 /* HeaderView.xib in Resources */,
@@ -602,6 +627,7 @@
 				56AC95AA1CB2BDD400B31FE3 /* pause.mp3 in Resources */,
 				56AC95A81CB2BCFD00B31FE3 /* PauseMenu.xib in Resources */,
 				5666F8261D6456F5001EFC57 /* ball_orange_2@2x.png in Resources */,
+				561BA20F1D69975D004FC052 /* touchView@2x.png in Resources */,
 				56D160D21CC50E5300257404 /* line@2x.png in Resources */,
 				5666F8221D6456DB001EFC57 /* facebook@2x.png in Resources */,
 				56AC95801CB16D0000B31FE3 /* bigger.mp3 in Resources */,
@@ -806,6 +832,7 @@
 				5666F81E1D643CDA001EFC57 /* CountdownView.swift in Sources */,
 				56BB7F361CAD345100675AE8 /* GameViewController.swift in Sources */,
 				56AC95A21CB24B3000B31FE3 /* TargetBall.swift in Sources */,
+				561BA2111D699774004FC052 /* TouchView.swift in Sources */,
 				56BF57B41CD7342F00923509 /* BallImage.swift in Sources */,
 				56AC95A01CB24B3000B31FE3 /* Enums.swift in Sources */,
 				565DDA531CBD4707003C9F0D /* Animation.swift in Sources */,
@@ -813,6 +840,7 @@
 				56D160C11CC4FCF500257404 /* FinishView.swift in Sources */,
 				56BF57941CD72C6100923509 /* Difficulty.swift in Sources */,
 				5600C3961D688B79009C5883 /* ChargeMeter.swift in Sources */,
+				561BA20C1D697A62004FC052 /* TouchViewTxt.swift in Sources */,
 				56B802571D684765007B79A7 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

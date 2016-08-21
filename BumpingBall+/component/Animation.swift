@@ -92,4 +92,12 @@ class Animation {
         return launch
     }
     
+    func chargeMeterAnimation(duration: Double) -> SKAction{
+        let gold = SKAction.colorizeWithColor(colorUtils.gold, colorBlendFactor: 1.0, duration: duration)
+        let orange = SKAction.colorizeWithColor(colorUtils.orange, colorBlendFactor: 1.0, duration: duration)
+        let sequence  = SKAction.sequence([gold, orange])
+        let foreverChange  = SKAction.repeatActionForever(sequence)
+        return foreverChange
+    }
+    
 }

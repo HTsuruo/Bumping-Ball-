@@ -161,6 +161,7 @@ struct colorUtils {
     static let gold = colorWithHexString("ffd700")
     static let navy = colorWithHexString("3F5A70")
     static let black = colorWithHexString("1D1D1D")
+    static let clear = UIColor.clearColor()
 }
 
 //rgb指定ではなくカラーコードで指定できるようにした.

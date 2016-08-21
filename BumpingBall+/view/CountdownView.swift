@@ -41,6 +41,10 @@ class CountdownView: UIView {
         countdownTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(CountdownView.countdown), userInfo: nil, repeats: true)
     }
     
+    func stop() {
+        countdownTimer.invalidate()
+    }
+    
     func countdown() { // this is the function called by the timer every second, which causes your "countdownTime" to go down by 1. When it reaches 0, it starts the game.
         countdownTime -= 1
         

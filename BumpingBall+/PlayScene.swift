@@ -18,13 +18,14 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     let animation = Animation()
     let difficulty = Difficulty()
     var last: CFTimeInterval!
-    var touchView = UIView()
     var score = 0
     var comboCount = 0
     var touchBeginLocation = CGPoint()
     let finishView = FinishView(frame: CGRectMake(0, 0, define.WIDTH, define.HEIGHT))
     let countdownView = CountdownView()
     let headerView = HeaderView()
+    let touchViewTxt = TouchViewTxt()
+    var touchView = TouchView()
     var isStart = false
     var isFin = false
     let MAX_COMBO_COUNT = 5
@@ -43,14 +44,11 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         app.score = 0
         
 //         set touch enable area
-        touchView = UIView(frame: CGRectMake(0, define.HEIGHT-define.TOUCH_HEIGHT, define.WIDTH, define.TOUCH_HEIGHT))
-        touchView.backgroundColor = UIColor.whiteColor()
-        touchView.alpha = 0.5
-        self.view?.addSubview(touchView)
+        self.addChild(touchView)
+        self.view?.addSubview(touchViewTxt)
         self.view?.addSubview(headerView)
         self.view?.addSubview(countdownView)
         self.addChild(charge)
-        
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -63,6 +61,8 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         }
         
         for touch in touches {
+//            print(touch.locationInView(self.view))
+            
             touchBeginLocation = touch.locationInNode(self)
             
             if !(define.TOUCH_AREA.contains(touchBeginLocation)) {
@@ -91,7 +91,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
             let swipe = location.y < touchBeginLocation.y && location.y < 10
             if swipe && charge.isFull {
                 playerBall.setGoldBall()
-                charge.reset()
+                chargeReset()
             }
         }
         playerBall.isFire = true
@@ -177,7 +177,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
                 }
                 
 //              自陣にボールが入るとゲームオーバーになります.
-                if (define.HEIGHT - self.touchView.frame.origin.y) > targetBall.position.y {
+                if define.TOUCH_AREA.contains(targetBall.position) {
                     self.isFin = true
                     self.finish()
                 }
@@ -229,7 +229,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
             if firstBody.categoryBitMask & ballCategory != 0 &&
                 secondBody.categoryBitMask & targetBallCategory != 0 {
                     if canRemove {
-                        updateComboCount(secondBody.node!)
+                        updateComboCount(firstBody.node!, tnode: secondBody.node!)
                         removeTargetBall(secondBody.node!, id: targetId as! Int)
                         updateScore()
                     } else {
@@ -242,7 +242,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    func updateComboCount(node: SKNode) {
+    func updateComboCount(pnode: SKNode, tnode: SKNode) {
         comboCount += 1
         
         if comboCount == 1 {
@@ -257,15 +257,21 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         comboLabel.text = "combo×"+String(comboCount-1)
         comboLabel.fontColor = UIColor.redColor()
         comboLabel.fontSize = 20
-        comboLabel.position = node.position
+        comboLabel.position = tnode.position
         self.addChild(comboLabel)
         
-        let moveFadeOut = animation.moveToYFadeOut(0.8, yPos: node.position.y + 30, moveToY: 0.5)
+        let moveFadeOut = animation.moveToYFadeOut(0.8, yPos: tnode.position.y + 30, moveToY: 0.5)
         let sequence = animation.removeAfterAction(moveFadeOut)
         comboLabel.runAction(sequence)
         
-        if !playerBall.isGold(node) {
+        let prevCharge = charge.isFull //fullになった時のみを取得するため
+        if !playerBall.isGold(pnode) {
             charge.update(comboCount)
+        }
+        
+        if !prevCharge && charge.isFull {
+            print("chargeFull")
+            chargeFull()
         }
     }
     
@@ -321,6 +327,19 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
             self.finishView.alpha = 1.0
             }, completion: { finished in
         })
+    }
+    
+    func chargeFull() {
+        touchView.chargeFull()
+        touchViewTxt.chargeFull()
+    }
+    
+    func chargeReset() {
+        charge.reset()
+        touchView.removeFromParent()//skspritenodeのcolorをデフォルトに戻すため再生成.
+        touchView = TouchView()
+        self.addChild(touchView)
+        touchViewTxt.chargeReset()
     }
     
 }
