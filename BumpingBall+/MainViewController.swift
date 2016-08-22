@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 import AVFoundation
 
-class GameViewController: UIViewController {
+class MainViewController: UIViewController {
 
     let util = Utils()
     var skView = SKView()
@@ -43,7 +43,7 @@ class GameViewController: UIViewController {
         let pauseBtn = UIButton(frame: CGRectMake(10, 10, 40, 40))
         let pauseImage = UIImage(named:"pauseBtn")
         pauseBtn.setImage(pauseImage, forState: .Normal)
-        pauseBtn.addTarget(self, action: #selector(GameViewController.onClickPauseBtn(_:)), forControlEvents: .TouchUpInside)
+        pauseBtn.addTarget(self, action: #selector(MainViewController.onClickPauseBtn(_:)), forControlEvents: .TouchUpInside)
         self.view.addSubview(pauseBtn)
         loadNib()
     }

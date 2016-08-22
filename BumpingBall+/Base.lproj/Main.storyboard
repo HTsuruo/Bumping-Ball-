@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Game View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController storyboardIdentifier="onePlayVC" id="BV1-FR-VrT" customClass="GameViewController" customModule="BumpingBall_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onePlayVC" id="BV1-FR-VrT" customClass="MainViewController" customModule="BumpingBall_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
