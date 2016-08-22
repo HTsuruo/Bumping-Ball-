@@ -10,6 +10,7 @@
 * SpriteKit
 * GameKit
 * Social.framework
+* Multipeer Connectivity Framework
 
 ## Libraries.
 * 未定
