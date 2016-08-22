@@ -22,25 +22,25 @@ class Difficulty {
         if score < 500 {
             return 0.0
         } else if score < 1000 {
-            return 0.2
+            return 0.1
         } else if score < 3000 {
-            return 0.4
+            return 0.3
         } else if score < 5000 {
-            return 0.6
+            return 0.5
         } else if score < 10000 {
-            return 0.8
+            return 0.6
         } else if score < 12500 {
-            return 1.0
+            return 0.7
         } else if score < 15000 {
-            return 1.25
+            return 0.8
         } else if score < 17500 {
-            return 1.5
+            return 0.9
         } else if score < 20000 {
-            return 1.75
+            return 1.0
         } else if score < 25000 {
-            return 2.0
+            return 1.2
         } else if score < 30000 {
-            return 2.5
+            return 2.0
         }
         return 3.0
     }

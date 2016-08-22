@@ -23,7 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1012" y="145"/>
+            <point key="canvasLocation" x="1000" y="125"/>
         </scene>
         <!--Top View Controller-->
         <scene sceneID="mg3-mZ-y76">
@@ -166,16 +166,25 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lxz-0d-ckm">
+                                <rect key="frame" x="70" y="145" width="460" height="311"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="ued-eL-Nmb"/>
+                                    <constraint firstAttribute="width" secondItem="Lxz-0d-ckm" secondAttribute="height" multiplier="1.5:1" id="xNZ-JN-NGv"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="dsc-yv-aM9" secondAttribute="trailing" constant="40" id="9Fb-kY-gLx"/>
                             <constraint firstItem="6DC-Gf-4nI" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="148" id="9yr-cV-teU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lxz-0d-ckm" secondAttribute="trailing" constant="60" id="B8C-Na-mqW"/>
                             <constraint firstItem="4Gg-oc-1cL" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="10" id="CT9-Zh-3iH"/>
                             <constraint firstItem="dsc-yv-aM9" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="40" id="Fw1-Yv-5xe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="X6h-on-Pm5" secondAttribute="trailing" constant="10" id="GLa-Hq-eo1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6DC-Gf-4nI" secondAttribute="trailing" constant="40" id="GZb-zp-7Gf"/>
                             <constraint firstItem="v2V-mu-I55" firstAttribute="top" secondItem="4Gg-oc-1cL" secondAttribute="bottom" constant="40" id="GhN-kw-uLL"/>
+                            <constraint firstItem="Lxz-0d-ckm" firstAttribute="centerX" secondItem="OWX-VH-aeT" secondAttribute="centerX" id="Jbh-4N-GCU"/>
                             <constraint firstItem="dsc-yv-aM9" firstAttribute="top" secondItem="X6h-on-Pm5" secondAttribute="bottom" constant="60" id="Jug-7A-F2R"/>
                             <constraint firstItem="dsc-yv-aM9" firstAttribute="top" secondItem="X6h-on-Pm5" secondAttribute="bottom" constant="42" id="OJw-pU-4J1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dsc-yv-aM9" secondAttribute="trailing" constant="100" id="PMS-vA-xxD"/>
@@ -186,18 +195,28 @@
                             <constraint firstItem="X6h-on-Pm5" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="10" id="TNt-UP-YdW"/>
                             <constraint firstItem="X6h-on-Pm5" firstAttribute="top" secondItem="TWV-0b-y95" secondAttribute="bottom" constant="10" id="Ubw-5Y-V1w"/>
                             <constraint firstItem="dsc-yv-aM9" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="101" id="W8X-KQ-iU5"/>
+                            <constraint firstItem="Lxz-0d-ckm" firstAttribute="centerY" secondItem="OWX-VH-aeT" secondAttribute="centerY" id="YQS-s9-hRs"/>
                             <constraint firstItem="dsc-yv-aM9" firstAttribute="top" secondItem="X6h-on-Pm5" secondAttribute="bottom" constant="42" id="Zbi-Ch-NoN"/>
                             <constraint firstItem="v2V-mu-I55" firstAttribute="top" secondItem="dsc-yv-aM9" secondAttribute="bottom" constant="170" id="aHQ-QY-ang"/>
                             <constraint firstItem="6DC-Gf-4nI" firstAttribute="top" secondItem="dsc-yv-aM9" secondAttribute="bottom" constant="60" id="bS7-YI-R1q"/>
                             <constraint firstItem="dsc-yv-aM9" firstAttribute="centerX" secondItem="OWX-VH-aeT" secondAttribute="centerX" id="eH0-PO-TKo"/>
                             <constraint firstItem="6DC-Gf-4nI" firstAttribute="centerX" secondItem="OWX-VH-aeT" secondAttribute="centerX" id="j6g-89-3Qu"/>
+                            <constraint firstItem="Lxz-0d-ckm" firstAttribute="top" secondItem="TWV-0b-y95" secondAttribute="bottom" constant="200" id="kOa-Gf-HBx"/>
+                            <constraint firstItem="Lxz-0d-ckm" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="50" id="pF7-Vf-djD"/>
+                            <constraint firstItem="Lxz-0d-ckm" firstAttribute="centerY" secondItem="OWX-VH-aeT" secondAttribute="centerY" id="rfk-ZQ-SrH"/>
                             <constraint firstItem="X6h-on-Pm5" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="30" id="tBi-DA-XpC"/>
                             <constraint firstItem="4Gg-oc-1cL" firstAttribute="centerX" secondItem="OWX-VH-aeT" secondAttribute="centerX" id="tnL-uy-OXe"/>
+                            <constraint firstItem="Lxz-0d-ckm" firstAttribute="centerX" secondItem="OWX-VH-aeT" secondAttribute="centerX" id="zq3-56-BfR"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="QfF-u3-6dL"/>
                                 <exclude reference="tBi-DA-XpC"/>
+                                <exclude reference="B8C-Na-mqW"/>
+                                <exclude reference="Jbh-4N-GCU"/>
+                                <exclude reference="YQS-s9-hRs"/>
+                                <exclude reference="kOa-Gf-HBx"/>
+                                <exclude reference="pF7-Vf-djD"/>
                                 <exclude reference="OJw-pU-4J1"/>
                                 <exclude reference="PMS-vA-xxD"/>
                                 <exclude reference="SYA-ZD-vba"/>
@@ -210,6 +229,7 @@
                     </view>
                     <connections>
                         <outlet property="onePlayBtn" destination="dsc-yv-aM9" id="omV-qf-o4R"/>
+                        <outlet property="pickerView" destination="Lxz-0d-ckm" id="Y6M-2L-rtW"/>
                         <segue destination="BV1-FR-VrT" kind="presentation" identifier="toOnePlayVC" modalTransitionStyle="flipHorizontal" id="pGj-IE-aGP"/>
                     </connections>
                 </viewController>

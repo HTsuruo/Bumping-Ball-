@@ -46,3 +46,10 @@ enum BallType: Int {
     }
     
 }
+
+enum DifficultyType: Int {
+    case EASY = 0
+    case NORMAL = 1
+    case HARD = 2
+    case IMPOSSIBLE = 3
+}
