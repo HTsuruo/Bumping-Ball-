@@ -57,8 +57,8 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     }
     
     @IBAction func onClickMultiPlayBtn(sender: UIButton) {
-        app.selectedPlay = PlayType.BLUETOOTH
-        self.performSegueWithIdentifier("toPlay", sender: self)
+//        app.selectedPlay = PlayType.BLUETOOTH
+        self.performSegueWithIdentifier("toPrepareMulti", sender: self)
     }
     
     @IBAction func onClickRankBtn(sender: UIButton) {

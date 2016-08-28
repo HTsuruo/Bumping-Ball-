@@ -59,6 +59,11 @@
 		56AC95AA1CB2BDD400B31FE3 /* pause.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56AC95A91CB2BDD400B31FE3 /* pause.mp3 */; };
 		56B802531D684281007B79A7 /* Candara.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56B802521D684215007B79A7 /* Candara.ttf */; };
 		56B802571D684765007B79A7 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B802561D684765007B79A7 /* HeaderView.swift */; };
+		56BB367C1D7317C900AD1603 /* PrepareMultiPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BB367B1D7317C900AD1603 /* PrepareMultiPlayViewController.swift */; };
+		56BB367E1D731AF300AD1603 /* backBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BB367D1D731AF300AD1603 /* backBtn@2x.png */; };
+		56BB36831D7324F500AD1603 /* icon_bluetooth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BB36811D7324F500AD1603 /* icon_bluetooth@2x.png */; };
+		56BB36841D7324F500AD1603 /* play_bluetooth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BB36821D7324F500AD1603 /* play_bluetooth@2x.png */; };
+		56BB36861D73279B00AD1603 /* icon_wifi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BB36851D73279B00AD1603 /* icon_wifi@2x.png */; };
 		56BB7F301CAD345100675AE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BB7F2F1CAD345100675AE8 /* AppDelegate.swift */; };
 		56BB7F361CAD345100675AE8 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BB7F351CAD345100675AE8 /* SceneViewController.swift */; };
 		56BB7F391CAD345200675AE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56BB7F371CAD345200675AE8 /* Main.storyboard */; };
@@ -165,6 +170,12 @@
 		56AC95A91CB2BDD400B31FE3 /* pause.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = pause.mp3; path = sound/pause.mp3; sourceTree = SOURCE_ROOT; };
 		56B802521D684215007B79A7 /* Candara.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Candara.ttf; path = font/Candara.ttf; sourceTree = "<group>"; };
 		56B802561D684765007B79A7 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderView.swift; path = view/HeaderView.swift; sourceTree = "<group>"; };
+		56BB367B1D7317C900AD1603 /* PrepareMultiPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareMultiPlayViewController.swift; sourceTree = "<group>"; };
+		56BB367D1D731AF300AD1603 /* backBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backBtn@2x.png"; path = "img/backBtn@2x.png"; sourceTree = SOURCE_ROOT; };
+		56BB367F1D73219F00AD1603 /* FlopDesignFONT.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FlopDesignFONT.otf; path = font/FlopDesignFONT.otf; sourceTree = "<group>"; };
+		56BB36811D7324F500AD1603 /* icon_bluetooth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_bluetooth@2x.png"; path = "img/prepare_multiplay/icon_bluetooth@2x.png"; sourceTree = SOURCE_ROOT; };
+		56BB36821D7324F500AD1603 /* play_bluetooth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play_bluetooth@2x.png"; path = "img/prepare_multiplay/play_bluetooth@2x.png"; sourceTree = SOURCE_ROOT; };
+		56BB36851D73279B00AD1603 /* icon_wifi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_wifi@2x.png"; path = "img/prepare_multiplay/icon_wifi@2x.png"; sourceTree = SOURCE_ROOT; };
 		56BB7F2C1CAD345100675AE8 /* BumpingBall+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BumpingBall+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BB7F2F1CAD345100675AE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56BB7F351CAD345100675AE8 /* SceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
@@ -338,6 +349,16 @@
 			name = view;
 			sourceTree = "<group>";
 		};
+		56BB36801D7324DD00AD1603 /* prepare_multiplay */ = {
+			isa = PBXGroup;
+			children = (
+				56BB36851D73279B00AD1603 /* icon_wifi@2x.png */,
+				56BB36811D7324F500AD1603 /* icon_bluetooth@2x.png */,
+				56BB36821D7324F500AD1603 /* play_bluetooth@2x.png */,
+			);
+			name = prepare_multiplay;
+			sourceTree = "<group>";
+		};
 		56BB7F231CAD345100675AE8 = {
 			isa = PBXGroup;
 			children = (
@@ -366,8 +387,9 @@
 			children = (
 				560A497D1D729F2900DEBB6A /* scene */,
 				56BB7F2F1CAD345100675AE8 /* AppDelegate.swift */,
-				56BB7F351CAD345100675AE8 /* SceneViewController.swift */,
 				56BB7FAF1CAD766900675AE8 /* TopViewController.swift */,
+				56BB7F351CAD345100675AE8 /* SceneViewController.swift */,
+				56BB367B1D7317C900AD1603 /* PrepareMultiPlayViewController.swift */,
 				56BB7F371CAD345200675AE8 /* Main.storyboard */,
 				56BB7F3A1CAD345200675AE8 /* Assets.xcassets */,
 				56BB7F3C1CAD345200675AE8 /* LaunchScreen.storyboard */,
@@ -403,6 +425,8 @@
 		56BB7FC11CAFC08200675AE8 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				56BB36801D7324DD00AD1603 /* prepare_multiplay */,
+				56BB367D1D731AF300AD1603 /* backBtn@2x.png */,
 				561BA20D1D69974F004FC052 /* touch_view */,
 				566176EA1D6881EC00AF10BA /* chargeMeter@2x.png */,
 				5666F8371D646071001EFC57 /* countdown */,
@@ -420,6 +444,7 @@
 		56BF578C1CD710C200923509 /* font */ = {
 			isa = PBXGroup;
 			children = (
+				56BB367F1D73219F00AD1603 /* FlopDesignFONT.otf */,
 				56B802521D684215007B79A7 /* Candara.ttf */,
 				56BF57D51CD798D500923509 /* COOPBL.ttf */,
 				56BF57CC1CD7902000923509 /* Roboto-Bold.ttf */,
@@ -631,13 +656,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56BB367E1D731AF300AD1603 /* backBtn@2x.png in Resources */,
 				566176EB1D6881EC00AF10BA /* chargeMeter@2x.png in Resources */,
+				56BB36861D73279B00AD1603 /* icon_wifi@2x.png in Resources */,
 				56B802531D684281007B79A7 /* Candara.ttf in Resources */,
 				561BA20A1D69799B004FC052 /* TouchViewTxt.xib in Resources */,
 				56D160D31CC50E5300257404 /* twitter@2x.png in Resources */,
 				561BA2131D699E25004FC052 /* swipeArrow@2x.png in Resources */,
 				5666F82A1D645702001EFC57 /* ball_green_1@2x.png in Resources */,
 				56AC95981CB24B2100B31FE3 /* spark.png in Resources */,
+				56BB36831D7324F500AD1603 /* icon_bluetooth@2x.png in Resources */,
 				56CC4E3F1D67056000434A17 /* HeaderView.xib in Resources */,
 				5666F83E1D646090001EFC57 /* three@2x.png in Resources */,
 				56AC95991CB24B2100B31FE3 /* spark.sks in Resources */,
@@ -664,6 +692,7 @@
 				56BF57D61CD798D500923509 /* COOPBL.ttf in Resources */,
 				56BB7F3B1CAD345200675AE8 /* Assets.xcassets in Resources */,
 				5666F8201D643CF8001EFC57 /* CountdownView.xib in Resources */,
+				56BB36841D7324F500AD1603 /* play_bluetooth@2x.png in Resources */,
 				56D160C91CC50E2C00257404 /* ball_gold@2x.png in Resources */,
 				5666F8321D645712001EFC57 /* ball_blue_1@2x.png in Resources */,
 				5666F8351D645712001EFC57 /* ball_blue_4@2x.png in Resources */,
@@ -855,6 +884,7 @@
 				5666F81E1D643CDA001EFC57 /* CountdownView.swift in Sources */,
 				56BB7F361CAD345100675AE8 /* SceneViewController.swift in Sources */,
 				560A49831D729F3600DEBB6A /* TopScene.swift in Sources */,
+				56BB367C1D7317C900AD1603 /* PrepareMultiPlayViewController.swift in Sources */,
 				56AC95A21CB24B3000B31FE3 /* TargetBall.swift in Sources */,
 				561BA2111D699774004FC052 /* TouchView.swift in Sources */,
 				560A49811D729F3600DEBB6A /* BluetoothPlay.swift in Sources */,
@@ -1012,7 +1042,7 @@
 			baseConfigurationReference = 44F957790E5B779DC465ACC5 /* Pods-BumpingBall+.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hideki Tsuruoka (684A498CG8)";
 				INFOPLIST_FILE = "BumpingBall+/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tsuruoka.BumpingBall-";
@@ -1026,7 +1056,7 @@
 			baseConfigurationReference = E917CB0D1A81FE1B5F5B5743 /* Pods-BumpingBall+.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hideki Tsuruoka (684A498CG8)";
 				INFOPLIST_FILE = "BumpingBall+/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tsuruoka.BumpingBall-";
