@@ -11,9 +11,10 @@
 * GameKit
 * Social.framework
 * Multipeer Connectivity Framework
+* Fabric 1.6.7
 
 ## Libraries.
-* 未定
+* Crashlytics 3.7.3
 
 ## Coding Guide.
 * [swift-style-guide](github/swift-style-guide)に準拠

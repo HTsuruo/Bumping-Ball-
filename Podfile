@@ -4,7 +4,8 @@
 # use_frameworks!
 
 target 'BumpingBall+' do
-
+    pod 'Fabric'
+    pod 'Crashlytics'
 end
 
 target 'BumpingBall+Tests' do

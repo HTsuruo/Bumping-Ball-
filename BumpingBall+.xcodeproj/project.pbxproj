@@ -738,7 +738,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n\"${PODS_ROOT}/Fabric/run\" 8188d2f011d159d60971afac50821dd2dc144639 c269b560ccedd56bf0e34741c08ccda7a76867135a747e453d5afa99dd376af7";
 		};
 		6CB5C12B88416B9F4608EBE9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
