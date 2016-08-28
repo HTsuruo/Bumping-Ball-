@@ -9,12 +9,20 @@
 ## FrameWork.
 * SpriteKit
 * GameKit
+	* gamecenter, Rank
 * Social.framework
+	* SNS share (line, twtiter, facebook).
 * Multipeer Connectivity Framework
+	* bluetooth.
 * Fabric 1.6.7
 
 ## Libraries.
 * Crashlytics 3.7.3
+	* crash report.
+* NVActivityIndicatorView 2.10
+	* loading animation.
+* LTMorphingLabel 0.2.1
+	* text animation.
 
 ## Coding Guide.
 * [swift-style-guide](github/swift-style-guide)に準拠

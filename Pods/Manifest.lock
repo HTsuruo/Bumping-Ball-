@@ -2,15 +2,21 @@ PODS:
   - Crashlytics (3.7.3):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.7)
+  - LTMorphingLabel (0.2.1)
+  - NVActivityIndicatorView (2.10)
 
 DEPENDENCIES:
   - Crashlytics
   - Fabric
+  - LTMorphingLabel
+  - NVActivityIndicatorView
 
 SPEC CHECKSUMS:
   Crashlytics: 76f6beaff70acf226139582c09c78461597c2b98
   Fabric: caf7580c725e64db144f610ac65cd60956911dc7
+  LTMorphingLabel: 1858358ea38ef4d548e1f58b648b0d08ec3a62ed
+  NVActivityIndicatorView: 5568608c3511690a42c4dd02f7a1de4361d670ae
 
-PODFILE CHECKSUM: 68d8906d492e64c6c5cba7f69310361730c3317a
+PODFILE CHECKSUM: e1d4f65fe0b60daa44f70671f8e6778c5cb517aa
 
 COCOAPODS: 1.0.1

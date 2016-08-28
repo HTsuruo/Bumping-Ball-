@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05B8A37EFFAC35F3317F5B04 /* libPods-BumpingBall+UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEEB63EDD71E4E22158CF9F0 /* libPods-BumpingBall+UITests.a */; };
+		08A22B1E64776CEA0D05643B /* Pods_BumpingBall_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30DCAC577C964F02F7E22A26 /* Pods_BumpingBall_Tests.framework */; };
 		5600C3961D688B79009C5883 /* ChargeMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5600C3951D688B79009C5883 /* ChargeMeter.swift */; };
 		560A49811D729F3600DEBB6A /* BluetoothPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A497E1D729F3600DEBB6A /* BluetoothPlay.swift */; };
 		560A49831D729F3600DEBB6A /* TopScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A49801D729F3600DEBB6A /* TopScene.swift */; };
@@ -95,8 +95,8 @@
 		56D160CC1CC50E2C00257404 /* ball_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56D160C71CC50E2C00257404 /* ball_red@2x.png */; };
 		56D160D21CC50E5300257404 /* line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56D160CF1CC50E5300257404 /* line@2x.png */; };
 		56D160D31CC50E5300257404 /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56D160D01CC50E5300257404 /* twitter@2x.png */; };
-		F010AAABC8B36D7FEF692CB4 /* libPods-BumpingBall+Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA8343DADD5F6078390F4E4 /* libPods-BumpingBall+Tests.a */; };
-		F94173777AFC40575B0D1D6A /* libPods-BumpingBall+.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E94269DDA3FBE8B6F1072E4 /* libPods-BumpingBall+.a */; };
+		D600E83EAF5F1E885000F294 /* Pods_BumpingBall_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87CF2D28E9E810DF7496242E /* Pods_BumpingBall_UITests.framework */; };
+		F83A228293B0F63D4E37196A /* Pods_BumpingBall_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B488E9EEA5EA8F0B356FB8 /* Pods_BumpingBall_.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,8 +117,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30DCAC577C964F02F7E22A26 /* Pods_BumpingBall_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BumpingBall_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44F957790E5B779DC465ACC5 /* Pods-BumpingBall+.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+/Pods-BumpingBall+.debug.xcconfig"; sourceTree = "<group>"; };
-		4E94269DDA3FBE8B6F1072E4 /* libPods-BumpingBall+.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BumpingBall+.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5600C3951D688B79009C5883 /* ChargeMeter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChargeMeter.swift; path = component/ChargeMeter.swift; sourceTree = "<group>"; };
 		560A497E1D729F3600DEBB6A /* BluetoothPlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BluetoothPlay.swift; path = scene/BluetoothPlay.swift; sourceTree = "<group>"; };
 		560A49801D729F3600DEBB6A /* TopScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopScene.swift; path = scene/TopScene.swift; sourceTree = "<group>"; };
@@ -211,10 +211,10 @@
 		56D160C71CC50E2C00257404 /* ball_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ball_red@2x.png"; path = "img/balls/ball_red@2x.png"; sourceTree = SOURCE_ROOT; };
 		56D160CF1CC50E5300257404 /* line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "line@2x.png"; path = "img/sns_icon/line@2x.png"; sourceTree = SOURCE_ROOT; };
 		56D160D01CC50E5300257404 /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "twitter@2x.png"; path = "img/sns_icon/twitter@2x.png"; sourceTree = SOURCE_ROOT; };
+		87CF2D28E9E810DF7496242E /* Pods_BumpingBall_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BumpingBall_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88B488E9EEA5EA8F0B356FB8 /* Pods_BumpingBall_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BumpingBall_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE00D1DED0B5E6E2BD784D2F /* Pods-BumpingBall+Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+Tests/Pods-BumpingBall+Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B589F870FC4838D38D7DB33B /* Pods-BumpingBall+UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+UITests/Pods-BumpingBall+UITests.debug.xcconfig"; sourceTree = "<group>"; };
-		BDA8343DADD5F6078390F4E4 /* libPods-BumpingBall+Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BumpingBall+Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DEEB63EDD71E4E22158CF9F0 /* libPods-BumpingBall+UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BumpingBall+UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7A5C3C7B102B7CD7DD653C /* Pods-BumpingBall+Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+Tests/Pods-BumpingBall+Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E917CB0D1A81FE1B5F5B5743 /* Pods-BumpingBall+.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+.release.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+/Pods-BumpingBall+.release.xcconfig"; sourceTree = "<group>"; };
 		F0FBC9EA10428232D3AD71F9 /* Pods-BumpingBall+UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+UITests/Pods-BumpingBall+UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 			files = (
 				561BCFF71D72EC5800766B36 /* GameKit.framework in Frameworks */,
 				56BF57851CD3B35400923509 /* Social.framework in Frameworks */,
-				F94173777AFC40575B0D1D6A /* libPods-BumpingBall+.a in Frameworks */,
+				F83A228293B0F63D4E37196A /* Pods_BumpingBall_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +235,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F010AAABC8B36D7FEF692CB4 /* libPods-BumpingBall+Tests.a in Frameworks */,
+				08A22B1E64776CEA0D05643B /* Pods_BumpingBall_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +243,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05B8A37EFFAC35F3317F5B04 /* libPods-BumpingBall+UITests.a in Frameworks */,
+				D600E83EAF5F1E885000F294 /* Pods_BumpingBall_UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,9 +535,9 @@
 			isa = PBXGroup;
 			children = (
 				561BCFF61D72EC5800766B36 /* GameKit.framework */,
-				4E94269DDA3FBE8B6F1072E4 /* libPods-BumpingBall+.a */,
-				BDA8343DADD5F6078390F4E4 /* libPods-BumpingBall+Tests.a */,
-				DEEB63EDD71E4E22158CF9F0 /* libPods-BumpingBall+UITests.a */,
+				88B488E9EEA5EA8F0B356FB8 /* Pods_BumpingBall_.framework */,
+				30DCAC577C964F02F7E22A26 /* Pods_BumpingBall_Tests.framework */,
+				87CF2D28E9E810DF7496242E /* Pods_BumpingBall_UITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
