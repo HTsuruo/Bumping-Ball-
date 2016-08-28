@@ -12,7 +12,7 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="BumpingBall_" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SceneViewController" customModule="BumpingBall_" customModuleProvider="target">
             <connections>
                 <outlet property="pauseMenu" destination="iN0-l3-epB" id="91E-nA-ykb"/>
                 <outlet property="quitBtn" destination="88a-IH-0wC" id="hcK-Nb-yeP"/>

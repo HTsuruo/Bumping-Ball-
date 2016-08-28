@@ -1,5 +1,5 @@
 //
-//  GameScene.swift
+//  BaseScene.swifr
 //  BumpingBall+
 //
 //  Created by Tsuru on H28/03/31.
@@ -9,7 +9,7 @@
 import SpriteKit
 import UIKit
 
-class PlayScene: SKScene, SKPhysicsContactDelegate {
+class BaseScene: SKScene, SKPhysicsContactDelegate {
     
     var app: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var playerBall = PlayerBall()
@@ -31,22 +31,19 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     let MAX_COMBO_COUNT = 5
     let charge = ChargeMeter()
     
-//     当たり判定のカテゴリを準備する.
+    // 当たり判定のカテゴリを準備する.
     let ballCategory: UInt32 = 0x1 << 0
     let targetBallCategory: UInt32 = 0x1 << 1
-
+    
     override func didMoveToView(view: SKView) {
-//        ここは物理世界.
+        // ここは物理世界.
         self.physicsWorld.contactDelegate = self
         self.physicsWorld.speed = CGFloat(1.0)
         self.backgroundColor = UIColor.blackColor()
         
         app.score = 0
         
-        //countdown start
-        countdownView.start()
-        
-//         set touch enable area
+        // set touch enable area
         self.addChild(touchView)
         self.view?.addSubview(touchViewTxt)
         self.view?.addSubview(headerView)
@@ -56,15 +53,13 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
-//        self.finish()
-        
         let disabled = self.paused || !isStart || isFin //ポーズ中は入力出来ないように.
         if disabled {
             return
         }
         
         for touch in touches {
-//            print(touch.locationInView(self.view))
+            //            print(touch.locationInView(self.view))
             
             touchBeginLocation = touch.locationInNode(self)
             
@@ -84,11 +79,11 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
             }
             playerBall.ball.position.x = location.x
             playerBall.ball.position.y = location.y + define.TOUCH_MARGIN
-         }
+        }
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-//        ball.ball.runAction(Sound.launch)
+        //        ball.ball.runAction(Sound.launch)
         for touche in touches {
             let location = touche.locationInNode(self)
             let swipe = location.y < touchBeginLocation.y && location.y < 10
@@ -103,7 +98,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         playerBall.ball.runAction(actionMove)
         launchAnimation()
     }
-   
+    
     override func update(currentTime: CFTimeInterval) {
         if !isStart {
             if app.isStart != nil && app.isStart! {
@@ -119,7 +114,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
             createTargetBall()
             last = currentTime
         }
-
+        
         if last + difficulty.getInterval() <= currentTime {
             createTargetBall()
             last = currentTime
@@ -133,7 +128,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
             node, stop in
             if node is SKSpriteNode {
                 let ball = node as! SKSpriteNode
-//                物理演算を取り入れると0.1足りなくなるので
+                //                物理演算を取り入れると0.1足りなくなるので
                 if ball.position.y >= define.REMOVE_HEIGHT-1 {
                     ball.runAction(SKAction.fadeOutWithDuration(0.3), completion: {
                         ball.removeFromParent()
@@ -179,7 +174,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
                     return
                 }
                 
-//              自陣にボールが入るとゲームオーバーになります.
+                //              自陣にボールが入るとゲームオーバーになります.
                 if define.TOUCH_AREA.contains(targetBall.position) {
                     self.isFin = true
                     self.finish()
@@ -188,12 +183,12 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         })
     }
     
-//  衝突したときの処理.
+    //  衝突したときの処理.
     func didBeginContact(contact: SKPhysicsContact) {
         
         var firstBody, secondBody: SKPhysicsBody
         
-//      first: playerBall, second: targetBallとした.
+        //      first: playerBall, second: targetBallとした.
         if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
             firstBody = contact.bodyA
             secondBody = contact.bodyB
@@ -202,7 +197,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
             secondBody = contact.bodyA
         }
         
-//      消滅させることができるのは発射したボールのみ.
+        //      消滅させることができるのは発射したボールのみ.
         let isFire = firstBody.node?.userData?.valueForKey("isFire")
         if isFire == nil || !(isFire as! Bool) {
             return
@@ -225,22 +220,22 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
             return
         }
         
-//      ballとtargetballが接触した時の処理
+        //      ballとtargetballが接触した時の処理
         if targetId != nil {
             let canRemove = (num as! Int == 1 || playerBall.isGold(firstBody.node!))
             
             if firstBody.categoryBitMask & ballCategory != 0 &&
                 secondBody.categoryBitMask & targetBallCategory != 0 {
-                    if canRemove {
-                        updateComboCount(firstBody.node!, tnode: secondBody.node!)
-                        removeTargetBall(secondBody.node!, id: targetId as! Int)
-                        updateScore()
-                    } else {
-                        changeTargetBall(firstBody.node!, tBall: secondBody.node!, id: targetId as! Int)
-                    }
-                    if !playerBall.isGold(firstBody.node!) {
-                        firstBody.node?.removeFromParent()
-                    }
+                if canRemove {
+                    updateComboCount(firstBody.node!, tnode: secondBody.node!)
+                    removeTargetBall(secondBody.node!, id: targetId as! Int)
+                    updateScore()
+                } else {
+                    changeTargetBall(firstBody.node!, tBall: secondBody.node!, id: targetId as! Int)
+                }
+                if !playerBall.isGold(firstBody.node!) {
+                    firstBody.node?.removeFromParent()
+                }
             }
         }
     }
@@ -251,7 +246,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         if comboCount == 1 {
             return
         }
-//        最大で5コンボ
+        //        最大で5コンボ
         if comboCount > (MAX_COMBO_COUNT + 1) {
             comboCount = MAX_COMBO_COUNT + 1
         }
@@ -273,7 +268,6 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         }
         
         if !prevCharge && charge.isFull {
-            print("chargeFull")
             chargeFull()
         }
     }
@@ -319,7 +313,7 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         launch.runAction(sequence)
     }
     
-//  ゲームオーバー処理
+    //  ゲームオーバー処理
     func finish() {
         self.userInteractionEnabled = false
         finishView.setScoreLabel(score)

@@ -36,13 +36,6 @@ class TopScene: SKScene, SKPhysicsContactDelegate {
         self.runAction(foreverChange)
     }
     
-    func changeBk() {
-        let nextScene = PlayScene()
-        nextScene.size = self.size
-        let transition = SKTransition.crossFadeWithDuration(2)
-        self.view?.presentScene(nextScene, transition: transition)
-    }
-    
     private func createPlayerBall() {
        let ball = SKSpriteNode(imageNamed: ballImage.RED)
        ball.position = CGPointMake(300, 100)

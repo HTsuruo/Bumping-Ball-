@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var isStart: Bool?
     var score: Int? = 0
     var selectedDiffculty: Int? = DifficultyType.NORMAL.rawValue
+    var selectedPlay = PlayType.ONE
+    
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {

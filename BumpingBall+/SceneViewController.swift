@@ -10,12 +10,14 @@ import UIKit
 import SpriteKit
 import AVFoundation
 
-class MainViewController: UIViewController {
+class SceneViewController: UIViewController {
 
+    var app: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     let util = Utils()
     var skView = SKView()
     let countdownView = CountdownView()
     let finishView = FinishView(frame: CGRectMake(0, 0, define.WIDTH, define.HEIGHT))
+    var scene = SKScene()
     @IBOutlet var pauseMenu: UIView!
     @IBOutlet weak var resumeBtn: UIButton!
     @IBOutlet weak var quitBtn: UIButton!
@@ -23,27 +25,29 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if let scene = PlayScene(fileNamed:"PlayScene") {
-            // Configure the view.
-            skView = self.view as! SKView
-            skView.showsFPS = true
-            skView.showsNodeCount = true
-            
-            /* Sprite Kit applies additional optimizations to improve rendering performance */
-            skView.ignoresSiblingOrder = true
-            
-            /* Set the scale mode to scale to fit the window */
-            scene.scaleMode = .ResizeFill
-            
-            skView.presentScene(scene)
-        }
         
+        let playType = app.selectedPlay
+        switch playType {
+        case .ONE:
+            scene = OnePlayScene()
+            break
+        case .BLUETOOTH:
+            scene = BluetoothPlay()
+            break
+        case .NETWORK:
+            break
+        }
+        skView = self.view as! SKView
+        skView.showsFPS = true
+        skView.showsNodeCount = true
+        scene.scaleMode = .ResizeFill
+        skView.presentScene(scene)
+
         //pauseボタン
         let pauseBtn = UIButton(frame: CGRectMake(10, 10, 40, 40))
         let pauseImage = UIImage(named:"pauseBtn")
         pauseBtn.setImage(pauseImage, forState: .Normal)
-        pauseBtn.addTarget(self, action: #selector(MainViewController.onClickPauseBtn(_:)), forControlEvents: .TouchUpInside)
+        pauseBtn.addTarget(self, action: #selector(SceneViewController.onClickPauseBtn(_:)), forControlEvents: .TouchUpInside)
         self.view.addSubview(pauseBtn)
         loadNib()
     }

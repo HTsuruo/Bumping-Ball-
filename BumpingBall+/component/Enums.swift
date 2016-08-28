@@ -53,3 +53,9 @@ enum DifficultyType: Int {
     case HARD = 2
     case IMPOSSIBLE = 3
 }
+
+enum PlayType: Int {
+    case ONE = 0
+    case BLUETOOTH = 1
+    case NETWORK = 2
+}

@@ -14,6 +14,7 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     var app: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     let util = Utils()
     let skView = SKView()
+    var sceneView = SceneViewController()
     @IBOutlet weak var onePlayBtn: UIButton!
     @IBOutlet weak var pickerView: UIPickerView!
     
@@ -21,7 +22,6 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "topVC"
         util.setStatusBar(self.view)
         pickerViewInit()
     
@@ -51,13 +51,14 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     
     
     @IBAction func onClickOnePlayBtn(sender: UIButton) {
-        self.performSegueWithIdentifier("toOnePlayVC", sender: self)
+        app.selectedPlay = PlayType.ONE
+        self.performSegueWithIdentifier("toPlay", sender: self)
     }
     
     @IBAction func onClickMultiPlayBtn(sender: UIButton) {
-        print("multi")
+        app.selectedPlay = PlayType.BLUETOOTH
+        self.performSegueWithIdentifier("toPlay", sender: self)
     }
-    
     
     /** picker view setting **/
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
