@@ -8,8 +8,9 @@
 
 import UIKit
 import SpriteKit
+import GameKit
 
-class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, GKGameCenterControllerDelegate {
     
     var app: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     let util = Utils()
@@ -58,6 +59,33 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     @IBAction func onClickMultiPlayBtn(sender: UIButton) {
         app.selectedPlay = PlayType.BLUETOOTH
         self.performSegueWithIdentifier("toPlay", sender: self)
+    }
+    
+    @IBAction func onClickRankBtn(sender: UIButton) {
+        sendAllScore()
+        let localPlayer = GKLocalPlayer()
+        localPlayer.loadDefaultLeaderboardIdentifierWithCompletionHandler({(leaderboardIdentifier: String?, error: NSError?) -> Void in
+            if error != nil {
+                print(error!.localizedDescription)
+            } else {
+                let gcViewController: GKGameCenterViewController = GKGameCenterViewController()
+                gcViewController.gameCenterDelegate = self
+                gcViewController.viewState = GKGameCenterViewControllerState.Leaderboards
+                gcViewController.leaderboardIdentifier = "normal"
+                self.presentViewController(gcViewController, animated: true, completion: nil)
+            }
+        })
+    }
+    
+    func gameCenterViewControllerDidFinish(gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func sendAllScore() {
+        let ud = NSUserDefaults.standardUserDefaults()
+        GameCenterUtil.sendScore(ud.integerForKey("highscore-easy"), leaderBoardId: "easy")
+        GameCenterUtil.sendScore(ud.integerForKey("highscore-normal"), leaderBoardId: "normal")
+        GameCenterUtil.sendScore(ud.integerForKey("highscore-hard"), leaderBoardId: "hard")
     }
     
     /** picker view setting **/

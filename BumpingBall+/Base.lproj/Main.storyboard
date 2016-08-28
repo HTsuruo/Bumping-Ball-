@@ -134,12 +134,15 @@
                                         </constraints>
                                         <state key="normal" image="helpBtn.png"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2VT-en-ORm" userLabel="Help Btn">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2VT-en-ORm" userLabel="Rank Btn">
                                         <rect key="frame" x="20" y="10" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="2VT-en-ORm" secondAttribute="height" multiplier="20:20" id="zIK-4x-S5G"/>
                                         </constraints>
-                                        <state key="normal" image="helpBtn.png"/>
+                                        <state key="normal" image="rankBtn.png"/>
+                                        <connections>
+                                            <action selector="onClickRankBtn:" destination="FFW-j8-PWE" eventType="touchUpInside" id="rXI-bo-vp2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -242,6 +245,7 @@
         <image name="helpBtn.png" width="120" height="120"/>
         <image name="multiplayBtn.png" width="418" height="229"/>
         <image name="oneplayBtn.png" width="421" height="227"/>
+        <image name="rankBtn.png" width="120" height="120"/>
         <image name="titleTxt.png" width="524" height="136"/>
     </resources>
 </document>

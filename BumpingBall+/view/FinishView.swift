@@ -35,10 +35,11 @@ class FinishView: UIView {
     func setScoreLabel(totalScore: Int) {
         totalScoreLabel.text = String(totalScore)
         let ud = NSUserDefaults.standardUserDefaults()
-        let highScore = ud.integerForKey("highScore")
+        let highScore = ud.integerForKey("highscore-normal")
         if totalScore > highScore {
-            ud.setInteger(totalScore, forKey: "highScore")
+            ud.setInteger(totalScore, forKey: "highscore-normal")
         }
+        GameCenterUtil.sendScore(totalScore, leaderBoardId: "normal")
     }
     
     @IBAction func onClickToTopBtn(sender: UIButton) {

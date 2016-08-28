@@ -18,6 +18,9 @@
 		561BA20F1D69975D004FC052 /* touchView@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561BA20E1D69975D004FC052 /* touchView@2x.png */; };
 		561BA2111D699774004FC052 /* TouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561BA2101D699774004FC052 /* TouchView.swift */; };
 		561BA2131D699E25004FC052 /* swipeArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561BA2121D699E25004FC052 /* swipeArrow@2x.png */; };
+		561BCFF71D72EC5800766B36 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561BCFF61D72EC5800766B36 /* GameKit.framework */; };
+		561BCFF91D72F1DA00766B36 /* GameCenterUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561BCFF81D72F1DA00766B36 /* GameCenterUtil.swift */; };
+		561BCFFB1D72F9A400766B36 /* rankBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561BCFFA1D72F9A400766B36 /* rankBtn@2x.png */; };
 		565DDA531CBD4707003C9F0D /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565DDA521CBD4707003C9F0D /* Animation.swift */; };
 		565DDA551CBD4EB0003C9F0D /* launch.sks in Resources */ = {isa = PBXBuildFile; fileRef = 565DDA541CBD4EB0003C9F0D /* launch.sks */; };
 		566176EB1D6881EC00AF10BA /* chargeMeter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 566176EA1D6881EC00AF10BA /* chargeMeter@2x.png */; };
@@ -121,6 +124,9 @@
 		561BA20E1D69975D004FC052 /* touchView@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "touchView@2x.png"; path = "img/touch_view/touchView@2x.png"; sourceTree = SOURCE_ROOT; };
 		561BA2101D699774004FC052 /* TouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchView.swift; path = view/TouchView.swift; sourceTree = "<group>"; };
 		561BA2121D699E25004FC052 /* swipeArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "swipeArrow@2x.png"; path = "img/touch_view/swipeArrow@2x.png"; sourceTree = SOURCE_ROOT; };
+		561BCFF61D72EC5800766B36 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		561BCFF81D72F1DA00766B36 /* GameCenterUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameCenterUtil.swift; path = component/GameCenterUtil.swift; sourceTree = "<group>"; };
+		561BCFFA1D72F9A400766B36 /* rankBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rankBtn@2x.png"; path = "img/top/rankBtn@2x.png"; sourceTree = SOURCE_ROOT; };
 		565DDA521CBD4707003C9F0D /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = component/Animation.swift; sourceTree = "<group>"; };
 		565DDA541CBD4EB0003C9F0D /* launch.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = launch.sks; path = sks/launch.sks; sourceTree = "<group>"; };
 		566176EA1D6881EC00AF10BA /* chargeMeter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chargeMeter@2x.png"; path = "img/chargeMeter@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -208,6 +214,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				561BCFF71D72EC5800766B36 /* GameKit.framework in Frameworks */,
 				56BF57851CD3B35400923509 /* Social.framework in Frameworks */,
 				F94173777AFC40575B0D1D6A /* libPods-BumpingBall+.a in Frameworks */,
 			);
@@ -255,6 +262,7 @@
 		5666F7D81D6345FF001EFC57 /* top */ = {
 			isa = PBXGroup;
 			children = (
+				561BCFFA1D72F9A400766B36 /* rankBtn@2x.png */,
 				5666F8191D643167001EFC57 /* helpBtn@2x.png */,
 				5666F7DD1D635A4F001EFC57 /* titleTxt@2x.png */,
 				5666F7D91D63460C001EFC57 /* multiplayBtn@2x.png */,
@@ -296,6 +304,7 @@
 				56BF57931CD72C6100923509 /* Difficulty.swift */,
 				56BF57B31CD7342F00923509 /* BallImage.swift */,
 				5600C3951D688B79009C5883 /* ChargeMeter.swift */,
+				561BCFF81D72F1DA00766B36 /* GameCenterUtil.swift */,
 			);
 			name = component;
 			sourceTree = "<group>";
@@ -500,6 +509,7 @@
 		F835E0EBDB089BC50DAF7F06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				561BCFF61D72EC5800766B36 /* GameKit.framework */,
 				4E94269DDA3FBE8B6F1072E4 /* libPods-BumpingBall+.a */,
 				BDA8343DADD5F6078390F4E4 /* libPods-BumpingBall+Tests.a */,
 				DEEB63EDD71E4E22158CF9F0 /* libPods-BumpingBall+UITests.a */,
@@ -640,6 +650,7 @@
 				5666F82C1D645702001EFC57 /* ball_green_3@2x.png in Resources */,
 				56AC95AA1CB2BDD400B31FE3 /* pause.mp3 in Resources */,
 				56AC95A81CB2BCFD00B31FE3 /* PauseMenu.xib in Resources */,
+				561BCFFB1D72F9A400766B36 /* rankBtn@2x.png in Resources */,
 				5666F8261D6456F5001EFC57 /* ball_orange_2@2x.png in Resources */,
 				561BA20F1D69975D004FC052 /* touchView@2x.png in Resources */,
 				56D160D21CC50E5300257404 /* line@2x.png in Resources */,
@@ -855,6 +866,7 @@
 				560A49871D729FB200DEBB6A /* OnePlayScene.swift in Sources */,
 				56BF57941CD72C6100923509 /* Difficulty.swift in Sources */,
 				560A49851D729F5F00DEBB6A /* BaseScene.swift in Sources */,
+				561BCFF91D72F1DA00766B36 /* GameCenterUtil.swift in Sources */,
 				5600C3961D688B79009C5883 /* ChargeMeter.swift in Sources */,
 				561BA20C1D697A62004FC052 /* TouchViewTxt.swift in Sources */,
 				56B802571D684765007B79A7 /* HeaderView.swift in Sources */,

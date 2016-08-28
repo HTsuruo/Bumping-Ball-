@@ -32,7 +32,7 @@ class HeaderView: UIView {
     
     private func setHighScoreLabel() {
         let ud = NSUserDefaults.standardUserDefaults()
-        let highScore = ud.integerForKey("highScore")
+        let highScore = ud.integerForKey("highscore-normal")
         highScoreLabel.text = String(highScore)
     }
 
