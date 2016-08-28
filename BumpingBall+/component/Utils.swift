@@ -33,7 +33,7 @@ class Utils: NSObject {
         parentView.addSubview(v)
     }
     
-    //最前面のビューを取得する
+    //最前面のビューコントローラを取得する
    func getForegroundViewController() -> UIViewController {
         var tc = UIApplication.sharedApplication().keyWindow?.rootViewController
         while tc!.presentedViewController != nil {

@@ -66,7 +66,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="onePlayBtnClicked:" destination="FFW-j8-PWE" eventType="touchUpInside" id="BBD-WQ-VsI"/>
+                                    <action selector="onClickOnePlayBtn:" destination="FFW-j8-PWE" eventType="touchUpInside" id="pbM-Mx-Wbe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DC-Gf-4nI" userLabel="Multi Play Btn">
@@ -88,7 +88,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="onePlayBtnClicked:" destination="FFW-j8-PWE" eventType="touchUpInside" id="sgK-HJ-ZNr"/>
+                                    <action selector="onClickMultiPlayBtn:" destination="FFW-j8-PWE" eventType="touchUpInside" id="Rdo-iU-Veh"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleTxt.png" translatesAutoresizingMaskIntoConstraints="NO" id="X6h-on-Pm5">

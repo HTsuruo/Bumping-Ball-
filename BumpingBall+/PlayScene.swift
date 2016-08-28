@@ -43,6 +43,9 @@ class PlayScene: SKScene, SKPhysicsContactDelegate {
         
         app.score = 0
         
+        //countdown start
+        countdownView.start()
+        
 //         set touch enable area
         self.addChild(touchView)
         self.view?.addSubview(touchViewTxt)

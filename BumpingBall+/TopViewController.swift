@@ -50,10 +50,14 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     }
     
     
-    
-    @IBAction func onePlayBtnClicked(sender: UIButton) {
+    @IBAction func onClickOnePlayBtn(sender: UIButton) {
         self.performSegueWithIdentifier("toOnePlayVC", sender: self)
     }
+    
+    @IBAction func onClickMultiPlayBtn(sender: UIButton) {
+        print("multi")
+    }
+    
     
     /** picker view setting **/
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {

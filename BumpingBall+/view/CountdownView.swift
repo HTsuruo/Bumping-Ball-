@@ -24,7 +24,6 @@ class CountdownView: UIView {
         super.init(frame: frame)
         app.isStart = false
         loadXib()
-        start()
     }
     
     required init?(coder aDecoder: NSCoder) {
