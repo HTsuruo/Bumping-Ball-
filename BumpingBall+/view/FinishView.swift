@@ -20,6 +20,7 @@ class FinishView: UIView {
     @IBOutlet weak var againBtn: UIButton!
     @IBOutlet weak var totalScoreLabel: UILabel!
     let util = Utils()
+    var app: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,11 +36,12 @@ class FinishView: UIView {
     func setScoreLabel(totalScore: Int) {
         totalScoreLabel.text = String(totalScore)
         let ud = NSUserDefaults.standardUserDefaults()
-        let highScore = ud.integerForKey("highscore-normal")
+        let difficultyStr = app.selectedDiffculty.getString()
+        let highScore = ud.integerForKey("highscore-"+difficultyStr)
         if totalScore > highScore {
-            ud.setInteger(totalScore, forKey: "highscore-normal")
+            ud.setInteger(totalScore, forKey: "highscore-"+difficultyStr)
         }
-        GameCenterUtil.sendScore(totalScore, leaderBoardId: "normal")
+        GameCenterUtil.sendScore(totalScore, leaderBoardId: difficultyStr)
     }
     
     @IBAction func onClickToTopBtn(sender: UIButton) {

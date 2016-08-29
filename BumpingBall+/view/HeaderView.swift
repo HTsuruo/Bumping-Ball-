@@ -10,6 +10,7 @@ import UIKit
 
 class HeaderView: UIView {
 
+    var app: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var highScoreLabel: UILabel!
@@ -32,7 +33,7 @@ class HeaderView: UIView {
     
     private func setHighScoreLabel() {
         let ud = NSUserDefaults.standardUserDefaults()
-        let highScore = ud.integerForKey("highscore-normal")
+        let highScore = ud.integerForKey("highscore-"+app.selectedDiffculty.getString())
         highScoreLabel.text = String(highScore)
     }
 

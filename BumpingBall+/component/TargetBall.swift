@@ -10,6 +10,7 @@ import UIKit
 import SpriteKit
 
 struct TargetBall {
+    var app: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var ball = SKSpriteNode()
     var ballScale = CGFloat(0.6)
     var dx = 1.0
@@ -22,11 +23,13 @@ struct TargetBall {
         //0~4までのランダムな値を取得する
         let randNum = Int(arc4random_uniform(4))
         
-        //0~2までのランダムな値を取得する
-        let randNumDetail = Int(arc4random_uniform(2))
         var hasNumber = false
-        if randNumDetail==0 {
-            hasNumber = true
+        //0~2までのランダムな値を取得する
+        if !app.selectedDiffculty.isEasy() {
+            let randNumDetail = Int(arc4random_uniform(2))
+            if randNumDetail==0 {
+                hasNumber = true
+            }
         }
         
         switch randNum {

@@ -122,7 +122,7 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     // 選択された時
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print("selected: \(row), \(difficulties[row])")
-        app.selectedDiffculty = row
+        app.selectedDiffculty = DifficultyType(rawValue: row)!
         setSelectedBkColor(row)
     }
     
@@ -132,8 +132,8 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         pickerView.backgroundColor = colorUtils.clear
         pickerView.layer.masksToBounds = true
         pickerView.layer.cornerRadius = 10.0
-        pickerView.selectRow(app.selectedDiffculty!, inComponent: 0, animated: false)
-        setSelectedBkColor(app.selectedDiffculty!)
+        pickerView.selectRow(app.selectedDiffculty.rawValue, inComponent: 0, animated: false)
+        setSelectedBkColor(app.selectedDiffculty.rawValue)
     }
     
     func setSelectedBkColor (row: Int) {

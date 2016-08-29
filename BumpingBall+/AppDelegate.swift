@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var isStart: Bool?
     var score: Int? = 0
-    var selectedDiffculty: Int? = DifficultyType.NORMAL.rawValue
+    var selectedDiffculty = DifficultyType.NORMAL
     var selectedPlay = PlayType.ONE
     
 

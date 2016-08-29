@@ -44,7 +44,6 @@ enum BallType: Int {
             return 100.0
         }
     }
-    
 }
 
 enum DifficultyType: Int {
@@ -52,6 +51,30 @@ enum DifficultyType: Int {
     case NORMAL = 1
     case HARD = 2
     case IMPOSSIBLE = 3
+    
+    func getString() -> String {
+        switch self {
+        case .EASY:
+            return "easy"
+        case .NORMAL:
+            return "normal"
+        case .HARD:
+            return "hard"
+        case .IMPOSSIBLE:
+            return "impossible"
+        }
+    }
+    
+    func isEasy() -> Bool {
+        switch self {
+        case .EASY:
+            return true
+        default:
+            false
+        }
+        return false
+    }
+    
 }
 
 enum PlayType: Int {
