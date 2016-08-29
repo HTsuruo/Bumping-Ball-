@@ -17,64 +17,80 @@ class Difficulty {
     func getAccelerationSpeed() -> Double {
         let score = app.score
         
-//        print("score : \(score)")
-        
-        if score < 500 {
+        if score < 1000 {
             return 0.0
-        } else if score < 1000 {
-            return 0.1
-        } else if score < 3000 {
-            return 0.3
-        } else if score < 5000 {
-            return 0.5
-        } else if score < 10000 {
-            return 0.6
-        } else if score < 12500 {
-            return 0.7
-        } else if score < 15000 {
-            return 0.8
-        } else if score < 17500 {
-            return 0.9
-        } else if score < 20000 {
-            return 1.0
-        } else if score < 25000 {
-            return 1.2
-        } else if score < 30000 {
-            return 2.0
         }
-        return 3.0
+        if isInRange(score!, from: 1000, to: 1000 * 10) {
+            return getSpeed(1000 * 10, score: score!, alpha: 0.0)
+        }
+        if isInRange(score!, from: 10000, to: 10000 * 10) {
+            return getSpeed(10000 * 10, score: score!, alpha: 1.0)
+        }
+        if isInRange(score!, from: 100000, to: 100000 * 10) {
+            return getSpeed(100000 * 10, score: score!, alpha: 2.0)
+        }
+        if isInRange(score!, from: 1000000, to: 1000000 * 10) {
+            return getSpeed(1000000 * 10, score: score!, alpha: 3.0)
+        }
+        return 5.0
     }
     
     //ボールの生成頻度を多くします.
     func getInterval() -> CFTimeInterval {
         let score = app.score
         
-        if score < 500 {
+        if score < 1000 {
             return 5.0
-        } else if score < 1000 {
-            return 4.0
-        } else if score < 2500 {
-            return 3.5
-        } else if score < 5000 {
-            return 3.0
-        } else if score < 7500 {
-            return 2.5
-        } else if score < 10000 {
-            return 2.0
-        } else if score < 12500 {
-            return 1.8
-        } else if score < 15000 {
-            return 1.6
-        } else if score < 17500 {
-            return 1.4
-        } else if score < 20000 {
-            return 1.2
-        } else if score < 30000 {
-            return 1.0
         }
-        return 0.8
-      
+        if isInRange(score!, from: 1000, to: 5000) {
+            return getInterval(1000 * 10, score: score!, alpha: 0.25)
+        }
+        if isInRange(score!, from: 5000, to: 10000) {
+            return getInterval(1000 * 10, score: score!, alpha: 0.5)
+        }
+        if isInRange(score!, from: 10000, to: 15000) {
+            return getInterval(10000 * 10, score: score!, alpha: 1.0)
+        }
+        if isInRange(score!, from: 15000, to: 20000) {
+            return getInterval(10000 * 10, score: score!, alpha: 1.5)
+        }
+        if isInRange(score!, from: 20000, to: 30000) {
+            return getInterval(10000 * 10, score: score!, alpha: 1.75)
+        }
+        if isInRange(score!, from: 30000, to: 40000) {
+            return getInterval(10000 * 10, score: score!, alpha: 2.0)
+        }
+        if isInRange(score!, from: 40000, to: 50000) {
+            return getInterval(10000 * 10, score: score!, alpha: 2.25)
+        }
+        if isInRange(score!, from: 50000, to: 75000) {
+            return getInterval(10000 * 10, score: score!, alpha: 2.5)
+        }
+        if isInRange(score!, from: 75000, to: 100000) {
+            return getInterval(10000 * 10, score: score!, alpha: 3.0)
+        }
+        if isInRange(score!, from: 100000, to: 150000) {
+            return getInterval(100000 * 10, score: score!, alpha: 3.5)
+        }
+        if isInRange(score!, from: 150000, to: 1000000) {
+            return getInterval(100000 * 10, score: score!, alpha: 3.75)
+        }
+        return 0.5
     }
     
+    func isInRange(score: Int, from: Int, to: Int) -> Bool {
+        if from <= score && score < to {
+            return true
+        }
+        return false
+    }
+    
+    func getSpeed(division: Double, score: Int, alpha: Double) -> Double {
+        return ((Double(score) / division) + alpha)/2
+    }
+    
+    func getInterval(division: Double, score: Int, alpha: Double) -> Double {
+        return (5.0-((Double(score) / division)+alpha))
+    }
     
 }
