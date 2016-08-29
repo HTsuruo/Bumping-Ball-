@@ -49,7 +49,7 @@ class BluetoothPlay: BaseScene, MCSessionDelegate, MCAdvertiserAssistantDelegate
         
         browser = MCBrowserViewController(serviceType: "bbplus2016", session: session)
         browser.delegate = self
-        let vc = util.getForegroundViewController()
+        let vc = Util.getForegroundViewController()
         vc.presentViewController(browser, animated: true, completion: nil)
     }
     

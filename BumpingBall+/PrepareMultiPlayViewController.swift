@@ -11,7 +11,6 @@ import NVActivityIndicatorView
 import LTMorphingLabel
 
 class PrepareMultiPlayViewController: UIViewController, LTMorphingLabelDelegate {
-    let util = Utils()
     var app: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var timer: NSTimer? = nil
 
@@ -26,7 +25,7 @@ class PrepareMultiPlayViewController: UIViewController, LTMorphingLabelDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        util.setStatusBar(self.view)
+        Util.setStatusBar(self.view)
         self.view.backgroundColor = colorUtils.navy
         animationLabel.delegate = self
         let effect = LTMorphingEffect.Evaporate

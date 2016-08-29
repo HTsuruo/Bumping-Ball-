@@ -13,7 +13,6 @@ import GameKit
 class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, GKGameCenterControllerDelegate {
     
     var app: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-    let util = Utils()
     let skView = SKView()
     var sceneView = SceneViewController()
     @IBOutlet weak var onePlayBtn: UIButton!
@@ -23,7 +22,7 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        util.setStatusBar(self.view)
+        Util.setStatusBar(self.view)
         pickerViewInit()
     
         if let scene = TopScene(fileNamed:"TopScene") {

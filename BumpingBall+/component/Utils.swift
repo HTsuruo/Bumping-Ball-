@@ -24,17 +24,17 @@ struct define {
     static let TOUCH_AREA = CGRectMake(0, 0, define.WIDTH, TOUCH_HEIGHT)
 }
 
-class Utils: NSObject {
+struct Util {
     
     //status barのところは時刻などを見やすくするためにあけてあげる.
-    func setStatusBar(parentView: UIView) {
+    static func setStatusBar(parentView: UIView) {
         let v: UIView = UIView(frame: CGRectMake(0, 0, define.WIDTH, define.statusHeight))
         v.backgroundColor = UIColor.whiteColor()
         parentView.addSubview(v)
     }
     
     //最前面のビューコントローラを取得する
-   func getForegroundViewController() -> UIViewController {
+   static func getForegroundViewController() -> UIViewController {
         var tc = UIApplication.sharedApplication().keyWindow?.rootViewController
         while tc!.presentedViewController != nil {
             tc = tc!.presentedViewController

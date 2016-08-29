@@ -19,7 +19,6 @@ class FinishView: UIView {
     @IBOutlet weak var lineBtn: UIButton!
     @IBOutlet weak var againBtn: UIButton!
     @IBOutlet weak var totalScoreLabel: UILabel!
-    let util = Utils()
     var app: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override init(frame: CGRect) {
@@ -45,12 +44,12 @@ class FinishView: UIView {
     }
     
     @IBAction func onClickToTopBtn(sender: UIButton) {
-        let onePlayVC = util.getForegroundViewController()
+        let onePlayVC = Util.getForegroundViewController()
         onePlayVC.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func onClickAgainBtn(sender: UIButton) {
-        let foregroundVC = util.getForegroundViewController()
+        let foregroundVC = Util.getForegroundViewController()
         foregroundVC.loadView()
         foregroundVC.viewDidLoad()
     }
@@ -59,7 +58,7 @@ class FinishView: UIView {
         let text = "【Bumping Ball+】"
         let composeViewController: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
         composeViewController.setInitialText(text)
-        let foregroundVC = util.getForegroundViewController()
+        let foregroundVC = Util.getForegroundViewController()
         foregroundVC.presentViewController(composeViewController, animated: true, completion: nil)
     }
     
@@ -67,7 +66,7 @@ class FinishView: UIView {
         let text = "【Bumping Ball+】"
         let composeViewController: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
         composeViewController.setInitialText(text)
-        let foregroundVC = util.getForegroundViewController()
+        let foregroundVC = Util.getForegroundViewController()
         foregroundVC.presentViewController(composeViewController, animated: true, completion: nil)
     }
     

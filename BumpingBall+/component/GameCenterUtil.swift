@@ -44,7 +44,6 @@ struct GameCenterUtil {
     }
     
 //    static func dispLeaderBoard(vc: UIViewController) {
-//        let util = Utils()
 //        let localPlayer = GKLocalPlayer()
 //        localPlayer.loadDefaultLeaderboardIdentifierWithCompletionHandler({ (leaderboardIdentifier : String?, error : NSError?) -> Void in
 //            if error != nil {

@@ -17,7 +17,6 @@ class CountdownView: UIView {
     
     var countdownTime = 3
     var countdownTimer = NSTimer()
-    let util = Utils()
     var app: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override init(frame: CGRect) {

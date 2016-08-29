@@ -30,7 +30,6 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     var isFin = false
     let MAX_COMBO_COUNT = 5
     let charge = ChargeMeter()
-    let util = Utils()
     
     // 当たり判定のカテゴリを準備する.
     let ballCategory: UInt32 = 0x1 << 0

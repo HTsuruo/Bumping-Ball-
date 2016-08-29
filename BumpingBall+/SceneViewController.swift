@@ -13,7 +13,6 @@ import AVFoundation
 class SceneViewController: UIViewController {
 
     var app: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-    let util = Utils()
     var skView = SKView()
     let countdownView = CountdownView()
     let finishView = FinishView(frame: CGRectMake(0, 0, define.WIDTH, define.HEIGHT))
@@ -92,7 +91,7 @@ class SceneViewController: UIViewController {
     }
 
     @IBAction func onClickQuitBtn(sender: UIButton) {
-        let onePlayVC = util.getForegroundViewController()
+        let onePlayVC = Util.getForegroundViewController()
         onePlayVC.dismissViewControllerAnimated(true, completion: nil)
     }
     
