@@ -1,7 +1,7 @@
 PODS:
-  - Crashlytics (3.7.3):
+  - Crashlytics (3.8.0):
     - Fabric (~> 1.6.3)
-  - Fabric (1.6.7)
+  - Fabric (1.6.8)
   - Firebase/Analytics (3.5.2):
     - FirebaseAnalytics (~> 3.3)
   - Firebase/Messaging (3.5.2):
@@ -29,6 +29,7 @@ PODS:
     - GoogleSymbolUtilities (~> 1.0)
   - LTMorphingLabel (0.2.1)
   - NVActivityIndicatorView (2.10)
+  - Spring (1.0.3)
 
 DEPENDENCIES:
   - Crashlytics
@@ -36,10 +37,21 @@ DEPENDENCIES:
   - Firebase/Messaging
   - LTMorphingLabel
   - NVActivityIndicatorView
+  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift2`)
+
+EXTERNAL SOURCES:
+  Spring:
+    :branch: swift2
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: 18d5c7b74489de8044e34767f856d1e574f0820e
+    :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
-  Crashlytics: 76f6beaff70acf226139582c09c78461597c2b98
-  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
+  Crashlytics: 8601d9c74a4c4d28f3e7f408bf4c0e490c70e8b4
+  Fabric: 5755268d0171435ab167e3d0878a28a777deaf10
   Firebase: 94e63112efcad75226c0356a8f3032397b8547c9
   FirebaseAnalytics: d968d4d5f6aeb795cd64144337bcd233e530efc6
   FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
@@ -50,7 +62,8 @@ SPEC CHECKSUMS:
   GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
   LTMorphingLabel: 1858358ea38ef4d548e1f58b648b0d08ec3a62ed
   NVActivityIndicatorView: 5568608c3511690a42c4dd02f7a1de4361d670ae
+  Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
 
-PODFILE CHECKSUM: e4be4e82808ec062d6bbfee534baba91864b1664
+PODFILE CHECKSUM: e633ca6362fd48f438f4bb2f629d3bf892ca0540
 
 COCOAPODS: 1.0.1

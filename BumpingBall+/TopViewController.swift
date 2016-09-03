@@ -9,13 +9,14 @@
 import UIKit
 import SpriteKit
 import GameKit
+import Spring
 
 class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, GKGameCenterControllerDelegate {
     
     var app: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     let skView = SKView()
     var sceneView = SceneViewController()
-    @IBOutlet weak var onePlayBtn: UIButton!
+    @IBOutlet weak var onePlayBtn: SpringButton!
     @IBOutlet weak var pickerView: UIPickerView!
     
     private let difficulties: NSArray = ["Easy", "Normal", "Hard"]

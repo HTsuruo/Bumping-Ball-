@@ -36,6 +36,7 @@ class OnePlayScene: BaseScene {
     }
     
     override func updateScore() {
+        super.updateScore()
         headerView.scoreLabel.text = String(score)
     }
 }

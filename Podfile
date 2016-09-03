@@ -9,6 +9,7 @@ target 'BumpingBall+' do
     pod 'NVActivityIndicatorView'
     pod 'LTMorphingLabel'
     pod 'Firebase/Messaging'
+    pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
 end
 
 target 'BumpingBall+Tests' do

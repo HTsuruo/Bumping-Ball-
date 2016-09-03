@@ -26,6 +26,8 @@
 * Firebase 3.5.2
 * FirebaseMessaging 1.1.1
 	* push notification.
+* Spring 1.0.3
+	* animation.
 
 ## Coding Guide.
 * [swift-style-guide](https://github.com/github/swift-style-guide)に準拠

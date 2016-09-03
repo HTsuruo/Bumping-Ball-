@@ -288,7 +288,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         //アニメーションはplayer ball
         let spark = animation.sparkAnimation(pBall, id: id, scale: 0.2)
         self.addChild(spark)
-        let sequence = animation.fadeOutRemove(0.0)
+        let sequence = animation.fadeOutRemove(0.5)
         spark.runAction(sequence)
         
         let num = tBall.userData?.valueForKey("num") as! Int
