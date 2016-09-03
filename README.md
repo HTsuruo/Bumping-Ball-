@@ -28,5 +28,5 @@
 	* push notification.
 
 ## Coding Guide.
-* [swift-style-guide](github/swift-style-guide)に準拠
-* [SwiftLint](realm/SwiftLint)の導入
+* [swift-style-guide](https://github.com/github/swift-style-guide)に準拠
+* [SwiftLint](https://github.com/realm/SwiftLint)の導入
