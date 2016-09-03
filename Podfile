@@ -8,6 +8,7 @@ target 'BumpingBall+' do
     pod 'Crashlytics'
     pod 'NVActivityIndicatorView'
     pod 'LTMorphingLabel'
+    pod 'Firebase/Messaging'
 end
 
 target 'BumpingBall+Tests' do

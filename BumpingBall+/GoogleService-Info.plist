@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>794596979340-6qr5do8lbiie6j2vv3jicp3k5m26t4ob.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.794596979340-6qr5do8lbiie6j2vv3jicp3k5m26t4ob</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCEPZ4YtFYJoEuSGMEK-1ziUypMcIadop8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>794596979340</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.tsuruoka.BumpingBall-</string>
+	<key>PROJECT_ID</key>
+	<string>bumpingballplus</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bumpingballplus.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:794596979340:ios:ebfaf6d9508c90c8</string>
+	<key>DATABASE_URL</key>
+	<string>https://bumpingballplus.firebaseio.com</string>
+</dict>
+</plist>

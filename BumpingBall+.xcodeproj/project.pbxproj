@@ -75,6 +75,7 @@
 		56BD7D331CBB702000F9178B /* spark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BD7D321CBB702000F9178B /* spark@2x.png */; };
 		56BD7D351CBB995C00F9178B /* pauseBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BD7D341CBB995C00F9178B /* pauseBtn@2x.png */; };
 		56BD7D3F1CBB9E0100F9178B /* TopScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 56BD7D3E1CBB9E0100F9178B /* TopScene.sks */; };
+		56BDE3D81D7A5D0500247E36 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56BDE3D71D7A5D0500247E36 /* GoogleService-Info.plist */; };
 		56BF57851CD3B35400923509 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BF57841CD3B35400923509 /* Social.framework */; };
 		56BF578A1CD4BBBD00923509 /* arrows@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57881CD4BBBD00923509 /* arrows@2x.png */; };
 		56BF578B1CD4BBBD00923509 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57891CD4BBBD00923509 /* home@2x.png */; };
@@ -193,6 +194,7 @@
 		56BD7D321CBB702000F9178B /* spark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "spark@2x.png"; path = "img/spark@2x.png"; sourceTree = SOURCE_ROOT; };
 		56BD7D341CBB995C00F9178B /* pauseBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pauseBtn@2x.png"; path = "img/pauseBtn@2x.png"; sourceTree = SOURCE_ROOT; };
 		56BD7D3E1CBB9E0100F9178B /* TopScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = TopScene.sks; path = sks/TopScene.sks; sourceTree = "<group>"; };
+		56BDE3D71D7A5D0500247E36 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		56BF57841CD3B35400923509 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		56BF57881CD4BBBD00923509 /* arrows@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrows@2x.png"; path = "img/arrows@2x.png"; sourceTree = SOURCE_ROOT; };
 		56BF57891CD4BBBD00923509 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home@2x.png"; path = "img/home@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -394,6 +396,7 @@
 				56BB7F3A1CAD345200675AE8 /* Assets.xcassets */,
 				56BB7F3C1CAD345200675AE8 /* LaunchScreen.storyboard */,
 				56BB7F3F1CAD345200675AE8 /* Info.plist */,
+				56BDE3D71D7A5D0500247E36 /* GoogleService-Info.plist */,
 				56AC95A61CB2BCF000B31FE3 /* view */,
 				56AC95931CB24A1F00B31FE3 /* sks */,
 				56AC95921CB24A0100B31FE3 /* component */,
@@ -620,6 +623,14 @@
 					56BB7F2B1CAD345100675AE8 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = V7K4H6JY6L;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					56BB7F431CAD345200675AE8 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -681,6 +692,7 @@
 				561BCFFB1D72F9A400766B36 /* rankBtn@2x.png in Resources */,
 				5666F8261D6456F5001EFC57 /* ball_orange_2@2x.png in Resources */,
 				561BA20F1D69975D004FC052 /* touchView@2x.png in Resources */,
+				56BDE3D81D7A5D0500247E36 /* GoogleService-Info.plist in Resources */,
 				56D160D21CC50E5300257404 /* line@2x.png in Resources */,
 				5666F8221D6456DB001EFC57 /* facebook@2x.png in Resources */,
 				56AC95801CB16D0000B31FE3 /* bigger.mp3 in Resources */,
@@ -994,6 +1006,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1032,6 +1045,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1047,6 +1061,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tsuruoka.BumpingBall-";
 				PRODUCT_NAME = "BumpingBall+";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1061,6 +1076,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tsuruoka.BumpingBall-";
 				PRODUCT_NAME = "BumpingBall+";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

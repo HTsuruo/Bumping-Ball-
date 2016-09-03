@@ -23,6 +23,9 @@
 	* loading animation.
 * LTMorphingLabel 0.2.1
 	* text animation.
+* Firebase 3.5.2
+* FirebaseMessaging 1.1.1
+	* push notification.
 
 ## Coding Guide.
 * [swift-style-guide](github/swift-style-guide)に準拠
