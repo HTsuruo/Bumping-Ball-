@@ -17,11 +17,27 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="three.png" translatesAutoresizingMaskIntoConstraints="NO" id="gYV-Uy-0Yx">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="three.png" translatesAutoresizingMaskIntoConstraints="NO" id="gYV-Uy-0Yx" customClass="SpringImageView" customModule="Spring">
                     <rect key="frame" x="234" y="233" width="133" height="133"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="gYV-Uy-0Yx" secondAttribute="height" multiplier="1:1" id="U6O-e9-tbh"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="NO"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animation" value="zoomIn"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="scaleY">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,7 +59,7 @@
                     <exclude reference="x1Z-po-6IZ"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="628" y="578"/>
+            <point key="canvasLocation" x="227" y="402"/>
         </view>
     </objects>
     <resources>

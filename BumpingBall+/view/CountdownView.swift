@@ -8,12 +8,13 @@
 
 import UIKit
 import SpriteKit
+import Spring
 
 class CountdownView: UIView {
     
     
     @IBOutlet var contentView: UIView!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageView: SpringImageView!
     
     var countdownTime = 3
     var countdownTimer = NSTimer()
@@ -49,9 +50,11 @@ class CountdownView: UIView {
         switch countdownTime {
         case 2:
             imageView.image = UIImage(named: "two")
+            imageView.animate()
             break
         case 1:
             imageView.image = UIImage(named: "one")
+            imageView.animate()
             break
         case 0:
             imageView.image = UIImage(named: "go")
