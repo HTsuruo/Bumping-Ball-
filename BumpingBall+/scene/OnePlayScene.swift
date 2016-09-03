@@ -11,8 +11,11 @@ import SpriteKit
 
 class OnePlayScene: BaseScene {
     
+    let headerView = HeaderView()
+    
     override func didMoveToView(view: SKView) {
         super.didMoveToView(view)
+        self.view?.addSubview(headerView)
         countdownView.start()
     }
 
@@ -30,5 +33,9 @@ class OnePlayScene: BaseScene {
     
     override func update(currentTime: CFTimeInterval) {
         super.update(currentTime)
+    }
+    
+    override func updateScore() {
+        headerView.scoreLabel.text = String(score)
     }
 }

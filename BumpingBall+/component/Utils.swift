@@ -162,6 +162,8 @@ struct colorUtils {
     static let navy = colorWithHexString("3F5A70")
     static let black = colorWithHexString("1D1D1D")
     static let clear = UIColor.clearColor()
+    static let lifered = colorWithHexString("EC5D57")
+    static let lifeblue = colorWithHexString("51A7F9")
 }
 
 //rgb指定ではなくカラーコードで指定できるようにした.

@@ -76,6 +76,12 @@
 		56BD7D351CBB995C00F9178B /* pauseBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BD7D341CBB995C00F9178B /* pauseBtn@2x.png */; };
 		56BD7D3F1CBB9E0100F9178B /* TopScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 56BD7D3E1CBB9E0100F9178B /* TopScene.sks */; };
 		56BDE3D81D7A5D0500247E36 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56BDE3D71D7A5D0500247E36 /* GoogleService-Info.plist */; };
+		56BDE3DA1D7AC2C100247E36 /* HeaderViewMatch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56BDE3D91D7AC2C100247E36 /* HeaderViewMatch.xib */; };
+		56BDE3DE1D7AC7AD00247E36 /* HeaderViewMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BDE3DD1D7AC7AD00247E36 /* HeaderViewMatch.swift */; };
+		56BDE3E41D7ACA7600247E36 /* life_blue_empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BDE3E01D7ACA7600247E36 /* life_blue_empty@2x.png */; };
+		56BDE3E51D7ACA7600247E36 /* life_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BDE3E11D7ACA7600247E36 /* life_blue@2x.png */; };
+		56BDE3E61D7ACA7600247E36 /* life_red_empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BDE3E21D7ACA7600247E36 /* life_red_empty@2x.png */; };
+		56BDE3E71D7ACA7600247E36 /* life_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BDE3E31D7ACA7600247E36 /* life_red@2x.png */; };
 		56BF57851CD3B35400923509 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BF57841CD3B35400923509 /* Social.framework */; };
 		56BF578A1CD4BBBD00923509 /* arrows@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57881CD4BBBD00923509 /* arrows@2x.png */; };
 		56BF578B1CD4BBBD00923509 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57891CD4BBBD00923509 /* home@2x.png */; };
@@ -195,6 +201,12 @@
 		56BD7D341CBB995C00F9178B /* pauseBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pauseBtn@2x.png"; path = "img/pauseBtn@2x.png"; sourceTree = SOURCE_ROOT; };
 		56BD7D3E1CBB9E0100F9178B /* TopScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = TopScene.sks; path = sks/TopScene.sks; sourceTree = "<group>"; };
 		56BDE3D71D7A5D0500247E36 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		56BDE3D91D7AC2C100247E36 /* HeaderViewMatch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HeaderViewMatch.xib; path = view/HeaderViewMatch.xib; sourceTree = "<group>"; };
+		56BDE3DD1D7AC7AD00247E36 /* HeaderViewMatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderViewMatch.swift; path = view/HeaderViewMatch.swift; sourceTree = "<group>"; };
+		56BDE3E01D7ACA7600247E36 /* life_blue_empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "life_blue_empty@2x.png"; path = "img/life/life_blue_empty@2x.png"; sourceTree = SOURCE_ROOT; };
+		56BDE3E11D7ACA7600247E36 /* life_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "life_blue@2x.png"; path = "img/life/life_blue@2x.png"; sourceTree = SOURCE_ROOT; };
+		56BDE3E21D7ACA7600247E36 /* life_red_empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "life_red_empty@2x.png"; path = "img/life/life_red_empty@2x.png"; sourceTree = SOURCE_ROOT; };
+		56BDE3E31D7ACA7600247E36 /* life_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "life_red@2x.png"; path = "img/life/life_red@2x.png"; sourceTree = SOURCE_ROOT; };
 		56BF57841CD3B35400923509 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		56BF57881CD4BBBD00923509 /* arrows@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrows@2x.png"; path = "img/arrows@2x.png"; sourceTree = SOURCE_ROOT; };
 		56BF57891CD4BBBD00923509 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home@2x.png"; path = "img/home@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -347,6 +359,8 @@
 				561BA2091D69799B004FC052 /* TouchViewTxt.xib */,
 				561BA20B1D697A62004FC052 /* TouchViewTxt.swift */,
 				561BA2101D699774004FC052 /* TouchView.swift */,
+				56BDE3D91D7AC2C100247E36 /* HeaderViewMatch.xib */,
+				56BDE3DD1D7AC7AD00247E36 /* HeaderViewMatch.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -428,6 +442,7 @@
 		56BB7FC11CAFC08200675AE8 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				56BDE3DF1D7ACA6D00247E36 /* life */,
 				56BB36801D7324DD00AD1603 /* prepare_multiplay */,
 				56BB367D1D731AF300AD1603 /* backBtn@2x.png */,
 				561BA20D1D69974F004FC052 /* touch_view */,
@@ -442,6 +457,17 @@
 				56BD7D321CBB702000F9178B /* spark@2x.png */,
 			);
 			name = img;
+			sourceTree = "<group>";
+		};
+		56BDE3DF1D7ACA6D00247E36 /* life */ = {
+			isa = PBXGroup;
+			children = (
+				56BDE3E01D7ACA7600247E36 /* life_blue_empty@2x.png */,
+				56BDE3E11D7ACA7600247E36 /* life_blue@2x.png */,
+				56BDE3E21D7ACA7600247E36 /* life_red_empty@2x.png */,
+				56BDE3E31D7ACA7600247E36 /* life_red@2x.png */,
+			);
+			name = life;
 			sourceTree = "<group>";
 		};
 		56BF578C1CD710C200923509 /* font */ = {
@@ -668,6 +694,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56BB367E1D731AF300AD1603 /* backBtn@2x.png in Resources */,
+				56BDE3DA1D7AC2C100247E36 /* HeaderViewMatch.xib in Resources */,
 				566176EB1D6881EC00AF10BA /* chargeMeter@2x.png in Resources */,
 				56BB36861D73279B00AD1603 /* icon_wifi@2x.png in Resources */,
 				56B802531D684281007B79A7 /* Candara.ttf in Resources */,
@@ -677,6 +704,7 @@
 				5666F82A1D645702001EFC57 /* ball_green_1@2x.png in Resources */,
 				56AC95981CB24B2100B31FE3 /* spark.png in Resources */,
 				56BB36831D7324F500AD1603 /* icon_bluetooth@2x.png in Resources */,
+				56BDE3E41D7ACA7600247E36 /* life_blue_empty@2x.png in Resources */,
 				56CC4E3F1D67056000434A17 /* HeaderView.xib in Resources */,
 				5666F83E1D646090001EFC57 /* three@2x.png in Resources */,
 				56AC95991CB24B2100B31FE3 /* spark.sks in Resources */,
@@ -684,6 +712,7 @@
 				56AC95971CB24B2100B31FE3 /* PlayScene.sks in Resources */,
 				56AC95811CB16D0000B31FE3 /* launch.mp3 in Resources */,
 				56BD7D331CBB702000F9178B /* spark@2x.png in Resources */,
+				56BDE3E61D7ACA7600247E36 /* life_red_empty@2x.png in Resources */,
 				56BF57CF1CD7902000923509 /* Roboto-Bold.ttf in Resources */,
 				56BB7F3E1CAD345200675AE8 /* LaunchScreen.storyboard in Resources */,
 				5666F82C1D645702001EFC57 /* ball_green_3@2x.png in Resources */,
@@ -693,6 +722,7 @@
 				5666F8261D6456F5001EFC57 /* ball_orange_2@2x.png in Resources */,
 				561BA20F1D69975D004FC052 /* touchView@2x.png in Resources */,
 				56BDE3D81D7A5D0500247E36 /* GoogleService-Info.plist in Resources */,
+				56BDE3E51D7ACA7600247E36 /* life_blue@2x.png in Resources */,
 				56D160D21CC50E5300257404 /* line@2x.png in Resources */,
 				5666F8221D6456DB001EFC57 /* facebook@2x.png in Resources */,
 				56AC95801CB16D0000B31FE3 /* bigger.mp3 in Resources */,
@@ -701,6 +731,7 @@
 				5666F7DC1D63460C001EFC57 /* oneplayBtn@2x.png in Resources */,
 				5666F8251D6456F5001EFC57 /* ball_orange_1@2x.png in Resources */,
 				5666F8341D645712001EFC57 /* ball_blue_3@2x.png in Resources */,
+				56BDE3E71D7ACA7600247E36 /* life_red@2x.png in Resources */,
 				56BF57D61CD798D500923509 /* COOPBL.ttf in Resources */,
 				56BB7F3B1CAD345200675AE8 /* Assets.xcassets in Resources */,
 				5666F8201D643CF8001EFC57 /* CountdownView.xib in Resources */,
@@ -898,6 +929,7 @@
 				560A49831D729F3600DEBB6A /* TopScene.swift in Sources */,
 				56BB367C1D7317C900AD1603 /* PrepareMultiPlayViewController.swift in Sources */,
 				56AC95A21CB24B3000B31FE3 /* TargetBall.swift in Sources */,
+				56BDE3DE1D7AC7AD00247E36 /* HeaderViewMatch.swift in Sources */,
 				561BA2111D699774004FC052 /* TouchView.swift in Sources */,
 				560A49811D729F3600DEBB6A /* BluetoothPlay.swift in Sources */,
 				56BF57B41CD7342F00923509 /* BallImage.swift in Sources */,

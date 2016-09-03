@@ -16,14 +16,17 @@ class BluetoothPlay: BaseScene, MCSessionDelegate, MCAdvertiserAssistantDelegate
     var session: MCSession!
     var browser: MCBrowserViewController!
     var advertiser: MCAdvertiserAssistant? = nil
+    let headerViewMatch = HeaderViewMatch()
     
     override func didMoveToView(view: SKView) {
         super.didMoveToView(view)
-        setupSession()
+        self.view?.addSubview(headerViewMatch)
+//        setupSession()
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event)
+        headerViewMatch.disapperAnimation()
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {

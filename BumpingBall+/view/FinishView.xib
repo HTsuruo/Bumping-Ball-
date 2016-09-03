@@ -217,7 +217,7 @@
     <resources>
         <image name="arrows.png" width="144" height="144"/>
         <image name="facebook.png" width="164" height="164"/>
-        <image name="home.png" width="144" height="144"/>
+        <image name="home.png" width="62" height="62"/>
         <image name="line.png" width="164" height="164"/>
         <image name="twitter.png" width="164" height="164"/>
     </resources>

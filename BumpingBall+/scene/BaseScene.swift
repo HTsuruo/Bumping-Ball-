@@ -23,7 +23,6 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     var touchBeginLocation = CGPoint()
     let finishView = FinishView(frame: CGRectMake(0, 0, define.WIDTH, define.HEIGHT))
     let countdownView = CountdownView()
-    let headerView = HeaderView()
     let touchViewTxt = TouchViewTxt()
     var touchView = TouchView()
     var isStart = false
@@ -46,7 +45,6 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         // set touch enable area
         self.addChild(touchView)
         self.view?.addSubview(touchViewTxt)
-        self.view?.addSubview(headerView)
         self.view?.addSubview(countdownView)
         self.addChild(charge)
     }
@@ -275,7 +273,6 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     
     func updateScore() {
         score += ballUtil.getScoreByCombo(comboCount)
-        headerView.scoreLabel.text = String(score)
         app.score = score
     }
     
