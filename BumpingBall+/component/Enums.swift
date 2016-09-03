@@ -82,3 +82,8 @@ enum PlayType: Int {
     case BLUETOOTH = 1
     case NETWORK = 2
 }
+
+enum PlayerType: Int {
+    case PLAYER1 = 1
+    case PLAYER2 = 2
+}

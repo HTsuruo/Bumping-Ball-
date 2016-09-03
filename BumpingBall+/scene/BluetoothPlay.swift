@@ -17,6 +17,8 @@ class BluetoothPlay: BaseScene, MCSessionDelegate, MCAdvertiserAssistantDelegate
     var browser: MCBrowserViewController!
     var advertiser: MCAdvertiserAssistant? = nil
     let headerViewMatch = HeaderViewMatch()
+    var lifeCountRed = 3
+    var lifeCountBlue = 3
     
     override func didMoveToView(view: SKView) {
         super.didMoveToView(view)
@@ -26,7 +28,7 @@ class BluetoothPlay: BaseScene, MCSessionDelegate, MCAdvertiserAssistantDelegate
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event)
-        headerViewMatch.disapperAnimation()
+        headerViewMatch.disapperAnimation(PlayerType.PLAYER1, life: lifeCountRed)
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {

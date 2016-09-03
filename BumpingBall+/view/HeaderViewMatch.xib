@@ -15,6 +15,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderViewMatch" customModule="BumpingBall_" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="rSg-12-1Cd"/>
+                <outlet property="leftArea" destination="L08-Ts-QOA" id="8Wr-h3-VKE"/>
                 <outlet property="lifeBlueCenter" destination="lHM-9B-Ybj" id="493-Dt-956"/>
                 <outlet property="lifeBlueLeft" destination="tPl-KI-Kl8" id="L8o-YA-VAk"/>
                 <outlet property="lifeBlueRight" destination="GTA-zv-4HO" id="lwd-U6-Als"/>
@@ -23,6 +24,7 @@
                 <outlet property="lifeRedRight" destination="iC1-5z-w64" id="bvb-Cg-A2l"/>
                 <outlet property="playerLabel1" destination="bCl-OB-0lC" id="xl0-oz-yNT"/>
                 <outlet property="playerLabel2" destination="wZn-oT-7tm" id="JxK-F9-IWt"/>
+                <outlet property="rightArea" destination="NqE-JD-8jO" id="Uq5-yR-Vhu"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -244,13 +246,8 @@
                 <constraint firstItem="IaT-N2-ZGu" firstAttribute="leading" secondItem="WYK-xa-oQG" secondAttribute="trailing" constant="10" id="yAM-Sl-9Td"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="189" y="433"/>
+            <point key="canvasLocation" x="171" y="434"/>
         </view>
-        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="z4c-A1-ha5">
-            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <point key="canvasLocation" x="268" y="562"/>
-        </imageView>
     </objects>
     <resources>
         <image name="life_blue.png" width="64" height="64"/>
