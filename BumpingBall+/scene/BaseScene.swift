@@ -114,7 +114,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         }
         
         if last + difficulty.getInterval() <= currentTime {
-            print("getInterval : (\(difficulty.getInterval())")
+            print("getInterval : \(difficulty.getInterval())")
             createTargetBall()
             last = currentTime
         }

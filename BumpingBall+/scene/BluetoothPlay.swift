@@ -9,6 +9,7 @@
 import UIKit
 import SpriteKit
 import MultipeerConnectivity
+import NVActivityIndicatorView
 
 class BluetoothPlay: BaseScene, MCSessionDelegate, MCAdvertiserAssistantDelegate, MCBrowserViewControllerDelegate {
     
@@ -19,11 +20,19 @@ class BluetoothPlay: BaseScene, MCSessionDelegate, MCAdvertiserAssistantDelegate
     let headerViewMatch = HeaderViewMatch()
     var lifeCountRed = 3
     var lifeCountBlue = 3
+    var sceneVC: UIViewController!
+    var loadingView = NVActivityIndicatorView(frame: CGRectMake(0, 0, 100, 100), type: .BallClipRotateMultiple, color: UIColor.whiteColor())
+    var loadingBkView = UIView(frame: CGRectMake(0, 0, define.WIDTH, define.HEIGHT))
+
     
     override func didMoveToView(view: SKView) {
         super.didMoveToView(view)
         self.view?.addSubview(headerViewMatch)
-//        setupSession()
+        
+        dispatch_async(dispatch_get_main_queue(), { //viewロードの整合を保ちます.
+            self.setupSession()
+            self.setupLoadingComponent()
+        })
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -54,8 +63,25 @@ class BluetoothPlay: BaseScene, MCSessionDelegate, MCAdvertiserAssistantDelegate
         
         browser = MCBrowserViewController(serviceType: "bbplus2016", session: session)
         browser.delegate = self
-        let vc = Util.getForegroundViewController()
-        vc.presentViewController(browser, animated: true, completion: nil)
+        sceneVC = Util.getForegroundViewController()
+        sceneVC.presentViewController(browser, animated: true, completion: nil)
+    }
+    
+    func setupLoadingComponent() {
+        loadingBkView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.8)
+        loadingView.center = define.CENTER
+        loadingBkView.addSubview(self.loadingView)
+    }
+    
+    func hideLoadingComponent() {
+        loadingBkView.alpha = 0.0
+        loadingView.alpha = 0.0
+        loadingView.stopAnimation()
+    }
+    func showLoadingComponent() {
+        loadingBkView.alpha = 0.8
+        loadingView.alpha = 1.0
+        loadingView.startAnimation()
     }
     
     func sendData() {
@@ -75,13 +101,30 @@ class BluetoothPlay: BaseScene, MCSessionDelegate, MCAdvertiserAssistantDelegate
         switch state {
         case MCSessionState.Connected:
             print("Connected: \(peerID.displayName)")
-            browser.dismissViewControllerAnimated(true, completion: nil)
+            dispatch_async(dispatch_get_main_queue(), {
+                self.hideLoadingComponent()
+                self.browser.dismissViewControllerAnimated(true, completion: nil)
+                self.countdownView.start()
+            })
             
         case MCSessionState.Connecting:
             print("Connecting: \(peerID.displayName)")
+            dispatch_async(dispatch_get_main_queue()) {
+                self.showLoadingComponent()
+                self.browser.view.addSubview(self.loadingBkView)
+            }
             
         case MCSessionState.NotConnected:
             print("Not Connected: \(peerID.displayName)")
+            dispatch_async(dispatch_get_main_queue()) {
+                self.hideLoadingComponent()
+                let alert: UIAlertController = UIAlertController(title: "接続失敗", message: "再度デバイスを選択して下さい", preferredStyle:  UIAlertControllerStyle.Alert)
+                let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+                    (action: UIAlertAction!) -> Void in
+                })
+                alert.addAction(defaultAction)
+                self.browser.presentViewController(alert, animated: true, completion: nil)
+            }
         }
     }
     
@@ -106,12 +149,15 @@ class BluetoothPlay: BaseScene, MCSessionDelegate, MCAdvertiserAssistantDelegate
     }
     
     func browserViewControllerDidFinish(browserViewController: MCBrowserViewController) {
+        hideLoadingComponent()
         browser.dismissViewControllerAnimated(true, completion: nil)
-        countdownView.start()
+        sceneVC.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func browserViewControllerWasCancelled(browserViewController: MCBrowserViewController) {
+        hideLoadingComponent()
         browser.dismissViewControllerAnimated(true, completion: nil)
+        sceneVC.dismissViewControllerAnimated(true, completion: nil)
     }
     
 }

@@ -35,6 +35,8 @@ class PrepareMultiPlayViewController: UIViewController, LTMorphingLabelDelegate 
         
         timer = NSTimer(timeInterval: 2.0, target: self, selector:#selector(PrepareMultiPlayViewController.changeTxt), userInfo: nil, repeats: true)
         NSRunLoop.currentRunLoop().addTimer(timer!, forMode: NSRunLoopCommonModes)
+        
+        bluetoothAiView.alpha = 0.0
     }
     
     func changeTxt() {
