@@ -21,7 +21,7 @@ class PrepareMultiPlayViewController: UIViewController, LTMorphingLabelDelegate 
     @IBOutlet weak var animationLabel: LTMorphingLabel!
     
     private var i = 0
-    private var txtArr = ["遊び方を選択して下さい", "アイテムを上手く使いましょう"]
+    private var txtArr = [NSLocalizedString("move_text_1", comment: ""), NSLocalizedString("move_text_2", comment: "")]
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -102,7 +102,7 @@
 		56D160CC1CC50E2C00257404 /* ball_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56D160C71CC50E2C00257404 /* ball_red@2x.png */; };
 		56D160D21CC50E5300257404 /* line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56D160CF1CC50E5300257404 /* line@2x.png */; };
 		56D160D31CC50E5300257404 /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56D160D01CC50E5300257404 /* twitter@2x.png */; };
-		56D1AAA11D83AEB200B24949 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 56D1AAA31D83AEB200B24949 /* Localizable.strings */; };
+		56D1AAA91D83B00200B24949 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 56D1AAAB1D83B00200B24949 /* Localizable.strings */; };
 		D600E83EAF5F1E885000F294 /* Pods_BumpingBall_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87CF2D28E9E810DF7496242E /* Pods_BumpingBall_UITests.framework */; };
 		F83A228293B0F63D4E37196A /* Pods_BumpingBall_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B488E9EEA5EA8F0B356FB8 /* Pods_BumpingBall_.framework */; };
 /* End PBXBuildFile section */
@@ -226,7 +226,8 @@
 		56D160C71CC50E2C00257404 /* ball_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ball_red@2x.png"; path = "img/balls/ball_red@2x.png"; sourceTree = SOURCE_ROOT; };
 		56D160CF1CC50E5300257404 /* line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "line@2x.png"; path = "img/sns_icon/line@2x.png"; sourceTree = SOURCE_ROOT; };
 		56D160D01CC50E5300257404 /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "twitter@2x.png"; path = "img/sns_icon/twitter@2x.png"; sourceTree = SOURCE_ROOT; };
-		56D1AAA21D83AEB200B24949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		56D1AAAA1D83B00200B24949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		56D1AAAC1D83B01200B24949 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		87CF2D28E9E810DF7496242E /* Pods_BumpingBall_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BumpingBall_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B488E9EEA5EA8F0B356FB8 /* Pods_BumpingBall_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BumpingBall_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE00D1DED0B5E6E2BD784D2F /* Pods-BumpingBall+Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+Tests/Pods-BumpingBall+Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -413,7 +414,7 @@
 				56BB7F3C1CAD345200675AE8 /* LaunchScreen.storyboard */,
 				56BB7F3F1CAD345200675AE8 /* Info.plist */,
 				56BDE3D71D7A5D0500247E36 /* GoogleService-Info.plist */,
-				56D1AAA31D83AEB200B24949 /* Localizable.strings */,
+				56D1AAAB1D83B00200B24949 /* Localizable.strings */,
 				56AC95A61CB2BCF000B31FE3 /* view */,
 				56AC95931CB24A1F00B31FE3 /* sks */,
 				56AC95921CB24A0100B31FE3 /* component */,
@@ -710,6 +711,7 @@
 				56BB36831D7324F500AD1603 /* icon_bluetooth@2x.png in Resources */,
 				56BDE3E41D7ACA7600247E36 /* life_blue_empty@2x.png in Resources */,
 				56CC4E3F1D67056000434A17 /* HeaderView.xib in Resources */,
+				56D1AAA91D83B00200B24949 /* Localizable.strings in Resources */,
 				5666F83E1D646090001EFC57 /* three@2x.png in Resources */,
 				56AC95991CB24B2100B31FE3 /* spark.sks in Resources */,
 				5666F8361D645712001EFC57 /* ball_blue_5@2x.png in Resources */,
@@ -732,7 +734,6 @@
 				56AC95801CB16D0000B31FE3 /* bigger.mp3 in Resources */,
 				56D160CB1CC50E2C00257404 /* ball_orange@2x.png in Resources */,
 				5666F81A1D643167001EFC57 /* helpBtn@2x.png in Resources */,
-				56D1AAA11D83AEB200B24949 /* Localizable.strings in Resources */,
 				5666F7DC1D63460C001EFC57 /* oneplayBtn@2x.png in Resources */,
 				5666F8251D6456F5001EFC57 /* ball_orange_1@2x.png in Resources */,
 				5666F8341D645712001EFC57 /* ball_blue_3@2x.png in Resources */,
@@ -1000,10 +1001,11 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		56D1AAA31D83AEB200B24949 /* Localizable.strings */ = {
+		56D1AAAB1D83B00200B24949 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				56D1AAA21D83AEB200B24949 /* Base */,
+				56D1AAAA1D83B00200B24949 /* Base */,
+				56D1AAAC1D83B01200B24949 /* ja */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

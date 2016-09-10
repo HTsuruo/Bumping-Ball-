@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  BumpingBall+
+
+  Created by Tsuru on H28/09/10.
+  Copyright © 平成28年 Hideki Tsuruoka. All rights reserved.
+*/
+"PzY-zP-vrD.text" = "Please select play mode";
+"move_text_1" = "Please select play mode";
+"move_text_2" = "Use special items";
