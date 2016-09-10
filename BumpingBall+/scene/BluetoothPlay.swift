@@ -58,7 +58,7 @@ class BluetoothPlay: BaseScene, MCSessionDelegate, MCAdvertiserAssistantDelegate
         node.removeFromParent()
         headerViewMatch.disapperAnimation(PlayerType.PLAYER1, life: myLifeCount)
         sendLifeData(myLifeCount)
-        myLifeCount -= 1git 
+        myLifeCount -= 1
         if myLifeCount < 1 {
             self.isFin = true
             self.finish()
