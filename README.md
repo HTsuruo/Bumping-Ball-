@@ -17,7 +17,7 @@
 * Fabric 1.6.7
 
 ## Libraries.
-* Crashlytics 3.7.3
+* Crashlytics 3.8.1
 	* crash report.
 * NVActivityIndicatorView 2.10
 	* loading animation.
