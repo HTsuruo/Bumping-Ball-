@@ -18,8 +18,8 @@ class BluetoothPlay: BaseScene, MCSessionDelegate, MCAdvertiserAssistantDelegate
     var browser: MCBrowserViewController!
     var advertiser: MCAdvertiserAssistant? = nil
     let headerViewMatch = HeaderViewMatch()
-    var lifeCountRed = 3
-    var lifeCountBlue = 3
+    var myLifeCount = 3
+    var partnerLifeCount = 3
     var sceneVC: UIViewController!
     var loadingView = NVActivityIndicatorView(frame: CGRectMake(0, 0, 100, 100), type: .BallClipRotateMultiple, color: UIColor.whiteColor())
     var loadingBkView = UIView(frame: CGRectMake(0, 0, define.WIDTH, define.HEIGHT))
@@ -37,7 +37,6 @@ class BluetoothPlay: BaseScene, MCSessionDelegate, MCAdvertiserAssistantDelegate
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event)
-        headerViewMatch.disapperAnimation(PlayerType.PLAYER1, life: lifeCountRed)
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -50,6 +49,20 @@ class BluetoothPlay: BaseScene, MCSessionDelegate, MCAdvertiserAssistantDelegate
     
     override func update(currentTime: CFTimeInterval) {
         super.update(currentTime)
+    }
+    
+    override func tballComesInTouchArea(node: SKSpriteNode) {
+        if myLifeCount < 1 {
+            return
+        }
+        node.removeFromParent()
+        headerViewMatch.disapperAnimation(PlayerType.PLAYER1, life: myLifeCount)
+        sendLifeData(myLifeCount)
+        myLifeCount -= 1git 
+        if myLifeCount < 1 {
+            self.isFin = true
+            self.finish()
+        }
     }
     
     func setupSession() {
@@ -84,8 +97,8 @@ class BluetoothPlay: BaseScene, MCSessionDelegate, MCAdvertiserAssistantDelegate
         loadingView.startAnimation()
     }
     
-    func sendData() {
-        if session.connectedPeers.count > 0 {
+//    func sendData() {
+//        if session.connectedPeers.count > 0 {
 //            do {
 //                let data = tf.text?.dataUsingEncoding(NSUTF8StringEncoding)
 //                try session.sendData(data!, toPeers: session.connectedPeers, withMode: .Reliable)
@@ -93,15 +106,48 @@ class BluetoothPlay: BaseScene, MCSessionDelegate, MCAdvertiserAssistantDelegate
 //                let ac = UIAlertController(title: "Send error", message: error.localizedDescription, preferredStyle: .Alert)
 //                ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
 //            }
+//        }
+//    }
+    
+    
+    func sendPauseData() {
+        do {
+            let dic: Dictionary = ["isPaused": self.paused]
+            let data: NSData = NSKeyedArchiver.archivedDataWithRootObject(dic)
+            try session.sendData(data, toPeers: session.connectedPeers, withMode: .Reliable)
+        } catch _ as NSError {
+            print("sendPauseData failed")
         }
     }
     
+    func sendLifeData(lifeCount: Int) {
+        do {
+            let dic: Dictionary = ["lifeCount": lifeCount]
+            let data: NSData = NSKeyedArchiver.archivedDataWithRootObject(dic)
+            try session.sendData(data, toPeers: session.connectedPeers, withMode: .Reliable)
+        } catch _ as NSError {
+            print("sendLifeData failed")
+        }
+    }
+    
+    func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
+        let dataObj = NSKeyedUnarchiver.unarchiveObjectWithData(data)! as AnyObject
+        let dataDic = dataObj as! Dictionary<String, AnyObject>
+        //※point!!（非同期なのでpromiseで認知してあげる必要がある.）
+        dispatch_async(dispatch_get_main_queue()) {
+                print("data : \(data)")
+            let lifeCount = dataDic["lifeCount"] as! Int
+            self.headerViewMatch.disapperAnimation(PlayerType.PLAYER2, life: lifeCount)
+        }
+    }
     
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
         switch state {
         case MCSessionState.Connected:
             print("Connected: \(peerID.displayName)")
             dispatch_async(dispatch_get_main_queue(), {
+                self.headerViewMatch.playerLabel1.text = UIDevice.currentDevice().name
+                self.headerViewMatch.playerLabel2.text = peerID.displayName
                 self.hideLoadingComponent()
                 self.browser.dismissViewControllerAnimated(true, completion: nil)
                 self.countdownView.start()
@@ -125,13 +171,6 @@ class BluetoothPlay: BaseScene, MCSessionDelegate, MCAdvertiserAssistantDelegate
                 alert.addAction(defaultAction)
                 self.browser.presentViewController(alert, animated: true, completion: nil)
             }
-        }
-    }
-    
-    func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
-        //※point!!（非同期なのでpromiseで認知してあげる必要がある.）
-        dispatch_async(dispatch_get_main_queue()) {
-            print("data : \(data)")
         }
     }
     

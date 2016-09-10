@@ -21,6 +21,7 @@ class SceneViewController: UIViewController {
     @IBOutlet weak var resumeBtn: UIButton!
     @IBOutlet weak var quitBtn: UIButton!
     @IBOutlet weak var restartBtn: UIButton!
+    var isMultiPlay = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,7 @@ class SceneViewController: UIViewController {
         switch playType {
         case .ONE:
             scene = OnePlayScene()
+            isMultiPlay = false
             break
         case .BLUETOOTH:
             scene = BluetoothPlay()

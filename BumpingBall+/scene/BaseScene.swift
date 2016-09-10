@@ -175,12 +175,16 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
                 
                 //              自陣にボールが入るとゲームオーバーになります.
                 if define.TOUCH_AREA.contains(targetBall.position) {
-                    self.isFin = true
-                    self.finish()
+                    self.tballComesInTouchArea(targetBall)
                 }
             }
         })
     }
+    
+    //自陣にボールが入った処理(oneplayとmultiplayで分岐します)
+    func tballComesInTouchArea(node: SKSpriteNode) {
+    }
+    
     
     //  衝突したときの処理.
     func didBeginContact(contact: SKPhysicsContact) {
