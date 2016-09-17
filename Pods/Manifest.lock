@@ -2,18 +2,18 @@ PODS:
   - Crashlytics (3.8.1):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.8)
-  - Firebase/Analytics (3.5.2):
-    - FirebaseAnalytics (~> 3.3)
-  - Firebase/Messaging (3.5.2):
+  - Firebase/Analytics (3.6.0):
+    - FirebaseAnalytics (= 3.4.2)
+  - Firebase/Messaging (3.6.0):
     - Firebase/Analytics
-    - FirebaseMessaging (= 1.1.1)
-  - FirebaseAnalytics (3.3.1):
+    - FirebaseMessaging (= 1.2.0)
+  - FirebaseAnalytics (3.4.2):
     - FirebaseInstanceID (~> 1.0)
     - GoogleInterchangeUtilities (~> 1.2)
     - GoogleSymbolUtilities (~> 1.1)
     - GoogleUtilities (~> 1.2)
   - FirebaseInstanceID (1.0.8)
-  - FirebaseMessaging (1.1.1):
+  - FirebaseMessaging (1.2.0):
     - FirebaseAnalytics (~> 3.3)
     - FirebaseInstanceID (~> 1.0)
     - GoogleInterchangeUtilities (~> 1.2)
@@ -27,8 +27,8 @@ PODS:
   - GoogleSymbolUtilities (1.1.1)
   - GoogleUtilities (1.3.1):
     - GoogleSymbolUtilities (~> 1.0)
-  - LTMorphingLabel (0.2.1)
-  - NVActivityIndicatorView (2.10)
+  - LTMorphingLabel (0.3.0)
+  - NVActivityIndicatorView (2.12)
   - Spring (1.0.3)
 
 DEPENDENCIES:
@@ -52,16 +52,16 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Crashlytics: 4391d8df0b125345e9f209c5db6e7f40a6a8435d
   Fabric: 5755268d0171435ab167e3d0878a28a777deaf10
-  Firebase: 94e63112efcad75226c0356a8f3032397b8547c9
-  FirebaseAnalytics: d968d4d5f6aeb795cd64144337bcd233e530efc6
+  Firebase: 34187200ef4979dbd485c7aa685ef078bf587c86
+  FirebaseAnalytics: 3f5358d9104adf159cc8d99b7b501e50099a39ad
   FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
-  FirebaseMessaging: 6bc7cd2ecb875c1a9c0f8b94956398aa3145bbb8
+  FirebaseMessaging: 789d23fd796594dfb55dcf36cd325541df887c22
   GoogleInterchangeUtilities: def8415a862effc67d549d5b5b0b9c7a2f97d4de
   GoogleIPhoneUtilities: 63f25e93a3ddcb66884d182aab3a660d98f1479b
   GoogleSymbolUtilities: 33117db1b5f290c6fbf259585e4885b4c84b98d7
   GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
-  LTMorphingLabel: 1858358ea38ef4d548e1f58b648b0d08ec3a62ed
-  NVActivityIndicatorView: 5568608c3511690a42c4dd02f7a1de4361d670ae
+  LTMorphingLabel: 2777d8d9cb699125f48dfcd95d78bd3d77c87ade
+  NVActivityIndicatorView: de8be03826726ad99cdfacf7fe09e88cbfeef911
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
 
 PODFILE CHECKSUM: e633ca6362fd48f438f4bb2f629d3bf892ca0540
