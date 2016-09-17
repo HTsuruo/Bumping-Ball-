@@ -89,12 +89,12 @@ class BluetoothPlay: BaseScene, MCSessionDelegate, MCAdvertiserAssistantDelegate
     func hideLoadingComponent() {
         loadingBkView.alpha = 0.0
         loadingView.alpha = 0.0
-        loadingView.stopAnimation()
+        loadingView.stopAnimating()
     }
     func showLoadingComponent() {
         loadingBkView.alpha = 0.8
         loadingView.alpha = 1.0
-        loadingView.startAnimation()
+        loadingView.startAnimating()
     }
     
 //    func sendData() {

@@ -30,8 +30,8 @@ class PrepareMultiPlayViewController: UIViewController, LTMorphingLabelDelegate 
         animationLabel.delegate = self
         let effect = LTMorphingEffect.Evaporate
         animationLabel.morphingEffect = effect
-        bluetoothAiView.startAnimation()
-        networkAiView.startAnimation()
+        bluetoothAiView.startAnimating()
+        networkAiView.startAnimating()
         
         timer = NSTimer(timeInterval: 2.0, target: self, selector:#selector(PrepareMultiPlayViewController.changeTxt), userInfo: nil, repeats: true)
         NSRunLoop.currentRunLoop().addTimer(timer!, forMode: NSRunLoopCommonModes)
