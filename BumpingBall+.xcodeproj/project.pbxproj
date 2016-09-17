@@ -653,6 +653,7 @@
 					56BB7F2B1CAD345100675AE8 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = V7K4H6JY6L;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1104,11 +1105,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Hideki Tsuruoka (684A498CG8)";
+				DEVELOPMENT_TEAM = V7K4H6JY6L;
 				INFOPLIST_FILE = "BumpingBall+/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tsuruoka.BumpingBall-";
 				PRODUCT_NAME = "BumpingBall+";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "55fd6428-018a-4b83-826a-15c28bc8df08";
+				PROVISIONING_PROFILE_SPECIFIER = "Bumping Ball Plus Profile Dev";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1119,11 +1123,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Hideki Tsuruoka (684A498CG8)";
+				DEVELOPMENT_TEAM = V7K4H6JY6L;
 				INFOPLIST_FILE = "BumpingBall+/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tsuruoka.BumpingBall-";
 				PRODUCT_NAME = "BumpingBall+";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "55fd6428-018a-4b83-826a-15c28bc8df08";
+				PROVISIONING_PROFILE_SPECIFIER = "Bumping Ball Plus Profile Dev";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
