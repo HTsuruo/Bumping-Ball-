@@ -26,20 +26,20 @@ class TouchViewTxt: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func loadNib() {
-        NSBundle.mainBundle().loadNibNamed("TouchViewTxt", owner: self, options: nil)
-        contentView.frame = CGRectMake(0, define.HEIGHT - define.TOUCH_HEIGHT, define.WIDTH, define.TOUCH_HEIGHT)
+    fileprivate func loadNib() {
+        Bundle.main.loadNibNamed("TouchViewTxt", owner: self, options: nil)
+        contentView.frame = CGRect(x: 0, y: define.HEIGHT - define.TOUCH_HEIGHT, width: define.WIDTH, height: define.TOUCH_HEIGHT)
         self.addSubview(contentView)
     }
     
-    private func hideSwipeArrows() {
-        leftSwipeArrow.hidden = true
-        rightSwipeArrow.hidden = true
+    fileprivate func hideSwipeArrows() {
+        leftSwipeArrow.isHidden = true
+        rightSwipeArrow.isHidden = true
     }
     
-    private func showSwipeArrows() {
-        leftSwipeArrow.hidden = false
-        rightSwipeArrow.hidden = false
+    fileprivate func showSwipeArrows() {
+        leftSwipeArrow.isHidden = false
+        rightSwipeArrow.isHidden = false
     }
     
     func chargeReset() {

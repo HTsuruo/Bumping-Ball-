@@ -15,12 +15,12 @@ class Sound: NSObject {
     static let launch = SKAction.playSoundFileNamed("launch.mp3", waitForCompletion: false)
     
     static var audioPlayer: AVAudioPlayer = AVAudioPlayer()
-    static var path: NSURL = NSURL()
+    static var path: URL! = nil
     
-    static func prepareToPlay(data: String) {
+    static func prepareToPlay(_ data: String) {
         do {
-            self.path = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(data, ofType: "mp3")!)
-            try self.audioPlayer = AVAudioPlayer(contentsOfURL: self.path, fileTypeHint: nil)
+            self.path = URL(fileURLWithPath: Bundle.main.path(forResource: data, ofType: "mp3")!)
+            try self.audioPlayer = AVAudioPlayer(contentsOf: self.path, fileTypeHint: nil)
             self.audioPlayer.prepareToPlay()
             self.audioPlayer.volume = 0.8
         } catch {

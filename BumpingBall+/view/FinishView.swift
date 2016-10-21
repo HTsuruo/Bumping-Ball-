@@ -19,11 +19,11 @@ class FinishView: UIView {
     @IBOutlet weak var lineBtn: UIButton!
     @IBOutlet weak var againBtn: UIButton!
     @IBOutlet weak var totalScoreLabel: UILabel!
-    var app: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        NSBundle.mainBundle().loadNibNamed("FinishView", owner: self, options: nil)
+        Bundle.main.loadNibNamed("FinishView", owner: self, options: nil)
         finishView.frame = frame
         self.addSubview(finishView)
     }
@@ -32,50 +32,50 @@ class FinishView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setScoreLabel(totalScore: Int) {
+    func setScoreLabel(_ totalScore: Int) {
         totalScoreLabel.text = String(totalScore)
-        let ud = NSUserDefaults.standardUserDefaults()
+        let ud = UserDefaults.standard
         let difficultyStr = app.selectedDiffculty.getString()
-        let highScore = ud.integerForKey("highscore-"+difficultyStr)
+        let highScore = ud.integer(forKey: "highscore-"+difficultyStr)
         if totalScore > highScore {
-            ud.setInteger(totalScore, forKey: "highscore-"+difficultyStr)
+            ud.set(totalScore, forKey: "highscore-"+difficultyStr)
         }
         GameCenterUtil.sendScore(totalScore, leaderBoardId: difficultyStr)
     }
     
-    @IBAction func onClickToTopBtn(sender: UIButton) {
+    @IBAction func onClickToTopBtn(_ sender: UIButton) {
         let onePlayVC = Util.getForegroundViewController()
-        onePlayVC.dismissViewControllerAnimated(true, completion: nil)
+        onePlayVC.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func onClickAgainBtn(sender: UIButton) {
+    @IBAction func onClickAgainBtn(_ sender: UIButton) {
         let foregroundVC = Util.getForegroundViewController()
         foregroundVC.loadView()
         foregroundVC.viewDidLoad()
     }
     
-    @IBAction func onClickTwitterBtn(sender: UIButton) {
+    @IBAction func onClickTwitterBtn(_ sender: UIButton) {
         let text = "【Bumping Ball+】"
         let composeViewController: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
         composeViewController.setInitialText(text)
         let foregroundVC = Util.getForegroundViewController()
-        foregroundVC.presentViewController(composeViewController, animated: true, completion: nil)
+        foregroundVC.present(composeViewController, animated: true, completion: nil)
     }
     
-    @IBAction func onClickFacebookBtn(sender: UIButton) {
+    @IBAction func onClickFacebookBtn(_ sender: UIButton) {
         let text = "【Bumping Ball+】"
         let composeViewController: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
         composeViewController.setInitialText(text)
         let foregroundVC = Util.getForegroundViewController()
-        foregroundVC.presentViewController(composeViewController, animated: true, completion: nil)
+        foregroundVC.present(composeViewController, animated: true, completion: nil)
     }
     
-    @IBAction func onClickLineBtn(sender: UIButton) {
+    @IBAction func onClickLineBtn(_ sender: UIButton) {
         let text: String! = "【Bumping Ball+】"
-        let encodeMessage: String! = text.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-        let messageURL: NSURL! = NSURL( string: "line://msg/text/" + encodeMessage )
-        if UIApplication.sharedApplication().canOpenURL(messageURL) {
-            UIApplication.sharedApplication().openURL( messageURL )
+        let encodeMessage: String! = text.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
+        let messageURL: URL! = URL( string: "line://msg/text/" + encodeMessage )
+        if UIApplication.shared.canOpenURL(messageURL) {
+            UIApplication.shared.openURL( messageURL )
         }
     }
 }

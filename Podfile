@@ -6,10 +6,9 @@ use_frameworks!
 target 'BumpingBall+' do
     pod 'Fabric'
     pod 'Crashlytics'
-    pod 'NVActivityIndicatorView'
-    pod 'LTMorphingLabel'
+    pod 'NVActivityIndicatorView' , :git => "https://github.com/ninjaprox/NVActivityIndicatorView"
     pod 'Firebase/Messaging'
-    pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
+    pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
 end
 
 target 'BumpingBall+Tests' do

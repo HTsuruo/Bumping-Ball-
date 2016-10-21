@@ -9,65 +9,65 @@
 import UIKit
 
 enum BallType: Int {
-    case BLUE = 0
-    case GREEN = 1
-    case ORANGE = 2
-    case RED = 3
-    case GOLD = 100
+    case blue = 0
+    case green = 1
+    case orange = 2
+    case red = 3
+    case gold = 100
     
-    func getImageName(key: BallType) -> String {
+    func getImageName(_ key: BallType) -> String {
         switch self {
-        case BLUE:
+        case .blue:
             return "ball_blue"
-        case GREEN:
+        case .green:
             return "ball_green"
-        case ORANGE:
+        case .orange:
             return "ball_orange"
-        case RED:
+        case .red:
             return "ball_red"
-        case GOLD:
+        case .gold:
             return "ball_gold"
         }
     }
     
-    func getSize(key: BallType) -> CGFloat {
+    func getSize(_ key: BallType) -> CGFloat {
         switch self {
-        case BLUE:
+        case .blue:
             return 20.0
-        case GREEN:
+        case .green:
             return 40.0
-        case ORANGE:
+        case .orange:
             return 60.0
-        case RED:
+        case .red:
             return 80.0
-        case GOLD:
+        case .gold:
             return 100.0
         }
     }
 }
 
 enum DifficultyType: Int {
-    case EASY = 0
-    case NORMAL = 1
-    case HARD = 2
-    case IMPOSSIBLE = 3
+    case easy = 0
+    case normal = 1
+    case hard = 2
+    case impossible = 3
     
     func getString() -> String {
         switch self {
-        case .EASY:
+        case .easy:
             return "easy"
-        case .NORMAL:
+        case .normal:
             return "normal"
-        case .HARD:
+        case .hard:
             return "hard"
-        case .IMPOSSIBLE:
+        case .impossible:
             return "impossible"
         }
     }
     
     func isEasy() -> Bool {
         switch self {
-        case .EASY:
+        case .easy:
             return true
         default:
             false
@@ -78,12 +78,12 @@ enum DifficultyType: Int {
 }
 
 enum PlayType: Int {
-    case ONE = 0
-    case BLUETOOTH = 1
-    case NETWORK = 2
+    case one = 0
+    case bluetooth = 1
+    case network = 2
 }
 
 enum PlayerType: Int {
-    case PLAYER1 = 1
-    case PLAYER2 = 2
+    case player1 = 1
+    case player2 = 2
 }

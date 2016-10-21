@@ -10,7 +10,7 @@ import UIKit
 
 class HeaderView: UIView {
 
-    var app: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var highScoreLabel: UILabel!
@@ -25,15 +25,15 @@ class HeaderView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func loadXib() {
-        NSBundle.mainBundle().loadNibNamed("HeaderView", owner: self, options: nil)
-        contentView.frame = CGRectMake(0, 0, define.WIDTH, define.HEADER_HEIGHT)
+    fileprivate func loadXib() {
+        Bundle.main.loadNibNamed("HeaderView", owner: self, options: nil)
+        contentView.frame = CGRect(x: 0, y: 0, width: define.WIDTH, height: define.HEADER_HEIGHT)
         self.addSubview(contentView)
     }
     
-    private func setHighScoreLabel() {
-        let ud = NSUserDefaults.standardUserDefaults()
-        let highScore = ud.integerForKey("highscore-"+app.selectedDiffculty.getString())
+    fileprivate func setHighScoreLabel() {
+        let ud = UserDefaults.standard
+        let highScore = ud.integer(forKey: "highscore-"+app.selectedDiffculty.getString())
         highScoreLabel.text = String(highScore)
     }
 

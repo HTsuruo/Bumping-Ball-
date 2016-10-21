@@ -8,60 +8,39 @@
 
 import UIKit
 import NVActivityIndicatorView
-import LTMorphingLabel
 
-class PrepareMultiPlayViewController: UIViewController, LTMorphingLabelDelegate {
-    var app: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-    var timer: NSTimer? = nil
+class PrepareMultiPlayViewController: UIViewController {
+    var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    var timer: Timer? = nil
 
     @IBOutlet weak var bluetoothArea: UIView!
     @IBOutlet weak var networkArea: UIView!
     @IBOutlet weak var bluetoothAiView: NVActivityIndicatorView!
     @IBOutlet weak var networkAiView: NVActivityIndicatorView!
-    @IBOutlet weak var animationLabel: LTMorphingLabel!
+    @IBOutlet weak var animationLabel: UILabel!
     
-    private var i = 0
-    private var txtArr = [NSLocalizedString("move_text_1", comment: ""), NSLocalizedString("move_text_2", comment: "")]
+    fileprivate var i = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         Util.setStatusBar(self.view)
         self.view.backgroundColor = colorUtils.navy
-        animationLabel.delegate = self
-        let effect = LTMorphingEffect.Evaporate
-        animationLabel.morphingEffect = effect
         bluetoothAiView.startAnimating()
         networkAiView.startAnimating()
-        
-        timer = NSTimer(timeInterval: 2.0, target: self, selector:#selector(PrepareMultiPlayViewController.changeTxt), userInfo: nil, repeats: true)
-        NSRunLoop.currentRunLoop().addTimer(timer!, forMode: NSRunLoopCommonModes)
-        
         bluetoothAiView.alpha = 0.0
-    }
-    
-    func changeTxt() {
-        animationLabel.text = text
+        animationLabel.text = NSLocalizedString("prepare_multi_text", comment: "")
     }
 
-    var text: String {
-        get {
-            if i >= (txtArr.count-1) {
-                i = -1
-            }
-            i+=1
-            return txtArr[i]
-        }
+    
+    @IBAction func onClickBackBtn(_ sender: UIButton) {
+        timer?.invalidate()
+        self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func onClickBackBtn(sender: UIButton) {
+    @IBAction func onClickBluetoothPlayBtn(_ sender: UIButton) {
         timer?.invalidate()
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    @IBAction func onClickBluetoothPlayBtn(sender: UIButton) {
-        timer?.invalidate()
-        app.selectedPlay = PlayType.BLUETOOTH
-        self.performSegueWithIdentifier("toMultiPlay", sender: self)
+        app.selectedPlay = PlayType.bluetooth
+        self.performSegue(withIdentifier: "toMultiPlay", sender: self)
     }
     
     override func didReceiveMemoryWarning() {

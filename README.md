@@ -21,8 +21,6 @@
 	* crash report.
 * NVActivityIndicatorView 2.10
 	* loading animation.
-* LTMorphingLabel 0.2.1
-	* text animation.
 * Firebase 3.5.2
 * FirebaseMessaging 1.1.1
 	* push notification.

@@ -6,5 +6,4 @@
   Copyright © 平成28年 Hideki Tsuruoka. All rights reserved.
 */
 "PzY-zP-vrD.text" = "Please select play mode";
-"move_text_1" = "Please select play mode";
-"move_text_2" = "Use special items";
+"prepare_multi_text" = "Please select play mode";

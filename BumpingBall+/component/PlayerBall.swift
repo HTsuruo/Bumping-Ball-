@@ -21,22 +21,22 @@ struct PlayerBall {
         self.ball.name = "ball"
         self.ball.physicsBody = SKPhysicsBody(circleOfRadius: self.ball.size.width / 2.0)
         self.ball.physicsBody?.affectedByGravity = false
-        self.ball.physicsBody?.dynamic = false
-        let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:0.8)
-        self.ball.runAction(SKAction.repeatActionForever(action))
+        self.ball.physicsBody?.isDynamic = false
+        let action = SKAction.rotate(byAngle: CGFloat(M_PI), duration:0.8)
+        self.ball.run(SKAction.repeatForever(action))
     }
     
-    mutating func setLocation(posX: CGFloat, posY: CGFloat) {
+    mutating func setLocation(_ posX: CGFloat, posY: CGFloat) {
         self.ball.position.x = posX
         self.ball.position.y = posY
     }
     
-    mutating func setCategory(myCat: UInt32, targetCat: UInt32) {
+    mutating func setCategory(_ myCat: UInt32, targetCat: UInt32) {
         self.ball.physicsBody?.categoryBitMask = myCat
         self.ball.physicsBody?.contactTestBitMask = targetCat
     }
     
-    func setId(id: Int) {
+    func setId(_ id: Int) {
         self.ball.userData = NSMutableDictionary()
         self.ball.userData?.setValue(id, forKey: "id")
         self.ball.userData?.setValue(false, forKey: "isFire")
@@ -51,25 +51,25 @@ struct PlayerBall {
         self.ballScale += 0.025
         if self.ballScale < 0.8 {
             self.ballSpeed = define.BALL_INIT_SPEED
-            self.ball.runAction(ballUtil.setBlue())
-            self.setId(BallType.BLUE.rawValue)
+            self.ball.run(ballUtil.setBlue())
+            self.setId(BallType.blue.rawValue)
         } else if self.ballScale < 1.1 {
             self.ballSpeed = 0.75
-            self.ball.runAction(ballUtil.setGreen())
-            self.setId(BallType.GREEN.rawValue)
+            self.ball.run(ballUtil.setGreen())
+            self.setId(BallType.green.rawValue)
         } else if self.ballScale < 1.4 {
             self.ballSpeed = 1.0
-            self.ball.runAction(ballUtil.setOrange())
-            self.setId(BallType.ORANGE.rawValue)
+            self.ball.run(ballUtil.setOrange())
+            self.setId(BallType.orange.rawValue)
         } else if self.ballScale < 1.7 {
             self.ballSpeed = 1.25
-            self.ball.runAction(ballUtil.setRed())
-            self.setId(BallType.RED.rawValue)
+            self.ball.run(ballUtil.setRed())
+            self.setId(BallType.red.rawValue)
         } else {
             self.ballScale = define.BALL_INIT_SCALE
             self.ballSpeed = define.BALL_INIT_SPEED
-            self.ball.runAction(ballUtil.setBlue())
-            self.setId(BallType.BLUE.rawValue)
+            self.ball.run(ballUtil.setBlue())
+            self.setId(BallType.blue.rawValue)
         }
         self.ball.setScale(self.ballScale)
     }
@@ -77,14 +77,14 @@ struct PlayerBall {
     mutating func setGoldBall() {
         let ballUtil = BallUtils()
         self.ballSpeed = 3.5
-        self.ball.runAction(ballUtil.setGold())
-        self.setId(BallType.GOLD.rawValue)
+        self.ball.run(ballUtil.setGold())
+        self.setId(BallType.gold.rawValue)
         self.ball.setScale(2.0)
     }
     
-    func isGold(node: SKNode) -> Bool {
-        let myId = node.userData?.valueForKey("id")
-        return myId as! Int == BallType.GOLD.rawValue
+    func isGold(_ node: SKNode) -> Bool {
+        let myId = node.userData?.value(forKey: "id")
+        return myId as! Int == BallType.gold.rawValue
     }
     
 }

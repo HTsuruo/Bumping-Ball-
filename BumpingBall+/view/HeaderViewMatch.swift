@@ -35,18 +35,18 @@ class HeaderViewMatch: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func loadXib() {
-        NSBundle.mainBundle().loadNibNamed("HeaderViewMatch", owner: self, options: nil)
-        contentView.frame = CGRectMake(0, 0, define.WIDTH, define.HEADER_HEIGHT)
+    fileprivate func loadXib() {
+        Bundle.main.loadNibNamed("HeaderViewMatch", owner: self, options: nil)
+        contentView.frame = CGRect(x: 0, y: 0, width: define.WIDTH, height: define.HEADER_HEIGHT)
         self.addSubview(contentView)
     }
     
-    func disapperAnimation(type: PlayerType, life: Int) {
+    func disapperAnimation(_ type: PlayerType, life: Int) {
         let view = SpringImageView()
-        var frame = CGRectMake(0, 0, 0, 0)
+        var frame = CGRect(x: 0, y: 0, width: 0, height: 0)
         
         switch type {
-        case .PLAYER1:
+        case .player1:
             view.image = UIImage(named: "life_red")
             switch life {
             case 3:
@@ -64,7 +64,7 @@ class HeaderViewMatch: UIView {
             view.frame = frame
             leftArea.addSubview(view)
             
-        case .PLAYER2:
+        case .player2:
             view.image = UIImage(named: "life_blue")
             switch life {
             case 3:

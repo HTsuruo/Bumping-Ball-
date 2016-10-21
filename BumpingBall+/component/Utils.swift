@@ -10,10 +10,10 @@ import UIKit
 import SpriteKit
 
 struct define {
-    static let WIDTH: CGFloat = UIScreen.mainScreen().bounds.size.width
-    static let HEIGHT: CGFloat = UIScreen.mainScreen().bounds.size.height
-    static let statusHeight: CGFloat = UIApplication.sharedApplication().statusBarFrame.height
-    static let CENTER: CGPoint = CGPointMake(WIDTH/2, HEIGHT/2)
+    static let WIDTH: CGFloat = UIScreen.main.bounds.size.width
+    static let HEIGHT: CGFloat = UIScreen.main.bounds.size.height
+    static let statusHeight: CGFloat = UIApplication.shared.statusBarFrame.height
+    static let CENTER: CGPoint = CGPoint(x: WIDTH/2, y: HEIGHT/2)
     static let MAX = 20
     static let BALL_INIT_SCALE = CGFloat(0.5)
     static let BALL_INIT_SPEED = CGFloat(0.5)
@@ -21,21 +21,21 @@ struct define {
     static let HEADER_HEIGHT: CGFloat = 60.0
     static let REMOVE_HEIGHT = CGFloat(HEIGHT - (HEADER_HEIGHT))
     static let TOUCH_HEIGHT: CGFloat = 65.0
-    static let TOUCH_AREA = CGRectMake(0, 0, define.WIDTH, TOUCH_HEIGHT)
+    static let TOUCH_AREA = CGRect(x: 0, y: 0, width: define.WIDTH, height: TOUCH_HEIGHT)
 }
 
 struct Util {
     
     //status barのところは時刻などを見やすくするためにあけてあげる.
-    static func setStatusBar(parentView: UIView) {
-        let v: UIView = UIView(frame: CGRectMake(0, 0, define.WIDTH, define.statusHeight))
-        v.backgroundColor = UIColor.whiteColor()
+    static func setStatusBar(_ parentView: UIView) {
+        let v: UIView = UIView(frame: CGRect(x: 0, y: 0, width: define.WIDTH, height: define.statusHeight))
+        v.backgroundColor = UIColor.white
         parentView.addSubview(v)
     }
     
     //最前面のビューコントローラを取得する
    static func getForegroundViewController() -> UIViewController {
-        var tc = UIApplication.sharedApplication().keyWindow?.rootViewController
+        var tc = UIApplication.shared.keyWindow?.rootViewController
         while tc!.presentedViewController != nil {
             tc = tc!.presentedViewController
         }
@@ -71,7 +71,7 @@ class BallUtils: NSObject {
     }
     
     //   跳ね返り処理
-    func setRebound(node: SKSpriteNode) {
+    func setRebound(_ node: SKSpriteNode) {
         let halfSize = Int(node.size.width/2)
         var screenCollision = false
         
@@ -86,7 +86,7 @@ class BallUtils: NSObject {
         }
         
         let posX: UInt = UInt(node.position.x)
-        var dx = node.userData?.valueForKey("dx") as! CGFloat
+        var dx = node.userData?.value(forKey: "dx") as! CGFloat
         
         if posX < UInt(halfSize) {
             screenCollision = true
@@ -102,7 +102,7 @@ class BallUtils: NSObject {
         node.userData?.setValue(dx, forKey: "dx")
     }
     
-    func getScoreByCombo(comboCount: Int) -> Int {
+    func getScoreByCombo(_ comboCount: Int) -> Int {
         switch comboCount {
         case 1:
             return 100
@@ -121,16 +121,16 @@ class BallUtils: NSObject {
         }
     }
     
-    func getBallImageByNum(id: Int, num: Int) -> SKAction {
+    func getBallImageByNum(_ id: Int, num: Int) -> SKAction {
         var texture = SKTexture.init()
         switch id {
-        case BallType.BLUE.rawValue:
+        case BallType.blue.rawValue:
             texture = SKTexture.init(imageNamed: getBlueBallImageByNum(num))
             break
-        case BallType.GREEN.rawValue:
+        case BallType.green.rawValue:
             texture = SKTexture.init(imageNamed: getGreenBallImageByNum(num))
             break
-        case BallType.ORANGE.rawValue:
+        case BallType.orange.rawValue:
             texture = SKTexture.init(imageNamed: getOrangeBallImageByNum(num))
             break
         default:
@@ -139,55 +139,29 @@ class BallUtils: NSObject {
         return SKAction.setTexture(texture, resize: false)
     }
     
-    func getBlueBallImageByNum(num: Int) -> String {
+    func getBlueBallImageByNum(_ num: Int) -> String {
         return "ball_blue_"+String(num)
     }
     
-    func getGreenBallImageByNum(num: Int) -> String {
+    func getGreenBallImageByNum(_ num: Int) -> String {
         return "ball_green_"+String(num)
     }
     
-    func getOrangeBallImageByNum(num: Int) -> String {
+    func getOrangeBallImageByNum(_ num: Int) -> String {
         return "ball_orange_"+String(num)
     }
     
 }
 
 struct colorUtils {
-    static let blue = colorWithHexString("2196F3")
-    static let green = colorWithHexString("4CAF50")
-    static let orange = colorWithHexString("FF9800")
-    static let red = colorWithHexString("f44336")
-    static let gold = colorWithHexString("ffd700")
-    static let navy = colorWithHexString("3F5A70")
-    static let black = colorWithHexString("1D1D1D")
-    static let clear = UIColor.clearColor()
-    static let lifered = colorWithHexString("EC5D57")
-    static let lifeblue = colorWithHexString("51A7F9")
-}
-
-//rgb指定ではなくカラーコードで指定できるようにした.
-func colorWithHexString (hex: String) -> UIColor {
-    
-    let cString: String = hex.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).uppercaseString
-    
-    if (cString as String).characters.count != 6 {
-        return UIColor.grayColor()
-    }
-    
-    let rString = (cString as NSString).substringWithRange(NSRange(location: 0, length: 2))
-    let gString = (cString as NSString).substringWithRange(NSRange(location: 2, length: 2))
-    let bString = (cString as NSString).substringWithRange(NSRange(location: 4, length: 2))
-    
-    var r: CUnsignedInt = 0, g: CUnsignedInt = 0, b: CUnsignedInt = 0
-    NSScanner(string: rString).scanHexInt(&r)
-    NSScanner(string: gString).scanHexInt(&g)
-    NSScanner(string: bString).scanHexInt(&b)
-    
-    return UIColor(
-        red: CGFloat(Float(r) / 255.0),
-        green: CGFloat(Float(g) / 255.0),
-        blue: CGFloat(Float(b) / 255.0),
-        alpha: CGFloat(Float(1.0))
-    )
+    static let blue = UIColor.hex(hexStr: "2196F3", alpha: 1.0)
+    static let green = UIColor.hex(hexStr: "4CAF50", alpha: 1.0)
+    static let orange = UIColor.hex(hexStr: "FF9800", alpha: 1.0)
+    static let red = UIColor.hex(hexStr: "f44336", alpha: 1.0)
+    static let gold = UIColor.hex(hexStr: "ffd700", alpha: 1.0)
+    static let navy = UIColor.hex(hexStr: "3F5A70", alpha: 1.0)
+    static let black = UIColor.hex(hexStr: "1D1D1D", alpha: 1.0)
+    static let lifered = UIColor.hex(hexStr: "EC5D57", alpha: 1.0)
+    static let lifeblue = UIColor.hex(hexStr: "51A7F9", alpha: 1.0)
+    static let clear = UIColor.clear
 }

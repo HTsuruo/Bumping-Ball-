@@ -11,7 +11,7 @@ import UIKit
 
 class BaseScene: SKScene, SKPhysicsContactDelegate {
     
-    var app: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     var playerBall = PlayerBall()
     var targetBall = TargetBall()
     let ballUtil = BallUtils()
@@ -21,7 +21,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     var score = 0
     var comboCount = 0
     var touchBeginLocation = CGPoint()
-    let finishView = FinishView(frame: CGRectMake(0, 0, define.WIDTH, define.HEIGHT))
+    let finishView = FinishView(frame: CGRect(x: 0, y: 0, width: define.WIDTH, height: define.HEIGHT))
     let countdownView = CountdownView()
     let touchViewTxt = TouchViewTxt()
     var touchView = TouchView()
@@ -34,11 +34,11 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     let ballCategory: UInt32 = 0x1 << 0
     let targetBallCategory: UInt32 = 0x1 << 1
     
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
         // ここは物理世界.
         self.physicsWorld.contactDelegate = self
         self.physicsWorld.speed = CGFloat(1.0)
-        self.backgroundColor = UIColor.blackColor()
+        self.backgroundColor = UIColor.black
         
         app.score = 0
         
@@ -49,9 +49,9 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(charge)
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        let disabled = self.paused || !isStart || isFin //ポーズ中は入力出来ないように.
+        let disabled = self.isPaused || !isStart || isFin //ポーズ中は入力出来ないように.
         if disabled {
             return
         }
@@ -59,7 +59,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         for touch in touches {
             //            print(touch.locationInView(self.view))
             
-            touchBeginLocation = touch.locationInNode(self)
+            touchBeginLocation = touch.location(in: self)
             
             if !(define.TOUCH_AREA.contains(touchBeginLocation)) {
                 return
@@ -69,9 +69,9 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touche in touches {
-            let location = touche.locationInNode(self)
+            let location = touche.location(in: self)
             if !(define.TOUCH_AREA.contains(location)) {
                 return
             }
@@ -80,10 +80,10 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         //        ball.ball.runAction(Sound.launch)
         for touche in touches {
-            let location = touche.locationInNode(self)
+            let location = touche.location(in: self)
             let swipe = location.y < touchBeginLocation.y && location.y < 10
             if swipe && charge.isFull {
                 playerBall.setGoldBall()
@@ -92,12 +92,12 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         }
         playerBall.isFire = true
         playerBall.setIsFire()
-        let actionMove = SKAction.moveToY(define.REMOVE_HEIGHT, duration: Double(playerBall.ballSpeed))
-        playerBall.ball.runAction(actionMove)
+        let actionMove = SKAction.moveTo(y: define.REMOVE_HEIGHT, duration: Double(playerBall.ballSpeed))
+        playerBall.ball.run(actionMove)
         launchAnimation()
     }
     
-    override func update(currentTime: CFTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
         if !isStart {
             if app.isStart != nil && app.isStart! {
                 isStart = true
@@ -122,14 +122,14 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         moveTargetBall()
     }
     
-    private func removeBall() {
-        self.enumerateChildNodesWithName("ball", usingBlock: {
+    fileprivate func removeBall() {
+        self.enumerateChildNodes(withName: "ball", using: {
             node, stop in
             if node is SKSpriteNode {
                 let ball = node as! SKSpriteNode
                 //                物理演算を取り入れると0.1足りなくなるので
                 if ball.position.y >= define.REMOVE_HEIGHT-1 {
-                    ball.runAction(SKAction.fadeOutWithDuration(0.3), completion: {
+                    ball.run(SKAction.fadeOut(withDuration: 0.3), completion: {
                         ball.removeFromParent()
                         if !self.playerBall.isGold(self.playerBall.ball) {
                             self.comboCount = 0
@@ -140,14 +140,14 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         })
     }
     
-    private func createPlayerBall(touchPoint: CGPoint) {
+    fileprivate func createPlayerBall(_ touchPoint: CGPoint) {
         playerBall = PlayerBall()
         playerBall.setLocation(touchPoint.x, posY: touchPoint.y + define.TOUCH_MARGIN)
         playerBall.setCategory(ballCategory, targetCat: targetBallCategory)
         self.addChild(playerBall.ball)
     }
     
-    private func createTargetBall() {
+    fileprivate func createTargetBall() {
         targetBall = TargetBall()
         var posX: UInt! = UInt(arc4random_uniform(UInt32(define.WIDTH)))
         posX = targetBall.setScreenFit(posX)
@@ -155,17 +155,17 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         targetBall.ball.position = CGPoint(x:CGFloat(posX), y:self.frame.height-50)
         targetBall.setCategory(targetBallCategory, targetCat: ballCategory)
         self.addChild(self.targetBall.ball)
-        targetBall.ball.runAction(SKAction.fadeInWithDuration(0.5))
+        targetBall.ball.run(SKAction.fadeIn(withDuration: 0.5))
     }
     
-    private func moveTargetBall() {
-        self.enumerateChildNodesWithName("t_ball", usingBlock: {
+    fileprivate func moveTargetBall() {
+        self.enumerateChildNodes(withName: "t_ball", using: {
             node, stop in
             if node is SKSpriteNode {
                 let targetBall = node as! SKSpriteNode
                 self.ballUtil.setRebound(targetBall)
-                let dx = targetBall.userData?.valueForKey("dx") as! CGFloat
-                let dy = targetBall.userData?.valueForKey("dy") as! CGFloat
+                let dx = targetBall.userData?.value(forKey: "dx") as! CGFloat
+                let dy = targetBall.userData?.value(forKey: "dy") as! CGFloat
                 targetBall.position.x += dx
                 targetBall.position.y -= dy
                 
@@ -182,12 +182,12 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //自陣にボールが入った処理(oneplayとmultiplayで分岐します)
-    func tballComesInTouchArea(node: SKSpriteNode) {
+    func tballComesInTouchArea(_ node: SKSpriteNode) {
     }
     
     
     //  衝突したときの処理.
-    func didBeginContact(contact: SKPhysicsContact) {
+    func didBegin(_ contact: SKPhysicsContact) {
         
         var firstBody, secondBody: SKPhysicsBody
         
@@ -201,13 +201,13 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         }
         
         //      消滅させることができるのは発射したボールのみ.
-        let isFire = firstBody.node?.userData?.valueForKey("isFire")
+        let isFire = firstBody.node?.userData?.value(forKey: "isFire")
         if isFire == nil || !(isFire as! Bool) {
             return
         }
         
-        let myId = firstBody.node?.userData?.valueForKey("id")
-        let targetId = secondBody.node?.userData?.valueForKey("id")
+        let myId = firstBody.node?.userData?.value(forKey: "id")
+        let targetId = secondBody.node?.userData?.value(forKey: "id")
         
         let isNull = myId == nil || targetId == nil
         let isSame =  myId as! Int == targetId as! Int
@@ -218,7 +218,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
-        let num = secondBody.node?.userData?.valueForKey("num")
+        let num = secondBody.node?.userData?.value(forKey: "num")
         if num == nil {
             return
         }
@@ -243,7 +243,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    func updateComboCount(pnode: SKNode, tnode: SKNode) {
+    func updateComboCount(_ pnode: SKNode, tnode: SKNode) {
         comboCount += 1
         
         if comboCount == 1 {
@@ -256,14 +256,14 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         
         let comboLabel = SKLabelNode(fontNamed:"ChalkboardSE-Regular")
         comboLabel.text = "combo×"+String(comboCount-1)
-        comboLabel.fontColor = UIColor.redColor()
+        comboLabel.fontColor = UIColor.red
         comboLabel.fontSize = 20
         comboLabel.position = tnode.position
         self.addChild(comboLabel)
         
         let moveFadeOut = animation.moveToYFadeOut(0.8, yPos: tnode.position.y + 30, moveToY: 0.5)
         let sequence = animation.removeAfterAction(moveFadeOut)
-        comboLabel.runAction(sequence)
+        comboLabel.run(sequence)
         
         let prevCharge = charge.isFull //fullになった時のみを取得するため
         if !playerBall.isGold(pnode) {
@@ -280,49 +280,49 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         app.score = score
     }
     
-    func removeTargetBall(node: SKNode, id: Int) {
+    func removeTargetBall(_ node: SKNode, id: Int) {
         let spark = animation.sparkAnimation(node, id: id, scale: 0.5)
         self.addChild(spark)
         let sequence = animation.fadeOutRemove(0.5)
-        spark.runAction(sequence)
+        spark.run(sequence)
         node.removeFromParent()
     }
     
-    func changeTargetBall(pBall: SKNode, tBall: SKNode, id: Int) {
+    func changeTargetBall(_ pBall: SKNode, tBall: SKNode, id: Int) {
         //アニメーションはplayer ball
         let spark = animation.sparkAnimation(pBall, id: id, scale: 0.2)
         self.addChild(spark)
         let sequence = animation.fadeOutRemove(0.5)
-        spark.runAction(sequence)
+        spark.run(sequence)
         
-        let num = tBall.userData?.valueForKey("num") as! Int
+        let num = tBall.userData?.value(forKey: "num") as! Int
         let resNum = num - 1
         tBall.userData?.setValue(resNum, forKey: "num")
         let action = ballUtil.getBallImageByNum(id, num: resNum)
-        tBall.runAction(action)
+        tBall.run(action)
     }
     
     func launchAnimation() {
-        if playerBall.ball.userData?.valueForKey("id") == nil {
+        if playerBall.ball.userData?.value(forKey: "id") == nil {
             return
         }
-        let id = playerBall.ball.userData?.valueForKey("id") as! Int
+        let id = playerBall.ball.userData?.value(forKey: "id") as! Int
         let launch = animation.launchAnimation(playerBall.ball, id: id)
         self.addChild(launch)
         
         let moveFadeOut = animation.moveToYFadeOut(0.5, yPos: playerBall.ball.position.y - 20.0, moveToY: 0.5)
         let sequence = animation.removeAfterAction(moveFadeOut)
-        launch.runAction(sequence)
+        launch.run(sequence)
     }
     
     //  ゲームオーバー処理
     func finish() {
-        self.userInteractionEnabled = false
+        self.isUserInteractionEnabled = false
         finishView.setScoreLabel(score)
         finishView.alpha = 0.0
         self.view!.addSubview(finishView)
         
-        UIView.animateWithDuration(1, animations: {
+        UIView.animate(withDuration: 1, animations: {
             self.finishView.alpha = 1.0
             }, completion: { finished in
         })

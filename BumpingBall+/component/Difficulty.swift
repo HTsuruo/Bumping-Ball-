@@ -9,9 +9,20 @@
 import Foundation
 import UIKit
 import SpriteKit
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
 
 class Difficulty {
-    var app: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
     //ボールの速度を上げます.
     func getAccelerationSpeed() -> Double {
@@ -78,18 +89,18 @@ class Difficulty {
         return 0.5
     }
     
-    func isInRange(score: Int, from: Int, to: Int) -> Bool {
+    func isInRange(_ score: Int, from: Int, to: Int) -> Bool {
         if from <= score && score < to {
             return true
         }
         return false
     }
     
-    func getSpeed(division: Double, score: Int, alpha: Double) -> Double {
+    func getSpeed(_ division: Double, score: Int, alpha: Double) -> Double {
         return ((Double(score) / division) + alpha)/2
     }
     
-    func getInterval(division: Double, score: Int, alpha: Double) -> Double {
+    func getInterval(_ division: Double, score: Int, alpha: Double) -> Double {
         return (5.0-((Double(score) / division)+alpha))
     }
     

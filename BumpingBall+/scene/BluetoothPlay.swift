@@ -21,42 +21,42 @@ class BluetoothPlay: BaseScene, MCSessionDelegate, MCAdvertiserAssistantDelegate
     var myLifeCount = 3
     var partnerLifeCount = 3
     var sceneVC: UIViewController!
-    var loadingView = NVActivityIndicatorView(frame: CGRectMake(0, 0, 100, 100), type: .BallClipRotateMultiple, color: UIColor.whiteColor())
-    var loadingBkView = UIView(frame: CGRectMake(0, 0, define.WIDTH, define.HEIGHT))
+    var loadingView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), type: .ballClipRotateMultiple, color: UIColor.white)
+    var loadingBkView = UIView(frame: CGRect(x: 0, y: 0, width: define.WIDTH, height: define.HEIGHT))
 
     
-    override func didMoveToView(view: SKView) {
-        super.didMoveToView(view)
+    override func didMove(to view: SKView) {
+        super.didMove(to: view)
         self.view?.addSubview(headerViewMatch)
         
-        dispatch_async(dispatch_get_main_queue(), { //viewロードの整合を保ちます.
+        DispatchQueue.main.async(execute: { //viewロードの整合を保ちます.
             self.setupSession()
             self.setupLoadingComponent()
         })
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesBegan(touches, withEvent: event)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
     }
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesMoved(touches, withEvent: event)
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesEnded(touches, withEvent: event)
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
     }
     
-    override func update(currentTime: CFTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
     }
     
-    override func tballComesInTouchArea(node: SKSpriteNode) {
+    override func tballComesInTouchArea(_ node: SKSpriteNode) {
         if myLifeCount < 1 {
             return
         }
         node.removeFromParent()
-        headerViewMatch.disapperAnimation(PlayerType.PLAYER1, life: myLifeCount)
+        headerViewMatch.disapperAnimation(PlayerType.player1, life: myLifeCount)
         sendLifeData(myLifeCount)
         myLifeCount -= 1
         if myLifeCount < 1 {
@@ -66,7 +66,7 @@ class BluetoothPlay: BaseScene, MCSessionDelegate, MCAdvertiserAssistantDelegate
     }
     
     func setupSession() {
-        peerID = MCPeerID(displayName: UIDevice.currentDevice().name)
+        peerID = MCPeerID(displayName: UIDevice.current.name)
         session = MCSession(peer: peerID)
         session.delegate = self
         
@@ -77,11 +77,11 @@ class BluetoothPlay: BaseScene, MCSessionDelegate, MCAdvertiserAssistantDelegate
         browser = MCBrowserViewController(serviceType: "bbplus2016", session: session)
         browser.delegate = self
         sceneVC = Util.getForegroundViewController()
-        sceneVC.presentViewController(browser, animated: true, completion: nil)
+        sceneVC.present(browser, animated: true, completion: nil)
     }
     
     func setupLoadingComponent() {
-        loadingBkView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.8)
+        loadingBkView.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         loadingView.center = define.CENTER
         loadingBkView.addSubview(self.loadingView)
     }
@@ -112,91 +112,91 @@ class BluetoothPlay: BaseScene, MCSessionDelegate, MCAdvertiserAssistantDelegate
     
     func sendPauseData() {
         do {
-            let dic: Dictionary = ["isPaused": self.paused]
-            let data: NSData = NSKeyedArchiver.archivedDataWithRootObject(dic)
-            try session.sendData(data, toPeers: session.connectedPeers, withMode: .Reliable)
+            let dic: Dictionary = ["isPaused": self.isPaused]
+            let data: Data = NSKeyedArchiver.archivedData(withRootObject: dic)
+            try session.send(data, toPeers: session.connectedPeers, with: .reliable)
         } catch _ as NSError {
             print("sendPauseData failed")
         }
     }
     
-    func sendLifeData(lifeCount: Int) {
+    func sendLifeData(_ lifeCount: Int) {
         do {
             let dic: Dictionary = ["lifeCount": lifeCount]
-            let data: NSData = NSKeyedArchiver.archivedDataWithRootObject(dic)
-            try session.sendData(data, toPeers: session.connectedPeers, withMode: .Reliable)
+            let data: Data = NSKeyedArchiver.archivedData(withRootObject: dic)
+            try session.send(data, toPeers: session.connectedPeers, with: .reliable)
         } catch _ as NSError {
             print("sendLifeData failed")
         }
     }
     
-    func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
-        let dataObj = NSKeyedUnarchiver.unarchiveObjectWithData(data)! as AnyObject
+    func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
+        let dataObj = NSKeyedUnarchiver.unarchiveObject(with: data)! as AnyObject
         let dataDic = dataObj as! Dictionary<String, AnyObject>
         //※point!!（非同期なのでpromiseで認知してあげる必要がある.）
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
                 print("data : \(data)")
             let lifeCount = dataDic["lifeCount"] as! Int
-            self.headerViewMatch.disapperAnimation(PlayerType.PLAYER2, life: lifeCount)
+            self.headerViewMatch.disapperAnimation(PlayerType.player2, life: lifeCount)
         }
     }
     
-    func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
+    func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
         switch state {
-        case MCSessionState.Connected:
+        case MCSessionState.connected:
             print("Connected: \(peerID.displayName)")
-            dispatch_async(dispatch_get_main_queue(), {
-                self.headerViewMatch.playerLabel1.text = UIDevice.currentDevice().name
+            DispatchQueue.main.async(execute: {
+                self.headerViewMatch.playerLabel1.text = UIDevice.current.name
                 self.headerViewMatch.playerLabel2.text = peerID.displayName
                 self.hideLoadingComponent()
-                self.browser.dismissViewControllerAnimated(true, completion: nil)
+                self.browser.dismiss(animated: true, completion: nil)
                 self.countdownView.start()
             })
             
-        case MCSessionState.Connecting:
+        case MCSessionState.connecting:
             print("Connecting: \(peerID.displayName)")
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
                 self.showLoadingComponent()
                 self.browser.view.addSubview(self.loadingBkView)
             }
             
-        case MCSessionState.NotConnected:
+        case MCSessionState.notConnected:
             print("Not Connected: \(peerID.displayName)")
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
                 self.hideLoadingComponent()
-                let alert: UIAlertController = UIAlertController(title: "接続失敗", message: "再度デバイスを選択して下さい", preferredStyle:  UIAlertControllerStyle.Alert)
-                let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+                let alert: UIAlertController = UIAlertController(title: "接続失敗", message: "再度デバイスを選択して下さい", preferredStyle:  UIAlertControllerStyle.alert)
+                let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
                     (action: UIAlertAction!) -> Void in
                 })
                 alert.addAction(defaultAction)
-                self.browser.presentViewController(alert, animated: true, completion: nil)
+                self.browser.present(alert, animated: true, completion: nil)
             }
         }
     }
     
-    func session(session: MCSession, didReceiveStream stream: NSInputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
+    func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
     }
     
-    func session(session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, withProgress progress: NSProgress) {
+    func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, with progress: Progress) {
     }
     
-    func session(session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, atURL localURL: NSURL, withError error: NSError?) {
+    func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL, withError error: Error?) {
     }
     
-    func browserViewController(browserViewController: MCBrowserViewController, shouldPresentNearbyPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) -> Bool {
+    func browserViewController(_ browserViewController: MCBrowserViewController, shouldPresentNearbyPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) -> Bool {
         return true
     }
     
-    func browserViewControllerDidFinish(browserViewController: MCBrowserViewController) {
+    func browserViewControllerDidFinish(_ browserViewController: MCBrowserViewController) {
         hideLoadingComponent()
-        browser.dismissViewControllerAnimated(true, completion: nil)
-        sceneVC.dismissViewControllerAnimated(true, completion: nil)
+        browser.dismiss(animated: true, completion: nil)
+        sceneVC.dismiss(animated: true, completion: nil)
     }
     
-    func browserViewControllerWasCancelled(browserViewController: MCBrowserViewController) {
+    func browserViewControllerWasCancelled(_ browserViewController: MCBrowserViewController) {
         hideLoadingComponent()
-        browser.dismissViewControllerAnimated(true, completion: nil)
-        sceneVC.dismissViewControllerAnimated(true, completion: nil)
+        browser.dismiss(animated: true, completion: nil)
+        sceneVC.dismiss(animated: true, completion: nil)
     }
     
 }

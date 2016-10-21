@@ -13,13 +13,13 @@ import Spring
 
 class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, GKGameCenterControllerDelegate {
     
-    var app: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     let skView = SKView()
     var sceneView = SceneViewController()
     @IBOutlet weak var onePlayBtn: SpringButton!
     @IBOutlet weak var pickerView: UIPickerView!
     
-    private let difficulties: NSArray = ["Easy", "Normal", "Hard"]
+    fileprivate let difficulties: NSArray = ["Easy", "Normal", "Hard"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     
         if let scene = TopScene(fileNamed:"TopScene") {
             // Configure the view.
-            skView.frame = CGRectMake(0, 0, define.WIDTH, define.HEIGHT)
+            skView.frame = CGRect(x: 0, y: 0, width: define.WIDTH, height: define.HEIGHT)
             skView.showsFPS = true
             skView.showsNodeCount = true
             
@@ -36,13 +36,13 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             skView.ignoresSiblingOrder = true
             
             /* Set the scale mode to scale to fit the window */
-            scene.scaleMode = .ResizeFill
+            scene.scaleMode = .resizeFill
             
             skView.allowsTransparency = true
             skView.presentScene(scene)
         }
         self.view.addSubview(skView)
-        self.view.sendSubviewToBack(skView)
+        self.view.sendSubview(toBack: skView)
     }
     
     override func didReceiveMemoryWarning() {
@@ -51,58 +51,58 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     }
     
     
-    @IBAction func onClickOnePlayBtn(sender: UIButton) {
-        app.selectedPlay = PlayType.ONE
-        self.performSegueWithIdentifier("toPlay", sender: self)
+    @IBAction func onClickOnePlayBtn(_ sender: UIButton) {
+        app.selectedPlay = PlayType.one
+        self.performSegue(withIdentifier: "toPlay", sender: self)
     }
     
-    @IBAction func onClickMultiPlayBtn(sender: UIButton) {
+    @IBAction func onClickMultiPlayBtn(_ sender: UIButton) {
 //        app.selectedPlay = PlayType.BLUETOOTH
-        self.performSegueWithIdentifier("toPrepareMulti", sender: self)
+        self.performSegue(withIdentifier: "toPrepareMulti", sender: self)
     }
     
-    @IBAction func onClickRankBtn(sender: UIButton) {
+    @IBAction func onClickRankBtn(_ sender: UIButton) {
         sendAllScore()
         let localPlayer = GKLocalPlayer()
-        localPlayer.loadDefaultLeaderboardIdentifierWithCompletionHandler({(leaderboardIdentifier: String?, error: NSError?) -> Void in
+        localPlayer.loadDefaultLeaderboardIdentifier { (leaderboardIdentifier, error) in
             if error != nil {
                 print(error!.localizedDescription)
             } else {
                 let gcViewController: GKGameCenterViewController = GKGameCenterViewController()
                 gcViewController.gameCenterDelegate = self
-                gcViewController.viewState = GKGameCenterViewControllerState.Leaderboards
+                gcViewController.viewState = GKGameCenterViewControllerState.leaderboards
                 gcViewController.leaderboardIdentifier = "normal"
-                self.presentViewController(gcViewController, animated: true, completion: nil)
+                self.present(gcViewController, animated: true, completion: nil)
             }
-        })
+        }
     }
     
-    func gameCenterViewControllerDidFinish(gameCenterViewController: GKGameCenterViewController) {
-        gameCenterViewController.dismissViewControllerAnimated(true, completion: nil)
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
     }
     
     func sendAllScore() {
-        let ud = NSUserDefaults.standardUserDefaults()
-        GameCenterUtil.sendScore(ud.integerForKey("highscore-easy"), leaderBoardId: "easy")
-        GameCenterUtil.sendScore(ud.integerForKey("highscore-normal"), leaderBoardId: "normal")
-        GameCenterUtil.sendScore(ud.integerForKey("highscore-hard"), leaderBoardId: "hard")
+        let ud = UserDefaults.standard
+        GameCenterUtil.sendScore(ud.integer(forKey: "highscore-easy"), leaderBoardId: "easy")
+        GameCenterUtil.sendScore(ud.integer(forKey: "highscore-normal"), leaderBoardId: "normal")
+        GameCenterUtil.sendScore(ud.integer(forKey: "highscore-hard"), leaderBoardId: "hard")
     }
     
     /** picker view setting **/
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return difficulties.count
     }
     
-    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
-        let label = UILabel.init(frame: CGRectMake(0, 0, pickerView.frame.width, 40))
-        label.text = String(difficulties[row])
-        label.textAlignment = NSTextAlignment.Center
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let label = UILabel.init(frame: CGRect(x: 0, y: 0, width: pickerView.frame.width, height: 40))
+        label.text = String(describing: difficulties[row])
+        label.textAlignment = NSTextAlignment.center
         label.font = UIFont(name: "Candara", size: 24)
-        label.textColor = UIColor.whiteColor()
+        label.textColor = UIColor.white
         label.layer.masksToBounds = true
         label.layer.cornerRadius = 5.0
 //        switch row {
@@ -120,7 +120,7 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     }
     
     // 選択された時
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print("selected: \(row), \(difficulties[row])")
         app.selectedDiffculty = DifficultyType(rawValue: row)!
         setSelectedBkColor(row)
@@ -136,7 +136,7 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         setSelectedBkColor(app.selectedDiffculty.rawValue)
     }
     
-    func setSelectedBkColor (row: Int) {
+    func setSelectedBkColor (_ row: Int) {
         switch row {
         case 0:
             pickerView.backgroundColor = colorUtils.blue

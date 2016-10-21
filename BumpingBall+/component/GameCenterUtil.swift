@@ -12,12 +12,12 @@ import GameKit
 struct GameCenterUtil {
     static var localPlayer: GKLocalPlayer = GKLocalPlayer()
     
-    static func login(target: UIViewController) {
+    static func login(_ target: UIViewController) {
         self.localPlayer = GKLocalPlayer.localPlayer()
         self.localPlayer.authenticateHandler = {(viewController, error) -> Void in
             if (viewController) != nil {
                 print("LoginCheck: Failed - LoginPageOpen")
-                target.presentViewController(viewController!, animated: true, completion: nil)
+                target.present(viewController!, animated: true, completion: nil)
             } else {
                 print("LoginCheck: Success")
                 if error == nil {
@@ -29,18 +29,18 @@ struct GameCenterUtil {
         }
     }
     
-    static func sendScore(value: Int, leaderBoardId: String) {
+    static func sendScore(_ value: Int, leaderBoardId: String) {
         let score = GKScore()
         score.value = Int64(value)
         score.leaderboardIdentifier = leaderBoardId
         let scoreArr: [GKScore] = [score]
-        GKScore.reportScores(scoreArr, withCompletionHandler: {(error: NSError?) -> Void in
+        GKScore.report(scoreArr) { (error) in
             if error != nil {
                 print("Report: Error")
             } else {
                 print("Report: OK")
             }
-        })
+        }
     }
     
 //    static func dispLeaderBoard(vc: UIViewController) {

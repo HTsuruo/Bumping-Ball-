@@ -19,17 +19,17 @@ class ChargeMeter: SKSpriteNode {
     
     init() {
         let texture = SKTexture(imageNamed: "chargeMeter")
-        super.init(texture: texture, color: colorUtils.gold, size: CGSizeMake(define.WIDTH + 30, 5))
-        self.position = CGPointMake(initialPos, define.HEIGHT - (define.HEADER_HEIGHT + 2.5))
+        super.init(texture: texture, color: colorUtils.gold, size: CGSize(width: define.WIDTH + 30, height: 5))
+        self.position = CGPoint(x: initialPos, y: define.HEIGHT - (define.HEADER_HEIGHT + 2.5))
         let action = animation.chargeMeterAnimation(0.8)
-        self.runAction(action)
+        self.run(action)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func update(combo: Int) {
+    func update(_ combo: Int) {
         charge += combo
         if isFull {
             return
@@ -39,18 +39,18 @@ class ChargeMeter: SKSpriteNode {
         }
         let currentPos = self.position.x
         let nextPos = currentPos + getIncrement(combo)
-        let move = SKAction.moveToX(CGFloat(nextPos), duration: 0.4)
-        self.runAction(move)
+        let move = SKAction.moveTo(x: CGFloat(nextPos), duration: 0.4)
+        self.run(move)
     }
     
-    func getIncrement(combo: Int) -> CGFloat {
+    func getIncrement(_ combo: Int) -> CGFloat {
         return CGFloat(combo) * (define.WIDTH / 50)
     }
     
     func reset () {
         charge = 0
         isFull = false
-        self.position = CGPointMake(initialPos, define.HEIGHT - (define.HEADER_HEIGHT + 2.5))
+        self.position = CGPoint(x: initialPos, y: define.HEIGHT - (define.HEADER_HEIGHT + 2.5))
     }
 
 
