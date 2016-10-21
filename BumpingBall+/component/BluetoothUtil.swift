@@ -88,7 +88,14 @@ class BluetoothUtil: NSObject, MCSessionDelegate, MCAdvertiserAssistantDelegate,
                 self.scene.headerViewMatch.playerLabel2.text = peerID.displayName
                 self.hideLoadingComponent()
                 self.browser.dismiss(animated: true, completion: nil)
-                self.scene.sessionConnected()
+                
+                let alert: UIAlertController = UIAlertController(title: " 準備完了", message: "接続が完了しました\nOKを押すとスタートします", preferredStyle:  UIAlertControllerStyle.alert)
+                let defaultAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
+                    (action: UIAlertAction!) -> Void in
+                    self.scene.sessionConnected()
+                })
+                alert.addAction(defaultAction)
+                self.vc.present(alert, animated: true, completion: nil)
             })
             
         case MCSessionState.connecting:
@@ -102,12 +109,8 @@ class BluetoothUtil: NSObject, MCSessionDelegate, MCAdvertiserAssistantDelegate,
             print("Not Connected: \(peerID.displayName)")
             DispatchQueue.main.async {
                 self.hideLoadingComponent()
-                let alert: UIAlertController = UIAlertController(title: "接続失敗", message: "再度デバイスを選択して下さい", preferredStyle:  UIAlertControllerStyle.alert)
-                let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
-                    (action: UIAlertAction!) -> Void in
-                })
-                alert.addAction(defaultAction)
-                self.browser.present(alert, animated: true, completion: nil)
+                let alertUtil = AlertUtil(vc: self.browser)
+                alertUtil.common(title: "接続失敗", msg: "左上のキャンセルボタンを押した後、再度デバイスを選択して下さい")
             }
         }
     }

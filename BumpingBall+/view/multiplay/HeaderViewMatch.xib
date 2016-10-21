@@ -191,13 +191,13 @@
                             </constraints>
                             <variation key="default">
                                 <mask key="constraints">
-                                    <exclude reference="07L-8o-02Z"/>
-                                    <exclude reference="g0s-vV-b1U"/>
-                                    <exclude reference="0BY-SK-IOo"/>
-                                    <exclude reference="fgl-lM-Gd5"/>
                                     <exclude reference="C1a-Om-rUr"/>
                                     <exclude reference="UKs-aZ-AZa"/>
                                     <exclude reference="nl9-zA-nZg"/>
+                                    <exclude reference="0BY-SK-IOo"/>
+                                    <exclude reference="fgl-lM-Gd5"/>
+                                    <exclude reference="07L-8o-02Z"/>
+                                    <exclude reference="g0s-vV-b1U"/>
                                 </mask>
                             </variation>
                         </view>
@@ -235,7 +235,7 @@
                 <constraint firstItem="IaT-N2-ZGu" firstAttribute="leading" secondItem="WYK-xa-oQG" secondAttribute="trailing" constant="10" id="yAM-Sl-9Td"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="171" y="434"/>
+            <point key="canvasLocation" x="153" y="-1"/>
         </view>
     </objects>
     <resources>

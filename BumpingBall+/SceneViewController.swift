@@ -22,9 +22,11 @@ class SceneViewController: UIViewController {
     @IBOutlet weak var quitBtn: UIButton!
     @IBOutlet weak var restartBtn: UIButton!
     var isMultiPlay = true
+    var alertUtil: AlertUtil! = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        alertUtil = AlertUtil(vc: self)
         
         let playType = app.selectedPlay
         switch playType {
@@ -85,22 +87,46 @@ class SceneViewController: UIViewController {
         skView.isPaused = true
         countdownView.stop()
         self.view.addSubview(pauseMenu)
-        
+        sendPauseData(type: PauseType.pause)
     }
     
     @IBAction func onClickResumeBtn(_ sender: UIButton) {
         skView.isPaused = false
         pauseMenu.removeFromSuperview()
+        sendPauseData(type: PauseType.resume)
     }
 
     @IBAction func onClickQuitBtn(_ sender: UIButton) {
         let onePlayVC = Util.getForegroundViewController()
         onePlayVC.dismiss(animated: true, completion: nil)
+        sendPauseData(type: PauseType.quit)
     }
     
+//    one play only.
     @IBAction func restartBtn(_ sender: UIButton) {
+        if isMultiPlay {
+            alertUtil.common(title: "注意", msg: "この機能はマルチプレイモードではご利用できません")
+            return
+        }
         self.loadView()
         self.viewDidLoad()
+    }
+    
+    func sendPauseData(type: PauseType) {
+        if !isMultiPlay {
+            return
+        }
+        let playType = app.selectedPlay
+        switch playType {
+        case .one:
+            break
+        case .bluetooth:
+            let bluetoothScene = scene as! BluetoothPlay
+            bluetoothScene.sendPauseData(type: type)
+            break
+        case .network:
+            break
+        }
     }
     
 }

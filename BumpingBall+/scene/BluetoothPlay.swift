@@ -14,18 +14,23 @@ import NVActivityIndicatorView
 class BluetoothPlay: BaseScene {
     
     let headerViewMatch = HeaderViewMatch()
+    let prepareView = PrepareView()
+    var waitingView = WaitingView()
     var myLifeCount = 3
     var partnerLifeCount = 3
     var sceneVC: UIViewController!
     var loadingView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), type: .ballClipRotateMultiple, color: UIColor.white)
     var loadingBkView = UIView(frame: CGRect(x: 0, y: 0, width: CGFloat.WIDTH, height: CGFloat.HEIGHT))
     var bluetoothUtil: BluetoothUtil! = nil
-
+    var selfPrepared = false
+    var partnerPrepared = false
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         self.view?.addSubview(headerViewMatch)
-        
+        self.view?.addSubview(prepareView)
+        self.view?.addSubview(waitingView)
+
         DispatchQueue.main.async(execute: { //viewロードの整合を保ちます.
             self.bluetoothUtil = BluetoothUtil(scene: self)
             self.bluetoothUtil.setupSession()
@@ -34,7 +39,19 @@ class BluetoothPlay: BaseScene {
     }
     
     func sessionConnected() {
-        self.countdownView.start()
+        selfPrepared = true
+        let dic: [String : AnyObject] = ["prepared": true as AnyObject]
+        bluetoothUtil.sendData(dic: dic)
+        waitingView.show()
+        start()
+        prepareView.removeFromSuperview()
+    }
+    
+    func start() {
+        if selfPrepared && partnerPrepared {
+            waitingView.hide()
+            self.countdownView.start()
+        }
     }
     
     override func tballComesInTouchArea(_ node: SKSpriteNode) {
@@ -51,8 +68,8 @@ class BluetoothPlay: BaseScene {
         }
     }
     
-    func sendPauseData() {
-        let dic: [String : AnyObject] = ["isPaused": self.isPaused as AnyObject]
+    func sendPauseData(type: PauseType) {
+        let dic: [String : AnyObject] = ["pause": type.rawValue as AnyObject]
         bluetoothUtil.sendData(dic: dic)
     }
     
@@ -63,15 +80,32 @@ class BluetoothPlay: BaseScene {
     
     func receiveData(data: [String: AnyObject]) {
         
+        if let data = data["prepared"] {
+            partnerPrepared = data as! Bool
+            start()
+        }
+        
         if let data = data["lifeCount"] {
             let lifeCount = data as! Int
             self.headerViewMatch.disapperAnimation(PlayerType.player2, life: lifeCount)
         }
         
-        if let data = data["isPaused"] {
-            let isPaused = data as! Bool
-            if isPaused {
-                
+        if let data = data["pause"] {
+            let pause = PauseType(rawValue: data as! Int)
+            switch pause! {
+            case .pause:
+                self.isPaused = true
+                waitingView.txt.text = "Pausing.."
+                waitingView.show()
+                break
+            case .resume:
+                self.isPaused = false
+                waitingView.hide()
+                break
+            case .quit:
+                break
+            default:
+                break
             }
         }
     }

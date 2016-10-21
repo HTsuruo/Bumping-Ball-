@@ -87,3 +87,10 @@ enum PlayerType: Int {
     case player1 = 1
     case player2 = 2
 }
+
+enum PauseType: Int {
+    case pause = 0
+    case resume = 1
+    case restart = 2
+    case quit = 3
+}

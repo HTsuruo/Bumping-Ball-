@@ -28,7 +28,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="794" y="11"/>
+            <point key="canvasLocation" x="792.79999999999995" y="10.344827586206897"/>
         </scene>
         <!--Prepare Multi Play View Controller-->
         <scene sceneID="ha9-m7-xiq">
