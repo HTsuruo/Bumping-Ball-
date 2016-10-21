@@ -23,12 +23,12 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Util.setStatusBar(self.view)
         pickerViewInit()
+        UIApplication.setStatusBar(self.view)
     
         if let scene = TopScene(fileNamed:"TopScene") {
             // Configure the view.
-            skView.frame = CGRect(x: 0, y: 0, width: define.WIDTH, height: define.HEIGHT)
+            skView.frame = CGRect(x: 0, y: 0, width: CGFloat.WIDTH, height: CGFloat.HEIGHT)
             skView.showsFPS = true
             skView.showsNodeCount = true
             

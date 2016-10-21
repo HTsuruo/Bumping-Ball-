@@ -15,7 +15,7 @@ class SceneViewController: UIViewController {
     var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     var skView = SKView()
     let countdownView = CountdownView()
-    let finishView = FinishView(frame: CGRect(x: 0, y: 0, width: define.WIDTH, height: define.HEIGHT))
+    let finishView = FinishView(frame: CGRect(x: 0, y: 0, width: CGFloat.WIDTH, height: CGFloat.HEIGHT))
     var scene = SKScene()
     @IBOutlet var pauseMenu: UIView!
     @IBOutlet weak var resumeBtn: UIButton!
@@ -55,14 +55,14 @@ class SceneViewController: UIViewController {
     
     func loadNib() {
         pauseMenu = UINib(nibName: "PauseMenu", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
-        pauseMenu.frame = CGRect(x: 0, y: 0, width: define.WIDTH, height: define.HEIGHT)
+        pauseMenu.frame = CGRect(x: 0, y: 0, width: CGFloat.WIDTH, height: CGFloat.HEIGHT)
     }
-
-    override var shouldAutorotate : Bool {
+    
+    override var shouldAutorotate: Bool {
         return true
     }
 
-    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
             return .allButUpsideDown
         } else {
@@ -75,7 +75,7 @@ class SceneViewController: UIViewController {
         // Release any cached data, images, etc that aren't in use.
     }
 
-    override var prefersStatusBarHidden : Bool {
+    override var prefersStatusBarHidden: Bool {
         return true
     }
     

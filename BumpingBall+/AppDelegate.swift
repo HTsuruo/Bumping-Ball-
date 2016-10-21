@@ -34,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerUserNotificationSettings(notificationSettings)
         application.registerForRemoteNotifications()
         FIRApp.configure()
+        
         return true
     }
 

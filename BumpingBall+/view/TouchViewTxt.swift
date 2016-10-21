@@ -28,7 +28,7 @@ class TouchViewTxt: UIView {
     
     fileprivate func loadNib() {
         Bundle.main.loadNibNamed("TouchViewTxt", owner: self, options: nil)
-        contentView.frame = CGRect(x: 0, y: define.HEIGHT - define.TOUCH_HEIGHT, width: define.WIDTH, height: define.TOUCH_HEIGHT)
+        contentView.frame = CGRect(x: 0, y: CGFloat.HEIGHT - define.TOUCH_HEIGHT, width: CGFloat.WIDTH, height: define.TOUCH_HEIGHT)
         self.addSubview(contentView)
     }
     

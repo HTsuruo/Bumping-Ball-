@@ -32,7 +32,7 @@ class CountdownView: UIView {
     
     fileprivate func loadXib() {
         Bundle.main.loadNibNamed("CountdownView", owner: self, options: nil)
-        contentView.frame = CGRect(x: 0, y: 0, width: define.WIDTH, height: define.HEIGHT)
+        contentView.frame = CGRect(x: 0, y: 0, width: CGFloat.WIDTH, height: CGFloat.HEIGHT)
         self.addSubview(contentView)
     }
     
@@ -64,7 +64,7 @@ class CountdownView: UIView {
             let scale: CGFloat = 2.0
             UIView.animate(withDuration: 1, animations: {
                 self.imageView.frame = CGRect(x: 0, y: 0, width: w * scale, height: h * scale)
-                self.imageView.center = define.CENTER
+                self.imageView.center = CGFloat.CENTER
                 self.imageView.alpha = 0.0
                 self.contentView.alpha = 0.0
                 }, completion: { finished in

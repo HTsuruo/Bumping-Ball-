@@ -104,8 +104,8 @@ struct TargetBall {
         
         //        右に見きれてしまうケース.
         let sizePlusPosX = Int(posX) + halfSize
-        if sizePlusPosX > Int(define.WIDTH) {
-            posX = UInt(Int(define.WIDTH) - halfSize)
+        if sizePlusPosX > Int(CGFloat.WIDTH) {
+            posX = UInt(Int(CGFloat.WIDTH) - halfSize)
         }
         return posX
     }

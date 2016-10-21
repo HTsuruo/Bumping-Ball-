@@ -15,22 +15,19 @@ class PrepareMultiPlayViewController: UIViewController {
 
     @IBOutlet weak var bluetoothArea: UIView!
     @IBOutlet weak var networkArea: UIView!
-    @IBOutlet weak var bluetoothAiView: NVActivityIndicatorView!
-    @IBOutlet weak var networkAiView: NVActivityIndicatorView!
     @IBOutlet weak var animationLabel: UILabel!
     
     fileprivate var i = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Util.setStatusBar(self.view)
         self.view.backgroundColor = colorUtils.navy
-        bluetoothAiView.startAnimating()
-        networkAiView.startAnimating()
-        bluetoothAiView.alpha = 0.0
+        UIApplication.setStatusBar(self.view)
+//        bluetoothAiView.startAnimating()
+//        networkAiView.startAnimating()
+//        bluetoothAiView.alpha = 0.0
         animationLabel.text = NSLocalizedString("prepare_multi_text", comment: "")
     }
-
     
     @IBAction func onClickBackBtn(_ sender: UIButton) {
         timer?.invalidate()

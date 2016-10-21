@@ -22,7 +22,7 @@ class BluetoothPlay: BaseScene, MCSessionDelegate, MCAdvertiserAssistantDelegate
     var partnerLifeCount = 3
     var sceneVC: UIViewController!
     var loadingView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), type: .ballClipRotateMultiple, color: UIColor.white)
-    var loadingBkView = UIView(frame: CGRect(x: 0, y: 0, width: define.WIDTH, height: define.HEIGHT))
+    var loadingBkView = UIView(frame: CGRect(x: 0, y: 0, width: CGFloat.WIDTH, height: CGFloat.HEIGHT))
 
     
     override func didMove(to view: SKView) {
@@ -82,7 +82,7 @@ class BluetoothPlay: BaseScene, MCSessionDelegate, MCAdvertiserAssistantDelegate
     
     func setupLoadingComponent() {
         loadingBkView.backgroundColor = UIColor.black.withAlphaComponent(0.8)
-        loadingView.center = define.CENTER
+        loadingView.center = CGFloat.CENTER
         loadingBkView.addSubview(self.loadingView)
     }
     

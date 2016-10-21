@@ -10,28 +10,17 @@ import UIKit
 import SpriteKit
 
 struct define {
-    static let WIDTH: CGFloat = UIScreen.main.bounds.size.width
-    static let HEIGHT: CGFloat = UIScreen.main.bounds.size.height
-    static let statusHeight: CGFloat = UIApplication.shared.statusBarFrame.height
-    static let CENTER: CGPoint = CGPoint(x: WIDTH/2, y: HEIGHT/2)
     static let MAX = 20
     static let BALL_INIT_SCALE = CGFloat(0.5)
     static let BALL_INIT_SPEED = CGFloat(0.5)
     static let TOUCH_MARGIN = CGFloat(50.0) //タッチ箇所とボールが被って見難くなってしまうので少しずらします.
     static let HEADER_HEIGHT: CGFloat = 60.0
-    static let REMOVE_HEIGHT = CGFloat(HEIGHT - (HEADER_HEIGHT))
+    static let REMOVE_HEIGHT = CGFloat(CGFloat.HEIGHT - (HEADER_HEIGHT))
     static let TOUCH_HEIGHT: CGFloat = 65.0
-    static let TOUCH_AREA = CGRect(x: 0, y: 0, width: define.WIDTH, height: TOUCH_HEIGHT)
+    static let TOUCH_AREA = CGRect(x: 0, y: 0, width: CGFloat.WIDTH, height: TOUCH_HEIGHT)
 }
 
 struct Util {
-    
-    //status barのところは時刻などを見やすくするためにあけてあげる.
-    static func setStatusBar(_ parentView: UIView) {
-        let v: UIView = UIView(frame: CGRect(x: 0, y: 0, width: define.WIDTH, height: define.statusHeight))
-        v.backgroundColor = UIColor.white
-        parentView.addSubview(v)
-    }
     
     //最前面のビューコントローラを取得する
    static func getForegroundViewController() -> UIViewController {
@@ -80,8 +69,8 @@ class BallUtils: NSObject {
             screenCollision = true
         }
         
-        if node.position.x > define.WIDTH - CGFloat(halfSize) {
-            node.position.x = define.WIDTH - CGFloat(halfSize)
+        if node.position.x > CGFloat.WIDTH - CGFloat(halfSize) {
+            node.position.x = CGFloat.WIDTH - CGFloat(halfSize)
             screenCollision = true
         }
         
@@ -92,7 +81,7 @@ class BallUtils: NSObject {
             screenCollision = true
         }
         let sizePlusPosX = Int(posX) + halfSize
-        if sizePlusPosX > Int(define.WIDTH) {
+        if sizePlusPosX > Int(CGFloat.WIDTH) {
             screenCollision = true
         }
         

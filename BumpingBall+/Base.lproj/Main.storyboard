@@ -42,8 +42,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U7x-M9-wDb">
-                                <frame key="frameInset" minY="20" width="600" height="60"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U7x-M9-wDb">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDT-G0-YYa">
                                         <constraints>
@@ -54,8 +53,7 @@
                                             <action selector="onClickBackBtn:" destination="ybY-7A-oOF" eventType="touchUpInside" id="Osd-k7-1gs"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Multi Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogm-4G-WJX">
-                                        <frame key="frameInset" minX="250" minY="18" width="100" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multi Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogm-4G-WJX">
                                         <fontDescription key="fontDescription" name="Candara" family="Candara" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -71,8 +69,7 @@
                                     <constraint firstItem="Ogm-4G-WJX" firstAttribute="centerY" secondItem="U7x-M9-wDb" secondAttribute="centerY" id="szw-t3-tho"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PzY-zP-vrD">
-                                <frame key="frameInset" minX="198" minY="105" width="204" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PzY-zP-vrD">
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PzY-zP-vrD" secondAttribute="height" multiplier="68:7" id="us3-qe-enQ"/>
                                 </constraints>
@@ -91,11 +88,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KRN-Me-jaT" userLabel="Bluetooth View">
-                                <frame key="frameInset" minX="30" minY="150" width="540" height="351"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KRN-Me-jaT" userLabel="Bluetooth View">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vf-aQ-jIt">
-                                        <frame key="frameInset" minX="95" minY="65" width="350" height="65"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vf-aQ-jIt">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="M2y-SO-gAa"/>
                                             <constraint firstAttribute="width" constant="350" id="bxx-JO-Fpb"/>
@@ -113,15 +108,13 @@
                                             <constraint firstAttribute="width" constant="50" id="hLM-ze-ufY"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon_bluetooth.png" translatesAutoresizingMaskIntoConstraints="NO" id="cVZ-zr-aLA">
-                                        <frame key="frameInset" minX="480" minY="10" width="50" height="50"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_bluetooth.png" translatesAutoresizingMaskIntoConstraints="NO" id="cVZ-zr-aLA">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="DKs-XA-o3T"/>
                                             <constraint firstAttribute="height" constant="50" id="Dzn-Ll-NS6"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="近くの人と対戦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qd-uL-ssq">
-                                        <frame key="frameInset" minX="211" minY="24" width="119" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近くの人と対戦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qd-uL-ssq">
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="1Qd-uL-ssq" secondAttribute="height" multiplier="17:3" id="Ovo-12-4Lb"/>
                                         </constraints>
@@ -129,8 +122,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiB-9J-GGl">
-                                        <frame key="frameInset" minX="254" minY="311" width="32" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiB-9J-GGl">
                                         <fontDescription key="fontDescription" name="Candara" family="Candara" pointSize="18"/>
                                         <state key="normal" title="Play">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -139,23 +131,6 @@
                                             <action selector="onClickBluetoothPlayBtn:" destination="ybY-7A-oOF" eventType="touchUpInside" id="rpI-J7-X3O"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZq-RP-0fT" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
-                                        <frame key="frameInset" minX="195" minY="101" width="150" height="150"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="eyt-la-tic"/>
-                                            <constraint firstAttribute="height" constant="150" id="kgH-iw-kHh"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="BallScaleRippleMultiple"/>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="padding">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -164,35 +139,17 @@
                                     <constraint firstAttribute="width" secondItem="KRN-Me-jaT" secondAttribute="height" multiplier="2:1.3" id="5XU-uA-7r0"/>
                                     <constraint firstAttribute="bottom" secondItem="MiB-9J-GGl" secondAttribute="bottom" constant="10" id="7Nx-tY-ecG"/>
                                     <constraint firstItem="1Qd-uL-ssq" firstAttribute="centerX" secondItem="KRN-Me-jaT" secondAttribute="centerX" id="7Tc-jT-pCF"/>
-                                    <constraint firstItem="AZq-RP-0fT" firstAttribute="leading" secondItem="KRN-Me-jaT" secondAttribute="leading" constant="10" id="AaO-95-3Ya"/>
-                                    <constraint firstItem="AZq-RP-0fT" firstAttribute="top" secondItem="KRN-Me-jaT" secondAttribute="top" constant="10" id="BA5-LI-xAb"/>
-                                    <constraint firstItem="AZq-RP-0fT" firstAttribute="centerY" secondItem="KRN-Me-jaT" secondAttribute="centerY" id="F1M-CD-XU1"/>
-                                    <constraint firstItem="AZq-RP-0fT" firstAttribute="centerY" secondItem="KRN-Me-jaT" secondAttribute="centerY" id="Fcf-7D-TP0"/>
                                     <constraint firstItem="1vf-aQ-jIt" firstAttribute="top" secondItem="1Qd-uL-ssq" secondAttribute="bottom" constant="20" id="HSk-NQ-Bn6"/>
                                     <constraint firstItem="bW2-QE-UkU" firstAttribute="top" secondItem="KRN-Me-jaT" secondAttribute="top" constant="10" id="U1K-RJ-Syw"/>
                                     <constraint firstItem="1Qd-uL-ssq" firstAttribute="top" secondItem="KRN-Me-jaT" secondAttribute="top" constant="24" id="UTf-bh-dOo"/>
                                     <constraint firstItem="1vf-aQ-jIt" firstAttribute="centerX" secondItem="KRN-Me-jaT" secondAttribute="centerX" id="VUB-g6-3qb"/>
                                     <constraint firstAttribute="trailing" secondItem="cVZ-zr-aLA" secondAttribute="trailing" constant="10" id="Y8u-wn-Cgb"/>
-                                    <constraint firstItem="AZq-RP-0fT" firstAttribute="centerX" secondItem="KRN-Me-jaT" secondAttribute="centerX" id="cgY-xw-1F5"/>
-                                    <constraint firstItem="AZq-RP-0fT" firstAttribute="centerY" secondItem="KRN-Me-jaT" secondAttribute="centerY" id="g1F-Mi-l4l"/>
                                     <constraint firstItem="MiB-9J-GGl" firstAttribute="centerX" secondItem="KRN-Me-jaT" secondAttribute="centerX" id="hXj-4S-ksB"/>
-                                    <constraint firstItem="AZq-RP-0fT" firstAttribute="centerX" secondItem="KRN-Me-jaT" secondAttribute="centerX" id="ig0-ov-JSl"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="AaO-95-3Ya"/>
-                                        <exclude reference="BA5-LI-xAb"/>
-                                        <exclude reference="Fcf-7D-TP0"/>
-                                        <exclude reference="cgY-xw-1F5"/>
-                                        <exclude reference="g1F-Mi-l4l"/>
-                                    </mask>
-                                </variation>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Im1-9H-Atc" userLabel="Network View">
-                                <frame key="frameInset" minX="30" minY="189" width="540" height="351"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Im1-9H-Atc" userLabel="Network View">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKx-sC-Hlw">
-                                        <frame key="frameInset" minX="95" minY="65" width="350" height="65"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKx-sC-Hlw">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="4Zw-QG-YCl"/>
                                             <constraint firstAttribute="width" constant="350" id="KU3-kZ-UeI"/>
@@ -210,15 +167,13 @@
                                             <constraint firstAttribute="height" constant="50" id="CZX-OA-wlx"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icon_wifi.png" translatesAutoresizingMaskIntoConstraints="NO" id="71B-8J-Do7">
-                                        <frame key="frameInset" minX="480" minY="10" width="50" height="50"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_wifi.png" translatesAutoresizingMaskIntoConstraints="NO" id="71B-8J-Do7">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="knA-Ta-UA1"/>
                                             <constraint firstAttribute="width" constant="50" id="sdR-MR-3JZ"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="遠くの人と対戦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQs-0O-UPQ">
-                                        <frame key="frameInset" minX="211" minY="24" width="119" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="遠くの人と対戦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQs-0O-UPQ">
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="UQs-0O-UPQ" secondAttribute="height" multiplier="17:3" id="kYI-T2-oh0"/>
                                         </constraints>
@@ -226,30 +181,12 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO2-ka-Jgz">
-                                        <frame key="frameInset" minX="254" minY="311" width="32" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO2-ka-Jgz">
                                         <fontDescription key="fontDescription" name="Candara" family="Candara" pointSize="18"/>
                                         <state key="normal" title="Play">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y6z-He-ep5" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
-                                        <frame key="frameInset" minX="195" minY="101" width="150" height="150"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="DJt-gc-BSg"/>
-                                            <constraint firstAttribute="height" constant="150" id="ReN-gQ-oYI"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="BallScaleMultiple"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="padding">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -259,8 +196,6 @@
                                     <constraint firstItem="lKP-8Q-tvc" firstAttribute="leading" secondItem="Im1-9H-Atc" secondAttribute="leading" constant="10" id="Asd-Gx-1VS"/>
                                     <constraint firstItem="UQs-0O-UPQ" firstAttribute="centerX" secondItem="Im1-9H-Atc" secondAttribute="centerX" id="KyR-3M-fUn"/>
                                     <constraint firstItem="UQs-0O-UPQ" firstAttribute="top" secondItem="Im1-9H-Atc" secondAttribute="top" constant="24" id="SSh-FC-LrT"/>
-                                    <constraint firstItem="y6z-He-ep5" firstAttribute="centerX" secondItem="Im1-9H-Atc" secondAttribute="centerX" id="TWz-MJ-Y4Q"/>
-                                    <constraint firstItem="y6z-He-ep5" firstAttribute="centerY" secondItem="Im1-9H-Atc" secondAttribute="centerY" id="Vx4-S4-LM2"/>
                                     <constraint firstItem="71B-8J-Do7" firstAttribute="top" secondItem="Im1-9H-Atc" secondAttribute="top" constant="10" id="akg-Ar-5xQ"/>
                                     <constraint firstItem="qKx-sC-Hlw" firstAttribute="top" secondItem="UQs-0O-UPQ" secondAttribute="bottom" constant="20" id="dqh-CV-Rzg"/>
                                     <constraint firstAttribute="width" secondItem="Im1-9H-Atc" secondAttribute="height" multiplier="2:1.3" id="sFU-sk-JKu"/>
@@ -304,9 +239,7 @@
                     </view>
                     <connections>
                         <outlet property="animationLabel" destination="PzY-zP-vrD" id="lzP-5L-Fv4"/>
-                        <outlet property="bluetoothAiView" destination="AZq-RP-0fT" id="DC8-kx-phZ"/>
                         <outlet property="bluetoothArea" destination="KRN-Me-jaT" id="OQD-uY-vGQ"/>
-                        <outlet property="networkAiView" destination="y6z-He-ep5" id="qZO-EX-5Lz"/>
                         <outlet property="networkArea" destination="Im1-9H-Atc" id="Jlh-bK-J1i"/>
                         <segue destination="BV1-FR-VrT" kind="presentation" identifier="toMultiPlay" modalTransitionStyle="flipHorizontal" id="SpC-Om-bGS"/>
                     </connections>
@@ -327,8 +260,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsc-yv-aM9" customClass="SpringButton" customModule="Spring">
-                                <frame key="frameInset" minX="60" minY="236" width="480" height="251"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsc-yv-aM9" customClass="SpringButton" customModule="Spring">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="1Y8-5a-RGw"/>
                                     <constraint firstAttribute="height" constant="138" id="HCd-nC-3v5"/>
@@ -369,8 +301,7 @@
                                     <action selector="onClickOnePlayBtn:" destination="FFW-j8-PWE" eventType="touchUpInside" id="pbM-Mx-Wbe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DC-Gf-4nI" userLabel="Multi Play Btn" customClass="SpringButton" customModule="Spring">
-                                <frame key="frameInset" minX="60" minY="547" width="480" height="251"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DC-Gf-4nI" userLabel="Multi Play Btn" customClass="SpringButton" customModule="Spring">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="233" id="EzX-YK-eNB"/>
                                     <constraint firstAttribute="height" constant="138" id="WtB-bg-SaO"/>
@@ -401,8 +332,7 @@
                                     <action selector="onClickMultiPlayBtn:" destination="FFW-j8-PWE" eventType="touchUpInside" id="Rdo-iU-Veh"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="titleTxt.png" translatesAutoresizingMaskIntoConstraints="NO" id="X6h-on-Pm5" customClass="SpringImageView" customModule="Spring">
-                                <frame key="frameInset" minX="30" minY="30" width="540" height="146"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleTxt.png" translatesAutoresizingMaskIntoConstraints="NO" id="X6h-on-Pm5" customClass="SpringImageView" customModule="Spring">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="136" id="1Aq-wc-ERX"/>
                                     <constraint firstAttribute="width" secondItem="X6h-on-Pm5" secondAttribute="height" multiplier="37:10" id="75x-fk-6Dt"/>
@@ -438,11 +368,9 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Gg-oc-1cL" userLabel="Bottom View">
-                                <frame key="frameInset" minX="30" minY="590" width="540"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Gg-oc-1cL" userLabel="Bottom View">
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQ2-q2-ikT" userLabel="Help Btn" customClass="SpringButton" customModule="Spring">
-                                        <frame key="frameInset" minX="230" minY="10" width="80" height="80"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQ2-q2-ikT" userLabel="Help Btn" customClass="SpringButton" customModule="Spring">
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="fQ2-q2-ikT" secondAttribute="height" multiplier="20:20" id="vGv-1v-na6"/>
                                         </constraints>
@@ -458,8 +386,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xW5-0z-0Ae" userLabel="Help Btn" customClass="SpringButton" customModule="Spring">
-                                        <frame key="frameInset" minX="440" minY="10" width="80" height="80"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xW5-0z-0Ae" userLabel="Help Btn" customClass="SpringButton" customModule="Spring">
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="xW5-0z-0Ae" secondAttribute="height" multiplier="20:20" id="USz-vE-nAq"/>
                                         </constraints>
@@ -475,8 +402,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2VT-en-ORm" userLabel="Rank Btn" customClass="SpringButton" customModule="Spring">
-                                        <frame key="frameInset" minX="20" minY="10" width="80" height="80"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2VT-en-ORm" userLabel="Rank Btn" customClass="SpringButton" customModule="Spring">
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="2VT-en-ORm" secondAttribute="height" multiplier="20:20" id="zIK-4x-S5G"/>
                                         </constraints>
@@ -520,8 +446,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lxz-0d-ckm">
-                                <frame key="frameInset" minX="70" minY="145" width="460" height="311"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lxz-0d-ckm">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="ued-eL-Nmb"/>
                                     <constraint firstAttribute="width" secondItem="Lxz-0d-ckm" secondAttribute="height" multiplier="1.5:1" id="xNZ-JN-NGv"/>

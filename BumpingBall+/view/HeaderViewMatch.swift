@@ -37,7 +37,7 @@ class HeaderViewMatch: UIView {
 
     fileprivate func loadXib() {
         Bundle.main.loadNibNamed("HeaderViewMatch", owner: self, options: nil)
-        contentView.frame = CGRect(x: 0, y: 0, width: define.WIDTH, height: define.HEADER_HEIGHT)
+        contentView.frame = CGRect(x: 0, y: 0, width: CGFloat.WIDTH, height: define.HEADER_HEIGHT)
         self.addSubview(contentView)
     }
     

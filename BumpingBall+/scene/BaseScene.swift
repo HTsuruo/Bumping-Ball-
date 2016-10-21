@@ -21,7 +21,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     var score = 0
     var comboCount = 0
     var touchBeginLocation = CGPoint()
-    let finishView = FinishView(frame: CGRect(x: 0, y: 0, width: define.WIDTH, height: define.HEIGHT))
+    let finishView = FinishView(frame: CGRect(x: 0, y: 0, width: CGFloat.WIDTH, height: CGFloat.HEIGHT))
     let countdownView = CountdownView()
     let touchViewTxt = TouchViewTxt()
     var touchView = TouchView()
@@ -149,7 +149,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     
     fileprivate func createTargetBall() {
         targetBall = TargetBall()
-        var posX: UInt! = UInt(arc4random_uniform(UInt32(define.WIDTH)))
+        var posX: UInt! = UInt(arc4random_uniform(UInt32(CGFloat.WIDTH)))
         posX = targetBall.setScreenFit(posX)
         
         targetBall.ball.position = CGPoint(x:CGFloat(posX), y:self.frame.height-50)

@@ -16,8 +16,8 @@ class TouchView: SKSpriteNode {
     
     init() {
         let tx = SKTexture(imageNamed: "touchView")
-        super.init(texture: tx, color: colorUtils.clear, size: CGSize(width: define.WIDTH, height: define.TOUCH_HEIGHT))
-        self.position = CGPoint(x: define.WIDTH/2, y: define.TOUCH_HEIGHT/2)
+        super.init(texture: tx, color: colorUtils.clear, size: CGSize(width: CGFloat.WIDTH, height: define.TOUCH_HEIGHT))
+        self.position = CGPoint(x: CGFloat.WIDTH/2, y: define.TOUCH_HEIGHT/2)
         self.alpha = 0.8
     }
     
