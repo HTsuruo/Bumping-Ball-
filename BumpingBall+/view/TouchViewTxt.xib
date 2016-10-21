@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Candara.ttf">
+        <array key="Candara.ttf">
             <string>Candara</string>
-        </mutableArray>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TouchViewTxt" customModule="BumpingBall_" customModuleProvider="target">
@@ -25,13 +25,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Touch Here!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJR-v6-grA">
-                    <rect key="frame" x="242" y="22" width="117" height="22"/>
                     <fontDescription key="fontDescription" name="Candara" family="Candara" pointSize="22"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swipeArrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="eti-pX-CVI">
-                    <rect key="frame" x="540" y="18" width="30" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="0Xg-Cm-nw4"/>
                         <constraint firstAttribute="width" constant="30" id="Xow-As-6Ne"/>
@@ -39,7 +37,6 @@
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swipeArrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ykc-QB-vU3">
-                    <rect key="frame" x="30" y="18" width="30" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Ykc-QB-vU3" secondAttribute="height" multiplier="1:1" id="GQh-yF-1gB"/>
                         <constraint firstAttribute="height" constant="30" id="Uib-ZY-A5v"/>
@@ -52,8 +49,8 @@
                     </variation>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="eti-pX-CVI" secondAttribute="trailing" constant="30" id="EKn-Lx-bYJ"/>
                 <constraint firstItem="eti-pX-CVI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="KeU-kZ-iPc"/>

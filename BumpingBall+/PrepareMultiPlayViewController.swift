@@ -26,7 +26,6 @@ class PrepareMultiPlayViewController: UIViewController {
 //        bluetoothAiView.startAnimating()
 //        networkAiView.startAnimating()
 //        bluetoothAiView.alpha = 0.0
-        animationLabel.text = NSLocalizedString("prepare_multi_text", comment: "")
     }
     
     @IBAction func onClickBackBtn(_ sender: UIButton) {

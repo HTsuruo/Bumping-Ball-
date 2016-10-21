@@ -69,10 +69,7 @@
                                     <constraint firstItem="Ogm-4G-WJX" firstAttribute="centerY" secondItem="U7x-M9-wDb" secondAttribute="centerY" id="szw-t3-tho"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PzY-zP-vrD">
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="PzY-zP-vrD" secondAttribute="height" multiplier="68:7" id="us3-qe-enQ"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="遊び方を選択してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PzY-zP-vrD" userLabel="Label">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -228,12 +225,12 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Ezd-eT-3S4"/>
                                 <exclude reference="FYS-Fw-4jO"/>
                                 <exclude reference="Oik-Ws-WI2"/>
                                 <exclude reference="SLh-Kg-Ggt"/>
                                 <exclude reference="rv1-IL-nKg"/>
                                 <exclude reference="tQ8-6l-WRe"/>
-                                <exclude reference="Ezd-eT-3S4"/>
                             </mask>
                         </variation>
                     </view>
@@ -506,19 +503,19 @@
                         </userDefinedRuntimeAttributes>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="QfF-u3-6dL"/>
-                                <exclude reference="tBi-DA-XpC"/>
+                                <exclude reference="9yr-cV-teU"/>
                                 <exclude reference="B8C-Na-mqW"/>
                                 <exclude reference="Jbh-4N-GCU"/>
                                 <exclude reference="YQS-s9-hRs"/>
                                 <exclude reference="kOa-Gf-HBx"/>
                                 <exclude reference="pF7-Vf-djD"/>
+                                <exclude reference="QfF-u3-6dL"/>
+                                <exclude reference="tBi-DA-XpC"/>
                                 <exclude reference="OJw-pU-4J1"/>
                                 <exclude reference="PMS-vA-xxD"/>
                                 <exclude reference="SYA-ZD-vba"/>
                                 <exclude reference="W8X-KQ-iU5"/>
                                 <exclude reference="Zbi-Ch-NoN"/>
-                                <exclude reference="9yr-cV-teU"/>
                                 <exclude reference="aHQ-QY-ang"/>
                             </mask>
                         </variation>

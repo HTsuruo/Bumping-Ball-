@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Candara.ttf">
+        <array key="Candara.ttf">
             <string>Candara</string>
-            <string>Candara</string>
-            <string>Candara</string>
-            <string>Candara</string>
-        </mutableArray>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderView" customModule="BumpingBall_" customModuleProvider="target">
@@ -27,50 +24,45 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCq-VM-Xzh">
-                    <rect key="frame" x="90" y="8" width="84" height="18"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="bCq-VM-Xzh" secondAttribute="height" multiplier="14:3" id="bh0-Wy-4iD"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Candara" family="Candara" pointSize="18"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAv-ap-v3v">
-                    <rect key="frame" x="90" y="31" width="84" height="18"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="NAv-ap-v3v" secondAttribute="height" multiplier="14:3" id="Uul-Kv-5Uz"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Candara" family="Candara" pointSize="18"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="high score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKI-cP-JKK">
-                    <rect key="frame" x="466" y="8" width="84" height="18"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="jKI-cP-JKK" secondAttribute="height" multiplier="14:3" id="kKf-jd-BRO"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Candara" family="Candara" pointSize="18"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFi-Fd-2Gm">
-                    <rect key="frame" x="10" y="10" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="RFi-Fd-2Gm" secondAttribute="height" multiplier="1:1" id="1Ed-Rh-4WF"/>
                     </constraints>
                     <state key="normal" image="pauseBtn.png"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvX-FY-7n1">
-                    <rect key="frame" x="466" y="31" width="84" height="18"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="MvX-FY-7n1" secondAttribute="height" multiplier="14:3" id="yE2-g0-m2v"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Candara" family="Candara" pointSize="18"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="NAv-ap-v3v" firstAttribute="top" secondItem="bCq-VM-Xzh" secondAttribute="bottom" constant="5" id="0bt-Ob-afb"/>
                 <constraint firstItem="bCq-VM-Xzh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="7rG-0z-o7y"/>

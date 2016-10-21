@@ -85,6 +85,7 @@ class SceneViewController: UIViewController {
         skView.isPaused = true
         countdownView.stop()
         self.view.addSubview(pauseMenu)
+        
     }
     
     @IBAction func onClickResumeBtn(_ sender: UIButton) {
