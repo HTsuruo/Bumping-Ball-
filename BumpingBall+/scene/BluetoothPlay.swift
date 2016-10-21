@@ -44,12 +44,12 @@ class BluetoothPlay: BaseScene {
         bluetoothUtil.sendData(dic: dic)
         waitingView.show()
         start()
-        prepareView.removeFromSuperview()
     }
     
     func start() {
         if selfPrepared && partnerPrepared {
             waitingView.hide()
+            prepareView.removeFromSuperview()
             self.countdownView.start()
         }
     }
