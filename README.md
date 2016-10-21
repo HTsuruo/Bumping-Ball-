@@ -3,8 +3,8 @@
 空き時間があったら随時更新していく予定.
 
 ## Env.
-* Xcode 7.3.1
-* Swift 2.2
+* Xcode 8.0
+* Swift 3.0
 
 ## FrameWork.
 * SpriteKit
