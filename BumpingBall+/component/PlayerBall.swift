@@ -47,7 +47,7 @@ struct PlayerBall {
     }
     
     mutating func sizeChange() {
-        let ballUtil = BallUtils()
+        let ballUtil = BallUtil()
         self.ballScale += 0.025
         if self.ballScale < 0.8 {
             self.ballSpeed = define.BALL_INIT_SPEED
@@ -75,7 +75,7 @@ struct PlayerBall {
     }
     
     mutating func setGoldBall() {
-        let ballUtil = BallUtils()
+        let ballUtil = BallUtil()
         self.ballSpeed = 3.5
         self.ball.run(ballUtil.setGold())
         self.setId(BallType.gold.rawValue)

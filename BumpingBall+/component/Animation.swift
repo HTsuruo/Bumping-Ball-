@@ -36,16 +36,16 @@ class Animation {
         
         switch id {
         case BallType.blue.rawValue:
-            spark.particleColor = colorUtils.blue
+            spark.particleColor = colorUtil.blue
             break
         case BallType.green.rawValue:
-            spark.particleColor = colorUtils.green
+            spark.particleColor = colorUtil.green
             break
         case BallType.orange.rawValue:
-            spark.particleColor = colorUtils.orange
+            spark.particleColor = colorUtil.orange
             break
         case BallType.red.rawValue:
-            spark.particleColor = colorUtils.red
+            spark.particleColor = colorUtil.red
             break
         default:
             break
@@ -67,22 +67,22 @@ class Animation {
         
         switch id {
         case BallType.blue.rawValue:
-            launch.particleColor = colorUtils.blue
+            launch.particleColor = colorUtil.blue
             break
         case BallType.green.rawValue:
-            launch.particleColor = colorUtils.green
+            launch.particleColor = colorUtil.green
             launchScale = 1.1
             break
         case BallType.orange.rawValue:
-            launch.particleColor = colorUtils.orange
+            launch.particleColor = colorUtil.orange
             launchScale = 1.2
             break
         case BallType.red.rawValue:
-            launch.particleColor = colorUtils.red
+            launch.particleColor = colorUtil.red
             launchScale = 1.3
             break
         case BallType.gold.rawValue:
-            launch.particleColor = colorUtils.gold
+            launch.particleColor = colorUtil.gold
             launchScale = 4.0
             break
         default:
@@ -93,8 +93,8 @@ class Animation {
     }
     
     func chargeMeterAnimation(_ duration: Double) -> SKAction {
-        let gold = SKAction.colorize(with: colorUtils.gold, colorBlendFactor: 1.0, duration: duration)
-        let orange = SKAction.colorize(with: colorUtils.orange, colorBlendFactor: 1.0, duration: duration)
+        let gold = SKAction.colorize(with: colorUtil.gold, colorBlendFactor: 1.0, duration: duration)
+        let orange = SKAction.colorize(with: colorUtil.orange, colorBlendFactor: 1.0, duration: duration)
         let sequence  = SKAction.sequence([gold, orange])
         let foreverChange  = SKAction.repeatForever(sequence)
         return foreverChange

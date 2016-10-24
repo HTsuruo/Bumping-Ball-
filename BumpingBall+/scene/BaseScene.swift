@@ -14,7 +14,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     var playerBall = PlayerBall()
     var targetBall = TargetBall()
-    let ballUtil = BallUtils()
+    let ballUtil = BallUtil()
     let animation = Animation()
     let difficulty = Difficulty()
     var last: CFTimeInterval!

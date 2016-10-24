@@ -107,13 +107,13 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         label.layer.cornerRadius = 5.0
 //        switch row {
 //            case 0:
-//                label.textColor = colorUtils.blue
+//                label.textColor = colorUtil.blue
 //            case 1:
-//                label.textColor = colorUtils.green
+//                label.textColor = colorUtil.green
 //            case 2:
-//                label.textColor = colorUtils.red
+//                label.textColor = colorUtil.red
 //            default:
-//                label.textColor = colorUtils.clear
+//                label.textColor = colorUtil.clear
 //        }
         
         return label
@@ -129,7 +129,7 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     func pickerViewInit() {
         pickerView.delegate = self
         pickerView.dataSource = self
-        pickerView.backgroundColor = colorUtils.clear
+        pickerView.backgroundColor = UIColor.clear
         pickerView.layer.masksToBounds = true
         pickerView.layer.cornerRadius = 10.0
         pickerView.selectRow(app.selectedDiffculty.rawValue, inComponent: 0, animated: false)
@@ -139,13 +139,13 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     func setSelectedBkColor (_ row: Int) {
         switch row {
         case 0:
-            pickerView.backgroundColor = colorUtils.blue
+            pickerView.backgroundColor = colorUtil.blue
         case 1:
-            pickerView.backgroundColor = colorUtils.green
+            pickerView.backgroundColor = colorUtil.green
         case 2:
-            pickerView.backgroundColor = colorUtils.red
+            pickerView.backgroundColor = colorUtil.red
         default:
-            pickerView.backgroundColor = colorUtils.clear
+            pickerView.backgroundColor = UIColor.clear
         }
     }
     
