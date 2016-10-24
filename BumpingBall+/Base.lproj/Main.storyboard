@@ -59,7 +59,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.50909727510000002" green="0.69008612810000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="yDT-G0-YYa" firstAttribute="leading" secondItem="U7x-M9-wDb" secondAttribute="leading" constant="10" id="7NZ-dD-ucR"/>
                                     <constraint firstAttribute="bottom" secondItem="yDT-G0-YYa" secondAttribute="bottom" constant="10" id="RWp-g2-PAm"/>
@@ -100,41 +100,43 @@
                                             <constraint firstAttribute="height" constant="50" id="Dzn-Ll-NS6"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近くの人と対戦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qd-uL-ssq">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="近くの人と対戦" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qd-uL-ssq">
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="1Qd-uL-ssq" secondAttribute="height" multiplier="17:3" id="Ovo-12-4Lb"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiB-9J-GGl">
-                                        <fontDescription key="fontDescription" name="Candara" family="Candara" pointSize="18"/>
-                                        <state key="normal" title="Play">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="onClickBluetoothPlayBtn:" destination="ybY-7A-oOF" eventType="touchUpInside" id="rpI-J7-X3O"/>
-                                        </connections>
-                                    </button>
+                                    <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_bluetooth_large.png" translatesAutoresizingMaskIntoConstraints="NO" id="wOx-dC-LSq">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="wOx-dC-LSq" secondAttribute="height" multiplier="1:1" id="IfH-gX-35W"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="bW2-QE-UkU" firstAttribute="leading" secondItem="KRN-Me-jaT" secondAttribute="leading" constant="10" id="1L4-ex-afC"/>
+                                    <constraint firstItem="wOx-dC-LSq" firstAttribute="centerX" secondItem="KRN-Me-jaT" secondAttribute="centerX" id="1NA-A0-r6V"/>
                                     <constraint firstItem="cVZ-zr-aLA" firstAttribute="top" secondItem="KRN-Me-jaT" secondAttribute="top" constant="10" id="2mE-6N-bI5"/>
                                     <constraint firstAttribute="width" secondItem="KRN-Me-jaT" secondAttribute="height" multiplier="2:1.3" id="5XU-uA-7r0"/>
-                                    <constraint firstAttribute="bottom" secondItem="MiB-9J-GGl" secondAttribute="bottom" constant="10" id="7Nx-tY-ecG"/>
                                     <constraint firstItem="1Qd-uL-ssq" firstAttribute="centerX" secondItem="KRN-Me-jaT" secondAttribute="centerX" id="7Tc-jT-pCF"/>
-                                    <constraint firstItem="1vf-aQ-jIt" firstAttribute="top" secondItem="1Qd-uL-ssq" secondAttribute="bottom" constant="20" id="HSk-NQ-Bn6"/>
+                                    <constraint firstAttribute="bottom" secondItem="wOx-dC-LSq" secondAttribute="bottom" constant="10" id="DAS-YO-jzx"/>
+                                    <constraint firstItem="wOx-dC-LSq" firstAttribute="top" secondItem="KRN-Me-jaT" secondAttribute="top" constant="10" id="PXG-xq-Ctl"/>
                                     <constraint firstItem="bW2-QE-UkU" firstAttribute="top" secondItem="KRN-Me-jaT" secondAttribute="top" constant="10" id="U1K-RJ-Syw"/>
+                                    <constraint firstItem="1vf-aQ-jIt" firstAttribute="centerY" secondItem="KRN-Me-jaT" secondAttribute="centerY" id="UAh-mW-itS"/>
                                     <constraint firstItem="1Qd-uL-ssq" firstAttribute="top" secondItem="KRN-Me-jaT" secondAttribute="top" constant="24" id="UTf-bh-dOo"/>
                                     <constraint firstItem="1vf-aQ-jIt" firstAttribute="centerX" secondItem="KRN-Me-jaT" secondAttribute="centerX" id="VUB-g6-3qb"/>
                                     <constraint firstAttribute="trailing" secondItem="cVZ-zr-aLA" secondAttribute="trailing" constant="10" id="Y8u-wn-Cgb"/>
-                                    <constraint firstItem="MiB-9J-GGl" firstAttribute="centerX" secondItem="KRN-Me-jaT" secondAttribute="centerX" id="hXj-4S-ksB"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Im1-9H-Atc" userLabel="Network View">
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_global.png" translatesAutoresizingMaskIntoConstraints="NO" id="n1K-3k-xFd">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="n1K-3k-xFd" secondAttribute="height" multiplier="1:1" id="v0r-DM-tuw"/>
+                                        </constraints>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKx-sC-Hlw">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="4Zw-QG-YCl"/>
@@ -163,34 +165,29 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="UQs-0O-UPQ" secondAttribute="height" multiplier="17:3" id="kYI-T2-oh0"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO2-ka-Jgz">
-                                        <fontDescription key="fontDescription" name="Candara" family="Candara" pointSize="18"/>
-                                        <state key="normal" title="Play">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="oO2-ka-Jgz" secondAttribute="bottom" constant="10" id="1rX-CB-qgA"/>
                                     <constraint firstItem="qKx-sC-Hlw" firstAttribute="centerX" secondItem="Im1-9H-Atc" secondAttribute="centerX" id="3tS-6k-iVB"/>
+                                    <constraint firstItem="qKx-sC-Hlw" firstAttribute="centerY" secondItem="Im1-9H-Atc" secondAttribute="centerY" id="6rm-pi-ir0"/>
                                     <constraint firstItem="lKP-8Q-tvc" firstAttribute="top" secondItem="Im1-9H-Atc" secondAttribute="top" constant="10" id="A5t-Jh-7b1"/>
                                     <constraint firstItem="lKP-8Q-tvc" firstAttribute="leading" secondItem="Im1-9H-Atc" secondAttribute="leading" constant="10" id="Asd-Gx-1VS"/>
+                                    <constraint firstItem="n1K-3k-xFd" firstAttribute="top" secondItem="Im1-9H-Atc" secondAttribute="top" constant="10" id="JUm-0a-Dh4"/>
                                     <constraint firstItem="UQs-0O-UPQ" firstAttribute="centerX" secondItem="Im1-9H-Atc" secondAttribute="centerX" id="KyR-3M-fUn"/>
                                     <constraint firstItem="UQs-0O-UPQ" firstAttribute="top" secondItem="Im1-9H-Atc" secondAttribute="top" constant="24" id="SSh-FC-LrT"/>
                                     <constraint firstItem="71B-8J-Do7" firstAttribute="top" secondItem="Im1-9H-Atc" secondAttribute="top" constant="10" id="akg-Ar-5xQ"/>
-                                    <constraint firstItem="qKx-sC-Hlw" firstAttribute="top" secondItem="UQs-0O-UPQ" secondAttribute="bottom" constant="20" id="dqh-CV-Rzg"/>
+                                    <constraint firstItem="n1K-3k-xFd" firstAttribute="centerX" secondItem="Im1-9H-Atc" secondAttribute="centerX" id="cCx-op-oNT"/>
+                                    <constraint firstAttribute="bottom" secondItem="n1K-3k-xFd" secondAttribute="bottom" constant="10" id="rfd-fk-eri"/>
                                     <constraint firstAttribute="width" secondItem="Im1-9H-Atc" secondAttribute="height" multiplier="2:1.3" id="sFU-sk-JKu"/>
                                     <constraint firstAttribute="trailing" secondItem="71B-8J-Do7" secondAttribute="trailing" constant="10" id="t9k-mR-kto"/>
-                                    <constraint firstItem="oO2-ka-Jgz" firstAttribute="centerX" secondItem="Im1-9H-Atc" secondAttribute="centerX" id="yh0-Ay-NZk"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.062745098040000002" green="0.1058823529" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="KRN-Me-jaT" firstAttribute="top" secondItem="JVu-M7-HlH" secondAttribute="topMargin" constant="150" id="1KQ-3g-Urz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="U7x-M9-wDb" secondAttribute="trailing" constant="-20" id="5ab-54-NAL"/>
@@ -226,6 +223,8 @@
                     <connections>
                         <outlet property="animationLabel" destination="PzY-zP-vrD" id="lzP-5L-Fv4"/>
                         <outlet property="bluetoothArea" destination="KRN-Me-jaT" id="OQD-uY-vGQ"/>
+                        <outlet property="bluetoothImg" destination="wOx-dC-LSq" id="cef-1c-s4p"/>
+                        <outlet property="globalImg" destination="n1K-3k-xFd" id="udc-AO-PZx"/>
                         <outlet property="networkArea" destination="Im1-9H-Atc" id="Jlh-bK-J1i"/>
                         <segue destination="BV1-FR-VrT" kind="presentation" identifier="toMultiPlay" modalTransitionStyle="flipHorizontal" id="SpC-Om-bGS"/>
                     </connections>
@@ -525,7 +524,9 @@
         <image name="backBtn.png" width="62" height="62"/>
         <image name="helpBtn.png" width="120" height="120"/>
         <image name="icon_bluetooth.png" width="60" height="60"/>
-        <image name="icon_wifi.png" width="62" height="60"/>
+        <image name="icon_bluetooth_large.png" width="277" height="277"/>
+        <image name="icon_global.png" width="281" height="281"/>
+        <image name="icon_wifi.png" width="260" height="260"/>
         <image name="multiplayBtn.png" width="418" height="229"/>
         <image name="oneplayBtn.png" width="421" height="227"/>
         <image name="rankBtn.png" width="120" height="120"/>

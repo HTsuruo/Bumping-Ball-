@@ -148,9 +148,10 @@ struct colorUtils {
     static let orange = UIColor.hex(hexStr: "FF9800", alpha: 1.0)
     static let red = UIColor.hex(hexStr: "f44336", alpha: 1.0)
     static let gold = UIColor.hex(hexStr: "ffd700", alpha: 1.0)
-    static let navy = UIColor.hex(hexStr: "3F5A70", alpha: 1.0)
+    static let navy = UIColor.hex(hexStr: "101B38", alpha: 1.0)
     static let black = UIColor.hex(hexStr: "1D1D1D", alpha: 1.0)
     static let lifered = UIColor.hex(hexStr: "EC5D57", alpha: 1.0)
     static let lifeblue = UIColor.hex(hexStr: "51A7F9", alpha: 1.0)
     static let clear = UIColor.clear
+    static let selected = UIColor.hex(hexStr: "eeeeee", alpha: 0.3)
 }

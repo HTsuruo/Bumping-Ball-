@@ -11,32 +11,50 @@ import NVActivityIndicatorView
 
 class PrepareMultiPlayViewController: UIViewController {
     var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-    var timer: Timer? = nil
 
     @IBOutlet weak var bluetoothArea: UIView!
     @IBOutlet weak var networkArea: UIView!
     @IBOutlet weak var animationLabel: UILabel!
+    @IBOutlet weak var bluetoothImg: UIImageView!
+    @IBOutlet weak var globalImg: UIImageView!
     
-    fileprivate var i = 0
+    override func viewWillAppear(_ animated: Bool) {
+        bluetoothArea.backgroundColor = UIColor.clear
+        networkArea.backgroundColor = UIColor.clear
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = colorUtils.navy
         UIApplication.setStatusBar(self.view)
-//        bluetoothAiView.startAnimating()
-//        networkAiView.startAnimating()
-//        bluetoothAiView.alpha = 0.0
+        
+        let btgesture = UITapGestureRecognizer(target: self, action: #selector(self.onTapBluetoothArea(_:)))
+        bluetoothArea.layer.borderWidth = 2.0
+        bluetoothArea.layer.borderColor = UIColor.white.cgColor
+        bluetoothArea.isUserInteractionEnabled = true
+        bluetoothArea.addGestureRecognizer(btgesture)
+        bluetoothArea.sendSubview(toBack: bluetoothImg)
+        
+        let nwgesture = UITapGestureRecognizer(target: self, action: #selector(self.onTapNetoworkArea(_:)))
+        networkArea.layer.borderWidth = 2.0
+        networkArea.layer.borderColor = UIColor.white.cgColor
+        networkArea.isUserInteractionEnabled = true
+        networkArea.addGestureRecognizer(nwgesture)
+        networkArea.sendSubview(toBack: globalImg)
     }
     
     @IBAction func onClickBackBtn(_ sender: UIButton) {
-        timer?.invalidate()
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func onClickBluetoothPlayBtn(_ sender: UIButton) {
-        timer?.invalidate()
+    func onTapBluetoothArea(_ sender: UITapGestureRecognizer) {
+        bluetoothArea.backgroundColor = colorUtils.selected
         app.selectedPlay = PlayType.bluetooth
         self.performSegue(withIdentifier: "toMultiPlay", sender: self)
+    }
+    
+    func onTapNetoworkArea(_ sender: UITapGestureRecognizer) {
+        app.selectedPlay = PlayType.network
+        networkArea.backgroundColor = colorUtils.selected
     }
     
     override func didReceiveMemoryWarning() {
