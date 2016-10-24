@@ -10,10 +10,12 @@ import UIKit
 
 class PrepareView: UIView {
 
+    @IBOutlet weak var waitingLabel: UILabel!
     @IBOutlet var contentView: UIView!
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadXib()
+        waitingLabel.isHidden = true
     }
     
     required init?(coder aDecoder: NSCoder) {

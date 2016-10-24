@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PrepareView" customModule="BumpingBall_" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="pv2-3P-OIa"/>
+                <outlet property="waitingLabel" destination="CMw-Nc-gT0" id="SOv-2z-KLb"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -25,12 +26,20 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="対戦相手が待っています" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMw-Nc-gT0">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" red="0.053269797059999999" green="0.1141211357" blue="0.22273123910000001" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.062745098040000002" green="0.1058823529" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="ATX-2o-YlV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="DQM-cW-R48"/>
+                <constraint firstItem="CMw-Nc-gT0" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="DWs-72-Iz0"/>
                 <constraint firstItem="ATX-2o-YlV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gpg-7j-XxE"/>
+                <constraint firstItem="CMw-Nc-gT0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="100" id="pOi-XF-tNY"/>
             </constraints>
+            <point key="canvasLocation" x="-187" y="12"/>
         </view>
     </objects>
 </document>

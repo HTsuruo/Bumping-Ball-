@@ -18,7 +18,7 @@ class BluetoothPlay: BaseScene {
     var waitingView = WaitingView()
     var myLifeCount = 3
     var partnerLifeCount = 3
-    var sceneVC: UIViewController!
+    var scenevc: SceneViewController!
     var loadingView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), type: .ballClipRotateMultiple, color: UIColor.white)
     var loadingBkView = UIView(frame: CGRect(x: 0, y: 0, width: CGFloat.WIDTH, height: CGFloat.HEIGHT))
     var bluetoothUtil: BluetoothUtil! = nil
@@ -82,7 +82,10 @@ class BluetoothPlay: BaseScene {
         
         if let data = data["prepared"] {
             partnerPrepared = data as! Bool
-            start()
+            if partnerPrepared {
+                prepareView.waitingLabel.isHidden = false
+                start()
+            }
         }
         
         if let data = data["lifeCount"] {

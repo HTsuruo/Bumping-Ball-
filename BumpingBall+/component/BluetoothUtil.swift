@@ -29,7 +29,8 @@ class BluetoothUtil: NSObject, MCSessionDelegate, MCAdvertiserAssistantDelegate,
     
     func setupSession() {
         peerID = MCPeerID(displayName: UIDevice.current.name)
-        session = MCSession(peer: peerID)
+//        session = MCSession(peer: peerID)
+        session = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: MCEncryptionPreference.none)
         session.delegate = self
         
         advertiser = MCAdvertiserAssistant(serviceType: "bbplus2016", discoveryInfo: nil, session: session)
