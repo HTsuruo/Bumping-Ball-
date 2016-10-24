@@ -53,6 +53,9 @@ class FinishView: UIView {
     @IBAction func onClickToTopBtn(_ sender: UIButton) {
         vc.dismiss(animated: true, completion: nil)
         scenevc.skView.isPaused = true
+        if app.bluetoothSession != nil {
+            app.bluetoothSession?.disconnect()
+        }
     }
     
     @IBAction func onClickAgainBtn(_ sender: UIButton) {

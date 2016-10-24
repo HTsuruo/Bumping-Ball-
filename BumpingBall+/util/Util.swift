@@ -43,4 +43,6 @@ struct colorUtil {
     static let lifered = UIColor.hex(hexStr: "EC5D57", alpha: 1.0)
     static let lifeblue = UIColor.hex(hexStr: "51A7F9", alpha: 1.0)
     static let selected = UIColor.hex(hexStr: "eeeeee", alpha: 0.3)
+    static let loseColor = UIColor.hex(hexStr: "0365C0", alpha: 1.0)
+    static let winColor = UIColor.hex(hexStr: "C82506", alpha: 1.0)
 }

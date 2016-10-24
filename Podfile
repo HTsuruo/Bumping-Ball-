@@ -9,6 +9,7 @@ target 'BumpingBall+' do
     pod 'NVActivityIndicatorView' , :git => "https://github.com/ninjaprox/NVActivityIndicatorView"
     pod 'Firebase/Messaging'
     pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
+    pod 'SCLAlertView'
 end
 
 target 'BumpingBall+Tests' do

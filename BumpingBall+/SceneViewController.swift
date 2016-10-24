@@ -26,7 +26,7 @@ class SceneViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        alertUtil = AlertUtil(vc: self)
+        alertUtil = AlertUtil()
         
         let playType = app.selectedPlay
         switch playType {
@@ -105,7 +105,7 @@ class SceneViewController: UIViewController {
 //    one play only.
     @IBAction func restartBtn(_ sender: UIButton) {
         if isMultiPlay {
-            alertUtil.common(title: "注意", msg: "この機能はマルチプレイモードではご利用できません")
+            alertUtil.eroorMsg(title: "注意", msg: "この機能はマルチプレイモードではご利用できません")
             return
         }
         self.loadView()

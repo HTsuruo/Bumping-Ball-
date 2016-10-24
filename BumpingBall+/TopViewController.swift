@@ -152,6 +152,7 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     @IBAction func onClickRightBtn(_ sender: SpringButton) {
         if let session = app.bluetoothSession {
             session.disconnect()
+            print("bluetooth session: \(app.bluetoothSession)")
         }
     }
     

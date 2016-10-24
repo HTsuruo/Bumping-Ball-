@@ -32,6 +32,7 @@ PODS:
   - GoogleUtilities (1.3.2):
     - GoogleSymbolUtilities (~> 1.1)
   - NVActivityIndicatorView (3.0)
+  - SCLAlertView (0.7.0)
   - Spring (1.0.3)
 
 DEPENDENCIES:
@@ -39,6 +40,7 @@ DEPENDENCIES:
   - Fabric
   - Firebase/Messaging
   - NVActivityIndicatorView (from `https://github.com/ninjaprox/NVActivityIndicatorView`)
+  - SCLAlertView
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
 
 EXTERNAL SOURCES:
@@ -69,8 +71,9 @@ SPEC CHECKSUMS:
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleUtilities: 8bbc733218aad26306f9d4a253823986110e3358
   NVActivityIndicatorView: 19c0c7549ffe4f830f65d00b2f0d9a144e4c5105
+  SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
 
-PODFILE CHECKSUM: 495da6311c0b6643879ef31511fb3799ecab4ad4
+PODFILE CHECKSUM: 38da8bd6515456df2b634355a34c98566f632ea8
 
 COCOAPODS: 1.0.1

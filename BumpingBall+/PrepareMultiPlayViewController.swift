@@ -40,6 +40,8 @@ class PrepareMultiPlayViewController: UIViewController {
         networkArea.isUserInteractionEnabled = true
         networkArea.addGestureRecognizer(nwgesture)
         networkArea.sendSubview(toBack: globalImg)
+        
+        app.bluetoothSession = nil
     }
     
     @IBAction func onClickBackBtn(_ sender: UIButton) {

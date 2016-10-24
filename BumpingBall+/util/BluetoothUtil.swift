@@ -30,8 +30,7 @@ class BluetoothUtil: NSObject, MCSessionDelegate, MCAdvertiserAssistantDelegate,
     
     func setupSession() {
         peerID = MCPeerID(displayName: UIDevice.current.name)
-        session = MCSession(peer: peerID)
-//        session = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: MCEncryptionPreference.none)
+        session = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: MCEncryptionPreference.none)
         session.delegate = self
         
         advertiser = MCAdvertiserAssistant(serviceType: "bbplus2016", discoveryInfo: nil, session: session)
@@ -94,7 +93,7 @@ class BluetoothUtil: NSObject, MCSessionDelegate, MCAdvertiserAssistantDelegate,
                 
                 let alert: UIAlertController = UIAlertController(title: " 準備完了", message: "接続が完了しました\nOKを押すとスタートします", preferredStyle:  UIAlertControllerStyle.alert)
                 let defaultAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
-                    (action: UIAlertAction!) -> Void in
+                (action: UIAlertAction!) -> Void in
                     self.scene.sessionConnected()
                 })
                 alert.addAction(defaultAction)
@@ -112,12 +111,20 @@ class BluetoothUtil: NSObject, MCSessionDelegate, MCAdvertiserAssistantDelegate,
             print("Not Connected: \(peerID.displayName)")
             DispatchQueue.main.async {
                 self.hideLoadingComponent()
+                let alert = AlertUtil()
+                if self.app.bluetoothSession != nil {
+                    alert.eroorMsg(title: "接続エラー", msg: "相手との接続が切れました")
+                } else {
+                    alert.eroorMsg(title: "接続失敗", msg: "左上のキャンセルボタンを押した後、再度デバイスを選択して下さい")
+                }
+                self.app.bluetoothSession = nil
             }
-            let alertUtil = AlertUtil(vc: self.browser)
-            alertUtil.common(title: "接続失敗", msg: "左上のキャンセルボタンを押した後、再度デバイスを選択して下さい")
         }
     }
     
+    func session(_ session: MCSession, didReceiveCertificate certificate: [Any]?, fromPeer peerID: MCPeerID, certificateHandler: @escaping (Bool) -> Void) {
+        certificateHandler(true)
+    }
     
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
     }

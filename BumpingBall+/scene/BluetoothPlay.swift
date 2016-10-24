@@ -10,6 +10,7 @@ import UIKit
 import SpriteKit
 import MultipeerConnectivity
 import NVActivityIndicatorView
+import SCLAlertView
 
 class BluetoothPlay: BaseScene {
     
@@ -30,7 +31,7 @@ class BluetoothPlay: BaseScene {
         self.view?.addSubview(headerViewMatch)
         self.view?.addSubview(prepareView)
         self.view?.addSubview(waitingView)
-
+        
         DispatchQueue.main.async(execute: { //viewロードの整合を保ちます.
             self.bluetoothUtil = BluetoothUtil(scene: self)
             self.bluetoothUtil.setupSession()
@@ -66,6 +67,7 @@ class BluetoothPlay: BaseScene {
             self.isFin = true
             self.finish()
             self.finishView.mainLabel.text = "LOSE.."
+            self.finishView.mainLabel.textColor = colorUtil.loseColor
         }
     }
     
@@ -96,6 +98,7 @@ class BluetoothPlay: BaseScene {
                 self.isFin = true
                 self.finish()
                 self.finishView.mainLabel.text = "WIN!!"
+                self.finishView.mainLabel.textColor = colorUtil.winColor
             }
         }
         
@@ -112,6 +115,9 @@ class BluetoothPlay: BaseScene {
                 waitingView.hide()
                 break
             case .quit:
+                if app.bluetoothSession != nil {
+                    app.bluetoothSession?.disconnect()
+                }
                 break
             default:
                 break
