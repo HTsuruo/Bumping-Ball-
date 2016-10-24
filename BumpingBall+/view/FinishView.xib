@@ -20,8 +20,8 @@
                 <outlet property="facebookBtn" destination="Iv0-MI-KxM" id="Ywv-61-sfD"/>
                 <outlet property="finishView" destination="iN0-l3-epB" id="diS-as-eGe"/>
                 <outlet property="lineBtn" destination="07D-l5-Z1Q" id="xvI-GH-86H"/>
+                <outlet property="mainLabel" destination="mfg-7o-mbd" id="Ot0-OL-YJC"/>
                 <outlet property="toTopBtn" destination="dcR-JK-9bB" id="OxQ-xZ-3SK"/>
-                <outlet property="totalScoreLabel" destination="mfg-7o-mbd" id="i9t-Bk-kN3"/>
                 <outlet property="twitterBtn" destination="mXX-hl-TYA" id="TM8-lf-kjp"/>
             </connections>
         </placeholder>
@@ -272,7 +272,7 @@
                 <constraint firstAttribute="trailing" secondItem="6Uu-wI-nk7" secondAttribute="trailing" constant="25" id="yva-Wf-Ebr"/>
                 <constraint firstItem="6Uu-wI-nk7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="yzk-Wm-jX7"/>
             </constraints>
-            <point key="canvasLocation" x="-24" y="94"/>
+            <point key="canvasLocation" x="-364" y="96"/>
         </view>
     </objects>
     <resources>

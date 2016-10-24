@@ -28,7 +28,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792.79999999999995" y="10.344827586206897"/>
+            <point key="canvasLocation" x="902" y="10"/>
         </scene>
         <!--Prepare Multi Play View Controller-->
         <scene sceneID="ha9-m7-xiq">
@@ -113,6 +113,11 @@
                                             <constraint firstAttribute="width" secondItem="wOx-dC-LSq" secondAttribute="height" multiplier="1:1" id="IfH-gX-35W"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タップしてスタート" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tca-Hl-qDV">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -128,6 +133,8 @@
                                     <constraint firstItem="1Qd-uL-ssq" firstAttribute="top" secondItem="KRN-Me-jaT" secondAttribute="top" constant="24" id="UTf-bh-dOo"/>
                                     <constraint firstItem="1vf-aQ-jIt" firstAttribute="centerX" secondItem="KRN-Me-jaT" secondAttribute="centerX" id="VUB-g6-3qb"/>
                                     <constraint firstAttribute="trailing" secondItem="cVZ-zr-aLA" secondAttribute="trailing" constant="10" id="Y8u-wn-Cgb"/>
+                                    <constraint firstItem="Tca-Hl-qDV" firstAttribute="centerX" secondItem="KRN-Me-jaT" secondAttribute="centerX" id="nif-GR-gew"/>
+                                    <constraint firstAttribute="bottom" secondItem="Tca-Hl-qDV" secondAttribute="bottom" constant="20" id="vhj-cN-L4Y"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Im1-9H-Atc" userLabel="Network View">
@@ -169,16 +176,23 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タップしてスタート" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puc-Y5-PIb">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="qKx-sC-Hlw" firstAttribute="centerX" secondItem="Im1-9H-Atc" secondAttribute="centerX" id="3tS-6k-iVB"/>
                                     <constraint firstItem="qKx-sC-Hlw" firstAttribute="centerY" secondItem="Im1-9H-Atc" secondAttribute="centerY" id="6rm-pi-ir0"/>
+                                    <constraint firstItem="puc-Y5-PIb" firstAttribute="centerX" secondItem="Im1-9H-Atc" secondAttribute="centerX" id="A31-Nh-fEx"/>
                                     <constraint firstItem="lKP-8Q-tvc" firstAttribute="top" secondItem="Im1-9H-Atc" secondAttribute="top" constant="10" id="A5t-Jh-7b1"/>
                                     <constraint firstItem="lKP-8Q-tvc" firstAttribute="leading" secondItem="Im1-9H-Atc" secondAttribute="leading" constant="10" id="Asd-Gx-1VS"/>
                                     <constraint firstItem="n1K-3k-xFd" firstAttribute="top" secondItem="Im1-9H-Atc" secondAttribute="top" constant="10" id="JUm-0a-Dh4"/>
                                     <constraint firstItem="UQs-0O-UPQ" firstAttribute="centerX" secondItem="Im1-9H-Atc" secondAttribute="centerX" id="KyR-3M-fUn"/>
                                     <constraint firstItem="UQs-0O-UPQ" firstAttribute="top" secondItem="Im1-9H-Atc" secondAttribute="top" constant="24" id="SSh-FC-LrT"/>
+                                    <constraint firstAttribute="bottom" secondItem="puc-Y5-PIb" secondAttribute="bottom" constant="20" id="W3r-4x-2er"/>
                                     <constraint firstItem="71B-8J-Do7" firstAttribute="top" secondItem="Im1-9H-Atc" secondAttribute="top" constant="10" id="akg-Ar-5xQ"/>
                                     <constraint firstItem="n1K-3k-xFd" firstAttribute="centerX" secondItem="Im1-9H-Atc" secondAttribute="centerX" id="cCx-op-oNT"/>
                                     <constraint firstAttribute="bottom" secondItem="n1K-3k-xFd" secondAttribute="bottom" constant="10" id="rfd-fk-eri"/>
@@ -211,12 +225,12 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="Ezd-eT-3S4"/>
                                 <exclude reference="FYS-Fw-4jO"/>
                                 <exclude reference="Oik-Ws-WI2"/>
                                 <exclude reference="SLh-Kg-Ggt"/>
                                 <exclude reference="rv1-IL-nKg"/>
                                 <exclude reference="tQ8-6l-WRe"/>
+                                <exclude reference="Ezd-eT-3S4"/>
                             </mask>
                         </variation>
                     </view>
@@ -386,6 +400,9 @@
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onClickRightBtn:" destination="FFW-j8-PWE" eventType="touchUpInside" id="4MH-nf-JRG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2VT-en-ORm" userLabel="Rank Btn" customClass="SpringButton" customModule="Spring">
                                         <constraints>
@@ -533,6 +550,6 @@
         <image name="titleTxt.png" width="524" height="136"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SpC-Om-bGS"/>
+        <segue reference="pGj-IE-aGP"/>
     </inferredMetricsTieBreakers>
 </document>

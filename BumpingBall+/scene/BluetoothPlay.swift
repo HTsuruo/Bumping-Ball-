@@ -60,11 +60,12 @@ class BluetoothPlay: BaseScene {
         }
         node.removeFromParent()
         headerViewMatch.disapperAnimation(PlayerType.player1, life: myLifeCount)
-        sendLifeData(myLifeCount)
         myLifeCount -= 1
+        sendLifeData(myLifeCount)
         if myLifeCount < 1 {
             self.isFin = true
             self.finish()
+            self.finishView.mainLabel.text = "LOSE.."
         }
     }
     
@@ -90,7 +91,12 @@ class BluetoothPlay: BaseScene {
         
         if let data = data["lifeCount"] {
             let lifeCount = data as! Int
-            self.headerViewMatch.disapperAnimation(PlayerType.player2, life: lifeCount)
+            self.headerViewMatch.disapperAnimation(PlayerType.player2, life: lifeCount + 1)
+            if lifeCount < 1 {
+                self.isFin = true
+                self.finish()
+                self.finishView.mainLabel.text = "WIN!!"
+            }
         }
         
         if let data = data["pause"] {

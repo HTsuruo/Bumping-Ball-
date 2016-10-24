@@ -148,4 +148,11 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             pickerView.backgroundColor = colorUtils.clear
         }
     }
+    
+    @IBAction func onClickRightBtn(_ sender: SpringButton) {
+        if let session = app.bluetoothSession {
+            session.disconnect()
+        }
+    }
+    
 }

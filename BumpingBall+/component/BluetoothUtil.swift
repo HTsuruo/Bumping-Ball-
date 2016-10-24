@@ -13,6 +13,7 @@ import SpriteKit
 
 class BluetoothUtil: NSObject, MCSessionDelegate, MCAdvertiserAssistantDelegate, MCBrowserViewControllerDelegate {
     
+    var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     var peerID: MCPeerID!
     var session: MCSession!
     var browser: MCBrowserViewController!
@@ -29,8 +30,8 @@ class BluetoothUtil: NSObject, MCSessionDelegate, MCAdvertiserAssistantDelegate,
     
     func setupSession() {
         peerID = MCPeerID(displayName: UIDevice.current.name)
-//        session = MCSession(peer: peerID)
-        session = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: MCEncryptionPreference.none)
+        session = MCSession(peer: peerID)
+//        session = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: MCEncryptionPreference.none)
         session.delegate = self
         
         advertiser = MCAdvertiserAssistant(serviceType: "bbplus2016", discoveryInfo: nil, session: session)
@@ -65,7 +66,7 @@ class BluetoothUtil: NSObject, MCSessionDelegate, MCAdvertiserAssistantDelegate,
             let data: Data = NSKeyedArchiver.archivedData(withRootObject: dic)
             try session.send(data, toPeers: session.connectedPeers, with: .reliable)
         } catch _ as NSError {
-            print("sendLifeData failed")
+            print("sendData failed")
         }
     }
     
@@ -85,6 +86,7 @@ class BluetoothUtil: NSObject, MCSessionDelegate, MCAdvertiserAssistantDelegate,
         case MCSessionState.connected:
             print("Connected: \(peerID.displayName)")
             DispatchQueue.main.async(execute: {
+                self.app.bluetoothSession = session
                 self.scene.headerViewMatch.playerLabel1.text = UIDevice.current.name
                 self.scene.headerViewMatch.playerLabel2.text = peerID.displayName
                 self.hideLoadingComponent()
@@ -110,11 +112,12 @@ class BluetoothUtil: NSObject, MCSessionDelegate, MCAdvertiserAssistantDelegate,
             print("Not Connected: \(peerID.displayName)")
             DispatchQueue.main.async {
                 self.hideLoadingComponent()
-                let alertUtil = AlertUtil(vc: self.browser)
-                alertUtil.common(title: "接続失敗", msg: "左上のキャンセルボタンを押した後、再度デバイスを選択して下さい")
             }
+            let alertUtil = AlertUtil(vc: self.browser)
+            alertUtil.common(title: "接続失敗", msg: "左上のキャンセルボタンを押した後、再度デバイスを選択して下さい")
         }
     }
+    
     
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
     }

@@ -318,6 +318,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     //  ゲームオーバー処理
     func finish() {
         self.isUserInteractionEnabled = false
+        finishView.setup()
         finishView.setScoreLabel(score)
         finishView.alpha = 0.0
         self.view!.addSubview(finishView)

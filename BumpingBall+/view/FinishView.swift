@@ -18,8 +18,10 @@ class FinishView: UIView {
     @IBOutlet weak var facebookBtn: UIButton!
     @IBOutlet weak var lineBtn: UIButton!
     @IBOutlet weak var againBtn: UIButton!
-    @IBOutlet weak var totalScoreLabel: UILabel!
+    @IBOutlet weak var mainLabel: UILabel!
     var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    var vc: UIViewController!
+    var scenevc: SceneViewController!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,7 +35,7 @@ class FinishView: UIView {
     }
     
     func setScoreLabel(_ totalScore: Int) {
-        totalScoreLabel.text = String(totalScore)
+        mainLabel.text = String(totalScore)
         let ud = UserDefaults.standard
         let difficultyStr = app.selectedDiffculty.getString()
         let highScore = ud.integer(forKey: "highscore-"+difficultyStr)
@@ -43,31 +45,34 @@ class FinishView: UIView {
         GameCenterUtil.sendScore(totalScore, leaderBoardId: difficultyStr)
     }
     
+    func setup() {
+        vc = Util.getForegroundViewController()
+        scenevc = vc as! SceneViewController
+    }
+    
     @IBAction func onClickToTopBtn(_ sender: UIButton) {
-        let onePlayVC = Util.getForegroundViewController()
-        onePlayVC.dismiss(animated: true, completion: nil)
+        vc.dismiss(animated: true, completion: nil)
+        scenevc.skView.isPaused = true
     }
     
     @IBAction func onClickAgainBtn(_ sender: UIButton) {
-        let foregroundVC = Util.getForegroundViewController()
-        foregroundVC.loadView()
-        foregroundVC.viewDidLoad()
+        scenevc.skView.isPaused = true
+        vc.loadView()
+        vc.viewDidLoad()
     }
     
     @IBAction func onClickTwitterBtn(_ sender: UIButton) {
         let text = "【Bumping Ball+】"
         let composeViewController: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
         composeViewController.setInitialText(text)
-        let foregroundVC = Util.getForegroundViewController()
-        foregroundVC.present(composeViewController, animated: true, completion: nil)
+        vc.present(composeViewController, animated: true, completion: nil)
     }
     
     @IBAction func onClickFacebookBtn(_ sender: UIButton) {
         let text = "【Bumping Ball+】"
         let composeViewController: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
         composeViewController.setInitialText(text)
-        let foregroundVC = Util.getForegroundViewController()
-        foregroundVC.present(composeViewController, animated: true, completion: nil)
+        vc.present(composeViewController, animated: true, completion: nil)
     }
     
     @IBAction func onClickLineBtn(_ sender: UIButton) {
