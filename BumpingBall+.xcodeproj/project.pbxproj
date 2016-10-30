@@ -48,7 +48,6 @@
 		566B38F91DC655200026083B /* closeBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 566B38F81DC655200026083B /* closeBtn@2x.png */; };
 		566B390A1DC65FB50026083B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 566B390C1DC65FB50026083B /* InfoPlist.strings */; };
 		566B390F1DC65FB50026083B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 566B39111DC65FB50026083B /* InfoPlist.strings */; };
-		566B39141DC65FB70026083B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 566B39161DC65FB70026083B /* InfoPlist.strings */; };
 		5698E9E71DBA77FA0078DC53 /* WaitingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698E9E51DBA77FA0078DC53 /* WaitingView.swift */; };
 		5698E9E81DBA77FA0078DC53 /* WaitingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5698E9E61DBA77FA0078DC53 /* WaitingView.xib */; };
 		56A528601DB9BF1700AEFA9F /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5285F1DB9BF1700AEFA9F /* extension.swift */; };
@@ -191,7 +190,6 @@
 		566B39071DC65FB40026083B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		566B390B1DC65FB50026083B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		566B39101DC65FB50026083B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		566B39151DC65FB70026083B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5698E9E51DBA77FA0078DC53 /* WaitingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaitingView.swift; path = view/multiplay/WaitingView.swift; sourceTree = "<group>"; };
 		5698E9E61DBA77FA0078DC53 /* WaitingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WaitingView.xib; path = view/multiplay/WaitingView.xib; sourceTree = "<group>"; };
 		56A5285F1DB9BF1700AEFA9F /* extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
@@ -451,7 +449,6 @@
 		56BB7F2E1CAD345100675AE8 /* BumpingBall+ */ = {
 			isa = PBXGroup;
 			children = (
-				566B39161DC65FB70026083B /* InfoPlist.strings */,
 				560A497D1D729F2900DEBB6A /* scene */,
 				56BB7F2F1CAD345100675AE8 /* AppDelegate.swift */,
 				56BB7FAF1CAD766900675AE8 /* TopViewController.swift */,
@@ -785,7 +782,6 @@
 				566176EB1D6881EC00AF10BA /* chargeMeter@2x.png in Resources */,
 				56B802531D684281007B79A7 /* Candara.ttf in Resources */,
 				561BA20A1D69799B004FC052 /* TouchViewTxt.xib in Resources */,
-				566B39141DC65FB70026083B /* InfoPlist.strings in Resources */,
 				56D160D31CC50E5300257404 /* twitter@2x.png in Resources */,
 				561BA2131D699E25004FC052 /* swipeArrow@2x.png in Resources */,
 				5666F82A1D645702001EFC57 /* ball_green_1@2x.png in Resources */,
@@ -1100,14 +1096,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				566B39101DC65FB50026083B /* ja */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		566B39161DC65FB70026083B /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				566B39151DC65FB70026083B /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
