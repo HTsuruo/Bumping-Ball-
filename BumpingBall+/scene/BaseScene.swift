@@ -29,6 +29,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     var isFin = false
     let MAX_COMBO_COUNT = 5
     let charge = ChargeMeter()
+    private var inTouch = false
     
     // 当たり判定のカテゴリを準備する.
     let ballCategory: UInt32 = 0x1 << 0
@@ -62,9 +63,10 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
             touchBeginLocation = touch.location(in: self)
             
             if !(define.TOUCH_AREA.contains(touchBeginLocation)) {
+                inTouch = false
                 return
             }
-            
+            inTouch = true
             createPlayerBall(touchBeginLocation)
         }
     }
@@ -89,6 +91,9 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
                 playerBall.setGoldBall()
                 chargeReset()
             }
+        }
+        if !inTouch {
+            return
         }
         playerBall.isFire = true
         playerBall.setIsFire()
