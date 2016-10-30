@@ -137,7 +137,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
                 if ball.position.y >= define.REMOVE_HEIGHT-1 {
                     ball.run(SKAction.fadeOut(withDuration: 0.3), completion: {
                         ball.removeFromParent()
-                        if !self.playerBall.isGold(self.playerBall.ball) {
+                        if !self.playerBall.isGold(node) {
                             self.comboCount = 0
                         } else {
                             self.removeAction(forKey: "goldBk")
