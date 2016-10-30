@@ -24,7 +24,6 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerViewInit()
-        UIApplication.setStatusBar(self.view)
     
         if let scene = TopScene(fileNamed:"TopScene") {
             // Configure the view.

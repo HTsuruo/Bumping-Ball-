@@ -55,15 +55,29 @@ class SceneViewController: UIViewController {
         loadNib()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        UIApplication.shared.setStatusBarHidden(true, with: UIStatusBarAnimation.fade)
+    }
+    
     func loadNib() {
         pauseMenu = UINib(nibName: "PauseMenu", bundle: nil).instantiate(withOwner: self, options: nil)[0] as! UIView
         pauseMenu.frame = CGRect(x: 0, y: 0, width: CGFloat.WIDTH, height: CGFloat.HEIGHT)
     }
     
-    override var shouldAutorotate: Bool {
-        return true
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+         UIApplication.shared.setStatusBarHidden(false, with: UIStatusBarAnimation.fade)
     }
-
+    
+//    動作しないので一旦退避
+//    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+//        return UIStatusBarAnimation.fade
+//    }
+//    override var prefersStatusBarHidden: Bool {
+//        return true
+//    }
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
             return .allButUpsideDown
@@ -77,10 +91,6 @@ class SceneViewController: UIViewController {
         // Release any cached data, images, etc that aren't in use.
     }
 
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
-    
     internal func onClickPauseBtn(_ sender: UIButton) {
         Sound.prepareToPlay("pause")
         Sound.play()

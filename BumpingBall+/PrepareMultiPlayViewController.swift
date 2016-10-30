@@ -25,7 +25,6 @@ class PrepareMultiPlayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIApplication.setStatusBar(self.view)
         
         let btgesture = UITapGestureRecognizer(target: self, action: #selector(self.onTapBluetoothArea(_:)))
         bluetoothArea.layer.borderWidth = 2.0
