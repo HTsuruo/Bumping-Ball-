@@ -90,6 +90,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
             if swipe && charge.isFull {
                 playerBall.setGoldBall()
                 chargeReset()
+                changeBkColor()
             }
         }
         if !inTouch {
@@ -138,6 +139,9 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
                         ball.removeFromParent()
                         if !self.playerBall.isGold(self.playerBall.ball) {
                             self.comboCount = 0
+                        } else {
+                            self.removeAction(forKey: "goldBk")
+                            self.backgroundColor = UIColor.black
                         }
                     })
                 }
@@ -345,6 +349,14 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         touchView = TouchView()
         self.addChild(touchView)
         touchViewTxt.chargeReset()
+    }
+    
+    private func changeBkColor() {
+        let color1 = SKAction.colorize(with: ColorUtil.goldbk, colorBlendFactor: 1.0, duration: 0.3)
+        let color2 = SKAction.colorize(with: UIColor.clear, colorBlendFactor: 1.0, duration: 0.3)
+        let sequence  = SKAction.sequence([color1, color2])
+        let foreverChange  = SKAction.repeatForever(sequence)
+        self.run(foreverChange, withKey: "goldBk")
     }
     
 }
