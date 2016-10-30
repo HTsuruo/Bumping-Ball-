@@ -83,8 +83,11 @@ struct PlayerBall {
     }
     
     func isGold(_ node: SKNode) -> Bool {
-        let myId = node.userData?.value(forKey: "id")
-        return myId as! Int == BallType.gold.rawValue
+        let myId = node.userData?.value(forKey: "id") as? Int
+        if let id = myId {
+            return id == BallType.gold.rawValue
+        }
+        return false
     }
     
 }
