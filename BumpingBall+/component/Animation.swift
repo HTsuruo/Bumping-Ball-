@@ -100,4 +100,24 @@ class Animation {
         return foreverChange
     }
     
+    func goldenModeBk() -> SKAction {
+        let color1 = SKAction.colorize(with: ColorUtil.goldbk, colorBlendFactor: 1.0, duration: 0.3)
+        let color2 = SKAction.colorize(with: UIColor.clear, colorBlendFactor: 1.0, duration: 0.3)
+        let sequence  = SKAction.sequence([color1, color2])
+        let foreverChange  = SKAction.repeatForever(sequence)
+        return foreverChange
+    }
+    
+    func backgroundAnimation() -> SKEmitterNode {
+        let emitterPath = Bundle.main.path(forResource: "bk", ofType: "sks")
+        let node = NSKeyedUnarchiver.unarchiveObject(withFile: emitterPath!) as! SKEmitterNode
+        node.particleTexture = SKTexture(image: UIImage(named: "snow")!)
+        node.particleColorSequence = nil
+        node.particleColor = UIColor.white
+        node.particleColorBlendFactor = 1.0
+        //node.particleTexture = SKTexture(image: UIImage(named: "star")!)
+        node.position = CGPoint(x: CGFloat.CENTER.x, y: CGFloat.HEIGHT)
+        return node
+    }
+    
 }

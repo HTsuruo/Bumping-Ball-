@@ -48,6 +48,10 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         self.view?.addSubview(touchViewTxt)
         self.view?.addSubview(countdownView)
         self.addChild(charge)
+        
+        // set background animation.
+        let snow = animation.backgroundAnimation()
+        self.addChild(snow)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -90,7 +94,8 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
             if swipe && charge.isFull {
                 playerBall.setGoldBall()
                 chargeReset()
-                changeBkColor()
+                let action = animation.goldenModeBk()
+                self.run(action, withKey: "goldBk")
             }
         }
         if !inTouch {
@@ -349,14 +354,6 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         touchView = TouchView()
         self.addChild(touchView)
         touchViewTxt.chargeReset()
-    }
-    
-    private func changeBkColor() {
-        let color1 = SKAction.colorize(with: ColorUtil.goldbk, colorBlendFactor: 1.0, duration: 0.3)
-        let color2 = SKAction.colorize(with: UIColor.clear, colorBlendFactor: 1.0, duration: 0.3)
-        let sequence  = SKAction.sequence([color1, color2])
-        let foreverChange  = SKAction.repeatForever(sequence)
-        self.run(foreverChange, withKey: "goldBk")
     }
     
 }
