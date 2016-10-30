@@ -5,8 +5,12 @@
   Created by Tsuru on H28/09/10.
   Copyright © 平成28年 Hideki Tsuruoka. All rights reserved.
 */
-"PzY-zP-vrD.text" = "Please select play mode";
 
 //設定画面
 "setting_section_1" = "Basic Configuration";
 "setting_section_2" = "About App";
+"setting_item_1" = "Music";
+"setting_item_2" = "Sound";
+"info_item_1" = "Review";
+"info_item_2" = "Licence";
+"info_item_3" = "Version";

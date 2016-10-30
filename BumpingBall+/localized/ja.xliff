@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="BumpingBall+/Base.lproj/LaunchScreen.storyboard" source-language="en" datatype="plaintext" target-language="ja">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.0" build-num="8A218a"/>
+    </header>
+    <body/>
+  </file>
+  <file original="BumpingBall+/Base.lproj/Main.storyboard" source-language="en" datatype="plaintext" target-language="ja">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.0" build-num="8A218a"/>
+    </header>
+    <body>
+      <trans-unit id="1Qd-uL-ssq.text">
+        <source>近くの人と対戦</source>
+        <target>近くの人と対戦</target>
+        <note>Class = "UILabel"; text = "近くの人と対戦"; ObjectID = "1Qd-uL-ssq";</note>
+      </trans-unit>
+      <trans-unit id="1vf-aQ-jIt.text">
+        <source>Bluetoothの電源がオンに
+なっていることを
+確認して下さい</source>
+        <target>Bluetoothの電源がオンに
+なっていることを
+確認して下さい</target>
+        <note>Class = "UILabel"; text = "Bluetoothの電源がオンに\nなっていることを\n確認して下さい"; ObjectID = "1vf-aQ-jIt";</note>
+      </trans-unit>
+      <trans-unit id="I3d-VB-a2Z.title">
+        <source>LICENCE</source>
+        <target>ライセンス</target>
+        <note>Class = "UINavigationItem"; title = "LICENCE"; ObjectID = "I3d-VB-a2Z";</note>
+      </trans-unit>
+      <trans-unit id="Ogm-4G-WJX.text">
+        <source>Multi Play</source>
+        <target>Multi Play</target>
+        <note>Class = "UILabel"; text = "Multi Play"; ObjectID = "Ogm-4G-WJX";</note>
+      </trans-unit>
+      <trans-unit id="PzY-zP-vrD.text">
+        <source>遊び方を選択してください</source>
+        <target>遊び方を選択してください</target>
+        <note>Class = "UILabel"; text = "遊び方を選択してください"; ObjectID = "PzY-zP-vrD";</note>
+      </trans-unit>
+      <trans-unit id="Tca-Hl-qDV.text">
+        <source>タップしてスタート</source>
+        <target>タップしてスタート</target>
+        <note>Class = "UILabel"; text = "タップしてスタート"; ObjectID = "Tca-Hl-qDV";</note>
+      </trans-unit>
+      <trans-unit id="UQs-0O-UPQ.text">
+        <source>遠くの人と対戦</source>
+        <target>遠くの人と対戦</target>
+        <note>Class = "UILabel"; text = "遠くの人と対戦"; ObjectID = "UQs-0O-UPQ";</note>
+      </trans-unit>
+      <trans-unit id="eqK-hH-pGz.title">
+        <source>SETTING</source>
+        <target>設定</target>
+        <note>Class = "UINavigationItem"; title = "SETTING"; ObjectID = "eqK-hH-pGz";</note>
+      </trans-unit>
+      <trans-unit id="puc-Y5-PIb.text">
+        <source>タップしてスタート</source>
+        <target>タップしてスタート</target>
+        <note>Class = "UILabel"; text = "タップしてスタート"; ObjectID = "puc-Y5-PIb";</note>
+      </trans-unit>
+      <trans-unit id="qKx-sC-Hlw.text">
+        <source>インターネットに接続
+されていることを
+確認して下さい</source>
+        <target>インターネットに接続
+されていることを
+確認して下さい</target>
+        <note>Class = "UILabel"; text = "インターネットに接続\nされていることを\n確認して下さい"; ObjectID = "qKx-sC-Hlw";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="BumpingBall+/Info.plist" source-language="en" datatype="plaintext" target-language="ja">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.0" build-num="8A218a"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleDisplayName">
+        <source>$(PRODUCT_NAME)</source>
+      </trans-unit>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>1.0</source>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="BumpingBall+/Localizable.strings" source-language="en" datatype="plaintext" target-language="ja">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.0" build-num="8A218a"/>
+    </header>
+    <body>
+      <trans-unit id="info_item_1">
+        <source>info_item_1</source>
+        <target>レビューを書く</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="info_item_2">
+        <source>info_item_2</source>
+        <target>ライセンス</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="info_item_3">
+        <source>info_item_3</source>
+        <target>バージョン</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="setting_item_1">
+        <source>setting_item_1</source>
+        <target>音楽</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="setting_item_2">
+        <source>setting_item_2</source>
+        <target>効果音</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="setting_section_1">
+        <source>setting_section_1</source>
+        <target>基本情報</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="setting_section_2">
+        <source>setting_section_2</source>
+        <target>アプリ情報</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="BumpingBall+Tests/Info.plist" source-language="en" datatype="plaintext" target-language="ja">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.0" build-num="8A218a"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>1.0</source>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="BumpingBall+UITests/Info.plist" source-language="en" datatype="plaintext" target-language="ja">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.0" build-num="8A218a"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+      </trans-unit>
+      <trans-unit id="CFBundleShortVersionString">
+        <source>1.0</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

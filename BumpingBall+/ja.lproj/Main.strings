@@ -1,0 +1,34 @@
+/* Class = "UILabel"; text = "近くの人と対戦"; ObjectID = "1Qd-uL-ssq"; */
+"1Qd-uL-ssq.text" = "近くの人と対戦";
+
+/* Class = "UILabel"; text = "Bluetoothの電源がオンに\nなっていることを\n確認して下さい"; ObjectID = "1vf-aQ-jIt"; */
+"1vf-aQ-jIt.text" = "Bluetoothの電源がオンに
+なっていることを
+確認して下さい";
+
+/* Class = "UINavigationItem"; title = "LICENCE"; ObjectID = "I3d-VB-a2Z"; */
+"I3d-VB-a2Z.title" = "ライセンス";
+
+/* Class = "UILabel"; text = "Multi Play"; ObjectID = "Ogm-4G-WJX"; */
+"Ogm-4G-WJX.text" = "Multi Play";
+
+/* Class = "UILabel"; text = "遊び方を選択してください"; ObjectID = "PzY-zP-vrD"; */
+"PzY-zP-vrD.text" = "遊び方を選択してください";
+
+/* Class = "UILabel"; text = "タップしてスタート"; ObjectID = "Tca-Hl-qDV"; */
+"Tca-Hl-qDV.text" = "タップしてスタート";
+
+/* Class = "UILabel"; text = "遠くの人と対戦"; ObjectID = "UQs-0O-UPQ"; */
+"UQs-0O-UPQ.text" = "遠くの人と対戦";
+
+/* Class = "UINavigationItem"; title = "SETTING"; ObjectID = "eqK-hH-pGz"; */
+"eqK-hH-pGz.title" = "設定";
+
+/* Class = "UILabel"; text = "タップしてスタート"; ObjectID = "puc-Y5-PIb"; */
+"puc-Y5-PIb.text" = "タップしてスタート";
+
+/* Class = "UILabel"; text = "インターネットに接続\nされていることを\n確認して下さい"; ObjectID = "qKx-sC-Hlw"; */
+"qKx-sC-Hlw.text" = "インターネットに接続
+されていることを
+確認して下さい";
+

@@ -1,13 +1,18 @@
-/* 
-  Localizable.strings
-  BumpingBall+
 
-  Created by Tsuru on H28/09/10.
-  Copyright © 平成28年 Hideki Tsuruoka. All rights reserved.
-*/
-
-"PzY-zP-vrD.text" = "遊び方を選択して下さい";
+/*
+ Localizable.strings
+ BumpingBall+
+ 
+ Created by Tsuru on H28/09/10.
+ Copyright © 平成28年 Hideki Tsuruoka. All rights reserved.
+ */
 
 //設定画面
-"setting_section_1" = "基本設定";
+"setting_section_1" = "基本情報";
 "setting_section_2" = "アプリ情報";
+"setting_item_1" = "音楽";
+"setting_item_2" = "効果音";
+"info_item_1" = "レビューを書く";
+"info_item_2" = "ライセンス";
+"info_item_3" = "バージョン";
+

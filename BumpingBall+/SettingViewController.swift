@@ -11,8 +11,8 @@ import FontAwesomeKit
 
 class SettingViewController: UITableViewController {
     
-    let setting = ["Music", "Sound"]
-    let info = ["Review", "License", "Version"]
+    let setting = [NSLocalizedString("setting_item_1", comment: ""), NSLocalizedString("setting_item_2", comment: "")]
+    let info = [NSLocalizedString("info_item_1", comment: ""), NSLocalizedString("info_item_2", comment: ""), NSLocalizedString("info_item_3", comment: "")]
     var settingIcon: [UIImage] = []
     var infoIcon: [UIImage] = []
     let settingTypeArray: [SettingType] = [SettingType.music, SettingType.sound]
@@ -64,11 +64,11 @@ class SettingViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "基本設定"
+            return NSLocalizedString("setting_section_1", comment: "")
         case 1:
-            return "アプリ情報"
+            return NSLocalizedString("setting_section_2", comment: "")
         default:
-            return "エラー"
+            return "error"
         }
     }
 
