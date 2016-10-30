@@ -94,3 +94,12 @@ enum PauseType: Int {
     case restart = 2
     case quit = 3
 }
+
+//setting
+enum SettingType: Int {
+    case music = 0
+    case sound = 1
+    case review = 10
+    case licence = 11
+    case version = 12
+}

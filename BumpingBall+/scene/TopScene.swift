@@ -28,9 +28,9 @@ class TopScene: SKScene, SKPhysicsContactDelegate {
     }
 
     func changeBkColor() {
-        let color1 = SKAction.colorize(with: colorUtil.navy, colorBlendFactor: 1.0, duration: 4)
-        let color2 = SKAction.colorize(with: colorUtil.green, colorBlendFactor: 1.0, duration: 4)
-        let color3 = SKAction.colorize(with: colorUtil.black, colorBlendFactor: 1.0, duration: 4)
+        let color1 = SKAction.colorize(with: ColorUtil.main, colorBlendFactor: 1.0, duration: 4)
+        let color2 = SKAction.colorize(with: ColorUtil.green, colorBlendFactor: 1.0, duration: 4)
+        let color3 = SKAction.colorize(with: ColorUtil.black, colorBlendFactor: 1.0, duration: 4)
         let sequence  = SKAction.sequence([color1, color2, color3])
         let foreverChange  = SKAction.repeatForever(sequence)
         self.run(foreverChange)

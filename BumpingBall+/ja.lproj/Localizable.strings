@@ -7,3 +7,7 @@
 */
 
 "PzY-zP-vrD.text" = "遊び方を選択して下さい";
+
+//設定画面
+"setting_section_1" = "基本設定";
+"setting_section_2" = "アプリ情報";

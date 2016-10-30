@@ -12,6 +12,478 @@
         </array>
     </customFonts>
     <scenes>
+        <!--SETTING-->
+        <scene sceneID="Q0C-mg-8R2">
+            <objects>
+                <tableViewController id="dNr-nV-plg" customClass="SettingViewController" customModule="BumpingBall_" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Aa4-UA-5dX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ijO-ZJ-NEp">
+                                <rect key="frame" x="0.0" y="120" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ijO-ZJ-NEp" id="18Q-sM-UCh">
+                                    <frame key="frameInset" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dNr-nV-plg" id="7Yf-on-TQP"/>
+                            <outlet property="delegate" destination="dNr-nV-plg" id="sH3-eD-Dkh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="SETTING" id="eqK-hH-pGz">
+                        <barButtonItem key="rightBarButtonItem" image="closeBtn.png" id="yd0-wp-YOL">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="onClickCloseBtn:" destination="dNr-nV-plg" id="PER-GM-2lg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="izY-Ut-ldt" kind="push" identifier="toLicence" id="pJF-RS-ezv"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KOg-Xb-Dgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1468" y="789"/>
+        </scene>
+        <!--LICENCE-->
+        <scene sceneID="4mr-Xw-32c">
+            <objects>
+                <viewController id="izY-Ut-ldt" customClass="LicenceViewController" customModule="BumpingBall_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vdl-oD-eSE"/>
+                        <viewControllerLayoutGuide type="bottom" id="ndH-jt-AmO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="30w-hi-Ece">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mVw-b2-OC1">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="- NVActivityIndicatorView">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="The MIT License ">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="(">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="MIT">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=")">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+Copyright </string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="(">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="c">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=")">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> 2016 Vinh Nguyen @ninjaprox
+
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="- Spring">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+Spring is released under the MIT license. 
+
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="- SCLAlertView">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+Copyright </string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="(">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="c">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=")">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> 2013-2014 SCPopUpView by Viktor Radchenko
+Permission is hereby granted</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=",">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" free of charge">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=",">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> to any person obtaining a copy
+of this software and associated documentation files </string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="(">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="the &quot;Software&quot;">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="),">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> to deal
+in the Software without restriction</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=",">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> including without limitation the rights
+to use</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=",">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" copy">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=",">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" modify">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=",">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" merge">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=",">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" publish">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=",">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" distribute">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=",">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" sublicense">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=",">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" and">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="/">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">or sell
+copies of the Software</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=",">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> and to permit persons to whom the Software is
+furnished to do so</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=",">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS"</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=",">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" WITHOUT WARRANTY OF ANY KIND">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=",">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> EXPRESS OR
+IMPLIED</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=",">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=",">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=",">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> DAMAGES OR OTHER
+LIABILITY</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=",">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" WHETHER IN AN ACTION OF CONTRACT">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=",">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" TORT OR OTHERWISE">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=",">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ARISING FROM">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=",">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".HiraKakuInterface-W3"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="menu" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ndH-jt-AmO" firstAttribute="top" secondItem="mVw-b2-OC1" secondAttribute="bottom" id="Djw-RL-lfh"/>
+                            <constraint firstAttribute="trailing" secondItem="mVw-b2-OC1" secondAttribute="trailing" id="Oy4-X6-Tjo"/>
+                            <constraint firstItem="mVw-b2-OC1" firstAttribute="top" secondItem="30w-hi-Ece" secondAttribute="top" id="UhY-AO-2wg"/>
+                            <constraint firstItem="mVw-b2-OC1" firstAttribute="leading" secondItem="30w-hi-Ece" secondAttribute="leading" constant="10" id="smy-kk-MKa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="LICENCE" id="I3d-VB-a2Z"/>
+                    <connections>
+                        <outlet property="textView" destination="mVw-b2-OC1" id="GWa-h7-pKu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SGb-rr-3yl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2192.8000000000002" y="787.55622188905556"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xbt-TL-Fjn">
+            <objects>
+                <navigationController id="iRC-MV-hpy" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="lTI-9v-oa6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dNr-nV-plg" kind="relationship" relationship="rootViewController" id="lXJ-iH-nyC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9d7-m5-Oag" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="567" y="789"/>
+        </scene>
         <!--Scene View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
@@ -28,7 +500,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="10"/>
+            <point key="canvasLocation" x="1833" y="10"/>
         </scene>
         <!--Prepare Multi Play View Controller-->
         <scene sceneID="ha9-m7-xiq">
@@ -245,7 +717,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVJ-Kz-kCD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="417" y="784"/>
+            <point key="canvasLocation" x="967" y="-340"/>
         </scene>
         <!--Top View Controller-->
         <scene sceneID="mg3-mZ-y76">
@@ -369,11 +841,11 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Gg-oc-1cL" userLabel="Bottom View">
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQ2-q2-ikT" userLabel="Help Btn" customClass="SpringButton" customModule="Spring">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQ2-q2-ikT" userLabel="Rank Btn" customClass="SpringButton" customModule="Spring">
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="fQ2-q2-ikT" secondAttribute="height" multiplier="20:20" id="vGv-1v-na6"/>
                                         </constraints>
-                                        <state key="normal" image="helpBtn.png"/>
+                                        <state key="normal" image="rankBtn.png"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeInUp"/>
@@ -384,12 +856,15 @@
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onClickRankBtn:" destination="FFW-j8-PWE" eventType="touchUpInside" id="9p0-Zm-kDE"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xW5-0z-0Ae" userLabel="Help Btn" customClass="SpringButton" customModule="Spring">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xW5-0z-0Ae" userLabel="Setting Btn" customClass="SpringButton" customModule="Spring">
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="xW5-0z-0Ae" secondAttribute="height" multiplier="20:20" id="USz-vE-nAq"/>
                                         </constraints>
-                                        <state key="normal" image="helpBtn.png"/>
+                                        <state key="normal" image="setting.png"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeInUp"/>
@@ -401,14 +876,15 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="onClickRightBtn:" destination="FFW-j8-PWE" eventType="touchUpInside" id="4MH-nf-JRG"/>
+                                            <action selector="onClickSettingBtn:" destination="FFW-j8-PWE" eventType="touchUpInside" id="PEf-B8-I6Z"/>
+                                            <segue destination="iRC-MV-hpy" kind="presentation" identifier="toSetting" id="ojO-0C-ief"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2VT-en-ORm" userLabel="Rank Btn" customClass="SpringButton" customModule="Spring">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2VT-en-ORm" userLabel="Help Btn" customClass="SpringButton" customModule="Spring">
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="2VT-en-ORm" secondAttribute="height" multiplier="20:20" id="zIK-4x-S5G"/>
                                         </constraints>
-                                        <state key="normal" image="rankBtn.png"/>
+                                        <state key="normal" image="helpBtn.png"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="delay">
                                                 <real key="value" value="0.59999999999999998"/>
@@ -420,7 +896,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="onClickRankBtn:" destination="FFW-j8-PWE" eventType="touchUpInside" id="rXI-bo-vp2"/>
+                                            <action selector="onClickHelpBtn:" destination="FFW-j8-PWE" eventType="touchUpInside" id="M9e-cS-E8j"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -539,6 +1015,7 @@
     </scenes>
     <resources>
         <image name="backBtn.png" width="62" height="62"/>
+        <image name="closeBtn.png" width="30" height="30"/>
         <image name="helpBtn.png" width="120" height="120"/>
         <image name="icon_bluetooth.png" width="60" height="60"/>
         <image name="icon_bluetooth_large.png" width="277" height="277"/>
@@ -547,6 +1024,7 @@
         <image name="multiplayBtn.png" width="418" height="229"/>
         <image name="oneplayBtn.png" width="421" height="227"/>
         <image name="rankBtn.png" width="120" height="120"/>
+        <image name="setting.png" width="120" height="120"/>
         <image name="titleTxt.png" width="524" height="136"/>
     </resources>
     <inferredMetricsTieBreakers>

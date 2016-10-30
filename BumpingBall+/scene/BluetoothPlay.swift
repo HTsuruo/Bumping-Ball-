@@ -67,7 +67,7 @@ class BluetoothPlay: BaseScene {
             self.isFin = true
             self.finish()
             self.finishView.mainLabel.text = "LOSE.."
-            self.finishView.mainLabel.textColor = colorUtil.loseColor
+            self.finishView.mainLabel.textColor = ColorUtil.loseColor
         }
     }
     
@@ -98,7 +98,7 @@ class BluetoothPlay: BaseScene {
                 self.isFin = true
                 self.finish()
                 self.finishView.mainLabel.text = "WIN!!"
-                self.finishView.mainLabel.textColor = colorUtil.winColor
+                self.finishView.mainLabel.textColor = ColorUtil.winColor
             }
         }
         

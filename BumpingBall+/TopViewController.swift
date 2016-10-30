@@ -61,6 +61,7 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         self.performSegue(withIdentifier: "toPrepareMulti", sender: self)
     }
     
+    /** ランキング **/
     @IBAction func onClickRankBtn(_ sender: UIButton) {
         sendAllScore()
         let localPlayer = GKLocalPlayer()
@@ -75,6 +76,15 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
                 self.present(gcViewController, animated: true, completion: nil)
             }
         }
+    }
+    
+    /** ヘルプ **/
+    @IBAction func onClickHelpBtn(_ sender: UIButton) {
+    }
+    
+    /** 設定 **/
+    @IBAction func onClickSettingBtn(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "toSetting", sender: self)
     }
     
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
@@ -107,13 +117,13 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         label.layer.cornerRadius = 5.0
 //        switch row {
 //            case 0:
-//                label.textColor = colorUtil.blue
+//                label.textColor = ColorUtil.blue
 //            case 1:
-//                label.textColor = colorUtil.green
+//                label.textColor = ColorUtil.green
 //            case 2:
-//                label.textColor = colorUtil.red
+//                label.textColor = ColorUtil.red
 //            default:
-//                label.textColor = colorUtil.clear
+//                label.textColor = ColorUtil.clear
 //        }
         
         return label
@@ -139,20 +149,13 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     func setSelectedBkColor (_ row: Int) {
         switch row {
         case 0:
-            pickerView.backgroundColor = colorUtil.blue
+            pickerView.backgroundColor = ColorUtil.blue
         case 1:
-            pickerView.backgroundColor = colorUtil.green
+            pickerView.backgroundColor = ColorUtil.green
         case 2:
-            pickerView.backgroundColor = colorUtil.red
+            pickerView.backgroundColor = ColorUtil.red
         default:
             pickerView.backgroundColor = UIColor.clear
-        }
-    }
-    
-    @IBAction func onClickRightBtn(_ sender: SpringButton) {
-        if let session = app.bluetoothSession {
-            session.disconnect()
-            print("bluetooth session: \(app.bluetoothSession)")
         }
     }
     

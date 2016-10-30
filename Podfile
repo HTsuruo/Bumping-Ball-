@@ -10,6 +10,7 @@ target 'BumpingBall+' do
     pod 'Firebase/Messaging'
     pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
     pod 'SCLAlertView'
+    pod 'FontAwesomeKit', :git => 'git@github.com:PrideChung/FontAwesomeKit.git', :branch => 'master'
 end
 
 target 'BumpingBall+Tests' do

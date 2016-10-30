@@ -6,3 +6,7 @@
   Copyright © 平成28年 Hideki Tsuruoka. All rights reserved.
 */
 "PzY-zP-vrD.text" = "Please select play mode";
+
+//設定画面
+"setting_section_1" = "Basic Configuration";
+"setting_section_2" = "About App";

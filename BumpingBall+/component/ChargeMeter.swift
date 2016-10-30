@@ -19,7 +19,7 @@ class ChargeMeter: SKSpriteNode {
     
     init() {
         let texture = SKTexture(imageNamed: "chargeMeter")
-        super.init(texture: texture, color: colorUtil.gold, size: CGSize(width: CGFloat.WIDTH + 30, height: 5))
+        super.init(texture: texture, color: ColorUtil.gold, size: CGSize(width: CGFloat.WIDTH + 30, height: 5))
         self.position = CGPoint(x: initialPos, y: CGFloat.HEIGHT - (define.HEADER_HEIGHT + 2.5))
         let action = animation.chargeMeterAnimation(0.8)
         self.run(action)

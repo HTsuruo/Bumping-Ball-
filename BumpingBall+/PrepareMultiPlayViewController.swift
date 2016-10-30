@@ -49,14 +49,14 @@ class PrepareMultiPlayViewController: UIViewController {
     }
     
     func onTapBluetoothArea(_ sender: UITapGestureRecognizer) {
-        bluetoothArea.backgroundColor = colorUtil.selected
+        bluetoothArea.backgroundColor = ColorUtil.selected
         app.selectedPlay = PlayType.bluetooth
         self.performSegue(withIdentifier: "toMultiPlay", sender: self)
     }
     
     func onTapNetoworkArea(_ sender: UITapGestureRecognizer) {
         app.selectedPlay = PlayType.network
-        networkArea.backgroundColor = colorUtil.selected
+        networkArea.backgroundColor = ColorUtil.selected
     }
     
     override func didReceiveMemoryWarning() {
