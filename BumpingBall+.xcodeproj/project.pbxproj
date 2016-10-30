@@ -72,6 +72,7 @@
 		56BB7F491CAD345200675AE8 /* BumpingBall_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BB7F481CAD345200675AE8 /* BumpingBall_Tests.swift */; };
 		56BB7F541CAD345200675AE8 /* BumpingBall_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BB7F531CAD345200675AE8 /* BumpingBall_UITests.swift */; };
 		56BB7FB01CAD766900675AE8 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BB7FAF1CAD766900675AE8 /* TopViewController.swift */; };
+		56BD47811DC5E507003AA705 /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BD47801DC5E507003AA705 /* splash@2x.png */; };
 		56BD7D331CBB702000F9178B /* spark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BD7D321CBB702000F9178B /* spark@2x.png */; };
 		56BD7D351CBB995C00F9178B /* pauseBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BD7D341CBB995C00F9178B /* pauseBtn@2x.png */; };
 		56BD7D3F1CBB9E0100F9178B /* TopScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 56BD7D3E1CBB9E0100F9178B /* TopScene.sks */; };
@@ -208,6 +209,7 @@
 		56BB7F531CAD345200675AE8 /* BumpingBall_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumpingBall_UITests.swift; sourceTree = "<group>"; };
 		56BB7F551CAD345200675AE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56BB7FAF1CAD766900675AE8 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		56BD47801DC5E507003AA705 /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "splash@2x.png"; path = "img/splash@2x.png"; sourceTree = SOURCE_ROOT; };
 		56BD7D321CBB702000F9178B /* spark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "spark@2x.png"; path = "img/spark@2x.png"; sourceTree = SOURCE_ROOT; };
 		56BD7D341CBB995C00F9178B /* pauseBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pauseBtn@2x.png"; path = "img/pauseBtn@2x.png"; sourceTree = SOURCE_ROOT; };
 		56BD7D3E1CBB9E0100F9178B /* TopScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = TopScene.sks; path = sks/TopScene.sks; sourceTree = "<group>"; };
@@ -467,6 +469,7 @@
 		56BB7FC11CAFC08200675AE8 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				56BD47801DC5E507003AA705 /* splash@2x.png */,
 				56BDE3DF1D7ACA6D00247E36 /* life */,
 				56BB36801D7324DD00AD1603 /* prepare_multiplay */,
 				56BB367D1D731AF300AD1603 /* backBtn@2x.png */,
@@ -770,6 +773,7 @@
 				56AC95AA1CB2BDD400B31FE3 /* pause.mp3 in Resources */,
 				56AC95A81CB2BCFD00B31FE3 /* PauseMenu.xib in Resources */,
 				561BCFFB1D72F9A400766B36 /* rankBtn@2x.png in Resources */,
+				56BD47811DC5E507003AA705 /* splash@2x.png in Resources */,
 				5666F8261D6456F5001EFC57 /* ball_orange_2@2x.png in Resources */,
 				561BA20F1D69975D004FC052 /* touchView@2x.png in Resources */,
 				56BDE3D81D7A5D0500247E36 /* GoogleService-Info.plist in Resources */,

@@ -201,7 +201,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.062745098040000002" green="0.1058823529" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.062745098039215685" green="0.10588235294117647" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="KRN-Me-jaT" firstAttribute="top" secondItem="JVu-M7-HlH" secondAttribute="topMargin" constant="150" id="1KQ-3g-Urz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="U7x-M9-wDb" secondAttribute="trailing" constant="-20" id="5ab-54-NAL"/>
@@ -225,12 +225,12 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Ezd-eT-3S4"/>
                                 <exclude reference="FYS-Fw-4jO"/>
                                 <exclude reference="Oik-Ws-WI2"/>
                                 <exclude reference="SLh-Kg-Ggt"/>
                                 <exclude reference="rv1-IL-nKg"/>
                                 <exclude reference="tQ8-6l-WRe"/>
-                                <exclude reference="Ezd-eT-3S4"/>
                             </mask>
                         </variation>
                     </view>
@@ -550,6 +550,6 @@
         <image name="titleTxt.png" width="524" height="136"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pGj-IE-aGP"/>
+        <segue reference="SpC-Om-bGS"/>
     </inferredMetricsTieBreakers>
 </document>
