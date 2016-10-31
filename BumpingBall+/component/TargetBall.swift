@@ -133,4 +133,9 @@ struct TargetBall {
         self.ball.run(action)
         self.ball.userData?.setValue(num, forKey: "num")
     }
+    
+    mutating func changeToItemBall() {
+        
+    }
+    
 }
