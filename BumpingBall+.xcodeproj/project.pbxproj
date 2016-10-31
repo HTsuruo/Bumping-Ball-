@@ -20,6 +20,7 @@
 		561BA2131D699E25004FC052 /* swipeArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561BA2121D699E25004FC052 /* swipeArrow@2x.png */; };
 		561BCFF71D72EC5800766B36 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561BCFF61D72EC5800766B36 /* GameKit.framework */; };
 		561BCFFB1D72F9A400766B36 /* rankBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561BCFFA1D72F9A400766B36 /* rankBtn@2x.png */; };
+		5632A6091DC738CB0064C498 /* ItemBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632A6081DC738CB0064C498 /* ItemBall.swift */; };
 		565DDA531CBD4707003C9F0D /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565DDA521CBD4707003C9F0D /* Animation.swift */; };
 		565DDA551CBD4EB0003C9F0D /* launch.sks in Resources */ = {isa = PBXBuildFile; fileRef = 565DDA541CBD4EB0003C9F0D /* launch.sks */; };
 		566176EB1D6881EC00AF10BA /* chargeMeter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 566176EA1D6881EC00AF10BA /* chargeMeter@2x.png */; };
@@ -69,6 +70,7 @@
 		56AC95A21CB24B3000B31FE3 /* TargetBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AC959D1CB24B3000B31FE3 /* TargetBall.swift */; };
 		56AC95A81CB2BCFD00B31FE3 /* PauseMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56AC95A71CB2BCFD00B31FE3 /* PauseMenu.xib */; };
 		56AC95AA1CB2BDD400B31FE3 /* pause.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56AC95A91CB2BDD400B31FE3 /* pause.mp3 */; };
+		56AF86971DC7413800928022 /* SimpleTargetBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF86961DC7413800928022 /* SimpleTargetBall.swift */; };
 		56B802531D684281007B79A7 /* Candara.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56B802521D684215007B79A7 /* Candara.ttf */; };
 		56B802571D684765007B79A7 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B802561D684765007B79A7 /* HeaderView.swift */; };
 		56BB367C1D7317C900AD1603 /* PrepareMultiPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BB367B1D7317C900AD1603 /* PrepareMultiPlayViewController.swift */; };
@@ -165,6 +167,7 @@
 		561BA2121D699E25004FC052 /* swipeArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "swipeArrow@2x.png"; path = "img/touch_view/swipeArrow@2x.png"; sourceTree = SOURCE_ROOT; };
 		561BCFF61D72EC5800766B36 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		561BCFFA1D72F9A400766B36 /* rankBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rankBtn@2x.png"; path = "img/top/rankBtn@2x.png"; sourceTree = SOURCE_ROOT; };
+		5632A6081DC738CB0064C498 /* ItemBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemBall.swift; path = component/ItemBall.swift; sourceTree = "<group>"; };
 		565DDA521CBD4707003C9F0D /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = component/Animation.swift; sourceTree = "<group>"; };
 		565DDA541CBD4EB0003C9F0D /* launch.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = launch.sks; path = sks/launch.sks; sourceTree = "<group>"; };
 		566176EA1D6881EC00AF10BA /* chargeMeter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chargeMeter@2x.png"; path = "img/chargeMeter@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -217,6 +220,7 @@
 		56AC959D1CB24B3000B31FE3 /* TargetBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TargetBall.swift; path = component/TargetBall.swift; sourceTree = "<group>"; };
 		56AC95A71CB2BCFD00B31FE3 /* PauseMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PauseMenu.xib; path = view/PauseMenu.xib; sourceTree = "<group>"; };
 		56AC95A91CB2BDD400B31FE3 /* pause.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = pause.mp3; path = sound/pause.mp3; sourceTree = SOURCE_ROOT; };
+		56AF86961DC7413800928022 /* SimpleTargetBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleTargetBall.swift; path = component/SimpleTargetBall.swift; sourceTree = "<group>"; };
 		56B802521D684215007B79A7 /* Candara.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Candara.ttf; path = font/Candara.ttf; sourceTree = "<group>"; };
 		56B802561D684765007B79A7 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderView.swift; path = view/HeaderView.swift; sourceTree = "<group>"; };
 		56BB367B1D7317C900AD1603 /* PrepareMultiPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareMultiPlayViewController.swift; sourceTree = "<group>"; };
@@ -402,6 +406,8 @@
 				56A5285F1DB9BF1700AEFA9F /* extension.swift */,
 				56AC959A1CB24B3000B31FE3 /* PlayerBall.swift */,
 				56AC959D1CB24B3000B31FE3 /* TargetBall.swift */,
+				5632A6081DC738CB0064C498 /* ItemBall.swift */,
+				56AF86961DC7413800928022 /* SimpleTargetBall.swift */,
 				56AC959B1CB24B3000B31FE3 /* Enums.swift */,
 				56AC959C1CB24B3000B31FE3 /* Sound.swift */,
 				565DDA521CBD4707003C9F0D /* Animation.swift */,
@@ -1064,6 +1070,7 @@
 				560A49831D729F3600DEBB6A /* TopScene.swift in Sources */,
 				56BB367C1D7317C900AD1603 /* PrepareMultiPlayViewController.swift in Sources */,
 				56A528601DB9BF1700AEFA9F /* extension.swift in Sources */,
+				56AF86971DC7413800928022 /* SimpleTargetBall.swift in Sources */,
 				56AC95A21CB24B3000B31FE3 /* TargetBall.swift in Sources */,
 				56E073361DBE463C002E634D /* BallUtil.swift in Sources */,
 				561BA2111D699774004FC052 /* TouchView.swift in Sources */,
@@ -1088,6 +1095,7 @@
 				56BD478A1DC5FC01003AA705 /* SettingCell.swift in Sources */,
 				561BA20C1D697A62004FC052 /* TouchViewTxt.swift in Sources */,
 				56E6B50C1DBA627B00740A6A /* PrepareView.swift in Sources */,
+				5632A6091DC738CB0064C498 /* ItemBall.swift in Sources */,
 				56B802571D684765007B79A7 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

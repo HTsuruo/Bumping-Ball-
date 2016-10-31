@@ -164,7 +164,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     fileprivate func createTargetBall() {
         targetBall = TargetBall()
         var posX: UInt! = UInt(arc4random_uniform(UInt32(CGFloat.WIDTH)))
-        posX = targetBall.setScreenFit(posX)
+        posX = targetBall.setInScreen(posX)
         
         targetBall.ball.position = CGPoint(x:CGFloat(posX), y:self.frame.height-50)
         targetBall.setCategory(targetBallCategory, targetCat: ballCategory)
@@ -172,12 +172,12 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         targetBall.ball.run(SKAction.fadeIn(withDuration: 0.5))
     }
     
-    fileprivate func moveTargetBall() {
+    func moveTargetBall() {
         self.enumerateChildNodes(withName: "t_ball", using: {
             node, stop in
             if node is SKSpriteNode {
                 let targetBall = node as! SKSpriteNode
-                self.ballUtil.setRebound(targetBall)
+                self.ballUtil.setBoundX(targetBall)
                 let dx = targetBall.userData?.value(forKey: "dx") as! CGFloat
                 let dy = targetBall.userData?.value(forKey: "dy") as! CGFloat
                 targetBall.position.x += dx

@@ -28,4 +28,10 @@ struct ballImage {
     static let GREEN_3 = "ball_green_3"
     static let ORANGE_2 = "ball_orange_2"
     static let ORANGE_1 = "ball_orange_1"
+    
+    //  item ball
+    static let ITEM_BLUE = "question_blue"
+    static let ITEM_GREEN = "question_green"
+    static let ITEM_ORANGE = "question_orange"
+    static let ITEM_RED = "question_red"
 }

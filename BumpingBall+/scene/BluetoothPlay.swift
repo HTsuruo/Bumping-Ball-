@@ -17,6 +17,7 @@ class BluetoothPlay: BaseScene {
     let headerViewMatch = HeaderViewMatch()
     let prepareView = PrepareView()
     var waitingView = WaitingView()
+    var itemBall = ItemBall()
     var myLifeCount = 3
     var partnerLifeCount = 3
     var scenevc: SceneViewController!
@@ -141,5 +142,14 @@ class BluetoothPlay: BaseScene {
     override func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
     }
-
+    
+    fileprivate func createItemBall() {
+        var posX: UInt! = UInt(arc4random_uniform(UInt32(CGFloat.WIDTH)))
+        
+        targetBall.ball.position = CGPoint(x:CGFloat(posX), y:self.frame.height-50)
+        targetBall.setCategory(targetBallCategory, targetCat: ballCategory)
+        self.addChild(self.targetBall.ball)
+        targetBall.ball.run(SKAction.fadeIn(withDuration: 0.5))
+    }
+    
 }

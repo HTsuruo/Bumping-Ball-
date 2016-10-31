@@ -36,8 +36,8 @@ class BallUtil: NSObject {
         return SKAction.setTexture(gold, resize: true)
     }
     
-    //   跳ね返り処理
-    func setRebound(_ node: SKSpriteNode) {
+    //   横方向の跳ね返り処理
+    func setBoundX(_ node: SKSpriteNode) {
         let halfSize = Int(node.size.width/2)
         var screenCollision = false
         
@@ -66,6 +66,38 @@ class BallUtil: NSObject {
             dx *= -1
         }
         node.userData?.setValue(dx, forKey: "dx")
+    }
+    
+    //   縦方向の跳ね返り処理
+    func setBoundY(_ node: SKSpriteNode) {
+        let halfSize = Int(node.size.width/2)
+        var screenCollision = false
+        
+        if node.position.y < (define.HEADER_HEIGHT + CGFloat.STATUS_HEIGHT) {
+            node.position.y = (define.HEADER_HEIGHT + CGFloat.STATUS_HEIGHT)
+            screenCollision = true
+        }
+        
+        if node.position.y > CGFloat.HEIGHT/2 {
+            node.position.y = CGFloat.HEIGHT/2
+            screenCollision = true
+        }
+        
+        let posY: UInt = UInt(node.position.y)
+        var dy = node.userData?.value(forKey: "dy") as! CGFloat
+        
+//        if posY < UInt(halfSize) {
+//            screenCollision = true
+//        }
+//        let sizePlusPosX = Int(posY) + halfSize
+//        if sizePlusPosX > Int(CGFloat.WIDTH) {
+//            screenCollision = true
+//        }
+        
+        if screenCollision {
+            dy *= -1
+        }
+        node.userData?.setValue(dy, forKey: "dy")
     }
     
     func getScoreByCombo(_ comboCount: Int) -> Int {

@@ -70,9 +70,8 @@ enum DifficultyType: Int {
         case .easy:
             return true
         default:
-            false
+            return false
         }
-        return false
     }
     
 }
@@ -81,6 +80,15 @@ enum PlayType: Int {
     case one = 0
     case bluetooth = 1
     case network = 2
+    
+    func isOnePlay() -> Bool {
+        switch self {
+        case .one:
+            return true
+        default:
+            return false
+        }
+    }
 }
 
 enum PlayerType: Int {
