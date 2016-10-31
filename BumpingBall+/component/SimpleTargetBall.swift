@@ -17,6 +17,7 @@ class SimpleTargetBall {
     var dy = 1.0
     let childBall = SKNode()
     var randNum = 0
+    var rotateDuration = 2.0
     
     init() {
         self.ball.alpha = 0.0 //フェードインのため.
@@ -36,6 +37,7 @@ class SimpleTargetBall {
         self.ball.userData?.setValue(self.dy, forKey: "dy")
         
         setPhysics()
+        setRotate()
     }
     
     func setBall(num: BallType) {
@@ -55,8 +57,10 @@ class SimpleTargetBall {
         self.ball.physicsBody = SKPhysicsBody(circleOfRadius: self.ball.size.width / 2.0)
         self.ball.physicsBody?.affectedByGravity = false
         self.ball.physicsBody?.isDynamic = true
-        
-        let action = SKAction.rotate(byAngle: CGFloat(M_PI), duration:2.0)
+    }
+    
+    func setRotate() {
+        let action = SKAction.rotate(byAngle: CGFloat(M_PI), duration: rotateDuration)
         self.ball.run(SKAction.repeatForever(action))
     }
     

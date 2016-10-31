@@ -46,6 +46,7 @@ class BluetoothPlay: BaseScene {
         bluetoothUtil.sendData(dic: dic)
         waitingView.show()
         start()
+        createItemBall()
     }
     
     func start() {
@@ -126,6 +127,21 @@ class BluetoothPlay: BaseScene {
         }
     }
     
+    func moveItemBall() {
+        self.enumerateChildNodes(withName: "item_ball", using: {
+            node, stop in
+            if node is SKSpriteNode {
+                let node = node as! SKSpriteNode
+                self.ballUtil.setBoundX(node)
+                self.ballUtil.setBoundY(node)
+                let dx = node.userData?.value(forKey: "dx") as! CGFloat
+                let dy = node.userData?.value(forKey: "dy") as! CGFloat
+                node.position.x += dx
+                node.position.y -= dy
+            }
+        })
+    }
+    
     /** Common functions. **/
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -141,15 +157,17 @@ class BluetoothPlay: BaseScene {
     
     override func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
+        moveItemBall()
     }
     
     fileprivate func createItemBall() {
+        itemBall = ItemBall()
         var posX: UInt! = UInt(arc4random_uniform(UInt32(CGFloat.WIDTH)))
-        
-        targetBall.ball.position = CGPoint(x:CGFloat(posX), y:self.frame.height-50)
-        targetBall.setCategory(targetBallCategory, targetCat: ballCategory)
-        self.addChild(self.targetBall.ball)
-        targetBall.ball.run(SKAction.fadeIn(withDuration: 0.5))
+        posX = itemBall.setInScreen(posX)
+        itemBall.ball.position = CGPoint(x:CGFloat(posX), y:self.frame.height-50)
+        itemBall.setCategory(targetBallCategory, targetCat: ballCategory)
+        self.addChild(self.itemBall.ball)
+        itemBall.ball.run(SKAction.fadeIn(withDuration: 0.5))
     }
     
 }

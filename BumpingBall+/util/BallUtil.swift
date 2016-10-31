@@ -73,13 +73,13 @@ class BallUtil: NSObject {
         let halfSize = Int(node.size.width/2)
         var screenCollision = false
         
-        if node.position.y < (define.HEADER_HEIGHT + CGFloat.STATUS_HEIGHT) {
-            node.position.y = (define.HEADER_HEIGHT + CGFloat.STATUS_HEIGHT)
+        if node.position.y > CGFloat.HEIGHT - (define.HEADER_HEIGHT + CGFloat.STATUS_HEIGHT + CGFloat(halfSize)) {
+            node.position.y = CGFloat.HEIGHT - (define.HEADER_HEIGHT + CGFloat.STATUS_HEIGHT + CGFloat(halfSize))
             screenCollision = true
         }
         
-        if node.position.y > CGFloat.HEIGHT/2 {
-            node.position.y = CGFloat.HEIGHT/2
+        if node.position.y < CGFloat.HEIGHT * 3/4 - CGFloat(halfSize) {
+            node.position.y = CGFloat.HEIGHT * 3/4 - CGFloat(halfSize)
             screenCollision = true
         }
         
