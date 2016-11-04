@@ -48,7 +48,7 @@ struct PlayerBall {
     
     mutating func sizeChange() {
         let ballUtil = BallUtil()
-        self.ballScale += 0.025
+        self.ballScale += 0.04
         if self.ballScale < 0.8 {
             self.ballSpeed = define.BALL_INIT_SPEED
             self.ball.run(ballUtil.setBlue())

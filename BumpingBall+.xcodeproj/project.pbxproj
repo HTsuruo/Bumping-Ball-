@@ -475,13 +475,13 @@
 				56AC95A71CB2BCFD00B31FE3 /* PauseMenu.xib */,
 				56D160BE1CC49B3A00257404 /* FinishView.xib */,
 				56D160C01CC4FCF500257404 /* FinishView.swift */,
-				5666F81D1D643CDA001EFC57 /* CountdownView.swift */,
 				5666F81F1D643CF8001EFC57 /* CountdownView.xib */,
+				5666F81D1D643CDA001EFC57 /* CountdownView.swift */,
 				56CC4E3E1D67056000434A17 /* HeaderView.xib */,
 				56B802561D684765007B79A7 /* HeaderView.swift */,
 				561BA2091D69799B004FC052 /* TouchViewTxt.xib */,
-				561BA20B1D697A62004FC052 /* TouchViewTxt.swift */,
 				561BA2101D699774004FC052 /* TouchView.swift */,
+				561BA20B1D697A62004FC052 /* TouchViewTxt.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";

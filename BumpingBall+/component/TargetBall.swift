@@ -96,6 +96,7 @@ class TargetBall: SimpleTargetBall {
         self.dx += 0.2
         self.dy += 0.2
         self.ballScale = 1.0
+        self.ball.setScale(self.ballScale)
         let action = SKAction.setTexture(texture, resize: false)
         self.ball.run(action)
     }
