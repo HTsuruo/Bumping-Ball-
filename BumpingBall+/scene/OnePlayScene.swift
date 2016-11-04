@@ -43,6 +43,7 @@ class OnePlayScene: BaseScene {
     
     //自陣にボールが入ったらゲームオーバーとします
     override func tballComesInTouchArea(_ node: SKSpriteNode) {
+        super.tballComesInTouchArea(node)
         self.isFin = true
         self.finish()
     }

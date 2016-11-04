@@ -57,6 +57,7 @@ class BluetoothPlay: BaseScene {
     }
     
     override func tballComesInTouchArea(_ node: SKSpriteNode) {
+        super.tballComesInTouchArea(node)
         if myLifeCount < 1 {
             return
         }

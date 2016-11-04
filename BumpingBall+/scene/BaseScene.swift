@@ -197,6 +197,15 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     
     //自陣にボールが入った処理(oneplayとmultiplayで分岐します)
     func tballComesInTouchArea(_ node: SKSpriteNode) {
+        var id = node.userData?.value(forKey: "id") as? Int
+        if id == nil {
+            id = 0
+        }
+        let spark = animation.sparkAnimation(node, id: id!, scale: 1.0)
+        self.addChild(spark)
+        let sequence = animation.fadeOutRemove(1.0)
+        spark.run(sequence)
+        node.removeFromParent()
     }
     
     
