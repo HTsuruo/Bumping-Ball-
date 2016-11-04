@@ -49,6 +49,8 @@
 		566B38F91DC655200026083B /* closeBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 566B38F81DC655200026083B /* closeBtn@2x.png */; };
 		566B390A1DC65FB50026083B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 566B390C1DC65FB50026083B /* InfoPlist.strings */; };
 		566B390F1DC65FB50026083B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 566B39111DC65FB50026083B /* InfoPlist.strings */; };
+		566D0CE41DCCB7BF0051BAD4 /* spark_triangle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 566D0CE31DCCB7BF0051BAD4 /* spark_triangle@2x.png */; };
+		566D0CE61DCCB8E80051BAD4 /* spark_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 566D0CE51DCCB8E80051BAD4 /* spark_line@2x.png */; };
 		56700B471DC694F20099093D /* bk.sks in Resources */ = {isa = PBXBuildFile; fileRef = 56700B461DC694F20099093D /* bk.sks */; };
 		56700B4B1DC69D2D0099093D /* spark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56700B491DC69D2D0099093D /* spark@2x.png */; };
 		56700B4C1DC69D2D0099093D /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56700B4A1DC69D2D0099093D /* star@2x.png */; };
@@ -57,6 +59,7 @@
 		56700B551DC716D90099093D /* question_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56700B521DC716D90099093D /* question_green@2x.png */; };
 		56700B561DC716D90099093D /* question_orange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56700B531DC716D90099093D /* question_orange@2x.png */; };
 		56700B571DC716D90099093D /* question_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56700B541DC716D90099093D /* question_red@2x.png */; };
+		567437921DC9C3FC00FBC680 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 567437901DC9C3FC00FBC680 /* spark.png */; };
 		5698E9E71DBA77FA0078DC53 /* WaitingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698E9E51DBA77FA0078DC53 /* WaitingView.swift */; };
 		5698E9E81DBA77FA0078DC53 /* WaitingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5698E9E61DBA77FA0078DC53 /* WaitingView.xib */; };
 		56A528601DB9BF1700AEFA9F /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5285F1DB9BF1700AEFA9F /* extension.swift */; };
@@ -199,6 +202,8 @@
 		566B39071DC65FB40026083B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		566B390B1DC65FB50026083B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		566B39101DC65FB50026083B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		566D0CE31DCCB7BF0051BAD4 /* spark_triangle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "spark_triangle@2x.png"; path = "sks/spark_triangle@2x.png"; sourceTree = "<group>"; };
+		566D0CE51DCCB8E80051BAD4 /* spark_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "spark_line@2x.png"; path = "sks/spark_line@2x.png"; sourceTree = "<group>"; };
 		56700B461DC694F20099093D /* bk.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = bk.sks; path = sks/bk.sks; sourceTree = "<group>"; };
 		56700B491DC69D2D0099093D /* spark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "spark@2x.png"; path = "img/particles_texture/spark@2x.png"; sourceTree = SOURCE_ROOT; };
 		56700B4A1DC69D2D0099093D /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "star@2x.png"; path = "img/particles_texture/star@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -207,6 +212,7 @@
 		56700B521DC716D90099093D /* question_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "question_green@2x.png"; path = "img/balls/item/question_green@2x.png"; sourceTree = SOURCE_ROOT; };
 		56700B531DC716D90099093D /* question_orange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "question_orange@2x.png"; path = "img/balls/item/question_orange@2x.png"; sourceTree = SOURCE_ROOT; };
 		56700B541DC716D90099093D /* question_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "question_red@2x.png"; path = "img/balls/item/question_red@2x.png"; sourceTree = SOURCE_ROOT; };
+		567437901DC9C3FC00FBC680 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = sks/spark.png; sourceTree = "<group>"; };
 		5698E9E51DBA77FA0078DC53 /* WaitingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaitingView.swift; path = view/multiplay/WaitingView.swift; sourceTree = "<group>"; };
 		5698E9E61DBA77FA0078DC53 /* WaitingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WaitingView.xib; path = view/multiplay/WaitingView.xib; sourceTree = "<group>"; };
 		56A5285F1DB9BF1700AEFA9F /* extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
@@ -421,11 +427,14 @@
 		56AC95931CB24A1F00B31FE3 /* sks */ = {
 			isa = PBXGroup;
 			children = (
+				566D0CE51DCCB8E80051BAD4 /* spark_line@2x.png */,
+				566D0CE31DCCB7BF0051BAD4 /* spark_triangle@2x.png */,
 				565DDA541CBD4EB0003C9F0D /* launch.sks */,
 				56BD7D3E1CBB9E0100F9178B /* TopScene.sks */,
 				56AC95941CB24B2100B31FE3 /* PlayScene.sks */,
 				56AC95961CB24B2100B31FE3 /* spark.sks */,
 				56700B461DC694F20099093D /* bk.sks */,
+				567437901DC9C3FC00FBC680 /* spark.png */,
 			);
 			name = sks;
 			sourceTree = "<group>";
@@ -841,6 +850,7 @@
 				56BB7F3E1CAD345200675AE8 /* LaunchScreen.storyboard in Resources */,
 				5666F82C1D645702001EFC57 /* ball_green_3@2x.png in Resources */,
 				56AC95AA1CB2BDD400B31FE3 /* pause.mp3 in Resources */,
+				566D0CE41DCCB7BF0051BAD4 /* spark_triangle@2x.png in Resources */,
 				56AC95A81CB2BCFD00B31FE3 /* PauseMenu.xib in Resources */,
 				561BCFFB1D72F9A400766B36 /* rankBtn@2x.png in Resources */,
 				56700B561DC716D90099093D /* question_orange@2x.png in Resources */,
@@ -848,6 +858,7 @@
 				5666F8261D6456F5001EFC57 /* ball_orange_2@2x.png in Resources */,
 				561BA20F1D69975D004FC052 /* touchView@2x.png in Resources */,
 				56BDE3D81D7A5D0500247E36 /* GoogleService-Info.plist in Resources */,
+				566D0CE61DCCB8E80051BAD4 /* spark_line@2x.png in Resources */,
 				56BDE3E51D7ACA7600247E36 /* life_blue@2x.png in Resources */,
 				56D160D21CC50E5300257404 /* line@2x.png in Resources */,
 				5666F8221D6456DB001EFC57 /* facebook@2x.png in Resources */,
@@ -863,6 +874,7 @@
 				56BDE3E71D7ACA7600247E36 /* life_red@2x.png in Resources */,
 				56BF57D61CD798D500923509 /* COOPBL.ttf in Resources */,
 				56BB7F3B1CAD345200675AE8 /* Assets.xcassets in Resources */,
+				567437921DC9C3FC00FBC680 /* spark.png in Resources */,
 				56E0732B1DBE2017002E634D /* icon_global@2x.png in Resources */,
 				566B38F91DC655200026083B /* closeBtn@2x.png in Resources */,
 				5698E9E81DBA77FA0078DC53 /* WaitingView.xib in Resources */,

@@ -46,7 +46,6 @@ class BluetoothPlay: BaseScene {
         bluetoothUtil.sendData(dic: dic)
         waitingView.show()
         start()
-        createItemBall()
     }
     
     func start() {
@@ -127,21 +126,6 @@ class BluetoothPlay: BaseScene {
         }
     }
     
-    func moveItemBall() {
-        self.enumerateChildNodes(withName: "item_ball", using: {
-            node, stop in
-            if node is SKSpriteNode {
-                let node = node as! SKSpriteNode
-                self.ballUtil.setBoundX(node)
-                self.ballUtil.setBoundY(node)
-                let dx = node.userData?.value(forKey: "dx") as! CGFloat
-                let dy = node.userData?.value(forKey: "dy") as! CGFloat
-                node.position.x += dx
-                node.position.y -= dy
-            }
-        })
-    }
-    
     /** Common functions. **/
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -157,7 +141,18 @@ class BluetoothPlay: BaseScene {
     
     override func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
-        moveItemBall()
+        if self["item_ball"].count > 0 {
+            moveItemBall()
+        }
+    }
+    
+    override func didBeginMultiPlay() {
+        let itemBallCount = self["item_ball"].count
+        //        combo 3, 4, 5のみ
+        let canCreateItemBall = comboCount > define.COMBO_FOR_ITEM_BALL && itemBallCount < define.MAX_ITEM_BALL
+        if canCreateItemBall {
+            createItemBall()
+        }
     }
     
     fileprivate func createItemBall() {
@@ -166,8 +161,28 @@ class BluetoothPlay: BaseScene {
         posX = itemBall.setInScreen(posX)
         itemBall.ball.position = CGPoint(x:CGFloat(posX), y:self.frame.height-50)
         itemBall.setCategory(targetBallCategory, targetCat: ballCategory)
-        self.addChild(self.itemBall.ball)
+        self.addChild(itemBall.ball)
         itemBall.ball.run(SKAction.fadeIn(withDuration: 0.5))
+    }
+    
+    func moveItemBall() {
+        self.enumerateChildNodes(withName: "item_ball", using: {
+            node, stop in
+            if node is SKSpriteNode {
+                let node = node as! SKSpriteNode
+                guard let isCollision = node.userData?.value(forKey: "isCollision") as? Bool else {
+                    return
+                }
+                if !isCollision {
+                    self.ballUtil.setBoundX(node)
+                    self.ballUtil.setBoundY(node)
+                    let dx = node.userData?.value(forKey: "dx") as! CGFloat
+                    let dy = node.userData?.value(forKey: "dy") as! CGFloat
+                    node.position.x += dx
+                    node.position.y -= dy
+                }
+            }
+        })
     }
     
 }

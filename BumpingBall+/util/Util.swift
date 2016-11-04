@@ -19,6 +19,8 @@ struct define {
     static let TOUCH_HEIGHT: CGFloat = 65.0
     static let TOUCH_AREA = CGRect(x: 0, y: 0, width: CGFloat.WIDTH, height: TOUCH_HEIGHT)
     static let APPSTORE_URL = "https://itunes.apple.com/us/app/bumping-ball+/id1148383719?l=ja&ls=1&mt=8"
+    static let MAX_ITEM_BALL = 5
+    static let COMBO_FOR_ITEM_BALL = 2
 }
 
 struct Util {

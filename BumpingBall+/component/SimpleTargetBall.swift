@@ -36,7 +36,7 @@ class SimpleTargetBall {
         self.ball.userData?.setValue(self.dx, forKey: "dx")
         self.ball.userData?.setValue(self.dy, forKey: "dy")
         
-        setPhysics()
+        setPhysicsBody()
         setRotate()
     }
     
@@ -52,11 +52,16 @@ class SimpleTargetBall {
         //        set unique ball name.
     }
     
-    func setPhysics() {
+    func setPhysicsBody() {
         //衝突判定用の物理演算
         self.ball.physicsBody = SKPhysicsBody(circleOfRadius: self.ball.size.width / 2.0)
         self.ball.physicsBody?.affectedByGravity = false
         self.ball.physicsBody?.isDynamic = true
+        self.ball.physicsBody?.restitution = 1.0
+        self.ball.physicsBody?.linearDamping = 0
+        self.ball.physicsBody?.friction = 0
+        self.ball.physicsBody?.usesPreciseCollisionDetection = true
+//        self.ball.physicsBody?.velocity = CGVector(dx: dx, dy: dy)
     }
     
     func setRotate() {

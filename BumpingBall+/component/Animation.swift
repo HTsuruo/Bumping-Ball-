@@ -120,4 +120,20 @@ class Animation {
         return node
     }
     
+    func itemBallLaunchAnimation(_ node: SKNode) -> SKAction {
+        node.physicsBody?.isDynamic = false
+        let down = SKAction.moveTo(y: node.position.y-30, duration: Double(0.15))
+        let delay = SKAction.wait(forDuration: 0.1)
+        let up = SKAction.moveTo(y: CGFloat.HEIGHT, duration: Double(0.1))
+        return SKAction.sequence([down, delay, up])
+    }
+    
+    func scaleAnimation(_ node: SKNode) -> SKAction {
+        let originalScale = node.xScale
+        let bigger = SKAction.scale(to: originalScale + 0.3, duration: Double(0.1))
+        let delay = SKAction.wait(forDuration: 0.1)
+        let normal = SKAction.scale(to: originalScale, duration: Double(0.1))
+        return SKAction.sequence([bigger, delay, normal])
+    }
+    
 }

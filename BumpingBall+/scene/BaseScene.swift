@@ -244,9 +244,19 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
             if firstBody.categoryBitMask & ballCategory != 0 &&
                 secondBody.categoryBitMask & targetBallCategory != 0 {
                 if canRemove {
-                    updateComboCount(firstBody.node!, tnode: secondBody.node!)
-                    removeTargetBall(secondBody.node!, id: targetId as! Int)
-                    updateScore()
+                    //item ball.
+                    if let isItem = secondBody.node?.userData?.value(forKey: "isItem") as? Bool {
+                        if isItem {
+                            secondBody.node?.userData?.setValue(true, forKey: "isCollision")
+                            removeItemBall(secondBody.node!, id: targetId as! Int)
+                        }
+                    } else {
+                        // normal ball.
+                        updateComboCount(firstBody.node!, tnode: secondBody.node!)
+                        removeTargetBall(secondBody.node!, id: targetId as! Int)
+                        updateScore()
+                        didBeginMultiPlay()
+                    }
                 } else {
                     changeTargetBall(firstBody.node!, tBall: secondBody.node!, id: targetId as! Int)
                 }
@@ -255,6 +265,10 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
         }
+    }
+    
+    func didBeginMultiPlay() {
+//        do something..
     }
     
     func updateComboCount(_ pnode: SKNode, tnode: SKNode) {
@@ -302,8 +316,18 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         node.removeFromParent()
     }
     
+    func removeItemBall(_ node: SKNode, id: Int) {
+        let spark = animation.sparkAnimation(node, id: id, scale: 0.25)
+        self.addChild(spark)
+        let sequence = animation.fadeOutRemove(0.5)
+        spark.run(sequence)
+        
+        let actionMove = animation.itemBallLaunchAnimation(node)
+        let s = animation.removeAfterAction(actionMove)
+        node.run(s)
+    }
+    
     func changeTargetBall(_ pBall: SKNode, tBall: SKNode, id: Int) {
-        //アニメーションはplayer ball
         let spark = animation.sparkAnimation(pBall, id: id, scale: 0.2)
         self.addChild(spark)
         let sequence = animation.fadeOutRemove(0.5)
@@ -313,7 +337,9 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         let resNum = num - 1
         tBall.userData?.setValue(resNum, forKey: "num")
         let action = ballUtil.getBallImageByNum(id, num: resNum)
-        tBall.run(action)
+        let scaleAnimation = animation.scaleAnimation(tBall)
+        let group = SKAction.group([action, scaleAnimation])
+        tBall.run(group)
     }
     
     func launchAnimation() {
