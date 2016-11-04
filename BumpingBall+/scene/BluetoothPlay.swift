@@ -82,7 +82,17 @@ class BluetoothPlay: BaseScene {
         bluetoothUtil.sendData(dic: dic)
     }
     
+    func sendBallData(_ id: Int) {
+        let dic: [String : AnyObject] = ["targetBallId": id as AnyObject]
+        bluetoothUtil.sendData(dic: dic)
+    }
+    
     func receiveData(data: [String: AnyObject]) {
+        
+        if let data = data["targetBallId"] {
+            let id = data as! Int
+            createDevilBall(id: id)
+        }
         
         if let data = data["prepared"] {
             partnerPrepared = data as! Bool
@@ -146,13 +156,39 @@ class BluetoothPlay: BaseScene {
         }
     }
     
-    override func didBeginMultiPlay() {
-        let itemBallCount = self["item_ball"].count
-        //        combo 3, 4, 5のみ
-        let canCreateItemBall = comboCount > define.COMBO_FOR_ITEM_BALL && itemBallCount < define.MAX_ITEM_BALL
-        if canCreateItemBall {
-            createItemBall()
+    override func collision(firstBody: SKPhysicsBody, secondBody: SKPhysicsBody, targetId: Int, num: Int) {
+        let canRemove = (num == 1 || playerBall.isGold(firstBody.node!))
+        if firstBody.categoryBitMask & ballCategory != 0 &&
+            secondBody.categoryBitMask & targetBallCategory != 0 {
+            if canRemove {
+                //item ball.
+                if let isItem = secondBody.node?.userData?.value(forKey: "isItem") as? Bool {
+                    if isItem {
+                        secondBody.node?.userData?.setValue(true, forKey: "isCollision")
+                        removeItemBall(secondBody.node!, id: targetId)
+                        sendBallData(targetId)
+                    }
+                } else {
+                    // normal ball.
+                    updateComboCount(firstBody.node!, tnode: secondBody.node!)
+                    removeTargetBall(secondBody.node!, id: targetId)
+                    updateScore()
+                    
+                    // combo 3, 4, 5のみitem ballを生成します.
+                    let itemBallCount = self["item_ball"].count
+                    let canCreateItemBall = comboCount > define.COMBO_FOR_ITEM_BALL && itemBallCount < define.MAX_ITEM_BALL
+                    if canCreateItemBall {
+                        createItemBall()
+                    }
+                }
+            } else {
+                changeTargetBall(firstBody.node!, tBall: secondBody.node!, id: targetId)
+            }
+            if !playerBall.isGold(firstBody.node!) {
+                firstBody.node?.removeFromParent()
+            }
         }
+
     }
     
     fileprivate func createItemBall() {
@@ -183,6 +219,28 @@ class BluetoothPlay: BaseScene {
                 }
             }
         })
+    }
+    
+    func removeItemBall(_ node: SKNode, id: Int) {
+        let spark = animation.sparkAnimation(node, id: id, scale: 0.25)
+        self.addChild(spark)
+        let sequence = animation.fadeOutRemove(0.5)
+        spark.run(sequence)
+        
+        let actionMove = animation.itemBallLaunchAnimation(node)
+        let s = animation.removeAfterAction(actionMove)
+        node.run(s)
+    }
+    
+    fileprivate func createDevilBall(id: Int) {
+        targetBall = TargetBall()
+        targetBall.changeDevilBall(id: id)
+        var posX: UInt! = UInt(arc4random_uniform(UInt32(CGFloat.WIDTH)))
+        posX = targetBall.setInScreen(posX)
+        targetBall.ball.position = CGPoint(x:CGFloat(posX), y:self.frame.height-50)
+        targetBall.setCategory(targetBallCategory, targetCat: ballCategory)
+        self.addChild(self.targetBall.ball)
+        targetBall.ball.run(SKAction.fadeIn(withDuration: 0.5))
     }
     
 }

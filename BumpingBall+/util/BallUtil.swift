@@ -122,6 +122,9 @@ class BallUtil: NSObject {
         case BallType.orange.rawValue:
             texture = SKTexture.init(imageNamed: getOrangeBallImageByNum(num))
             break
+        case BallType.red.rawValue:
+            texture = SKTexture.init(imageNamed: getRedBallImageByNum(num))
+            break
         default:
             break
         }
@@ -138,6 +141,10 @@ class BallUtil: NSObject {
     
     func getOrangeBallImageByNum(_ num: Int) -> String {
         return "ball_orange_"+String(num)
+    }
+    
+    func getRedBallImageByNum(_ num: Int) -> String {
+        return "ball_red_"+String(num)
     }
 
 }

@@ -61,7 +61,6 @@ class SimpleTargetBall {
         self.ball.physicsBody?.linearDamping = 0
         self.ball.physicsBody?.friction = 0
         self.ball.physicsBody?.usesPreciseCollisionDetection = true
-//        self.ball.physicsBody?.velocity = CGVector(dx: dx, dy: dy)
     }
     
     func setRotate() {

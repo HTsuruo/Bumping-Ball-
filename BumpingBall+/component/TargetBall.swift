@@ -17,7 +17,7 @@ class TargetBall: SimpleTargetBall {
         // easy mode以外
         if !app.selectedDiffculty.isEasy() {
             if hasNumber() {
-                changeToHasNumberBall(randNum)
+                changeHasNumberBall(randNum)
             }
         }
     }
@@ -70,8 +70,38 @@ class TargetBall: SimpleTargetBall {
         return false
     }
     
+    func changeDevilBall(id: Int) {
+        self.ball.userData?.setValue(id, forKey: "id")
+        let rand = Int(arc4random_uniform(2))
+        self.ball.userData?.setValue(rand+1, forKey: "num")
+        let type = BallType(rawValue: id)! as BallType
+        var texture = SKTexture.init()
+        switch type {
+        case .blue:
+            texture = SKTexture.init(imageNamed: ballImage.DEVIl_BLUE)
+            break
+        case .green:
+            texture = SKTexture.init(imageNamed: ballImage.DEVIl_GREEN)
+            break
+        case .orange:
+            texture = SKTexture.init(imageNamed: ballImage.DEVIl_ORANGE)
+            break
+        case .red:
+            texture = SKTexture.init(imageNamed: ballImage.DEVIl_RED)
+            break
+        default:
+            break
+        }
+        
+        self.dx += 0.2
+        self.dy += 0.2
+        self.ballScale = 1.0
+        let action = SKAction.setTexture(texture, resize: false)
+        self.ball.run(action)
+    }
     
-    func changeToHasNumberBall(_ randNum: Int) {
+    
+    func changeHasNumberBall(_ randNum: Int) {
         var texture = SKTexture.init()
         var num = 1
         switch randNum {

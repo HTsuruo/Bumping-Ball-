@@ -161,7 +161,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(playerBall.ball)
     }
     
-    fileprivate func createTargetBall() {
+    func createTargetBall() {
         targetBall = TargetBall()
         var posX: UInt! = UInt(arc4random_uniform(UInt32(CGFloat.WIDTH)))
         posX = targetBall.setInScreen(posX)
@@ -239,35 +239,12 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         
         //      ballとtargetballが接触した時の処理
         if targetId != nil {
-            let canRemove = (num as! Int == 1 || playerBall.isGold(firstBody.node!))
-            
-            if firstBody.categoryBitMask & ballCategory != 0 &&
-                secondBody.categoryBitMask & targetBallCategory != 0 {
-                if canRemove {
-                    //item ball.
-                    if let isItem = secondBody.node?.userData?.value(forKey: "isItem") as? Bool {
-                        if isItem {
-                            secondBody.node?.userData?.setValue(true, forKey: "isCollision")
-                            removeItemBall(secondBody.node!, id: targetId as! Int)
-                        }
-                    } else {
-                        // normal ball.
-                        updateComboCount(firstBody.node!, tnode: secondBody.node!)
-                        removeTargetBall(secondBody.node!, id: targetId as! Int)
-                        updateScore()
-                        didBeginMultiPlay()
-                    }
-                } else {
-                    changeTargetBall(firstBody.node!, tBall: secondBody.node!, id: targetId as! Int)
-                }
-                if !playerBall.isGold(firstBody.node!) {
-                    firstBody.node?.removeFromParent()
-                }
-            }
+            collision(firstBody: firstBody, secondBody: secondBody, targetId: targetId as! Int, num: num as! Int)
         }
     }
     
-    func didBeginMultiPlay() {
+    
+    func collision(firstBody: SKPhysicsBody, secondBody: SKPhysicsBody, targetId: Int, num: Int) {
 //        do something..
     }
     
@@ -314,17 +291,6 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         let sequence = animation.fadeOutRemove(0.5)
         spark.run(sequence)
         node.removeFromParent()
-    }
-    
-    func removeItemBall(_ node: SKNode, id: Int) {
-        let spark = animation.sparkAnimation(node, id: id, scale: 0.25)
-        self.addChild(spark)
-        let sequence = animation.fadeOutRemove(0.5)
-        spark.run(sequence)
-        
-        let actionMove = animation.itemBallLaunchAnimation(node)
-        let s = animation.removeAfterAction(actionMove)
-        node.run(s)
     }
     
     func changeTargetBall(_ pBall: SKNode, tBall: SKNode, id: Int) {
