@@ -146,5 +146,5 @@ class BallUtil: NSObject {
     func getRedBallImageByNum(_ num: Int) -> String {
         return "ball_red_"+String(num)
     }
-
+    
 }

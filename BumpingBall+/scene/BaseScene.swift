@@ -229,33 +229,49 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
             return
         }
         
-        let myId = firstBody.node?.userData?.value(forKey: "id")
-        let targetId = secondBody.node?.userData?.value(forKey: "id")
-        
-        let isNull = myId == nil || targetId == nil
-        let isSame =  myId as! Int == targetId as! Int
-        
-        if !playerBall.isGold(firstBody.node!) {
-            if isNull || !(isSame) {
-                return
-            }
-        }
-        
         let num = secondBody.node?.userData?.value(forKey: "num")
         if num == nil {
             return
         }
         
-        //      ballとtargetballが接触した時の処理
-        if targetId != nil {
-            collision(firstBody: firstBody, secondBody: secondBody, targetId: targetId as! Int, num: num as! Int)
+        let myId = firstBody.node?.userData?.value(forKey: "id")
+        let targetId = secondBody.node?.userData?.value(forKey: "id")
+        
+        let isNull = (myId == nil || targetId == nil)
+        if isNull {
+            return
+        }
+        
+        let tId = targetId as! Int
+        let isSame =  (myId as! Int == tId)
+        
+        if !playerBall.isGold(firstBody.node!) {
+            if !isSame {
+                return
+            }
+        }
+        
+        let collisionCorrect = (firstBody.categoryBitMask & ballCategory != 0 && secondBody.categoryBitMask & targetBallCategory != 0)
+        if collisionCorrect {
+            collision(firstBody.node!, secondNode: secondBody.node!, targetId: tId)
+            removePlayerBall(firstBody: firstBody.node!)
         }
     }
     
-    
-    func collision(firstBody: SKPhysicsBody, secondBody: SKPhysicsBody, targetId: Int, num: Int) {
-//        do something..
+    func removePlayerBall(firstBody: SKNode) {
+        if !playerBall.isGold(firstBody) {
+            firstBody.removeFromParent()
+        }
     }
+    
+    func collision(_ firstNode: SKNode, secondNode: SKNode, targetId: Int) {
+//        do collision something..
+    }
+    
+    func collisionToSpecialItemBall(_ firstNode: SKNode, secondNode: SKNode, targetId: Int) {
+//        do collision to special item ball something..
+    }
+    
     
     func updateComboCount(_ pnode: SKNode, tnode: SKNode) {
         comboCount += 1
