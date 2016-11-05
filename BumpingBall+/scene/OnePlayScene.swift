@@ -34,6 +34,9 @@ class OnePlayScene: BaseScene {
     
     override func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
+        if  !playerBall.isFire {
+            playerBall.sizeChange(reverse: false)
+        }
     }
     
     override func updateScore() {
@@ -48,20 +51,16 @@ class OnePlayScene: BaseScene {
         self.finish()
     }
     
-    override func collision(firstBody: SKPhysicsBody, secondBody: SKPhysicsBody, targetId: Int, num: Int) {
-        let canRemove = (num == 1 || playerBall.isGold(firstBody.node!))
-        if firstBody.categoryBitMask & ballCategory != 0 &&
-            secondBody.categoryBitMask & targetBallCategory != 0 {
-            if canRemove {
-                updateComboCount(firstBody.node!, tnode: secondBody.node!)
-                removeTargetBall(secondBody.node!, id: targetId)
-                updateScore()
-            } else {
-                changeTargetBall(firstBody.node!, tBall: secondBody.node!, id: targetId)
-            }
-            if !playerBall.isGold(firstBody.node!) {
-                firstBody.node?.removeFromParent()
-            }
+    
+    override func collision(_ firstNode: SKNode, secondNode: SKNode, targetId: Int) {
+        let num = secondNode.userData?.value(forKey: "num") as! Int
+        let canRemove = (num == 1 || playerBall.isGold(firstNode))
+        if canRemove {
+            updateComboCount(firstNode, tnode: secondNode)
+            removeTargetBall(secondNode, id: targetId)
+            updateScore()
+        } else {
+            changeTargetBall(firstNode, tBall: secondNode, id: targetId)
         }
     }
     

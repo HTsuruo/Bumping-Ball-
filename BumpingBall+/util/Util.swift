@@ -13,6 +13,7 @@ struct define {
     static let MAX = 20
     static let BALL_INIT_SCALE = CGFloat(0.5)
     static let BALL_INIT_SPEED = CGFloat(0.5)
+    static let BALL_MAX_SCALE = CGFloat(1.7)
     static let TOUCH_MARGIN = CGFloat(50.0) //タッチ箇所とボールが被って見難くなってしまうので少しずらします.
     static let HEADER_HEIGHT: CGFloat = 60.0
     static let REMOVE_HEIGHT = CGFloat(CGFloat.HEIGHT - (HEADER_HEIGHT))

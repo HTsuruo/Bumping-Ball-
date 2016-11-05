@@ -41,7 +41,7 @@ class HeaderViewMatch: UIView {
         self.addSubview(contentView)
     }
     
-    func disapperAnimation(_ type: PlayerType, life: Int) {
+    func disappearAnimation(_ type: PlayerType, life: Int) {
         let view = SpringImageView()
         var frame = CGRect(x: 0, y: 0, width: 0, height: 0)
         
@@ -86,6 +86,56 @@ class HeaderViewMatch: UIView {
         view.scaleX = 2.5
         view.scaleY = 2.5
         view.duration = 6.0
+        view.animate()
+    }
+    
+    func appearAnimation(_ type: PlayerType, life: Int) {
+        let view = SpringImageView()
+        var frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+        
+        switch type {
+        case .player1:
+            let image = UIImage(named: "life_red")
+            view.image = image
+            switch life {
+            case 3:
+                frame = lifeRedRight.frame
+                lifeRedRight.image = image
+            case 2:
+                frame = lifeRedCenter.frame
+                lifeRedCenter.image = image
+            case 1:
+                frame = lifeRedLeft.frame
+                lifeRedLeft.image = image
+            default:
+                break
+            }
+            view.frame = frame
+            leftArea.addSubview(view)
+            
+        case .player2:
+            let image = UIImage(named: "life_blue")
+            view.image = image
+            switch life {
+            case 3:
+                frame = lifeBlueRight.frame
+                lifeBlueRight.image = image
+            case 2:
+                frame = lifeBlueCenter.frame
+                lifeBlueCenter.image = image
+            case 1:
+                frame = lifeBlueLeft.frame
+                lifeBlueLeft.image = image
+            default:
+                break
+            }
+            view.frame = frame
+            rightArea.addSubview(view)
+        }
+        view.animation = "fadeIn"
+        view.scaleX = 2.5
+        view.scaleY = 2.5
+        view.duration = 3.0
         view.animate()
     }
 }

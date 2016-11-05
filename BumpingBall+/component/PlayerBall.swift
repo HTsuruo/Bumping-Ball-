@@ -16,6 +16,7 @@ struct PlayerBall {
     //ここでいうballSpeedはdurationなので上に到達するまでにかかる時間
     var ballSpeed = define.BALL_INIT_SPEED
     var isFire = false
+    let ballUtil = BallUtil()
     
     init() {
         self.ball.name = "ball"
@@ -46,37 +47,73 @@ struct PlayerBall {
         self.ball.userData?.setValue(true, forKey: "isFire")
     }
     
-    mutating func sizeChange() {
-        let ballUtil = BallUtil()
-        self.ballScale += 0.04
-        if self.ballScale < 0.8 {
-            self.ballSpeed = define.BALL_INIT_SPEED
-            self.ball.run(ballUtil.setBlue())
-            self.setId(BallType.blue.rawValue)
-        } else if self.ballScale < 1.1 {
-            self.ballSpeed = 0.75
-            self.ball.run(ballUtil.setGreen())
-            self.setId(BallType.green.rawValue)
-        } else if self.ballScale < 1.4 {
-            self.ballSpeed = 1.0
-            self.ball.run(ballUtil.setOrange())
-            self.setId(BallType.orange.rawValue)
-        } else if self.ballScale < 1.7 {
-            self.ballSpeed = 1.25
-            self.ball.run(ballUtil.setRed())
-            self.setId(BallType.red.rawValue)
+    mutating func sizeChange(reverse: Bool) {
+        if !reverse {
+            sizeChangeForward()
         } else {
-            self.ballScale = define.BALL_INIT_SCALE
-            self.ballSpeed = define.BALL_INIT_SPEED
-            self.ball.run(ballUtil.setBlue())
-            self.setId(BallType.blue.rawValue)
+            sizeChangeReverse()
         }
         self.ball.setScale(self.ballScale)
     }
     
-    mutating func setGoldBall() {
-        let ballUtil = BallUtil()
-        self.ballSpeed = 3.5
+    mutating func sizeChangeForward() {
+        self.ballScale += 0.04
+        if self.ballScale < 0.8 { //-0.8
+            setBlue()
+        } else if self.ballScale < 1.1 { //0.8-1.1
+            setGreen()
+        } else if self.ballScale < 1.4 { //1.1-1.4
+            setOrange()
+        } else if self.ballScale < define.BALL_MAX_SCALE { //1.4-1.7
+            setRed()
+        } else {
+            setBlue()
+            self.ballScale = define.BALL_INIT_SCALE
+        }
+    }
+    
+    mutating func sizeChangeReverse() {
+        self.ballScale -= 0.04
+        if self.ballScale > 1.4 {
+            setRed()
+        } else if self.ballScale > 1.1 {
+            setOrange()
+        } else if self.ballScale > 0.8 {
+            setGreen()
+        } else if self.ballScale > define.BALL_INIT_SCALE {
+            setBlue()
+        } else {
+            setRed()
+            self.ballScale = define.BALL_MAX_SCALE
+        }
+    }
+    
+    mutating func setBlue() {
+        self.ballSpeed = define.BALL_INIT_SPEED
+        self.ball.run(ballUtil.setBlue())
+        self.setId(BallType.blue.rawValue)
+    }
+    
+    mutating func setGreen() {
+        self.ballSpeed = 0.75
+        self.ball.run(ballUtil.setGreen())
+        self.setId(BallType.green.rawValue)
+    }
+    
+    mutating func setOrange() {
+        self.ballSpeed = 1.0
+        self.ball.run(ballUtil.setOrange())
+        self.setId(BallType.orange.rawValue)
+    }
+    
+    mutating func setRed() {
+        self.ballSpeed = 1.25
+        self.ball.run(ballUtil.setRed())
+        self.setId(BallType.red.rawValue)
+    }
+    
+    mutating func setGold() {
+        self.ballSpeed = 5.0
         self.ball.run(ballUtil.setGold())
         self.setId(BallType.gold.rawValue)
         self.ball.setScale(2.0)

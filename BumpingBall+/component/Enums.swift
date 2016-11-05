@@ -15,6 +15,11 @@ enum BallType: Int {
     case red = 3
     case gold = 100
     
+    //itemBall
+    case reverse = 200
+    case speedup = 201
+    case oneup = 202
+    
     func getImageName(_ key: BallType) -> String {
         switch self {
         case .blue:
@@ -27,6 +32,8 @@ enum BallType: Int {
             return "ball_red"
         case .gold:
             return "ball_gold"
+        default:
+            return ""
         }
     }
     
@@ -42,7 +49,13 @@ enum BallType: Int {
             return 80.0
         case .gold:
             return 100.0
+        default:
+            return 0
         }
+    }
+    
+    func isSpecialItemBall() -> Bool {
+        return (self == .reverse || self == .speedup || self == .oneup)
     }
 }
 

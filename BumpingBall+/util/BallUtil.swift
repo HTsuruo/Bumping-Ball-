@@ -78,8 +78,8 @@ class BallUtil: NSObject {
             screenCollision = true
         }
         
-        if node.position.y < CGFloat.HEIGHT * 3/4 - CGFloat(halfSize) {
-            node.position.y = CGFloat.HEIGHT * 3/4 - CGFloat(halfSize)
+        if node.position.y < CGFloat.HEIGHT * 3/5 - CGFloat(halfSize) {
+            node.position.y = CGFloat.HEIGHT * 3/5 - CGFloat(halfSize)
             screenCollision = true
         }
         
@@ -146,5 +146,5 @@ class BallUtil: NSObject {
     func getRedBallImageByNum(_ num: Int) -> String {
         return "ball_red_"+String(num)
     }
-
+    
 }

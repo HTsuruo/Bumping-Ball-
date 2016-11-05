@@ -136,4 +136,12 @@ class Animation {
         return SKAction.sequence([bigger, delay, normal])
     }
     
+    func scaleAnimation(_ node: SKSpriteNode) -> SKAction {
+        let originalScale = node.xScale
+        let bigger = SKAction.scale(to: originalScale + 0.3, duration: Double(0.15))
+        let delay = SKAction.wait(forDuration: 0.15)
+        let normal = SKAction.scale(to: originalScale, duration: Double(0.15))
+        return SKAction.sequence([bigger, delay, normal])
+    }
+    
 }

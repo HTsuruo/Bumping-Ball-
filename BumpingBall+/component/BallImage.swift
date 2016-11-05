@@ -28,6 +28,9 @@ struct ballImage {
     static let ITEM_GREEN = "question_green"
     static let ITEM_ORANGE = "question_orange"
     static let ITEM_RED = "question_red"
+    static let ITEM_REVERSE = "item_reverse"
+    static let ITEM_SPEEDUP = "item_speedup"
+    static let ITEM_ONEUP = "item_oneup"
     
     //  devil ball
     static let DEVIl_BLUE = "devil_blue"

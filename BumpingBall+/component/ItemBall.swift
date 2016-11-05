@@ -14,6 +14,7 @@ class ItemBall: SimpleTargetBall {
     override init() {
         super.init()
         self.ball.userData?.setValue(true, forKey: "isItem")
+        self.ball.userData?.setValue(false, forKey: "isSpecial")
         self.ball.userData?.setValue(false, forKey: "isCollision")
     }
     
@@ -34,6 +35,7 @@ class ItemBall: SimpleTargetBall {
         default:
             break
         }
+ 
         self.dx = 1.5
         self.dy = 1.5
         self.ballScale = 0.7
@@ -47,5 +49,44 @@ class ItemBall: SimpleTargetBall {
         rotateDuration = 0.5
         super.setRotate()
     }
-
+    
+    func changeSpecialItemBall() {
+        var texture = SKTexture.init()
+        
+        let itemRand = Int(arc4random_uniform(3)) // 0,1,2
+        var ballType: BallType = .reverse
+        switch itemRand {
+        case 0:
+            ballType = .reverse
+            break
+        case 1:
+            ballType = .speedup
+            break
+        case 2:
+            ballType = .oneup
+            break
+        default:
+            break
+        }
+        ballType = .oneup
+        self.ball.userData?.setValue(ballType.rawValue, forKey: "id")
+        
+        switch ballType {
+        case .reverse:
+            texture = SKTexture.init(imageNamed: ballImage.ITEM_REVERSE)
+            break
+        case .speedup:
+            texture = SKTexture.init(imageNamed: ballImage.ITEM_SPEEDUP)
+            break
+        case .oneup:
+            texture = SKTexture.init(imageNamed: ballImage.ITEM_ONEUP)
+            break
+        default:
+            break
+        }
+        self.ball.userData?.setValue(true, forKey: "isSpecial")
+        let action = SKAction.setTexture(texture, resize: false)
+        self.ball.run(action)
+    }
+    
 }

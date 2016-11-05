@@ -11,6 +11,7 @@ import UIKit
 
 class TopScene: SKScene, SKPhysicsContactDelegate {
     var last: CFTimeInterval!
+    let animation = Animation()
     
     override func didMove(to view: SKView) {
         createPlayerBall()
@@ -46,5 +47,5 @@ class TopScene: SKScene, SKPhysicsContactDelegate {
 //       let actionx = SKAction.group([action1,action2])
        ball.run(foreverAction)
     }
-
+    
 }

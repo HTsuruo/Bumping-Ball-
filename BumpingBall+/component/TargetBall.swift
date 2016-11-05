@@ -63,7 +63,7 @@ class TargetBall: SimpleTargetBall {
     
     func hasNumber() -> Bool {
         //0~2までのランダムな値を取得する
-        let randNumDetail = Int(arc4random_uniform(2))
+        let randNumDetail = Int(arc4random_uniform(3))
         if randNumDetail==0 {
             return true
         }
@@ -72,7 +72,7 @@ class TargetBall: SimpleTargetBall {
     
     func changeDevilBall(id: Int) {
         self.ball.userData?.setValue(id, forKey: "id")
-        let rand = Int(arc4random_uniform(2))
+        let rand = Int(arc4random_uniform(3))
         self.ball.userData?.setValue(rand+1, forKey: "num")
         let type = BallType(rawValue: id)! as BallType
         var texture = SKTexture.init()
@@ -93,8 +93,6 @@ class TargetBall: SimpleTargetBall {
             break
         }
         
-        self.dx += 0.2
-        self.dy += 0.2
         self.ballScale = 1.0
         self.ball.setScale(self.ballScale)
         let action = SKAction.setTexture(texture, resize: false)

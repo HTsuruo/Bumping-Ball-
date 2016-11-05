@@ -43,6 +43,7 @@ class SceneViewController: UIViewController {
         skView = self.view as! SKView
         skView.showsFPS = true
         skView.showsNodeCount = true
+        skView.isMultipleTouchEnabled = false
         scene.scaleMode = .resizeFill
         skView.presentScene(scene)
 
