@@ -144,4 +144,11 @@ class Animation {
         return SKAction.sequence([bigger, delay, normal])
     }
     
+    func blinkAnimation(_ node: SKNode) -> SKAction {
+        let alphain = SKAction.fadeAlpha(to: 0.3, duration: 0.1)
+        let delay = SKAction.wait(forDuration: 0.1)
+        let alphaout = SKAction.fadeAlpha(by: 1.0, duration: 0.1)
+        return SKAction.sequence([alphain, delay, alphaout])
+    }
+    
 }

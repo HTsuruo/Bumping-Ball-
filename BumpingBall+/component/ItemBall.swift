@@ -11,10 +11,13 @@ import SpriteKit
 
 class ItemBall: SimpleTargetBall {
     
+    private let EXIST_TIME = 15
+    
     override init() {
         super.init()
         self.ball.userData?.setValue(true, forKey: "isItem")
         self.ball.userData?.setValue(false, forKey: "isSpecial")
+        self.ball.userData?.setValue(EXIST_TIME, forKey: "timer")
         self.ball.userData?.setValue(false, forKey: "isCollision")
     }
     

@@ -27,7 +27,10 @@ class BluetoothPlay: BaseScene {
     var selfPrepared = false
     var partnerPrepared = false
     var isReverse = false
+    var isSpecialMode = false
     var accel = CGFloat(0.0)
+    var secTimer: CFTimeInterval!
+    var specialModeTimer = define.SPECIAL_MODE_TIME
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
@@ -175,6 +178,21 @@ class BluetoothPlay: BaseScene {
             moveItemBall()
         }
         moveTargetBall(accel: accel)
+        
+        if secTimer == nil {
+            secTimer = currentTime
+        }
+        
+        //1秒おき
+        if secTimer + 1.0 <= currentTime {
+            if self["item_ball"].count > 0 {
+                manageItemBallTimer()
+            }
+            if isSpecialMode {
+                manageSpecialModeTimer()
+            }
+            secTimer = currentTime
+        }
     }
     
     override func collision(_ firstNode: SKNode, secondNode: SKNode, targetId: Int) {
@@ -266,6 +284,9 @@ class BluetoothPlay: BaseScene {
     }
     
     func launchItemBall(_ node: SKNode, id: Int) {
+        node.alpha = 1.0
+        node.removeAction(forKey: "blink")
+        
         let spark = animation.sparkAnimation(node, id: id, scale: 0.25)
         self.addChild(spark)
         let sequence = animation.fadeOutRemove(0.5)
@@ -274,6 +295,55 @@ class BluetoothPlay: BaseScene {
         let actionMove = animation.itemBallLaunchAnimation(node)
         let s = animation.removeAfterAction(actionMove)
         node.run(s)
+    }
+    
+//    item ballが存在できる時間を管理します.
+    func manageItemBallTimer() {
+        self.enumerateChildNodes(withName: "item_ball", using: {
+            node, stop in
+            if node is SKSpriteNode {
+                let node = node as! SKSpriteNode
+                if var timer = node.userData?.value(forKey: "timer") as? Int {
+                    if timer <= 1 {
+                        node.removeAllActions()
+                        node.removeFromParent()
+                        return
+                    }
+                    if timer == 5 {
+                        let blink = self.animation.blinkAnimation(node)
+                        let forever = SKAction.repeatForever(blink)
+                        node.run(forever, withKey: "blink")
+                    }
+                    timer -= 1
+                    node.userData?.setValue(timer, forKey: "timer")
+                }
+            }
+        })
+    }
+    
+//    reverse・speedupを受ける時間を管理します.
+    func manageSpecialModeTimer() {
+        self.enumerateChildNodes(withName: "specialItemIcon", using: {
+            node, stop in
+            if node is SKSpriteNode {
+                let node = node as! SKSpriteNode
+                if self.specialModeTimer <= 1 {
+                    node.removeAllActions()
+                    node.removeFromParent()
+                    self.isSpecialMode = false
+                    self.isReverse = false
+                    self.accel = CGFloat(0.0)
+                    self.specialModeTimer = define.SPECIAL_MODE_TIME
+                    return
+                }
+                if  self.specialModeTimer == 5 {
+                    let blink = self.animation.blinkAnimation(node)
+                    let forever = SKAction.repeatForever(blink)
+                    node.run(forever, withKey: "blink")
+                }
+                self.specialModeTimer -= 1
+            }
+        })
     }
     
     fileprivate func createDevilBall(id: Int) {
@@ -291,11 +361,13 @@ class BluetoothPlay: BaseScene {
         switch type {
         case .reverse:
             print("reverse")
+            isSpecialMode = true
             isReverse = true
             showSpecialItemIcon(imagename: "reverse_bk")
             break
         case .speedup:
             print("speedup")
+            isSpecialMode = true
             accel = CGFloat(0.5)
             showSpecialItemIcon(imagename: "speedup_bk")
             break
@@ -314,6 +386,7 @@ class BluetoothPlay: BaseScene {
         node.position = CGFloat.CENTER
         node.size = CGSize(width: 200, height: 200)
         node.alpha = 0.5
+        node.name = "specialItemIcon"
         self.addChild(node)
         let scaleAction = animation.scaleAnimation(node)
         let forever = SKAction.repeatForever(scaleAction)

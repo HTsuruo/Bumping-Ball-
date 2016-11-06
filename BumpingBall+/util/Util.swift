@@ -22,6 +22,7 @@ struct define {
     static let APPSTORE_URL = "https://itunes.apple.com/us/app/bumping-ball+/id1148383719?l=ja&ls=1&mt=8"
     static let MAX_ITEM_BALL = 5
     static let COMBO_FOR_ITEM_BALL = 2
+    static let SPECIAL_MODE_TIME = 10
 }
 
 struct Util {
