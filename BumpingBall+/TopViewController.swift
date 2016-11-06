@@ -11,19 +11,19 @@ import SpriteKit
 import GameKit
 import Spring
 
-class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, GKGameCenterControllerDelegate {
+class TopViewController: UIViewController, /*UIPickerViewDelegate, UIPickerViewDataSource, */GKGameCenterControllerDelegate {
     
     var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     let skView = SKView()
     var sceneView = SceneViewController()
     @IBOutlet weak var onePlayBtn: SpringButton!
-    @IBOutlet weak var pickerView: UIPickerView!
+//    @IBOutlet weak var pickerView: UIPickerView!
     
     fileprivate let difficulties: NSArray = ["Easy", "Normal", "Hard"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pickerViewInit()
+//        pickerViewInit()
     
         if let scene = TopScene(fileNamed:"TopScene") {
             // Configure the view.
@@ -55,7 +55,10 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         self.performSegue(withIdentifier: "toPlay", sender: self)
     }
     
-    @IBAction func onClickMultiPlayBtn(_ sender: UIButton) {
+    @IBAction func onClickSecondBtn(_ sender: UIButton) {
+    }
+    
+    @IBAction func onClickThirdBtn(_ sender: UIButton) {
 //        app.selectedPlay = PlayType.BLUETOOTH
         self.performSegue(withIdentifier: "toPrepareMulti", sender: self)
     }
@@ -102,11 +105,12 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         return 1
     }
     
+    /*
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return difficulties.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let label = UILabel.init(frame: CGRect(x: 0, y: 0, width: pickerView.frame.width, height: 40))
         label.text = String(describing: difficulties[row])
         label.textAlignment = NSTextAlignment.center
@@ -157,5 +161,6 @@ class TopViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             pickerView.backgroundColor = UIColor.clear
         }
     }
+ */
     
 }

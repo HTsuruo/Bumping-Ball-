@@ -10,6 +10,8 @@
 		08A22B1E64776CEA0D05643B /* Pods_BumpingBall_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30DCAC577C964F02F7E22A26 /* Pods_BumpingBall_Tests.framework */; };
 		5600C3961D688B79009C5883 /* ChargeMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5600C3951D688B79009C5883 /* ChargeMeter.swift */; };
 		5603F4511DCDFC6500881FDF /* speedup_bk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5603F4501DCDFC6500881FDF /* speedup_bk@2x.png */; };
+		5603F4AC1DCF784F00881FDF /* bluetoothBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5603F4AB1DCF784F00881FDF /* bluetoothBtn@2x.png */; };
+		5603F4AE1DCF7A0B00881FDF /* gamecenterBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5603F4AD1DCF7A0B00881FDF /* gamecenterBtn@2x.png */; };
 		560A49811D729F3600DEBB6A /* BluetoothPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A497E1D729F3600DEBB6A /* BluetoothPlay.swift */; };
 		560A49831D729F3600DEBB6A /* TopScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A49801D729F3600DEBB6A /* TopScene.swift */; };
 		560A49851D729F5F00DEBB6A /* BaseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A49841D729F5F00DEBB6A /* BaseScene.swift */; };
@@ -173,6 +175,8 @@
 		44F957790E5B779DC465ACC5 /* Pods-BumpingBall+.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+/Pods-BumpingBall+.debug.xcconfig"; sourceTree = "<group>"; };
 		5600C3951D688B79009C5883 /* ChargeMeter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChargeMeter.swift; path = component/ChargeMeter.swift; sourceTree = "<group>"; };
 		5603F4501DCDFC6500881FDF /* speedup_bk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "speedup_bk@2x.png"; path = "img/ball_item_bk/speedup_bk@2x.png"; sourceTree = SOURCE_ROOT; };
+		5603F4AB1DCF784F00881FDF /* bluetoothBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bluetoothBtn@2x.png"; path = "img/top/bluetoothBtn@2x.png"; sourceTree = SOURCE_ROOT; };
+		5603F4AD1DCF7A0B00881FDF /* gamecenterBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gamecenterBtn@2x.png"; path = "img/top/gamecenterBtn@2x.png"; sourceTree = SOURCE_ROOT; };
 		560A497E1D729F3600DEBB6A /* BluetoothPlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BluetoothPlay.swift; path = scene/BluetoothPlay.swift; sourceTree = "<group>"; };
 		560A49801D729F3600DEBB6A /* TopScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopScene.swift; path = scene/TopScene.swift; sourceTree = "<group>"; };
 		560A49841D729F5F00DEBB6A /* BaseScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseScene.swift; path = scene/BaseScene.swift; sourceTree = "<group>"; };
@@ -389,6 +393,8 @@
 		5666F7D81D6345FF001EFC57 /* top */ = {
 			isa = PBXGroup;
 			children = (
+				5603F4AD1DCF7A0B00881FDF /* gamecenterBtn@2x.png */,
+				5603F4AB1DCF784F00881FDF /* bluetoothBtn@2x.png */,
 				56BD47821DC5EEFA003AA705 /* setting@2x.png */,
 				561BCFFA1D72F9A400766B36 /* rankBtn@2x.png */,
 				5666F8191D643167001EFC57 /* helpBtn@2x.png */,
@@ -895,6 +901,7 @@
 				56B802531D684281007B79A7 /* Candara.ttf in Resources */,
 				561BA20A1D69799B004FC052 /* TouchViewTxt.xib in Resources */,
 				56D160D31CC50E5300257404 /* twitter@2x.png in Resources */,
+				5603F4AE1DCF7A0B00881FDF /* gamecenterBtn@2x.png in Resources */,
 				561BA2131D699E25004FC052 /* swipeArrow@2x.png in Resources */,
 				5666F82A1D645702001EFC57 /* ball_green_1@2x.png in Resources */,
 				56BB36831D7324F500AD1603 /* icon_bluetooth@2x.png in Resources */,
@@ -931,6 +938,7 @@
 				5666F8221D6456DB001EFC57 /* facebook@2x.png in Resources */,
 				56AC95801CB16D0000B31FE3 /* bigger.mp3 in Resources */,
 				56700B571DC716D90099093D /* question_red@2x.png in Resources */,
+				5603F4AC1DCF784F00881FDF /* bluetoothBtn@2x.png in Resources */,
 				56D160CB1CC50E2C00257404 /* ball_orange@2x.png in Resources */,
 				5666F81A1D643167001EFC57 /* helpBtn@2x.png in Resources */,
 				56700B4E1DC6A3D30099093D /* snow@2x.png in Resources */,

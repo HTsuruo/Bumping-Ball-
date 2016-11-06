@@ -739,7 +739,7 @@ THE SOFTWARE.</string>
                                     <constraint firstAttribute="width" constant="233" id="U0K-9t-PaA"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="145" id="Yms-T0-ji8"/>
                                     <constraint firstAttribute="height" constant="79" id="cJr-bd-xsq"/>
-                                    <constraint firstAttribute="width" secondItem="dsc-yv-aM9" secondAttribute="height" multiplier="44:23" id="d7H-WS-7Tr"/>
+                                    <constraint firstAttribute="width" secondItem="dsc-yv-aM9" secondAttribute="height" multiplier="22:10" id="d7H-WS-7Tr"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="278" id="fao-N2-E66"/>
                                     <constraint firstAttribute="width" constant="264" id="gra-Pb-7S1"/>
                                 </constraints>
@@ -776,10 +776,10 @@ THE SOFTWARE.</string>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="233" id="EzX-YK-eNB"/>
                                     <constraint firstAttribute="height" constant="138" id="WtB-bg-SaO"/>
-                                    <constraint firstAttribute="width" secondItem="6DC-Gf-4nI" secondAttribute="height" multiplier="44:23" id="g1Q-4H-dkd"/>
+                                    <constraint firstAttribute="width" secondItem="6DC-Gf-4nI" secondAttribute="height" multiplier="22:10" id="g1Q-4H-dkd"/>
                                     <constraint firstAttribute="width" constant="264" id="w3c-0F-Ez1"/>
                                 </constraints>
-                                <state key="normal" image="multiplayBtn.png">
+                                <state key="normal" image="gamecenterBtn.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -800,7 +800,7 @@ THE SOFTWARE.</string>
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="onClickMultiPlayBtn:" destination="FFW-j8-PWE" eventType="touchUpInside" id="Rdo-iU-Veh"/>
+                                    <action selector="onClickSecondBtn:" destination="FFW-j8-PWE" eventType="touchUpInside" id="4PT-9m-bug"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleTxt.png" translatesAutoresizingMaskIntoConstraints="NO" id="X6h-on-Pm5" customClass="SpringImageView" customModule="Spring">
@@ -843,7 +843,7 @@ THE SOFTWARE.</string>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQ2-q2-ikT" userLabel="Rank Btn" customClass="SpringButton" customModule="Spring">
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="fQ2-q2-ikT" secondAttribute="height" multiplier="20:20" id="vGv-1v-na6"/>
+                                            <constraint firstAttribute="width" secondItem="fQ2-q2-ikT" secondAttribute="height" multiplier="1:1" id="vGv-1v-na6"/>
                                         </constraints>
                                         <state key="normal" image="rankBtn.png"/>
                                         <userDefinedRuntimeAttributes>
@@ -862,7 +862,7 @@ THE SOFTWARE.</string>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xW5-0z-0Ae" userLabel="Setting Btn" customClass="SpringButton" customModule="Spring">
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="xW5-0z-0Ae" secondAttribute="height" multiplier="20:20" id="USz-vE-nAq"/>
+                                            <constraint firstAttribute="width" secondItem="xW5-0z-0Ae" secondAttribute="height" multiplier="1:1" id="USz-vE-nAq"/>
                                         </constraints>
                                         <state key="normal" image="setting.png"/>
                                         <userDefinedRuntimeAttributes>
@@ -882,7 +882,7 @@ THE SOFTWARE.</string>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2VT-en-ORm" userLabel="Help Btn" customClass="SpringButton" customModule="Spring">
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="2VT-en-ORm" secondAttribute="height" multiplier="20:20" id="zIK-4x-S5G"/>
+                                            <constraint firstAttribute="width" secondItem="2VT-en-ORm" secondAttribute="height" multiplier="1:1" id="zIK-4x-S5G"/>
                                         </constraints>
                                         <state key="normal" image="helpBtn.png"/>
                                         <userDefinedRuntimeAttributes>
@@ -903,18 +903,18 @@ THE SOFTWARE.</string>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="xW5-0z-0Ae" secondAttribute="trailing" constant="20" id="AKr-nw-xHR"/>
-                                    <constraint firstAttribute="bottom" secondItem="2VT-en-ORm" secondAttribute="bottom" constant="10" id="ALE-o5-XbS"/>
+                                    <constraint firstAttribute="bottom" secondItem="2VT-en-ORm" secondAttribute="bottom" constant="5" id="ALE-o5-XbS"/>
                                     <constraint firstItem="2VT-en-ORm" firstAttribute="top" secondItem="4Gg-oc-1cL" secondAttribute="top" constant="10" id="CXP-W9-2g4"/>
                                     <constraint firstItem="2VT-en-ORm" firstAttribute="leading" secondItem="4Gg-oc-1cL" secondAttribute="leading" constant="20" id="DH9-48-Paj"/>
                                     <constraint firstAttribute="width" secondItem="4Gg-oc-1cL" secondAttribute="height" multiplier="535:128" id="F91-S5-3Ch"/>
                                     <constraint firstItem="fQ2-q2-ikT" firstAttribute="top" secondItem="4Gg-oc-1cL" secondAttribute="top" constant="10" id="IOR-tn-YOp"/>
                                     <constraint firstItem="fQ2-q2-ikT" firstAttribute="centerX" secondItem="4Gg-oc-1cL" secondAttribute="centerX" id="JBR-9e-eYM"/>
                                     <constraint firstAttribute="width" secondItem="4Gg-oc-1cL" secondAttribute="height" multiplier="540:100" id="Mjl-AR-LiK"/>
-                                    <constraint firstAttribute="bottom" secondItem="fQ2-q2-ikT" secondAttribute="bottom" constant="10" id="OU0-FF-9M2"/>
+                                    <constraint firstAttribute="bottom" secondItem="fQ2-q2-ikT" secondAttribute="bottom" constant="5" id="OU0-FF-9M2"/>
                                     <constraint firstItem="xW5-0z-0Ae" firstAttribute="top" secondItem="4Gg-oc-1cL" secondAttribute="top" constant="10" id="Wus-87-44V"/>
                                     <constraint firstItem="2VT-en-ORm" firstAttribute="width" secondItem="2VT-en-ORm" secondAttribute="height" multiplier="20:20" id="hP0-Rz-RW0"/>
                                     <constraint firstItem="xW5-0z-0Ae" firstAttribute="width" secondItem="xW5-0z-0Ae" secondAttribute="height" multiplier="20:20" id="pSx-CL-rLK"/>
-                                    <constraint firstAttribute="bottom" secondItem="xW5-0z-0Ae" secondAttribute="bottom" constant="10" id="qOW-3s-gbt"/>
+                                    <constraint firstAttribute="bottom" secondItem="xW5-0z-0Ae" secondAttribute="bottom" constant="5" id="qOW-3s-gbt"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -924,46 +924,57 @@ THE SOFTWARE.</string>
                                     </mask>
                                 </variation>
                             </view>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lxz-0d-ckm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gp-8e-XhA" customClass="SpringButton" customModule="Spring">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="ued-eL-Nmb"/>
-                                    <constraint firstAttribute="width" secondItem="Lxz-0d-ckm" secondAttribute="height" multiplier="1.5:1" id="xNZ-JN-NGv"/>
+                                    <constraint firstAttribute="width" secondItem="0Gp-8e-XhA" secondAttribute="height" multiplier="22:10" id="1vB-b4-f1d"/>
                                 </constraints>
-                            </pickerView>
+                                <state key="normal" image="bluetoothBtn.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeRight"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onClickThirdBtn:" destination="FFW-j8-PWE" eventType="touchUpInside" id="MHq-Ze-sVA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="dsc-yv-aM9" secondAttribute="trailing" constant="40" id="9Fb-kY-gLx"/>
                             <constraint firstItem="6DC-Gf-4nI" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="148" id="9yr-cV-teU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Lxz-0d-ckm" secondAttribute="trailing" constant="60" id="B8C-Na-mqW"/>
                             <constraint firstItem="4Gg-oc-1cL" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="10" id="CT9-Zh-3iH"/>
                             <constraint firstItem="dsc-yv-aM9" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="40" id="Fw1-Yv-5xe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="X6h-on-Pm5" secondAttribute="trailing" constant="10" id="GLa-Hq-eo1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="X6h-on-Pm5" secondAttribute="trailing" constant="5" id="GLa-Hq-eo1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6DC-Gf-4nI" secondAttribute="trailing" constant="40" id="GZb-zp-7Gf"/>
                             <constraint firstItem="v2V-mu-I55" firstAttribute="top" secondItem="4Gg-oc-1cL" secondAttribute="bottom" constant="40" id="GhN-kw-uLL"/>
-                            <constraint firstItem="Lxz-0d-ckm" firstAttribute="centerX" secondItem="OWX-VH-aeT" secondAttribute="centerX" id="Jbh-4N-GCU"/>
-                            <constraint firstItem="dsc-yv-aM9" firstAttribute="top" secondItem="X6h-on-Pm5" secondAttribute="bottom" constant="60" id="Jug-7A-F2R"/>
+                            <constraint firstItem="0Gp-8e-XhA" firstAttribute="top" secondItem="6DC-Gf-4nI" secondAttribute="bottom" constant="30" id="JZo-WZ-D2k"/>
+                            <constraint firstItem="dsc-yv-aM9" firstAttribute="top" secondItem="X6h-on-Pm5" secondAttribute="bottom" constant="25" id="Jug-7A-F2R"/>
                             <constraint firstItem="dsc-yv-aM9" firstAttribute="top" secondItem="X6h-on-Pm5" secondAttribute="bottom" constant="42" id="OJw-pU-4J1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dsc-yv-aM9" secondAttribute="trailing" constant="100" id="PMS-vA-xxD"/>
                             <constraint firstItem="X6h-on-Pm5" firstAttribute="centerX" secondItem="OWX-VH-aeT" secondAttribute="centerX" id="PPB-83-Hgs"/>
+                            <constraint firstItem="0Gp-8e-XhA" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="40" id="Qcm-Yb-nWY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="X6h-on-Pm5" secondAttribute="trailing" constant="30" id="QfF-u3-6dL"/>
                             <constraint firstItem="dsc-yv-aM9" firstAttribute="top" secondItem="X6h-on-Pm5" secondAttribute="bottom" constant="42" id="SYA-ZD-vba"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4Gg-oc-1cL" secondAttribute="trailing" constant="10" id="Smh-fp-TpV"/>
-                            <constraint firstItem="X6h-on-Pm5" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="10" id="TNt-UP-YdW"/>
-                            <constraint firstItem="X6h-on-Pm5" firstAttribute="top" secondItem="TWV-0b-y95" secondAttribute="bottom" constant="15" id="Ubw-5Y-V1w"/>
+                            <constraint firstItem="X6h-on-Pm5" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="5" id="TNt-UP-YdW"/>
+                            <constraint firstItem="X6h-on-Pm5" firstAttribute="top" secondItem="TWV-0b-y95" secondAttribute="bottom" constant="10" id="Ubw-5Y-V1w"/>
                             <constraint firstItem="dsc-yv-aM9" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="101" id="W8X-KQ-iU5"/>
-                            <constraint firstItem="Lxz-0d-ckm" firstAttribute="centerY" secondItem="OWX-VH-aeT" secondAttribute="centerY" id="YQS-s9-hRs"/>
+                            <constraint firstItem="0Gp-8e-XhA" firstAttribute="centerX" secondItem="OWX-VH-aeT" secondAttribute="centerX" id="XdJ-MJ-txN"/>
                             <constraint firstItem="dsc-yv-aM9" firstAttribute="top" secondItem="X6h-on-Pm5" secondAttribute="bottom" constant="42" id="Zbi-Ch-NoN"/>
                             <constraint firstItem="v2V-mu-I55" firstAttribute="top" secondItem="dsc-yv-aM9" secondAttribute="bottom" constant="170" id="aHQ-QY-ang"/>
-                            <constraint firstItem="6DC-Gf-4nI" firstAttribute="top" secondItem="dsc-yv-aM9" secondAttribute="bottom" constant="60" id="bS7-YI-R1q"/>
+                            <constraint firstItem="6DC-Gf-4nI" firstAttribute="top" secondItem="dsc-yv-aM9" secondAttribute="bottom" constant="30" id="bS7-YI-R1q"/>
                             <constraint firstItem="dsc-yv-aM9" firstAttribute="centerX" secondItem="OWX-VH-aeT" secondAttribute="centerX" id="eH0-PO-TKo"/>
                             <constraint firstItem="6DC-Gf-4nI" firstAttribute="centerX" secondItem="OWX-VH-aeT" secondAttribute="centerX" id="j6g-89-3Qu"/>
-                            <constraint firstItem="Lxz-0d-ckm" firstAttribute="top" secondItem="TWV-0b-y95" secondAttribute="bottom" constant="200" id="kOa-Gf-HBx"/>
-                            <constraint firstItem="Lxz-0d-ckm" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="50" id="pF7-Vf-djD"/>
-                            <constraint firstItem="Lxz-0d-ckm" firstAttribute="centerY" secondItem="OWX-VH-aeT" secondAttribute="centerY" id="rfk-ZQ-SrH"/>
                             <constraint firstItem="X6h-on-Pm5" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="30" id="tBi-DA-XpC"/>
                             <constraint firstItem="4Gg-oc-1cL" firstAttribute="centerX" secondItem="OWX-VH-aeT" secondAttribute="centerX" id="tnL-uy-OXe"/>
-                            <constraint firstItem="Lxz-0d-ckm" firstAttribute="centerX" secondItem="OWX-VH-aeT" secondAttribute="centerX" id="zq3-56-BfR"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
@@ -984,12 +995,6 @@ THE SOFTWARE.</string>
                         </userDefinedRuntimeAttributes>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="9yr-cV-teU"/>
-                                <exclude reference="B8C-Na-mqW"/>
-                                <exclude reference="Jbh-4N-GCU"/>
-                                <exclude reference="YQS-s9-hRs"/>
-                                <exclude reference="kOa-Gf-HBx"/>
-                                <exclude reference="pF7-Vf-djD"/>
                                 <exclude reference="QfF-u3-6dL"/>
                                 <exclude reference="tBi-DA-XpC"/>
                                 <exclude reference="OJw-pU-4J1"/>
@@ -997,13 +1002,13 @@ THE SOFTWARE.</string>
                                 <exclude reference="SYA-ZD-vba"/>
                                 <exclude reference="W8X-KQ-iU5"/>
                                 <exclude reference="Zbi-Ch-NoN"/>
+                                <exclude reference="9yr-cV-teU"/>
                                 <exclude reference="aHQ-QY-ang"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="onePlayBtn" destination="dsc-yv-aM9" id="omV-qf-o4R"/>
-                        <outlet property="pickerView" destination="Lxz-0d-ckm" id="Y6M-2L-rtW"/>
                         <segue destination="BV1-FR-VrT" kind="presentation" identifier="toPlay" modalTransitionStyle="flipHorizontal" id="pGj-IE-aGP"/>
                         <segue destination="ybY-7A-oOF" kind="presentation" identifier="toPrepareMulti" id="P8d-ih-cfM"/>
                     </connections>
@@ -1015,14 +1020,15 @@ THE SOFTWARE.</string>
     </scenes>
     <resources>
         <image name="backBtn.png" width="62" height="62"/>
+        <image name="bluetoothBtn.png" width="446" height="200"/>
         <image name="closeBtn.png" width="30" height="30"/>
+        <image name="gamecenterBtn.png" width="446" height="200"/>
         <image name="helpBtn.png" width="120" height="120"/>
         <image name="icon_bluetooth.png" width="60" height="60"/>
         <image name="icon_bluetooth_large.png" width="277" height="277"/>
         <image name="icon_global.png" width="281" height="281"/>
         <image name="icon_wifi.png" width="260" height="260"/>
-        <image name="multiplayBtn.png" width="418" height="229"/>
-        <image name="oneplayBtn.png" width="421" height="227"/>
+        <image name="oneplayBtn.png" width="446" height="200"/>
         <image name="rankBtn.png" width="120" height="120"/>
         <image name="setting.png" width="120" height="120"/>
         <image name="titleTxt.png" width="567" height="126"/>
