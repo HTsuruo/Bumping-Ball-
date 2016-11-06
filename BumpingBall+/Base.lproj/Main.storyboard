@@ -472,7 +472,7 @@ THE SOFTWARE.</string>
         <scene sceneID="xbt-TL-Fjn">
             <objects>
                 <navigationController id="iRC-MV-hpy" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="lTI-9v-oa6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lTI-9v-oa6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -806,7 +806,7 @@ THE SOFTWARE.</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleTxt.png" translatesAutoresizingMaskIntoConstraints="NO" id="X6h-on-Pm5" customClass="SpringImageView" customModule="Spring">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="136" id="1Aq-wc-ERX"/>
-                                    <constraint firstAttribute="width" secondItem="X6h-on-Pm5" secondAttribute="height" multiplier="37:10" id="75x-fk-6Dt"/>
+                                    <constraint firstAttribute="width" secondItem="X6h-on-Pm5" secondAttribute="height" multiplier="40:10" id="75x-fk-6Dt"/>
                                     <constraint firstAttribute="height" constant="117" id="Hto-ee-M7X"/>
                                     <constraint firstAttribute="width" constant="370" id="Kvj-fY-69c"/>
                                     <constraint firstAttribute="width" constant="454" id="P4B-q0-TiO"/>
@@ -950,7 +950,7 @@ THE SOFTWARE.</string>
                             <constraint firstItem="dsc-yv-aM9" firstAttribute="top" secondItem="X6h-on-Pm5" secondAttribute="bottom" constant="42" id="SYA-ZD-vba"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4Gg-oc-1cL" secondAttribute="trailing" constant="10" id="Smh-fp-TpV"/>
                             <constraint firstItem="X6h-on-Pm5" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="10" id="TNt-UP-YdW"/>
-                            <constraint firstItem="X6h-on-Pm5" firstAttribute="top" secondItem="TWV-0b-y95" secondAttribute="bottom" constant="10" id="Ubw-5Y-V1w"/>
+                            <constraint firstItem="X6h-on-Pm5" firstAttribute="top" secondItem="TWV-0b-y95" secondAttribute="bottom" constant="15" id="Ubw-5Y-V1w"/>
                             <constraint firstItem="dsc-yv-aM9" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="101" id="W8X-KQ-iU5"/>
                             <constraint firstItem="Lxz-0d-ckm" firstAttribute="centerY" secondItem="OWX-VH-aeT" secondAttribute="centerY" id="YQS-s9-hRs"/>
                             <constraint firstItem="dsc-yv-aM9" firstAttribute="top" secondItem="X6h-on-Pm5" secondAttribute="bottom" constant="42" id="Zbi-Ch-NoN"/>
@@ -1025,9 +1025,9 @@ THE SOFTWARE.</string>
         <image name="oneplayBtn.png" width="421" height="227"/>
         <image name="rankBtn.png" width="120" height="120"/>
         <image name="setting.png" width="120" height="120"/>
-        <image name="titleTxt.png" width="524" height="136"/>
+        <image name="titleTxt.png" width="567" height="122"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SpC-Om-bGS"/>
+        <segue reference="pGj-IE-aGP"/>
     </inferredMetricsTieBreakers>
 </document>

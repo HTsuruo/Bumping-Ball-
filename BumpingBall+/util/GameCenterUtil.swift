@@ -43,20 +43,4 @@ struct GameCenterUtil {
         }
     }
     
-//    static func dispLeaderBoard(vc: UIViewController) {
-//        let localPlayer = GKLocalPlayer()
-//        localPlayer.loadDefaultLeaderboardIdentifierWithCompletionHandler({ (leaderboardIdentifier : String?, error : NSError?) -> Void in
-//            if error != nil {
-//                print(error!.localizedDescription)
-//            } else {
-//                let gcViewController: GKGameCenterViewController = GKGameCenterViewController()
-//                gcViewController.gameCenterDelegate = self
-//                gcViewController.viewState = GKGameCenterViewControllerState.Leaderboards
-//                gcViewController.leaderboardIdentifier = "normal"
-//                
-//                let vc = util.getForegroundViewController()
-//                vc.presentViewController(gcViewController, animated: true, completion: nil)
-//            }
-//        })
-//    }
 }
