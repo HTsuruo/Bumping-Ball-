@@ -127,7 +127,6 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
             last = currentTime
         }
         removeBall()
-        moveTargetBall()
     }
     
     fileprivate func removeBall() {
@@ -169,7 +168,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         targetBall.ball.run(SKAction.fadeIn(withDuration: 0.5))
     }
     
-    func moveTargetBall() {
+    func moveTargetBall(accel: CGFloat) {
         self.enumerateChildNodes(withName: "t_ball", using: {
             node, stop in
             if node is SKSpriteNode {
@@ -177,8 +176,12 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
                 self.ballUtil.setBoundX(targetBall)
                 let dx = targetBall.userData?.value(forKey: "dx") as! CGFloat
                 let dy = targetBall.userData?.value(forKey: "dy") as! CGFloat
-                targetBall.position.x += dx
-                targetBall.position.y -= dy
+                if dx < 0 {
+                    targetBall.position.x += (dx - accel)
+                } else {
+                    targetBall.position.x += (dx + accel)
+                }
+                targetBall.position.y -= (dy + accel)
                 
                 if self.isFin {
                     return

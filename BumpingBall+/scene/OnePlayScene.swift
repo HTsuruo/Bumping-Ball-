@@ -37,6 +37,7 @@ class OnePlayScene: BaseScene {
         if  !playerBall.isFire {
             playerBall.sizeChange(reverse: false)
         }
+        moveTargetBall(accel: CGFloat(0.0))
     }
     
     override func updateScore() {

@@ -27,6 +27,7 @@ class BluetoothPlay: BaseScene {
     var selfPrepared = false
     var partnerPrepared = false
     var isReverse = false
+    var accel = CGFloat(0.0)
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
@@ -173,6 +174,7 @@ class BluetoothPlay: BaseScene {
         if self["item_ball"].count > 0 {
             moveItemBall()
         }
+        moveTargetBall(accel: accel)
     }
     
     override func collision(_ firstNode: SKNode, secondNode: SKNode, targetId: Int) {
@@ -294,6 +296,7 @@ class BluetoothPlay: BaseScene {
             break
         case .speedup:
             print("speedup")
+            accel = CGFloat(0.5)
             showSpecialItemIcon(imagename: "speedup_bk")
             break
         case .oneup:
