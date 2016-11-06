@@ -472,7 +472,7 @@ THE SOFTWARE.</string>
         <scene sceneID="xbt-TL-Fjn">
             <objects>
                 <navigationController id="iRC-MV-hpy" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lTI-9v-oa6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="lTI-9v-oa6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -806,7 +806,7 @@ THE SOFTWARE.</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleTxt.png" translatesAutoresizingMaskIntoConstraints="NO" id="X6h-on-Pm5" customClass="SpringImageView" customModule="Spring">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="136" id="1Aq-wc-ERX"/>
-                                    <constraint firstAttribute="width" secondItem="X6h-on-Pm5" secondAttribute="height" multiplier="40:10" id="75x-fk-6Dt"/>
+                                    <constraint firstAttribute="width" secondItem="X6h-on-Pm5" secondAttribute="height" multiplier="45:10" id="75x-fk-6Dt"/>
                                     <constraint firstAttribute="height" constant="117" id="Hto-ee-M7X"/>
                                     <constraint firstAttribute="width" constant="370" id="Kvj-fY-69c"/>
                                     <constraint firstAttribute="width" constant="454" id="P4B-q0-TiO"/>
@@ -1025,7 +1025,7 @@ THE SOFTWARE.</string>
         <image name="oneplayBtn.png" width="421" height="227"/>
         <image name="rankBtn.png" width="120" height="120"/>
         <image name="setting.png" width="120" height="120"/>
-        <image name="titleTxt.png" width="567" height="122"/>
+        <image name="titleTxt.png" width="567" height="126"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="pGj-IE-aGP"/>
