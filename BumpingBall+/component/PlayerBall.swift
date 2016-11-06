@@ -95,19 +95,19 @@ struct PlayerBall {
     }
     
     mutating func setGreen() {
-        self.ballSpeed = 0.75
+        self.ballSpeed = 0.7
         self.ball.run(ballUtil.setGreen())
         self.setId(BallType.green.rawValue)
     }
     
     mutating func setOrange() {
-        self.ballSpeed = 1.0
+        self.ballSpeed = 0.9
         self.ball.run(ballUtil.setOrange())
         self.setId(BallType.orange.rawValue)
     }
     
     mutating func setRed() {
-        self.ballSpeed = 1.25
+        self.ballSpeed = 1.1
         self.ball.run(ballUtil.setRed())
         self.setId(BallType.red.rawValue)
     }
