@@ -81,6 +81,9 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
             if !(define.TOUCH_AREA.contains(location)) {
                 return
             }
+            if !inTouch {
+                return
+            }
             playerBall.ball.position.x = location.x
             playerBall.ball.position.y = location.y + define.TOUCH_MARGIN
         }
@@ -88,6 +91,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         //        ball.ball.runAction(Sound.launch)
+        
         for touche in touches {
             let location = touche.location(in: self)
             let swipe = location.y < touchBeginLocation.y && location.y < 20
@@ -98,6 +102,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
                 self.run(action, withKey: "goldBk")
             }
         }
+        
         if !inTouch {
             return
         }
