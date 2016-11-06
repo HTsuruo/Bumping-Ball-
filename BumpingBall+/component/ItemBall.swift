@@ -68,7 +68,7 @@ class ItemBall: SimpleTargetBall {
         default:
             break
         }
-        
+        ballType = .oneup
         self.ball.userData?.setValue(ballType.rawValue, forKey: "id")
         
         switch ballType {

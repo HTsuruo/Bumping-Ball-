@@ -48,16 +48,17 @@ class HeaderViewMatch: UIView {
         switch type {
         case .player1:
             view.image = UIImage(named: "life_red")
+            let image = UIImage(named: "life_red_empty")
             switch life {
             case 3:
                 frame = lifeRedRight.frame
-                lifeRedRight.image = UIImage(named: "life_red_empty")
+                lifeRedRight.image = image
             case 2:
                 frame = lifeRedCenter.frame
-                lifeRedCenter.image = UIImage(named: "life_red_empty")
+                lifeRedCenter.image = image
             case 1:
                 frame = lifeRedLeft.frame
-                lifeRedLeft.image = UIImage(named: "life_red_empty")
+                lifeRedLeft.image = image
             default:
                 break
             }
@@ -66,26 +67,26 @@ class HeaderViewMatch: UIView {
             
         case .player2:
             view.image = UIImage(named: "life_blue")
+            let image = UIImage(named: "life_blue_empty")
             switch life {
             case 3:
                 frame = lifeBlueRight.frame
-                lifeBlueRight.image = UIImage(named: "life_blue_empty")
+                lifeBlueRight.image = image
             case 2:
                 frame = lifeBlueCenter.frame
-                lifeBlueCenter.image = UIImage(named: "life_blue_empty")
+                lifeBlueCenter.image = image
             case 1:
                 frame = lifeBlueLeft.frame
-                lifeBlueLeft.image = UIImage(named: "life_blue_empty")
+                lifeBlueLeft.image = image
             default:
                 break
             }
             view.frame = frame
             rightArea.addSubview(view)
         }
-        view.animation = "fadeOut"
-        view.scaleX = 2.5
-        view.scaleY = 2.5
-        view.duration = 6.0
+        view.animation = "zoomOut"
+        view.force = CGFloat(3.0)
+        view.duration = 4.0
         view.animate()
     }
     
@@ -132,10 +133,11 @@ class HeaderViewMatch: UIView {
             view.frame = frame
             rightArea.addSubview(view)
         }
-        view.animation = "fadeIn"
-        view.scaleX = 2.5
-        view.scaleY = 2.5
-        view.duration = 3.0
-        view.animate()
+        view.animation = "zoomIn"
+        view.force = CGFloat(3.0)
+        view.duration = 4.0
+        view.animateNext {
+            view.removeFromSuperview()
+        }
     }
 }
