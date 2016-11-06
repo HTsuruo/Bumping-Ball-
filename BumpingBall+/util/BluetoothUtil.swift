@@ -115,7 +115,7 @@ class BluetoothUtil: NSObject, MCSessionDelegate, MCAdvertiserAssistantDelegate,
                 if self.app.bluetoothSession != nil {
                     alert.eroorMsg(title: "接続解除", msg: "相手との接続が切れました")
                 } else {
-                    alert.eroorMsg(title: "接続失敗", msg: "左上のキャンセルボタンを押した後、再度デバイスを選択して下さい")
+                    alert.eroorMsg(title: "接続失敗", msg: "再度デバイスを選択して下さい")
                 }
                 self.app.bluetoothSession = nil
             }
