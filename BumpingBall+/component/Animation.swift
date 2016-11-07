@@ -81,6 +81,13 @@ class Animation {
         return node
     }
     
+    func destroyAnimation() -> SKAction {
+        let fadeOut = SKAction.fadeOut(withDuration: 0.5)
+        let scale = SKAction.scale(to: 1.3, duration: 0.5)
+        let action = SKAction.group([fadeOut, scale])
+        return removeAfterAction(action)
+    }
+    
     func launchAnimation() -> SKAction {
         let fadeOut = SKAction.fadeOut(withDuration: 0.5)
         let scale = SKAction.scale(to: 1.0, duration: 0.5)

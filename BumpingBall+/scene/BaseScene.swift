@@ -319,7 +319,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         let pos = CGPoint(x: node.position.x, y: node.position.y)
         let launchNode = animation.launchNode(pos, id: id)
         self.addChild(launchNode)
-        let launch = animation.launchAnimation()
+        let launch = animation.destroyAnimation()
         launchNode.run(launch)
         node.removeFromParent()
     }
