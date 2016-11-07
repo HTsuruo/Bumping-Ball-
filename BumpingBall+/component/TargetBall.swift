@@ -72,7 +72,7 @@ class TargetBall: SimpleTargetBall {
     
     func changeDevilBall(id: Int) {
         self.ball.userData?.setValue(id, forKey: "id")
-        let rand = Int(arc4random_uniform(3))
+        let rand = Int(arc4random_uniform(2))
         self.ball.userData?.setValue(rand+1, forKey: "num")
         let type = BallType(rawValue: id)! as BallType
         var texture = SKTexture.init()
@@ -105,8 +105,14 @@ class TargetBall: SimpleTargetBall {
         var num = 1
         switch randNum {
         case BallType.blue.rawValue:
-            texture = SKTexture.init(imageNamed: ballImage.BLUE_5)
-            num = 5
+            let rand = Int(arc4random_uniform(2))
+            if rand == 0 {
+                texture = SKTexture.init(imageNamed: ballImage.BLUE_5)
+                num = 5
+            } else {
+                texture = SKTexture.init(imageNamed: ballImage.BLUE_3)
+                num = 3
+            }
             break
         case BallType.green.rawValue:
             texture = SKTexture.init(imageNamed: ballImage.GREEN_3)

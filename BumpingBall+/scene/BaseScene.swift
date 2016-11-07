@@ -325,7 +325,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func changeTargetBall(_ pBall: SKNode, tBall: SKNode, id: Int) {
-        let pos = CGPoint(x: tBall.position.x, y: tBall.position.y)
+        let pos = CGPoint(x: pBall.position.x, y: pBall.position.y)
         let launchNode = animation.launchNode(pos, id: id)
         launchNode.xScale = 0.5
         launchNode.yScale = 0.5
