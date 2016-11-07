@@ -18,6 +18,7 @@ class OnePlayScene: BaseScene {
         super.didMove(to: view)
         self.view?.addSubview(headerView)
         countdownView.start()
+        print("level: \(app.selectedDiffculty)")
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -14,8 +14,10 @@ class TopScene: SKScene, SKPhysicsContactDelegate {
     let animation = Animation()
     
     override func didMove(to view: SKView) {
-        createPlayerBall()
-        changeBkColor()
+//        createPlayerBall()
+//        changeBkColor()
+        let color1 = SKAction.colorize(with: ColorUtil.main, colorBlendFactor: 1.0, duration: 1)
+        self.run(color1)
     }
     
     override func update(_ currentTime: TimeInterval) {

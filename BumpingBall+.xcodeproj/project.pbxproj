@@ -12,10 +12,15 @@
 		5603F4511DCDFC6500881FDF /* speedup_bk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5603F4501DCDFC6500881FDF /* speedup_bk@2x.png */; };
 		5603F4AC1DCF784F00881FDF /* bluetoothBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5603F4AB1DCF784F00881FDF /* bluetoothBtn@2x.png */; };
 		5603F4AE1DCF7A0B00881FDF /* gamecenterBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5603F4AD1DCF7A0B00881FDF /* gamecenterBtn@2x.png */; };
+		5603F4B01DD0079C00881FDF /* LevelSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5603F4AF1DD0079C00881FDF /* LevelSelectView.swift */; };
+		5603F4B21DD007AE00881FDF /* LevelSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5603F4B11DD007AE00881FDF /* LevelSelectView.xib */; };
 		560A49811D729F3600DEBB6A /* BluetoothPlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A497E1D729F3600DEBB6A /* BluetoothPlay.swift */; };
 		560A49831D729F3600DEBB6A /* TopScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A49801D729F3600DEBB6A /* TopScene.swift */; };
 		560A49851D729F5F00DEBB6A /* BaseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A49841D729F5F00DEBB6A /* BaseScene.swift */; };
 		560A49871D729FB200DEBB6A /* OnePlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A49861D729FB200DEBB6A /* OnePlayScene.swift */; };
+		561B35841DD04B69002E13C9 /* easyBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561B35831DD04B69002E13C9 /* easyBtn@2x.png */; };
+		561B35871DD04BD9002E13C9 /* hardBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561B35851DD04BD9002E13C9 /* hardBtn@2x.png */; };
+		561B35881DD04BD9002E13C9 /* normalBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561B35861DD04BD9002E13C9 /* normalBtn@2x.png */; };
 		561BA20A1D69799B004FC052 /* TouchViewTxt.xib in Resources */ = {isa = PBXBuildFile; fileRef = 561BA2091D69799B004FC052 /* TouchViewTxt.xib */; };
 		561BA20C1D697A62004FC052 /* TouchViewTxt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561BA20B1D697A62004FC052 /* TouchViewTxt.swift */; };
 		561BA20F1D69975D004FC052 /* touchView@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561BA20E1D69975D004FC052 /* touchView@2x.png */; };
@@ -177,10 +182,15 @@
 		5603F4501DCDFC6500881FDF /* speedup_bk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "speedup_bk@2x.png"; path = "img/ball_item_bk/speedup_bk@2x.png"; sourceTree = SOURCE_ROOT; };
 		5603F4AB1DCF784F00881FDF /* bluetoothBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bluetoothBtn@2x.png"; path = "img/top/bluetoothBtn@2x.png"; sourceTree = SOURCE_ROOT; };
 		5603F4AD1DCF7A0B00881FDF /* gamecenterBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gamecenterBtn@2x.png"; path = "img/top/gamecenterBtn@2x.png"; sourceTree = SOURCE_ROOT; };
+		5603F4AF1DD0079C00881FDF /* LevelSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelSelectView.swift; path = view/LevelSelectView.swift; sourceTree = "<group>"; };
+		5603F4B11DD007AE00881FDF /* LevelSelectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LevelSelectView.xib; path = view/LevelSelectView.xib; sourceTree = "<group>"; };
 		560A497E1D729F3600DEBB6A /* BluetoothPlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BluetoothPlay.swift; path = scene/BluetoothPlay.swift; sourceTree = "<group>"; };
 		560A49801D729F3600DEBB6A /* TopScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopScene.swift; path = scene/TopScene.swift; sourceTree = "<group>"; };
 		560A49841D729F5F00DEBB6A /* BaseScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseScene.swift; path = scene/BaseScene.swift; sourceTree = "<group>"; };
 		560A49861D729FB200DEBB6A /* OnePlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnePlayScene.swift; path = scene/OnePlayScene.swift; sourceTree = "<group>"; };
+		561B35831DD04B69002E13C9 /* easyBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "easyBtn@2x.png"; path = "img/level/easyBtn@2x.png"; sourceTree = SOURCE_ROOT; };
+		561B35851DD04BD9002E13C9 /* hardBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hardBtn@2x.png"; path = "img/level/hardBtn@2x.png"; sourceTree = SOURCE_ROOT; };
+		561B35861DD04BD9002E13C9 /* normalBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "normalBtn@2x.png"; path = "img/level/normalBtn@2x.png"; sourceTree = SOURCE_ROOT; };
 		561BA2091D69799B004FC052 /* TouchViewTxt.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TouchViewTxt.xib; path = view/TouchViewTxt.xib; sourceTree = "<group>"; };
 		561BA20B1D697A62004FC052 /* TouchViewTxt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchViewTxt.swift; path = view/TouchViewTxt.swift; sourceTree = "<group>"; };
 		561BA20E1D69975D004FC052 /* touchView@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "touchView@2x.png"; path = "img/touch_view/touchView@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -372,6 +382,16 @@
 			name = scene;
 			sourceTree = "<group>";
 		};
+		561B35821DD04B58002E13C9 /* level */ = {
+			isa = PBXGroup;
+			children = (
+				561B35851DD04BD9002E13C9 /* hardBtn@2x.png */,
+				561B35861DD04BD9002E13C9 /* normalBtn@2x.png */,
+				561B35831DD04B69002E13C9 /* easyBtn@2x.png */,
+			);
+			name = level;
+			sourceTree = "<group>";
+		};
 		561BA20D1D69974F004FC052 /* touch_view */ = {
 			isa = PBXGroup;
 			children = (
@@ -510,6 +530,8 @@
 				561BA2091D69799B004FC052 /* TouchViewTxt.xib */,
 				561BA2101D699774004FC052 /* TouchView.swift */,
 				561BA20B1D697A62004FC052 /* TouchViewTxt.swift */,
+				5603F4B11DD007AE00881FDF /* LevelSelectView.xib */,
+				5603F4AF1DD0079C00881FDF /* LevelSelectView.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -609,6 +631,7 @@
 		56BB7FC11CAFC08200675AE8 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				561B35821DD04B58002E13C9 /* level */,
 				56700B481DC69D1D0099093D /* particles_texture */,
 				566B38F81DC655200026083B /* closeBtn@2x.png */,
 				56BD47801DC5E507003AA705 /* splash@2x.png */,
@@ -896,6 +919,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56BB367E1D731AF300AD1603 /* backBtn@2x.png in Resources */,
+				561B35881DD04BD9002E13C9 /* normalBtn@2x.png in Resources */,
 				56BD47831DC5EEFA003AA705 /* setting@2x.png in Resources */,
 				566176EB1D6881EC00AF10BA /* chargeMeter@2x.png in Resources */,
 				56B802531D684281007B79A7 /* Candara.ttf in Resources */,
@@ -944,6 +968,7 @@
 				56700B4E1DC6A3D30099093D /* snow@2x.png in Resources */,
 				5666F7DC1D63460C001EFC57 /* oneplayBtn@2x.png in Resources */,
 				5666F8251D6456F5001EFC57 /* ball_orange_1@2x.png in Resources */,
+				561B35841DD04B69002E13C9 /* easyBtn@2x.png in Resources */,
 				56E073291DBE1EDF002E634D /* icon_bluetooth_large@2x.png in Resources */,
 				5666F8341D645712001EFC57 /* ball_blue_3@2x.png in Resources */,
 				56BDE3E71D7ACA7600247E36 /* life_red@2x.png in Resources */,
@@ -964,6 +989,7 @@
 				56700B511DC7154F0099093D /* question_blue@2x.png in Resources */,
 				5666F8321D645712001EFC57 /* ball_blue_1@2x.png in Resources */,
 				5666F8351D645712001EFC57 /* ball_blue_4@2x.png in Resources */,
+				561B35871DD04BD9002E13C9 /* hardBtn@2x.png in Resources */,
 				5666F83F1D646090001EFC57 /* two@2x.png in Resources */,
 				56D160CA1CC50E2C00257404 /* ball_green@2x.png in Resources */,
 				5666F8331D645712001EFC57 /* ball_blue_2@2x.png in Resources */,
@@ -976,6 +1002,7 @@
 				56BF57D01CD7902000923509 /* Roboto-Light.ttf in Resources */,
 				56BF578B1CD4BBBD00923509 /* home@2x.png in Resources */,
 				5666F7DB1D63460C001EFC57 /* multiplayBtn@2x.png in Resources */,
+				5603F4B21DD007AE00881FDF /* LevelSelectView.xib in Resources */,
 				56D160BF1CC49B3A00257404 /* FinishView.xib in Resources */,
 				56E6B5081DBA61AA00740A6A /* HeaderViewMatch.xib in Resources */,
 				5666F7DE1D635A4F001EFC57 /* titleTxt@2x.png in Resources */,
@@ -1164,6 +1191,7 @@
 				56BB7F361CAD345100675AE8 /* SceneViewController.swift in Sources */,
 				56E0732E1DBE45EA002E634D /* Util.swift in Sources */,
 				560A49831D729F3600DEBB6A /* TopScene.swift in Sources */,
+				5603F4B01DD0079C00881FDF /* LevelSelectView.swift in Sources */,
 				56BB367C1D7317C900AD1603 /* PrepareMultiPlayViewController.swift in Sources */,
 				56A528601DB9BF1700AEFA9F /* extension.swift in Sources */,
 				56AF86971DC7413800928022 /* SimpleTargetBall.swift in Sources */,

@@ -712,12 +712,11 @@ THE SOFTWARE.</string>
                         <outlet property="bluetoothImg" destination="wOx-dC-LSq" id="cef-1c-s4p"/>
                         <outlet property="globalImg" destination="n1K-3k-xFd" id="udc-AO-PZx"/>
                         <outlet property="networkArea" destination="Im1-9H-Atc" id="Jlh-bK-J1i"/>
-                        <segue destination="BV1-FR-VrT" kind="presentation" identifier="toMultiPlay" modalTransitionStyle="flipHorizontal" id="SpC-Om-bGS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVJ-Kz-kCD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="967" y="-340"/>
+            <point key="canvasLocation" x="977" y="-390"/>
         </scene>
         <!--Top View Controller-->
         <scene sceneID="mg3-mZ-y76">
@@ -946,7 +945,7 @@ THE SOFTWARE.</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.062745098040000002" green="0.1058823529" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="dsc-yv-aM9" secondAttribute="trailing" constant="40" id="9Fb-kY-gLx"/>
                             <constraint firstItem="6DC-Gf-4nI" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="148" id="9yr-cV-teU"/>
@@ -1010,7 +1009,6 @@ THE SOFTWARE.</string>
                     <connections>
                         <outlet property="onePlayBtn" destination="dsc-yv-aM9" id="omV-qf-o4R"/>
                         <segue destination="BV1-FR-VrT" kind="presentation" identifier="toPlay" modalTransitionStyle="flipHorizontal" id="pGj-IE-aGP"/>
-                        <segue destination="ybY-7A-oOF" kind="presentation" identifier="toPrepareMulti" id="P8d-ih-cfM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGT-fT-5fa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1033,7 +1031,4 @@ THE SOFTWARE.</string>
         <image name="setting.png" width="120" height="120"/>
         <image name="titleTxt.png" width="567" height="126"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="pGj-IE-aGP"/>
-    </inferredMetricsTieBreakers>
 </document>

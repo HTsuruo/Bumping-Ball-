@@ -11,18 +11,29 @@ import SpriteKit
 import GameKit
 import Spring
 
-class TopViewController: UIViewController, /*UIPickerViewDelegate, UIPickerViewDataSource, */GKGameCenterControllerDelegate {
+class TopViewController: UIViewController, GKGameCenterControllerDelegate {
     
     var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     let skView = SKView()
     var sceneView = SceneViewController()
     @IBOutlet weak var onePlayBtn: SpringButton!
 //    @IBOutlet weak var pickerView: UIPickerView!
+    //popup
+    var levelSelectView: LevelSelectView! = nil
+    let bkview = UIView(frame: CGRect(x: 0, y: 0, width: CGFloat.WIDTH, height: CGFloat.HEIGHT))
     
     fileprivate let difficulties: NSArray = ["Easy", "Normal", "Hard"]
     
+    override func viewWillAppear(_ animated: Bool) {
+        bkview.isHidden = true
+        if let view = levelSelectView {
+            view.removeFromSuperview()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        popupBkInit()
 //        pickerViewInit()
     
         if let scene = TopScene(fileNamed:"TopScene") {
@@ -51,16 +62,25 @@ class TopViewController: UIViewController, /*UIPickerViewDelegate, UIPickerViewD
     
     
     @IBAction func onClickOnePlayBtn(_ sender: UIButton) {
-        app.selectedPlay = PlayType.one
-        self.performSegue(withIdentifier: "toPlay", sender: self)
+        app.selectedPlay = PlayType.one 
+        levelSelectView = LevelSelectView(frame: CGRect(x: 0, y: 0, width: CGFloat.WIDTH-125, height: CGFloat.HEIGHT-250))
+        levelSelectView.center = CGFloat.CENTER
+        self.view.addSubview(levelSelectView)
+        bkview.isHidden = false
+        levelSelectView.contentView.animate()
     }
     
     @IBAction func onClickSecondBtn(_ sender: UIButton) {
     }
     
     @IBAction func onClickThirdBtn(_ sender: UIButton) {
-//        app.selectedPlay = PlayType.BLUETOOTH
-        self.performSegue(withIdentifier: "toPrepareMulti", sender: self)
+        app.selectedPlay = PlayType.bluetooth
+        transitionToPlay()
+//        self.performSegue(withIdentifier: "toPrepareMulti", sender: self)
+    }
+    
+    func transitionToPlay() {
+        self.performSegue(withIdentifier: "toPlay", sender: self)
     }
     
     /** ランキング **/
@@ -98,6 +118,21 @@ class TopViewController: UIViewController, /*UIPickerViewDelegate, UIPickerViewD
         GameCenterUtil.sendScore(ud.integer(forKey: "highscore-easy"), leaderBoardId: "easy")
         GameCenterUtil.sendScore(ud.integer(forKey: "highscore-normal"), leaderBoardId: "normal")
         GameCenterUtil.sendScore(ud.integer(forKey: "highscore-hard"), leaderBoardId: "hard")
+    }
+    
+    func popupBkInit() {
+        self.view.addSubview(bkview)
+        bkview.isHidden = true
+        bkview.backgroundColor = UIColor.black
+        bkview.alpha = 0.85
+        bkview.isUserInteractionEnabled = true
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.onTap(_:)))
+        bkview.addGestureRecognizer(gesture)
+    }
+    
+    func onTap(_ sender: UITapGestureRecognizer) {
+        levelSelectView.removeFromSuperview()
+        bkview.isHidden = true
     }
     
     /** picker view setting **/

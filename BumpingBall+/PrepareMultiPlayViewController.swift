@@ -50,7 +50,7 @@ class PrepareMultiPlayViewController: UIViewController {
     func onTapBluetoothArea(_ sender: UITapGestureRecognizer) {
         bluetoothArea.backgroundColor = ColorUtil.selected
         app.selectedPlay = PlayType.bluetooth
-        self.performSegue(withIdentifier: "toMultiPlay", sender: self)
+//        self.performSegue(withIdentifier: "toMultiPlay", sender: self)
     }
     
     func onTapNetoworkArea(_ sender: UITapGestureRecognizer) {
