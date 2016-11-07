@@ -26,7 +26,7 @@ class AlertUtil: NSObject {
             showCloseButton: false
         )
         let alertView = SCLAlertView(appearance: appearance)
-        alertView.showError(title, subTitle: msg, duration: 2.0)
+        alertView.showError(title, subTitle: msg, duration: 1.0)
     }
     
     func eroorMsgWithOk(title: String, msg: String) {

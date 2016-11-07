@@ -14,7 +14,7 @@ class TopScene: SKScene, SKPhysicsContactDelegate {
     let animation = Animation()
     
     override func didMove(to view: SKView) {
-        createPlayerBall()
+//        createPlayerBall()
 //        changeBkColor()
         self.backgroundColor = UIColor.clear
         
