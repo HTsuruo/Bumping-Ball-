@@ -95,8 +95,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if response.result.isSuccess {
                 print("success!!")
                 let json = JSON(object)
-                let currentVersion = json["version"].string
-                
+                let latestVersion = json["version"].string
+                if latestVersion == nil {
+                    return
+                }
+                let currentVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String?
+                let isOld = (currentVersion?.compare(latestVersion!) == .orderedAscending )
+                print("isOld: \(isOld)")
+//                if isOld {
+                    let alertUtil = AlertUtil()
+                    alertUtil.versionUpdate()
+//                }
             } else {
                 print("failed.")
             }
