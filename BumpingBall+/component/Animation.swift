@@ -55,41 +55,37 @@ class Animation {
         return spark
     }
     
-    func launchAnimation(_ node: SKNode, id: Int) -> SKEmitterNode {
-        let launchPath = Bundle.main.path(forResource: "launch", ofType: "sks")
-        let launch = NSKeyedUnarchiver.unarchiveObject(withFile: launchPath!) as! SKEmitterNode
-        launch.position.x = node.position.x
-        launch.position.y = node.position.y
-        launch.particleColorSequence = nil
-        launch.particleColorBlendFactor = 1.0
+    func launchNode(_ point: CGPoint, id: Int) -> SKNode {
+        var node: SKSpriteNode! = nil
+        let type = BallType(rawValue: id)! as BallType
         
-        var launchScale: CGFloat = 1.0
-        
-        switch id {
-        case BallType.blue.rawValue:
-            launch.particleColor = ColorUtil.blue
+        switch type {
+        case .blue:
+            node  = SKSpriteNode(imageNamed: "circle_blue")
             break
-        case BallType.green.rawValue:
-            launch.particleColor = ColorUtil.green
-            launchScale = 1.1
+        case .green:
+            node  = SKSpriteNode(imageNamed: "circle_green")
             break
-        case BallType.orange.rawValue:
-            launch.particleColor = ColorUtil.orange
-            launchScale = 1.2
+        case .orange:
+            node  = SKSpriteNode(imageNamed: "circle_orange")
             break
-        case BallType.red.rawValue:
-            launch.particleColor = ColorUtil.red
-            launchScale = 1.3
-            break
-        case BallType.gold.rawValue:
-            launch.particleColor = ColorUtil.gold
-            launchScale = 4.0
+        case .red:
+            node  = SKSpriteNode(imageNamed: "circle_red")
             break
         default:
-            break
+            return node
         }
-        launch.setScale(launchScale)
-        return launch
+        node.position = point
+        node.xScale = 0.1
+        node.yScale = 0.1
+        return node
+    }
+    
+    func launchAnimation() -> SKAction {
+        let fadeOut = SKAction.fadeOut(withDuration: 0.5)
+        let scale = SKAction.scale(to: 1.0, duration: 0.5)
+        let action = SKAction.group([fadeOut, scale])
+        return removeAfterAction(action)
     }
     
     func chargeMeterAnimation(_ duration: Double) -> SKAction {

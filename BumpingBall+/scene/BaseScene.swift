@@ -339,16 +339,17 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func launchAnimation() {
-        if playerBall.ball.userData?.value(forKey: "id") == nil {
+        guard let id = playerBall.ball.userData?.value(forKey: "id") as? Int else {
             return
         }
-        let id = playerBall.ball.userData?.value(forKey: "id") as! Int
-        let launch = animation.launchAnimation(playerBall.ball, id: id)
-        self.addChild(launch)
-        
-        let moveFadeOut = animation.moveToYFadeOut(0.5, yPos: playerBall.ball.position.y - 20.0, moveToY: 0.5)
-        let sequence = animation.removeAfterAction(moveFadeOut)
-        launch.run(sequence)
+        if playerBall.isGold(playerBall.ball) {
+            return
+        }
+        let point = CGPoint(x: playerBall.ball.position.x, y: playerBall.ball.position.y)
+        let node = animation.launchNode(point, id: id)
+        self.addChild(node)
+        let action = animation.launchAnimation()
+        node.run(action)
     }
     
     //  ゲームオーバー処理

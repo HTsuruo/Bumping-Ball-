@@ -71,12 +71,13 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
     }
     
     @IBAction func onClickSecondBtn(_ sender: UIButton) {
+        app.selectedPlay = PlayType.bluetooth
+        transitionToPlay()
     }
     
     @IBAction func onClickThirdBtn(_ sender: UIButton) {
-        app.selectedPlay = PlayType.bluetooth
-        transitionToPlay()
-//        self.performSegue(withIdentifier: "toPrepareMulti", sender: self)
+        let alertUtil = AlertUtil()
+        alertUtil.eroorMsg(title: "お知らせ", msg: "GameCenterによる対戦機能は現在ご利用いただけません")
     }
     
     func transitionToPlay() {

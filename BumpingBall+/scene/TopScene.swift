@@ -14,10 +14,20 @@ class TopScene: SKScene, SKPhysicsContactDelegate {
     let animation = Animation()
     
     override func didMove(to view: SKView) {
-//        createPlayerBall()
+        createPlayerBall()
 //        changeBkColor()
-        let color1 = SKAction.colorize(with: ColorUtil.main, colorBlendFactor: 1.0, duration: 1)
-        self.run(color1)
+        self.backgroundColor = UIColor.clear
+        
+        let node  = SKSpriteNode(imageNamed: "circle_blue")
+        node.position = CGFloat.CENTER
+        self.addChild(node)
+        
+        let fadeOut = SKAction.fadeOut(withDuration: 3.0)
+        let scale = SKAction.scale(to: 3.0, duration: 3.0)
+        let action = SKAction.group([fadeOut, scale])
+//        let sequence = animation.removeAfterAction(action)
+        let forever  = SKAction.repeatForever(action)
+        node.run(forever)
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -42,7 +52,7 @@ class TopScene: SKScene, SKPhysicsContactDelegate {
     fileprivate func createPlayerBall() {
        let ball = SKSpriteNode(imageNamed: ballImage.RED)
        ball.position = CGPoint(x: 300, y: 100)
-       ball.alpha = 0.8
+       ball.alpha = 0.2
        self.addChild(ball)
        let action = SKAction.rotate(byAngle: CGFloat(90 * M_PI / 180), duration: 1)
        let foreverAction  = SKAction.repeatForever(action)
