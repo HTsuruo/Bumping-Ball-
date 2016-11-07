@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.0.1)
   - Crashlytics (3.8.3):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.10)
@@ -55,8 +56,10 @@ PODS:
   - NVActivityIndicatorView (3.0)
   - SCLAlertView (0.7.0)
   - Spring (1.0.3)
+  - SwiftyJSON (3.1.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.0)
   - Crashlytics
   - Fabric
   - Firebase/Messaging
@@ -64,6 +67,7 @@ DEPENDENCIES:
   - NVActivityIndicatorView (from `https://github.com/ninjaprox/NVActivityIndicatorView`)
   - SCLAlertView
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
+  - SwiftyJSON
 
 EXTERNAL SOURCES:
   FontAwesomeKit:
@@ -87,6 +91,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
   Fabric: c73f371ee543e3f0b80608f2674750e4910d1669
   Firebase: be473484f0d515e72ffd04acf22f981773c23e58
@@ -102,7 +107,8 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: 19c0c7549ffe4f830f65d00b2f0d9a144e4c5105
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
+  SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-PODFILE CHECKSUM: fdc272acca9fab197d0ba11a6e78c54cad0d2898
+PODFILE CHECKSUM: bc5da4fd557042a6f5fe0dff6a0bf5dc09b25553
 
 COCOAPODS: 1.0.1

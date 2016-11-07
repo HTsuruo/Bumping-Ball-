@@ -11,6 +11,8 @@ import Fabric
 import Crashlytics
 import Firebase
 import MultipeerConnectivity
+import Alamofire
+import SwiftyJSON
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -36,6 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerUserNotificationSettings(notificationSettings)
         application.registerForRemoteNotifications()
         FIRApp.configure()
+        
+        versionCheck()
         
         return true
     }
@@ -80,6 +84,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         FIRInstanceID.instanceID().setAPNSToken(deviceToken, type: FIRInstanceIDAPNSTokenType.unknown)
+    }
+    
+    func versionCheck() {
+        Alamofire.request(define.VERSION_URL, method: .get, encoding: JSONEncoding.default).responseJSON { response in
+            print("response: \(response)")
+            guard let object = response.result.value else {
+                return
+            }
+            if response.result.isSuccess {
+                print("success!!")
+                let json = JSON(object)
+                let currentVersion = json["version"].string
+                
+            } else {
+                print("failed.")
+            }
+        }
     }
     
 }

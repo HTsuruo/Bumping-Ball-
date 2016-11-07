@@ -11,6 +11,8 @@ target 'BumpingBall+' do
     pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
     pod 'SCLAlertView'
     pod 'FontAwesomeKit', :git => 'git@github.com:PrideChung/FontAwesomeKit.git', :branch => 'master'
+    pod 'Alamofire', '~> 4.0'
+    pod 'SwiftyJSON'
 end
 
 target 'BumpingBall+Tests' do

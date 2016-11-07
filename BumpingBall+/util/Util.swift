@@ -23,6 +23,7 @@ struct define {
     static let MAX_ITEM_BALL = 5
     static let COMBO_FOR_ITEM_BALL = 2
     static let SPECIAL_MODE_TIME = 15
+    static let VERSION_URL = "http://tsurutsuru.php.xdomain.jp/bumping_ball_plus/version.php"
 }
 
 struct Util {
