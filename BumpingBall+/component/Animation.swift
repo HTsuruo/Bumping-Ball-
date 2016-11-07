@@ -88,6 +88,13 @@ class Animation {
         return removeAfterAction(action)
     }
     
+    func absorptionAnimation() -> SKAction {
+        let fadeOut = SKAction.fadeOut(withDuration: 0.5)
+        let scale = SKAction.scale(to: 0.0, duration: 0.5)
+        let action = SKAction.group([fadeOut, scale])
+        return removeAfterAction(action)
+    }
+    
     func chargeMeterAnimation(_ duration: Double) -> SKAction {
         let gold = SKAction.colorize(with: ColorUtil.gold, colorBlendFactor: 1.0, duration: duration)
         let orange = SKAction.colorize(with: ColorUtil.orange, colorBlendFactor: 1.0, duration: duration)

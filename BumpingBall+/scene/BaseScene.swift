@@ -316,18 +316,22 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func removeTargetBall(_ node: SKNode, id: Int) {
-        let spark = animation.sparkAnimation(node, id: id, scale: 0.5)
-        self.addChild(spark)
-        let sequence = animation.fadeOutRemove(0.5)
-        spark.run(sequence)
+        let pos = CGPoint(x: node.position.x, y: node.position.y)
+        let launchNode = animation.launchNode(pos, id: id)
+        self.addChild(launchNode)
+        let launch = animation.launchAnimation()
+        launchNode.run(launch)
         node.removeFromParent()
     }
     
     func changeTargetBall(_ pBall: SKNode, tBall: SKNode, id: Int) {
-        let spark = animation.sparkAnimation(pBall, id: id, scale: 0.2)
-        self.addChild(spark)
-        let sequence = animation.fadeOutRemove(0.5)
-        spark.run(sequence)
+        let pos = CGPoint(x: tBall.position.x, y: tBall.position.y)
+        let launchNode = animation.launchNode(pos, id: id)
+        launchNode.xScale = 0.5
+        launchNode.yScale = 0.5
+        self.addChild(launchNode)
+        let launch = animation.absorptionAnimation()
+        launchNode.run(launch)
         
         let num = tBall.userData?.value(forKey: "num") as! Int
         let resNum = num - 1
