@@ -289,9 +289,9 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
             comboCount = MAX_COMBO_COUNT + 1
         }
         
-        let comboLabel = SKLabelNode(fontNamed:"ChalkboardSE-Regular")
+        let comboLabel = SKLabelNode(fontNamed:"Candara")
         comboLabel.text = "combo×"+String(comboCount-1)
-        comboLabel.fontColor = UIColor.red
+        comboLabel.fontColor = ColorUtil.red
         comboLabel.fontSize = 20
         comboLabel.position = tnode.position
         self.addChild(comboLabel)
