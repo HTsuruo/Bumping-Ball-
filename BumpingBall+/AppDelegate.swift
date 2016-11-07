@@ -9,10 +9,7 @@
 import UIKit
 import Fabric
 import Crashlytics
-import Firebase
 import MultipeerConnectivity
-import Alamofire
-import SwiftyJSON
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -33,13 +30,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let targetViewController = presentView
             GameCenterUtil.login(targetViewController)
         }
-        let notificationSettings = UIUserNotificationSettings(
-            types: [.badge, .sound, .alert], categories: nil)
-        application.registerUserNotificationSettings(notificationSettings)
-        application.registerForRemoteNotifications()
-        FIRApp.configure()
         
-        versionCheck()
+//        let notificationSettings = UIUserNotificationSettings(
+//            types: [.badge, .sound, .alert], categories: nil)
+//        application.registerUserNotificationSettings(notificationSettings)
+//        application.registerForRemoteNotifications()
+//        FIRApp.configure()
         
         return true
     }
@@ -76,40 +72,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        let tokenChars = (deviceToken as NSData).bytes.bindMemory(to: CChar.self, capacity: deviceToken.count)
-        var tokenString = ""
-        
-        for i in 0..<deviceToken.count {
-            tokenString += String(format: "%02.2hhx", arguments: [tokenChars[i]])
-        }
-        
-        FIRInstanceID.instanceID().setAPNSToken(deviceToken, type: FIRInstanceIDAPNSTokenType.unknown)
-    }
-    
-    func versionCheck() {
-        Alamofire.request(define.VERSION_URL, method: .get, encoding: JSONEncoding.default).responseJSON { response in
-            print("response: \(response)")
-            guard let object = response.result.value else {
-                return
-            }
-            if response.result.isSuccess {
-                print("success!!")
-                let json = JSON(object)
-                let latestVersion = json["version"].string
-                if latestVersion == nil {
-                    return
-                }
-                let currentVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String?
-                let isOld = (currentVersion?.compare(latestVersion!) == .orderedAscending )
-                print("isOld: \(isOld)")
-//                if isOld {
-                    let alertUtil = AlertUtil()
-                    alertUtil.versionUpdate()
-//                }
-            } else {
-                print("failed.")
-            }
-        }
+//        let tokenChars = (deviceToken as NSData).bytes.bindMemory(to: CChar.self, capacity: deviceToken.count)
+//        var tokenString = ""
+//        
+//        for i in 0..<deviceToken.count {
+//            tokenString += String(format: "%02.2hhx", arguments: [tokenChars[i]])
+//        }
+//        
+//        FIRInstanceID.instanceID().setAPNSToken(deviceToken, type: FIRInstanceIDAPNSTokenType.unknown)
     }
     
 }

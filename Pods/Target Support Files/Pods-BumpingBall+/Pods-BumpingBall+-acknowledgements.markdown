@@ -32,26 +32,6 @@ Fabric: Copyright 2016 Twitter, Inc. All Rights Reserved. Use of this software i
 
 Fabric: Copyright 2016 Twitter, Inc. All Rights Reserved. Use of this software is subject to the terms and conditions of the Fabric Software and Services Agreement located at https://fabric.io/terms. OSS: http://get.fabric.io/terms/opensource.txt
 
-## Firebase
-
-Copyright 2016 Google
-
-## FirebaseAnalytics
-
-Copyright 2016 Google
-
-## FirebaseCore
-
-Copyright 2016 Google
-
-## FirebaseInstanceID
-
-Copyright 2016 Google
-
-## FirebaseMessaging
-
-Copyright 2016 Google
-
 ## FontAwesomeKit
 
 Copyright (C) 2013 Pride Chung
@@ -61,22 +41,6 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-## GoogleIPhoneUtilities
-
-Copyright 2015 Google Inc.
-
-## GoogleInterchangeUtilities
-
-Copyright 2016 Google
-
-## GoogleSymbolUtilities
-
-Copyright 2016 Google
-
-## GoogleUtilities
-
-Copyright 2016 Google
 
 ## NVActivityIndicatorView
 

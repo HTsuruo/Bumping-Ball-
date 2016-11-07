@@ -2,28 +2,7 @@ PODS:
   - Alamofire (4.0.1)
   - Crashlytics (3.8.3):
     - Fabric (~> 1.6.3)
-  - Fabric (1.6.10)
-  - Firebase/Core (3.7.1):
-    - FirebaseAnalytics (= 3.4.4)
-    - FirebaseCore (= 3.4.3)
-  - Firebase/Messaging (3.7.1):
-    - Firebase/Core
-    - FirebaseMessaging (= 1.2.0)
-  - FirebaseAnalytics (3.4.4):
-    - FirebaseCore (~> 3.4)
-    - FirebaseInstanceID (~> 1.0)
-    - GoogleInterchangeUtilities (~> 1.2)
-    - GoogleSymbolUtilities (~> 1.1)
-  - FirebaseCore (3.4.3):
-    - GoogleInterchangeUtilities (~> 1.2)
-    - GoogleUtilities (~> 1.2)
-  - FirebaseInstanceID (1.0.8)
-  - FirebaseMessaging (1.2.0):
-    - FirebaseAnalytics (~> 3.3)
-    - FirebaseInstanceID (~> 1.0)
-    - GoogleInterchangeUtilities (~> 1.2)
-    - GoogleIPhoneUtilities (~> 1.2)
-    - GoogleSymbolUtilities (~> 1.1)
+  - Fabric (1.6.11)
   - FontAwesomeKit (2.2.1):
     - FontAwesomeKit/Core (= 2.2.1)
     - FontAwesomeKit/FontAwesome (= 2.2.1)
@@ -45,14 +24,6 @@ PODS:
     - FontAwesomeKit/Core
   - FontAwesomeKit/Zocial (2.2.1):
     - FontAwesomeKit/Core
-  - GoogleInterchangeUtilities (1.2.2):
-    - GoogleSymbolUtilities (~> 1.1)
-  - GoogleIPhoneUtilities (1.2.1):
-    - GoogleSymbolUtilities (~> 1.0)
-    - GoogleUtilities (~> 1.0)
-  - GoogleSymbolUtilities (1.1.2)
-  - GoogleUtilities (1.3.2):
-    - GoogleSymbolUtilities (~> 1.1)
   - NVActivityIndicatorView (3.0)
   - SCLAlertView (0.7.0)
   - Spring (1.0.3)
@@ -62,7 +33,6 @@ DEPENDENCIES:
   - Alamofire (~> 4.0)
   - Crashlytics
   - Fabric
-  - Firebase/Messaging
   - FontAwesomeKit (from `git@github.com:PrideChung/FontAwesomeKit.git`, branch `master`)
   - NVActivityIndicatorView (from `https://github.com/ninjaprox/NVActivityIndicatorView`)
   - SCLAlertView
@@ -84,7 +54,7 @@ CHECKOUT OPTIONS:
     :commit: ffcc61b71c5ae5196705d3486e20e5391fb9396c
     :git: git@github.com:PrideChung/FontAwesomeKit.git
   NVActivityIndicatorView:
-    :commit: ad1b20572315402e13f13b869157dc794e4bf75a
+    :commit: 4d36ec2e0d9dc5bd21b781666f101c673de47d7b
     :git: https://github.com/ninjaprox/NVActivityIndicatorView
   Spring:
     :commit: 3a9227c6e9157e7b47f5ac1ee5abab2a56b50002
@@ -93,22 +63,13 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
-  Fabric: c73f371ee543e3f0b80608f2674750e4910d1669
-  Firebase: be473484f0d515e72ffd04acf22f981773c23e58
-  FirebaseAnalytics: 0533a00b681e08fd0b2cd0444b7ddf0ef9fd7a1a
-  FirebaseCore: 5a885548bbc5f0c410b04f8e9ac9d73ff1221907
-  FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
-  FirebaseMessaging: 789d23fd796594dfb55dcf36cd325541df887c22
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   FontAwesomeKit: 3614979b3dbb0ec3f7fac1bd760b91f66c31db67
-  GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
-  GoogleIPhoneUtilities: 63f25e93a3ddcb66884d182aab3a660d98f1479b
-  GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
-  GoogleUtilities: 8bbc733218aad26306f9d4a253823986110e3358
   NVActivityIndicatorView: 19c0c7549ffe4f830f65d00b2f0d9a144e4c5105
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-PODFILE CHECKSUM: bc5da4fd557042a6f5fe0dff6a0bf5dc09b25553
+PODFILE CHECKSUM: 770a4450d6db4bb357b09229a4220b3e797d407c
 
 COCOAPODS: 1.0.1

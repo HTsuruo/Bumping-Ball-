@@ -8,6 +8,8 @@
 
 import UIKit
 import SpriteKit
+import Alamofire
+import SwiftyJSON
 
 struct define {
     static let MAX = 20
@@ -35,6 +37,32 @@ struct Util {
             tc = tc!.presentedViewController
         }
         return tc!
+    }
+    
+    static func versionCheck() {
+        Alamofire.request(define.VERSION_URL, method: .get, encoding: JSONEncoding.default).responseJSON { response in
+            print("response: \(response)")
+            guard let object = response.result.value else {
+                return
+            }
+            if response.result.isSuccess {
+                print("versionCheck: success!!")
+                let json = JSON(object)
+                let latestVersion = json["version"].string
+                if latestVersion == nil {
+                    return
+                }
+                let currentVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String?
+                let isOld = (currentVersion?.compare(latestVersion!) == .orderedAscending )
+                print("isOld: \(isOld)")
+                if isOld {
+                    let alertUtil = AlertUtil()
+                    alertUtil.versionUpdate()
+                }
+            } else {
+                print("versionCheck: failed.")
+            }
+        }
     }
 }
 

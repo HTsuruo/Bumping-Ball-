@@ -33,6 +33,7 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Util.versionCheck()
         popupBkInit()
 //        pickerViewInit()
     

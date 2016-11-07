@@ -7,7 +7,6 @@ target 'BumpingBall+' do
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'NVActivityIndicatorView' , :git => "https://github.com/ninjaprox/NVActivityIndicatorView"
-    pod 'Firebase/Messaging'
     pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
     pod 'SCLAlertView'
     pod 'FontAwesomeKit', :git => 'git@github.com:PrideChung/FontAwesomeKit.git', :branch => 'master'

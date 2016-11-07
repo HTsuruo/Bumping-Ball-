@@ -48,11 +48,12 @@ class AlertUtil: NSObject {
     
     func versionUpdate() {
         let appearance = SCLAlertView.SCLAppearance(
+            showCloseButton: false,
             shouldAutoDismiss: false
         )
         let alertView = SCLAlertView(appearance: appearance)
         let size = CGSize(width: 22, height: 22)
-        let icon = FAKFontAwesome.pencilIcon(withSize:size.width)
+        let icon = FAKFontAwesome.levelUpIcon(withSize:size.width)
         icon?.addAttribute(NSForegroundColorAttributeName, value: UIColor.white)
         let title = "アップデートのお知らせ"
         let subTitle = "新しいバージョンで遊べます\nAppStoreよりアップデートしてください"
@@ -61,6 +62,9 @@ class AlertUtil: NSObject {
             if UIApplication.shared.canOpenURL(url as! URL) {
                 UIApplication.shared.openURL(url as! URL)
             }
+        })
+        alertView.addButton("アップデートしない", backgroundColor: UIColor.gray, textColor: UIColor.white, showDurationStatus: false, action: {
+            alertView.hideView()
         })
         alertView.showCustom(title, subTitle: subTitle, color: ColorUtil.main, icon: (icon?.image(with: size))!)
     }
