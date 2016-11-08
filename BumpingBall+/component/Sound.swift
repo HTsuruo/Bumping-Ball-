@@ -13,6 +13,7 @@ import SpriteKit
 class Sound: NSObject {
     static let bigger = SKAction.playSoundFileNamed("bigger.mp3", waitForCompletion: false)
     static let launch = SKAction.playSoundFileNamed("launch.mp3", waitForCompletion: false)
+    static let collision = SKAction.playSoundFileNamed("collision.mp3", waitForCompletion: false)
     
     static var audioPlayer: AVAudioPlayer = AVAudioPlayer()
     static var path: URL! = nil
