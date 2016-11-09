@@ -41,7 +41,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         self.backgroundColor = UIColor.black
 //        let background = SKSpriteNode(imageNamed: "background")
 //        background.size = CGSize(width: CGFloat.WIDTH, height: CGFloat.HEIGHT)
-//        background.position = CGFloat.CENTERg
+//        background.position = CGFloat.CENTER
 //        self.addChild(background)
         
 //        let movetoY = SKAction.moveTo(y: 100, duration: 10.0)
