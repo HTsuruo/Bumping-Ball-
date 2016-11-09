@@ -39,10 +39,10 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self
         self.physicsWorld.speed = CGFloat(1.0)
         self.backgroundColor = UIColor.black
-        let background = SKSpriteNode(imageNamed: "space")
-        background.size = CGSize(width: CGFloat.WIDTH, height: CGFloat.HEIGHT)
-        background.position = CGFloat.CENTER
-        self.addChild(background)
+//        let background = SKSpriteNode(imageNamed: "background")
+//        background.size = CGSize(width: CGFloat.WIDTH, height: CGFloat.HEIGHT)
+//        background.position = CGFloat.CENTERg
+//        self.addChild(background)
         
 //        let movetoY = SKAction.moveTo(y: 100, duration: 10.0)
 //        let forever = SKAction.repeatForever(movetoY)
