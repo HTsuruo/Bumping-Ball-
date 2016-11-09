@@ -101,7 +101,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         
         for touche in touches {
             let location = touche.location(in: self)
-            let swipe = location.y < touchBeginLocation.y && location.y < 20
+            let swipe = location.y > touchBeginLocation.y && location.y > touchView.frame.height
             if swipe && charge.isFull {
                 playerBall.setGold()
                 chargeReset()
