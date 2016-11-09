@@ -12,7 +12,6 @@ import SpriteKit
 class OnePlayScene: BaseScene {
     
     let headerView = HeaderView()
-    var itemBall = ItemBall()
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
@@ -38,7 +37,7 @@ class OnePlayScene: BaseScene {
         if  !playerBall.isFire {
             playerBall.sizeChange(reverse: false)
         }
-        moveTargetBall(accel: CGFloat(0.0))
+        moveTargetBall(accel: 0.0)
     }
     
     override func updateScore() {

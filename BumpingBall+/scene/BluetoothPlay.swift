@@ -28,7 +28,7 @@ class BluetoothPlay: BaseScene {
     var partnerPrepared = false
     var isReverse = false
     var isSpecialMode = false
-    var accel = CGFloat(0.0)
+    var accel: Double = 0.0
     var secTimer: CFTimeInterval!
     var specialModeTimer = define.SPECIAL_MODE_TIME
     
@@ -258,10 +258,10 @@ class BluetoothPlay: BaseScene {
                 if !isCollision {
                     self.ballUtil.setBoundX(node)
                     self.ballUtil.setBoundY(node)
-                    let dx = node.userData?.value(forKey: "dx") as! CGFloat
-                    let dy = node.userData?.value(forKey: "dy") as! CGFloat
-                    node.position.x += dx
-                    node.position.y -= dy
+                    let dx = node.userData?.value(forKey: "dx") as! Double
+                    let dy = node.userData?.value(forKey: "dy") as! Double
+                    node.position.x += CGFloat(dx)
+                    node.position.y -= CGFloat(dy)
                 }
             }
         })
@@ -332,7 +332,7 @@ class BluetoothPlay: BaseScene {
                     node.removeFromParent()
                     self.isSpecialMode = false
                     self.isReverse = false
-                    self.accel = CGFloat(0.0)
+                    self.accel = 0.0
                     self.specialModeTimer = define.SPECIAL_MODE_TIME
                     return
                 }
@@ -347,13 +347,13 @@ class BluetoothPlay: BaseScene {
     }
     
     fileprivate func createDevilBall(id: Int) {
-        targetBall = TargetBall()
+        let targetBall = TargetBall()
         targetBall.changeDevilBall(id: id)
         var posX: UInt! = UInt(arc4random_uniform(UInt32(CGFloat.WIDTH)))
         posX = targetBall.setInScreen(posX)
         targetBall.ball.position = CGPoint(x:CGFloat(posX), y:self.frame.height-50)
         targetBall.setCategory(targetBallCategory, targetCat: ballCategory)
-        self.addChild(self.targetBall.ball)
+        self.addChild(targetBall.ball)
         targetBall.ball.run(SKAction.fadeIn(withDuration: 0.5))
     }
     
@@ -368,7 +368,7 @@ class BluetoothPlay: BaseScene {
         case .speedup:
             print("speedup")
             isSpecialMode = true
-            accel = CGFloat(0.5)
+            accel = 0.5
             showSpecialItemIcon(imagename: "speedup_bk")
             break
         case .oneup:

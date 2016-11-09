@@ -13,7 +13,6 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     
     var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     var playerBall = PlayerBall()
-    var targetBall = TargetBall()
     let ballUtil = BallUtil()
     let animation = Animation()
     let difficulty = Difficulty()
@@ -163,30 +162,30 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func createTargetBall() {
-        targetBall = TargetBall()
+        let targetBall = TargetBall()
         var posX: UInt! = UInt(arc4random_uniform(UInt32(CGFloat.WIDTH)))
         posX = targetBall.setInScreen(posX)
         
         targetBall.ball.position = CGPoint(x:CGFloat(posX), y:self.frame.height-50)
         targetBall.setCategory(targetBallCategory, targetCat: ballCategory)
-        self.addChild(self.targetBall.ball)
+        self.addChild(targetBall.ball)
         targetBall.ball.run(SKAction.fadeIn(withDuration: 0.5))
     }
     
-    func moveTargetBall(accel: CGFloat) {
+    func moveTargetBall(accel: Double) {
         self.enumerateChildNodes(withName: "t_ball", using: {
             node, stop in
             if node is SKSpriteNode {
                 let targetBall = node as! SKSpriteNode
                 self.ballUtil.setBoundX(targetBall)
-                let dx = targetBall.userData?.value(forKey: "dx") as! CGFloat
-                let dy = targetBall.userData?.value(forKey: "dy") as! CGFloat
+                let dx = targetBall.userData?.value(forKey: "dx") as! Double
+                let dy = targetBall.userData?.value(forKey: "dy") as! Double
                 if dx < 0 {
-                    targetBall.position.x += (dx - accel)
+                    targetBall.position.x += CGFloat(dx - accel)
                 } else {
-                    targetBall.position.x += (dx + accel)
+                    targetBall.position.x += CGFloat(dx + accel)
                 }
-                targetBall.position.y -= (dy + accel)
+                targetBall.position.y -= CGFloat(dy + accel)
                 
                 if self.isFin {
                     return

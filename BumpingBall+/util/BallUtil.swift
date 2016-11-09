@@ -52,8 +52,6 @@ class BallUtil: NSObject {
         }
         
         let posX: UInt = UInt(node.position.x)
-        var dx = node.userData?.value(forKey: "dx") as! CGFloat
-        
         if posX < UInt(halfSize) {
             screenCollision = true
         }
@@ -62,9 +60,12 @@ class BallUtil: NSObject {
             screenCollision = true
         }
         
-        if screenCollision {
-            dx *= -1
+        if !screenCollision {
+            return
         }
+        
+        var dx = node.userData?.value(forKey: "dx") as! Double
+        dx *= -1
         node.userData?.setValue(dx, forKey: "dx")
     }
     
@@ -83,7 +84,7 @@ class BallUtil: NSObject {
             screenCollision = true
         }
         
-        var dy = node.userData?.value(forKey: "dy") as! CGFloat
+        var dy = node.userData?.value(forKey: "dy") as! Double
         
         if screenCollision {
             dy *= -1
