@@ -14,20 +14,9 @@ class TopScene: SKScene, SKPhysicsContactDelegate {
     let animation = Animation()
     
     override func didMove(to view: SKView) {
-//        createPlayerBall()
 //        changeBkColor()
         self.backgroundColor = UIColor.clear
-        
-        let node  = SKSpriteNode(imageNamed: "circle_blue")
-        node.position = CGFloat.CENTER
-        self.addChild(node)
-        
-        let fadeOut = SKAction.fadeOut(withDuration: 3.0)
-        let scale = SKAction.scale(to: 3.0, duration: 3.0)
-        let action = SKAction.group([fadeOut, scale])
-//        let sequence = animation.removeAfterAction(action)
-        let forever  = SKAction.repeatForever(action)
-        node.run(forever)
+        createCenterCircle()
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -35,9 +24,54 @@ class TopScene: SKScene, SKPhysicsContactDelegate {
             last = currentTime
         }
         
-        if last + 3 <= currentTime {
+        if last + 1.0 <= currentTime {
             last = currentTime
+            createRandomCircle()
         }
+    }
+    
+    func createCenterCircle() {
+        let node  = SKSpriteNode(imageNamed: "circle_blue")
+        node.position = CGFloat.CENTER
+        self.addChild(node)
+        let action = animation.circleAnimation(scale: 2.5, duration: 3.0)
+        node.run(action)
+    }
+    
+    func createRandomCircle() {
+        let rand = arc4random_uniform(4)
+        var node: SKSpriteNode! = nil
+        switch rand {
+        case 0:
+            node = SKSpriteNode(imageNamed: "circle_blue")
+            break
+        case 1:
+            node = SKSpriteNode(imageNamed: "circle_green")
+            break
+        case 2:
+            node = SKSpriteNode(imageNamed: "circle_orange")
+            break
+        case 3:
+            node = SKSpriteNode(imageNamed: "circle_red")
+            break
+        default:
+            node = SKSpriteNode(imageNamed: "circle_blue")
+            break
+        }
+        let xPos = arc4random_uniform(UInt32(CGFloat.WIDTH))
+        let yPos = arc4random_uniform(UInt32(CGFloat.HEIGHT))
+        node.position = CGPoint(x: Double(xPos), y: Double(yPos))
+        let scaleInit = arc4random_uniform(20)
+        let sInit = Double(scaleInit + 1)
+        node.xScale = CGFloat(sInit * 0.1)
+        node.yScale = CGFloat(sInit * 0.1)
+        node.alpha = 0.0
+        self.addChild(node)
+        let scaleFin = arc4random_uniform(10)
+        let sFin = Double(scaleFin+1)
+        let duration = arc4random_uniform(5)
+        let action = animation.circleAnimation(scale: 1.0 + CGFloat(sFin*0.1), duration: 1.5 + Double(duration))
+        node.run(action)
     }
 
     func changeBkColor() {

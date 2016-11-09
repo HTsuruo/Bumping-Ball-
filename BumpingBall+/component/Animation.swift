@@ -161,4 +161,12 @@ class Animation {
         return SKAction.sequence([alphain, delay, alphaout])
     }
     
+    func circleAnimation(scale: CGFloat, duration: Double) -> SKAction {
+        let alphaIn = SKAction.fadeAlpha(to: 0.3, duration: duration * 0.5)
+        let fadeOut = SKAction.fadeOut(withDuration: duration-duration * 0.5)
+        let fadeInOut = SKAction.sequence([alphaIn, fadeOut])
+        let scale = SKAction.scale(to: scale, duration: duration)
+        let action = SKAction.group([fadeInOut, scale])
+        return removeAfterAction(action)
+    }
 }
