@@ -61,13 +61,13 @@ class TopScene: SKScene, SKPhysicsContactDelegate {
         let xPos = arc4random_uniform(UInt32(CGFloat.WIDTH))
         let yPos = arc4random_uniform(UInt32(CGFloat.HEIGHT))
         node.position = CGPoint(x: Double(xPos), y: Double(yPos))
-        let scaleInit = arc4random_uniform(20)
+        let scaleInit = arc4random_uniform(20)//0.0~2.0
         let sInit = Double(scaleInit + 1)
         node.xScale = CGFloat(sInit * 0.1)
         node.yScale = CGFloat(sInit * 0.1)
         node.alpha = 0.0
         self.addChild(node)
-        let scaleFin = arc4random_uniform(10)
+        let scaleFin = arc4random_uniform(10)//1.0~2.0
         let sFin = Double(scaleFin+1)
         let duration = arc4random_uniform(5)
         let action = animation.circleAnimation(scale: 1.0 + CGFloat(sFin*0.1), duration: 1.5 + Double(duration))

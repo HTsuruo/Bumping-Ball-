@@ -39,6 +39,14 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self
         self.physicsWorld.speed = CGFloat(1.0)
         self.backgroundColor = UIColor.black
+        let background = SKSpriteNode(imageNamed: "space")
+        background.size = CGSize(width: CGFloat.WIDTH, height: CGFloat.HEIGHT)
+        background.position = CGFloat.CENTER
+        self.addChild(background)
+        
+//        let movetoY = SKAction.moveTo(y: 100, duration: 10.0)
+//        let forever = SKAction.repeatForever(movetoY)
+//        background.run(forever)
         
         app.score = 0
         
@@ -288,16 +296,13 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
             comboCount = MAX_COMBO_COUNT + 1
         }
         
-        let comboLabel = SKLabelNode(fontNamed:"Candara")
-        comboLabel.text = "combo×"+String(comboCount-1)
-        comboLabel.fontColor = ColorUtil.red
-        comboLabel.fontSize = 20
-        comboLabel.position = tnode.position
-        self.addChild(comboLabel)
-        
-        let moveFadeOut = animation.moveToYFadeOut(0.8, yPos: tnode.position.y + 30, moveToY: 0.5)
+        let count = comboCount - 1
+        let comboNode = SKSpriteNode(imageNamed: "combo_\(count)")
+        comboNode.position = CGFloat.CENTER
+        self.addChild(comboNode)
+        let moveFadeOut = animation.moveToYFadeOut(0.7, yPos: CGFloat.CENTER.y + CGFloat(30.0), moveToY: 0.5)
         let sequence = animation.removeAfterAction(moveFadeOut)
-        comboLabel.run(sequence)
+        comboNode.run(sequence)
         
         let prevCharge = charge.isFull //fullになった時のみを取得するため
         if !playerBall.isGold(pnode) {

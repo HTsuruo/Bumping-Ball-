@@ -162,7 +162,7 @@ class Animation {
     }
     
     func circleAnimation(scale: CGFloat, duration: Double) -> SKAction {
-        let alphaIn = SKAction.fadeAlpha(to: 0.3, duration: duration * 0.5)
+        let alphaIn = SKAction.fadeAlpha(to: 0.25, duration: duration * 0.5)
         let fadeOut = SKAction.fadeOut(withDuration: duration-duration * 0.5)
         let fadeInOut = SKAction.sequence([alphaIn, fadeOut])
         let scale = SKAction.scale(to: scale, duration: duration)

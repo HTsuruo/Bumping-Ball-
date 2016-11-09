@@ -44,7 +44,9 @@ class SceneViewController: UIViewController {
         skView.showsFPS = true
         skView.showsNodeCount = true
         skView.isMultipleTouchEnabled = false
-        scene.scaleMode = .resizeFill
+//        scene.scaleMode = .resizeFill
+        scene.scaleMode = .aspectFill
+        scene.size = skView.frame.size
         skView.presentScene(scene)
 
         //pauseボタン
