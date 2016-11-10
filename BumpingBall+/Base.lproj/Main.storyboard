@@ -496,7 +496,7 @@ THE SOFTWARE.
         <scene sceneID="xbt-TL-Fjn">
             <objects>
                 <navigationController id="iRC-MV-hpy" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="lTI-9v-oa6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lTI-9v-oa6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -552,7 +552,7 @@ THE SOFTWARE.
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multi Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogm-4G-WJX">
-                                        <rect key="frame" x="141.5" y="18" width="100" height="24"/>
+                                        <rect key="frame" x="142" y="18" width="100" height="24"/>
                                         <fontDescription key="fontDescription" name="Candara" family="Candara" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -569,7 +569,7 @@ THE SOFTWARE.
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="遊び方を選択してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PzY-zP-vrD" userLabel="Label">
-                                <rect key="frame" x="83.5" y="105" width="208" height="20.5"/>
+                                <rect key="frame" x="84" y="105" width="208" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -578,7 +578,7 @@ THE SOFTWARE.
                                 <rect key="frame" x="26" y="150" width="323" height="210"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vf-aQ-jIt">
-                                        <rect key="frame" x="-13.5" y="72.5" width="350" height="65"/>
+                                        <rect key="frame" x="-13" y="73" width="350" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="M2y-SO-gAa"/>
                                             <constraint firstAttribute="width" constant="350" id="bxx-JO-Fpb"/>
@@ -614,13 +614,13 @@ THE SOFTWARE.
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_bluetooth_large.png" translatesAutoresizingMaskIntoConstraints="NO" id="wOx-dC-LSq">
-                                        <rect key="frame" x="66.5" y="10" width="190" height="190"/>
+                                        <rect key="frame" x="67" y="10" width="190" height="190"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="wOx-dC-LSq" secondAttribute="height" multiplier="1:1" id="IfH-gX-35W"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タップしてスタート" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tca-Hl-qDV">
-                                        <rect key="frame" x="83.5" y="169.5" width="156" height="20.5"/>
+                                        <rect key="frame" x="84" y="169" width="156" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -648,13 +648,13 @@ THE SOFTWARE.
                                 <rect key="frame" x="26" y="397" width="323" height="210"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_global.png" translatesAutoresizingMaskIntoConstraints="NO" id="n1K-3k-xFd">
-                                        <rect key="frame" x="66.5" y="10" width="190" height="190"/>
+                                        <rect key="frame" x="67" y="10" width="190" height="190"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="n1K-3k-xFd" secondAttribute="height" multiplier="1:1" id="v0r-DM-tuw"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKx-sC-Hlw">
-                                        <rect key="frame" x="-13.5" y="72.5" width="350" height="65"/>
+                                        <rect key="frame" x="-13" y="73" width="350" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="4Zw-QG-YCl"/>
                                             <constraint firstAttribute="width" constant="350" id="KU3-kZ-UeI"/>
@@ -690,7 +690,7 @@ THE SOFTWARE.
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タップしてスタート" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puc-Y5-PIb">
-                                        <rect key="frame" x="83.5" y="169.5" width="156" height="20.5"/>
+                                        <rect key="frame" x="84" y="169" width="156" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -773,7 +773,7 @@ THE SOFTWARE.
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsc-yv-aM9" customClass="SpringButton" customModule="Spring">
-                                <rect key="frame" x="56" y="129" width="263" height="119.5"/>
+                                <rect key="frame" x="56" y="129" width="263" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="1Y8-5a-RGw"/>
                                     <constraint firstAttribute="height" constant="138" id="HCd-nC-3v5"/>
@@ -815,7 +815,7 @@ THE SOFTWARE.
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DC-Gf-4nI" userLabel="Multi Play Btn" customClass="SpringButton" customModule="Spring">
-                                <rect key="frame" x="56" y="278.5" width="263" height="119.5"/>
+                                <rect key="frame" x="56" y="279" width="263" height="119"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="233" id="EzX-YK-eNB"/>
                                     <constraint firstAttribute="height" constant="138" id="WtB-bg-SaO"/>
@@ -973,7 +973,7 @@ THE SOFTWARE.
                                 </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gp-8e-XhA" customClass="SpringButton" customModule="Spring">
-                                <rect key="frame" x="56" y="428" width="263" height="119.5"/>
+                                <rect key="frame" x="56" y="428" width="263" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0Gp-8e-XhA" secondAttribute="height" multiplier="22:10" id="1vB-b4-f1d"/>
                                 </constraints>
@@ -1077,18 +1077,20 @@ THE SOFTWARE.
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="チュートリアルを始めるよ!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLP-7g-0yR">
-                                <rect key="frame" x="66" y="140" width="243.5" height="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="チュートリアルを始めるよ!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLP-7g-0yR">
+                                <rect key="frame" x="66" y="140" width="244" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLo-LT-Vly" customClass="SpringButton" customModule="Spring">
                                 <rect key="frame" x="112" y="417" width="150" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="oLo-LT-Vly" secondAttribute="height" multiplier="212:71" id="gMP-T5-yzg"/>
                                     <constraint firstAttribute="width" constant="150" id="meT-Kj-gnd"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" image="nextBtn.png"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="NO"/>
@@ -1114,7 +1116,7 @@ THE SOFTWARE.
                                     <constraint firstAttribute="width" constant="80" id="Kgi-bp-vLf"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="NO"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="duration">
                                         <real key="value" value="2"/>
@@ -1124,10 +1126,18 @@ THE SOFTWARE.
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0o-7Z-IOV">
+                                <rect key="frame" x="277" y="546" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.062745098040000002" green="0.1058823529" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="SFh-8u-m2z" secondAttribute="trailing" constant="30" id="05r-m9-c9B"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="M0o-7Z-IOV" secondAttribute="trailing" constant="40" id="2xs-EF-3PD"/>
+                            <constraint firstItem="SFh-8u-m2z" firstAttribute="top" secondItem="M0o-7Z-IOV" secondAttribute="bottom" constant="-10" id="3lu-uZ-LRF"/>
                             <constraint firstItem="tLP-7g-0yR" firstAttribute="centerX" secondItem="bf1-Y0-oFY" secondAttribute="centerX" id="JvU-Hn-SS5"/>
                             <constraint firstItem="oLo-LT-Vly" firstAttribute="centerX" secondItem="bf1-Y0-oFY" secondAttribute="centerX" id="gRh-K4-Vhd"/>
                             <constraint firstItem="tLP-7g-0yR" firstAttribute="top" secondItem="Mxc-ai-Ags" secondAttribute="bottom" constant="120" id="mza-P2-fuI"/>
@@ -1136,13 +1146,16 @@ THE SOFTWARE.
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fingerIcon" destination="SFh-8u-m2z" id="Mxa-u3-2cB"/>
+                        <outlet property="fingerLabel" destination="M0o-7Z-IOV" id="ZeM-qq-2dG"/>
                         <outlet property="label" destination="tLP-7g-0yR" id="22d-38-qa7"/>
                         <outlet property="nextBtn" destination="oLo-LT-Vly" id="Xy7-eB-X4v"/>
+                        <segue destination="FFW-j8-PWE" kind="presentation" identifier="toMain" id="7jh-qs-WQi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHk-Bc-VhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-490.39999999999998" y="-654.42278860569718"/>
+            <point key="canvasLocation" x="-727" y="9"/>
         </scene>
     </scenes>
     <resources>

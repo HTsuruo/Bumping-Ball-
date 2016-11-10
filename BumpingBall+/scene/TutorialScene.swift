@@ -46,14 +46,6 @@ class TutorialScene: BaseScene {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        
-        if let touch = touches.first as UITouch? {
-            let location = touch.location(in: self)
-            if self.atPoint(location).name == "next" {
-                print("button tapped")
-                tutorialNumber += 1
-            }
-        }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -74,6 +66,19 @@ class TutorialScene: BaseScene {
         if tutorialNumber < 2 {
             removeAllTargetBall()
         }
+        judgeIsOk()
+    }
+    
+    func judgeIsOk() {
+        self.enumerateChildNodes(withName: "ball", using: {
+            node, stop in
+            if node is SKSpriteNode {
+                let ball = node as! SKSpriteNode
+                if ball.position.y >= define.REMOVE_HEIGHT-1 {
+                    self.tutorialVC.isOk()
+                }
+            }
+        })
     }
     
 
