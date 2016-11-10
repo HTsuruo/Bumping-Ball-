@@ -21,21 +21,6 @@ class TutorialScene: BaseScene {
         countdownView.removeFromSuperview()
         app.isStart = true
         
-//        label = SKLabelNode(text: tutorialTxt[tutorialNumber])
-//        label.fontSize = 22
-//        label.position = CGPoint(x: CGFloat.CENTER.x, y: CGFloat.HEIGHT * 0.7)
-//        self.addChild(label)
-//        
-//        nextButton = SKSpriteNode(imageNamed: "nextBtn")
-//        nextButton.position = CGPoint(x: CGFloat.CENTER.x, y: CGFloat.CENTER.y - CGFloat(80))
-//        nextButton.zPosition = 1
-//        nextButton.name = "next"
-//        nextButton.xScale = 0.8
-//        nextButton.yScale = 0.8
-//        self.addChild(nextButton)
-    }
-    
-    override func willMove(from view: SKView) {
         guard let vc = Util.getForegroundViewController() as? TutorialViewController else {
             let tmp = Util.getForegroundViewController()
             tmp.dismiss(animated: false, completion: nil)
@@ -54,6 +39,17 @@ class TutorialScene: BaseScene {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
+        
+        if tutorialNumber == 4 {
+            forceChargeFull()
+        }
+    }
+    
+    func forceChargeFull() {
+        if tutorialNumber == 4 {
+            charge.isFull = true
+            chargeFull()
+        }
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -63,7 +59,7 @@ class TutorialScene: BaseScene {
         }
         moveTargetBall(accel: 0.0)
         
-        if tutorialNumber < 2 {
+        if tutorialNumber < 3 {
             removeAllTargetBall()
         }
         judgeIsOk()
@@ -75,13 +71,18 @@ class TutorialScene: BaseScene {
             if node is SKSpriteNode {
                 let ball = node as! SKSpriteNode
                 if ball.position.y >= define.REMOVE_HEIGHT-1 {
-                    self.tutorialVC.isOk()
+                    if self.tutorialNumber < 3 {
+                        self.tutorialVC.isOk()
+                    } else if self.tutorialNumber == 4 {
+                        if self.playerBall.isGold(ball) {
+                                self.tutorialVC.isOk()
+                        }
+                    }
                 }
             }
         })
     }
     
-
     func removeAllTargetBall() {
         self.enumerateChildNodes(withName: "t_ball", using: {
             node, stop in
@@ -96,12 +97,14 @@ class TutorialScene: BaseScene {
     override func collision(_ firstNode: SKNode, secondNode: SKNode, targetId: Int) {
         let num = secondNode.userData?.value(forKey: "num") as! Int
         let canRemove = (num == 1 || playerBall.isGold(firstNode))
-        if canRemove {
-            updateComboCount(firstNode, tnode: secondNode)
-            removeTargetBall(secondNode, id: targetId)
-            updateScore()
-        } else {
-            changeTargetBall(firstNode, tBall: secondNode, id: targetId)
+        if !canRemove {
+            return
+        }
+        updateComboCount(firstNode, tnode: secondNode)
+        removeTargetBall(secondNode, id: targetId)
+        updateScore()
+        if tutorialNumber == 3 {
+            self.tutorialVC.isOk()
         }
     }
     

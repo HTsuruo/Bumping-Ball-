@@ -60,13 +60,16 @@ enum BallType: Int {
 }
 
 enum DifficultyType: Int {
-    case easy = 0
-    case normal = 1
-    case hard = 2
-    case impossible = 3
+    case tutorial = 0
+    case easy = 1
+    case normal = 2
+    case hard = 3
+    case impossible = 4
     
     func getString() -> String {
         switch self {
+        case .tutorial:
+            return "tutorial"
         case .easy:
             return "easy"
         case .normal:
@@ -75,6 +78,19 @@ enum DifficultyType: Int {
             return "hard"
         case .impossible:
             return "impossible"
+        }
+    }
+    
+    func canCreateHasNumber() -> Bool {
+        switch self {
+        case .normal:
+            return true
+        case .hard:
+            return true
+        case .impossible:
+            return true
+        default:
+            return false
         }
     }
     

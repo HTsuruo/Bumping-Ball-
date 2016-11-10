@@ -12,6 +12,7 @@ import Spring
 
 class TutorialViewController: UIViewController {
 
+    var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     var skView = SKView()
     var tutorialScene: TutorialScene! = nil
     @IBOutlet weak var label: UILabel!
@@ -19,12 +20,30 @@ class TutorialViewController: UIViewController {
     @IBOutlet weak var fingerLabel: UILabel!
     @IBOutlet weak var fingerIcon: SpringImageView!
     private let tutorialNumberMax = 5
-    let tutorialTxt: [String] = ["チュートリアルを始めるよ！！", "下部のエリアをタップすると\nカラーボールが発射するよ!!", "長押しでカラーボールの色が変化するよ!!", "落下してくるカラーボールと\n同じ色をぶつけよう!!\n連続でぶつけるとコンボが発生するぞ!!", "コンボでゲージが溜まったら\n上にスワイプして\nゴールドボールを発射しよう!!", "落下してくるカラーボールが\n下のエリアに入ったら\nゲームオーバーだ..\nハイスコアを目指そう!!\n対戦モードも楽しんでね!!"]
+    @IBOutlet weak var swipeFingerArrow: UIImageView!
+    let tutorialTxt: [String] = ["チュートリアルを始めるよ！！", "下部のエリアをタップすると\nカラーボールが発射するよ!!", "長押しで\nカラーボールの色が変化するよ!!", "落下してくるカラーボールと\n同じ色をぶつけよう!!\n連続でぶつけるとコンボが発生するぞ!!", "コンボでゲージが溜まったら\n上にスワイプして\nゴールドボールを発射しよう!!", "落下してくるカラーボールが\n下のエリアに入ったら\nゲームオーバーだ..\nハイスコアを目指そう!!\n対戦モードも楽しんでね!!"]
     let fingetText: [String] = ["", " タップ!!", "長押し", "", "はじく!!", "ココ"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        app.selectedDiffculty = DifficultyType.tutorial
+        label.numberOfLines = 0
+        fingerIcon.isHidden = true
+        
+        let headerLabel = UILabel(frame: CGRect(x: 0, y: 0, width: CGFloat.WIDTH, height: define.HEADER_HEIGHT))
+        headerLabel.text = NSLocalizedString("tutorial", comment: "")
+        headerLabel.textColor = UIColor.white
+        headerLabel.backgroundColor = UIColor.hex(hexStr: "FFFFFF", alpha: 0.3)
+        headerLabel.font = UIFont.systemFont(ofSize: 22.0)
+        headerLabel.textAlignment = NSTextAlignment.center
+        self.view.addSubview(headerLabel)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //sceneで最前面のviewcontrollerを取得する処理があるため、viewdidapperでインスタンス化します.
         if let scene = TutorialScene(fileNamed:"PlayScene") {
             // Configure the view.
             skView.frame = CGRect(x: 0, y: 0, width: CGFloat.WIDTH, height: CGFloat.HEIGHT)
@@ -37,33 +56,47 @@ class TutorialViewController: UIViewController {
             
             skView.allowsTransparency = true
             skView.presentScene(scene)
-            tutorialScene = scene 
+            tutorialScene = scene
         }
         self.view.addSubview(skView)
         self.view.sendSubview(toBack: skView)
-        
-        label.numberOfLines = 0
-        fingerIcon.isHidden = true
-        
-        let headerLabel = UILabel(frame: CGRect(x: 0, y: 0, width: CGFloat.WIDTH, height: define.HEADER_HEIGHT))
-        headerLabel.text = NSLocalizedString("tutorial", comment: "")
-        headerLabel.textColor = UIColor.white
-        headerLabel.backgroundColor = UIColor.hex(hexStr: "FFFFFF", alpha: 0.3)
-        headerLabel.font = UIFont.systemFont(ofSize: 22.0)
-        headerLabel.textAlignment = NSTextAlignment.center
-        self.view.addSubview(headerLabel)
-        
         setupContent()
-        
+        nextBtn.isHidden = false
+        fingerIcon.isHidden = true
     }
     
     func setupContent() {
+        nextBtn.isHidden = true
+        swipeFingerArrow.isHidden = true
+        
         let num = tutorialScene.tutorialNumber
         label.text = tutorialTxt[num]
         fingerLabel.text = fingetText[num]
-        if num == 1 || num == 2 || num == 3 {
+        
+        switch num {
+        case 1:
             fingerIcon.isHidden = false
+            break
+        case 2:
+            fingerIcon.isHidden = false
+            break
+        case 3:
+            fingerIcon.isHidden = true
+            break
+        case 4:
+            tutorialScene.forceChargeFull()
+            swipeFingerArrow.isHidden = false
+            fingerIcon.isHidden = false
+            break
+        case 5:
+            tutorialScene.chargeReset()
+            nextBtn.isHidden = false
+            fingerIcon.isHidden = false
+            break
+        default:
+            break
         }
+        fingerIcon.animate()
         
         if num == tutorialNumberMax {
             nextBtn.setImage(UIImage(named: "startBtn"), for: UIControlState.normal)
@@ -92,12 +125,12 @@ class TutorialViewController: UIViewController {
             self.performSegue(withIdentifier: "toMain", sender: self)
             return
         }
-//        nextBtn.isHidden = true
         tutorialScene.tutorialNumber += 1
         setupContent()
     }
     
     func isOk() {
+        nextBtn.isHidden = false
         nextBtn.animate()
     }
     

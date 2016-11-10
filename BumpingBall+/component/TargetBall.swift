@@ -15,7 +15,7 @@ class TargetBall: SimpleTargetBall {
         super.init()
         
         // easy mode以外
-        if !app.selectedDiffculty.isEasy() {
+        if app.selectedDiffculty.canCreateHasNumber() {
             if hasNumber() {
                 changeHasNumberBall(randNum)
             }
