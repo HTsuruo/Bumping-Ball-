@@ -21,7 +21,7 @@ class TutorialViewController: UIViewController {
     @IBOutlet weak var fingerIcon: SpringImageView!
     private let tutorialNumberMax = 5
     @IBOutlet weak var swipeFingerArrow: UIImageView!
-    let tutorialTxt: [String] = ["チュートリアルを始めるよ！！", "下部のエリアをタップすると\nカラーボールが発射するよ!!", "長押しで\nカラーボールの色が変化するよ!!", "落下してくるカラーボールと\n同じ色をぶつけよう!!\n連続でぶつけるとコンボが発生するぞ!!", "コンボでゲージが溜まったら\n上にスワイプして\nゴールドボールを発射しよう!!", "落下してくるカラーボールが\n下のエリアに入ったら\nゲームオーバーだ..\nハイスコアを目指そう!!\n対戦モードも楽しんでね!!"]
+    let tutorialTxt: [String] = ["チュートリアルを始めるよ！！", "下部のエリアをタップすると\nカラーボールが発射するよ!!", "長押しで\nカラーボールの色が変化するよ!!", "落下してくるカラーボールと\n同じ色をぶつけよう!!\n連続でぶつけると\nコンボが発生するぞ!!", "コンボでゲージが溜まったら\n上にスワイプして\nゴールドボールを発射しよう!!", "落下してくるカラーボールが\n下のエリアに入ったら\nゲームオーバーだ..\nハイスコアを目指そう!!\n対戦モードも楽しんでね!!"]
     let fingetText: [String] = ["", " タップ!!", "長押し", "", "はじく!!", "ココ"]
     
     override func viewDidLoad() {
@@ -38,7 +38,6 @@ class TutorialViewController: UIViewController {
         headerLabel.font = UIFont.systemFont(ofSize: 22.0)
         headerLabel.textAlignment = NSTextAlignment.center
         self.view.addSubview(headerLabel)
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -63,6 +62,11 @@ class TutorialViewController: UIViewController {
         setupContent()
         nextBtn.isHidden = false
         fingerIcon.isHidden = true
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        UserDefaults.standard.set(true, forKey: udKey.is_not_first)
     }
     
     func setupContent() {

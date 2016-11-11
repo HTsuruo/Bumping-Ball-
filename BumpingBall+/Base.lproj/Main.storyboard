@@ -1068,7 +1068,7 @@ THE SOFTWARE.
         <!--Tutorial View Controller-->
         <scene sceneID="ZGf-hT-iTB">
             <objects>
-                <viewController id="Rzr-R7-BoD" customClass="TutorialViewController" customModule="BumpingBall_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorialVC" id="Rzr-R7-BoD" customClass="TutorialViewController" customModule="BumpingBall_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mxc-ai-Ags"/>
                         <viewControllerLayoutGuide type="bottom" id="r9h-GS-dhS"/>

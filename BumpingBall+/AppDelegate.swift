@@ -37,6 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        application.registerForRemoteNotifications()
 //        FIRApp.configure()
         
+        setInitialViewController()
+        
         return true
     }
 
@@ -80,6 +82,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
 //        
 //        FIRInstanceID.instanceID().setAPNSToken(deviceToken, type: FIRInstanceIDAPNSTokenType.unknown)
+    }
+    
+    func setInitialViewController() {
+        let isNotFirst = UserDefaults.standard.bool(forKey: udKey.is_not_first)
+        var initialViewController: UIViewController! = nil
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if isNotFirst {
+            initialViewController = storyboard.instantiateViewController(withIdentifier: "topVC")
+        } else {
+            initialViewController = storyboard.instantiateViewController(withIdentifier: "tutorialVC")
+        }
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
     }
     
 }

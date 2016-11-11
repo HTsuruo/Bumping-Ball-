@@ -69,4 +69,5 @@ struct Util {
 struct udKey {
     static let off_music = "off_music"
     static let off_sound = "off_sound"
+    static let is_not_first = "is_not_first"
 }
