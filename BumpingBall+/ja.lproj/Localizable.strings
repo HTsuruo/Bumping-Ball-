@@ -16,4 +16,18 @@
 "info_item_2" = "ライセンス";
 "info_item_3" = "バージョン";
 
+//チュートリアル
 "tutorial" = "チュートリアル";
+"tutorial_text_0" = "チュートリアルを始めるよ！！";
+"tutorial_text_1" = "下部のエリアをタップすると\nカラーボールが発射するよ!!";
+"tutorial_text_2" = "長押しで\nカラーボールの色が変化するよ!!";
+"tutorial_text_3" = "落下してくるカラーボールと\n同じ色をぶつけよう!!\n連続でぶつけると\nコンボが発生するぞ!!";
+"tutorial_text_4" = "コンボでゲージが溜まったら\n上にスワイプして\nゴールドボールを発射しよう!!";
+"tutorial_text_5" = "落下してくるカラーボールが\n下のエリアに入ったら\nゲームオーバーだ..\nハイスコアを目指そう!!\n対戦モードも楽しんでね!!";
+"tutorial_finger_text_0" = "";
+"tutorial_finger_text_1" = "タップ!!";
+"tutorial_finger_text_2" = "長押し!!";
+"tutorial_finger_text_3" = "";
+"tutorial_finger_text_4" = "はじく!!";
+"tutorial_finger_text_5" = "ココ!!";
+

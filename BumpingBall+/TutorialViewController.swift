@@ -21,11 +21,16 @@ class TutorialViewController: UIViewController {
     @IBOutlet weak var fingerIcon: SpringImageView!
     private let tutorialNumberMax = 5
     @IBOutlet weak var swipeFingerArrow: UIImageView!
-    let tutorialTxt: [String] = ["チュートリアルを始めるよ！！", "下部のエリアをタップすると\nカラーボールが発射するよ!!", "長押しで\nカラーボールの色が変化するよ!!", "落下してくるカラーボールと\n同じ色をぶつけよう!!\n連続でぶつけると\nコンボが発生するぞ!!", "コンボでゲージが溜まったら\n上にスワイプして\nゴールドボールを発射しよう!!", "落下してくるカラーボールが\n下のエリアに入ったら\nゲームオーバーだ..\nハイスコアを目指そう!!\n対戦モードも楽しんでね!!"]
-    let fingetText: [String] = ["", " タップ!!", "長押し", "", "はじく!!", "ココ"]
+    var tutorialTxt: [String] = []
+    var fingetText: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for i in 0...tutorialNumberMax {
+            tutorialTxt.append(NSLocalizedString("tutorial_text_\(i)", comment: ""))
+            fingetText.append(NSLocalizedString("tutorial_finger_text_\(i)", comment: ""))
+        }
         
         app.selectedDiffculty = DifficultyType.tutorial
         label.numberOfLines = 0
