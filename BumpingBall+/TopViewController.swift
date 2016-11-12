@@ -29,6 +29,7 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
         if let view = levelSelectView {
             view.removeFromSuperview()
         }
+        
     }
     
     override func viewDidLoad() {

@@ -15,6 +15,9 @@ class Sound: NSObject {
     static let launch = SKAction.playSoundFileNamed("launch.mp3", waitForCompletion: false)
     static let collision = SKAction.playSoundFileNamed("collision.mp3", waitForCompletion: false)
     
+    static let topMusic = SKAction.playSoundFileNamed("texture.mp3", waitForCompletion: false)
+    static let eternal = SKAction.playSoundFileNamed("eternal_galaxy.mp3", waitForCompletion: false)
+    
     static var audioPlayer: AVAudioPlayer = AVAudioPlayer()
     static var path: URL! = nil
     

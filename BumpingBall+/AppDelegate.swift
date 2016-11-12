@@ -10,6 +10,7 @@ import UIKit
 import Fabric
 import Crashlytics
 import MultipeerConnectivity
+import SpriteKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var selectedDiffculty = DifficultyType.normal
     var selectedPlay = PlayType.one
     var bluetoothSession: MCSession? = nil
+    var music: SKAudioNode? = nil
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

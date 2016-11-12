@@ -158,6 +158,8 @@
 		56DDBD2E1DD6C30100CDBD27 /* bluetoothBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56DDBD301DD6C30100CDBD27 /* bluetoothBtn@2x.png */; };
 		56DDBD321DD6C39300CDBD27 /* gamecenterBtnDisabled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56DDBD341DD6C39300CDBD27 /* gamecenterBtnDisabled@2x.png */; };
 		56DDBD361DD6C39900CDBD27 /* gamecenterBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56DDBD381DD6C39900CDBD27 /* gamecenterBtn@2x.png */; };
+		56DDBD3D1DD6C7E900CDBD27 /* eternal_galaxy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56DDBD3B1DD6C7E900CDBD27 /* eternal_galaxy.mp3 */; };
+		56DDBD3E1DD6C7E900CDBD27 /* texture.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56DDBD3C1DD6C7E900CDBD27 /* texture.mp3 */; };
 		56E073271DBE1D8C002E634D /* icon_wifi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56E073261DBE1D8C002E634D /* icon_wifi@2x.png */; };
 		56E073291DBE1EDF002E634D /* icon_bluetooth_large@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56E073281DBE1EDF002E634D /* icon_bluetooth_large@2x.png */; };
 		56E0732B1DBE2017002E634D /* icon_global@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56E0732A1DBE2017002E634D /* icon_global@2x.png */; };
@@ -356,6 +358,8 @@
 		56DDBD351DD6C39500CDBD27 /* ja */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ja; path = "ja.lproj/gamecenterBtnDisabled@2x.png"; sourceTree = "<group>"; };
 		56DDBD371DD6C39900CDBD27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = "Base.lproj/gamecenterBtn@2x.png"; sourceTree = "<group>"; };
 		56DDBD391DD6C39C00CDBD27 /* ja */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ja; path = "ja.lproj/gamecenterBtn@2x.png"; sourceTree = "<group>"; };
+		56DDBD3B1DD6C7E900CDBD27 /* eternal_galaxy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = eternal_galaxy.mp3; path = music/eternal_galaxy.mp3; sourceTree = SOURCE_ROOT; };
+		56DDBD3C1DD6C7E900CDBD27 /* texture.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = texture.mp3; path = music/texture.mp3; sourceTree = SOURCE_ROOT; };
 		56E073261DBE1D8C002E634D /* icon_wifi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_wifi@2x.png"; path = "img/prepare_multiplay/icon_wifi@2x.png"; sourceTree = SOURCE_ROOT; };
 		56E073281DBE1EDF002E634D /* icon_bluetooth_large@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_bluetooth_large@2x.png"; path = "img/prepare_multiplay/icon_bluetooth_large@2x.png"; sourceTree = SOURCE_ROOT; };
 		56E0732A1DBE2017002E634D /* icon_global@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_global@2x.png"; path = "img/prepare_multiplay/icon_global@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -651,6 +655,7 @@
 				56E0732C1DBE45CC002E634D /* util */,
 				56AC95921CB24A0100B31FE3 /* component */,
 				56BF578C1CD710C200923509 /* font */,
+				56DDBD3A1DD6C70400CDBD27 /* music */,
 				56AC957D1CB16CEF00B31FE3 /* sound */,
 				56BB7FC11CAFC08200675AE8 /* img */,
 			);
@@ -818,6 +823,15 @@
 				56D160D01CC50E5300257404 /* twitter@2x.png */,
 			);
 			name = sns_icon;
+			sourceTree = "<group>";
+		};
+		56DDBD3A1DD6C70400CDBD27 /* music */ = {
+			isa = PBXGroup;
+			children = (
+				56DDBD3B1DD6C7E900CDBD27 /* eternal_galaxy.mp3 */,
+				56DDBD3C1DD6C7E900CDBD27 /* texture.mp3 */,
+			);
+			name = music;
 			sourceTree = "<group>";
 		};
 		56E0732C1DBE45CC002E634D /* util */ = {
@@ -1023,6 +1037,7 @@
 				56BDE3E61D7ACA7600247E36 /* life_red_empty@2x.png in Resources */,
 				56BF57CF1CD7902000923509 /* Roboto-Bold.ttf in Resources */,
 				56BB7F3E1CAD345200675AE8 /* LaunchScreen.storyboard in Resources */,
+				56DDBD3D1DD6C7E900CDBD27 /* eternal_galaxy.mp3 in Resources */,
 				5613D4BD1DD05E7400B165E1 /* circle_green@2x.png in Resources */,
 				5666F82C1D645702001EFC57 /* ball_green_3@2x.png in Resources */,
 				56AC95AA1CB2BDD400B31FE3 /* pause.mp3 in Resources */,
@@ -1060,6 +1075,7 @@
 				56BDE3E71D7ACA7600247E36 /* life_red@2x.png in Resources */,
 				566D0CEE1DCCC8B50051BAD4 /* devil_orange@2x.png in Resources */,
 				56C725521DD371CE00DFA113 /* combo_5@2x.png in Resources */,
+				56DDBD3E1DD6C7E900CDBD27 /* texture.mp3 in Resources */,
 				56BF57D61CD798D500923509 /* COOPBL.ttf in Resources */,
 				56BB7F3B1CAD345200675AE8 /* Assets.xcassets in Resources */,
 				567437921DC9C3FC00FBC680 /* spark.png in Resources */,

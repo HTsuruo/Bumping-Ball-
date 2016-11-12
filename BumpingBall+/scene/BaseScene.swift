@@ -59,6 +59,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         // set background animation.
         let snow = animation.backgroundAnimation()
         self.addChild(snow)
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -124,6 +125,9 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         if !isStart {
             if app.isStart != nil && app.isStart! {
                 isStart = true
+                print("start!!")
+                let music = SKAudioNode(fileNamed: "eternal_galaxy.mp3")
+                self.addChild(music)
             }
             return
         }
