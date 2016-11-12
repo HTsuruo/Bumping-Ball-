@@ -52,7 +52,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOg-Xb-Dgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1468" y="789"/>
+            <point key="canvasLocation" x="566" y="1564"/>
         </scene>
         <!--LICENCE-->
         <scene sceneID="4mr-Xw-32c">
@@ -490,13 +490,58 @@ THE SOFTWARE.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SGb-rr-3yl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2192.8000000000002" y="787.55622188905556"/>
+            <point key="canvasLocation" x="1361" y="1564"/>
+        </scene>
+        <!--Color Ball List-->
+        <scene sceneID="cYG-gL-PO3">
+            <objects>
+                <tableViewController id="BOr-jA-hJt" customClass="ColorBallViewController" customModule="BumpingBall_" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="39Y-a1-GBb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GSV-Pq-Bab">
+                                <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GSV-Pq-Bab" id="tzS-6e-s6y">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BOr-jA-hJt" id="8b6-S3-iQG"/>
+                            <outlet property="delegate" destination="BOr-jA-hJt" id="6ST-K7-OCX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Color Ball List" id="N0k-S3-Kr7"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8g4-mI-MNO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-164" y="1554"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="p5F-3p-iXH">
+            <objects>
+                <navigationController id="mke-fz-9S3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Fge-lM-9Po">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BOr-jA-hJt" kind="relationship" relationship="rootViewController" id="11i-Sp-Jc6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ig-A1-Crm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-164" y="788"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xbt-TL-Fjn">
             <objects>
                 <navigationController id="iRC-MV-hpy" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lTI-9v-oa6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="lTI-9v-oa6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -773,7 +818,7 @@ THE SOFTWARE.
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsc-yv-aM9" customClass="SpringButton" customModule="Spring">
-                                <rect key="frame" x="56" y="129" width="263" height="120"/>
+                                <rect key="frame" x="56" y="129" width="263" height="119.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="1Y8-5a-RGw"/>
                                     <constraint firstAttribute="height" constant="138" id="HCd-nC-3v5"/>
@@ -815,7 +860,7 @@ THE SOFTWARE.
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DC-Gf-4nI" userLabel="Multi Play Btn" customClass="SpringButton" customModule="Spring">
-                                <rect key="frame" x="56" y="279" width="263" height="119"/>
+                                <rect key="frame" x="56" y="278.5" width="263" height="119.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="233" id="EzX-YK-eNB"/>
                                     <constraint firstAttribute="height" constant="138" id="WtB-bg-SaO"/>
@@ -973,7 +1018,7 @@ THE SOFTWARE.
                                 </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gp-8e-XhA" customClass="SpringButton" customModule="Spring">
-                                <rect key="frame" x="56" y="428" width="263" height="120"/>
+                                <rect key="frame" x="56" y="428" width="263" height="119.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0Gp-8e-XhA" secondAttribute="height" multiplier="22:10" id="1vB-b4-f1d"/>
                                 </constraints>
@@ -1059,6 +1104,7 @@ THE SOFTWARE.
                     <connections>
                         <outlet property="onePlayBtn" destination="dsc-yv-aM9" id="omV-qf-o4R"/>
                         <segue destination="BV1-FR-VrT" kind="presentation" identifier="toPlay" modalTransitionStyle="flipHorizontal" id="pGj-IE-aGP"/>
+                        <segue destination="mke-fz-9S3" kind="presentation" identifier="toHelp" id="2Nw-qZ-ssP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGT-fT-5fa" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -1,33 +1,127 @@
+/* No comment provided by engineer. */
+"color_ball_section_1" = "カラーボール";
 
-/*
- Localizable.strings
- BumpingBall+
- 
- Created by Tsuru on H28/09/10.
- Copyright © 平成28年 Hideki Tsuruoka. All rights reserved.
- */
+/* No comment provided by engineer. */
+"color_ball_section_2" = "アイテムボール";
 
-//設定画面
-"setting_section_1" = "基本情報";
-"setting_section_2" = "アプリ情報";
-"setting_item_1" = "音楽";
-"setting_item_2" = "効果音";
+/* No comment provided by engineer. */
+"commonSubTxt_1" = "スピードが速く小さい";
+
+/* No comment provided by engineer. */
+"commonSubTxt_2" = "スピードがやや早くやや小さい";
+
+/* No comment provided by engineer. */
+"commonSubTxt_3" = "スピードがやや遅くやや大きい";
+
+/* No comment provided by engineer. */
+"commonSubTxt_4" = "スピードが遅く大きい";
+
+/* No comment provided by engineer. */
+"commonSubTxt_5" = "全てのカラーボールを消すことができる";
+
+/* No comment provided by engineer. */
+"commonTxt_1" = "ブルーボール";
+
+/* No comment provided by engineer. */
+"commonTxt_2" = "グリーンボール";
+
+/* No comment provided by engineer. */
+"commonTxt_3" = "オレンジボール";
+
+/* No comment provided by engineer. */
+"commonTxt_4" = "レッドボール";
+
+/* No comment provided by engineer. */
+"commonTxt_5" = "ゴールドボール";
+
+/* No comment provided by engineer. */
 "info_item_1" = "レビューを書く";
+
+/* No comment provided by engineer. */
 "info_item_2" = "ライセンス";
+
+/* No comment provided by engineer. */
 "info_item_3" = "バージョン";
 
-//チュートリアル
+/* No comment provided by engineer. */
+"itemSubTxt_1" = "長押し時のカラーボールの拡大・縮小が逆転";
+
+/* No comment provided by engineer. */
+"itemSubTxt_2" = "落下してくるボールのスピードが速くなる";
+
+/* No comment provided by engineer. */
+"itemSubTxt_3" = "ライフを１回復する";
+
+/* No comment provided by engineer. */
+"itemTxt_1" = "リバース";
+
+/* No comment provided by engineer. */
+"itemTxt_2" = "スピードアップ";
+
+/* No comment provided by engineer. */
+"itemTxt_3" = "ワンアップ";
+
+/* No comment provided by engineer. */
+"setting_item_1" = "音楽";
+
+/* No comment provided by engineer. */
+"setting_item_2" = "効果音";
+
+/* No comment provided by engineer. */
+"setting_section_1" = "基本情報";
+
+/* No comment provided by engineer. */
+"setting_section_2" = "アプリ情報";
+
+/* No comment provided by engineer. */
 "tutorial" = "チュートリアル";
-"tutorial_text_0" = "ようこそBumping Ball+へ\n\nチュートリアルを始めるよ!!";
-"tutorial_text_1" = "下部のエリアをタップすると\nカラーボールが発射するよ!!";
-"tutorial_text_2" = "長押しで\nカラーボールの色が変化するよ!!";
-"tutorial_text_3" = "落下してくるカラーボールと\n同じ色をぶつけよう!!\n連続でぶつけると\nコンボが発生するぞ!!";
-"tutorial_text_4" = "コンボでゲージが溜まったら\n上にスワイプして\nゴールドボールを発射しよう!!";
-"tutorial_text_5" = "落下してくるカラーボールが\n下のエリアに入ったら\nゲームオーバーだ..\nハイスコアを目指そう!!\n対戦モードも楽しんでね!!";
+
+/* No comment provided by engineer. */
 "tutorial_finger_text_0" = "";
+
+/* No comment provided by engineer. */
 "tutorial_finger_text_1" = "タップ!!";
+
+/* No comment provided by engineer. */
 "tutorial_finger_text_2" = "長押し!!";
+
+/* No comment provided by engineer. */
 "tutorial_finger_text_3" = "";
+
+/* No comment provided by engineer. */
 "tutorial_finger_text_4" = "はじく!!";
+
+/* No comment provided by engineer. */
 "tutorial_finger_text_5" = "ココ!!";
+
+/* tutorial */
+"tutorial_text_0" = "ようこそBumping Ball+へ
+
+チュートリアルを始めるよ!!";
+
+/* tap */
+"tutorial_text_1" = "下部のエリアをタップすると
+カラーボールが発射するよ!!";
+
+/* keep */
+"tutorial_text_2" = "長押しで
+カラーボールの色が変化するよ!!";
+
+/* collision */
+"tutorial_text_3" = "落下してくるカラーボールと
+同じ色をぶつけよう!!
+連続でぶつけると
+コンボが発生するぞ!!";
+
+/* swipe */
+"tutorial_text_4" = "コンボでゲージが溜まったら
+上にスワイプして
+ゴールドボールを発射しよう!!";
+
+/* last */
+"tutorial_text_5" = "落下してくるカラーボールが
+下のエリアに入ったら
+ゲームオーバーだ..
+ハイスコアを目指そう!!
+対戦モードも楽しんでね!!";
 

@@ -29,3 +29,24 @@
 "tutorial_finger_text_3" = "";
 "tutorial_finger_text_4" = "Swipe Up!!";
 "tutorial_finger_text_5" = "HERE!!";
+
+//カラーボール
+"color_ball_section_1" = "Color Ball";
+"color_ball_section_2" = "Item Ball";
+"commonTxt_1" = "Blue Ball";
+"commonTxt_2" = "Green Ball";
+"commonTxt_3" = "Orange Ball";
+"commonTxt_4" = "Red Ball";
+"commonTxt_5" = "Gold Ball";
+"commonSubTxt_1" = "High speed ball";
+"commonSubTxt_2" = "Green Ball";
+"commonSubTxt_3" = "Orange Ball";
+"commonSubTxt_4" = "Red Ball";
+"commonSubTxt_5" = "Gold Ball";
+
+"itemTxt_1" = "Reverse Ball";
+"itemTxt_2" = "Spped UP Ball";
+"itemTxt_3" = "One UP Ball";
+"itemSubTxt_1" = "reverse ball size change.";
+"itemSubTxt_2" = "falling color balls spped up.";
+"itemSubTxt_3" = "recovery one life.";

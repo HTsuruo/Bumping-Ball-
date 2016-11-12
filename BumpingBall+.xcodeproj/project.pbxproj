@@ -161,6 +161,10 @@
 		56DDBD3D1DD6C7E900CDBD27 /* eternal_galaxy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56DDBD3B1DD6C7E900CDBD27 /* eternal_galaxy.mp3 */; };
 		56DDBD3E1DD6C7E900CDBD27 /* texture.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56DDBD3C1DD6C7E900CDBD27 /* texture.mp3 */; };
 		56DDBD401DD705F000CDBD27 /* AdUitl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DDBD3F1DD705F000CDBD27 /* AdUitl.swift */; };
+		56DDBD421DD726B400CDBD27 /* ColorBallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DDBD411DD726B400CDBD27 /* ColorBallViewController.swift */; };
+		56DDBD461DD727D000CDBD27 /* ColorBallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DDBD441DD727D000CDBD27 /* ColorBallCell.swift */; };
+		56DDBD471DD727D000CDBD27 /* ColorBallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56DDBD451DD727D000CDBD27 /* ColorBallCell.xib */; };
+		56DDBD4A1DD7743900CDBD27 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 56DDBD4C1DD7743900CDBD27 /* InfoPlist.strings */; };
 		56E073271DBE1D8C002E634D /* icon_wifi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56E073261DBE1D8C002E634D /* icon_wifi@2x.png */; };
 		56E073291DBE1EDF002E634D /* icon_bluetooth_large@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56E073281DBE1EDF002E634D /* icon_bluetooth_large@2x.png */; };
 		56E0732B1DBE2017002E634D /* icon_global@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56E0732A1DBE2017002E634D /* icon_global@2x.png */; };
@@ -362,6 +366,10 @@
 		56DDBD3B1DD6C7E900CDBD27 /* eternal_galaxy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = eternal_galaxy.mp3; path = music/eternal_galaxy.mp3; sourceTree = SOURCE_ROOT; };
 		56DDBD3C1DD6C7E900CDBD27 /* texture.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = texture.mp3; path = music/texture.mp3; sourceTree = SOURCE_ROOT; };
 		56DDBD3F1DD705F000CDBD27 /* AdUitl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdUitl.swift; path = util/AdUitl.swift; sourceTree = "<group>"; };
+		56DDBD411DD726B400CDBD27 /* ColorBallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorBallViewController.swift; path = help/ColorBallViewController.swift; sourceTree = "<group>"; };
+		56DDBD441DD727D000CDBD27 /* ColorBallCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorBallCell.swift; path = view/ColorBallCell.swift; sourceTree = "<group>"; };
+		56DDBD451DD727D000CDBD27 /* ColorBallCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ColorBallCell.xib; path = view/ColorBallCell.xib; sourceTree = "<group>"; };
+		56DDBD4B1DD7743900CDBD27 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		56E073261DBE1D8C002E634D /* icon_wifi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_wifi@2x.png"; path = "img/prepare_multiplay/icon_wifi@2x.png"; sourceTree = SOURCE_ROOT; };
 		56E073281DBE1EDF002E634D /* icon_bluetooth_large@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_bluetooth_large@2x.png"; path = "img/prepare_multiplay/icon_bluetooth_large@2x.png"; sourceTree = SOURCE_ROOT; };
 		56E0732A1DBE2017002E634D /* icon_global@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_global@2x.png"; path = "img/prepare_multiplay/icon_global@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -586,6 +594,8 @@
 				561BA20B1D697A62004FC052 /* TouchViewTxt.swift */,
 				5603F4B11DD007AE00881FDF /* LevelSelectView.xib */,
 				5603F4AF1DD0079C00881FDF /* LevelSelectView.swift */,
+				56DDBD441DD727D000CDBD27 /* ColorBallCell.swift */,
+				56DDBD451DD727D000CDBD27 /* ColorBallCell.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -638,6 +648,7 @@
 		56BB7F2E1CAD345100675AE8 /* BumpingBall+ */ = {
 			isa = PBXGroup;
 			children = (
+				56DDBD4C1DD7743900CDBD27 /* InfoPlist.strings */,
 				560A497D1D729F2900DEBB6A /* scene */,
 				56BB7F2F1CAD345100675AE8 /* AppDelegate.swift */,
 				56BB7FAF1CAD766900675AE8 /* TopViewController.swift */,
@@ -646,6 +657,7 @@
 				56BD47861DC5F312003AA705 /* SettingViewController.swift */,
 				566B38F61DC63DE40026083B /* LicenceViewController.swift */,
 				56C725571DD3814800DFA113 /* TutorialViewController.swift */,
+				56DDBD431DD726B900CDBD27 /* help */,
 				56BB7F371CAD345200675AE8 /* Main.storyboard */,
 				56BB7F3A1CAD345200675AE8 /* Assets.xcassets */,
 				56BB7F3C1CAD345200675AE8 /* LaunchScreen.storyboard */,
@@ -834,6 +846,14 @@
 				56DDBD3C1DD6C7E900CDBD27 /* texture.mp3 */,
 			);
 			name = music;
+			sourceTree = "<group>";
+		};
+		56DDBD431DD726B900CDBD27 /* help */ = {
+			isa = PBXGroup;
+			children = (
+				56DDBD411DD726B400CDBD27 /* ColorBallViewController.swift */,
+			);
+			name = help;
 			sourceTree = "<group>";
 		};
 		56E0732C1DBE45CC002E634D /* util */ = {
@@ -1034,6 +1054,7 @@
 				56BD478B1DC5FC01003AA705 /* SettingCell.xib in Resources */,
 				56AC95971CB24B2100B31FE3 /* PlayScene.sks in Resources */,
 				56C7254F1DD371CE00DFA113 /* combo_2@2x.png in Resources */,
+				56DDBD4A1DD7743900CDBD27 /* InfoPlist.strings in Resources */,
 				56AC95811CB16D0000B31FE3 /* launch.mp3 in Resources */,
 				56AD645B1DCCE69800DAC92B /* ball_red_1@2x.png in Resources */,
 				56DDBD321DD6C39300CDBD27 /* gamecenterBtnDisabled@2x.png in Resources */,
@@ -1070,6 +1091,7 @@
 				56C7254E1DD371CE00DFA113 /* combo_1@2x.png in Resources */,
 				5666F81A1D643167001EFC57 /* helpBtn@2x.png in Resources */,
 				56700B4E1DC6A3D30099093D /* snow@2x.png in Resources */,
+				56DDBD471DD727D000CDBD27 /* ColorBallCell.xib in Resources */,
 				56DDBD2A1DD6C18F00CDBD27 /* oneplayBtn@2x.png in Resources */,
 				5666F8251D6456F5001EFC57 /* ball_orange_1@2x.png in Resources */,
 				561B35841DD04B69002E13C9 /* easyBtn@2x.png in Resources */,
@@ -1323,6 +1345,7 @@
 				56AC95A21CB24B3000B31FE3 /* TargetBall.swift in Sources */,
 				56E073361DBE463C002E634D /* BallUtil.swift in Sources */,
 				561BA2111D699774004FC052 /* TouchView.swift in Sources */,
+				56DDBD421DD726B400CDBD27 /* ColorBallViewController.swift in Sources */,
 				56C725561DD3801700DFA113 /* TutorialScene.swift in Sources */,
 				560A49811D729F3600DEBB6A /* BluetoothPlay.swift in Sources */,
 				56E6B5071DBA61AA00740A6A /* HeaderViewMatch.swift in Sources */,
@@ -1346,6 +1369,7 @@
 				5698E9E71DBA77FA0078DC53 /* WaitingView.swift in Sources */,
 				56BD478A1DC5FC01003AA705 /* SettingCell.swift in Sources */,
 				561BA20C1D697A62004FC052 /* TouchViewTxt.swift in Sources */,
+				56DDBD461DD727D000CDBD27 /* ColorBallCell.swift in Sources */,
 				56E6B50C1DBA627B00740A6A /* PrepareView.swift in Sources */,
 				5632A6091DC738CB0064C498 /* ItemBall.swift in Sources */,
 				56B802571D684765007B79A7 /* HeaderView.swift in Sources */,
@@ -1466,6 +1490,14 @@
 			name = "gamecenterBtn@2x.png";
 			path = img/top;
 			sourceTree = SOURCE_ROOT;
+		};
+		56DDBD4C1DD7743900CDBD27 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56DDBD4B1DD7743900CDBD27 /* ja */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 

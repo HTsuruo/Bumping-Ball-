@@ -1,158 +1,339 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
-  <file original="BumpingBall+/Base.lproj/LaunchScreen.storyboard" source-language="en" datatype="plaintext" target-language="ja">
-    <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.0" build-num="8A218a"/>
-    </header>
-    <body/>
-  </file>
-  <file original="BumpingBall+/Base.lproj/Main.storyboard" source-language="en" datatype="plaintext" target-language="ja">
-    <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.0" build-num="8A218a"/>
-    </header>
-    <body>
-      <trans-unit id="1Qd-uL-ssq.text">
-        <source>近くの人と対戦</source>
-        <target>近くの人と対戦</target>
-        <note>Class = "UILabel"; text = "近くの人と対戦"; ObjectID = "1Qd-uL-ssq";</note>
-      </trans-unit>
-      <trans-unit id="1vf-aQ-jIt.text">
-        <source>Bluetoothの電源がオンに
+    <file original="BumpingBall+/Base.lproj/LaunchScreen.storyboard" source-language="en" datatype="plaintext" target-language="ja">
+        <header>
+            <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.1" build-num="8B62"></tool>
+        </header>
+        <body></body>
+    </file>
+    <file original="BumpingBall+/Base.lproj/Main.storyboard" source-language="en" datatype="plaintext" target-language="ja">
+        <header>
+            <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.1" build-num="8B62"></tool>
+        </header>
+        <body>
+            <trans-unit id="1Qd-uL-ssq.text">
+                <source>近くの人と対戦</source>
+                <target>近くの人と対戦</target>
+                <note>Class = "UILabel"; text = "近くの人と対戦"; ObjectID = "1Qd-uL-ssq";</note>
+            </trans-unit>
+            <trans-unit id="1vf-aQ-jIt.text">
+                <source>Bluetoothの電源がオンに
 なっていることを
 確認して下さい</source>
-        <target>Bluetoothの電源がオンに
+                <target>Bluetoothの電源がオンに
 なっていることを
 確認して下さい</target>
-        <note>Class = "UILabel"; text = "Bluetoothの電源がオンに\nなっていることを\n確認して下さい"; ObjectID = "1vf-aQ-jIt";</note>
-      </trans-unit>
-      <trans-unit id="I3d-VB-a2Z.title">
-        <source>LICENCE</source>
-        <target>ライセンス</target>
-        <note>Class = "UINavigationItem"; title = "LICENCE"; ObjectID = "I3d-VB-a2Z";</note>
-      </trans-unit>
-      <trans-unit id="Ogm-4G-WJX.text">
-        <source>Multi Play</source>
-        <target>Multi Play</target>
-        <note>Class = "UILabel"; text = "Multi Play"; ObjectID = "Ogm-4G-WJX";</note>
-      </trans-unit>
-      <trans-unit id="PzY-zP-vrD.text">
-        <source>遊び方を選択してください</source>
-        <target>遊び方を選択してください</target>
-        <note>Class = "UILabel"; text = "遊び方を選択してください"; ObjectID = "PzY-zP-vrD";</note>
-      </trans-unit>
-      <trans-unit id="Tca-Hl-qDV.text">
-        <source>タップしてスタート</source>
-        <target>タップしてスタート</target>
-        <note>Class = "UILabel"; text = "タップしてスタート"; ObjectID = "Tca-Hl-qDV";</note>
-      </trans-unit>
-      <trans-unit id="UQs-0O-UPQ.text">
-        <source>遠くの人と対戦</source>
-        <target>遠くの人と対戦</target>
-        <note>Class = "UILabel"; text = "遠くの人と対戦"; ObjectID = "UQs-0O-UPQ";</note>
-      </trans-unit>
-      <trans-unit id="eqK-hH-pGz.title">
-        <source>SETTING</source>
-        <target>設定</target>
-        <note>Class = "UINavigationItem"; title = "SETTING"; ObjectID = "eqK-hH-pGz";</note>
-      </trans-unit>
-      <trans-unit id="puc-Y5-PIb.text">
-        <source>タップしてスタート</source>
-        <target>タップしてスタート</target>
-        <note>Class = "UILabel"; text = "タップしてスタート"; ObjectID = "puc-Y5-PIb";</note>
-      </trans-unit>
-      <trans-unit id="qKx-sC-Hlw.text">
-        <source>インターネットに接続
+                <note>Class = "UILabel"; text = "Bluetoothの電源がオンに\nなっていることを\n確認して下さい"; ObjectID = "1vf-aQ-jIt";</note>
+            </trans-unit>
+            <trans-unit id="I3d-VB-a2Z.title">
+                <source>LICENCE</source>
+                <target>ライセンス</target>
+                <note>Class = "UINavigationItem"; title = "LICENCE"; ObjectID = "I3d-VB-a2Z";</note>
+            </trans-unit>
+            <trans-unit id="M0o-7Z-IOV.text">
+                <source>Label</source>
+                <note>Class = "UILabel"; text = "Label"; ObjectID = "M0o-7Z-IOV";</note>
+            </trans-unit>
+            <trans-unit id="N0k-S3-Kr7.title">
+                <source>Color Ball List</source>
+                <note>Class = "UINavigationItem"; title = "Color Ball List"; ObjectID = "N0k-S3-Kr7";</note>
+                <target>カラーボール一覧</target>
+            </trans-unit>
+            <trans-unit id="Ogm-4G-WJX.text">
+                <source>Multi Play</source>
+                <target>Multi Play</target>
+                <note>Class = "UILabel"; text = "Multi Play"; ObjectID = "Ogm-4G-WJX";</note>
+            </trans-unit>
+            <trans-unit id="PzY-zP-vrD.text">
+                <source>遊び方を選択してください</source>
+                <target>遊び方を選択してください</target>
+                <note>Class = "UILabel"; text = "遊び方を選択してください"; ObjectID = "PzY-zP-vrD";</note>
+            </trans-unit>
+            <trans-unit id="Tca-Hl-qDV.text">
+                <source>タップしてスタート</source>
+                <target>タップしてスタート</target>
+                <note>Class = "UILabel"; text = "タップしてスタート"; ObjectID = "Tca-Hl-qDV";</note>
+            </trans-unit>
+            <trans-unit id="UQs-0O-UPQ.text">
+                <source>遠くの人と対戦</source>
+                <target>遠くの人と対戦</target>
+                <note>Class = "UILabel"; text = "遠くの人と対戦"; ObjectID = "UQs-0O-UPQ";</note>
+            </trans-unit>
+            <trans-unit id="eqK-hH-pGz.title">
+                <source>SETTING</source>
+                <target>設定</target>
+                <note>Class = "UINavigationItem"; title = "SETTING"; ObjectID = "eqK-hH-pGz";</note>
+            </trans-unit>
+            <trans-unit id="puc-Y5-PIb.text">
+                <source>タップしてスタート</source>
+                <target>タップしてスタート</target>
+                <note>Class = "UILabel"; text = "タップしてスタート"; ObjectID = "puc-Y5-PIb";</note>
+            </trans-unit>
+            <trans-unit id="qKx-sC-Hlw.text">
+                <source>インターネットに接続
 されていることを
 確認して下さい</source>
-        <target>インターネットに接続
+                <target>インターネットに接続
 されていることを
 確認して下さい</target>
-        <note>Class = "UILabel"; text = "インターネットに接続\nされていることを\n確認して下さい"; ObjectID = "qKx-sC-Hlw";</note>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="BumpingBall+/Info.plist" source-language="en" datatype="plaintext" target-language="ja">
-    <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.0" build-num="8A218a"/>
-    </header>
-    <body>
-      <trans-unit id="CFBundleDisplayName">
-        <source>$(PRODUCT_NAME)</source>
-      </trans-unit>
-      <trans-unit id="CFBundleName">
-        <source>$(PRODUCT_NAME)</source>
-      </trans-unit>
-      <trans-unit id="CFBundleShortVersionString">
-        <source>1.0</source>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="BumpingBall+/Localizable.strings" source-language="en" datatype="plaintext" target-language="ja">
-    <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.0" build-num="8A218a"/>
-    </header>
-    <body>
-      <trans-unit id="info_item_1">
-        <source>info_item_1</source>
-        <target>レビューを書く</target>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="info_item_2">
-        <source>info_item_2</source>
-        <target>ライセンス</target>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="info_item_3">
-        <source>info_item_3</source>
-        <target>バージョン</target>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="setting_item_1">
-        <source>setting_item_1</source>
-        <target>音楽</target>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="setting_item_2">
-        <source>setting_item_2</source>
-        <target>効果音</target>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="setting_section_1">
-        <source>setting_section_1</source>
-        <target>基本情報</target>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-      <trans-unit id="setting_section_2">
-        <source>setting_section_2</source>
-        <target>アプリ情報</target>
-        <note>No comment provided by engineer.</note>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="BumpingBall+Tests/Info.plist" source-language="en" datatype="plaintext" target-language="ja">
-    <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.0" build-num="8A218a"/>
-    </header>
-    <body>
-      <trans-unit id="CFBundleName">
-        <source>$(PRODUCT_NAME)</source>
-      </trans-unit>
-      <trans-unit id="CFBundleShortVersionString">
-        <source>1.0</source>
-      </trans-unit>
-    </body>
-  </file>
-  <file original="BumpingBall+UITests/Info.plist" source-language="en" datatype="plaintext" target-language="ja">
-    <header>
-      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.0" build-num="8A218a"/>
-    </header>
-    <body>
-      <trans-unit id="CFBundleName">
-        <source>$(PRODUCT_NAME)</source>
-      </trans-unit>
-      <trans-unit id="CFBundleShortVersionString">
-        <source>1.0</source>
-      </trans-unit>
-    </body>
-  </file>
+                <note>Class = "UILabel"; text = "インターネットに接続\nされていることを\n確認して下さい"; ObjectID = "qKx-sC-Hlw";</note>
+            </trans-unit>
+            <trans-unit id="tLP-7g-0yR.text">
+                <source>チュートリアルを始めるよ!!</source>
+                <note>Class = "UILabel"; text = "チュートリアルを始めるよ!!"; ObjectID = "tLP-7g-0yR";</note>
+            </trans-unit>
+        </body>
+    </file>
+    <file original="BumpingBall+/Info.plist" source-language="en" datatype="plaintext" target-language="ja">
+        <header>
+            <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.1" build-num="8B62"></tool>
+        </header>
+        <body>
+            <trans-unit id="CFBundleDisplayName">
+                <source>$(PRODUCT_NAME)</source>
+            </trans-unit>
+            <trans-unit id="CFBundleName">
+                <source>$(PRODUCT_NAME)</source>
+            </trans-unit>
+            <trans-unit id="CFBundleShortVersionString">
+                <source>1.0</source>
+            </trans-unit>
+        </body>
+    </file>
+    <file original="BumpingBall+/Localizable.strings" source-language="en" datatype="plaintext" target-language="ja">
+        <header>
+            <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.1" build-num="8B62"></tool>
+        </header>
+        <body>
+            <trans-unit id="color_ball_section_1">
+                <source>color_ball_section_1</source>
+                <note>No comment provided by engineer.</note>
+                <target>カラーボール</target>
+            </trans-unit>
+            <trans-unit id="color_ball_section_2">
+                <source>color_ball_section_2</source>
+                <note>No comment provided by engineer.</note>
+                <target>アイテムボール</target>
+            </trans-unit>
+            <trans-unit id="commonSubTxt_1">
+                <source>commonSubTxt_1</source>
+                <note>No comment provided by engineer.</note>
+                <target>スピードが速く小さい</target>
+            </trans-unit>
+            <trans-unit id="commonSubTxt_2">
+                <source>commonSubTxt_2</source>
+                <note>No comment provided by engineer.</note>
+                <target>スピードがやや早くやや小さい</target>
+            </trans-unit>
+            <trans-unit id="commonSubTxt_3">
+                <source>commonSubTxt_3</source>
+                <note>No comment provided by engineer.</note>
+                <target>スピードがやや遅くやや大きい</target>
+            </trans-unit>
+            <trans-unit id="commonSubTxt_4">
+                <source>commonSubTxt_4</source>
+                <note>No comment provided by engineer.</note>
+                <target>スピードが遅く大きい</target>
+            </trans-unit>
+            <trans-unit id="commonSubTxt_5">
+                <source>commonSubTxt_5</source>
+                <note>No comment provided by engineer.</note>
+                <target>全てのカラーボールを消すことができる</target>
+            </trans-unit>
+            <trans-unit id="commonTxt_1">
+                <source>commonTxt_1</source>
+                <note>No comment provided by engineer.</note>
+                <target>ブルーボール</target>
+            </trans-unit>
+            <trans-unit id="commonTxt_2">
+                <source>commonTxt_2</source>
+                <note>No comment provided by engineer.</note>
+                <target>グリーンボール</target>
+            </trans-unit>
+            <trans-unit id="commonTxt_3">
+                <source>commonTxt_3</source>
+                <note>No comment provided by engineer.</note>
+                <target>オレンジボール</target>
+            </trans-unit>
+            <trans-unit id="commonTxt_4">
+                <source>commonTxt_4</source>
+                <note>No comment provided by engineer.</note>
+                <target>レッドボール</target>
+            </trans-unit>
+            <trans-unit id="commonTxt_5">
+                <source>commonTxt_5</source>
+                <note>No comment provided by engineer.</note>
+                <target>ゴールドボール</target>
+            </trans-unit>
+            <trans-unit id="info_item_1">
+                <source>info_item_1</source>
+                <target>レビューを書く</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="info_item_2">
+                <source>info_item_2</source>
+                <target>ライセンス</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="info_item_3">
+                <source>info_item_3</source>
+                <target>バージョン</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="itemSubTxt_1">
+                <source>itemSubTxt_1</source>
+                <note>No comment provided by engineer.</note>
+                <target>長押し時のカラーボールの拡大・縮小が逆転</target>
+            </trans-unit>
+            <trans-unit id="itemSubTxt_2">
+                <source>itemSubTxt_2</source>
+                <note>No comment provided by engineer.</note>
+                <target>落下してくるボールのスピードが速くなる</target>
+            </trans-unit>
+            <trans-unit id="itemSubTxt_3">
+                <source>itemSubTxt_3</source>
+                <note>No comment provided by engineer.</note>
+                <target>ライフを１回復する</target>
+            </trans-unit>
+            <trans-unit id="itemTxt_1">
+                <source>itemTxt_1</source>
+                <note>No comment provided by engineer.</note>
+                <target>リバース</target>
+            </trans-unit>
+            <trans-unit id="itemTxt_2">
+                <source>itemTxt_2</source>
+                <note>No comment provided by engineer.</note>
+                <target>スピードアップ</target>
+            </trans-unit>
+            <trans-unit id="itemTxt_3">
+                <source>itemTxt_3</source>
+                <note>No comment provided by engineer.</note>
+                <target>ワンアップ</target>
+            </trans-unit>
+            <trans-unit id="setting_item_1">
+                <source>setting_item_1</source>
+                <target>音楽</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="setting_item_2">
+                <source>setting_item_2</source>
+                <target>効果音</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="setting_section_1">
+                <source>setting_section_1</source>
+                <target>基本情報</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="setting_section_2">
+                <source>setting_section_2</source>
+                <target>アプリ情報</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="tutorial">
+                <source>tutorial</source>
+                <target>チュートリアル</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="tutorial_finger_text_0">
+                <source>tutorial_finger_text_0</source>
+                <target></target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="tutorial_finger_text_1">
+                <source>tutorial_finger_text_1</source>
+                <target>タップ!!</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="tutorial_finger_text_2">
+                <source>tutorial_finger_text_2</source>
+                <target>長押し!!</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="tutorial_finger_text_3">
+                <source>tutorial_finger_text_3</source>
+                <target></target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="tutorial_finger_text_4">
+                <source>tutorial_finger_text_4</source>
+                <target>はじく!!</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="tutorial_finger_text_5">
+                <source>tutorial_finger_text_5</source>
+                <target>ココ!!</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="tutorial_text_0">
+                <source>tutorial_text_0</source>
+                <target>ようこそBumping Ball+へ
+
+チュートリアルを始めるよ!!</target>
+                <note>tutorial</note>
+            </trans-unit>
+            <trans-unit id="tutorial_text_1">
+                <source>tutorial_text_1</source>
+                <target>下部のエリアをタップすると
+カラーボールが発射するよ!!</target>
+                <note>tap</note>
+            </trans-unit>
+            <trans-unit id="tutorial_text_2">
+                <source>tutorial_text_2</source>
+                <target>長押しで
+カラーボールの色が変化するよ!!</target>
+                <note>keep</note>
+            </trans-unit>
+            <trans-unit id="tutorial_text_3">
+                <source>tutorial_text_3</source>
+                <target>落下してくるカラーボールと
+同じ色をぶつけよう!!
+連続でぶつけると
+コンボが発生するぞ!!</target>
+                <note>collision</note>
+            </trans-unit>
+            <trans-unit id="tutorial_text_4">
+                <source>tutorial_text_4</source>
+                <target>コンボでゲージが溜まったら
+上にスワイプして
+ゴールドボールを発射しよう!!</target>
+                <note>swipe</note>
+            </trans-unit>
+            <trans-unit id="tutorial_text_5">
+                <source>tutorial_text_5</source>
+                <target>落下してくるカラーボールが
+下のエリアに入ったら
+ゲームオーバーだ..
+ハイスコアを目指そう!!
+対戦モードも楽しんでね!!</target>
+                <note>last</note>
+            </trans-unit>
+        </body>
+    </file>
+    <file original="BumpingBall+Tests/Info.plist" source-language="en" datatype="plaintext" target-language="ja">
+        <header>
+            <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.1" build-num="8B62"></tool>
+        </header>
+        <body>
+            <trans-unit id="CFBundleName">
+                <source>$(PRODUCT_NAME)</source>
+            </trans-unit>
+            <trans-unit id="CFBundleShortVersionString">
+                <source>1.0</source>
+            </trans-unit>
+        </body>
+    </file>
+    <file original="BumpingBall+UITests/Info.plist" source-language="en" datatype="plaintext" target-language="ja">
+        <header>
+            <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.1" build-num="8B62"></tool>
+        </header>
+        <body>
+            <trans-unit id="CFBundleName">
+                <source>$(PRODUCT_NAME)</source>
+            </trans-unit>
+            <trans-unit id="CFBundleShortVersionString">
+                <source>1.0</source>
+            </trans-unit>
+        </body>
+    </file>
 </xliff>

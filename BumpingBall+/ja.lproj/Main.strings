@@ -9,6 +9,9 @@
 /* Class = "UINavigationItem"; title = "LICENCE"; ObjectID = "I3d-VB-a2Z"; */
 "I3d-VB-a2Z.title" = "ライセンス";
 
+/* Class = "UINavigationItem"; title = "Color Ball List"; ObjectID = "N0k-S3-Kr7"; */
+"N0k-S3-Kr7.title" = "カラーボール一覧";
+
 /* Class = "UILabel"; text = "Multi Play"; ObjectID = "Ogm-4G-WJX"; */
 "Ogm-4G-WJX.text" = "Multi Play";
 

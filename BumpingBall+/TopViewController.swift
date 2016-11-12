@@ -106,6 +106,7 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
     
     /** ヘルプ **/
     @IBAction func onClickHelpBtn(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "toHelp", sender: self)
     }
     
     /** 設定 **/
