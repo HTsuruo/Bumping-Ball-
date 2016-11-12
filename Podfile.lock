@@ -24,6 +24,7 @@ PODS:
     - FontAwesomeKit/Core
   - FontAwesomeKit/Zocial (2.2.1):
     - FontAwesomeKit/Core
+  - Google-Mobile-Ads-SDK (7.14.0)
   - NVActivityIndicatorView (3.0)
   - SCLAlertView (0.7.0)
   - Spring (1.0.3)
@@ -34,6 +35,7 @@ DEPENDENCIES:
   - Crashlytics
   - Fabric
   - FontAwesomeKit (from `git@github.com:PrideChung/FontAwesomeKit.git`, branch `master`)
+  - Google-Mobile-Ads-SDK
   - NVActivityIndicatorView (from `https://github.com/ninjaprox/NVActivityIndicatorView`)
   - SCLAlertView
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
@@ -65,11 +67,12 @@ SPEC CHECKSUMS:
   Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
   Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   FontAwesomeKit: 3614979b3dbb0ec3f7fac1bd760b91f66c31db67
+  Google-Mobile-Ads-SDK: dbb0211c52ca02f72331b831ce4ccd218cf08748
   NVActivityIndicatorView: 19c0c7549ffe4f830f65d00b2f0d9a144e4c5105
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-PODFILE CHECKSUM: 9283c3a30c85b808bae36a2692a32879e412ade3
+PODFILE CHECKSUM: a1e87d29cff2625250ad0de6b4e390a0642f63ed
 
 COCOAPODS: 1.2.0.beta.1

@@ -160,6 +160,7 @@
 		56DDBD361DD6C39900CDBD27 /* gamecenterBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56DDBD381DD6C39900CDBD27 /* gamecenterBtn@2x.png */; };
 		56DDBD3D1DD6C7E900CDBD27 /* eternal_galaxy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56DDBD3B1DD6C7E900CDBD27 /* eternal_galaxy.mp3 */; };
 		56DDBD3E1DD6C7E900CDBD27 /* texture.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56DDBD3C1DD6C7E900CDBD27 /* texture.mp3 */; };
+		56DDBD401DD705F000CDBD27 /* AdUitl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DDBD3F1DD705F000CDBD27 /* AdUitl.swift */; };
 		56E073271DBE1D8C002E634D /* icon_wifi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56E073261DBE1D8C002E634D /* icon_wifi@2x.png */; };
 		56E073291DBE1EDF002E634D /* icon_bluetooth_large@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56E073281DBE1EDF002E634D /* icon_bluetooth_large@2x.png */; };
 		56E0732B1DBE2017002E634D /* icon_global@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56E0732A1DBE2017002E634D /* icon_global@2x.png */; };
@@ -360,6 +361,7 @@
 		56DDBD391DD6C39C00CDBD27 /* ja */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ja; path = "ja.lproj/gamecenterBtn@2x.png"; sourceTree = "<group>"; };
 		56DDBD3B1DD6C7E900CDBD27 /* eternal_galaxy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = eternal_galaxy.mp3; path = music/eternal_galaxy.mp3; sourceTree = SOURCE_ROOT; };
 		56DDBD3C1DD6C7E900CDBD27 /* texture.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = texture.mp3; path = music/texture.mp3; sourceTree = SOURCE_ROOT; };
+		56DDBD3F1DD705F000CDBD27 /* AdUitl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdUitl.swift; path = util/AdUitl.swift; sourceTree = "<group>"; };
 		56E073261DBE1D8C002E634D /* icon_wifi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_wifi@2x.png"; path = "img/prepare_multiplay/icon_wifi@2x.png"; sourceTree = SOURCE_ROOT; };
 		56E073281DBE1EDF002E634D /* icon_bluetooth_large@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_bluetooth_large@2x.png"; path = "img/prepare_multiplay/icon_bluetooth_large@2x.png"; sourceTree = SOURCE_ROOT; };
 		56E0732A1DBE2017002E634D /* icon_global@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_global@2x.png"; path = "img/prepare_multiplay/icon_global@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -843,6 +845,7 @@
 				56E0732D1DBE45EA002E634D /* Util.swift */,
 				56BD478C1DC5FCC9003AA705 /* ColorUtil.swift */,
 				56E073351DBE463C002E634D /* BallUtil.swift */,
+				56DDBD3F1DD705F000CDBD27 /* AdUitl.swift */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -1332,6 +1335,7 @@
 				56E073321DBE45F2002E634D /* AlertUtil.swift in Sources */,
 				56BB7F301CAD345100675AE8 /* AppDelegate.swift in Sources */,
 				56D160C11CC4FCF500257404 /* FinishView.swift in Sources */,
+				56DDBD401DD705F000CDBD27 /* AdUitl.swift in Sources */,
 				560A49871D729FB200DEBB6A /* OnePlayScene.swift in Sources */,
 				56BF57941CD72C6100923509 /* Difficulty.swift in Sources */,
 				566B38F71DC63DE40026083B /* LicenceViewController.swift in Sources */,

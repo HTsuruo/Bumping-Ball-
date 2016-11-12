@@ -55,6 +55,7 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
         }
         self.view.addSubview(skView)
         self.view.sendSubview(toBack: skView)
+        
     }
     
     override func didReceiveMemoryWarning() {

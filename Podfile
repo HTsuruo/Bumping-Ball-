@@ -12,6 +12,7 @@ target 'BumpingBall+' do
     pod 'FontAwesomeKit', :git => 'git@github.com:PrideChung/FontAwesomeKit.git', :branch => 'master'
     pod 'Alamofire', '~> 4.0'
     pod 'SwiftyJSON'
+    pod 'Google-Mobile-Ads-SDK'
 #    pod "BWWalkthrough"
 end
 

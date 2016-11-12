@@ -8,6 +8,7 @@
 
 import UIKit
 import FontAwesomeKit
+import GoogleMobileAds
 
 class SettingViewController: UITableViewController {
     
@@ -31,7 +32,7 @@ class SettingViewController: UITableViewController {
             self.tableView.deselectRow(at: indexPathForSelectedRow, animated: true)
         }
     }
-    
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
     }
