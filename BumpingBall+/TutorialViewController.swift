@@ -21,16 +21,25 @@ class TutorialViewController: UIViewController {
     @IBOutlet weak var fingerIcon: SpringImageView!
     private let tutorialNumberMax = 5
     @IBOutlet weak var swipeFingerArrow: UIImageView!
-    var tutorialTxt: [String] = []
-    var fingetText: [String] = []
+    var tutorialTxt: [String] = [
+        NSLocalizedString("tutorial_text_0", comment: "tutorial"),
+        NSLocalizedString("tutorial_text_1", comment: "tap"),
+        NSLocalizedString("tutorial_text_2", comment: "keep"),
+        NSLocalizedString("tutorial_text_3", comment: "collision"),
+        NSLocalizedString("tutorial_text_4", comment: "swipe"),
+        NSLocalizedString("tutorial_text_5", comment: "last")
+    ]
+    var fingetText: [String] = [
+        NSLocalizedString("tutorial_finger_text_0", comment: ""),
+        NSLocalizedString("tutorial_finger_text_1", comment: ""),
+        NSLocalizedString("tutorial_finger_text_2", comment: ""),
+        NSLocalizedString("tutorial_finger_text_3", comment: ""),
+        NSLocalizedString("tutorial_finger_text_4", comment: ""),
+        NSLocalizedString("tutorial_finger_text_5", comment: ""),
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        for i in 0...tutorialNumberMax {
-            tutorialTxt.append(NSLocalizedString("tutorial_text_\(i)", comment: ""))
-            fingetText.append(NSLocalizedString("tutorial_finger_text_\(i)", comment: ""))
-        }
         
         app.selectedDiffculty = DifficultyType.tutorial
         label.numberOfLines = 0

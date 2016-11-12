@@ -15,4 +15,17 @@
 "info_item_2" = "Licence";
 "info_item_3" = "Version";
 
+//チュートリアル
 "tutorial" = "Tutorial";
+"tutorial_text_0" = "Welcome to Bumping Ball+\n\nLet's Start Tutorial!!";
+"tutorial_text_1" = "Color ball launces \nwhen you tap bottom area, 'touch here'.";
+"tutorial_text_2" = "Color ball changed color \nwhen long press bottom area.";
+"tutorial_text_3" = "Bump same color falling color ball.\nYou get combo \nwhen bump without missing.";
+"tutorial_text_4" = "Launch gold ball when you swipe up!!";
+"tutorial_text_5" = "When falling ball comes in bottom area, GAME OVER..\n Let's get highscore!!\nEnjoy battle mode with your friends too!!";
+"tutorial_finger_text_0" = "";
+"tutorial_finger_text_1" = "Tap!!";
+"tutorial_finger_text_2" = "Long Press!!";
+"tutorial_finger_text_3" = "";
+"tutorial_finger_text_4" = "Swipe Up!!";
+"tutorial_finger_text_5" = "HERE!!";
