@@ -38,15 +38,21 @@
 "commonTxt_3" = "Orange Ball";
 "commonTxt_4" = "Red Ball";
 "commonTxt_5" = "Gold Ball";
-"commonSubTxt_1" = "High speed ball";
-"commonSubTxt_2" = "Green Ball";
-"commonSubTxt_3" = "Orange Ball";
-"commonSubTxt_4" = "Red Ball";
-"commonSubTxt_5" = "Gold Ball";
+"commonSubTxt_1" = "High speed and small ball.";
+"commonSubTxt_2" = "Slightly high speed and slightly small ball.";
+"commonSubTxt_3" = "Slightly low speed and slightly big ball.";
+"commonSubTxt_4" = "Slow speed and big ball.";
+"commonSubTxt_5" = "This ball can destroy all balls.";
 
 "itemTxt_1" = "Reverse Ball";
 "itemTxt_2" = "Spped UP Ball";
 "itemTxt_3" = "One UP Ball";
-"itemSubTxt_1" = "reverse ball size change.";
-"itemSubTxt_2" = "falling color balls spped up.";
-"itemSubTxt_3" = "recovery one life.";
+"itemSubTxt_1" = "Reverse ball size change.";
+"itemSubTxt_2" = "Falling color balls spped up.";
+"itemSubTxt_3" = "Recovery one life.";
+
+//help
+"help_content_1" = "Tutorial";
+"help_content_2" = "Battle mode";
+"help_content_3" = "Color ball list";
+"how_to_play" = "How to play";

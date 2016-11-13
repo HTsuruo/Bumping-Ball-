@@ -15,63 +15,32 @@
         </array>
     </customFonts>
     <scenes>
-        <!--遊び方-->
+        <!--HELP-->
         <scene sceneID="rV9-dW-CQd">
             <objects>
                 <viewController id="1bK-kV-xTV" customClass="HelpViewController" customModule="BumpingBall_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UNA-bT-t5o"/>
-                        <viewControllerLayoutGuide type="bottom" id="XUK-T7-jeI"/>
+                        <viewControllerLayoutGuide type="top" id="oc8-Vj-hPq"/>
+                        <viewControllerLayoutGuide type="bottom" id="MRQ-Pu-tF6"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="FJK-Er-TrE">
+                    <view key="view" contentMode="scaleToFill" id="WEU-u4-06i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQS-wh-j5i">
-                                <rect key="frame" x="66" y="138.5" width="242" height="76"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="AQS-wh-j5i" secondAttribute="height" multiplier="130:41" id="5b5-Lg-fyj"/>
-                                </constraints>
-                                <state key="normal" image="tutorialBtn.png"/>
-                                <connections>
-                                    <action selector="onClickTutorialBtn:" destination="1bK-kV-xTV" eventType="touchUpInside" id="Dmt-Ds-kWX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daw-jy-dVr">
-                                <rect key="frame" x="66" y="294.5" width="243" height="77"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="daw-jy-dVr" secondAttribute="height" multiplier="130:41" id="gud-hZ-kJt"/>
-                                </constraints>
-                                <state key="normal" image="multiModeBtn.png"/>
-                                <connections>
-                                    <action selector="onClickMultiModeBtn:" destination="1bK-kV-xTV" eventType="touchUpInside" id="VTW-fk-ydV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPQ-e0-lOG">
-                                <rect key="frame" x="66" y="451.5" width="242" height="76"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="YPQ-e0-lOG" secondAttribute="height" multiplier="130:41" id="pQ3-sx-eVj"/>
-                                </constraints>
-                                <state key="normal" image="colorBallListBtn.png"/>
-                                <connections>
-                                    <action selector="onClickColorBallListBtn:" destination="1bK-kV-xTV" eventType="touchUpInside" id="jhc-j4-hoG"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="htS-DH-8TT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.062745098040000002" green="0.1058823529" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YPQ-e0-lOG" firstAttribute="top" secondItem="daw-jy-dVr" secondAttribute="bottom" constant="80" id="7gU-eC-piV"/>
-                            <constraint firstItem="AQS-wh-j5i" firstAttribute="centerX" secondItem="FJK-Er-TrE" secondAttribute="centerX" id="GqP-FC-2al"/>
-                            <constraint firstItem="daw-jy-dVr" firstAttribute="leading" secondItem="FJK-Er-TrE" secondAttribute="leadingMargin" constant="50" id="M3O-UQ-917"/>
-                            <constraint firstItem="AQS-wh-j5i" firstAttribute="leading" secondItem="FJK-Er-TrE" secondAttribute="leadingMargin" constant="50" id="MKJ-gR-7vR"/>
-                            <constraint firstItem="YPQ-e0-lOG" firstAttribute="centerX" secondItem="FJK-Er-TrE" secondAttribute="centerX" id="RDp-2g-q5T"/>
-                            <constraint firstItem="YPQ-e0-lOG" firstAttribute="leading" secondItem="FJK-Er-TrE" secondAttribute="leadingMargin" constant="50" id="VRS-17-zsW"/>
-                            <constraint firstItem="daw-jy-dVr" firstAttribute="centerY" secondItem="FJK-Er-TrE" secondAttribute="centerY" id="XE0-bj-C4L"/>
-                            <constraint firstItem="daw-jy-dVr" firstAttribute="top" secondItem="AQS-wh-j5i" secondAttribute="bottom" constant="80" id="lsy-7I-acJ"/>
-                            <constraint firstItem="daw-jy-dVr" firstAttribute="centerX" secondItem="FJK-Er-TrE" secondAttribute="centerX" id="rNC-T4-815"/>
+                            <constraint firstAttribute="trailing" secondItem="htS-DH-8TT" secondAttribute="trailing" id="6IX-OW-Jpp"/>
+                            <constraint firstItem="MRQ-Pu-tF6" firstAttribute="top" secondItem="htS-DH-8TT" secondAttribute="bottom" id="W0h-Ty-Vq4"/>
+                            <constraint firstItem="htS-DH-8TT" firstAttribute="top" secondItem="WEU-u4-06i" secondAttribute="top" id="brq-yB-id0"/>
+                            <constraint firstItem="htS-DH-8TT" firstAttribute="leading" secondItem="WEU-u4-06i" secondAttribute="leading" id="eoo-fW-Ju8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="遊び方" id="l5q-ze-tD0">
+                    <navigationItem key="navigationItem" title="HELP" id="l5q-ze-tD0">
                         <barButtonItem key="rightBarButtonItem" image="closeBtn.png" id="BRj-Qu-8uS">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -80,14 +49,15 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableView" destination="htS-DH-8TT" id="Qsh-3M-2BU"/>
                         <segue destination="BOr-jA-hJt" kind="push" identifier="toColorBallList" id="OPj-33-aoO"/>
                         <segue destination="qOB-tV-w2w" kind="push" identifier="toMultiModeHelp" id="9A8-hb-SkI"/>
-                        <segue destination="Rzr-R7-BoD" kind="push" identifier="toTutorial" id="LlM-3A-UYt"/>
+                        <segue destination="Rzr-R7-BoD" kind="presentation" identifier="toTutorial" id="LlM-3A-UYt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hbc-pU-Dyb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-164" y="1564"/>
+            <point key="canvasLocation" x="-164" y="1563.8680659670167"/>
         </scene>
         <!--SETTING-->
         <scene sceneID="Q0C-mg-8R2">
@@ -99,10 +69,10 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ijO-ZJ-NEp">
-                                <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ijO-ZJ-NEp" id="18Q-sM-UCh">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -576,7 +546,7 @@ THE SOFTWARE.
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GSV-Pq-Bab">
-                                <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GSV-Pq-Bab" id="tzS-6e-s6y">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -690,7 +660,7 @@ THE SOFTWARE.
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multi Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogm-4G-WJX">
-                                        <rect key="frame" x="142" y="18" width="100" height="24"/>
+                                        <rect key="frame" x="139.5" y="16" width="105" height="28"/>
                                         <fontDescription key="fontDescription" name="Candara" family="Candara" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1216,8 +1186,8 @@ THE SOFTWARE.
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="チュートリアルを始めるよ!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLP-7g-0yR">
-                                <rect key="frame" x="21" y="184" width="333" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Start Tutorial!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLP-7g-0yR">
+                                <rect key="frame" x="21" y="140" width="333" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
@@ -1281,6 +1251,26 @@ THE SOFTWARE.
                                     <constraint firstAttribute="height" constant="60" id="vzl-q1-GgB"/>
                                 </constraints>
                             </imageView>
+                            <navigationBar alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZJH-gd-5pi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Ome-8L-HsL"/>
+                                </constraints>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Tutorial" id="wMf-gQ-yb4">
+                                        <barButtonItem key="rightBarButtonItem" image="closeBtn.png" id="nzt-Jw-EX2">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="onClickCloseBtn:" destination="Rzr-R7-BoD" id="Z6U-zI-QVq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.062745098040000002" green="0.1058823529" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1288,6 +1278,9 @@ THE SOFTWARE.
                             <constraint firstAttribute="trailingMargin" secondItem="M0o-7Z-IOV" secondAttribute="trailing" constant="40" id="2xs-EF-3PD"/>
                             <constraint firstItem="SFh-8u-m2z" firstAttribute="top" secondItem="M0o-7Z-IOV" secondAttribute="bottom" constant="-10" id="3lu-uZ-LRF"/>
                             <constraint firstItem="SFh-8u-m2z" firstAttribute="leading" secondItem="mnd-Br-b1m" secondAttribute="trailing" constant="-20" id="G0A-co-N10"/>
+                            <constraint firstItem="ZJH-gd-5pi" firstAttribute="top" secondItem="bf1-Y0-oFY" secondAttribute="top" id="K1f-cp-Jlw"/>
+                            <constraint firstItem="ZJH-gd-5pi" firstAttribute="leading" secondItem="bf1-Y0-oFY" secondAttribute="leading" id="KgF-kN-UOl"/>
+                            <constraint firstAttribute="trailing" secondItem="ZJH-gd-5pi" secondAttribute="trailing" id="fqf-jr-BXw"/>
                             <constraint firstItem="oLo-LT-Vly" firstAttribute="centerX" secondItem="bf1-Y0-oFY" secondAttribute="centerX" id="gRh-K4-Vhd"/>
                             <constraint firstItem="r9h-GS-dhS" firstAttribute="top" secondItem="mnd-Br-b1m" secondAttribute="bottom" constant="40" id="kh8-Gj-GMv"/>
                             <constraint firstItem="tLP-7g-0yR" firstAttribute="top" secondItem="Mxc-ai-Ags" secondAttribute="bottom" constant="120" id="mza-P2-fuI"/>
@@ -1299,6 +1292,7 @@ THE SOFTWARE.
                     </view>
                     <navigationItem key="navigationItem" id="AWg-UO-MRR"/>
                     <connections>
+                        <outlet property="closeBtn" destination="nzt-Jw-EX2" id="aPT-2G-got"/>
                         <outlet property="fingerIcon" destination="SFh-8u-m2z" id="Mxa-u3-2cB"/>
                         <outlet property="fingerLabel" destination="M0o-7Z-IOV" id="ZeM-qq-2dG"/>
                         <outlet property="label" destination="tLP-7g-0yR" id="22d-38-qa7"/>
@@ -1309,21 +1303,19 @@ THE SOFTWARE.
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SHk-Bc-VhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-727" y="9"/>
+            <point key="canvasLocation" x="-727.20000000000005" y="8.5457271364317844"/>
         </scene>
     </scenes>
     <resources>
         <image name="backBtn.png" width="62" height="62"/>
         <image name="bluetoothBtn.png" width="446" height="200"/>
         <image name="closeBtn.png" width="30" height="30"/>
-        <image name="colorBallListBtn.png" width="260" height="82"/>
         <image name="gamecenterBtnDisabled.png" width="445" height="200"/>
         <image name="helpBtn.png" width="120" height="120"/>
         <image name="icon_bluetooth.png" width="60" height="60"/>
         <image name="icon_bluetooth_large.png" width="277" height="277"/>
         <image name="icon_global.png" width="281" height="281"/>
         <image name="icon_wifi.png" width="260" height="260"/>
-        <image name="multiModeBtn.png" width="260" height="82"/>
         <image name="nextBtn.png" width="212" height="71"/>
         <image name="oneplayBtn.png" width="446" height="200"/>
         <image name="rankBtn.png" width="120" height="120"/>
@@ -1331,6 +1323,5 @@ THE SOFTWARE.
         <image name="swipeFingerArrow.png" width="66" height="125"/>
         <image name="tapFinder.png" width="147" height="147"/>
         <image name="titleTxt.png" width="567" height="126"/>
-        <image name="tutorialBtn.png" width="260" height="82"/>
     </resources>
 </document>

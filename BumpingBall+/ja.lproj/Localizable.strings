@@ -35,6 +35,18 @@
 "commonTxt_5" = "ゴールドボール";
 
 /* No comment provided by engineer. */
+"help_content_1" = "チュートリアル";
+
+/* No comment provided by engineer. */
+"help_content_2" = "対戦モード";
+
+/* No comment provided by engineer. */
+"help_content_3" = "カラーボール一覧";
+
+/* No comment provided by engineer. */
+"how_to_play" = "遊び方";
+
+/* No comment provided by engineer. */
 "info_item_1" = "レビューを書く";
 
 /* No comment provided by engineer. */
@@ -72,9 +84,6 @@
 
 /* No comment provided by engineer. */
 "setting_section_2" = "アプリ情報";
-
-/* No comment provided by engineer. */
-"tutorial" = "チュートリアル";
 
 /* No comment provided by engineer. */
 "tutorial_finger_text_0" = "";

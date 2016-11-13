@@ -38,6 +38,12 @@
 		5635C20D1DD857BD00C6AACE /* colorBallListBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5635C20A1DD857BD00C6AACE /* colorBallListBtn@2x.png */; };
 		5635C20E1DD857BD00C6AACE /* multiModeBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5635C20B1DD857BD00C6AACE /* multiModeBtn@2x.png */; };
 		5635C20F1DD857BD00C6AACE /* tutorialBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5635C20C1DD857BD00C6AACE /* tutorialBtn@2x.png */; };
+		5635C2121DD875CC00C6AACE /* HelpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5635C2101DD875CC00C6AACE /* HelpCell.swift */; };
+		5635C2131DD875CC00C6AACE /* HelpCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5635C2111DD875CC00C6AACE /* HelpCell.xib */; };
+		5635C2171DD8979D00C6AACE /* colorBallIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5635C2141DD8979D00C6AACE /* colorBallIcon@2x.png */; };
+		5635C2181DD8979D00C6AACE /* gamecenterIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5635C2151DD8979D00C6AACE /* gamecenterIcon@2x.png */; };
+		5635C2191DD8979D00C6AACE /* tutorialIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5635C2161DD8979D00C6AACE /* tutorialIcon@2x.png */; };
+		5635C21B1DD89AFC00C6AACE /* beginnerIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5635C21A1DD89AFC00C6AACE /* beginnerIcon@2x.png */; };
 		564FCC1F1DCDF62300072657 /* reverse_bk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 564FCC1E1DCDF62300072657 /* reverse_bk@2x.png */; };
 		565DDA531CBD4707003C9F0D /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565DDA521CBD4707003C9F0D /* Animation.swift */; };
 		566176EB1D6881EC00AF10BA /* chargeMeter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 566176EA1D6881EC00AF10BA /* chargeMeter@2x.png */; };
@@ -235,6 +241,12 @@
 		5635C20A1DD857BD00C6AACE /* colorBallListBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "colorBallListBtn@2x.png"; path = "img/help/colorBallListBtn@2x.png"; sourceTree = SOURCE_ROOT; };
 		5635C20B1DD857BD00C6AACE /* multiModeBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "multiModeBtn@2x.png"; path = "img/help/multiModeBtn@2x.png"; sourceTree = SOURCE_ROOT; };
 		5635C20C1DD857BD00C6AACE /* tutorialBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tutorialBtn@2x.png"; path = "img/help/tutorialBtn@2x.png"; sourceTree = SOURCE_ROOT; };
+		5635C2101DD875CC00C6AACE /* HelpCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpCell.swift; path = view/HelpCell.swift; sourceTree = "<group>"; };
+		5635C2111DD875CC00C6AACE /* HelpCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HelpCell.xib; path = view/HelpCell.xib; sourceTree = "<group>"; };
+		5635C2141DD8979D00C6AACE /* colorBallIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "colorBallIcon@2x.png"; path = "img/help/colorBallIcon@2x.png"; sourceTree = SOURCE_ROOT; };
+		5635C2151DD8979D00C6AACE /* gamecenterIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gamecenterIcon@2x.png"; path = "img/help/gamecenterIcon@2x.png"; sourceTree = SOURCE_ROOT; };
+		5635C2161DD8979D00C6AACE /* tutorialIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tutorialIcon@2x.png"; path = "img/help/tutorialIcon@2x.png"; sourceTree = SOURCE_ROOT; };
+		5635C21A1DD89AFC00C6AACE /* beginnerIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "beginnerIcon@2x.png"; path = "img/help/beginnerIcon@2x.png"; sourceTree = SOURCE_ROOT; };
 		564FCC1E1DCDF62300072657 /* reverse_bk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reverse_bk@2x.png"; path = "img/ball_item_bk/reverse_bk@2x.png"; sourceTree = SOURCE_ROOT; };
 		565DDA521CBD4707003C9F0D /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = component/Animation.swift; sourceTree = "<group>"; };
 		566176EA1D6881EC00AF10BA /* chargeMeter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chargeMeter@2x.png"; path = "img/chargeMeter@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -474,6 +486,10 @@
 		5635C2091DD8567500C6AACE /* help */ = {
 			isa = PBXGroup;
 			children = (
+				5635C21A1DD89AFC00C6AACE /* beginnerIcon@2x.png */,
+				5635C2141DD8979D00C6AACE /* colorBallIcon@2x.png */,
+				5635C2151DD8979D00C6AACE /* gamecenterIcon@2x.png */,
+				5635C2161DD8979D00C6AACE /* tutorialIcon@2x.png */,
 				5635C20A1DD857BD00C6AACE /* colorBallListBtn@2x.png */,
 				5635C20B1DD857BD00C6AACE /* multiModeBtn@2x.png */,
 				5635C20C1DD857BD00C6AACE /* tutorialBtn@2x.png */,
@@ -614,6 +630,8 @@
 				5603F4AF1DD0079C00881FDF /* LevelSelectView.swift */,
 				56DDBD441DD727D000CDBD27 /* ColorBallCell.swift */,
 				56DDBD451DD727D000CDBD27 /* ColorBallCell.xib */,
+				5635C2101DD875CC00C6AACE /* HelpCell.swift */,
+				5635C2111DD875CC00C6AACE /* HelpCell.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -1064,9 +1082,11 @@
 				561BA2131D699E25004FC052 /* swipeArrow@2x.png in Resources */,
 				5666F82A1D645702001EFC57 /* ball_green_1@2x.png in Resources */,
 				56BB36831D7324F500AD1603 /* icon_bluetooth@2x.png in Resources */,
+				5635C21B1DD89AFC00C6AACE /* beginnerIcon@2x.png in Resources */,
 				56BDE3E41D7ACA7600247E36 /* life_blue_empty@2x.png in Resources */,
 				56CC4E3F1D67056000434A17 /* HeaderView.xib in Resources */,
 				56700B471DC694F20099093D /* bk.sks in Resources */,
+				5635C2191DD8979D00C6AACE /* tutorialIcon@2x.png in Resources */,
 				56D1AAA91D83B00200B24949 /* Localizable.strings in Resources */,
 				5666F83E1D646090001EFC57 /* three@2x.png in Resources */,
 				56AC95991CB24B2100B31FE3 /* spark.sks in Resources */,
@@ -1074,16 +1094,19 @@
 				56BD478B1DC5FC01003AA705 /* SettingCell.xib in Resources */,
 				56AC95971CB24B2100B31FE3 /* PlayScene.sks in Resources */,
 				56C7254F1DD371CE00DFA113 /* combo_2@2x.png in Resources */,
+				5635C2131DD875CC00C6AACE /* HelpCell.xib in Resources */,
 				56DDBD4A1DD7743900CDBD27 /* InfoPlist.strings in Resources */,
 				56AC95811CB16D0000B31FE3 /* launch.mp3 in Resources */,
 				56AD645B1DCCE69800DAC92B /* ball_red_1@2x.png in Resources */,
 				56DDBD321DD6C39300CDBD27 /* gamecenterBtnDisabled@2x.png in Resources */,
 				56BDE3E61D7ACA7600247E36 /* life_red_empty@2x.png in Resources */,
+				5635C2171DD8979D00C6AACE /* colorBallIcon@2x.png in Resources */,
 				56BF57CF1CD7902000923509 /* Roboto-Bold.ttf in Resources */,
 				56BB7F3E1CAD345200675AE8 /* LaunchScreen.storyboard in Resources */,
 				56DDBD3D1DD6C7E900CDBD27 /* eternal_galaxy.mp3 in Resources */,
 				5613D4BD1DD05E7400B165E1 /* circle_green@2x.png in Resources */,
 				5666F82C1D645702001EFC57 /* ball_green_3@2x.png in Resources */,
+				5635C2181DD8979D00C6AACE /* gamecenterIcon@2x.png in Resources */,
 				56AC95AA1CB2BDD400B31FE3 /* pause.mp3 in Resources */,
 				566D0CE41DCCB7BF0051BAD4 /* spark_triangle@2x.png in Resources */,
 				56AC95A81CB2BCFD00B31FE3 /* PauseMenu.xib in Resources */,
@@ -1368,6 +1391,7 @@
 				56AF86971DC7413800928022 /* SimpleTargetBall.swift in Sources */,
 				56AC95A21CB24B3000B31FE3 /* TargetBall.swift in Sources */,
 				56E073361DBE463C002E634D /* BallUtil.swift in Sources */,
+				5635C2121DD875CC00C6AACE /* HelpCell.swift in Sources */,
 				561BA2111D699774004FC052 /* TouchView.swift in Sources */,
 				56DDBD421DD726B400CDBD27 /* ColorBallViewController.swift in Sources */,
 				56C725561DD3801700DFA113 /* TutorialScene.swift in Sources */,

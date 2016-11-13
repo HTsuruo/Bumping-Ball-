@@ -21,6 +21,7 @@ class TutorialViewController: UIViewController {
     @IBOutlet weak var fingerIcon: SpringImageView!
     private let tutorialNumberMax = 5
     @IBOutlet weak var swipeFingerArrow: UIImageView!
+    @IBOutlet weak var closeBtn: UIBarButtonItem!
     var tutorialTxt: [String] = [
         NSLocalizedString("tutorial_text_0", comment: "tutorial"),
         NSLocalizedString("tutorial_text_1", comment: "tap"),
@@ -45,13 +46,10 @@ class TutorialViewController: UIViewController {
         label.numberOfLines = 0
         fingerIcon.isHidden = true
         
-        let headerLabel = UILabel(frame: CGRect(x: 0, y: 0, width: CGFloat.WIDTH, height: define.HEADER_HEIGHT))
-        headerLabel.text = NSLocalizedString("tutorial", comment: "")
-        headerLabel.textColor = UIColor.white
-        headerLabel.backgroundColor = UIColor.hex(hexStr: "FFFFFF", alpha: 0.3)
-        headerLabel.font = UIFont.systemFont(ofSize: 22.0)
-        headerLabel.textAlignment = NSTextAlignment.center
-        self.view.addSubview(headerLabel)
+        if !UserDefaults.standard.bool(forKey: udKey.is_not_first) {
+            closeBtn.isEnabled = false
+            closeBtn.tintColor = UIColor.clear
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -135,6 +133,10 @@ class TutorialViewController: UIViewController {
     @IBAction func onClickNextBtn(_ sender: UIButton) {
         print("next!!")
         if tutorialScene.tutorialNumber == tutorialNumberMax {
+            if UserDefaults.standard.bool(forKey: udKey.is_not_first) {
+                self.dismiss(animated: true, completion: nil)
+                return
+            }
             UserDefaults.standard.set(true, forKey: udKey.is_not_first)
             self.performSegue(withIdentifier: "toMain", sender: self)
             return
@@ -147,6 +149,11 @@ class TutorialViewController: UIViewController {
         nextBtn.isHidden = false
         nextBtn.animate()
     }
+    
+    @IBAction func onClickCloseBtn(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     /*
     // MARK: - Navigation

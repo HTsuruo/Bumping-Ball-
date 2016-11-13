@@ -36,8 +36,8 @@
             </trans-unit>
             <trans-unit id="N0k-S3-Kr7.title">
                 <source>Color Ball List</source>
-                <note>Class = "UINavigationItem"; title = "Color Ball List"; ObjectID = "N0k-S3-Kr7";</note>
                 <target>カラーボール一覧</target>
+                <note>Class = "UINavigationItem"; title = "Color Ball List"; ObjectID = "N0k-S3-Kr7";</note>
             </trans-unit>
             <trans-unit id="Ogm-4G-WJX.text">
                 <source>Multi Play</source>
@@ -59,10 +59,20 @@
                 <target>遠くの人と対戦</target>
                 <note>Class = "UILabel"; text = "遠くの人と対戦"; ObjectID = "UQs-0O-UPQ";</note>
             </trans-unit>
+            <trans-unit id="bmL-r4-QJt.title">
+                <source>How to play battle mode</source>
+                <target>対戦モードの説明</target>
+                <note>Class = "UINavigationItem"; title = "How to play battle mode"; ObjectID = "bmL-r4-QJt";</note>
+            </trans-unit>
             <trans-unit id="eqK-hH-pGz.title">
                 <source>SETTING</source>
                 <target>設定</target>
                 <note>Class = "UINavigationItem"; title = "SETTING"; ObjectID = "eqK-hH-pGz";</note>
+            </trans-unit>
+            <trans-unit id="l5q-ze-tD0.title">
+                <source>HELP</source>
+                <target>ヘルプ</target>
+                <note>Class = "UINavigationItem"; title = "HELP"; ObjectID = "l5q-ze-tD0";</note>
             </trans-unit>
             <trans-unit id="puc-Y5-PIb.text">
                 <source>タップしてスタート</source>
@@ -79,8 +89,14 @@
                 <note>Class = "UILabel"; text = "インターネットに接続\nされていることを\n確認して下さい"; ObjectID = "qKx-sC-Hlw";</note>
             </trans-unit>
             <trans-unit id="tLP-7g-0yR.text">
-                <source>チュートリアルを始めるよ!!</source>
-                <note>Class = "UILabel"; text = "チュートリアルを始めるよ!!"; ObjectID = "tLP-7g-0yR";</note>
+                <source>Let's Start Tutorial!!</source>
+                <note>Class = "UILabel"; text = "Let's Start Tutorial!!"; ObjectID = "tLP-7g-0yR";</note>
+                <target>チュートリアルを始めよう!!</target>
+            </trans-unit>
+            <trans-unit id="wMf-gQ-yb4.title">
+                <source>Tutorial</source>
+                <note>Class = "UINavigationItem"; title = "Tutorial"; ObjectID = "wMf-gQ-yb4";</note>
+                <target>チュートリアル</target>
             </trans-unit>
         </body>
     </file>
@@ -107,63 +123,83 @@
         <body>
             <trans-unit id="color_ball_section_1">
                 <source>color_ball_section_1</source>
-                <note>No comment provided by engineer.</note>
                 <target>カラーボール</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="color_ball_section_2">
                 <source>color_ball_section_2</source>
-                <note>No comment provided by engineer.</note>
                 <target>アイテムボール</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="commonSubTxt_1">
                 <source>commonSubTxt_1</source>
-                <note>No comment provided by engineer.</note>
                 <target>スピードが速く小さい</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="commonSubTxt_2">
                 <source>commonSubTxt_2</source>
-                <note>No comment provided by engineer.</note>
                 <target>スピードがやや早くやや小さい</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="commonSubTxt_3">
                 <source>commonSubTxt_3</source>
-                <note>No comment provided by engineer.</note>
                 <target>スピードがやや遅くやや大きい</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="commonSubTxt_4">
                 <source>commonSubTxt_4</source>
-                <note>No comment provided by engineer.</note>
                 <target>スピードが遅く大きい</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="commonSubTxt_5">
                 <source>commonSubTxt_5</source>
-                <note>No comment provided by engineer.</note>
                 <target>全てのカラーボールを消すことができる</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="commonTxt_1">
                 <source>commonTxt_1</source>
-                <note>No comment provided by engineer.</note>
                 <target>ブルーボール</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="commonTxt_2">
                 <source>commonTxt_2</source>
-                <note>No comment provided by engineer.</note>
                 <target>グリーンボール</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="commonTxt_3">
                 <source>commonTxt_3</source>
-                <note>No comment provided by engineer.</note>
                 <target>オレンジボール</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="commonTxt_4">
                 <source>commonTxt_4</source>
-                <note>No comment provided by engineer.</note>
                 <target>レッドボール</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="commonTxt_5">
                 <source>commonTxt_5</source>
-                <note>No comment provided by engineer.</note>
                 <target>ゴールドボール</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="help_content_1">
+                <source>help_content_1</source>
+                <target>チュートリアル</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="help_content_2">
+                <source>help_content_2</source>
+                <target>対戦モード</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="help_content_3">
+                <source>help_content_3</source>
+                <target>カラーボール一覧</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="how_to_play">
+                <source>how_to_play</source>
+                <target>遊び方</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="info_item_1">
                 <source>info_item_1</source>
@@ -182,33 +218,33 @@
             </trans-unit>
             <trans-unit id="itemSubTxt_1">
                 <source>itemSubTxt_1</source>
-                <note>No comment provided by engineer.</note>
                 <target>相手のカラーボールの拡大・縮小が逆転する</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="itemSubTxt_2">
                 <source>itemSubTxt_2</source>
-                <note>No comment provided by engineer.</note>
                 <target>相手の落下ボールのスピードが速くなる</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="itemSubTxt_3">
                 <source>itemSubTxt_3</source>
-                <note>No comment provided by engineer.</note>
                 <target>ライフを１回復する</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="itemTxt_1">
                 <source>itemTxt_1</source>
-                <note>No comment provided by engineer.</note>
                 <target>リバース</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="itemTxt_2">
                 <source>itemTxt_2</source>
-                <note>No comment provided by engineer.</note>
                 <target>スピードアップ</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="itemTxt_3">
                 <source>itemTxt_3</source>
-                <note>No comment provided by engineer.</note>
                 <target>ワンアップ</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="setting_item_1">
                 <source>setting_item_1</source>
@@ -228,11 +264,6 @@
             <trans-unit id="setting_section_2">
                 <source>setting_section_2</source>
                 <target>アプリ情報</target>
-                <note>No comment provided by engineer.</note>
-            </trans-unit>
-            <trans-unit id="tutorial">
-                <source>tutorial</source>
-                <target>チュートリアル</target>
                 <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="tutorial_finger_text_0">

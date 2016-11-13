@@ -24,8 +24,14 @@
 /* Class = "UILabel"; text = "遠くの人と対戦"; ObjectID = "UQs-0O-UPQ"; */
 "UQs-0O-UPQ.text" = "遠くの人と対戦";
 
+/* Class = "UINavigationItem"; title = "How to play battle mode"; ObjectID = "bmL-r4-QJt"; */
+"bmL-r4-QJt.title" = "対戦モードの説明";
+
 /* Class = "UINavigationItem"; title = "SETTING"; ObjectID = "eqK-hH-pGz"; */
 "eqK-hH-pGz.title" = "設定";
+
+/* Class = "UINavigationItem"; title = "HELP"; ObjectID = "l5q-ze-tD0"; */
+"l5q-ze-tD0.title" = "ヘルプ";
 
 /* Class = "UILabel"; text = "タップしてスタート"; ObjectID = "puc-Y5-PIb"; */
 "puc-Y5-PIb.text" = "タップしてスタート";
@@ -34,4 +40,10 @@
 "qKx-sC-Hlw.text" = "インターネットに接続
 されていることを
 確認して下さい";
+
+/* Class = "UILabel"; text = "Let's Start Tutorial!!"; ObjectID = "tLP-7g-0yR"; */
+"tLP-7g-0yR.text" = "チュートリアルを始めよう!!";
+
+/* Class = "UINavigationItem"; title = "Tutorial"; ObjectID = "wMf-gQ-yb4"; */
+"wMf-gQ-yb4.title" = "チュートリアル";
 
