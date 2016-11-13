@@ -33,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             GameCenterUtil.login(targetViewController)
         }
         
+        UINavigationBar.appearance().tintColor = UIColor.white
+        
 //        let notificationSettings = UIUserNotificationSettings(
 //            types: [.badge, .sound, .alert], categories: nil)
 //        application.registerUserNotificationSettings(notificationSettings)

@@ -34,6 +34,10 @@
 		561BCFF71D72EC5800766B36 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561BCFF61D72EC5800766B36 /* GameKit.framework */; };
 		561BCFFB1D72F9A400766B36 /* rankBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561BCFFA1D72F9A400766B36 /* rankBtn@2x.png */; };
 		5632A6091DC738CB0064C498 /* ItemBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632A6081DC738CB0064C498 /* ItemBall.swift */; };
+		5635C2081DD8510F00C6AACE /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5635C2071DD8510F00C6AACE /* HelpViewController.swift */; };
+		5635C20D1DD857BD00C6AACE /* colorBallListBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5635C20A1DD857BD00C6AACE /* colorBallListBtn@2x.png */; };
+		5635C20E1DD857BD00C6AACE /* multiModeBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5635C20B1DD857BD00C6AACE /* multiModeBtn@2x.png */; };
+		5635C20F1DD857BD00C6AACE /* tutorialBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5635C20C1DD857BD00C6AACE /* tutorialBtn@2x.png */; };
 		564FCC1F1DCDF62300072657 /* reverse_bk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 564FCC1E1DCDF62300072657 /* reverse_bk@2x.png */; };
 		565DDA531CBD4707003C9F0D /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565DDA521CBD4707003C9F0D /* Animation.swift */; };
 		566176EB1D6881EC00AF10BA /* chargeMeter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 566176EA1D6881EC00AF10BA /* chargeMeter@2x.png */; };
@@ -227,6 +231,10 @@
 		561BCFF61D72EC5800766B36 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		561BCFFA1D72F9A400766B36 /* rankBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rankBtn@2x.png"; path = "img/top/rankBtn@2x.png"; sourceTree = SOURCE_ROOT; };
 		5632A6081DC738CB0064C498 /* ItemBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemBall.swift; path = component/ItemBall.swift; sourceTree = "<group>"; };
+		5635C2071DD8510F00C6AACE /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpViewController.swift; path = help/HelpViewController.swift; sourceTree = "<group>"; };
+		5635C20A1DD857BD00C6AACE /* colorBallListBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "colorBallListBtn@2x.png"; path = "img/help/colorBallListBtn@2x.png"; sourceTree = SOURCE_ROOT; };
+		5635C20B1DD857BD00C6AACE /* multiModeBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "multiModeBtn@2x.png"; path = "img/help/multiModeBtn@2x.png"; sourceTree = SOURCE_ROOT; };
+		5635C20C1DD857BD00C6AACE /* tutorialBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tutorialBtn@2x.png"; path = "img/help/tutorialBtn@2x.png"; sourceTree = SOURCE_ROOT; };
 		564FCC1E1DCDF62300072657 /* reverse_bk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reverse_bk@2x.png"; path = "img/ball_item_bk/reverse_bk@2x.png"; sourceTree = SOURCE_ROOT; };
 		565DDA521CBD4707003C9F0D /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = component/Animation.swift; sourceTree = "<group>"; };
 		566176EA1D6881EC00AF10BA /* chargeMeter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chargeMeter@2x.png"; path = "img/chargeMeter@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -461,6 +469,16 @@
 				561BA20E1D69975D004FC052 /* touchView@2x.png */,
 			);
 			name = touch_view;
+			sourceTree = "<group>";
+		};
+		5635C2091DD8567500C6AACE /* help */ = {
+			isa = PBXGroup;
+			children = (
+				5635C20A1DD857BD00C6AACE /* colorBallListBtn@2x.png */,
+				5635C20B1DD857BD00C6AACE /* multiModeBtn@2x.png */,
+				5635C20C1DD857BD00C6AACE /* tutorialBtn@2x.png */,
+			);
+			name = help;
 			sourceTree = "<group>";
 		};
 		564FCC1D1DCDF5FD00072657 /* ball_item_bk */ = {
@@ -699,6 +717,7 @@
 		56BB7FC11CAFC08200675AE8 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				5635C2091DD8567500C6AACE /* help */,
 				56C725591DD3881400DFA113 /* tutorial */,
 				56C725531DD378EF00DFA113 /* background@2x.png */,
 				56C725481DD371BF00DFA113 /* combo */,
@@ -852,6 +871,7 @@
 			isa = PBXGroup;
 			children = (
 				56DDBD411DD726B400CDBD27 /* ColorBallViewController.swift */,
+				5635C2071DD8510F00C6AACE /* HelpViewController.swift */,
 			);
 			name = help;
 			sourceTree = "<group>";
@@ -1095,6 +1115,7 @@
 				56DDBD2A1DD6C18F00CDBD27 /* oneplayBtn@2x.png in Resources */,
 				5666F8251D6456F5001EFC57 /* ball_orange_1@2x.png in Resources */,
 				561B35841DD04B69002E13C9 /* easyBtn@2x.png in Resources */,
+				5635C20F1DD857BD00C6AACE /* tutorialBtn@2x.png in Resources */,
 				56E073291DBE1EDF002E634D /* icon_bluetooth_large@2x.png in Resources */,
 				5666F8341D645712001EFC57 /* ball_blue_3@2x.png in Resources */,
 				56BDE3E71D7ACA7600247E36 /* life_red@2x.png in Resources */,
@@ -1120,6 +1141,7 @@
 				5666F8351D645712001EFC57 /* ball_blue_4@2x.png in Resources */,
 				561B35871DD04BD9002E13C9 /* hardBtn@2x.png in Resources */,
 				5666F83F1D646090001EFC57 /* two@2x.png in Resources */,
+				5635C20E1DD857BD00C6AACE /* multiModeBtn@2x.png in Resources */,
 				56D160CA1CC50E2C00257404 /* ball_green@2x.png in Resources */,
 				5666F8331D645712001EFC57 /* ball_blue_2@2x.png in Resources */,
 				56700B4C1DC69D2D0099093D /* star@2x.png in Resources */,
@@ -1150,6 +1172,7 @@
 				56BF578A1CD4BBBD00923509 /* arrows@2x.png in Resources */,
 				56BD7D3F1CBB9E0100F9178B /* TopScene.sks in Resources */,
 				5666F83D1D646090001EFC57 /* one@2x.png in Resources */,
+				5635C20D1DD857BD00C6AACE /* colorBallListBtn@2x.png in Resources */,
 				56D160C81CC50E2C00257404 /* ball_blue@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1335,6 +1358,7 @@
 				56BB7FB01CAD766900675AE8 /* TopViewController.swift in Sources */,
 				56AC959F1CB24B3000B31FE3 /* PlayerBall.swift in Sources */,
 				5666F81E1D643CDA001EFC57 /* CountdownView.swift in Sources */,
+				5635C2081DD8510F00C6AACE /* HelpViewController.swift in Sources */,
 				56BB7F361CAD345100675AE8 /* SceneViewController.swift in Sources */,
 				56E0732E1DBE45EA002E634D /* Util.swift in Sources */,
 				560A49831D729F3600DEBB6A /* TopScene.swift in Sources */,

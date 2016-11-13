@@ -140,11 +140,6 @@ class ColorBallViewController: UITableViewController {
         }
         return cell
     }
-
-    @IBAction func onClickCloseBtn(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     
     /*
     // Override to support conditional editing of the table view.

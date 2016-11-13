@@ -15,6 +15,80 @@
         </array>
     </customFonts>
     <scenes>
+        <!--遊び方-->
+        <scene sceneID="rV9-dW-CQd">
+            <objects>
+                <viewController id="1bK-kV-xTV" customClass="HelpViewController" customModule="BumpingBall_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UNA-bT-t5o"/>
+                        <viewControllerLayoutGuide type="bottom" id="XUK-T7-jeI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FJK-Er-TrE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQS-wh-j5i">
+                                <rect key="frame" x="66" y="138.5" width="242" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AQS-wh-j5i" secondAttribute="height" multiplier="130:41" id="5b5-Lg-fyj"/>
+                                </constraints>
+                                <state key="normal" image="tutorialBtn.png"/>
+                                <connections>
+                                    <action selector="onClickTutorialBtn:" destination="1bK-kV-xTV" eventType="touchUpInside" id="Dmt-Ds-kWX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daw-jy-dVr">
+                                <rect key="frame" x="66" y="294.5" width="243" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="daw-jy-dVr" secondAttribute="height" multiplier="130:41" id="gud-hZ-kJt"/>
+                                </constraints>
+                                <state key="normal" image="multiModeBtn.png"/>
+                                <connections>
+                                    <action selector="onClickMultiModeBtn:" destination="1bK-kV-xTV" eventType="touchUpInside" id="VTW-fk-ydV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPQ-e0-lOG">
+                                <rect key="frame" x="66" y="451.5" width="242" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YPQ-e0-lOG" secondAttribute="height" multiplier="130:41" id="pQ3-sx-eVj"/>
+                                </constraints>
+                                <state key="normal" image="colorBallListBtn.png"/>
+                                <connections>
+                                    <action selector="onClickColorBallListBtn:" destination="1bK-kV-xTV" eventType="touchUpInside" id="jhc-j4-hoG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.062745098040000002" green="0.1058823529" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YPQ-e0-lOG" firstAttribute="top" secondItem="daw-jy-dVr" secondAttribute="bottom" constant="80" id="7gU-eC-piV"/>
+                            <constraint firstItem="AQS-wh-j5i" firstAttribute="centerX" secondItem="FJK-Er-TrE" secondAttribute="centerX" id="GqP-FC-2al"/>
+                            <constraint firstItem="daw-jy-dVr" firstAttribute="leading" secondItem="FJK-Er-TrE" secondAttribute="leadingMargin" constant="50" id="M3O-UQ-917"/>
+                            <constraint firstItem="AQS-wh-j5i" firstAttribute="leading" secondItem="FJK-Er-TrE" secondAttribute="leadingMargin" constant="50" id="MKJ-gR-7vR"/>
+                            <constraint firstItem="YPQ-e0-lOG" firstAttribute="centerX" secondItem="FJK-Er-TrE" secondAttribute="centerX" id="RDp-2g-q5T"/>
+                            <constraint firstItem="YPQ-e0-lOG" firstAttribute="leading" secondItem="FJK-Er-TrE" secondAttribute="leadingMargin" constant="50" id="VRS-17-zsW"/>
+                            <constraint firstItem="daw-jy-dVr" firstAttribute="centerY" secondItem="FJK-Er-TrE" secondAttribute="centerY" id="XE0-bj-C4L"/>
+                            <constraint firstItem="daw-jy-dVr" firstAttribute="top" secondItem="AQS-wh-j5i" secondAttribute="bottom" constant="80" id="lsy-7I-acJ"/>
+                            <constraint firstItem="daw-jy-dVr" firstAttribute="centerX" secondItem="FJK-Er-TrE" secondAttribute="centerX" id="rNC-T4-815"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="遊び方" id="l5q-ze-tD0">
+                        <barButtonItem key="rightBarButtonItem" image="closeBtn.png" id="BRj-Qu-8uS">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="onClickCloseBtn:" destination="1bK-kV-xTV" id="oNl-ZP-VQo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="BOr-jA-hJt" kind="push" identifier="toColorBallList" id="OPj-33-aoO"/>
+                        <segue destination="qOB-tV-w2w" kind="push" identifier="toMultiModeHelp" id="9A8-hb-SkI"/>
+                        <segue destination="Rzr-R7-BoD" kind="push" identifier="toTutorial" id="LlM-3A-UYt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hbc-pU-Dyb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-164" y="1564"/>
+        </scene>
         <!--SETTING-->
         <scene sceneID="Q0C-mg-8R2">
             <objects>
@@ -515,18 +589,30 @@ THE SOFTWARE.
                             <outlet property="delegate" destination="BOr-jA-hJt" id="6ST-K7-OCX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Color Ball List" id="N0k-S3-Kr7">
-                        <barButtonItem key="rightBarButtonItem" image="closeBtn.png" id="sVj-sn-eQq">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="onClickCloseBtn:" destination="BOr-jA-hJt" id="9Ir-JO-ror"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Color Ball List" id="N0k-S3-Kr7"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8g4-mI-MNO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-164" y="1554"/>
+            <point key="canvasLocation" x="583" y="2382"/>
+        </scene>
+        <!--How to play battle mode-->
+        <scene sceneID="nAt-dy-TVo">
+            <objects>
+                <viewController id="qOB-tV-w2w" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t1N-8r-D09"/>
+                        <viewControllerLayoutGuide type="bottom" id="neT-Vt-Dqc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2NR-zA-dwZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="How to play battle mode" id="bmL-r4-QJt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OTm-TT-cVo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-164" y="2382"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="p5F-3p-iXH">
@@ -537,7 +623,7 @@ THE SOFTWARE.
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BOr-jA-hJt" kind="relationship" relationship="rootViewController" id="11i-Sp-Jc6"/>
+                        <segue destination="1bK-kV-xTV" kind="relationship" relationship="rootViewController" id="nvv-hT-yfa"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ig-A1-Crm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1131,7 +1217,7 @@ THE SOFTWARE.
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="チュートリアルを始めるよ!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLP-7g-0yR">
-                                <rect key="frame" x="21" y="140" width="333" height="24"/>
+                                <rect key="frame" x="21" y="184" width="333" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
@@ -1211,6 +1297,7 @@ THE SOFTWARE.
                             <constraint firstItem="r9h-GS-dhS" firstAttribute="top" secondItem="SFh-8u-m2z" secondAttribute="bottom" constant="20" id="wxo-Ei-OCr"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="AWg-UO-MRR"/>
                     <connections>
                         <outlet property="fingerIcon" destination="SFh-8u-m2z" id="Mxa-u3-2cB"/>
                         <outlet property="fingerLabel" destination="M0o-7Z-IOV" id="ZeM-qq-2dG"/>
@@ -1229,12 +1316,14 @@ THE SOFTWARE.
         <image name="backBtn.png" width="62" height="62"/>
         <image name="bluetoothBtn.png" width="446" height="200"/>
         <image name="closeBtn.png" width="30" height="30"/>
+        <image name="colorBallListBtn.png" width="260" height="82"/>
         <image name="gamecenterBtnDisabled.png" width="445" height="200"/>
         <image name="helpBtn.png" width="120" height="120"/>
         <image name="icon_bluetooth.png" width="60" height="60"/>
         <image name="icon_bluetooth_large.png" width="277" height="277"/>
         <image name="icon_global.png" width="281" height="281"/>
         <image name="icon_wifi.png" width="260" height="260"/>
+        <image name="multiModeBtn.png" width="260" height="82"/>
         <image name="nextBtn.png" width="212" height="71"/>
         <image name="oneplayBtn.png" width="446" height="200"/>
         <image name="rankBtn.png" width="120" height="120"/>
@@ -1242,5 +1331,6 @@ THE SOFTWARE.
         <image name="swipeFingerArrow.png" width="66" height="125"/>
         <image name="tapFinder.png" width="147" height="147"/>
         <image name="titleTxt.png" width="567" height="126"/>
+        <image name="tutorialBtn.png" width="260" height="82"/>
     </resources>
 </document>
