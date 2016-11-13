@@ -515,7 +515,14 @@ THE SOFTWARE.
                             <outlet property="delegate" destination="BOr-jA-hJt" id="6ST-K7-OCX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Color Ball List" id="N0k-S3-Kr7"/>
+                    <navigationItem key="navigationItem" title="Color Ball List" id="N0k-S3-Kr7">
+                        <barButtonItem key="rightBarButtonItem" image="closeBtn.png" id="sVj-sn-eQq">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="onClickCloseBtn:" destination="BOr-jA-hJt" id="9Ir-JO-ror"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8g4-mI-MNO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

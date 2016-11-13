@@ -78,11 +78,6 @@ class TutorialViewController: UIViewController {
         fingerIcon.isHidden = true
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        UserDefaults.standard.set(true, forKey: udKey.is_not_first)
-    }
-    
     func setupContent() {
         nextBtn.isHidden = true
         swipeFingerArrow.isHidden = true
@@ -140,6 +135,7 @@ class TutorialViewController: UIViewController {
     @IBAction func onClickNextBtn(_ sender: UIButton) {
         print("next!!")
         if tutorialScene.tutorialNumber == tutorialNumberMax {
+            UserDefaults.standard.set(true, forKey: udKey.is_not_first)
             self.performSegue(withIdentifier: "toMain", sender: self)
             return
         }

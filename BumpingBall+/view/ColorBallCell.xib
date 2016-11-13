@@ -37,19 +37,22 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ブルーボール" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMa-y5-LRd">
-                        <rect key="frame" x="69" y="10" width="238" height="22"/>
+                        <rect key="frame" x="69" y="5" width="238" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="0Wv-q7-E1H"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="Candara" family="Candara" pointSize="22"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" red="0.075568370521068573" green="0.14695623517036438" blue="0.28381770849227905" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" red="0.062745098039215685" green="0.10588235294117647" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="gS9-Tg-bFJ" secondAttribute="trailing" constant="5" id="2rd-H0-V40"/>
                     <constraint firstAttribute="trailingMargin" secondItem="pMa-y5-LRd" secondAttribute="trailing" constant="5" id="6yl-MK-t5n"/>
+                    <constraint firstItem="pMa-y5-LRd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="BMD-VJ-ypp"/>
                     <constraint firstAttribute="bottom" secondItem="tTh-vm-SeO" secondAttribute="bottom" constant="5" id="E1e-Iy-kN3"/>
                     <constraint firstItem="gS9-Tg-bFJ" firstAttribute="leading" secondItem="tTh-vm-SeO" secondAttribute="trailing" constant="10" id="RKh-LQ-zbd"/>
-                    <constraint firstItem="pMa-y5-LRd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="Xvc-DH-lD4"/>
                     <constraint firstItem="tTh-vm-SeO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="e2A-F7-nu7"/>
                     <constraint firstItem="tTh-vm-SeO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="eph-ke-4j6"/>
                     <constraint firstItem="pMa-y5-LRd" firstAttribute="leading" secondItem="tTh-vm-SeO" secondAttribute="trailing" constant="10" id="rlL-9d-KCl"/>

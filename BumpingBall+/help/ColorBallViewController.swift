@@ -81,24 +81,32 @@ class ColorBallViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(60.0)
     }
-
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat(40.0)
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.textColor = UIColor.lightGray
+        label.font = UIFont.systemFont(ofSize: 15.0)
+        let paddingTxt = "   "
+        switch section {
+        case 0:
+            label.text = paddingTxt + NSLocalizedString("color_ball_section_1", comment: "")
+        case 1:
+            label.text =  paddingTxt + NSLocalizedString("color_ball_section_2", comment: "")
+        default:
+            label.text = ""
+        }
+        return label
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 2
-    }
-
-    //セクション名
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0:
-            return NSLocalizedString("color_ball_section_1", comment: "")
-        case 1:
-            return NSLocalizedString("color_ball_section_2", comment: "")
-        default:
-            return "error"
-        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -133,6 +141,11 @@ class ColorBallViewController: UITableViewController {
         return cell
     }
 
+    @IBAction func onClickCloseBtn(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

@@ -44,10 +44,10 @@
 "info_item_3" = "バージョン";
 
 /* No comment provided by engineer. */
-"itemSubTxt_1" = "長押し時のカラーボールの拡大・縮小が逆転";
+"itemSubTxt_1" = "相手のカラーボールの拡大・縮小が逆転する";
 
 /* No comment provided by engineer. */
-"itemSubTxt_2" = "落下してくるボールのスピードが速くなる";
+"itemSubTxt_2" = "相手の落下ボールのスピードが速くなる";
 
 /* No comment provided by engineer. */
 "itemSubTxt_3" = "ライフを１回復する";

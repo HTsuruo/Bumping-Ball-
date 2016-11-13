@@ -183,12 +183,12 @@
             <trans-unit id="itemSubTxt_1">
                 <source>itemSubTxt_1</source>
                 <note>No comment provided by engineer.</note>
-                <target>長押し時のカラーボールの拡大・縮小が逆転</target>
+                <target>相手のカラーボールの拡大・縮小が逆転する</target>
             </trans-unit>
             <trans-unit id="itemSubTxt_2">
                 <source>itemSubTxt_2</source>
                 <note>No comment provided by engineer.</note>
-                <target>落下してくるボールのスピードが速くなる</target>
+                <target>相手の落下ボールのスピードが速くなる</target>
             </trans-unit>
             <trans-unit id="itemSubTxt_3">
                 <source>itemSubTxt_3</source>
