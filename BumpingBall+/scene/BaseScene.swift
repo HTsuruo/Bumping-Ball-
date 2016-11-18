@@ -36,17 +36,23 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     
     override func didMove(to view: SKView) {
         // ここは物理世界.
-        self.physicsWorld.contactDelegate = self
+        self.physicsWorld.contactDelegate   = self
         self.physicsWorld.speed = CGFloat(1.0)
         self.backgroundColor = UIColor.black
-//        let background = SKSpriteNode(imageNamed: "background")
-//        background.size = CGSize(width: CGFloat.WIDTH, height: CGFloat.HEIGHT)
-//        background.position = CGFloat.CENTER
-//        self.addChild(background)
+
+        /*
+        let background = SKSpriteNode(imageNamed: "background")
+        background.size = CGSize(width: CGFloat.WIDTH, height: CGFloat.HEIGHT * 2)
+        background.position = CGFloat.CENTER
+        background.alpha = 0.5
+        self.addChild(background)
         
-//        let movetoY = SKAction.moveTo(y: 100, duration: 10.0)
-//        let forever = SKAction.repeatForever(movetoY)
-//        background.run(forever)
+        let movetoY = SKAction.moveTo(y: CGFloat.HEIGHT, duration: 10.0)
+        let backToY = SKAction.moveTo(y: 0, duration: 0.0)
+        let sequence = SKAction.sequence([movetoY, backToY])
+        let forever = SKAction.repeatForever(sequence)
+        background.run(forever)
+         */
         
         app.score = 0
         
@@ -127,7 +133,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
                 isStart = true
                 print("start!!")
                 let music = SKAudioNode(fileNamed: "eternal_galaxy.mp3")
-                self.addChild(music)
+//                self.addChild(music)
             }
             return
         }
