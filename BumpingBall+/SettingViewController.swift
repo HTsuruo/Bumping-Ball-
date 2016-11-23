@@ -46,6 +46,7 @@ class SettingViewController: UITableViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(UINib(nibName: "SettingCell", bundle: nil), forCellReuseIdentifier: "cell")
+        self.navigationController?.navigationBar.barTintColor = UIColor.white
         setIcons()
     }
 
