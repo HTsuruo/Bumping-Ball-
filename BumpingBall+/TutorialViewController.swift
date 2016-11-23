@@ -130,6 +130,11 @@ class TutorialViewController: UIViewController {
         UIApplication.shared.setStatusBarHidden(false, with: UIStatusBarAnimation.fade)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        skView.scene?.removeFromParent()
+        skView.presentScene(nil)
+    }
+    
     @IBAction func onClickNextBtn(_ sender: UIButton) {
         print("next!!")
         if tutorialScene.tutorialNumber == tutorialNumberMax {

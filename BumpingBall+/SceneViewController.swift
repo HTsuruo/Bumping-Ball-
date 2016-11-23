@@ -73,6 +73,12 @@ class SceneViewController: UIViewController {
          UIApplication.shared.setStatusBarHidden(false, with: UIStatusBarAnimation.fade)
     }
     
+    //sceneのupdateが止まらない場合があるのでpauseして対処します.
+    override func viewDidDisappear(_ animated: Bool) {
+        skView.scene?.removeFromParent()
+        skView.presentScene(nil)
+    }
+    
 //    動作しないので一旦退避
 //    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
 //        return UIStatusBarAnimation.fade
