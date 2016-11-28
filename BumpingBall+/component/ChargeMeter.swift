@@ -53,5 +53,4 @@ class ChargeMeter: SKSpriteNode {
         self.position = CGPoint(x: initialPos, y: CGFloat.HEIGHT - (define.HEADER_HEIGHT + 2.5))
     }
 
-
 }

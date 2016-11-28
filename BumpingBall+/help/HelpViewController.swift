@@ -18,7 +18,9 @@ class HelpViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewWillAppear(_ animated: Bool) {
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         self.navigationController?.navigationBar.titleTextAttributes = [ NSForegroundColorAttributeName : UIColor.white ]
-        self.navigationController?.navigationBar.barTintColor = ColorUtil.main
+        
+        let backButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backButtonItem
         
         if let indexPathForSelectedRow = self.tableView.indexPathForSelectedRow {
             self.tableView.deselectRow(at: indexPathForSelectedRow, animated: true)
@@ -36,8 +38,6 @@ class HelpViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let backButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        navigationItem.backBarButtonItem = backButtonItem
         // Do any additional setup after loading the view.
         self.tableView.delegate = self
         self.tableView.dataSource = self

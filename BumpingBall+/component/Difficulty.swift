@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import SpriteKit
+
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
   switch (lhs, rhs) {
   case let (l?, r?):
@@ -24,7 +25,7 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 class Difficulty {
     var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
-    //ボールの速度を上げます.
+    //ボールの速度を上げます.（時間で管理します）
     func getAccelerationSpeed() -> Double {
         let score = app.score
         
@@ -51,7 +52,7 @@ class Difficulty {
         let score = app.score
         
         if score < 1000 {
-            return 5.0
+            return 3.0
         }
         if isInRange(score!, from: 1000, to: 5000) {
             return getInterval(1000 * 10, score: score!, alpha: 0.25)
@@ -60,33 +61,30 @@ class Difficulty {
             return getInterval(1000 * 10, score: score!, alpha: 0.5)
         }
         if isInRange(score!, from: 10000, to: 15000) {
-            return getInterval(10000 * 10, score: score!, alpha: 1.0)
+            return getInterval(10000 * 10, score: score!, alpha: 0.75)
         }
         if isInRange(score!, from: 15000, to: 20000) {
-            return getInterval(10000 * 10, score: score!, alpha: 1.5)
+            return getInterval(10000 * 10, score: score!, alpha: 1.0)
         }
         if isInRange(score!, from: 20000, to: 30000) {
-            return getInterval(10000 * 10, score: score!, alpha: 1.75)
+            return getInterval(10000 * 10, score: score!, alpha: 1.25)
         }
         if isInRange(score!, from: 30000, to: 40000) {
-            return getInterval(10000 * 10, score: score!, alpha: 2.0)
+            return getInterval(10000 * 10, score: score!, alpha: 1.5)
         }
         if isInRange(score!, from: 40000, to: 50000) {
-            return getInterval(10000 * 10, score: score!, alpha: 2.25)
+            return getInterval(10000 * 10, score: score!, alpha: 1.75)
         }
         if isInRange(score!, from: 50000, to: 75000) {
-            return getInterval(10000 * 10, score: score!, alpha: 2.5)
+            return getInterval(10000 * 10, score: score!, alpha: 2.0)
         }
         if isInRange(score!, from: 75000, to: 100000) {
-            return getInterval(10000 * 10, score: score!, alpha: 3.0)
+            return getInterval(10000 * 10, score: score!, alpha: 2.25)
         }
         if isInRange(score!, from: 100000, to: 150000) {
-            return getInterval(100000 * 10, score: score!, alpha: 3.5)
+            return getInterval(100000 * 10, score: score!, alpha: 2.5)
         }
-        if isInRange(score!, from: 150000, to: 1000000) {
-            return getInterval(100000 * 10, score: score!, alpha: 3.75)
-        }
-        return 0.5
+        return 2.75
     }
     
     func isInRange(_ score: Int, from: Int, to: Int) -> Bool {
@@ -101,7 +99,7 @@ class Difficulty {
     }
     
     func getInterval(_ division: Double, score: Int, alpha: Double) -> Double {
-        return (5.0-((Double(score) / division)+alpha))
+        return (3.0-((Double(score) / division)+alpha))
     }
     
 }

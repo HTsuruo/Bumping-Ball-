@@ -39,6 +39,7 @@ class BluetoothUtil: NSObject, MCSessionDelegate, MCAdvertiserAssistantDelegate,
         
         browser = MCBrowserViewController(serviceType: "bbplus2016", session: session)
         browser.delegate = self
+        browser.navigationController?.navigationBar.barTintColor = UIColor.blue
         self.vc.present(browser, animated: true, completion: nil)
     }
     
