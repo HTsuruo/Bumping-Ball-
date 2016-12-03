@@ -54,6 +54,8 @@ class TutorialViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        Bgm.playBgm(filename: Bgm.tutorialMusic)
+        
         //sceneで最前面のviewcontrollerを取得する処理があるため、viewdidapperでインスタンス化します.
         if let scene = TutorialScene(fileNamed:"PlayScene") {
             // Configure the view.
@@ -128,6 +130,7 @@ class TutorialViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         UIApplication.shared.setStatusBarHidden(false, with: UIStatusBarAnimation.fade)
+        Bgm.stop()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -158,7 +161,6 @@ class TutorialViewController: UIViewController {
     @IBAction func onClickCloseBtn(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
-    
     
     /*
     // MARK: - Navigation

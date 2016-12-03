@@ -16,6 +16,7 @@ class LevelSelectView: UIView {
     @IBOutlet weak var easyBtn: UIButton!
     @IBOutlet weak var normalBtn: UIButton!
     @IBOutlet weak var hardBtn: UIButton!
+    let btnSelectSound = Sound.prepareToPlay("button_level_select")
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -40,24 +41,24 @@ class LevelSelectView: UIView {
     }
 
     @IBAction func onClickEasyBtn(_ sender: UIButton) {
+        btnSelectSound.play()
         app.selectedDiffculty = DifficultyType.easy
-        app.level = 1
         transitionToPlay()
         normalBtn.isHidden = true
         hardBtn.isHidden = true
     }
     
     @IBAction func onClickNormalBtn(_ sender: UIButton) {
+        btnSelectSound.play()
         app.selectedDiffculty = DifficultyType.normal
-        app.level = 1
         transitionToPlay()
         easyBtn.isHidden = true
         hardBtn.isHidden = true
     }
     
     @IBAction func onClickHardBtn(_ sender: UIButton) {
+        btnSelectSound.play()
         app.selectedDiffculty = DifficultyType.hard
-        app.level = 5
         transitionToPlay()
         easyBtn.isHidden = true
         normalBtn.isHidden = true

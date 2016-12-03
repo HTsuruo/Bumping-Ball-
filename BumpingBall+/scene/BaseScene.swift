@@ -65,7 +65,6 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         // set background animation.
         let snow = animation.backgroundAnimation()
         self.addChild(snow)
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -405,5 +404,9 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         let stageSign = StageSign(frame: CGRect(x: 0, y: 0, width: CGFloat.HEIGHT, height: define.STAGE_SIGN_HEIGHT))
         stageSign.setNumber(level: app.level)
         self.view?.addSubview(stageSign)
+    }
+    
+    func playSceneBgm() {
+        Bgm.playBgm(filename: Bgm.playMusic)
     }
 }

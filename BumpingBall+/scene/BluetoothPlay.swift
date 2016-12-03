@@ -57,6 +57,7 @@ class BluetoothPlay: BaseScene {
         if selfPrepared && partnerPrepared {
             waitingView.hide()
             prepareView.removeFromSuperview()
+            playSceneBgm()
             self.countdownView.start()
         }
     }
@@ -228,6 +229,7 @@ class BluetoothPlay: BaseScene {
                 }
             }
         } else {
+            self.run(Sound.collisionNotRemove)
             changeTargetBall(firstNode, tBall: secondNode, id: targetId)
         }
     }

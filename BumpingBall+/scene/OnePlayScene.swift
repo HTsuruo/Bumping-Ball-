@@ -15,9 +15,10 @@ class OnePlayScene: BaseScene {
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
+        playSceneBgm()
         self.view?.addSubview(headerView)
         countdownView.start()
-        print("level: \(app.selectedDiffculty)")
+        print("difficulty: \(app.selectedDiffculty)")
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -61,6 +62,7 @@ class OnePlayScene: BaseScene {
             removeTargetBall(secondNode, id: targetId)
             updateScore()
         } else {
+            self.run(Sound.collisionNotRemove)
             changeTargetBall(firstNode, tBall: secondNode, id: targetId)
         }
     }

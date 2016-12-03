@@ -23,6 +23,9 @@ class SceneViewController: UIViewController {
     @IBOutlet weak var restartBtn: UIButton!
     var isMultiPlay = true
     var alertUtil: AlertUtil! = nil
+    let pauseSound = Sound.prepareToPlay("pause")
+    let btnSound = Sound.prepareToPlay("button")
+    let btnErrorSound = Sound.prepareToPlay("button_error")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +59,12 @@ class SceneViewController: UIViewController {
         pauseBtn.addTarget(self, action: #selector(SceneViewController.onClickPauseBtn(_:)), for: .touchUpInside)
         self.view.addSubview(pauseBtn)
         loadNib()
+        
+        if app.selectedDiffculty == .hard {
+            app.level = 5
+        } else {
+            app.level = 1
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,7 +79,8 @@ class SceneViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-         UIApplication.shared.setStatusBarHidden(false, with: UIStatusBarAnimation.fade)
+        UIApplication.shared.setStatusBarHidden(false, with: UIStatusBarAnimation.fade)
+        Bgm.stop()
     }
     
     //sceneのupdateが止まらない場合があるのでpauseして対処します.
@@ -101,21 +111,24 @@ class SceneViewController: UIViewController {
     }
 
     internal func onClickPauseBtn(_ sender: UIButton) {
-        Sound.prepareToPlay("pause")
-        Sound.play()
+        pauseSound.play()
         skView.isPaused = true
         countdownView.stop()
         self.view.addSubview(pauseMenu)
         sendPauseData(type: PauseType.pause)
+        Bgm.stop()
     }
     
     @IBAction func onClickResumeBtn(_ sender: UIButton) {
+        btnSound.play()
         skView.isPaused = false
         pauseMenu.removeFromSuperview()
         sendPauseData(type: PauseType.resume)
+        Bgm.play()
     }
 
     @IBAction func onClickQuitBtn(_ sender: UIButton) {
+        btnSound.play()
         let onePlayVC = Util.getForegroundViewController()
         onePlayVC.dismiss(animated: true, completion: nil)
         sendPauseData(type: PauseType.quit)
@@ -124,9 +137,11 @@ class SceneViewController: UIViewController {
 //    one play only.
     @IBAction func restartBtn(_ sender: UIButton) {
         if isMultiPlay {
+            btnErrorSound.play()
             alertUtil.eroorMsg(title: "注意", msg: "この機能はマルチプレイモードではご利用できません")
             return
         }
+        btnSound.play()
         self.loadView()
         self.viewDidLoad()
     }

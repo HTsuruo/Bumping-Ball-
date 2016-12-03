@@ -22,6 +22,7 @@ class FinishView: UIView {
     var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     var vc: UIViewController!
     var scenevc: SceneViewController!
+    let btnSound = Sound.prepareToPlay("button")
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -51,6 +52,7 @@ class FinishView: UIView {
     }
     
     @IBAction func onClickToTopBtn(_ sender: UIButton) {
+        btnSound.play()
         vc.dismiss(animated: true, completion: nil)
         scenevc.skView.isPaused = true
         if app.bluetoothSession != nil {
@@ -59,12 +61,14 @@ class FinishView: UIView {
     }
     
     @IBAction func onClickAgainBtn(_ sender: UIButton) {
+        btnSound.play()
         scenevc.skView.isPaused = true
         vc.loadView()
         vc.viewDidLoad()
     }
     
     @IBAction func onClickTwitterBtn(_ sender: UIButton) {
+        btnSound.play()
         let text = "【Bumping Ball+】"
         let composeViewController: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
         composeViewController.setInitialText(text)
@@ -72,6 +76,7 @@ class FinishView: UIView {
     }
     
     @IBAction func onClickFacebookBtn(_ sender: UIButton) {
+        btnSound.play()
         let text = "【Bumping Ball+】"
         let composeViewController: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
         composeViewController.setInitialText(text)
@@ -79,6 +84,7 @@ class FinishView: UIView {
     }
     
     @IBAction func onClickLineBtn(_ sender: UIButton) {
+        btnSound.play()
         let text: String! = "【Bumping Ball+】"
         let encodeMessage: String! = text.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         let messageURL: URL! = URL( string: "line://msg/text/" + encodeMessage )

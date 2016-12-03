@@ -36,6 +36,11 @@ class SettingCell: UITableViewCell {
         switch settingType {
         case .music:
             ud.set(!sender.isOn, forKey: udKey.off_music)
+            if sender.isOn {
+                Bgm.playBgm(filename: Bgm.topMusic)
+            } else {
+                Bgm.stop()
+            }
             break
         case .sound:
             ud.set(!sender.isOn, forKey: udKey.off_sound)

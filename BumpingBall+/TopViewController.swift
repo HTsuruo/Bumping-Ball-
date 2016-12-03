@@ -20,6 +20,8 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
 //    @IBOutlet weak var pickerView: UIPickerView!
     var levelSelectView: LevelSelectView! = nil
     let bkview = UIView(frame: CGRect(x: 0, y: 0, width: CGFloat.WIDTH, height: CGFloat.HEIGHT))
+    let btnSound = Sound.prepareToPlay("button")
+    let btnErorrSound = Sound.prepareToPlay("button_error")
     
     fileprivate let difficulties: NSArray = ["Easy", "Normal", "Hard"]
     
@@ -27,6 +29,10 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
         bkview.isHidden = true
         if let view = levelSelectView {
             view.removeFromSuperview()
+        }
+//        bgmが止まっていたら流す
+        if !Bgm.isPlaying() {
+            Bgm.playBgm(filename: Bgm.topMusic)
         }
     }
     
@@ -54,6 +60,7 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
         }
         self.view.addSubview(skView)
         self.view.sendSubview(toBack: skView)
+        Bgm.playBgm(filename: Bgm.topMusic)
     }
     
     override func didReceiveMemoryWarning() {
@@ -63,6 +70,7 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
     
     
     @IBAction func onClickOnePlayBtn(_ sender: UIButton) {
+        btnSound.play()
         app.selectedPlay = PlayType.one 
         levelSelectView = LevelSelectView(frame: CGRect(x: 0, y: 0, width: CGFloat.WIDTH-125, height: CGFloat.HEIGHT-250))
         levelSelectView.center = CGFloat.CENTER
@@ -72,11 +80,13 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
     }
     
     @IBAction func onClickSecondBtn(_ sender: UIButton) {
+        btnSound.play()
         app.selectedPlay = PlayType.bluetooth
         transitionToPlay()
     }
     
     @IBAction func onClickThirdBtn(_ sender: UIButton) {
+        btnErorrSound.play()
         let alertUtil = AlertUtil()
         alertUtil.eroorMsg(title: "お知らせ", msg: "GameCenterによる対戦機能は現在ご利用いただけません")
     }
@@ -87,6 +97,7 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
     
     /** ランキング **/
     @IBAction func onClickRankBtn(_ sender: UIButton) {
+        btnSound.play()
         sendAllScore()
         let localPlayer = GKLocalPlayer()
         localPlayer.loadDefaultLeaderboardIdentifier { (leaderboardIdentifier, error) in
@@ -104,11 +115,13 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
     
     /** ヘルプ **/
     @IBAction func onClickHelpBtn(_ sender: UIButton) {
+        btnSound.play()
         self.performSegue(withIdentifier: "toHelp", sender: self)
     }
     
     /** 設定 **/
     @IBAction func onClickSettingBtn(_ sender: UIButton) {
+        btnSound.play()
         self.performSegue(withIdentifier: "toSetting", sender: self)
     }
     
