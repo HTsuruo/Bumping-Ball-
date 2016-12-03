@@ -9,8 +9,8 @@
 import UIKit
 import SpriteKit
 
-class StageSign: SKSpriteNode {
-    
+//class StageSign: SKSpriteNode {
+//    
 //    init() {
 //        let texture = SKTexture(imageNamed: "stage_1")
 //        super.init(texture: texture)
@@ -18,5 +18,5 @@ class StageSign: SKSpriteNode {
 //        let action = animation.chargeMeterAnimation(0.8)
 //        self.run(action)
 //    }
-
-}
+//
+//}

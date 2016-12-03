@@ -97,6 +97,8 @@
 		5690AB1A1DCDADE200ED0EC8 /* item_oneup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5690AB191DCDADE200ED0EC8 /* item_oneup@2x.png */; };
 		5698E9E71DBA77FA0078DC53 /* WaitingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698E9E51DBA77FA0078DC53 /* WaitingView.swift */; };
 		5698E9E81DBA77FA0078DC53 /* WaitingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5698E9E61DBA77FA0078DC53 /* WaitingView.xib */; };
+		569EC82B1DEC63AD00A96E9B /* mimei.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 569EC82A1DEC63AD00A96E9B /* mimei.mp3 */; };
+		569EC82D1DEC685B00A96E9B /* button.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 569EC82C1DEC685B00A96E9B /* button.mp3 */; };
 		56A528601DB9BF1700AEFA9F /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A5285F1DB9BF1700AEFA9F /* extension.swift */; };
 		56AC95801CB16D0000B31FE3 /* bigger.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56AC957E1CB16D0000B31FE3 /* bigger.mp3 */; };
 		56AC95811CB16D0000B31FE3 /* launch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 56AC957F1CB16D0000B31FE3 /* launch.mp3 */; };
@@ -309,6 +311,8 @@
 		5690AB191DCDADE200ED0EC8 /* item_oneup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "item_oneup@2x.png"; path = "img/balls/item/item_oneup@2x.png"; sourceTree = SOURCE_ROOT; };
 		5698E9E51DBA77FA0078DC53 /* WaitingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WaitingView.swift; path = view/multiplay/WaitingView.swift; sourceTree = "<group>"; };
 		5698E9E61DBA77FA0078DC53 /* WaitingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WaitingView.xib; path = view/multiplay/WaitingView.xib; sourceTree = "<group>"; };
+		569EC82A1DEC63AD00A96E9B /* mimei.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = mimei.mp3; path = music/mimei.mp3; sourceTree = SOURCE_ROOT; };
+		569EC82C1DEC685B00A96E9B /* button.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = button.mp3; path = sound/button.mp3; sourceTree = SOURCE_ROOT; };
 		56A5285F1DB9BF1700AEFA9F /* extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		56AC957E1CB16D0000B31FE3 /* bigger.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bigger.mp3; path = sound/bigger.mp3; sourceTree = SOURCE_ROOT; };
 		56AC957F1CB16D0000B31FE3 /* launch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = launch.mp3; path = sound/launch.mp3; sourceTree = SOURCE_ROOT; };
@@ -590,6 +594,7 @@
 		56AC957D1CB16CEF00B31FE3 /* sound */ = {
 			isa = PBXGroup;
 			children = (
+				569EC82C1DEC685B00A96E9B /* button.mp3 */,
 				5613D4C11DD0D46700B165E1 /* collision.mp3 */,
 				56AC95A91CB2BDD400B31FE3 /* pause.mp3 */,
 				56AC957E1CB16D0000B31FE3 /* bigger.mp3 */,
@@ -905,6 +910,7 @@
 		56DDBD3A1DD6C70400CDBD27 /* music */ = {
 			isa = PBXGroup;
 			children = (
+				569EC82A1DEC63AD00A96E9B /* mimei.mp3 */,
 				56DDBD3B1DD6C7E900CDBD27 /* eternal_galaxy.mp3 */,
 				56DDBD3C1DD6C7E900CDBD27 /* texture.mp3 */,
 			);
@@ -1099,6 +1105,7 @@
 				56BB367E1D731AF300AD1603 /* backBtn@2x.png in Resources */,
 				561B35881DD04BD9002E13C9 /* normalBtn@2x.png in Resources */,
 				5613D4BF1DD05E7400B165E1 /* circle_red@2x.png in Resources */,
+				569EC82B1DEC63AD00A96E9B /* mimei.mp3 in Resources */,
 				56BD47831DC5EEFA003AA705 /* setting@2x.png in Resources */,
 				566176EB1D6881EC00AF10BA /* chargeMeter@2x.png in Resources */,
 				56B802531D684281007B79A7 /* Candara.ttf in Resources */,
@@ -1135,6 +1142,7 @@
 				5635C2181DD8979D00C6AACE /* gamecenterIcon@2x.png in Resources */,
 				56AC95AA1CB2BDD400B31FE3 /* pause.mp3 in Resources */,
 				566D0CE41DCCB7BF0051BAD4 /* spark_triangle@2x.png in Resources */,
+				569EC82D1DEC685B00A96E9B /* button.mp3 in Resources */,
 				56AC95A81CB2BCFD00B31FE3 /* PauseMenu.xib in Resources */,
 				561BCFFB1D72F9A400766B36 /* rankBtn@2x.png in Resources */,
 				5613D4B91DD057B300B165E1 /* circle_blue@2x.png in Resources */,

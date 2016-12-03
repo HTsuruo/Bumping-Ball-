@@ -17,6 +17,7 @@ class TopScene: SKScene, SKPhysicsContactDelegate {
 //        changeBkColor()
         self.backgroundColor = UIColor.clear
         createCenterCircle()
+        self.run(Sound.topMusic)
     }
     
     override func update(_ currentTime: TimeInterval) {

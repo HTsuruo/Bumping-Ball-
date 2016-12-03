@@ -18,7 +18,6 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
     var sceneView = SceneViewController()
     @IBOutlet weak var onePlayBtn: SpringButton!
 //    @IBOutlet weak var pickerView: UIPickerView!
-    //popup
     var levelSelectView: LevelSelectView! = nil
     let bkview = UIView(frame: CGRect(x: 0, y: 0, width: CGFloat.WIDTH, height: CGFloat.HEIGHT))
     
@@ -29,13 +28,13 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
         if let view = levelSelectView {
             view.removeFromSuperview()
         }
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         Util.versionCheck()
         popupBkInit()
+        
 //        pickerViewInit()
     
         if let scene = TopScene(fileNamed:"TopScene") {
@@ -138,6 +137,10 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
     func onTap(_ sender: UITapGestureRecognizer) {
         levelSelectView.removeFromSuperview()
         bkview.isHidden = true
+    }
+    
+    func onClickBtnSound() {
+        Sound.button
     }
     
     /** picker view setting **/
