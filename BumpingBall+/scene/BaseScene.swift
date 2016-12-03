@@ -403,7 +403,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
             return
         }
         let stageSign = StageSign(frame: CGRect(x: 0, y: 0, width: CGFloat.HEIGHT, height: define.STAGE_SIGN_HEIGHT))
-        stageSign.setNumber(stage: app.stage)
+        stageSign.setNumber(level: app.level)
         self.view?.addSubview(stageSign)
     }
 }

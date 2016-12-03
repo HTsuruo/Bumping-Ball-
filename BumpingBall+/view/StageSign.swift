@@ -56,7 +56,7 @@ class StageSign: UIView {
         })
     }
     
-    func setNumber(stage: Int) {
-        label.text = "S T A G E \(stage)"
+    func setNumber(level: Int) {
+        label.text = "L E V E L \(level)"
     }
 }
