@@ -26,6 +26,7 @@ struct define {
     static let COMBO_FOR_ITEM_BALL = 2
     static let SPECIAL_MODE_TIME = 15
     static let VERSION_URL = "http://tsurutsuru.php.xdomain.jp/bumping_ball_plus/version.php"
+    static let STAGE_SIGN_HEIGHT: CGFloat = 60.0
 }
 
 struct Util {

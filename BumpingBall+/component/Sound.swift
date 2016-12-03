@@ -32,6 +32,10 @@ class Sound: NSObject {
         }
     }
     
+    static func play() {
+        self.audioPlayer.play()
+    }
+    
     static func prepareToPlay(filename: String) {
         let url = Bundle.main.bundleURL.appendingPathComponent(filename)
         

@@ -132,6 +132,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
             if app.isStart != nil && app.isStart! {
                 isStart = true
                 print("start!!")
+                showStageSign()
                 let music = SKAudioNode(fileNamed: "eternal_galaxy.mp3")
 //                self.addChild(music)
             }
@@ -397,4 +398,12 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         touchViewTxt.chargeReset()
     }
     
+    func showStageSign() {
+        if app.selectedDiffculty == .tutorial {
+            return
+        }
+        let stageSign = StageSign(frame: CGRect(x: 0, y: 0, width: CGFloat.HEIGHT, height: define.STAGE_SIGN_HEIGHT))
+        stageSign.setNumber(stage: app.stage)
+        self.view?.addSubview(stageSign)
+    }
 }

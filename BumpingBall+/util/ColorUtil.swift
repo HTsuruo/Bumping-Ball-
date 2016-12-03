@@ -23,4 +23,5 @@ struct ColorUtil {
     static let winColor = UIColor.hex(hexStr: "C82506", alpha: 1.0)
     static let text = UIColor.hex(hexStr: "464B51", alpha: 1.0)
     static let goldbk = UIColor.hex(hexStr: "DAA520", alpha: 1.0)
+    static let stageSignBk = UIColor.hex(hexStr: "279CBA", alpha: 0.5)
 }
