@@ -17,8 +17,17 @@ class OnePlayScene: BaseScene {
         super.didMove(to: view)
         playSceneBgm()
         self.view?.addSubview(headerView)
-        countdownView.start()
         print("difficulty: \(app.selectedDiffculty)")
+        startCountdown()
+    }
+    
+    func startCountdown() {
+        //切り替えのタイミング上delayをはさみます.
+        let delay = SKAction.wait(forDuration: 0.5)
+        let run = SKAction.run({
+            self.countdownView.start()
+        })
+        self.run(SKAction.sequence([delay, run]))
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

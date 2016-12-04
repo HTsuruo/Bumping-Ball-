@@ -23,9 +23,9 @@ class SceneViewController: UIViewController {
     @IBOutlet weak var restartBtn: UIButton!
     var isMultiPlay = true
     var alertUtil: AlertUtil! = nil
-    let pauseSound = Sound.prepareToPlay("pause")
-    let btnSound = Sound.prepareToPlay("button")
-    let btnErrorSound = Sound.prepareToPlay("button_error")
+    let pauseSound = Sound.prepareToPlay(Sound.pause)
+    let btnSound = Sound.prepareToPlay(Sound.button)
+    let btnErrorSound = Sound.prepareToPlay(Sound.buttonError)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,8 +44,8 @@ class SceneViewController: UIViewController {
             break
         }
         skView = self.view as! SKView
-        skView.showsFPS = true
-        skView.showsNodeCount = true
+        skView.showsFPS = false
+        skView.showsNodeCount = false
         skView.isMultipleTouchEnabled = false
 //        scene.scaleMode = .resizeFill
         scene.scaleMode = .aspectFill

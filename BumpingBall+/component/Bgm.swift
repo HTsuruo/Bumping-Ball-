@@ -67,4 +67,14 @@ class Bgm: NSObject {
         let off_music = UserDefaults.standard.bool(forKey: udKey.off_music)
          return !off_music && self.path != nil
     }
+    
+    static func setCategoryAmbient() {
+        // itunesで再生中の音楽を止めない
+        _ = try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+    }
+    
+    static func isOtherAudioPlaying() -> Bool {
+        let audiosession = AVAudioSession.sharedInstance()
+        return audiosession.isOtherAudioPlaying
+    }
 }

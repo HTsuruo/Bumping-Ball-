@@ -20,8 +20,8 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
 //    @IBOutlet weak var pickerView: UIPickerView!
     var levelSelectView: LevelSelectView! = nil
     let bkview = UIView(frame: CGRect(x: 0, y: 0, width: CGFloat.WIDTH, height: CGFloat.HEIGHT))
-    let btnSound = Sound.prepareToPlay("button")
-    let btnErorrSound = Sound.prepareToPlay("button_error")
+    let btnSound = Sound.prepareToPlay(Sound.button)
+    let btnErorrSound = Sound.prepareToPlay(Sound.buttonError)
     
     fileprivate let difficulties: NSArray = ["Easy", "Normal", "Hard"]
     

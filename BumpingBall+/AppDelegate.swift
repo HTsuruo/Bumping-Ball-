@@ -44,6 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        FIRApp.configure()
         
         setInitialViewController()
+        Bgm.setCategoryAmbient()
         
         return true
     }

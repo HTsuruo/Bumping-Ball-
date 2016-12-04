@@ -17,6 +17,13 @@ class Sound: NSObject {
     static let collisionNotRemove = SKAction.playSoundFileNamed("collision_not_remove.caf", waitForCompletion: false)
     
 //    scene以外用（ボタンクリックなど）
+    static let button = "button"
+    static let buttonError = "button_error"
+    static let buttonLevelSelect = "button_level_select"
+    static let countdown = "countdown"
+    static let countdownGo = "countdown_go"
+    static let pause = "pause"
+    
     static func prepareToPlay(_ data: String) -> AVAudioPlayer {
         var audioPlayer: AVAudioPlayer = AVAudioPlayer()
         var path: URL! = nil

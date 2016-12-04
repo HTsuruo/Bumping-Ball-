@@ -133,10 +133,12 @@ class BluetoothPlay: BaseScene {
                 self.isPaused = true
                 waitingView.txt.text = "Pausing.."
                 waitingView.show()
+                Bgm.stop()
                 break
             case .resume:
                 self.isPaused = false
                 waitingView.hide()
+                Bgm.play()
                 break
             case .quit:
                 if app.bluetoothSession != nil {

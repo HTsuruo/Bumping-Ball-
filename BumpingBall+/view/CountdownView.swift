@@ -19,6 +19,8 @@ class CountdownView: UIView {
     var countdownTime = 3
     var countdownTimer = Timer()
     var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    let countdownSound = Sound.prepareToPlay(Sound.countdown)
+    let countdownGoSound = Sound.prepareToPlay(Sound.countdownGo)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,6 +40,7 @@ class CountdownView: UIView {
     
     func start() {
         countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(CountdownView.countdown), userInfo: nil, repeats: true)
+        countdownSound.play()
     }
     
     func stop() {
@@ -49,14 +52,17 @@ class CountdownView: UIView {
         
         switch countdownTime {
         case 2:
+            countdownSound.play()
             imageView.image = UIImage(named: "two")
             imageView.animate()
             break
         case 1:
+            countdownSound.play()
             imageView.image = UIImage(named: "one")
             imageView.animate()
             break
         case 0:
+            countdownGoSound.play()
             imageView.image = UIImage(named: "go")
             app.isStart = true
             let w = imageView.frame.width

@@ -127,6 +127,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func update(_ currentTime: TimeInterval) {
+        super.update(currentTime)
         if !isStart {
             if app.isStart != nil && app.isStart! {
                 isStart = true

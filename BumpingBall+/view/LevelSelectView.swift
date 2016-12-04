@@ -16,7 +16,7 @@ class LevelSelectView: UIView {
     @IBOutlet weak var easyBtn: UIButton!
     @IBOutlet weak var normalBtn: UIButton!
     @IBOutlet weak var hardBtn: UIButton!
-    let btnSelectSound = Sound.prepareToPlay("button_level_select")
+    let btnSelectSound = Sound.prepareToPlay(Sound.buttonLevelSelect)
     
     override init(frame: CGRect) {
         super.init(frame: frame)

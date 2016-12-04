@@ -38,6 +38,7 @@ class TutorialViewController: UIViewController {
         NSLocalizedString("tutorial_finger_text_4", comment: ""),
         NSLocalizedString("tutorial_finger_text_5", comment: ""),
     ]
+    let btnSound = Sound.prepareToPlay(Sound.button)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -139,7 +140,7 @@ class TutorialViewController: UIViewController {
     }
     
     @IBAction func onClickNextBtn(_ sender: UIButton) {
-        print("next!!")
+        btnSound.play()
         if tutorialScene.tutorialNumber == tutorialNumberMax {
             if UserDefaults.standard.bool(forKey: udKey.is_not_first) {
                 self.dismiss(animated: true, completion: nil)
