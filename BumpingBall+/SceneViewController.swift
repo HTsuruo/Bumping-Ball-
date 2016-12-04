@@ -9,6 +9,7 @@
 import UIKit
 import SpriteKit
 import AVFoundation
+import MultipeerConnectivity
 
 class SceneViewController: UIViewController {
 
@@ -85,6 +86,11 @@ class SceneViewController: UIViewController {
     
     //sceneのupdateが止まらない場合があるのでpauseして対処します.
     override func viewDidDisappear(_ animated: Bool) {
+        let top = UIApplication.shared.topViewController
+//        blutooth接続用のMCBrowserViewControllerの場合はsceneを止めません.
+        if top is MCBrowserViewController {
+            return
+        }
         skView.scene?.removeFromParent()
         skView.presentScene(nil)
     }
