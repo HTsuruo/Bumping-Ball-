@@ -20,7 +20,7 @@ class Bgm: NSObject {
     
     static func prepareToPlay(_ data: String) {
         do {
-            self.path = URL(fileURLWithPath: Bundle.main.path(forResource: data, ofType: "mp3")!)
+            self.path = URL(fileURLWithPath: Bundle.main.path(forResource: data, ofType: "caf")!)
             try self.audioPlayer = AVAudioPlayer(contentsOf: self.path, fileTypeHint: nil)
             self.audioPlayer.volume = 0.8
             self.audioPlayer.numberOfLoops = -1 //loop
