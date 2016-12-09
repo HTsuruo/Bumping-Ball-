@@ -103,8 +103,6 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        //        ball.ball.runAction(Sound.launch)
-        
         for touche in touches {
             let location = touche.location(in: self)
             let swipe = location.y > touchBeginLocation.y && location.y > touchView.frame.height
@@ -119,6 +117,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         if !inTouch {
             return
         }
+        Sound.play(node: playerBall.ball, action: Sound.launch)
         playerBall.isFire = true
         playerBall.setIsFire()
         let actionMove = SKAction.moveTo(y: define.REMOVE_HEIGHT, duration: Double(playerBall.ballSpeed))
@@ -133,8 +132,6 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
                 isStart = true
                 print("start!!")
                 showStageSign()
-                let music = SKAudioNode(fileNamed: "eternal_galaxy.mp3")
-//                self.addChild(music)
             }
             return
         }
@@ -149,6 +146,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
             createTargetBall()
             last = currentTime
         }
+        
         removeBall()
     }
     
@@ -300,11 +298,15 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         comboCount += 1
         
         if comboCount == 1 {
+            Sound.play(node: self, action: Sound.collision)
             return
         }
         //        最大で5コンボ
-        if comboCount > (MAX_COMBO_COUNT + 1) {
+        if comboCount > MAX_COMBO_COUNT {
             comboCount = MAX_COMBO_COUNT + 1
+            Sound.play(node: self, action: Sound.collision_perfect)
+        } else {
+            Sound.play(node: self, action: Sound.collision)
         }
         
         let count = comboCount - 1

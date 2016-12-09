@@ -59,6 +59,7 @@ class OnePlayScene: BaseScene {
     override func tballComesInTouchArea(_ node: SKSpriteNode) {
         super.tballComesInTouchArea(node)
         self.isFin = true
+        Sound.play(node: self, action: Sound.gameover)
         self.finish()
     }
     
@@ -71,7 +72,7 @@ class OnePlayScene: BaseScene {
             removeTargetBall(secondNode, id: targetId)
             updateScore()
         } else {
-            self.run(Sound.collisionNotRemove)
+            Sound.play(node: self, action: Sound.collisionNotRemove)
             changeTargetBall(firstNode, tBall: secondNode, id: targetId)
         }
     }

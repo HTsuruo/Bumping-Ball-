@@ -117,7 +117,7 @@ class SceneViewController: UIViewController {
     }
 
     internal func onClickPauseBtn(_ sender: UIButton) {
-        pauseSound.play()
+        Sound.play(audioPlayer: pauseSound)
         skView.isPaused = true
         countdownView.stop()
         self.view.addSubview(pauseMenu)
@@ -126,7 +126,7 @@ class SceneViewController: UIViewController {
     }
     
     @IBAction func onClickResumeBtn(_ sender: UIButton) {
-        btnSound.play()
+        Sound.play(audioPlayer: btnSound)
         skView.isPaused = false
         pauseMenu.removeFromSuperview()
         sendPauseData(type: PauseType.resume)
@@ -134,7 +134,7 @@ class SceneViewController: UIViewController {
     }
 
     @IBAction func onClickQuitBtn(_ sender: UIButton) {
-        btnSound.play()
+        Sound.play(audioPlayer: btnSound)
         let onePlayVC = Util.getForegroundViewController()
         onePlayVC.dismiss(animated: true, completion: nil)
         sendPauseData(type: PauseType.quit)
@@ -147,7 +147,7 @@ class SceneViewController: UIViewController {
             alertUtil.eroorMsg(title: "注意", msg: "この機能はマルチプレイモードではご利用できません")
             return
         }
-        btnSound.play()
+        Sound.play(audioPlayer: btnSound)
         self.loadView()
         self.viewDidLoad()
     }

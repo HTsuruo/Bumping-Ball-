@@ -72,6 +72,7 @@ class BluetoothPlay: BaseScene {
         myLifeCount -= 1
         sendLifeData(myLifeCount)
         if myLifeCount < 1 {
+            Sound.play(node: self, action: Sound.gameover)
             self.isFin = true
             self.finish()
             self.finishView.mainLabel.text = "LOSE.."
@@ -119,6 +120,7 @@ class BluetoothPlay: BaseScene {
             partnerLifeCount = lifeCount
             self.headerViewMatch.disappearAnimation(PlayerType.player2, life: lifeCount + 1)
             if lifeCount < 1 {
+                Sound.play(node: self, action: Sound.gameover)
                 self.isFin = true
                 self.finish()
                 self.finishView.mainLabel.text = "WIN!!"
@@ -231,7 +233,7 @@ class BluetoothPlay: BaseScene {
                 }
             }
         } else {
-            self.run(Sound.collisionNotRemove)
+            Sound.play(node: self, action: Sound.collisionNotRemove)
             changeTargetBall(firstNode, tBall: secondNode, id: targetId)
         }
     }

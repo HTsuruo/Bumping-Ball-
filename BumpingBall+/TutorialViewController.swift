@@ -140,7 +140,7 @@ class TutorialViewController: UIViewController {
     }
     
     @IBAction func onClickNextBtn(_ sender: UIButton) {
-        btnSound.play()
+        Sound.play(audioPlayer: btnSound)
         if tutorialScene.tutorialNumber == tutorialNumberMax {
             if UserDefaults.standard.bool(forKey: udKey.is_not_first) {
                 self.dismiss(animated: true, completion: nil)

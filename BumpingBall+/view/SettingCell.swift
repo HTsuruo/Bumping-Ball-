@@ -15,6 +15,7 @@ class SettingCell: UITableViewCell {
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var switchBtn: UISwitch!
     var settingType: SettingType = SettingType.music
+    let btnSound = Sound.prepareToPlay(Sound.button)
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -44,6 +45,9 @@ class SettingCell: UITableViewCell {
             break
         case .sound:
             ud.set(!sender.isOn, forKey: udKey.off_sound)
+            if sender.isOn {
+                Sound.play(audioPlayer: btnSound)
+            }
             break
         default:
             break

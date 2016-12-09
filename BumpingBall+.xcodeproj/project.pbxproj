@@ -83,6 +83,10 @@
 		5666F83D1D646090001EFC57 /* one@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5666F8391D646090001EFC57 /* one@2x.png */; };
 		5666F83E1D646090001EFC57 /* three@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5666F83A1D646090001EFC57 /* three@2x.png */; };
 		5666F83F1D646090001EFC57 /* two@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5666F83B1D646090001EFC57 /* two@2x.png */; };
+		5669BCFA1DFB1FF600E08ECA /* collision_perfect.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5669BCF61DFB1FE800E08ECA /* collision_perfect.caf */; };
+		5669BCFB1DFB1FF600E08ECA /* collision.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5669BCF71DFB1FE800E08ECA /* collision.caf */; };
+		5669BCFC1DFB1FF600E08ECA /* launch_gold.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5669BCF81DFB1FE800E08ECA /* launch_gold.caf */; };
+		5669BCFF1DFB206000E08ECA /* gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = 5669BCFE1DFB205500E08ECA /* gameover.caf */; };
 		566B38F71DC63DE40026083B /* LicenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566B38F61DC63DE40026083B /* LicenceViewController.swift */; };
 		566B38F91DC655200026083B /* closeBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 566B38F81DC655200026083B /* closeBtn@2x.png */; };
 		566B390A1DC65FB50026083B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 566B390C1DC65FB50026083B /* InfoPlist.strings */; };
@@ -300,6 +304,10 @@
 		5666F8391D646090001EFC57 /* one@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "one@2x.png"; path = "img/countdown/one@2x.png"; sourceTree = SOURCE_ROOT; };
 		5666F83A1D646090001EFC57 /* three@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "three@2x.png"; path = "img/countdown/three@2x.png"; sourceTree = SOURCE_ROOT; };
 		5666F83B1D646090001EFC57 /* two@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "two@2x.png"; path = "img/countdown/two@2x.png"; sourceTree = SOURCE_ROOT; };
+		5669BCF61DFB1FE800E08ECA /* collision_perfect.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = collision_perfect.caf; path = sound/collision_perfect.caf; sourceTree = SOURCE_ROOT; };
+		5669BCF71DFB1FE800E08ECA /* collision.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = collision.caf; path = sound/collision.caf; sourceTree = SOURCE_ROOT; };
+		5669BCF81DFB1FE800E08ECA /* launch_gold.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = launch_gold.caf; path = sound/launch_gold.caf; sourceTree = SOURCE_ROOT; };
+		5669BCFE1DFB205500E08ECA /* gameover.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = gameover.caf; path = sound/gameover.caf; sourceTree = SOURCE_ROOT; };
 		566B38F61DC63DE40026083B /* LicenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenceViewController.swift; sourceTree = "<group>"; };
 		566B38F81DC655200026083B /* closeBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "closeBtn@2x.png"; path = "img/closeBtn@2x.png"; sourceTree = SOURCE_ROOT; };
 		566B39051DC65EB90026083B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
@@ -598,6 +606,10 @@
 		56AC957D1CB16CEF00B31FE3 /* sound */ = {
 			isa = PBXGroup;
 			children = (
+				5669BCFE1DFB205500E08ECA /* gameover.caf */,
+				5669BCF61DFB1FE800E08ECA /* collision_perfect.caf */,
+				5669BCF71DFB1FE800E08ECA /* collision.caf */,
+				5669BCF81DFB1FE800E08ECA /* launch_gold.caf */,
 				5618C10A1DF407530060A9DE /* bigger.caf */,
 				5618C10B1DF407530060A9DE /* button_error.caf */,
 				5618C10C1DF407530060A9DE /* button_level_select.caf */,
@@ -1113,6 +1125,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5669BCFF1DFB206000E08ECA /* gameover.caf in Resources */,
+				5669BCFA1DFB1FF600E08ECA /* collision_perfect.caf in Resources */,
+				5669BCFB1DFB1FF600E08ECA /* collision.caf in Resources */,
+				5669BCFC1DFB1FF600E08ECA /* launch_gold.caf in Resources */,
 				5618C1131DF4076A0060A9DE /* bigger.caf in Resources */,
 				5618C1141DF4076A0060A9DE /* button_error.caf in Resources */,
 				5618C1151DF4076A0060A9DE /* button_level_select.caf in Resources */,

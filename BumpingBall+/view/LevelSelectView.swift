@@ -41,7 +41,7 @@ class LevelSelectView: UIView {
     }
 
     @IBAction func onClickEasyBtn(_ sender: UIButton) {
-        btnSelectSound.play()
+        Sound.play(audioPlayer: btnSelectSound)
         app.selectedDiffculty = DifficultyType.easy
         transitionToPlay()
         normalBtn.isHidden = true
@@ -49,7 +49,7 @@ class LevelSelectView: UIView {
     }
     
     @IBAction func onClickNormalBtn(_ sender: UIButton) {
-        btnSelectSound.play()
+        Sound.play(audioPlayer: btnSelectSound)
         app.selectedDiffculty = DifficultyType.normal
         transitionToPlay()
         easyBtn.isHidden = true
@@ -57,7 +57,7 @@ class LevelSelectView: UIView {
     }
     
     @IBAction func onClickHardBtn(_ sender: UIButton) {
-        btnSelectSound.play()
+        Sound.play(audioPlayer: btnSelectSound)
         app.selectedDiffculty = DifficultyType.hard
         transitionToPlay()
         easyBtn.isHidden = true

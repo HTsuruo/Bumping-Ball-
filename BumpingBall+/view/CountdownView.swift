@@ -40,7 +40,7 @@ class CountdownView: UIView {
     
     func start() {
         countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(CountdownView.countdown), userInfo: nil, repeats: true)
-        countdownSound.play()
+        Sound.play(audioPlayer: countdownSound)
     }
     
     func stop() {
@@ -52,17 +52,17 @@ class CountdownView: UIView {
         
         switch countdownTime {
         case 2:
-            countdownSound.play()
+            Sound.play(audioPlayer: countdownSound)
             imageView.image = UIImage(named: "two")
             imageView.animate()
             break
         case 1:
-            countdownSound.play()
+            Sound.play(audioPlayer: countdownSound)
             imageView.image = UIImage(named: "one")
             imageView.animate()
             break
         case 0:
-            countdownGoSound.play()
+            Sound.play(audioPlayer: countdownGoSound)
             imageView.image = UIImage(named: "go")
             app.isStart = true
             let w = imageView.frame.width

@@ -70,7 +70,7 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
     
     
     @IBAction func onClickOnePlayBtn(_ sender: UIButton) {
-        btnSound.play()
+        Sound.play(audioPlayer: btnSound)
         app.selectedPlay = PlayType.one 
         levelSelectView = LevelSelectView(frame: CGRect(x: 0, y: 0, width: CGFloat.WIDTH-125, height: CGFloat.HEIGHT-250))
         levelSelectView.center = CGFloat.CENTER
@@ -80,13 +80,13 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
     }
     
     @IBAction func onClickSecondBtn(_ sender: UIButton) {
-        btnSound.play()
+        Sound.play(audioPlayer: btnSound)
         app.selectedPlay = PlayType.bluetooth
         transitionToPlay()
     }
     
     @IBAction func onClickThirdBtn(_ sender: UIButton) {
-        btnErorrSound.play()
+        Sound.play(audioPlayer: btnSound)
         let alertUtil = AlertUtil()
         alertUtil.eroorMsg(title: "お知らせ", msg: "GameCenterによる対戦機能は現在ご利用いただけません")
     }
@@ -97,7 +97,7 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
     
     /** ランキング **/
     @IBAction func onClickRankBtn(_ sender: UIButton) {
-        btnSound.play()
+        Sound.play(audioPlayer: btnSound)
         sendAllScore()
         let localPlayer = GKLocalPlayer()
         localPlayer.loadDefaultLeaderboardIdentifier { (leaderboardIdentifier, error) in
@@ -115,13 +115,13 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
     
     /** ヘルプ **/
     @IBAction func onClickHelpBtn(_ sender: UIButton) {
-        btnSound.play()
+        Sound.play(audioPlayer: btnSound)
         self.performSegue(withIdentifier: "toHelp", sender: self)
     }
     
     /** 設定 **/
     @IBAction func onClickSettingBtn(_ sender: UIButton) {
-        btnSound.play()
+        Sound.play(audioPlayer: btnSound)
         self.performSegue(withIdentifier: "toSetting", sender: self)
     }
     
@@ -149,9 +149,6 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
     func onTap(_ sender: UITapGestureRecognizer) {
         levelSelectView.removeFromSuperview()
         bkview.isHidden = true
-    }
-    
-    func onClickBtnSound() {
     }
     
     /** picker view setting **/
