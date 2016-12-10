@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var bluetoothSession: MCSession? = nil
     var music: SKAudioNode? = nil
     var level = 0
+    var accelation: Double = 0.0
+    var interval: Double = 0.0
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

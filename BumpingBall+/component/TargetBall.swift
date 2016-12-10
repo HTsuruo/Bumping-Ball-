@@ -51,8 +51,7 @@ class TargetBall: SimpleTargetBall {
     }
     
     override func setAccelSpeed() {
-        let difficulty = Difficulty()
-        let speed = difficulty.getAccelerationSpeed()
+        let speed = app.accelation
         self.dx += speed
         self.dy += speed
     }

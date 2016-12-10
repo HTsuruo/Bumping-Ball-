@@ -29,6 +29,10 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     let MAX_COMBO_COUNT = 5
     let charge = ChargeMeter()
     private var inTouch = false
+    var timer: CFTimeInterval!
+    var timecounter = 0
+    var level = Level()
+    let btnSelectSound = Sound.prepareToPlay(Sound.buttonLevelSelect)
     
     // 当たり判定のカテゴリを準備する.
     let ballCategory: UInt32 = 0x1 << 0
@@ -65,6 +69,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         // set background animation.
         let snow = animation.backgroundAnimation()
         self.addChild(snow)
+        level.updateParam()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -139,10 +144,20 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         if last == nil {
             createTargetBall()
             last = currentTime
+            timer = currentTime
         }
         
-        if last + difficulty.getInterval() <= currentTime {
-            print("getInterval : \(difficulty.getInterval())")
+        if timer + 1.0 <= currentTime {
+            timecounter += 1
+            if timecounter % 15 == 0 {
+                app.level += 1
+                level.updateParam()
+                showStageSign()
+            }
+            timer = currentTime
+        }
+        
+        if last + app.interval <= currentTime {
             createTargetBall()
             last = currentTime
         }
@@ -404,6 +419,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         if app.selectedDiffculty == .tutorial {
             return
         }
+        Sound.play(audioPlayer: btnSelectSound)
         let stageSign = StageSign(frame: CGRect(x: 0, y: 0, width: CGFloat.HEIGHT, height: define.STAGE_SIGN_HEIGHT))
         stageSign.setNumber(level: app.level)
         self.view?.addSubview(stageSign)
