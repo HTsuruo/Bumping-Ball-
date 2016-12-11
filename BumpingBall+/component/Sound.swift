@@ -18,6 +18,7 @@ class Sound: NSObject {
     static let collision = SKAction.playSoundFileNamed("collision.caf", waitForCompletion: false)
     static let collision_perfect = SKAction.playSoundFileNamed("collision_perfect.caf", waitForCompletion: false)
     static let gameover = SKAction.playSoundFileNamed("gameover.caf", waitForCompletion: false)
+    static let itemballLaunch = SKAction.playSoundFileNamed("itemball_launch.caf", waitForCompletion: false)
     
 //    scene以外用（ボタンクリックなど）
     static let button = "button"

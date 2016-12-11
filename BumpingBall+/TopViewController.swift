@@ -88,7 +88,7 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
     }
     
     @IBAction func onClickThirdBtn(_ sender: UIButton) {
-        Sound.play(audioPlayer: btnSound)
+        Sound.play(audioPlayer: btnErorrSound)
         let alertUtil = AlertUtil()
         alertUtil.eroorMsg(title: NSLocalizedString("info", comment: ""), msg: NSLocalizedString("gamecenter_not_play", comment: ""))
     }

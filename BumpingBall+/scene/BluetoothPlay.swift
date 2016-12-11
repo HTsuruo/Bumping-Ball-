@@ -209,6 +209,7 @@ class BluetoothPlay: BaseScene {
                 if isItem {
                     let isOk = (targetIdType.isSpecialItemBall() && playerBall.isGold(firstNode)) || (!targetIdType.isSpecialItemBall() && !playerBall.isGold(firstNode))
                     if isOk {
+                        Sound.play(node: secondNode, action: Sound.itemballLaunch)
                         secondNode.userData?.setValue(true, forKey: "isCollision")
                         launchItemBall(secondNode, id: targetId)
                         sendBallData(targetId)

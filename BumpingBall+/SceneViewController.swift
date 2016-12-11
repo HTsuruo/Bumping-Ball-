@@ -61,6 +61,11 @@ class SceneViewController: UIViewController {
         self.view.addSubview(pauseBtn)
         loadNib()
         
+        if app.selectedPlay != .one {
+            app.level = 1
+            return
+        }
+        
         if app.selectedDiffculty == .hard {
             app.level = 10
         } else {

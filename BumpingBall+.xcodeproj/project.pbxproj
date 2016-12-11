@@ -156,7 +156,6 @@
 		56BF57851CD3B35400923509 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BF57841CD3B35400923509 /* Social.framework */; };
 		56BF578A1CD4BBBD00923509 /* arrows@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57881CD4BBBD00923509 /* arrows@2x.png */; };
 		56BF578B1CD4BBBD00923509 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57891CD4BBBD00923509 /* home@2x.png */; };
-		56BF57941CD72C6100923509 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BF57931CD72C6100923509 /* Difficulty.swift */; };
 		56BF57B41CD7342F00923509 /* BallImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BF57B31CD7342F00923509 /* BallImage.swift */; };
 		56BF57CF1CD7902000923509 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57CC1CD7902000923509 /* Roboto-Bold.ttf */; };
 		56BF57D01CD7902000923509 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57CD1CD7902000923509 /* Roboto-Light.ttf */; };
@@ -164,6 +163,8 @@
 		56BF57D31CD7904700923509 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57CD1CD7902000923509 /* Roboto-Light.ttf */; };
 		56BF57D61CD798D500923509 /* COOPBL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57D51CD798D500923509 /* COOPBL.ttf */; };
 		56C5E4CD1DFD2416003E66C2 /* hardBtnOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56C5E4CC1DFD2416003E66C2 /* hardBtnOff@2x.png */; };
+		56C5E4CF1DFD3CDC003E66C2 /* level_multi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56C5E4CE1DFD3CDC003E66C2 /* level_multi.plist */; };
+		56C5E4D11DFD4116003E66C2 /* itemball_launch.caf in Resources */ = {isa = PBXBuildFile; fileRef = 56C5E4D01DFD4102003E66C2 /* itemball_launch.caf */; };
 		56C7254E1DD371CE00DFA113 /* combo_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56C725491DD371CE00DFA113 /* combo_1@2x.png */; };
 		56C7254F1DD371CE00DFA113 /* combo_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56C7254A1DD371CE00DFA113 /* combo_2@2x.png */; };
 		56C725501DD371CE00DFA113 /* combo_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56C7254B1DD371CE00DFA113 /* combo_3@2x.png */; };
@@ -387,12 +388,13 @@
 		56BF57841CD3B35400923509 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		56BF57881CD4BBBD00923509 /* arrows@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrows@2x.png"; path = "img/arrows@2x.png"; sourceTree = SOURCE_ROOT; };
 		56BF57891CD4BBBD00923509 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home@2x.png"; path = "img/home@2x.png"; sourceTree = SOURCE_ROOT; };
-		56BF57931CD72C6100923509 /* Difficulty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Difficulty.swift; path = component/Difficulty.swift; sourceTree = "<group>"; };
 		56BF57B31CD7342F00923509 /* BallImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BallImage.swift; path = component/BallImage.swift; sourceTree = "<group>"; };
 		56BF57CC1CD7902000923509 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "font/Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		56BF57CD1CD7902000923509 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "font/Roboto-Light.ttf"; sourceTree = "<group>"; };
 		56BF57D51CD798D500923509 /* COOPBL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = COOPBL.ttf; path = font/COOPBL.ttf; sourceTree = "<group>"; };
 		56C5E4CC1DFD2416003E66C2 /* hardBtnOff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hardBtnOff@2x.png"; path = "img/level/hardBtnOff@2x.png"; sourceTree = SOURCE_ROOT; };
+		56C5E4CE1DFD3CDC003E66C2 /* level_multi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level_multi.plist; sourceTree = "<group>"; };
+		56C5E4D01DFD4102003E66C2 /* itemball_launch.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = itemball_launch.caf; path = sound/itemball_launch.caf; sourceTree = SOURCE_ROOT; };
 		56C725491DD371CE00DFA113 /* combo_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "combo_1@2x.png"; path = "img/combo/combo_1@2x.png"; sourceTree = SOURCE_ROOT; };
 		56C7254A1DD371CE00DFA113 /* combo_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "combo_2@2x.png"; path = "img/combo/combo_2@2x.png"; sourceTree = SOURCE_ROOT; };
 		56C7254B1DD371CE00DFA113 /* combo_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "combo_3@2x.png"; path = "img/combo/combo_3@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -607,6 +609,7 @@
 		56AC957D1CB16CEF00B31FE3 /* sound */ = {
 			isa = PBXGroup;
 			children = (
+				56C5E4D01DFD4102003E66C2 /* itemball_launch.caf */,
 				5669BCFE1DFB205500E08ECA /* gameover.caf */,
 				5669BCF61DFB1FE800E08ECA /* collision_perfect.caf */,
 				5669BCF71DFB1FE800E08ECA /* collision.caf */,
@@ -636,7 +639,6 @@
 				56AC959C1CB24B3000B31FE3 /* Sound.swift */,
 				5630775D1DF2C90C00966F29 /* Bgm.swift */,
 				565DDA521CBD4707003C9F0D /* Animation.swift */,
-				56BF57931CD72C6100923509 /* Difficulty.swift */,
 				5669BD001DFBBF3700E08ECA /* Level.swift */,
 				56BF57B31CD7342F00923509 /* BallImage.swift */,
 				5600C3951D688B79009C5883 /* ChargeMeter.swift */,
@@ -749,6 +751,7 @@
 				56BB7F3C1CAD345200675AE8 /* LaunchScreen.storyboard */,
 				5607D7DC1DD9985200BEDAC9 /* config.plist */,
 				5669BD021DFBFAF800E08ECA /* level.plist */,
+				56C5E4CE1DFD3CDC003E66C2 /* level_multi.plist */,
 				56BB7F3F1CAD345200675AE8 /* Info.plist */,
 				56BDE3D71D7A5D0500247E36 /* GoogleService-Info.plist */,
 				56D1AAAB1D83B00200B24949 /* Localizable.strings */,
@@ -1125,6 +1128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56C5E4D11DFD4116003E66C2 /* itemball_launch.caf in Resources */,
 				5669BCFF1DFB206000E08ECA /* gameover.caf in Resources */,
 				5669BCFA1DFB1FF600E08ECA /* collision_perfect.caf in Resources */,
 				5669BCFB1DFB1FF600E08ECA /* collision.caf in Resources */,
@@ -1236,6 +1240,7 @@
 				5666F83F1D646090001EFC57 /* two@2x.png in Resources */,
 				5635C20E1DD857BD00C6AACE /* multiModeBtn@2x.png in Resources */,
 				56D160CA1CC50E2C00257404 /* ball_green@2x.png in Resources */,
+				56C5E4CF1DFD3CDC003E66C2 /* level_multi.plist in Resources */,
 				5666F8331D645712001EFC57 /* ball_blue_2@2x.png in Resources */,
 				56700B4C1DC69D2D0099093D /* star@2x.png in Resources */,
 				56E073271DBE1D8C002E634D /* icon_wifi@2x.png in Resources */,
@@ -1480,7 +1485,6 @@
 				56D160C11CC4FCF500257404 /* FinishView.swift in Sources */,
 				56DDBD401DD705F000CDBD27 /* AdUitl.swift in Sources */,
 				560A49871D729FB200DEBB6A /* OnePlayScene.swift in Sources */,
-				56BF57941CD72C6100923509 /* Difficulty.swift in Sources */,
 				566B38F71DC63DE40026083B /* LicenceViewController.swift in Sources */,
 				56E073341DBE45F2002E634D /* GameCenterUtil.swift in Sources */,
 				560A49851D729F5F00DEBB6A /* BaseScene.swift in Sources */,

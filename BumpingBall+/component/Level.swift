@@ -11,14 +11,24 @@ import SpriteKit
 
 class Level {
     var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-    let filepath = Bundle.main.path(forResource: "level", ofType: "plist")
+    var filename = "level"
     var dic: NSDictionary? = nil
     
     init() {
+        if app.selectedPlay == .one {
+            filename = "level"
+        } else {
+            filename = "level_multi"
+        }
+        print("filename: \(filename)")
+        let filepath = Bundle.main.path(forResource: filename, ofType: "plist")
         dic = NSDictionary(contentsOfFile: filepath!)
     }
     
     func updateParam() {
+        if app.level == 0 {
+            app.level = 1
+        }
         app.accelation = getAccelation()
         app.interval = getInterval()
         print("level: \(app.level)")

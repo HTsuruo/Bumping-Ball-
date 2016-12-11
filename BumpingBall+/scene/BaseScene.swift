@@ -15,7 +15,6 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     var playerBall = PlayerBall()
     let ballUtil = BallUtil()
     let animation = Animation()
-    let difficulty = Difficulty()
     var last: CFTimeInterval!
     var score = 0
     var comboCount = 0
