@@ -62,7 +62,7 @@ class SceneViewController: UIViewController {
         loadNib()
         
         if app.selectedDiffculty == .hard {
-            app.level = 5
+            app.level = 10
         } else {
             app.level = 1
         }

@@ -61,6 +61,7 @@ class OnePlayScene: BaseScene {
         self.isFin = true
         Sound.play(node: self, action: Sound.gameover)
         self.finish()
+        enableHardMode()
     }
     
     
@@ -77,4 +78,18 @@ class OnePlayScene: BaseScene {
         }
     }
     
+    func enableHardMode() {
+        if app.selectedDiffculty != .normal {
+            return
+        }
+        if UserDefaults.standard.bool(forKey: udKey.hard_mode_on) {
+            return
+        }
+        if app.level < 10 {
+            return
+        }
+        UserDefaults.standard.set(true, forKey: udKey.hard_mode_on)
+        let alert = AlertUtil()
+        alert.custom(title: NSLocalizedString("info", comment: ""), msg: NSLocalizedString("enable_play_hard_mode", comment: ""))
+    }
 }

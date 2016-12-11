@@ -34,6 +34,7 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
         if !Bgm.isPlaying() {
             Bgm.playBgm(filename: Bgm.topMusic)
         }
+        
     }
     
     override func viewDidLoad() {
@@ -61,6 +62,7 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
         self.view.addSubview(skView)
         self.view.sendSubview(toBack: skView)
         Bgm.playBgm(filename: Bgm.topMusic)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -88,7 +90,7 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
     @IBAction func onClickThirdBtn(_ sender: UIButton) {
         Sound.play(audioPlayer: btnSound)
         let alertUtil = AlertUtil()
-        alertUtil.eroorMsg(title: "お知らせ", msg: "GameCenterによる対戦機能は現在ご利用いただけません")
+        alertUtil.eroorMsg(title: NSLocalizedString("info", comment: ""), msg: NSLocalizedString("gamecenter_not_play", comment: ""))
     }
     
     func transitionToPlay() {

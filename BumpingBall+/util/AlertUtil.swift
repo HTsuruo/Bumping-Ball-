@@ -18,7 +18,7 @@ class AlertUtil: NSObject {
     
     func connectionError() {
         let alertView = SCLAlertView()
-        alertView.showError("接続エラー", subTitle: "電波状況の良い環境で再度お試しください")
+        alertView.showError(NSLocalizedString("connection_error_title", comment: ""), subTitle: NSLocalizedString("connection_error_subtitle", comment: ""))
     }
     
     func eroorMsg(title: String, msg: String) {
@@ -55,18 +55,29 @@ class AlertUtil: NSObject {
         let size = CGSize(width: 22, height: 22)
         let icon = FAKFontAwesome.levelUpIcon(withSize:size.width)
         icon?.addAttribute(NSForegroundColorAttributeName, value: UIColor.white)
-        let title = "アップデートのお知らせ"
-        let subTitle = "新しいバージョンで遊べます\nAppStoreよりアップデートしてください"
-        alertView.addButton("アップデートする", backgroundColor: ColorUtil.main, textColor: UIColor.white, showDurationStatus: false, action: {
+        let title = NSLocalizedString("update_info_title", comment: "")
+        let subTitle = NSLocalizedString("update_info_subtitle", comment: "")
+        alertView.addButton(NSLocalizedString("update_yes", comment: ""), backgroundColor: ColorUtil.goldbk, textColor: UIColor.white, showDurationStatus: false, action: {
             let url = NSURL(string: define.APPSTORE_URL)
             if UIApplication.shared.canOpenURL(url as! URL) {
                 UIApplication.shared.openURL(url as! URL)
             }
         })
-        alertView.addButton("アップデートしない", backgroundColor: UIColor.gray, textColor: UIColor.white, showDurationStatus: false, action: {
+        alertView.addButton(NSLocalizedString("update_no", comment: ""), backgroundColor: UIColor.gray, textColor: UIColor.white, showDurationStatus: false, action: {
             alertView.hideView()
         })
-        alertView.showCustom(title, subTitle: subTitle, color: ColorUtil.main, icon: (icon?.image(with: size))!)
+        alertView.showCustom(title, subTitle: subTitle, color: ColorUtil.goldbk, icon: (icon?.image(with: size))!)
+    }
+    
+    func custom(title: String, msg: String) {
+        let appearance = SCLAlertView.SCLAppearance(
+            shouldAutoDismiss: false
+        )
+        let alertView = SCLAlertView(appearance: appearance)
+        let size = CGSize(width: 22, height: 22)
+        let icon = FAKFontAwesome.infoIcon(withSize:size.width)
+        icon?.addAttribute(NSForegroundColorAttributeName, value: UIColor.white)
+        alertView.showCustom(title, subTitle: msg, color: ColorUtil.goldbk, icon: (icon?.image(with: size))!)
     }
 
 }

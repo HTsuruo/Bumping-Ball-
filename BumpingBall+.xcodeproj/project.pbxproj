@@ -163,6 +163,7 @@
 		56BF57D21CD7904700923509 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57CC1CD7902000923509 /* Roboto-Bold.ttf */; };
 		56BF57D31CD7904700923509 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57CD1CD7902000923509 /* Roboto-Light.ttf */; };
 		56BF57D61CD798D500923509 /* COOPBL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56BF57D51CD798D500923509 /* COOPBL.ttf */; };
+		56C5E4CD1DFD2416003E66C2 /* hardBtnOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56C5E4CC1DFD2416003E66C2 /* hardBtnOff@2x.png */; };
 		56C7254E1DD371CE00DFA113 /* combo_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56C725491DD371CE00DFA113 /* combo_1@2x.png */; };
 		56C7254F1DD371CE00DFA113 /* combo_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56C7254A1DD371CE00DFA113 /* combo_2@2x.png */; };
 		56C725501DD371CE00DFA113 /* combo_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56C7254B1DD371CE00DFA113 /* combo_3@2x.png */; };
@@ -391,6 +392,7 @@
 		56BF57CC1CD7902000923509 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "font/Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		56BF57CD1CD7902000923509 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "font/Roboto-Light.ttf"; sourceTree = "<group>"; };
 		56BF57D51CD798D500923509 /* COOPBL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = COOPBL.ttf; path = font/COOPBL.ttf; sourceTree = "<group>"; };
+		56C5E4CC1DFD2416003E66C2 /* hardBtnOff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hardBtnOff@2x.png"; path = "img/level/hardBtnOff@2x.png"; sourceTree = SOURCE_ROOT; };
 		56C725491DD371CE00DFA113 /* combo_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "combo_1@2x.png"; path = "img/combo/combo_1@2x.png"; sourceTree = SOURCE_ROOT; };
 		56C7254A1DD371CE00DFA113 /* combo_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "combo_2@2x.png"; path = "img/combo/combo_2@2x.png"; sourceTree = SOURCE_ROOT; };
 		56C7254B1DD371CE00DFA113 /* combo_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "combo_3@2x.png"; path = "img/combo/combo_3@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -501,6 +503,7 @@
 		561B35821DD04B58002E13C9 /* level */ = {
 			isa = PBXGroup;
 			children = (
+				56C5E4CC1DFD2416003E66C2 /* hardBtnOff@2x.png */,
 				561B35851DD04BD9002E13C9 /* hardBtn@2x.png */,
 				561B35861DD04BD9002E13C9 /* normalBtn@2x.png */,
 				561B35831DD04B69002E13C9 /* easyBtn@2x.png */,
@@ -1218,6 +1221,7 @@
 				56E0732B1DBE2017002E634D /* icon_global@2x.png in Resources */,
 				566B38F91DC655200026083B /* closeBtn@2x.png in Resources */,
 				5698E9E81DBA77FA0078DC53 /* WaitingView.xib in Resources */,
+				56C5E4CD1DFD2416003E66C2 /* hardBtnOff@2x.png in Resources */,
 				5666F8201D643CF8001EFC57 /* CountdownView.xib in Resources */,
 				56700B4B1DC69D2D0099093D /* spark@2x.png in Resources */,
 				56BB36841D7324F500AD1603 /* play_bluetooth@2x.png in Resources */,

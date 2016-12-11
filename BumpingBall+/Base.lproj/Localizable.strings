@@ -56,3 +56,15 @@
 "help_content_2" = "Battle mode";
 "help_content_3" = "Color ball list";
 "how_to_play" = "How to play";
+
+//alert
+"connection_error_title" = "Connection Error";
+"connection_error_subtitle" = "Please try in an environment with good radio conditions";
+"enable_play_hard_mode" = "Now, You can play hard mode!!";
+"info" = "Info";
+"not_play_hard_mode" = "You cannot play hard mode yet";
+"update_info_title" = "Update Info";
+"update_info_subtitle" = "You can play Bumping Ball+ new version!! \nLet's update in app store!!";
+"update_yes" = "update now";
+"update_no" = "no thanks";
+"gamecenter_not_play" = "Fighting mode by GamceCenter is currently unavailable."

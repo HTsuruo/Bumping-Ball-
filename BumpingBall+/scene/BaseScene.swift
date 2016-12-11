@@ -153,7 +153,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
                 return
             }
             timecounter += 1
-            if timecounter % 15 == 0 {
+            if timecounter % define.LEVEL_UP_INTERVAL == 0 {
                 app.level += 1
                 level.updateParam()
                 showStageSign()

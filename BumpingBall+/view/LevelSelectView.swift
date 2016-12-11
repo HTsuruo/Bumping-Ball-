@@ -17,6 +17,7 @@ class LevelSelectView: UIView {
     @IBOutlet weak var normalBtn: UIButton!
     @IBOutlet weak var hardBtn: UIButton!
     let btnSelectSound = Sound.prepareToPlay(Sound.buttonLevelSelect)
+    let btnErorrSound = Sound.prepareToPlay(Sound.buttonError)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,6 +25,12 @@ class LevelSelectView: UIView {
         easyBtn.isHidden = false
         normalBtn.isHidden = false
         hardBtn.isHidden = false
+        
+        if !UserDefaults.standard.bool(forKey: udKey.hard_mode_on) {
+            let image = UIImage(named: "hardBtnOff")
+            hardBtn.setImage(image, for: .normal)
+        }
+        
 //        contentView.layer.borderColor = UIColor.white.cgColor
 //        contentView.layer.borderWidth = 2
 //        contentView.layer.cornerRadius = 30
@@ -57,6 +64,13 @@ class LevelSelectView: UIView {
     }
     
     @IBAction func onClickHardBtn(_ sender: UIButton) {
+        if !UserDefaults.standard.bool(forKey: udKey.hard_mode_on) {
+            Sound.play(audioPlayer: btnErorrSound)
+            let alert = AlertUtil()
+            alert.eroorMsg(title: NSLocalizedString("info", comment: ""), msg: NSLocalizedString("not_play_hard_mode", comment: ""))
+            return
+        }
+        
         Sound.play(audioPlayer: btnSelectSound)
         app.selectedDiffculty = DifficultyType.hard
         transitionToPlay()

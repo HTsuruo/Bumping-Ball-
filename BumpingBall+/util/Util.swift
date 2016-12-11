@@ -28,6 +28,7 @@ struct define {
     static let VERSION_URL = "http://tsurutsuru.php.xdomain.jp/bumping_ball_plus/version.php"
     static let STAGE_SIGN_HEIGHT: CGFloat = 60.0
     static let LEVEL_MAX = 20
+    static let LEVEL_UP_INTERVAL = 15 //何秒おきにlevelupするのか.
 }
 
 struct Util {
@@ -73,4 +74,5 @@ struct udKey {
     static let off_music = "off_music"
     static let off_sound = "off_sound"
     static let is_not_first = "is_not_first"
+    static let hard_mode_on = "true"
 }

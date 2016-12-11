@@ -90,13 +90,13 @@
             </trans-unit>
             <trans-unit id="tLP-7g-0yR.text">
                 <source>Let's Start Tutorial!!</source>
-                <note>Class = "UILabel"; text = "Let's Start Tutorial!!"; ObjectID = "tLP-7g-0yR";</note>
                 <target>チュートリアルを始めよう!!</target>
+                <note>Class = "UILabel"; text = "Let's Start Tutorial!!"; ObjectID = "tLP-7g-0yR";</note>
             </trans-unit>
             <trans-unit id="wMf-gQ-yb4.title">
                 <source>Tutorial</source>
-                <note>Class = "UINavigationItem"; title = "Tutorial"; ObjectID = "wMf-gQ-yb4";</note>
                 <target>チュートリアル</target>
+                <note>Class = "UINavigationItem"; title = "Tutorial"; ObjectID = "wMf-gQ-yb4";</note>
             </trans-unit>
         </body>
     </file>
@@ -181,6 +181,26 @@
                 <target>ゴールドボール</target>
                 <note>No comment provided by engineer.</note>
             </trans-unit>
+            <trans-unit id="connection_error_subtitle">
+                <source>connection_error_subtitle</source>
+                <target>電波状況の良い環境でお試しください</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="connection_error_title">
+                <source>connection_error_title</source>
+                <target>接続エラー</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="enable_play_hard_mode">
+                <source>enable_play_hard_mode</source>
+                <target>ハードモードで遊べるようになりました</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="gamecenter_not_play">
+                <source>gamecenter_not_play</source>
+                <note>No comment provided by engineer.</note>
+                <target>GameCenterによる対戦機能は現在ご利用いただけません</target>
+            </trans-unit>
             <trans-unit id="help_content_1">
                 <source>help_content_1</source>
                 <target>チュートリアル</target>
@@ -199,6 +219,11 @@
             <trans-unit id="how_to_play">
                 <source>how_to_play</source>
                 <target>遊び方</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="info">
+                <source>info</source>
+                <target>お知らせ</target>
                 <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="info_item_1">
@@ -244,6 +269,11 @@
             <trans-unit id="itemTxt_3">
                 <source>itemTxt_3</source>
                 <target>ワンアップ</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="not_play_hard_mode">
+                <source>not_play_hard_mode</source>
+                <target>まだハードモードでは遊べません</target>
                 <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="setting_item_1">
@@ -338,6 +368,27 @@
 ハイスコアを目指そう!!
 対戦モードも楽しんでね!!</target>
                 <note>last</note>
+            </trans-unit>
+            <trans-unit id="update_info_subtitle">
+                <source>update_info_subtitle</source>
+                <target>新しいバージョンで遊べます
+AppStoreよりアップデートしてください</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="update_info_title">
+                <source>update_info_title</source>
+                <target>アップデートのお知らせ</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="update_no">
+                <source>update_no</source>
+                <target>アップデートしない</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="update_yes">
+                <source>update_yes</source>
+                <target>アップデートする</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
         </body>
     </file>

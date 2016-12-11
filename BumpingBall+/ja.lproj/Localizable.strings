@@ -35,6 +35,18 @@
 "commonTxt_5" = "ゴールドボール";
 
 /* No comment provided by engineer. */
+"connection_error_subtitle" = "電波状況の良い環境でお試しください";
+
+/* No comment provided by engineer. */
+"connection_error_title" = "接続エラー";
+
+/* No comment provided by engineer. */
+"enable_play_hard_mode" = "ハードモードで遊べるようになりました";
+
+/* No comment provided by engineer. */
+"gamecenter_not_play" = "GameCenterによる対戦機能は現在ご利用いただけません";
+
+/* No comment provided by engineer. */
 "help_content_1" = "チュートリアル";
 
 /* No comment provided by engineer. */
@@ -45,6 +57,9 @@
 
 /* No comment provided by engineer. */
 "how_to_play" = "遊び方";
+
+/* No comment provided by engineer. */
+"info" = "お知らせ";
 
 /* No comment provided by engineer. */
 "info_item_1" = "レビューを書く";
@@ -72,6 +87,9 @@
 
 /* No comment provided by engineer. */
 "itemTxt_3" = "ワンアップ";
+
+/* No comment provided by engineer. */
+"not_play_hard_mode" = "まだハードモードでは遊べません";
 
 /* No comment provided by engineer. */
 "setting_item_1" = "音楽";
@@ -133,4 +151,17 @@
 ゲームオーバーだ..
 ハイスコアを目指そう!!
 対戦モードも楽しんでね!!";
+
+/* No comment provided by engineer. */
+"update_info_subtitle" = "新しいバージョンで遊べます
+AppStoreよりアップデートしてください";
+
+/* No comment provided by engineer. */
+"update_info_title" = "アップデートのお知らせ";
+
+/* No comment provided by engineer. */
+"update_no" = "アップデートしない";
+
+/* No comment provided by engineer. */
+"update_yes" = "アップデートする";
 
