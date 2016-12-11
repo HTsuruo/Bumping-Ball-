@@ -106,12 +106,15 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        var isGold = false
         for touche in touches {
             let location = touche.location(in: self)
             let swipe = location.y > touchBeginLocation.y && location.y > touchView.frame.height
             if swipe && charge.isFull {
+                isGold = true
                 playerBall.setGold()
                 chargeReset()
+                Sound.play(node: playerBall.ball, action: Sound.launchGold)
                 let action = animation.goldenModeBk()
                 self.run(action, withKey: "goldBk")
             }
@@ -120,7 +123,9 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         if !inTouch {
             return
         }
-        Sound.play(node: playerBall.ball, action: Sound.launch)
+        if !isGold {
+            Sound.play(node: playerBall.ball, action: Sound.launch)
+        }
         playerBall.isFire = true
         playerBall.setIsFire()
         let actionMove = SKAction.moveTo(y: define.REMOVE_HEIGHT, duration: Double(playerBall.ballSpeed))
@@ -236,6 +241,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     
     //自陣にボールが入った処理(oneplayとmultiplayで分岐します)
     func tballComesInTouchArea(_ node: SKSpriteNode) {
+        Sound.play(node: self, action: Sound.bomb)
         var id = node.userData?.value(forKey: "id") as? Int
         if id == nil {
             id = 0

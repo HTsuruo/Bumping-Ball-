@@ -165,6 +165,7 @@
 		56C5E4CD1DFD2416003E66C2 /* hardBtnOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56C5E4CC1DFD2416003E66C2 /* hardBtnOff@2x.png */; };
 		56C5E4CF1DFD3CDC003E66C2 /* level_multi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56C5E4CE1DFD3CDC003E66C2 /* level_multi.plist */; };
 		56C5E4D11DFD4116003E66C2 /* itemball_launch.caf in Resources */ = {isa = PBXBuildFile; fileRef = 56C5E4D01DFD4102003E66C2 /* itemball_launch.caf */; };
+		56C5E4D41DFD44DC003E66C2 /* bomb.caf in Resources */ = {isa = PBXBuildFile; fileRef = 56C5E4D31DFD44D2003E66C2 /* bomb.caf */; };
 		56C7254E1DD371CE00DFA113 /* combo_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56C725491DD371CE00DFA113 /* combo_1@2x.png */; };
 		56C7254F1DD371CE00DFA113 /* combo_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56C7254A1DD371CE00DFA113 /* combo_2@2x.png */; };
 		56C725501DD371CE00DFA113 /* combo_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56C7254B1DD371CE00DFA113 /* combo_3@2x.png */; };
@@ -395,6 +396,8 @@
 		56C5E4CC1DFD2416003E66C2 /* hardBtnOff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hardBtnOff@2x.png"; path = "img/level/hardBtnOff@2x.png"; sourceTree = SOURCE_ROOT; };
 		56C5E4CE1DFD3CDC003E66C2 /* level_multi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = level_multi.plist; sourceTree = "<group>"; };
 		56C5E4D01DFD4102003E66C2 /* itemball_launch.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = itemball_launch.caf; path = sound/itemball_launch.caf; sourceTree = SOURCE_ROOT; };
+		56C5E4D21DFD444C003E66C2 /* launch_gold.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = launch_gold.caf; path = sound/launch_gold.caf; sourceTree = SOURCE_ROOT; };
+		56C5E4D31DFD44D2003E66C2 /* bomb.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = bomb.caf; path = sound/bomb.caf; sourceTree = SOURCE_ROOT; };
 		56C725491DD371CE00DFA113 /* combo_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "combo_1@2x.png"; path = "img/combo/combo_1@2x.png"; sourceTree = SOURCE_ROOT; };
 		56C7254A1DD371CE00DFA113 /* combo_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "combo_2@2x.png"; path = "img/combo/combo_2@2x.png"; sourceTree = SOURCE_ROOT; };
 		56C7254B1DD371CE00DFA113 /* combo_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "combo_3@2x.png"; path = "img/combo/combo_3@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -609,6 +612,8 @@
 		56AC957D1CB16CEF00B31FE3 /* sound */ = {
 			isa = PBXGroup;
 			children = (
+				56C5E4D31DFD44D2003E66C2 /* bomb.caf */,
+				56C5E4D21DFD444C003E66C2 /* launch_gold.caf */,
 				56C5E4D01DFD4102003E66C2 /* itemball_launch.caf */,
 				5669BCFE1DFB205500E08ECA /* gameover.caf */,
 				5669BCF61DFB1FE800E08ECA /* collision_perfect.caf */,
@@ -1128,11 +1133,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56C5E4D41DFD44DC003E66C2 /* bomb.caf in Resources */,
+				5669BCFC1DFB1FF600E08ECA /* launch_gold.caf in Resources */,
 				56C5E4D11DFD4116003E66C2 /* itemball_launch.caf in Resources */,
 				5669BCFF1DFB206000E08ECA /* gameover.caf in Resources */,
 				5669BCFA1DFB1FF600E08ECA /* collision_perfect.caf in Resources */,
 				5669BCFB1DFB1FF600E08ECA /* collision.caf in Resources */,
-				5669BCFC1DFB1FF600E08ECA /* launch_gold.caf in Resources */,
 				5618C1131DF4076A0060A9DE /* bigger.caf in Resources */,
 				5618C1141DF4076A0060A9DE /* button_error.caf in Resources */,
 				5618C1151DF4076A0060A9DE /* button_level_select.caf in Resources */,

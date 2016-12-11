@@ -14,11 +14,13 @@ class Sound: NSObject {
 //    scene用
     static let bigger = SKAction.playSoundFileNamed("bigger.caf", waitForCompletion: false)
     static let launch = SKAction.playSoundFileNamed("launch.caf", waitForCompletion: false)
+    static let launchGold = SKAction.playSoundFileNamed("launch_gold.caf", waitForCompletion: false)
     static let collisionNotRemove = SKAction.playSoundFileNamed("collision_not_remove.caf", waitForCompletion: false)
     static let collision = SKAction.playSoundFileNamed("collision.caf", waitForCompletion: false)
     static let collision_perfect = SKAction.playSoundFileNamed("collision_perfect.caf", waitForCompletion: false)
     static let gameover = SKAction.playSoundFileNamed("gameover.caf", waitForCompletion: false)
     static let itemballLaunch = SKAction.playSoundFileNamed("itemball_launch.caf", waitForCompletion: false)
+    static let bomb = SKAction.playSoundFileNamed("bomb.caf", waitForCompletion: false)
     
 //    scene以外用（ボタンクリックなど）
     static let button = "button"
