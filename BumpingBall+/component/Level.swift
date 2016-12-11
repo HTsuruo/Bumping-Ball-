@@ -33,7 +33,7 @@ class Level {
             print("acceleration: \(acceleration)")
             return acceleration
         }
-        return 0.0
+        return 2.0
     }
     
     func getInterval() -> CFTimeInterval {
@@ -43,7 +43,7 @@ class Level {
             print("interval: \(interval)")
             return interval
         }
-        return 3.0
+        return 0.75
     }
     
 }

@@ -57,6 +57,11 @@ class StageSign: UIView {
     }
     
     func setNumber(level: Int) {
+        if level == define.LEVEL_MAX {
+            contentView.backgroundColor = ColorUtil.stageSignBkMax
+            label.text = "L E V E L \(level) (MAX)"
+            return
+        }
         label.text = "L E V E L \(level)"
     }
 }

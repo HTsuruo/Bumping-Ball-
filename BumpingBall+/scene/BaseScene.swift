@@ -69,7 +69,6 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         // set background animation.
         let snow = animation.backgroundAnimation()
         self.addChild(snow)
-        level.updateParam()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -135,6 +134,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         if !isStart {
             if app.isStart != nil && app.isStart! {
                 isStart = true
+                level.updateParam()
                 print("start!!")
                 showStageSign()
             }
@@ -148,6 +148,10 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         }
         
         if timer + 1.0 <= currentTime {
+            if app.level >= define.LEVEL_MAX || isFin {
+                timer = currentTime
+                return
+            }
             timecounter += 1
             if timecounter % 15 == 0 {
                 app.level += 1
