@@ -12,13 +12,14 @@ import SpriteKit
 struct PlayerBall {
     var id = 0
     var ball = SKSpriteNode(imageNamed: ballImage.BLUE)
-    var ballScale: Double = 0.0
     //ここでいうballSpeedはdurationなので上に到達するまでにかかる時間
     var ballSpeed = define.BALL_INIT_SPEED
     var isFire = false
     let ballUtil = BallUtil()
     let scaleVal = DeviceUtil.getOptionalScale(width: CGFloat.WIDTH)
     let speedVal = DeviceUtil.getOptionalSpeed(width: CGFloat.WIDTH)
+    let increaseVal = DeviceUtil.getIncreaseScale(width: CGFloat.WIDTH)
+    var ballScale: Double = 0.0
     
     init() {
         self.ball.name = "ball"
@@ -27,6 +28,8 @@ struct PlayerBall {
         self.ball.physicsBody?.isDynamic = false
         let action = SKAction.rotate(byAngle: CGFloat(M_PI), duration:0.8)
         self.ball.run(SKAction.repeatForever(action))
+        self.ballScale = 0.5 * self.scaleVal
+        self.ball.setScale(CGFloat(self.ballScale))
     }
     
     mutating func setLocation(_ posX: CGFloat, posY: CGFloat) {
@@ -61,16 +64,18 @@ struct PlayerBall {
     mutating func sizeChangeForward() {
         self.ballScale += (define.INCREASE_SCALE * scaleVal)
         sizeChange()
-        if ballUtil.isInScaleOther(scale: Double(self.ballScale)) {
+        if ballUtil.isInScaleOverMax(scale: Double(self.ballScale)) {
             setBlue()
             self.ballScale = ballUtil.getMinScale() *  scaleVal
         }
     }
     
     mutating func sizeChangeReverse() {
+        print(self.ballScale)
         self.ballScale -= (define.INCREASE_SCALE * scaleVal)
+        print(self.ballScale)
         sizeChange()
-        if ballUtil.isInScaleOther(scale: Double(self.ballScale)) {
+        if ballUtil.isInScaleOverMin(scale: Double(self.ballScale)) {
             setRed()
             self.ballScale = ballUtil.getMaxScale() * scaleVal
         }
@@ -92,31 +97,31 @@ struct PlayerBall {
     }
     
     mutating func setBlue() {
-        self.ballSpeed = CGFloat(ballUtil.getSpeed(name: "blue") * speedVal)
+        self.ballSpeed = CGFloat(ballUtil.getPlayerBallSpeed(name: "blue"))
         self.ball.run(ballUtil.setBlue())
         self.setId(BallType.blue.rawValue)
     }
     
     mutating func setGreen() {
-        self.ballSpeed = CGFloat(ballUtil.getSpeed(name: "green") * speedVal)
+        self.ballSpeed = CGFloat(ballUtil.getPlayerBallSpeed(name: "green"))
         self.ball.run(ballUtil.setGreen())
         self.setId(BallType.green.rawValue)
     }
     
     mutating func setOrange() {
-        self.ballSpeed = CGFloat(ballUtil.getSpeed(name: "orange") * speedVal)
+        self.ballSpeed = CGFloat(ballUtil.getPlayerBallSpeed(name: "orange"))
         self.ball.run(ballUtil.setOrange())
         self.setId(BallType.orange.rawValue)
     }
     
     mutating func setRed() {
-        self.ballSpeed = CGFloat(ballUtil.getSpeed(name: "red") * speedVal)
+        self.ballSpeed = CGFloat(ballUtil.getPlayerBallSpeed(name: "red"))
         self.ball.run(ballUtil.setRed())
         self.setId(BallType.red.rawValue)
     }
     
     mutating func setGold() {
-        self.ballSpeed = CGFloat(ballUtil.getSpeed(name: "gold") * speedVal)
+        self.ballSpeed = CGFloat(ballUtil.getPlayerBallSpeed(name: "gold"))
         self.ball.run(ballUtil.setGold())
         self.setId(BallType.gold.rawValue)
         self.ball.setScale(CGFloat(2.0 * scaleVal))

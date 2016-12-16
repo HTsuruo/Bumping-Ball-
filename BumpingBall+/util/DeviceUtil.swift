@@ -8,9 +8,9 @@
 
 import UIKit
 
-class DeviceUtil: NSObject {
+class DeviceUtil {
     
-    static func getOptionalScale( width: CGFloat) -> Double {
+    static func getOptionalScale(width: CGFloat) -> Double {
         let devicewidth = DeviceWidth(rawValue: width)! as DeviceWidth
         switch devicewidth {
         case .inches_4_5:
@@ -22,15 +22,27 @@ class DeviceUtil: NSObject {
         }
     }
     
-    static func getOptionalSpeed( width: CGFloat) -> Double {
+    static func getOptionalSpeed(width: CGFloat) -> Double {
         let devicewidth = DeviceWidth(rawValue: width)! as DeviceWidth
         switch devicewidth {
         case .inches_4_5:
-            return  0.92
+            return  0.90
         case .inches_4_7:
             return  1.0
         case .inches_5_5:
-            return  1.15
+            return  1.4
+        }
+    }
+    
+    static func getIncreaseScale(width: CGFloat) -> Double {
+        let devicewidth = DeviceWidth(rawValue: width)! as DeviceWidth
+        switch devicewidth {
+        case .inches_4_5:
+            return  0.03
+        case .inches_4_7:
+            return  0.04
+        case .inches_5_5:
+            return  0.10
         }
     }
 }

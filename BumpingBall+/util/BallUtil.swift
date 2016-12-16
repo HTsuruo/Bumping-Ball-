@@ -14,6 +14,8 @@ class BallUtil {
     let scaleFilepath = Bundle.main.path(forResource: "scale", ofType: "plist")
     let speedFilepath = Bundle.main.path(forResource: "speed", ofType: "plist")
     let scaleVal = DeviceUtil.getOptionalScale(width: CGFloat.WIDTH)
+    let speedVal = DeviceUtil.getOptionalSpeed(width: CGFloat.WIDTH)
+    let increaseVal = DeviceUtil.getIncreaseScale(width: CGFloat.WIDTH)
     var scaledic: NSDictionary? = nil
     var speeddic: NSDictionary? = nil
     
@@ -164,16 +166,24 @@ class BallUtil {
         if let valdic: NSDictionary = scaledic?.object(forKey: name) as? NSDictionary {
             let min = (valdic.object(forKey: "min") as! Double) * Double(scaleVal)
             let max = (valdic.object(forKey: "max") as! Double) * Double(scaleVal)
+            print("\(name): {min: \(min), max: \(max)}")
             return (min <= scale && scale < max)
         }
         return false
     }
     
-    func isInScaleOther(scale: Double) -> Bool {
+    func isInScaleOverMin(scale: Double) -> Bool {
         if let valdic: NSDictionary = scaledic?.object(forKey: "other") as? NSDictionary {
             let min = valdic.object(forKey: "min") as! Double * Double(scaleVal)
+            return scale < min
+        }
+        return false
+    }
+    
+    func isInScaleOverMax(scale: Double) -> Bool {
+        if let valdic: NSDictionary = scaledic?.object(forKey: "other") as? NSDictionary {
             let max = valdic.object(forKey: "max") as! Double * Double(scaleVal)
-            return (scale < min || max <= scale)
+            return max < scale
         }
         return false
     }
@@ -195,19 +205,42 @@ class BallUtil {
         return 0.0
     }
     
-    func getInitializeScale(name: String) -> CGFloat {
+    func getScale(name: String) -> CGFloat {
         if let valdic: NSDictionary = scaledic?.object(forKey: name) as? NSDictionary {
-            return (valdic.object(forKey: "min") as! CGFloat) * CGFloat(scaleVal)
+            var scale = valdic.object(forKey: "min") as! CGFloat
+            if scale <= 0.5 { //相手ボールにしては小さいので
+                scale = 0.6
+            }
+            return scale * CGFloat(scaleVal)
         }
         return 0.0
     }
 
-    func getSpeed(name: String) -> Double {
+    func getPlayerBallSpeed(name: String) -> Double {
         if let dic: NSDictionary = speeddic?.object(forKey: name) as? NSDictionary {
-            let speed = dic.object(forKey: "speed") as! Double
+            let speed = dic.object(forKey: "player") as! Double
             return speed
         }
         return 1.0
+    }
+    
+    func getTargetBallSpeed(name: String) -> Double {
+        if let dic: NSDictionary = speeddic?.object(forKey: name) as? NSDictionary {
+            let speed = dic.object(forKey: "target") as! Double
+            return speed * speedVal
+        }
+        return 1.0
+    }
+    
+    func getIncreaseScale() -> Double {
+        if let valdic: NSDictionary = scaledic?.object(forKey: "other") as? NSDictionary {
+            let max = (valdic.object(forKey: "max") as! Double) * Double(scaleVal)
+            let min = (valdic.object(forKey: "max") as! Double) * Double(scaleVal)
+            let ave = (max + min)/2
+            let res = ave / 24
+            return res
+        }
+        return define.INCREASE_SCALE
     }
     
 }

@@ -5,7 +5,7 @@
     <key>blue</key>
     <dict>
         <key>min</key>
-        <real>0.6</real>
+        <real>0.5</real>
         <key>max</key>
         <real>0.8</real>
     </dict>
@@ -33,7 +33,7 @@
     <key>other</key>
     <dict>
         <key>min</key>
-        <real>0.6</real>
+        <real>0.5</real>
         <key>max</key>
         <real>1.7</real>
     </dict>
