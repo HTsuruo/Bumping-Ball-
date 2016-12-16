@@ -58,7 +58,7 @@ struct PlayerBall {
     }
     
     mutating func sizeChangeForward() {
-        self.ballScale += (0.04 * scaleVal)
+        self.ballScale += (define.INCREASE_SCALE * scaleVal)
         sizeChange()
         if ballUtil.isInScaleOther(scale: Double(self.ballScale)) {
             setBlue()
@@ -67,7 +67,7 @@ struct PlayerBall {
     }
     
     mutating func sizeChangeReverse() {
-        self.ballScale -= (0.04 * scaleVal)
+        self.ballScale -= (define.INCREASE_SCALE * scaleVal)
         sizeChange()
         if ballUtil.isInScaleOther(scale: Double(self.ballScale)) {
             setRed()
