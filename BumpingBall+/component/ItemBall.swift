@@ -39,8 +39,9 @@ class ItemBall: SimpleTargetBall {
             break
         }
  
-        self.dx = 1.5
-        self.dy = 1.5
+        let speed = 1.5 * speedVal
+        self.dx = speed
+        self.dy = speed
         self.ballScale = CGFloat(0.7 * scaleVal)
     }
     

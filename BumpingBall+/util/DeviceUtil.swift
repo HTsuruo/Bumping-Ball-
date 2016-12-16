@@ -21,6 +21,18 @@ class DeviceUtil: NSObject {
             return  1.15
         }
     }
+    
+    static func getOptionalSpeed( width: CGFloat) -> Double {
+        let devicewidth = DeviceWidth(rawValue: width)! as DeviceWidth
+        switch devicewidth {
+        case .inches_4_5:
+            return  0.92
+        case .inches_4_7:
+            return  1.0
+        case .inches_5_5:
+            return  1.15
+        }
+    }
 }
 
 enum DeviceWidth: CGFloat {

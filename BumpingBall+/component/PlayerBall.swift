@@ -18,6 +18,7 @@ struct PlayerBall {
     var isFire = false
     let ballUtil = BallUtil()
     let scaleVal = DeviceUtil.getOptionalScale(width: CGFloat.WIDTH)
+    let speedVal = DeviceUtil.getOptionalSpeed(width: CGFloat.WIDTH)
     
     init() {
         self.ball.name = "ball"
@@ -91,31 +92,31 @@ struct PlayerBall {
     }
     
     mutating func setBlue() {
-        self.ballSpeed = define.BALL_INIT_SPEED
+        self.ballSpeed = CGFloat(ballUtil.getSpeed(name: "blue") * speedVal)
         self.ball.run(ballUtil.setBlue())
         self.setId(BallType.blue.rawValue)
     }
     
     mutating func setGreen() {
-        self.ballSpeed = 0.7
+        self.ballSpeed = CGFloat(ballUtil.getSpeed(name: "green") * speedVal)
         self.ball.run(ballUtil.setGreen())
         self.setId(BallType.green.rawValue)
     }
     
     mutating func setOrange() {
-        self.ballSpeed = 0.9
+        self.ballSpeed = CGFloat(ballUtil.getSpeed(name: "orange") * speedVal)
         self.ball.run(ballUtil.setOrange())
         self.setId(BallType.orange.rawValue)
     }
     
     mutating func setRed() {
-        self.ballSpeed = 1.1
+        self.ballSpeed = CGFloat(ballUtil.getSpeed(name: "red") * speedVal)
         self.ball.run(ballUtil.setRed())
         self.setId(BallType.red.rawValue)
     }
     
     mutating func setGold() {
-        self.ballSpeed = 5.0
+        self.ballSpeed = CGFloat(ballUtil.getSpeed(name: "gold") * speedVal)
         self.ball.run(ballUtil.setGold())
         self.setId(BallType.gold.rawValue)
         self.ball.setScale(CGFloat(2.0 * scaleVal))

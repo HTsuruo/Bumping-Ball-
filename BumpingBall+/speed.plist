@@ -2,19 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>1</key>
-	<dict>
-		<key>acceleration</key>
-		<real>0</real>
-		<key>interval</key>
-		<real>3</real>
-	</dict>
-	<key>2</key>
-	<dict>
-		<key>acceleration</key>
-		<real>0.25</real>
-		<key>interval</key>
-		<real>3</real>
-	</dict>
+	<key>blue</key>
+        <real>0.5</real>
+	<key>green</key>
+        <real>0.7</real>
+    <key>orange</key>
+        <real>0.9</real>
+    <key>red</key>
+        <real>1.1</real>
+    <key>gold</key>
+        <real>5.0</real>
 </dict>
 </plist>

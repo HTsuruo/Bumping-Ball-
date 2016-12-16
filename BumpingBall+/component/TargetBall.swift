@@ -23,41 +23,32 @@ class TargetBall: SimpleTargetBall {
     }
     
     override func setBall(num: BallType) {
+        var color = "blue"
         switch num {
         case .blue:
             self.ball = SKSpriteNode(imageNamed: ballImage.BLUE)
-            self.ballScale = getInitializeScale(name: "blue")
             break
         case .green:
             self.ball = SKSpriteNode(imageNamed: ballImage.GREEN)
-            self.dx = 0.8
-            self.dy = 0.8
-            self.ballScale = getInitializeScale(name: "green")
+            color = "green"
             break
         case .orange:
             self.ball =  SKSpriteNode(imageNamed: ballImage.ORANGE)
-            self.dx = 0.6
-            self.dy = 0.6
-            self.ballScale = getInitializeScale(name: "orange")
+            color = "orange"
             break
         case .red:
             self.ball =  SKSpriteNode(imageNamed: ballImage.RED)
-            self.dx = 0.4
-            self.dy = 0.4
-            self.ballScale = getInitializeScale(name: "red")
+            color = "red"
             break
         default:
             break
         }
         
+        self.ballScale = ballUtil.getInitializeScale(name: color)
+        let speed = ballUtil.getSpeed(name: color)
+        self.dx = speed
+        self.dy = speed
         self.ballScale = self.ballScale * CGFloat(DeviceUtil.getOptionalScale(width: CGFloat.WIDTH))
-    }
-    
-    func getInitializeScale(name: String) -> CGFloat {
-        if let valdic: NSDictionary = dic?.object(forKey: name) as? NSDictionary {
-            return (valdic.object(forKey: "min") as! CGFloat) * CGFloat(scaleVal)
-        }
-        return 0.0
     }
     
     override func setAccelSpeed() {
@@ -87,22 +78,22 @@ class TargetBall: SimpleTargetBall {
         var texture = SKTexture.init()
         switch type {
         case .blue:
-            texture = SKTexture.init(imageNamed: ballImage.DEVIl_BLUE)
+            texture = SKTexture.init(imageNamed: ballImage.DEVIL_BLUE)
             break
         case .green:
-            texture = SKTexture.init(imageNamed: ballImage.DEVIl_GREEN)
+            texture = SKTexture.init(imageNamed: ballImage.DEVIL_GREEN)
             break
         case .orange:
-            texture = SKTexture.init(imageNamed: ballImage.DEVIl_ORANGE)
+            texture = SKTexture.init(imageNamed: ballImage.DEVIL_ORANGE)
             break
         case .red:
-            texture = SKTexture.init(imageNamed: ballImage.DEVIl_RED)
+            texture = SKTexture.init(imageNamed: ballImage.DEVIL_RED)
             break
         default:
             break
         }
         
-        self.ballScale = 1.0
+        self.ballScale = CGFloat(1.0 * scaleVal)
         self.ball.setScale(self.ballScale)
         let action = SKAction.setTexture(texture, resize: false)
         self.ball.run(action)

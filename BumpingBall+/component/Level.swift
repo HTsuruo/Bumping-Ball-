@@ -13,6 +13,7 @@ class Level {
     var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     var filename = "level"
     var dic: NSDictionary? = nil
+    let speedVal = DeviceUtil.getOptionalSpeed(width: CGFloat.WIDTH)
     
     init() {
         if app.selectedPlay == .one {
@@ -39,11 +40,11 @@ class Level {
     func getAccelation() -> Double {
         let level = app.level
         if let valdic: NSDictionary = dic?.object(forKey: "\(level)") as? NSDictionary {
-            let acceleration = valdic.object(forKey: "acceleration") as! Double
+            let acceleration = valdic.object(forKey: "acceleration") as! Double * speedVal
             print("acceleration: \(acceleration)")
             return acceleration
         }
-        return 2.0
+        return 2.0 * speedVal
     }
     
     func getInterval() -> CFTimeInterval {

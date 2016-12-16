@@ -33,8 +33,8 @@ struct ballImage {
     static let ITEM_ONEUP = "item_oneup"
     
     //  devil ball
-    static let DEVIl_BLUE = "devil_blue"
-    static let DEVIl_GREEN = "devil_green"
-    static let DEVIl_ORANGE = "devil_orange"
-    static let DEVIl_RED = "devil_red"
+    static let DEVIL_BLUE = "devil_blue"
+    static let DEVIL_GREEN = "devil_green"
+    static let DEVIL_ORANGE = "devil_orange"
+    static let DEVIL_RED = "devil_red"
 }

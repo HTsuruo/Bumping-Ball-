@@ -13,18 +13,17 @@ class SimpleTargetBall {
     var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     var ball = SKSpriteNode()
     var ballScale = CGFloat(0.6)
+    let ballUtil = BallUtil()
     var dx = 1.0
     var dy = 1.0
     let childBall = SKNode()
     var randNum = 0
     var rotateDuration = 2.0
     let scaleVal = DeviceUtil.getOptionalScale(width: CGFloat.WIDTH)
-    let filepath = Bundle.main.path(forResource: "scale", ofType: "plist")
-    var dic: NSDictionary? = nil
+    let speedVal = DeviceUtil.getOptionalSpeed(width: CGFloat.WIDTH)
     
     init() {
         self.ball.alpha = 0.0 //フェードインのため.
-        dic = NSDictionary(contentsOfFile: filepath!)
         
         //0~4までのランダムな値を取得する
         randNum = Int(arc4random_uniform(4))

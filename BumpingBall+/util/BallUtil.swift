@@ -11,12 +11,16 @@ import SpriteKit
 
 class BallUtil {
     
-    let filepath = Bundle.main.path(forResource: "scale", ofType: "plist")
-    var dic: NSDictionary? = nil
+    let scaleFilepath = Bundle.main.path(forResource: "scale", ofType: "plist")
+    let speedFilepath = Bundle.main.path(forResource: "speed", ofType: "plist")
     let scaleVal = DeviceUtil.getOptionalScale(width: CGFloat.WIDTH)
+    var scaledic: NSDictionary? = nil
+    var speeddic: NSDictionary? = nil
+    
     
     init() {
-        dic = NSDictionary(contentsOfFile: filepath!)
+        scaledic = NSDictionary(contentsOfFile: scaleFilepath!)
+        speeddic = NSDictionary(contentsOfFile: speedFilepath!)
     }
     
     func setBlue() -> SKAction {
@@ -157,7 +161,7 @@ class BallUtil {
     }
     
     func isInScaleRange(name: String, scale: Double) -> Bool {
-        if let valdic: NSDictionary = dic?.object(forKey: name) as? NSDictionary {
+        if let valdic: NSDictionary = scaledic?.object(forKey: name) as? NSDictionary {
             let min = (valdic.object(forKey: "min") as! Double) * Double(scaleVal)
             let max = (valdic.object(forKey: "max") as! Double) * Double(scaleVal)
             return (min <= scale && scale < max)
@@ -166,7 +170,7 @@ class BallUtil {
     }
     
     func isInScaleOther(scale: Double) -> Bool {
-        if let valdic: NSDictionary = dic?.object(forKey: "other") as? NSDictionary {
+        if let valdic: NSDictionary = scaledic?.object(forKey: "other") as? NSDictionary {
             let min = valdic.object(forKey: "min") as! Double * Double(scaleVal)
             let max = valdic.object(forKey: "max") as! Double * Double(scaleVal)
             return (scale < min || max <= scale)
@@ -176,7 +180,7 @@ class BallUtil {
     
     
     func getMinScale() -> Double {
-        if let valdic: NSDictionary = dic?.object(forKey: "other") as? NSDictionary {
+        if let valdic: NSDictionary = scaledic?.object(forKey: "other") as? NSDictionary {
             let min = (valdic.object(forKey: "min") as! Double) * Double(scaleVal)
             return min
         }
@@ -184,11 +188,26 @@ class BallUtil {
     }
     
     func getMaxScale() -> Double {
-        if let valdic: NSDictionary = dic?.object(forKey: "other") as? NSDictionary {
+        if let valdic: NSDictionary = scaledic?.object(forKey: "other") as? NSDictionary {
             let max = (valdic.object(forKey: "max") as! Double) * Double(scaleVal)
             return max
         }
         return 0.0
+    }
+    
+    func getInitializeScale(name: String) -> CGFloat {
+        if let valdic: NSDictionary = scaledic?.object(forKey: name) as? NSDictionary {
+            return (valdic.object(forKey: "min") as! CGFloat) * CGFloat(scaleVal)
+        }
+        return 0.0
+    }
+
+    func getSpeed(name: String) -> Double {
+        if let dic: NSDictionary = speeddic?.object(forKey: name) as? NSDictionary {
+            let speed = dic.object(forKey: "speed") as! Double
+            return speed
+        }
+        return 1.0
     }
     
 }
