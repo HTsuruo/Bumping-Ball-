@@ -203,6 +203,9 @@
 		56E073331DBE45F2002E634D /* BluetoothUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E073301DBE45F2002E634D /* BluetoothUtil.swift */; };
 		56E073341DBE45F2002E634D /* GameCenterUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E073311DBE45F2002E634D /* GameCenterUtil.swift */; };
 		56E073361DBE463C002E634D /* BallUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E073351DBE463C002E634D /* BallUtil.swift */; };
+		56E5FE3D1E03C682008EE4DD /* DeviceUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E5FE3C1E03C682008EE4DD /* DeviceUtil.swift */; };
+		56E5FE441E03D562008EE4DD /* scale.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56E5FE421E03D562008EE4DD /* scale.plist */; };
+		56E5FE451E03D562008EE4DD /* speed.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56E5FE431E03D562008EE4DD /* speed.plist */; };
 		56E6B5071DBA61AA00740A6A /* HeaderViewMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E6B5051DBA61AA00740A6A /* HeaderViewMatch.swift */; };
 		56E6B5081DBA61AA00740A6A /* HeaderViewMatch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56E6B5061DBA61AA00740A6A /* HeaderViewMatch.xib */; };
 		56E6B50A1DBA61BA00740A6A /* PrepareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56E6B5091DBA61BA00740A6A /* PrepareView.xib */; };
@@ -439,6 +442,9 @@
 		56E073301DBE45F2002E634D /* BluetoothUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BluetoothUtil.swift; path = util/BluetoothUtil.swift; sourceTree = "<group>"; };
 		56E073311DBE45F2002E634D /* GameCenterUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameCenterUtil.swift; path = util/GameCenterUtil.swift; sourceTree = "<group>"; };
 		56E073351DBE463C002E634D /* BallUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BallUtil.swift; path = util/BallUtil.swift; sourceTree = "<group>"; };
+		56E5FE3C1E03C682008EE4DD /* DeviceUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceUtil.swift; path = util/DeviceUtil.swift; sourceTree = "<group>"; };
+		56E5FE421E03D562008EE4DD /* scale.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = scale.plist; sourceTree = "<group>"; };
+		56E5FE431E03D562008EE4DD /* speed.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = speed.plist; sourceTree = "<group>"; };
 		56E6B5051DBA61AA00740A6A /* HeaderViewMatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderViewMatch.swift; path = view/multiplay/HeaderViewMatch.swift; sourceTree = "<group>"; };
 		56E6B5061DBA61AA00740A6A /* HeaderViewMatch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HeaderViewMatch.xib; path = view/multiplay/HeaderViewMatch.xib; sourceTree = "<group>"; };
 		56E6B5091DBA61BA00740A6A /* PrepareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PrepareView.xib; path = view/multiplay/PrepareView.xib; sourceTree = "<group>"; };
@@ -755,6 +761,8 @@
 				56BB7F3A1CAD345200675AE8 /* Assets.xcassets */,
 				56BB7F3C1CAD345200675AE8 /* LaunchScreen.storyboard */,
 				5607D7DC1DD9985200BEDAC9 /* config.plist */,
+				56E5FE421E03D562008EE4DD /* scale.plist */,
+				56E5FE431E03D562008EE4DD /* speed.plist */,
 				5669BD021DFBFAF800E08ECA /* level.plist */,
 				56C5E4CE1DFD3CDC003E66C2 /* level_multi.plist */,
 				56BB7F3F1CAD345200675AE8 /* Info.plist */,
@@ -966,6 +974,7 @@
 				56BD478C1DC5FCC9003AA705 /* ColorUtil.swift */,
 				56E073351DBE463C002E634D /* BallUtil.swift */,
 				56DDBD3F1DD705F000CDBD27 /* AdUitl.swift */,
+				56E5FE3C1E03C682008EE4DD /* DeviceUtil.swift */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -1212,6 +1221,7 @@
 				56DDBD2E1DD6C30100CDBD27 /* bluetoothBtn@2x.png in Resources */,
 				56D160CB1CC50E2C00257404 /* ball_orange@2x.png in Resources */,
 				56C7254E1DD371CE00DFA113 /* combo_1@2x.png in Resources */,
+				56E5FE441E03D562008EE4DD /* scale.plist in Resources */,
 				5666F81A1D643167001EFC57 /* helpBtn@2x.png in Resources */,
 				56700B4E1DC6A3D30099093D /* snow@2x.png in Resources */,
 				56DDBD471DD727D000CDBD27 /* ColorBallCell.xib in Resources */,
@@ -1232,6 +1242,7 @@
 				566B38F91DC655200026083B /* closeBtn@2x.png in Resources */,
 				5698E9E81DBA77FA0078DC53 /* WaitingView.xib in Resources */,
 				56C5E4CD1DFD2416003E66C2 /* hardBtnOff@2x.png in Resources */,
+				56E5FE451E03D562008EE4DD /* speed.plist in Resources */,
 				5666F8201D643CF8001EFC57 /* CountdownView.xib in Resources */,
 				56700B4B1DC69D2D0099093D /* spark@2x.png in Resources */,
 				56BB36841D7324F500AD1603 /* play_bluetooth@2x.png in Resources */,
@@ -1502,6 +1513,7 @@
 				56DDBD461DD727D000CDBD27 /* ColorBallCell.swift in Sources */,
 				56E6B50C1DBA627B00740A6A /* PrepareView.swift in Sources */,
 				5632A6091DC738CB0064C498 /* ItemBall.swift in Sources */,
+				56E5FE3D1E03C682008EE4DD /* DeviceUtil.swift in Sources */,
 				56B802571D684765007B79A7 /* HeaderView.swift in Sources */,
 				5669BD011DFBBF3700E08ECA /* Level.swift in Sources */,
 			);

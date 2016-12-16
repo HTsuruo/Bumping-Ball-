@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 enum BallType: Int {
     case blue = 0
@@ -34,23 +35,6 @@ enum BallType: Int {
             return "ball_gold"
         default:
             return ""
-        }
-    }
-    
-    func getSize(_ key: BallType) -> CGFloat {
-        switch self {
-        case .blue:
-            return 20.0
-        case .green:
-            return 40.0
-        case .orange:
-            return 60.0
-        case .red:
-            return 80.0
-        case .gold:
-            return 100.0
-        default:
-            return 0
         }
     }
     

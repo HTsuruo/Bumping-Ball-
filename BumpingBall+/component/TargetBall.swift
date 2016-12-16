@@ -26,28 +26,38 @@ class TargetBall: SimpleTargetBall {
         switch num {
         case .blue:
             self.ball = SKSpriteNode(imageNamed: ballImage.BLUE)
+            self.ballScale = getInitializeScale(name: "blue")
             break
         case .green:
             self.ball = SKSpriteNode(imageNamed: ballImage.GREEN)
             self.dx = 0.8
             self.dy = 0.8
-            self.ballScale = 0.8
+            self.ballScale = getInitializeScale(name: "green")
             break
         case .orange:
             self.ball =  SKSpriteNode(imageNamed: ballImage.ORANGE)
             self.dx = 0.6
             self.dy = 0.6
-            self.ballScale = 1.1
+            self.ballScale = getInitializeScale(name: "orange")
             break
         case .red:
             self.ball =  SKSpriteNode(imageNamed: ballImage.RED)
             self.dx = 0.4
             self.dy = 0.4
-            self.ballScale = 1.4
+            self.ballScale = getInitializeScale(name: "red")
             break
         default:
             break
         }
+        
+        self.ballScale = self.ballScale * CGFloat(DeviceUtil.getOptionalScale(width: CGFloat.WIDTH))
+    }
+    
+    func getInitializeScale(name: String) -> CGFloat {
+        if let valdic: NSDictionary = dic?.object(forKey: name) as? NSDictionary {
+            return (valdic.object(forKey: "min") as! CGFloat) * CGFloat(scaleVal)
+        }
+        return 0.0
     }
     
     override func setAccelSpeed() {

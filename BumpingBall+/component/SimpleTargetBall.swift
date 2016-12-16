@@ -18,9 +18,13 @@ class SimpleTargetBall {
     let childBall = SKNode()
     var randNum = 0
     var rotateDuration = 2.0
+    let scaleVal = DeviceUtil.getOptionalScale(width: CGFloat.WIDTH)
+    let filepath = Bundle.main.path(forResource: "scale", ofType: "plist")
+    var dic: NSDictionary? = nil
     
     init() {
         self.ball.alpha = 0.0 //フェードインのため.
+        dic = NSDictionary(contentsOfFile: filepath!)
         
         //0~4までのランダムな値を取得する
         randNum = Int(arc4random_uniform(4))

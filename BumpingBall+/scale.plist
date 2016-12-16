@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>blue</key>
+    <dict>
+        <key>min</key>
+        <real>0.6</real>
+        <key>max</key>
+        <real>0.8</real>
+    </dict>
+    <key>green</key>
+    <dict>
+        <key>min</key>
+        <real>0.8</real>
+        <key>max</key>
+        <real>1.1</real>
+    </dict>
+    <key>orange</key>
+    <dict>
+        <key>min</key>
+        <real>1.1</real>
+        <key>max</key>
+        <real>1.4</real>
+    </dict>
+    <key>red</key>
+    <dict>
+        <key>min</key>
+        <real>1.4</real>
+        <key>max</key>
+        <real>1.7</real>
+    </dict>
+    <key>other</key>
+    <dict>
+        <key>min</key>
+        <real>0.6</real>
+        <key>max</key>
+        <real>1.7</real>
+    </dict>
+</dict>
+</plist>

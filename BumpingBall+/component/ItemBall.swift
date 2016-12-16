@@ -41,7 +41,7 @@ class ItemBall: SimpleTargetBall {
  
         self.dx = 1.5
         self.dy = 1.5
-        self.ballScale = 0.7
+        self.ballScale = CGFloat(0.7 * scaleVal)
     }
     
     override func setUniqueName() {

@@ -9,7 +9,15 @@
 import UIKit
 import SpriteKit
 
-class BallUtil: NSObject {
+class BallUtil {
+    
+    let filepath = Bundle.main.path(forResource: "scale", ofType: "plist")
+    var dic: NSDictionary? = nil
+    let scaleVal = DeviceUtil.getOptionalScale(width: CGFloat.WIDTH)
+    
+    init() {
+        dic = NSDictionary(contentsOfFile: filepath!)
+    }
     
     func setBlue() -> SKAction {
         let blue = SKTexture.init(imageNamed: ballImage.BLUE)
@@ -146,6 +154,41 @@ class BallUtil: NSObject {
     
     func getRedBallImageByNum(_ num: Int) -> String {
         return "ball_red_"+String(num)
+    }
+    
+    func isInScaleRange(name: String, scale: Double) -> Bool {
+        if let valdic: NSDictionary = dic?.object(forKey: name) as? NSDictionary {
+            let min = (valdic.object(forKey: "min") as! Double) * Double(scaleVal)
+            let max = (valdic.object(forKey: "max") as! Double) * Double(scaleVal)
+            return (min <= scale && scale < max)
+        }
+        return false
+    }
+    
+    func isInScaleOther(scale: Double) -> Bool {
+        if let valdic: NSDictionary = dic?.object(forKey: "other") as? NSDictionary {
+            let min = valdic.object(forKey: "min") as! Double * Double(scaleVal)
+            let max = valdic.object(forKey: "max") as! Double * Double(scaleVal)
+            return (scale < min || max <= scale)
+        }
+        return false
+    }
+    
+    
+    func getMinScale() -> Double {
+        if let valdic: NSDictionary = dic?.object(forKey: "other") as? NSDictionary {
+            let min = (valdic.object(forKey: "min") as! Double) * Double(scaleVal)
+            return min
+        }
+        return 0.0
+    }
+    
+    func getMaxScale() -> Double {
+        if let valdic: NSDictionary = dic?.object(forKey: "other") as? NSDictionary {
+            let max = (valdic.object(forKey: "max") as! Double) * Double(scaleVal)
+            return max
+        }
+        return 0.0
     }
     
 }

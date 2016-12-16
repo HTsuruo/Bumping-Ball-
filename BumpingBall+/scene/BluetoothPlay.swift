@@ -169,7 +169,7 @@ class BluetoothPlay: BaseScene {
     override func createPlayerBall(_ touchPoint: CGPoint) {
         super.createPlayerBall(touchPoint)
         if isReverse {
-            playerBall.ballScale = define.BALL_MAX_SCALE
+            playerBall.ballScale = ballUtil.getMinScale()
         }
     }
     

@@ -12,11 +12,12 @@ import SpriteKit
 struct PlayerBall {
     var id = 0
     var ball = SKSpriteNode(imageNamed: ballImage.BLUE)
-    var ballScale = define.BALL_INIT_SCALE
+    var ballScale: Double = 0.0
     //ここでいうballSpeedはdurationなので上に到達するまでにかかる時間
     var ballSpeed = define.BALL_INIT_SPEED
     var isFire = false
     let ballUtil = BallUtil()
+    let scaleVal = DeviceUtil.getOptionalScale(width: CGFloat.WIDTH)
     
     init() {
         self.ball.name = "ball"
@@ -53,38 +54,39 @@ struct PlayerBall {
         } else {
             sizeChangeReverse()
         }
-        self.ball.setScale(self.ballScale)
+        self.ball.setScale(CGFloat(self.ballScale))
     }
     
     mutating func sizeChangeForward() {
-        self.ballScale += 0.04
-        if self.ballScale < 0.8 { //-0.8
+        self.ballScale += (0.04 * scaleVal)
+        sizeChange()
+        if ballUtil.isInScaleOther(scale: Double(self.ballScale)) {
             setBlue()
-        } else if self.ballScale < 1.1 { //0.8-1.1
-            setGreen()
-        } else if self.ballScale < 1.4 { //1.1-1.4
-            setOrange()
-        } else if self.ballScale < define.BALL_MAX_SCALE { //1.4-1.7
-            setRed()
-        } else {
-            setBlue()
-            self.ballScale = define.BALL_INIT_SCALE
+            self.ballScale = ballUtil.getMinScale() *  scaleVal
         }
     }
     
     mutating func sizeChangeReverse() {
-        self.ballScale -= 0.04
-        if self.ballScale > 1.4 {
+        self.ballScale -= (0.04 * scaleVal)
+        sizeChange()
+        if ballUtil.isInScaleOther(scale: Double(self.ballScale)) {
             setRed()
-        } else if self.ballScale > 1.1 {
-            setOrange()
-        } else if self.ballScale > 0.8 {
-            setGreen()
-        } else if self.ballScale > define.BALL_INIT_SCALE {
+            self.ballScale = ballUtil.getMaxScale() * scaleVal
+        }
+    }
+    
+    mutating func sizeChange() {
+        if ballUtil.isInScaleRange(name: "blue", scale: Double(self.ballScale)) {
             setBlue()
-        } else {
+        }
+        if ballUtil.isInScaleRange(name: "green", scale: Double(self.ballScale)) {
+            setGreen()
+        }
+        if ballUtil.isInScaleRange(name: "orange", scale: Double(self.ballScale)) {
+            setOrange()
+        }
+        if ballUtil.isInScaleRange(name: "red", scale: Double(self.ballScale)) {
             setRed()
-            self.ballScale = define.BALL_MAX_SCALE
         }
     }
     
@@ -116,7 +118,7 @@ struct PlayerBall {
         self.ballSpeed = 5.0
         self.ball.run(ballUtil.setGold())
         self.setId(BallType.gold.rawValue)
-        self.ball.setScale(2.0)
+        self.ball.setScale(CGFloat(2.0 * scaleVal))
     }
     
     func isGold(_ node: SKNode) -> Bool {
