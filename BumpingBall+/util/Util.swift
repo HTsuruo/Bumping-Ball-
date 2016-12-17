@@ -74,4 +74,6 @@ struct udKey {
     static let off_sound = "off_sound"
     static let is_not_first = "is_not_first"
     static let hard_mode_on = "true"
+    static let bluetooth_win_count = "bluetooth_win_count"
+    static let bluetooth_lose_count = "bluetooth_lose_count"
 }

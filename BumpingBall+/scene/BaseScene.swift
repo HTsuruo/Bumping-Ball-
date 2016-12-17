@@ -33,6 +33,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     var timecounter = 0
     var level = Level()
     let btnSelectSound = Sound.prepareToPlay(Sound.buttonLevelSelect)
+    let ud = UserDefaults.standard
     
     // 当たり判定のカテゴリを準備する.
     let ballCategory: UInt32 = 0x1 << 0
@@ -45,11 +46,13 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         self.backgroundColor = UIColor.black
         
         //set background
-        let themestr = themeUtil.getThemeString(themeType: app.theme)
-        let background = themeUtil.getBackground(theme: themestr)
-        let backgroundAnimation = themeUtil.getBackgroundAnimation(theme: themestr)
-        self.addChild(background)
-        self.addChild(backgroundAnimation)
+        if app.selectedDiffculty != .tutorial {
+            let themestr = themeUtil.getThemeString(themeType: app.theme)
+            let background = themeUtil.getBackground(theme: themestr)
+            let backgroundAnimation = themeUtil.getBackgroundAnimation(theme: themestr)
+            self.addChild(background)
+            self.addChild(backgroundAnimation)
+        }
         
         app.score = 0
         

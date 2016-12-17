@@ -48,12 +48,17 @@ class FinishView: UIView {
     }
     
     func setLevelLabel() {
-        if app.selectedPlay != .one {
-            levelLabel.isHidden = true
+        levelLabel.textColor = UIColor.gray
+        if app.selectedPlay == .one {
+            levelLabel.text = "LEVEL \(app.level)"
             return
         }
-        levelLabel.textColor = ColorUtil.stageSignBk
-        levelLabel.text = "LEVEL \(app.level)"
+        if app.selectedPlay == .bluetooth {
+            let ud = UserDefaults.standard
+            levelLabel.text = "win: \(ud.integer(forKey: udKey.bluetooth_win_count))\nlose: \(ud.integer(forKey: udKey.bluetooth_lose_count))"
+            return
+        }
+        levelLabel.isHidden = true
     }
     
     func setup() {

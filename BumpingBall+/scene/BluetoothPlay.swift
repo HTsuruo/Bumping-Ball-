@@ -74,10 +74,17 @@ class BluetoothPlay: BaseScene {
         if myLifeCount < 1 {
             Sound.play(node: self, action: Sound.gameover)
             self.isFin = true
+            self.countWinLose(key: udKey.bluetooth_lose_count)
             self.finish()
             self.finishView.mainLabel.text = "LOSE.."
             self.finishView.mainLabel.textColor = ColorUtil.loseColor
         }
+    }
+    
+    func countWinLose(key: String) {
+        var count = ud.integer(forKey: key)
+        count += 1
+        ud.set(count, forKey: key)
     }
     
     func sendPauseData(type: PauseType) {
@@ -122,6 +129,7 @@ class BluetoothPlay: BaseScene {
             if lifeCount < 1 {
                 Sound.play(node: self, action: Sound.gameover)
                 self.isFin = true
+                self.countWinLose(key: udKey.bluetooth_win_count)
                 self.finish()
                 self.finishView.mainLabel.text = "WIN!!"
                 self.finishView.mainLabel.textColor = ColorUtil.winColor
