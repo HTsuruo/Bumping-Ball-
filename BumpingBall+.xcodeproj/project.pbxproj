@@ -97,9 +97,6 @@
 		566D0CEE1DCCC8B50051BAD4 /* devil_orange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 566D0CEA1DCCC8B50051BAD4 /* devil_orange@2x.png */; };
 		566D0CEF1DCCC8B50051BAD4 /* devil_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 566D0CEB1DCCC8B50051BAD4 /* devil_red@2x.png */; };
 		56700B471DC694F20099093D /* bk.sks in Resources */ = {isa = PBXBuildFile; fileRef = 56700B461DC694F20099093D /* bk.sks */; };
-		56700B4B1DC69D2D0099093D /* spark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56700B491DC69D2D0099093D /* spark@2x.png */; };
-		56700B4C1DC69D2D0099093D /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56700B4A1DC69D2D0099093D /* star@2x.png */; };
-		56700B4E1DC6A3D30099093D /* snow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56700B4D1DC6A3D30099093D /* snow@2x.png */; };
 		56700B511DC7154F0099093D /* question_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56700B501DC7154F0099093D /* question_blue@2x.png */; };
 		56700B551DC716D90099093D /* question_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56700B521DC716D90099093D /* question_green@2x.png */; };
 		56700B561DC716D90099093D /* question_orange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56700B531DC716D90099093D /* question_orange@2x.png */; };
@@ -212,6 +209,9 @@
 		56F80F251E056CE2008A6AF7 /* background_snow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56F80F231E056CE2008A6AF7 /* background_snow@2x.png */; };
 		56F80F261E056CE2008A6AF7 /* background_space@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56F80F241E056CE2008A6AF7 /* background_space@2x.png */; };
 		56F80F281E056E8A008A6AF7 /* ThemeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F80F271E056E8A008A6AF7 /* ThemeUtil.swift */; };
+		56F80F2D1E05857E008A6AF7 /* snow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56F80F2A1E05857E008A6AF7 /* snow@2x.png */; };
+		56F80F2F1E05857E008A6AF7 /* space@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56F80F2C1E05857E008A6AF7 /* space@2x.png */; };
+		56F80F331E058844008A6AF7 /* tmp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56F80F311E058844008A6AF7 /* tmp@2x.png */; };
 		D600E83EAF5F1E885000F294 /* Pods_BumpingBall_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87CF2D28E9E810DF7496242E /* Pods_BumpingBall_UITests.framework */; };
 		F83A228293B0F63D4E37196A /* Pods_BumpingBall_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B488E9EEA5EA8F0B356FB8 /* Pods_BumpingBall_.framework */; };
 /* End PBXBuildFile section */
@@ -328,9 +328,6 @@
 		566D0CEA1DCCC8B50051BAD4 /* devil_orange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "devil_orange@2x.png"; path = "img/balls/devil/devil_orange@2x.png"; sourceTree = SOURCE_ROOT; };
 		566D0CEB1DCCC8B50051BAD4 /* devil_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "devil_red@2x.png"; path = "img/balls/devil/devil_red@2x.png"; sourceTree = SOURCE_ROOT; };
 		56700B461DC694F20099093D /* bk.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = bk.sks; path = sks/bk.sks; sourceTree = "<group>"; };
-		56700B491DC69D2D0099093D /* spark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "spark@2x.png"; path = "img/particles_texture/spark@2x.png"; sourceTree = SOURCE_ROOT; };
-		56700B4A1DC69D2D0099093D /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "star@2x.png"; path = "img/particles_texture/star@2x.png"; sourceTree = SOURCE_ROOT; };
-		56700B4D1DC6A3D30099093D /* snow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "snow@2x.png"; path = "img/particles_texture/snow@2x.png"; sourceTree = SOURCE_ROOT; };
 		56700B501DC7154F0099093D /* question_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "question_blue@2x.png"; path = "img/balls/item/question_blue@2x.png"; sourceTree = SOURCE_ROOT; };
 		56700B521DC716D90099093D /* question_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "question_green@2x.png"; path = "img/balls/item/question_green@2x.png"; sourceTree = SOURCE_ROOT; };
 		56700B531DC716D90099093D /* question_orange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "question_orange@2x.png"; path = "img/balls/item/question_orange@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -453,6 +450,9 @@
 		56F80F231E056CE2008A6AF7 /* background_snow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background_snow@2x.png"; path = "img/background/background_snow@2x.png"; sourceTree = SOURCE_ROOT; };
 		56F80F241E056CE2008A6AF7 /* background_space@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background_space@2x.png"; path = "img/background/background_space@2x.png"; sourceTree = SOURCE_ROOT; };
 		56F80F271E056E8A008A6AF7 /* ThemeUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThemeUtil.swift; path = util/ThemeUtil.swift; sourceTree = "<group>"; };
+		56F80F2A1E05857E008A6AF7 /* snow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "snow@2x.png"; path = "img/background_particle/snow@2x.png"; sourceTree = SOURCE_ROOT; };
+		56F80F2C1E05857E008A6AF7 /* space@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "space@2x.png"; path = "img/background_particle/space@2x.png"; sourceTree = SOURCE_ROOT; };
+		56F80F311E058844008A6AF7 /* tmp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tmp@2x.png"; path = "img/background_particle/tmp@2x.png"; sourceTree = SOURCE_ROOT; };
 		87CF2D28E9E810DF7496242E /* Pods_BumpingBall_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BumpingBall_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B488E9EEA5EA8F0B356FB8 /* Pods_BumpingBall_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BumpingBall_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE00D1DED0B5E6E2BD784D2F /* Pods-BumpingBall+Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+Tests/Pods-BumpingBall+Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -593,16 +593,6 @@
 				566D0CEB1DCCC8B50051BAD4 /* devil_red@2x.png */,
 			);
 			name = devil;
-			sourceTree = "<group>";
-		};
-		56700B481DC69D1D0099093D /* particles_texture */ = {
-			isa = PBXGroup;
-			children = (
-				56700B4D1DC6A3D30099093D /* snow@2x.png */,
-				56700B491DC69D2D0099093D /* spark@2x.png */,
-				56700B4A1DC69D2D0099093D /* star@2x.png */,
-			);
-			name = particles_texture;
 			sourceTree = "<group>";
 		};
 		56700B4F1DC715460099093D /* item */ = {
@@ -807,13 +797,13 @@
 		56BB7FC11CAFC08200675AE8 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				56F80F291E058569008A6AF7 /* background_particle */,
 				56F80F221E056CCF008A6AF7 /* background */,
 				5635C2091DD8567500C6AACE /* help */,
 				56C725591DD3881400DFA113 /* tutorial */,
 				56C725481DD371BF00DFA113 /* combo */,
 				5613D4B71DD057A500B165E1 /* circle */,
 				561B35821DD04B58002E13C9 /* level */,
-				56700B481DC69D1D0099093D /* particles_texture */,
 				566B38F81DC655200026083B /* closeBtn@2x.png */,
 				56BD47801DC5E507003AA705 /* splash@2x.png */,
 				56BDE3DF1D7ACA6D00247E36 /* life */,
@@ -1006,6 +996,16 @@
 			name = background;
 			sourceTree = "<group>";
 		};
+		56F80F291E058569008A6AF7 /* background_particle */ = {
+			isa = PBXGroup;
+			children = (
+				56F80F311E058844008A6AF7 /* tmp@2x.png */,
+				56F80F2A1E05857E008A6AF7 /* snow@2x.png */,
+				56F80F2C1E05857E008A6AF7 /* space@2x.png */,
+			);
+			name = background_particle;
+			sourceTree = "<group>";
+		};
 		E9F37341D0DFAFA518E3A727 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1170,6 +1170,7 @@
 				5618C1181DF4076A0060A9DE /* countdown_go.caf in Resources */,
 				5618C1191DF4076A0060A9DE /* countdown.caf in Resources */,
 				5618C11A1DF4076A0060A9DE /* launch.caf in Resources */,
+				56F80F2F1E05857E008A6AF7 /* space@2x.png in Resources */,
 				5618C11B1DF4076A0060A9DE /* pause.caf in Resources */,
 				5618C0FD1DF3DFFC0060A9DE /* dancing.caf in Resources */,
 				5618C0FE1DF3DFFC0060A9DE /* mimei.caf in Resources */,
@@ -1210,6 +1211,7 @@
 				56BB7F3E1CAD345200675AE8 /* LaunchScreen.storyboard in Resources */,
 				5669BD031DFBFAF800E08ECA /* level.plist in Resources */,
 				5613D4BD1DD05E7400B165E1 /* circle_green@2x.png in Resources */,
+				56F80F331E058844008A6AF7 /* tmp@2x.png in Resources */,
 				5666F82C1D645702001EFC57 /* ball_green_3@2x.png in Resources */,
 				5635C2181DD8979D00C6AACE /* gamecenterIcon@2x.png in Resources */,
 				566D0CE41DCCB7BF0051BAD4 /* spark_triangle@2x.png in Resources */,
@@ -1238,7 +1240,6 @@
 				56C7254E1DD371CE00DFA113 /* combo_1@2x.png in Resources */,
 				56E5FE441E03D562008EE4DD /* scale.plist in Resources */,
 				5666F81A1D643167001EFC57 /* helpBtn@2x.png in Resources */,
-				56700B4E1DC6A3D30099093D /* snow@2x.png in Resources */,
 				56DDBD471DD727D000CDBD27 /* ColorBallCell.xib in Resources */,
 				56DDBD2A1DD6C18F00CDBD27 /* oneplayBtn@2x.png in Resources */,
 				5666F8251D6456F5001EFC57 /* ball_orange_1@2x.png in Resources */,
@@ -1259,7 +1260,6 @@
 				56C5E4CD1DFD2416003E66C2 /* hardBtnOff@2x.png in Resources */,
 				56E5FE451E03D562008EE4DD /* speed.plist in Resources */,
 				5666F8201D643CF8001EFC57 /* CountdownView.xib in Resources */,
-				56700B4B1DC69D2D0099093D /* spark@2x.png in Resources */,
 				56BB36841D7324F500AD1603 /* play_bluetooth@2x.png in Resources */,
 				5603F4511DCDFC6500881FDF /* speedup_bk@2x.png in Resources */,
 				56D160C91CC50E2C00257404 /* ball_gold@2x.png in Resources */,
@@ -1275,7 +1275,6 @@
 				56D160CA1CC50E2C00257404 /* ball_green@2x.png in Resources */,
 				56C5E4CF1DFD3CDC003E66C2 /* level_multi.plist in Resources */,
 				5666F8331D645712001EFC57 /* ball_blue_2@2x.png in Resources */,
-				56700B4C1DC69D2D0099093D /* star@2x.png in Resources */,
 				56E073271DBE1D8C002E634D /* icon_wifi@2x.png in Resources */,
 				564FCC1F1DCDF62300072657 /* reverse_bk@2x.png in Resources */,
 				56BB7F391CAD345200675AE8 /* Main.storyboard in Resources */,
@@ -1286,6 +1285,7 @@
 				56D160BF1CC49B3A00257404 /* FinishView.xib in Resources */,
 				56167D381DD3FA8800585330 /* startBtn@2x.png in Resources */,
 				56E6B5081DBA61AA00740A6A /* HeaderViewMatch.xib in Resources */,
+				56F80F2D1E05857E008A6AF7 /* snow@2x.png in Resources */,
 				5613D4BE1DD05E7400B165E1 /* circle_orange@2x.png in Resources */,
 				5666F7DE1D635A4F001EFC57 /* titleTxt@2x.png in Resources */,
 				566D0CEF1DCCC8B50051BAD4 /* devil_red@2x.png in Resources */,

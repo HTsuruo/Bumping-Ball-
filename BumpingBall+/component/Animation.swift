@@ -121,11 +121,10 @@ class Animation {
     func backgroundAnimation(theme: String) -> SKEmitterNode {
         let emitterPath = Bundle.main.path(forResource: "bk", ofType: "sks")
         let node = NSKeyedUnarchiver.unarchiveObject(withFile: emitterPath!) as! SKEmitterNode
-        node.particleTexture = SKTexture(image: UIImage(named: "snow")!)
+        node.particleTexture = SKTexture(image: UIImage(named: theme)!)
         node.particleColorSequence = nil
         node.particleColor = UIColor.white
         node.particleColorBlendFactor = 1.0
-        //node.particleTexture = SKTexture(image: UIImage(named: "star")!)
         node.position = CGPoint(x: CGFloat.CENTER.x, y: CGFloat.HEIGHT)
         return node
     }
