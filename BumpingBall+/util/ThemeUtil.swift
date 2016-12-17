@@ -20,23 +20,33 @@ class ThemeUtil {
         
     }
     
-    func getTheme() -> String {
+    func getTheme() -> ThemeType {
         let count = ThemeType.count
         let rand = Int(arc4random_uniform(UInt32(count)))
         let themeType = ThemeType(rawValue: rand)! as ThemeType
-        var theme = ""
+        return themeType
+    }
+    
+    func getThemeString(themeType: ThemeType) -> String {
         switch themeType {
         case .space:
-            theme = "space"
-            break
+            return "space"
         case .snow:
-            theme = "snow"
-            break
+            return "snow"
         default:
-            theme = "space"
-            break
+            return "space"
         }
-        return theme
+    }
+    
+    func getThemeColor(themeType: ThemeType) -> UIColor {
+        switch themeType {
+        case .space:
+            return UIColor.black
+        case .snow:
+            return ColorUtil.themeSnow
+        default:
+            return UIColor.black
+        }
     }
     
     func getBackground(theme: String) -> SKSpriteNode {

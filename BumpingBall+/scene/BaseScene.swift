@@ -45,9 +45,9 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         self.backgroundColor = UIColor.black
         
         //set background
-        let theme = themeUtil.getTheme()
-        let background = themeUtil.getBackground(theme: theme)
-        let backgroundAnimation = themeUtil.getBackgroundAnimation(theme: theme)
+        let themestr = themeUtil.getThemeString(themeType: app.theme)
+        let background = themeUtil.getBackground(theme: themestr)
+        let backgroundAnimation = themeUtil.getBackgroundAnimation(theme: themestr)
         self.addChild(background)
         self.addChild(backgroundAnimation)
         

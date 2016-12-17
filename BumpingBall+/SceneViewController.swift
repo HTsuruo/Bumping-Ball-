@@ -15,7 +15,6 @@ class SceneViewController: UIViewController {
 
     var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     var skView = SKView()
-    let countdownView = CountdownView()
     let finishView = FinishView(frame: CGRect(x: 0, y: 0, width: CGFloat.WIDTH, height: CGFloat.HEIGHT))
     var scene = SKScene()
     @IBOutlet var pauseMenu: UIView!
@@ -31,6 +30,7 @@ class SceneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         alertUtil = AlertUtil()
+        app.theme = ThemeUtil().getTheme()
         
         let playType = app.selectedPlay
         switch playType {
@@ -124,10 +124,13 @@ class SceneViewController: UIViewController {
     internal func onClickPauseBtn(_ sender: UIButton) {
         Sound.play(audioPlayer: pauseSound)
         skView.isPaused = true
-        countdownView.stop()
         self.view.addSubview(pauseMenu)
         sendPauseData(type: PauseType.pause)
         Bgm.stop()
+        let basescene = scene as! BaseScene
+        if !basescene.isStart {
+            basescene.countdownView.stop()
+        }
     }
     
     @IBAction func onClickResumeBtn(_ sender: UIButton) {
@@ -136,6 +139,11 @@ class SceneViewController: UIViewController {
         pauseMenu.removeFromSuperview()
         sendPauseData(type: PauseType.resume)
         Bgm.play()
+        let basescene = scene as! BaseScene
+        if !basescene.isStart {
+            self.loadView()
+            self.viewDidLoad()
+        }
     }
 
     @IBAction func onClickQuitBtn(_ sender: UIButton) {

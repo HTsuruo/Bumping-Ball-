@@ -11,6 +11,7 @@ import UIKit
 class HeaderView: UIView {
 
     var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    let themeUtil = ThemeUtil()
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var highScoreLabel: UILabel!
@@ -18,6 +19,7 @@ class HeaderView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadXib()
+        contentView.backgroundColor = themeUtil.getThemeColor(themeType: app.theme)
         setHighScoreLabel()
     }
     
