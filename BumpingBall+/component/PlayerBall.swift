@@ -28,7 +28,12 @@ struct PlayerBall {
         self.ball.physicsBody?.isDynamic = false
         let action = SKAction.rotate(byAngle: CGFloat(M_PI), duration:0.8)
         self.ball.run(SKAction.repeatForever(action))
-        self.ballScale = 0.5 * self.scaleVal
+        self.ballScale = ballUtil.getMinScale() * self.scaleVal
+        setInitScale()
+    }
+    
+    mutating func setInitScale() {
+        self.ballScale = ballUtil.getMinScale()
         self.ball.setScale(CGFloat(self.ballScale))
     }
     
@@ -62,7 +67,8 @@ struct PlayerBall {
     }
     
     mutating func sizeChangeForward() {
-        self.ballScale += (define.INCREASE_SCALE * scaleVal)
+        self.ballScale += DeviceUtil.getIncreaseScale(width: CGFloat.WIDTH)
+        print(self.ballScale)
         sizeChange()
         if ballUtil.isInScaleOverMax(scale: Double(self.ballScale)) {
             setBlue()
@@ -71,28 +77,31 @@ struct PlayerBall {
     }
     
     mutating func sizeChangeReverse() {
-        print(self.ballScale)
-        self.ballScale -= (define.INCREASE_SCALE * scaleVal)
-        print(self.ballScale)
+        self.ballScale -= DeviceUtil.getIncreaseScale(width: CGFloat.WIDTH)
         sizeChange()
         if ballUtil.isInScaleOverMin(scale: Double(self.ballScale)) {
             setRed()
             self.ballScale = ballUtil.getMaxScale() * scaleVal
+            return
         }
     }
     
     mutating func sizeChange() {
         if ballUtil.isInScaleRange(name: "blue", scale: Double(self.ballScale)) {
             setBlue()
+            return
         }
         if ballUtil.isInScaleRange(name: "green", scale: Double(self.ballScale)) {
             setGreen()
+            return
         }
         if ballUtil.isInScaleRange(name: "orange", scale: Double(self.ballScale)) {
             setOrange()
+            return
         }
         if ballUtil.isInScaleRange(name: "red", scale: Double(self.ballScale)) {
             setRed()
+            return
         }
     }
     

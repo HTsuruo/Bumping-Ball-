@@ -42,7 +42,7 @@ class DeviceUtil {
         case .inches_4_7:
             return  0.04
         case .inches_5_5:
-            return  0.10
+            return  0.08
         }
     }
 }
