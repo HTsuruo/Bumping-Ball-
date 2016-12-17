@@ -171,7 +171,6 @@
 		56C725501DD371CE00DFA113 /* combo_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56C7254B1DD371CE00DFA113 /* combo_3@2x.png */; };
 		56C725511DD371CE00DFA113 /* combo_4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56C7254C1DD371CE00DFA113 /* combo_4@2x.png */; };
 		56C725521DD371CE00DFA113 /* combo_5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56C7254D1DD371CE00DFA113 /* combo_5@2x.png */; };
-		56C725541DD378EF00DFA113 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56C725531DD378EF00DFA113 /* background@2x.png */; };
 		56C725561DD3801700DFA113 /* TutorialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C725551DD3801700DFA113 /* TutorialScene.swift */; };
 		56C725581DD3814800DFA113 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C725571DD3814800DFA113 /* TutorialViewController.swift */; };
 		56C7255B1DD3882C00DFA113 /* nextBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56C7255A1DD3882C00DFA113 /* nextBtn@2x.png */; };
@@ -210,6 +209,9 @@
 		56E6B5081DBA61AA00740A6A /* HeaderViewMatch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56E6B5061DBA61AA00740A6A /* HeaderViewMatch.xib */; };
 		56E6B50A1DBA61BA00740A6A /* PrepareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56E6B5091DBA61BA00740A6A /* PrepareView.xib */; };
 		56E6B50C1DBA627B00740A6A /* PrepareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E6B50B1DBA627B00740A6A /* PrepareView.swift */; };
+		56F80F251E056CE2008A6AF7 /* background_snow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56F80F231E056CE2008A6AF7 /* background_snow@2x.png */; };
+		56F80F261E056CE2008A6AF7 /* background_space@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56F80F241E056CE2008A6AF7 /* background_space@2x.png */; };
+		56F80F281E056E8A008A6AF7 /* ThemeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F80F271E056E8A008A6AF7 /* ThemeUtil.swift */; };
 		D600E83EAF5F1E885000F294 /* Pods_BumpingBall_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87CF2D28E9E810DF7496242E /* Pods_BumpingBall_UITests.framework */; };
 		F83A228293B0F63D4E37196A /* Pods_BumpingBall_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B488E9EEA5EA8F0B356FB8 /* Pods_BumpingBall_.framework */; };
 /* End PBXBuildFile section */
@@ -406,7 +408,6 @@
 		56C7254B1DD371CE00DFA113 /* combo_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "combo_3@2x.png"; path = "img/combo/combo_3@2x.png"; sourceTree = SOURCE_ROOT; };
 		56C7254C1DD371CE00DFA113 /* combo_4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "combo_4@2x.png"; path = "img/combo/combo_4@2x.png"; sourceTree = SOURCE_ROOT; };
 		56C7254D1DD371CE00DFA113 /* combo_5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "combo_5@2x.png"; path = "img/combo/combo_5@2x.png"; sourceTree = SOURCE_ROOT; };
-		56C725531DD378EF00DFA113 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background@2x.png"; path = "img/background@2x.png"; sourceTree = SOURCE_ROOT; };
 		56C725551DD3801700DFA113 /* TutorialScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TutorialScene.swift; path = scene/TutorialScene.swift; sourceTree = "<group>"; };
 		56C725571DD3814800DFA113 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		56C7255A1DD3882C00DFA113 /* nextBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "nextBtn@2x.png"; path = "img/tutorial/nextBtn@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -449,6 +450,9 @@
 		56E6B5061DBA61AA00740A6A /* HeaderViewMatch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HeaderViewMatch.xib; path = view/multiplay/HeaderViewMatch.xib; sourceTree = "<group>"; };
 		56E6B5091DBA61BA00740A6A /* PrepareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PrepareView.xib; path = view/multiplay/PrepareView.xib; sourceTree = "<group>"; };
 		56E6B50B1DBA627B00740A6A /* PrepareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrepareView.swift; path = view/multiplay/PrepareView.swift; sourceTree = "<group>"; };
+		56F80F231E056CE2008A6AF7 /* background_snow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background_snow@2x.png"; path = "img/background/background_snow@2x.png"; sourceTree = SOURCE_ROOT; };
+		56F80F241E056CE2008A6AF7 /* background_space@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background_space@2x.png"; path = "img/background/background_space@2x.png"; sourceTree = SOURCE_ROOT; };
+		56F80F271E056E8A008A6AF7 /* ThemeUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThemeUtil.swift; path = util/ThemeUtil.swift; sourceTree = "<group>"; };
 		87CF2D28E9E810DF7496242E /* Pods_BumpingBall_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BumpingBall_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B488E9EEA5EA8F0B356FB8 /* Pods_BumpingBall_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BumpingBall_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE00D1DED0B5E6E2BD784D2F /* Pods-BumpingBall+Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+Tests/Pods-BumpingBall+Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -803,9 +807,9 @@
 		56BB7FC11CAFC08200675AE8 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				56F80F221E056CCF008A6AF7 /* background */,
 				5635C2091DD8567500C6AACE /* help */,
 				56C725591DD3881400DFA113 /* tutorial */,
-				56C725531DD378EF00DFA113 /* background@2x.png */,
 				56C725481DD371BF00DFA113 /* combo */,
 				5613D4B71DD057A500B165E1 /* circle */,
 				561B35821DD04B58002E13C9 /* level */,
@@ -975,6 +979,7 @@
 				56E073351DBE463C002E634D /* BallUtil.swift */,
 				56DDBD3F1DD705F000CDBD27 /* AdUitl.swift */,
 				56E5FE3C1E03C682008EE4DD /* DeviceUtil.swift */,
+				56F80F271E056E8A008A6AF7 /* ThemeUtil.swift */,
 			);
 			name = util;
 			sourceTree = "<group>";
@@ -990,6 +995,15 @@
 				5698E9E61DBA77FA0078DC53 /* WaitingView.xib */,
 			);
 			name = multiplay;
+			sourceTree = "<group>";
+		};
+		56F80F221E056CCF008A6AF7 /* background */ = {
+			isa = PBXGroup;
+			children = (
+				56F80F231E056CE2008A6AF7 /* background_snow@2x.png */,
+				56F80F241E056CE2008A6AF7 /* background_space@2x.png */,
+			);
+			name = background;
 			sourceTree = "<group>";
 		};
 		E9F37341D0DFAFA518E3A727 /* Pods */ = {
@@ -1170,6 +1184,7 @@
 				561BA20A1D69799B004FC052 /* TouchViewTxt.xib in Resources */,
 				56D160D31CC50E5300257404 /* twitter@2x.png in Resources */,
 				56DDBD361DD6C39900CDBD27 /* gamecenterBtn@2x.png in Resources */,
+				56F80F251E056CE2008A6AF7 /* background_snow@2x.png in Resources */,
 				561BA2131D699E25004FC052 /* swipeArrow@2x.png in Resources */,
 				5666F82A1D645702001EFC57 /* ball_green_1@2x.png in Resources */,
 				56BB36831D7324F500AD1603 /* icon_bluetooth@2x.png in Resources */,
@@ -1256,6 +1271,7 @@
 				561B35871DD04BD9002E13C9 /* hardBtn@2x.png in Resources */,
 				5666F83F1D646090001EFC57 /* two@2x.png in Resources */,
 				5635C20E1DD857BD00C6AACE /* multiModeBtn@2x.png in Resources */,
+				56F80F261E056CE2008A6AF7 /* background_space@2x.png in Resources */,
 				56D160CA1CC50E2C00257404 /* ball_green@2x.png in Resources */,
 				56C5E4CF1DFD3CDC003E66C2 /* level_multi.plist in Resources */,
 				5666F8331D645712001EFC57 /* ball_blue_2@2x.png in Resources */,
@@ -1267,7 +1283,6 @@
 				56BF57D01CD7902000923509 /* Roboto-Light.ttf in Resources */,
 				56BF578B1CD4BBBD00923509 /* home@2x.png in Resources */,
 				5603F4B21DD007AE00881FDF /* LevelSelectView.xib in Resources */,
-				56C725541DD378EF00DFA113 /* background@2x.png in Resources */,
 				56D160BF1CC49B3A00257404 /* FinishView.xib in Resources */,
 				56167D381DD3FA8800585330 /* startBtn@2x.png in Resources */,
 				56E6B5081DBA61AA00740A6A /* HeaderViewMatch.xib in Resources */,
@@ -1512,6 +1527,7 @@
 				561BA20C1D697A62004FC052 /* TouchViewTxt.swift in Sources */,
 				56DDBD461DD727D000CDBD27 /* ColorBallCell.swift in Sources */,
 				56E6B50C1DBA627B00740A6A /* PrepareView.swift in Sources */,
+				56F80F281E056E8A008A6AF7 /* ThemeUtil.swift in Sources */,
 				5632A6091DC738CB0064C498 /* ItemBall.swift in Sources */,
 				56E5FE3D1E03C682008EE4DD /* DeviceUtil.swift in Sources */,
 				56B802571D684765007B79A7 /* HeaderView.swift in Sources */,

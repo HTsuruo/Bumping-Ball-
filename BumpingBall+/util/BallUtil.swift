@@ -166,7 +166,7 @@ class BallUtil {
         if let valdic: NSDictionary = scaledic?.object(forKey: name) as? NSDictionary {
             let min = (valdic.object(forKey: "min") as! Double) * Double(scaleVal)
             let max = (valdic.object(forKey: "max") as! Double) * Double(scaleVal)
-            print("\(name): {min: \(min), max: \(max)}")
+            //print("\(name): {min: \(min), max: \(max)}")
             return (min <= scale && scale < max)
         }
         return false

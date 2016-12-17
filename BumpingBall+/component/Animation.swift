@@ -118,7 +118,7 @@ class Animation {
         return foreverChange
     }
     
-    func backgroundAnimation() -> SKEmitterNode {
+    func backgroundAnimation(theme: String) -> SKEmitterNode {
         let emitterPath = Bundle.main.path(forResource: "bk", ofType: "sks")
         let node = NSKeyedUnarchiver.unarchiveObject(withFile: emitterPath!) as! SKEmitterNode
         node.particleTexture = SKTexture(image: UIImage(named: "snow")!)
@@ -169,4 +169,5 @@ class Animation {
         let action = SKAction.group([fadeInOut, scale])
         return removeAfterAction(action)
     }
+    
 }

@@ -124,3 +124,11 @@ enum SettingType: Int {
     case licence = 11
     case version = 12
 }
+
+enum ThemeType: Int {
+    case space = 0
+    case snow = 1
+    
+    case _count // ダミーカウンタ
+    static let count = _count.rawValue // 利用するものはこちら
+}

@@ -68,7 +68,6 @@ struct PlayerBall {
     
     mutating func sizeChangeForward() {
         self.ballScale += DeviceUtil.getIncreaseScale(width: CGFloat.WIDTH)
-        print(self.ballScale)
         sizeChange()
         if ballUtil.isInScaleOverMax(scale: Double(self.ballScale)) {
             setBlue()

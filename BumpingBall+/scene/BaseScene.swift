@@ -15,6 +15,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
     var playerBall = PlayerBall()
     let ballUtil = BallUtil()
     let animation = Animation()
+    let themeUtil = ThemeUtil()
     var last: CFTimeInterval!
     var score = 0
     var comboCount = 0
@@ -42,20 +43,13 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate   = self
         self.physicsWorld.speed = CGFloat(1.0)
         self.backgroundColor = UIColor.black
-
-        /*
-        let background = SKSpriteNode(imageNamed: "background")
-        background.size = CGSize(width: CGFloat.WIDTH, height: CGFloat.HEIGHT * 2)
-        background.position = CGFloat.CENTER
-        background.alpha = 0.5
-        self.addChild(background)
         
-        let movetoY = SKAction.moveTo(y: CGFloat.HEIGHT, duration: 10.0)
-        let backToY = SKAction.moveTo(y: 0, duration: 0.0)
-        let sequence = SKAction.sequence([movetoY, backToY])
-        let forever = SKAction.repeatForever(sequence)
-        background.run(forever)
-         */
+        //set background
+        let theme = themeUtil.getTheme()
+        let background = themeUtil.getBackground(theme: theme)
+        let backgroundAnimation = themeUtil.getBackgroundAnimation(theme: theme)
+        self.addChild(background)
+        self.addChild(backgroundAnimation)
         
         app.score = 0
         
@@ -65,9 +59,6 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         self.view?.addSubview(countdownView)
         self.addChild(charge)
         
-        // set background animation.
-        let snow = animation.backgroundAnimation()
-        self.addChild(snow)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
