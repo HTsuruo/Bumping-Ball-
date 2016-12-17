@@ -207,13 +207,21 @@ class BallUtil {
     
     func getScale(name: String) -> CGFloat {
         if let valdic: NSDictionary = scaledic?.object(forKey: name) as? NSDictionary {
-            var scale = valdic.object(forKey: "min") as! CGFloat
-            if scale <= 0.5 { //相手ボールにしては小さいので
-                scale = 0.6
+            var min = valdic.object(forKey: "min") as! CGFloat * CGFloat(scaleVal)
+            let max = valdic.object(forKey: "max") as! CGFloat * CGFloat(scaleVal)
+            let rand = Int(arc4random_uniform(2))
+            var res: CGFloat = 0.0
+            if rand == 0 { //min
+                if min <= 0.5 { //相手ボールにしては小さいので
+                    min = 0.6
+                }
+                res = min
+            } else { //average
+                res = (min + max) / 2
             }
-            return scale * CGFloat(scaleVal)
+            return res
         }
-        return 0.0
+        return 1.0
     }
 
     func getPlayerBallSpeed(name: String) -> Double {

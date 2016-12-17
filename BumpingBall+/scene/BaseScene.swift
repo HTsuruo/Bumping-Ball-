@@ -393,6 +393,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         self.isUserInteractionEnabled = false
         finishView.setup()
         finishView.setScoreLabel(score)
+        finishView.setLevelLabel()
         finishView.alpha = 0.0
         self.view!.addSubview(finishView)
         

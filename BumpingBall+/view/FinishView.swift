@@ -19,6 +19,7 @@ class FinishView: UIView {
     @IBOutlet weak var lineBtn: UIButton!
     @IBOutlet weak var againBtn: UIButton!
     @IBOutlet weak var mainLabel: UILabel!
+    @IBOutlet weak var levelLabel: UILabel!
     var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     var vc: UIViewController!
     var scenevc: SceneViewController!
@@ -44,6 +45,15 @@ class FinishView: UIView {
             ud.set(totalScore, forKey: "highscore-"+difficultyStr)
         }
         GameCenterUtil.sendScore(totalScore, leaderBoardId: difficultyStr)
+    }
+    
+    func setLevelLabel() {
+        if app.selectedPlay != .one {
+            levelLabel.isHidden = true
+            return
+        }
+        levelLabel.textColor = ColorUtil.stageSignBk
+        levelLabel.text = "LEVEL \(app.level)"
     }
     
     func setup() {
