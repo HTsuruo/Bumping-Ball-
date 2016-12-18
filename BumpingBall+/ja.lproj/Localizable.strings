@@ -44,10 +44,16 @@
 "connection_error_title" = "接続エラー";
 
 /* No comment provided by engineer. */
+"easy" = "イージー";
+
+/* No comment provided by engineer. */
 "enable_play_hard_mode" = "ハードモードで遊べるようになりました";
 
 /* No comment provided by engineer. */
 "gamecenter_not_play" = "GameCenterによる対戦機能は現在ご利用いただけません";
+
+/* No comment provided by engineer. */
+"hard" = "ハード";
 
 /* No comment provided by engineer. */
 "help_content_1" = "チュートリアル";
@@ -92,6 +98,9 @@
 "itemTxt_3" = "ワンアップ";
 
 /* No comment provided by engineer. */
+"normal" = "ノーマル";
+
+/* No comment provided by engineer. */
 "not_play_hard_mode" = "まだハードモードでは遊べません";
 
 /* No comment provided by engineer. */
@@ -123,6 +132,10 @@
 
 /* No comment provided by engineer. */
 "setting_section_2" = "アプリ情報";
+
+/* No comment provided by engineer. */
+"sns_message_with_score" = "%dバンプを達成しました。(%@)
+";
 
 /* No comment provided by engineer. */
 "tutorial_finger_text_0" = "";

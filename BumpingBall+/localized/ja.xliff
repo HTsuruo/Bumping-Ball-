@@ -97,9 +97,9 @@
             <trans-unit id="xXN-eZ-Y42.text">
                 <source>You can enjoy match mode
 in the following environments </source>
-                <note>Class = "UILabel"; text = "You can enjoy match mode\nin the following environments "; ObjectID = "xXN-eZ-Y42";</note>
                 <target>以下の環境で対戦モードを
 お楽しみいただけます</target>
+                <note>Class = "UILabel"; text = "You can enjoy match mode\nin the following environments "; ObjectID = "xXN-eZ-Y42";</note>
             </trans-unit>
         </body>
     </file>
@@ -136,8 +136,8 @@ in the following environments </source>
             </trans-unit>
             <trans-unit id="color_ball_section_3">
                 <source>color_ball_section_3</source>
-                <note>No comment provided by engineer.</note>
                 <target>アイテムボール</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="commonSubTxt_1">
                 <source>commonSubTxt_1</source>
@@ -199,6 +199,11 @@ in the following environments </source>
                 <target>接続エラー</target>
                 <note>No comment provided by engineer.</note>
             </trans-unit>
+            <trans-unit id="easy">
+                <source>easy</source>
+                <note>No comment provided by engineer.</note>
+                <target>イージー</target>
+            </trans-unit>
             <trans-unit id="enable_play_hard_mode">
                 <source>enable_play_hard_mode</source>
                 <target>ハードモードで遊べるようになりました</target>
@@ -208,6 +213,11 @@ in the following environments </source>
                 <source>gamecenter_not_play</source>
                 <target>GameCenterによる対戦機能は現在ご利用いただけません</target>
                 <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="hard">
+                <source>hard</source>
+                <note>No comment provided by engineer.</note>
+                <target>ハード</target>
             </trans-unit>
             <trans-unit id="help_content_1">
                 <source>help_content_1</source>
@@ -279,6 +289,11 @@ in the following environments </source>
                 <target>ワンアップ</target>
                 <note>No comment provided by engineer.</note>
             </trans-unit>
+            <trans-unit id="normal">
+                <source>normal</source>
+                <note>No comment provided by engineer.</note>
+                <target>ノーマル</target>
+            </trans-unit>
             <trans-unit id="not_play_hard_mode">
                 <source>not_play_hard_mode</source>
                 <target>まだハードモードでは遊べません</target>
@@ -286,33 +301,33 @@ in the following environments </source>
             </trans-unit>
             <trans-unit id="otherSubTxt_1">
                 <source>otherSubTxt_1</source>
-                <note>No comment provided by engineer.</note>
                 <target>数字の数だけ当てたら消せる</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="otherSubTxt_2">
                 <source>otherSubTxt_2</source>
-                <note>No comment provided by engineer.</note>
                 <target>対戦相手にスケルトンボールを送りこめる</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="otherSubTxt_3">
                 <source>otherSubTxt_3</source>
-                <note>No comment provided by engineer.</note>
                 <target>対戦相手に送りこまれた邪魔なボール</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="otherTxt_1">
                 <source>otherTxt_1</source>
-                <note>No comment provided by engineer.</note>
                 <target>カウントボール</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="otherTxt_2">
                 <source>otherTxt_2</source>
-                <note>No comment provided by engineer.</note>
                 <target>はてなボール</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="otherTxt_3">
                 <source>otherTxt_3</source>
-                <note>No comment provided by engineer.</note>
                 <target>スケルトンボール</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="setting_item_1">
                 <source>setting_item_1</source>
@@ -332,6 +347,12 @@ in the following environments </source>
             <trans-unit id="setting_section_2">
                 <source>setting_section_2</source>
                 <target>アプリ情報</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="sns_message_with_score">
+                <source>sns_message_with_score</source>
+                <target>%dバンプを達成しました。(%@)
+</target>
                 <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="tutorial_finger_text_0">

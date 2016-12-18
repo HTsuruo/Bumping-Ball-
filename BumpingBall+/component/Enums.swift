@@ -65,6 +65,21 @@ enum DifficultyType: Int {
         }
     }
     
+    func getLocalizedString() -> String {
+        switch self {
+        case .easy:
+            return NSLocalizedString("easy", comment: "")
+        case .normal:
+            return NSLocalizedString("normal", comment: "")
+        case .hard:
+            return NSLocalizedString("hard", comment: "")
+        case .impossible:
+            return ""
+        default:
+            return ""
+        }
+    }
+    
     func canCreateHasNumber() -> Bool {
         switch self {
         case .normal:

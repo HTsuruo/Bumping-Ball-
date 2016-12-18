@@ -26,6 +26,7 @@ class FinishView: UIView {
     var vc: UIViewController!
     var scenevc: SceneViewController!
     let btnSound = Sound.prepareToPlay("button")
+    var totalScore = 0
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -50,6 +51,7 @@ class FinishView: UIView {
                 highScoreStamp.isHidden = false
             }
         }
+        self.totalScore = totalScore
         GameCenterUtil.sendScore(totalScore, leaderBoardId: difficultyStr)
     }
     
@@ -90,27 +92,34 @@ class FinishView: UIView {
     
     @IBAction func onClickTwitterBtn(_ sender: UIButton) {
         btnSound.play()
-        let text = "【Bumping Ball+】"
         let composeViewController: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
-        composeViewController.setInitialText(text)
+        composeViewController.setInitialText(getSnsMsg())
         vc.present(composeViewController, animated: true, completion: nil)
     }
     
     @IBAction func onClickFacebookBtn(_ sender: UIButton) {
         btnSound.play()
-        let text = "【Bumping Ball+】"
         let composeViewController: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
-        composeViewController.setInitialText(text)
+        composeViewController.setInitialText(getSnsMsg())
         vc.present(composeViewController, animated: true, completion: nil)
     }
     
     @IBAction func onClickLineBtn(_ sender: UIButton) {
         btnSound.play()
-        let text: String! = "【Bumping Ball+】"
-        let encodeMessage: String! = text.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
+        let encodeMessage: String! = getSnsMsg().addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         let messageURL: URL! = URL( string: "line://msg/text/" + encodeMessage )
         if UIApplication.shared.canOpenURL(messageURL) {
             UIApplication.shared.openURL( messageURL )
         }
+    }
+    
+    func getSnsMsg() -> String {
+        var msg = ""
+        if app.selectedPlay == .one {
+            let difficulty = app.selectedDiffculty.getLocalizedString()
+            msg = String(format: NSLocalizedString("sns_message_with_score", comment: ""), self.totalScore, difficulty) + "\n"
+        }
+        let text = "【Bumping Ball+】\n\(msg)\(define.APPSTORE_URL)"
+        return text
     }
 }

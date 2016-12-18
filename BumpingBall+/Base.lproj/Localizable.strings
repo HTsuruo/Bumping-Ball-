@@ -6,6 +6,8 @@
   Copyright © 平成28年 Hideki Tsuruoka. All rights reserved.
 */
 
+"bump" = "bump";
+
 //設定画面
 "setting_section_1" = "Basic Configuration";
 "setting_section_2" = "About App";
@@ -76,3 +78,9 @@
 "update_yes" = "update now";
 "update_no" = "no thanks";
 "gamecenter_not_play" = "Fighting mode by GamceCenter is currently unavailable.";
+
+//sns share
+"easy" = "easy";
+"normal" = "normal";
+"hard" = "hard";
+"sns_message_with_score" = "Got %d bump.(%@)";
