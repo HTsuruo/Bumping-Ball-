@@ -44,6 +44,7 @@ class TutorialViewController: UIViewController {
         super.viewDidLoad()
         
         app.selectedDiffculty = DifficultyType.tutorial
+        app.level = 1
         label.numberOfLines = 0
         fingerIcon.isHidden = true
         

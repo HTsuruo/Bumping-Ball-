@@ -60,6 +60,8 @@
 		5635C21B1DD89AFC00C6AACE /* beginnerIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5635C21A1DD89AFC00C6AACE /* beginnerIcon@2x.png */; };
 		564FCC1F1DCDF62300072657 /* reverse_bk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 564FCC1E1DCDF62300072657 /* reverse_bk@2x.png */; };
 		565DDA531CBD4707003C9F0D /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565DDA521CBD4707003C9F0D /* Animation.swift */; };
+		565EEF571E067E5600C67CB3 /* BattleModeHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565EEF561E067E5600C67CB3 /* BattleModeHelpViewController.swift */; };
+		565EEF5A1E06825D00C67CB3 /* page_0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 565EEF591E06825D00C67CB3 /* page_0@2x.png */; };
 		566176EB1D6881EC00AF10BA /* chargeMeter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 566176EA1D6881EC00AF10BA /* chargeMeter@2x.png */; };
 		5666F7DE1D635A4F001EFC57 /* titleTxt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5666F7DD1D635A4F001EFC57 /* titleTxt@2x.png */; };
 		5666F81A1D643167001EFC57 /* helpBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5666F8191D643167001EFC57 /* helpBtn@2x.png */; };
@@ -288,6 +290,8 @@
 		5635C21A1DD89AFC00C6AACE /* beginnerIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "beginnerIcon@2x.png"; path = "img/help/beginnerIcon@2x.png"; sourceTree = SOURCE_ROOT; };
 		564FCC1E1DCDF62300072657 /* reverse_bk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reverse_bk@2x.png"; path = "img/ball_item_bk/reverse_bk@2x.png"; sourceTree = SOURCE_ROOT; };
 		565DDA521CBD4707003C9F0D /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = component/Animation.swift; sourceTree = "<group>"; };
+		565EEF561E067E5600C67CB3 /* BattleModeHelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BattleModeHelpViewController.swift; path = help/BattleModeHelpViewController.swift; sourceTree = "<group>"; };
+		565EEF591E06825D00C67CB3 /* page_0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "page_0@2x.png"; path = "img/help/battlemode/page_0@2x.png"; sourceTree = SOURCE_ROOT; };
 		566176EA1D6881EC00AF10BA /* chargeMeter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chargeMeter@2x.png"; path = "img/chargeMeter@2x.png"; sourceTree = SOURCE_ROOT; };
 		5666F7DD1D635A4F001EFC57 /* titleTxt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "titleTxt@2x.png"; path = "img/top/titleTxt@2x.png"; sourceTree = SOURCE_ROOT; };
 		5666F8191D643167001EFC57 /* helpBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "helpBtn@2x.png"; path = "img/top/helpBtn@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -538,6 +542,7 @@
 		5635C2091DD8567500C6AACE /* help */ = {
 			isa = PBXGroup;
 			children = (
+				565EEF581E06825100C67CB3 /* battlemode */,
 				5635C21A1DD89AFC00C6AACE /* beginnerIcon@2x.png */,
 				5635C2141DD8979D00C6AACE /* colorBallIcon@2x.png */,
 				5635C2151DD8979D00C6AACE /* gamecenterIcon@2x.png */,
@@ -556,6 +561,14 @@
 				564FCC1E1DCDF62300072657 /* reverse_bk@2x.png */,
 			);
 			name = ball_item_bk;
+			sourceTree = "<group>";
+		};
+		565EEF581E06825100C67CB3 /* battlemode */ = {
+			isa = PBXGroup;
+			children = (
+				565EEF591E06825D00C67CB3 /* page_0@2x.png */,
+			);
+			name = battlemode;
 			sourceTree = "<group>";
 		};
 		5666F7D81D6345FF001EFC57 /* top */ = {
@@ -954,6 +967,7 @@
 			children = (
 				56DDBD411DD726B400CDBD27 /* ColorBallViewController.swift */,
 				5635C2071DD8510F00C6AACE /* HelpViewController.swift */,
+				565EEF561E067E5600C67CB3 /* BattleModeHelpViewController.swift */,
 			);
 			name = help;
 			sourceTree = "<group>";
@@ -1158,6 +1172,7 @@
 			files = (
 				56C5E4D41DFD44DC003E66C2 /* bomb.caf in Resources */,
 				5669BCFC1DFB1FF600E08ECA /* launch_gold.caf in Resources */,
+				565EEF5A1E06825D00C67CB3 /* page_0@2x.png in Resources */,
 				56C5E4D11DFD4116003E66C2 /* itemball_launch.caf in Resources */,
 				5669BCFF1DFB206000E08ECA /* gameover.caf in Resources */,
 				5669BCFA1DFB1FF600E08ECA /* collision_perfect.caf in Resources */,
@@ -1491,6 +1506,7 @@
 				5635C2081DD8510F00C6AACE /* HelpViewController.swift in Sources */,
 				569EC8311DF2A76C00A96E9B /* StageSign.swift in Sources */,
 				56BB7F361CAD345100675AE8 /* SceneViewController.swift in Sources */,
+				565EEF571E067E5600C67CB3 /* BattleModeHelpViewController.swift in Sources */,
 				56E0732E1DBE45EA002E634D /* Util.swift in Sources */,
 				5630775E1DF2C90D00966F29 /* Bgm.swift in Sources */,
 				560A49831D729F3600DEBB6A /* TopScene.swift in Sources */,

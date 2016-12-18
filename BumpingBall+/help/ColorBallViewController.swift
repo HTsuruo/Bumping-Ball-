@@ -28,6 +28,20 @@ class ColorBallViewController: UITableViewController {
         NSLocalizedString("commonSubTxt_5", comment: "")
     ]
     
+    let otherIcon: [String] = [
+        ballImage.BLUE_3, ballImage.ITEM_BLUE, ballImage.DEVIL_BLUE
+    ]
+    let otherTxt: [String] = [
+        NSLocalizedString("otherTxt_1", comment: ""),
+        NSLocalizedString("otherTxt_2", comment: ""),
+        NSLocalizedString("otherTxt_3", comment: ""),
+    ]
+    let otherSubTxt: [String] = [
+        NSLocalizedString("otherSubTxt_1", comment: ""),
+        NSLocalizedString("otherSubTxt_2", comment: ""),
+        NSLocalizedString("otherSubTxt_3", comment: ""),
+    ]
+    
     let itemIcon: [String] = [
         ballImage.ITEM_REVERSE, ballImage.ITEM_SPEEDUP, ballImage.ITEM_ONEUP
     ]
@@ -43,7 +57,8 @@ class ColorBallViewController: UITableViewController {
     ]
     
     private let COMMON = 0
-    private let ITEM = 1
+    private let OTHER = 1
+    private let ITEM = 2
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,10 +107,12 @@ class ColorBallViewController: UITableViewController {
         label.font = UIFont.systemFont(ofSize: 15.0)
         let paddingTxt = "   "
         switch section {
-        case 0:
+        case COMMON:
             label.text = paddingTxt + NSLocalizedString("color_ball_section_1", comment: "")
-        case 1:
+        case OTHER:
             label.text =  paddingTxt + NSLocalizedString("color_ball_section_2", comment: "")
+        case ITEM:
+            label.text =  paddingTxt + NSLocalizedString("color_ball_section_3", comment: "")
         default:
             label.text = ""
         }
@@ -106,7 +123,7 @@ class ColorBallViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 3
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -114,6 +131,8 @@ class ColorBallViewController: UITableViewController {
         switch section {
         case COMMON:
             return commonIcon.count
+        case OTHER:
+            return otherIcon.count
         case ITEM:
             return itemIcon.count
         default:
@@ -129,6 +148,11 @@ class ColorBallViewController: UITableViewController {
             cell.colorBallIcon.image = UIImage(named: commonIcon[indexPath.row])
             cell.titleTxt.text = commonTxt[indexPath.row]
             cell.subTxt.text = commonSubTxt[indexPath.row]
+            break
+        case OTHER:
+            cell.colorBallIcon.image = UIImage(named: otherIcon[indexPath.row])
+            cell.titleTxt.text = otherTxt[indexPath.row]
+            cell.subTxt.text = otherSubTxt[indexPath.row]
             break
         case ITEM:
             cell.colorBallIcon.image = UIImage(named: itemIcon[indexPath.row])

@@ -32,7 +32,8 @@
 
 //カラーボール
 "color_ball_section_1" = "Color Ball";
-"color_ball_section_2" = "Item Ball";
+"color_ball_section_2" = "Color Other Ball";
+"color_ball_section_3" = "Item Ball";
 "commonTxt_1" = "Blue Ball";
 "commonTxt_2" = "Green Ball";
 "commonTxt_3" = "Orange Ball";
@@ -44,6 +45,13 @@
 "commonSubTxt_4" = "Slow speed and big ball.";
 "commonSubTxt_5" = "This ball can destroy all balls.";
 
+"otherTxt_1" = "Count Ball";
+"otherTxt_2" = "Question Ball";
+"otherTxt_3" = "Skeleton Ball";
+"otherSubTxt_1" = "Destroy when you hits the number.";
+"otherSubTxt_2" = "Can send skeleton ball to opponent.";
+"otherSubTxt_3" = "Received when opponent hits question ball.";
+
 "itemTxt_1" = "Reverse Ball";
 "itemTxt_2" = "Spped UP Ball";
 "itemTxt_3" = "One UP Ball";
@@ -53,7 +61,7 @@
 
 //help
 "help_content_1" = "Tutorial";
-"help_content_2" = "Battle mode";
+"help_content_2" = "Match mode";
 "help_content_3" = "Color ball list";
 "how_to_play" = "How to play";
 
