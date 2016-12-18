@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class HelpViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -42,6 +43,7 @@ class HelpViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(UINib(nibName: "HelpCell", bundle: nil), forCellReuseIdentifier: "cell")
+        
     }
 
     override func didReceiveMemoryWarning() {

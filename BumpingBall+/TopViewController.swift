@@ -62,7 +62,6 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
         self.view.addSubview(skView)
         self.view.sendSubview(toBack: skView)
         Bgm.playBgm(filename: Bgm.topMusic)
-        
     }
     
     override func didReceiveMemoryWarning() {

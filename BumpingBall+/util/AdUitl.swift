@@ -12,7 +12,7 @@ import GoogleMobileAds
 class AdUitl: GADBannerView, GADBannerViewDelegate {
     
     private let adMobId = "ca-app-pub-3081716991868318/5245059383"
-    var bannerView = GADBannerView()
+    var bannerView: GADBannerView! = nil
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,7 +32,7 @@ class AdUitl: GADBannerView, GADBannerViewDelegate {
         bannerView.delegate = self
         bannerView.rootViewController = vc
         let request = GADRequest()
-//        request.testDevices = ["2271c3f1fb9b3bcbc4a426d7d2f970b7"]
+        request.testDevices = ["2271c3f1fb9b3bcbc4a426d7d2f970b7"]
         bannerView.load(request)
         vc.view.addSubview(bannerView)
     }
