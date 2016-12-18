@@ -125,6 +125,7 @@
 		56AD645C1DCCE69800DAC92B /* ball_red_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56AD64591DCCE69800DAC92B /* ball_red_2@2x.png */; };
 		56AD645D1DCCE69800DAC92B /* ball_red_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56AD645A1DCCE69800DAC92B /* ball_red_3@2x.png */; };
 		56AF86971DC7413800928022 /* SimpleTargetBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AF86961DC7413800928022 /* SimpleTargetBall.swift */; };
+		56B15EDD1E06A59800E81E92 /* high_score_stamp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56B15EDC1E06A59800E81E92 /* high_score_stamp@2x.png */; };
 		56B802531D684281007B79A7 /* Candara.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56B802521D684215007B79A7 /* Candara.ttf */; };
 		56B802571D684765007B79A7 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B802561D684765007B79A7 /* HeaderView.swift */; };
 		56BB367C1D7317C900AD1603 /* PrepareMultiPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BB367B1D7317C900AD1603 /* PrepareMultiPlayViewController.swift */; };
@@ -358,6 +359,7 @@
 		56AD64591DCCE69800DAC92B /* ball_red_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ball_red_2@2x.png"; path = "img/balls/hasNumber/red/ball_red_2@2x.png"; sourceTree = SOURCE_ROOT; };
 		56AD645A1DCCE69800DAC92B /* ball_red_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ball_red_3@2x.png"; path = "img/balls/hasNumber/red/ball_red_3@2x.png"; sourceTree = SOURCE_ROOT; };
 		56AF86961DC7413800928022 /* SimpleTargetBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleTargetBall.swift; path = component/SimpleTargetBall.swift; sourceTree = "<group>"; };
+		56B15EDC1E06A59800E81E92 /* high_score_stamp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "high_score_stamp@2x.png"; path = "img/high_score_stamp@2x.png"; sourceTree = SOURCE_ROOT; };
 		56B802521D684215007B79A7 /* Candara.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Candara.ttf; path = font/Candara.ttf; sourceTree = "<group>"; };
 		56B802561D684765007B79A7 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeaderView.swift; path = view/HeaderView.swift; sourceTree = "<group>"; };
 		56BB367B1D7317C900AD1603 /* PrepareMultiPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareMultiPlayViewController.swift; sourceTree = "<group>"; };
@@ -810,6 +812,7 @@
 		56BB7FC11CAFC08200675AE8 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				56B15EDC1E06A59800E81E92 /* high_score_stamp@2x.png */,
 				56F80F291E058569008A6AF7 /* background_particle */,
 				56F80F221E056CCF008A6AF7 /* background */,
 				5635C2091DD8567500C6AACE /* help */,
@@ -1317,6 +1320,7 @@
 				56BF578A1CD4BBBD00923509 /* arrows@2x.png in Resources */,
 				56BD7D3F1CBB9E0100F9178B /* TopScene.sks in Resources */,
 				5666F83D1D646090001EFC57 /* one@2x.png in Resources */,
+				56B15EDD1E06A59800E81E92 /* high_score_stamp@2x.png in Resources */,
 				5635C20D1DD857BD00C6AACE /* colorBallListBtn@2x.png in Resources */,
 				56D160C81CC50E2C00257404 /* ball_blue@2x.png in Resources */,
 			);

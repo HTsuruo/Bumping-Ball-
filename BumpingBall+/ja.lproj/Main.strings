@@ -24,7 +24,7 @@
 /* Class = "UILabel"; text = "遠くの人と対戦"; ObjectID = "UQs-0O-UPQ"; */
 "UQs-0O-UPQ.text" = "遠くの人と対戦";
 
-/* Class = "UINavigationItem"; title = "How to play battle mode"; ObjectID = "bmL-r4-QJt"; */
+/* Class = "UINavigationItem"; title = "How to play match mode"; ObjectID = "bmL-r4-QJt"; */
 "bmL-r4-QJt.title" = "対戦モードの説明";
 
 /* Class = "UINavigationItem"; title = "SETTING"; ObjectID = "eqK-hH-pGz"; */
@@ -46,4 +46,8 @@
 
 /* Class = "UINavigationItem"; title = "Tutorial"; ObjectID = "wMf-gQ-yb4"; */
 "wMf-gQ-yb4.title" = "チュートリアル";
+
+/* Class = "UILabel"; text = "You can enjoy match mode\nin the following environments "; ObjectID = "xXN-eZ-Y42"; */
+"xXN-eZ-Y42.text" = "以下の環境で対戦モードを
+お楽しみいただけます";
 

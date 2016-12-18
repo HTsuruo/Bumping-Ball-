@@ -30,10 +30,6 @@
                 <target>ライセンス</target>
                 <note>Class = "UINavigationItem"; title = "LICENCE"; ObjectID = "I3d-VB-a2Z";</note>
             </trans-unit>
-            <trans-unit id="M0o-7Z-IOV.text">
-                <source>Label</source>
-                <note>Class = "UILabel"; text = "Label"; ObjectID = "M0o-7Z-IOV";</note>
-            </trans-unit>
             <trans-unit id="N0k-S3-Kr7.title">
                 <source>Color Ball List</source>
                 <target>カラーボール一覧</target>
@@ -60,9 +56,9 @@
                 <note>Class = "UILabel"; text = "遠くの人と対戦"; ObjectID = "UQs-0O-UPQ";</note>
             </trans-unit>
             <trans-unit id="bmL-r4-QJt.title">
-                <source>How to play battle mode</source>
+                <source>How to play match mode</source>
                 <target>対戦モードの説明</target>
-                <note>Class = "UINavigationItem"; title = "How to play battle mode"; ObjectID = "bmL-r4-QJt";</note>
+                <note>Class = "UINavigationItem"; title = "How to play match mode"; ObjectID = "bmL-r4-QJt";</note>
             </trans-unit>
             <trans-unit id="eqK-hH-pGz.title">
                 <source>SETTING</source>
@@ -98,6 +94,13 @@
                 <target>チュートリアル</target>
                 <note>Class = "UINavigationItem"; title = "Tutorial"; ObjectID = "wMf-gQ-yb4";</note>
             </trans-unit>
+            <trans-unit id="xXN-eZ-Y42.text">
+                <source>You can enjoy match mode
+in the following environments </source>
+                <note>Class = "UILabel"; text = "You can enjoy match mode\nin the following environments "; ObjectID = "xXN-eZ-Y42";</note>
+                <target>以下の環境で対戦モードを
+お楽しみいただけます</target>
+            </trans-unit>
         </body>
     </file>
     <file original="BumpingBall+/Info.plist" source-language="en" datatype="plaintext" target-language="ja">
@@ -128,8 +131,13 @@
             </trans-unit>
             <trans-unit id="color_ball_section_2">
                 <source>color_ball_section_2</source>
-                <target>アイテムボール</target>
+                <target>その他カラーボール</target>
                 <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="color_ball_section_3">
+                <source>color_ball_section_3</source>
+                <note>No comment provided by engineer.</note>
+                <target>アイテムボール</target>
             </trans-unit>
             <trans-unit id="commonSubTxt_1">
                 <source>commonSubTxt_1</source>
@@ -198,8 +206,8 @@
             </trans-unit>
             <trans-unit id="gamecenter_not_play">
                 <source>gamecenter_not_play</source>
-                <note>No comment provided by engineer.</note>
                 <target>GameCenterによる対戦機能は現在ご利用いただけません</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="help_content_1">
                 <source>help_content_1</source>
@@ -275,6 +283,36 @@
                 <source>not_play_hard_mode</source>
                 <target>まだハードモードでは遊べません</target>
                 <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="otherSubTxt_1">
+                <source>otherSubTxt_1</source>
+                <note>No comment provided by engineer.</note>
+                <target>数字の数だけ当てたら消せる</target>
+            </trans-unit>
+            <trans-unit id="otherSubTxt_2">
+                <source>otherSubTxt_2</source>
+                <note>No comment provided by engineer.</note>
+                <target>対戦相手にスケルトンボールを送りこめる</target>
+            </trans-unit>
+            <trans-unit id="otherSubTxt_3">
+                <source>otherSubTxt_3</source>
+                <note>No comment provided by engineer.</note>
+                <target>対戦相手に送りこまれた邪魔なボール</target>
+            </trans-unit>
+            <trans-unit id="otherTxt_1">
+                <source>otherTxt_1</source>
+                <note>No comment provided by engineer.</note>
+                <target>カウントボール</target>
+            </trans-unit>
+            <trans-unit id="otherTxt_2">
+                <source>otherTxt_2</source>
+                <note>No comment provided by engineer.</note>
+                <target>はてなボール</target>
+            </trans-unit>
+            <trans-unit id="otherTxt_3">
+                <source>otherTxt_3</source>
+                <note>No comment provided by engineer.</note>
+                <target>スケルトンボール</target>
             </trans-unit>
             <trans-unit id="setting_item_1">
                 <source>setting_item_1</source>

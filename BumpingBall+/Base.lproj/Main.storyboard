@@ -72,7 +72,7 @@
                                 <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ijO-ZJ-NEp" id="18Q-sM-UCh">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -352,7 +352,7 @@ Cgo
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GSV-Pq-Bab">
-                                <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GSV-Pq-Bab" id="tzS-6e-s6y">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -371,7 +371,7 @@ Cgo
             </objects>
             <point key="canvasLocation" x="583" y="2382"/>
         </scene>
-        <!--How to play  match mode-->
+        <!--How to play match mode-->
         <scene sceneID="nAt-dy-TVo">
             <objects>
                 <viewController id="qOB-tV-w2w" customClass="BattleModeHelpViewController" customModule="BumpingBall_" customModuleProvider="target" sceneMemberID="viewController">
@@ -395,7 +395,7 @@ in the following environments </string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2Y-E1-qa1">
-                                <rect key="frame" x="116" y="142" width="143" height="48"/>
+                                <rect key="frame" x="116" y="142" width="143" height="47.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="s2Y-E1-qa1" secondAttribute="height" multiplier="3:1" id="XZH-El-hcW"/>
                                 </constraints>
@@ -415,11 +415,7 @@ in the following environments </string>
                             <constraint firstItem="xXN-eZ-Y42" firstAttribute="leading" secondItem="2NR-zA-dwZ" secondAttribute="leadingMargin" id="qVd-xY-gSl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bmL-r4-QJt">
-                        <string key="title" base64-UTF8="YES">
-SG93IHRvIHBsYXkgEG1hdGNoIG1vZGU
-</string>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="How to play match mode" id="bmL-r4-QJt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OTm-TT-cVo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -722,7 +718,7 @@ SG93IHRvIHBsYXkgEG1hdGNoIG1vZGU
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsc-yv-aM9" customClass="SpringButton" customModule="Spring">
-                                <rect key="frame" x="56" y="129" width="263" height="120"/>
+                                <rect key="frame" x="56" y="129" width="263" height="119.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="1Y8-5a-RGw"/>
                                     <constraint firstAttribute="height" constant="138" id="HCd-nC-3v5"/>
@@ -764,7 +760,7 @@ SG93IHRvIHBsYXkgEG1hdGNoIG1vZGU
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DC-Gf-4nI" userLabel="Multi Play Btn" customClass="SpringButton" customModule="Spring">
-                                <rect key="frame" x="56" y="279" width="263" height="119"/>
+                                <rect key="frame" x="56" y="278.5" width="263" height="119.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="233" id="EzX-YK-eNB"/>
                                     <constraint firstAttribute="height" constant="138" id="WtB-bg-SaO"/>
@@ -922,7 +918,7 @@ SG93IHRvIHBsYXkgEG1hdGNoIG1vZGU
                                 </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gp-8e-XhA" customClass="SpringButton" customModule="Spring">
-                                <rect key="frame" x="56" y="428" width="263" height="120"/>
+                                <rect key="frame" x="56" y="428" width="263" height="119.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0Gp-8e-XhA" secondAttribute="height" multiplier="22:10" id="1vB-b4-f1d"/>
                                 </constraints>

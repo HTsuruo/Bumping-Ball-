@@ -9,6 +9,7 @@
 import UIKit
 import SpriteKit
 import Social
+import Spring
 
 class FinishView: UIView {
     
@@ -20,6 +21,7 @@ class FinishView: UIView {
     @IBOutlet weak var againBtn: UIButton!
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
+    @IBOutlet weak var highScoreStamp: SpringImageView!
     var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     var vc: UIViewController!
     var scenevc: SceneViewController!
@@ -30,6 +32,7 @@ class FinishView: UIView {
         Bundle.main.loadNibNamed("FinishView", owner: self, options: nil)
         finishView.frame = frame
         self.addSubview(finishView)
+        highScoreStamp.isHidden = true
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -43,6 +46,9 @@ class FinishView: UIView {
         let highScore = ud.integer(forKey: "highscore-"+difficultyStr)
         if totalScore > highScore {
             ud.set(totalScore, forKey: "highscore-"+difficultyStr)
+            if app.selectedPlay == .one {
+                highScoreStamp.isHidden = false
+            }
         }
         GameCenterUtil.sendScore(totalScore, leaderBoardId: difficultyStr)
     }
