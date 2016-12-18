@@ -206,7 +206,7 @@ in the following environments </source>
             </trans-unit>
             <trans-unit id="enable_play_hard_mode">
                 <source>enable_play_hard_mode</source>
-                <target>ハードモードで遊べるようになりました</target>
+                <target>ハードモードが開放されました</target>
                 <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="gamecenter_not_play">

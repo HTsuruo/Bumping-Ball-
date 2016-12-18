@@ -61,7 +61,6 @@
 		564FCC1F1DCDF62300072657 /* reverse_bk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 564FCC1E1DCDF62300072657 /* reverse_bk@2x.png */; };
 		565DDA531CBD4707003C9F0D /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565DDA521CBD4707003C9F0D /* Animation.swift */; };
 		565EEF571E067E5600C67CB3 /* BattleModeHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565EEF561E067E5600C67CB3 /* BattleModeHelpViewController.swift */; };
-		565EEF5A1E06825D00C67CB3 /* page_0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 565EEF591E06825D00C67CB3 /* page_0@2x.png */; };
 		566176EB1D6881EC00AF10BA /* chargeMeter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 566176EA1D6881EC00AF10BA /* chargeMeter@2x.png */; };
 		5666F7DE1D635A4F001EFC57 /* titleTxt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5666F7DD1D635A4F001EFC57 /* titleTxt@2x.png */; };
 		5666F81A1D643167001EFC57 /* helpBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5666F8191D643167001EFC57 /* helpBtn@2x.png */; };
@@ -103,6 +102,7 @@
 		56700B551DC716D90099093D /* question_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56700B521DC716D90099093D /* question_green@2x.png */; };
 		56700B561DC716D90099093D /* question_orange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56700B531DC716D90099093D /* question_orange@2x.png */; };
 		56700B571DC716D90099093D /* question_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56700B541DC716D90099093D /* question_red@2x.png */; };
+		5672E0D71E06C90400FB75AE /* page_0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5672E0D91E06C90400FB75AE /* page_0@2x.png */; };
 		567437921DC9C3FC00FBC680 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 567437901DC9C3FC00FBC680 /* spark.png */; };
 		568E58C31DD39972006C8A9C /* tapFinder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 568E58C21DD39972006C8A9C /* tapFinder@2x.png */; };
 		5690AB171DCDABF200ED0EC8 /* item_reverse@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5690AB151DCDABF200ED0EC8 /* item_reverse@2x.png */; };
@@ -292,7 +292,6 @@
 		564FCC1E1DCDF62300072657 /* reverse_bk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reverse_bk@2x.png"; path = "img/ball_item_bk/reverse_bk@2x.png"; sourceTree = SOURCE_ROOT; };
 		565DDA521CBD4707003C9F0D /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = component/Animation.swift; sourceTree = "<group>"; };
 		565EEF561E067E5600C67CB3 /* BattleModeHelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BattleModeHelpViewController.swift; path = help/BattleModeHelpViewController.swift; sourceTree = "<group>"; };
-		565EEF591E06825D00C67CB3 /* page_0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "page_0@2x.png"; path = "img/help/battlemode/page_0@2x.png"; sourceTree = SOURCE_ROOT; };
 		566176EA1D6881EC00AF10BA /* chargeMeter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chargeMeter@2x.png"; path = "img/chargeMeter@2x.png"; sourceTree = SOURCE_ROOT; };
 		5666F7DD1D635A4F001EFC57 /* titleTxt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "titleTxt@2x.png"; path = "img/top/titleTxt@2x.png"; sourceTree = SOURCE_ROOT; };
 		5666F8191D643167001EFC57 /* helpBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "helpBtn@2x.png"; path = "img/top/helpBtn@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -337,6 +336,8 @@
 		56700B521DC716D90099093D /* question_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "question_green@2x.png"; path = "img/balls/item/question_green@2x.png"; sourceTree = SOURCE_ROOT; };
 		56700B531DC716D90099093D /* question_orange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "question_orange@2x.png"; path = "img/balls/item/question_orange@2x.png"; sourceTree = SOURCE_ROOT; };
 		56700B541DC716D90099093D /* question_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "question_red@2x.png"; path = "img/balls/item/question_red@2x.png"; sourceTree = SOURCE_ROOT; };
+		5672E0D81E06C90400FB75AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = "Base.lproj/page_0@2x.png"; sourceTree = "<group>"; };
+		5672E0DA1E06C90900FB75AE /* ja */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ja; path = "ja.lproj/page_0@2x.png"; sourceTree = "<group>"; };
 		567437901DC9C3FC00FBC680 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = sks/spark.png; sourceTree = "<group>"; };
 		568E58C21DD39972006C8A9C /* tapFinder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tapFinder@2x.png"; path = "img/tutorial/tapFinder@2x.png"; sourceTree = SOURCE_ROOT; };
 		5690AB151DCDABF200ED0EC8 /* item_reverse@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "item_reverse@2x.png"; path = "img/balls/item/item_reverse@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -568,7 +569,7 @@
 		565EEF581E06825100C67CB3 /* battlemode */ = {
 			isa = PBXGroup;
 			children = (
-				565EEF591E06825D00C67CB3 /* page_0@2x.png */,
+				5672E0D91E06C90400FB75AE /* page_0@2x.png */,
 			);
 			name = battlemode;
 			sourceTree = "<group>";
@@ -1175,7 +1176,7 @@
 			files = (
 				56C5E4D41DFD44DC003E66C2 /* bomb.caf in Resources */,
 				5669BCFC1DFB1FF600E08ECA /* launch_gold.caf in Resources */,
-				565EEF5A1E06825D00C67CB3 /* page_0@2x.png in Resources */,
+				5672E0D71E06C90400FB75AE /* page_0@2x.png in Resources */,
 				56C5E4D11DFD4116003E66C2 /* itemball_launch.caf in Resources */,
 				5669BCFF1DFB206000E08ECA /* gameover.caf in Resources */,
 				5669BCFA1DFB1FF600E08ECA /* collision_perfect.caf in Resources */,
@@ -1602,6 +1603,16 @@
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
+		};
+		5672E0D91E06C90400FB75AE /* page_0@2x.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5672E0D81E06C90400FB75AE /* Base */,
+				5672E0DA1E06C90900FB75AE /* ja */,
+			);
+			name = "page_0@2x.png";
+			path = img/help/battlemode;
+			sourceTree = SOURCE_ROOT;
 		};
 		56BB7F371CAD345200675AE8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;

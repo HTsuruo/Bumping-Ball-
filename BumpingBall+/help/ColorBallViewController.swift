@@ -67,6 +67,8 @@ class ColorBallViewController: UITableViewController {
         self.tableView.register(UINib(nibName: "ColorBallCell", bundle: nil), forCellReuseIdentifier: "cell")
         self.tableView.backgroundColor = ColorUtil.main
         self.tableView.separatorColor = UIColor.clear
+        self.tableView.estimatedRowHeight = 50.0
+        self.tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -92,34 +94,6 @@ class ColorBallViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(60.0)
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return CGFloat(40.0)
-    }
-    
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let label = UILabel()
-        label.textColor = UIColor.lightGray
-        label.font = UIFont.systemFont(ofSize: 15.0)
-        let paddingTxt = "   "
-        switch section {
-        case COMMON:
-            label.text = paddingTxt + NSLocalizedString("color_ball_section_1", comment: "")
-        case OTHER:
-            label.text =  paddingTxt + NSLocalizedString("color_ball_section_2", comment: "")
-        case ITEM:
-            label.text =  paddingTxt + NSLocalizedString("color_ball_section_3", comment: "")
-        default:
-            label.text = ""
-        }
-        return label
-    }
-    
-    // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
