@@ -26,6 +26,9 @@ class HeaderViewMatch: UIView {
     @IBOutlet weak var leftArea: UIView!
     @IBOutlet weak var rightArea: UIView!
     
+    var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    let themeUtil = ThemeUtil()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadXib()
@@ -38,6 +41,7 @@ class HeaderViewMatch: UIView {
     fileprivate func loadXib() {
         Bundle.main.loadNibNamed("HeaderViewMatch", owner: self, options: nil)
         contentView.frame = CGRect(x: 0, y: 0, width: CGFloat.WIDTH, height: define.HEADER_HEIGHT)
+        contentView.backgroundColor = themeUtil.getThemeColor(themeType: app.theme)
         self.addSubview(contentView)
     }
     
