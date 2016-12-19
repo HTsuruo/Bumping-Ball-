@@ -44,7 +44,7 @@ class TouchViewTxt: UIView {
     
     func chargeReset() {
         hideSwipeArrows()
-        centerTxt.text = "Touch Here!!"
+        centerTxt.text = "Tap Here!!"
     }
     
     func chargeFull() {

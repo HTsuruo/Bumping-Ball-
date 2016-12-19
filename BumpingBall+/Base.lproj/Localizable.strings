@@ -20,7 +20,7 @@
 //チュートリアル
 "tutorial" = "Tutorial";
 "tutorial_text_0" = "Welcome to Bumping Ball+\n\nLet's Start Tutorial!!";
-"tutorial_text_1" = "Color ball launces \nwhen you tap bottom area, 'touch here'.";
+"tutorial_text_1" = "Color ball launces \nwhen you tap bottom area, 'tap here'.";
 "tutorial_text_2" = "Color ball changed color \nwhen long press bottom area.";
 "tutorial_text_3" = "Bump same color falling color ball.\nYou get combo \nwhen bump without missing.";
 "tutorial_text_4" = "Launch gold ball when you swipe up!!";
