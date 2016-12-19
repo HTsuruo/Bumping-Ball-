@@ -30,7 +30,7 @@ class DeviceUtil {
         case .inches_4_7:
             return  1.0
         case .inches_5_5:
-            return  1.4
+            return  1.5
         }
     }
     
