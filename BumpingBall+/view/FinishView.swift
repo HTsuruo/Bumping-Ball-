@@ -10,6 +10,7 @@ import UIKit
 import SpriteKit
 import Social
 import Spring
+import GoogleMobileAds
 
 class FinishView: UIView {
     
@@ -27,6 +28,7 @@ class FinishView: UIView {
     var scenevc: SceneViewController!
     let btnSound = Sound.prepareToPlay("button")
     var totalScore = 0
+    let adUtil = AdUitl()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -72,6 +74,7 @@ class FinishView: UIView {
     func setup() {
         vc = Util.getForegroundViewController()
         scenevc = vc as! SceneViewController
+        adUtil.showBanner(vc: vc, view: self, banner: kGADAdSizeBanner)
     }
     
     @IBAction func onClickToTopBtn(_ sender: UIButton) {

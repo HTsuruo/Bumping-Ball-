@@ -16,6 +16,8 @@ class HelpViewController: UIViewController, UITableViewDelegate, UITableViewData
     var iconName: [String] = ["beginnerIcon", "gamecenterIcon", ballImage.GOLD]
     var titleArr: [String] = [NSLocalizedString("help_content_1", comment: ""), NSLocalizedString("help_content_2", comment: ""), NSLocalizedString("help_content_3", comment: "")]
     
+    let adUtil = AdUitl()
+    
     override func viewWillAppear(_ animated: Bool) {
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         self.navigationController?.navigationBar.titleTextAttributes = [ NSForegroundColorAttributeName : UIColor.white ]
@@ -34,6 +36,7 @@ class HelpViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidAppear(_ animated: Bool) {
         self.tableView.alwaysBounceVertical = false
+        adUtil.showBanner(vc: self, view: self.view, banner: kGADAdSizeMediumRectangle)
     }
 
     override func viewDidLoad() {
@@ -43,7 +46,6 @@ class HelpViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(UINib(nibName: "HelpCell", bundle: nil), forCellReuseIdentifier: "cell")
-        
     }
 
     override func didReceiveMemoryWarning() {
