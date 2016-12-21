@@ -21,10 +21,14 @@ class AdUitl: GADBannerView, GADBannerViewDelegate {
         print("admob failed")
     }
     
-    func showBanner(vc: UIViewController, view: UIView, banner: GADAdSize) {
+    func showBanner(vc: UIViewController, view: UIView, banner: GADAdSize, isBottom: Bool) {
         let bannerView = GADBannerView(adSize: banner)
         let bannerHeight = banner.size.height
-        bannerView.frame.origin = CGPoint(x: 0, y: CGFloat.HEIGHT - bannerHeight)
+        if isBottom {
+            bannerView.frame.origin = CGPoint(x: 0, y: CGFloat.HEIGHT - bannerView.frame.height)
+        } else {
+            bannerView.frame.origin = CGPoint(x: 0, y: 0)
+        }
         bannerView.frame.size = CGSize(width: CGFloat.WIDTH, height: bannerHeight)
         bannerView.adUnitID = adMobId
         bannerView.delegate = self

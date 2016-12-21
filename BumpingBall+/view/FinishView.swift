@@ -74,7 +74,7 @@ class FinishView: UIView {
     func setup() {
         vc = Util.getForegroundViewController()
         scenevc = vc as! SceneViewController
-        adUtil.showBanner(vc: vc, view: self, banner: kGADAdSizeBanner)
+        adUtil.showBanner(vc: vc, view: self, banner: kGADAdSizeBanner, isBottom: false)
     }
     
     @IBAction func onClickToTopBtn(_ sender: UIButton) {

@@ -45,7 +45,7 @@ class HelpViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(UINib(nibName: "HelpCell", bundle: nil), forCellReuseIdentifier: "cell")
-        adUtil.showBanner(vc: self, view: self.view, banner: kGADAdSizeMediumRectangle)
+        adUtil.showBanner(vc: self, view: self.tableView, banner: kGADAdSizeBanner, isBottom: false)
     }
 
     override func didReceiveMemoryWarning() {
