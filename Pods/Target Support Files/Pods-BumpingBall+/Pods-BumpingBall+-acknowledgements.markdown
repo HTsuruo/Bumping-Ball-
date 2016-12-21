@@ -44,13 +44,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## Google-Mobile-Ads-SDK
 
-Copyright 2011 Google Inc. All Rights Reserved.
+Copyright 2016 Google
 
 ## NVActivityIndicatorView
 
 The MIT License (MIT)
 
-Copyright (c) 2016 Nguyen Vinh
+Copyright (c) 2016 Vinh Nguyen
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

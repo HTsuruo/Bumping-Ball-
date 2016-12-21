@@ -70,6 +70,8 @@ github "ninjaprox/NVActivityIndicatorView"
 
 Run `carthage` to build the framework and drag the built `NVActivityIndicatorView.framework` into your Xcode project.
 
+_**Note:** You might encounter compile issue, if so please use `carthage` branch instead. Check issue #101 for more information.
+
 ## Manual
 
 Copy `NVActivityIndicatorView` folder to your project. That's it.
@@ -178,7 +180,7 @@ let activityData = ActivityData()
 NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
 ```
 
-_**Note:** Check documentation for detail of `ActivityData`._
+_**Note:** Check [documentation](http://cocoadocs.org/docsets/NVActivityIndicatorView) for detail of `ActivityData`._
 
 Stop animating.
 
@@ -199,7 +201,7 @@ NVActivityIndicatorView.DEFAULT_TYPE = .BallSpinFadeLoader
 - Default color of activity indicator view.
 
 ```swift
-NVActivityIndicatorView.DEFAULT_COLOR = UIColor.whiteColor()
+NVActivityIndicatorView.DEFAULT_COLOR = UIColor.white
 ```
 
 - Default padding of activity indicator view.
@@ -212,6 +214,12 @@ NVActivityIndicatorView.DEFAULT_PADDING = CGFloat(0)
 
 ```swift
 NVActivityIndicatorView.DEFAULT_BLOCKER_SIZE = CGSizeMake(60, 60)
+```
+
+- Default background color of UI blocker.
+
+```swift
+NVActivityIndicatorView.DEFAULT_BLOCKER_BACKGROUND_COLOR = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
 ```
 
 - Default display time threshold.
@@ -228,6 +236,18 @@ NVActivityIndicatorView.DEFAULT_BLOCKER_DISPLAY_TIME_THRESHOLD = 0 // in millise
 
 ```swift
 NVActivityIndicatorView.DEFAULT_BLOCKER_MINIMUM_DISPLAY_TIME = 0 // in milliseconds
+```
+
+- Default message displayed in UI blocker.
+
+```swift
+NVActivityIndicatorView.DEFAULT_BLOCKER_MESSAGE: String? = nil
+```
+
+- Default font of message displayed in UI blocker.
+
+```swift
+NVActivityIndicatorView.DEFAULT_BLOCKER_MESSAGE_FONT = UIFont.boldSystemFont(ofSize: 20)
 ```
 
 # Acknowledgment
