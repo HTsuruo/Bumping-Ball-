@@ -28,6 +28,8 @@ struct define {
     static let LEVEL_UP_INTERVAL = 15 //何秒おきにlevelupするのか.
     static let APPSTORE_URL = "https://itunes.apple.com/us/app/bumping-ball+/id1148383719?l=ja&ls=1&mt=8"
     static let VERSION_URL = "http://tsurutsuru.php.xdomain.jp/bumping_ball_plus/version.php"
+    static let BASE_DEVICE_HEIGHT = 667.0
+    static let BASE_DEVICE_INCH = 4.7
 }
 
 struct Util {

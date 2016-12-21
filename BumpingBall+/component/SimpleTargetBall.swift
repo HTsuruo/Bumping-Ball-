@@ -20,7 +20,7 @@ class SimpleTargetBall {
     var randNum = 0
     var rotateDuration = 2.0
     let scaleVal = DeviceUtil.getOptionalScale(width: CGFloat.WIDTH)
-    let speedVal = DeviceUtil.getOptionalSpeed(width: CGFloat.WIDTH)
+    let speedVal = DeviceUtil.getOptionalSpeed(height: Double(CGFloat.HEIGHT))
     
     init() {
         self.ball.alpha = 0.0 //フェードインのため.

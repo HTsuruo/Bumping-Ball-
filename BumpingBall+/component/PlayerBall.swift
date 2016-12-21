@@ -17,7 +17,7 @@ struct PlayerBall {
     var isFire = false
     let ballUtil = BallUtil()
     let scaleVal = DeviceUtil.getOptionalScale(width: CGFloat.WIDTH)
-    let speedVal = DeviceUtil.getOptionalSpeed(width: CGFloat.WIDTH)
+    let speedVal = DeviceUtil.getOptionalSpeed(height: Double(CGFloat.HEIGHT))
     let increaseVal = DeviceUtil.getIncreaseScale(width: CGFloat.WIDTH)
     var ballScale: Double = 0.0
     

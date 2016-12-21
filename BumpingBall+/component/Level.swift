@@ -13,7 +13,7 @@ class Level {
     var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     var filename = "level"
     var dic: NSDictionary? = nil
-    let speedVal = DeviceUtil.getOptionalSpeed(width: CGFloat.WIDTH)
+    let speedVal = DeviceUtil.getOptionalSpeed(height: Double(CGFloat.HEIGHT))
     
     init() {
         if app.selectedPlay == .one {
