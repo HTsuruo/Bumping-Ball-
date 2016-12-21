@@ -61,7 +61,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         self.view?.addSubview(touchViewTxt)
         self.view?.addSubview(countdownView)
         self.addChild(charge)
-        
+        finishView.setupAd() //表示にディレイが起きないよう広告をはじめに読み込んでおきます.
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
