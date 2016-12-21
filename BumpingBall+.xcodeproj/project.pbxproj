@@ -1140,10 +1140,12 @@
 					};
 					56BB7F431CAD345200675AE8 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 56BB7F2B1CAD345100675AE8;
 					};
 					56BB7F4E1CAD345200675AE8 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 56BB7F2B1CAD345100675AE8;
 					};
 				};
@@ -1834,6 +1836,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tsuruoka.BumpingBall-Tests";
 				PRODUCT_NAME = "BumpingBall+";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BumpingBall+.app/BumpingBall+";
 			};
 			name = Debug;
@@ -1847,6 +1850,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tsuruoka.BumpingBall-Tests";
 				PRODUCT_NAME = "BumpingBall+";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BumpingBall+.app/BumpingBall+";
 			};
 			name = Release;
@@ -1860,6 +1864,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tsuruoka.BumpingBall-UITests";
 				PRODUCT_NAME = "BumpingBall+";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "BumpingBall+";
 				USES_XCTRUNNER = YES;
 			};
@@ -1873,6 +1878,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tsuruoka.BumpingBall-UITests";
 				PRODUCT_NAME = "BumpingBall+";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "BumpingBall+";
 				USES_XCTRUNNER = YES;
 			};
