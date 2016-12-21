@@ -36,7 +36,6 @@ class HelpViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidAppear(_ animated: Bool) {
         self.tableView.alwaysBounceVertical = false
-        adUtil.showBanner(vc: self, view: self.view, banner: kGADAdSizeMediumRectangle)
     }
 
     override func viewDidLoad() {
@@ -46,6 +45,7 @@ class HelpViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(UINib(nibName: "HelpCell", bundle: nil), forCellReuseIdentifier: "cell")
+        adUtil.showBanner(vc: self, view: self.view, banner: kGADAdSizeMediumRectangle)
     }
 
     override func didReceiveMemoryWarning() {
