@@ -32,8 +32,11 @@ class LicenceViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        let point = CGPoint(x: 0, y: -((self.navigationController?.navigationBar.bounds.size.height)! + CGFloat.STATUS_HEIGHT))
-        textView.setContentOffset(point, animated: false)
+        
+        if let navigationbarHeight = self.navigationController?.navigationBar.bounds.size.height {
+            let point = CGPoint(x: 0, y: -(navigationbarHeight + CGFloat.STATUS_HEIGHT))
+            textView.setContentOffset(point, animated: false)
+        }
     }
 
     /*
