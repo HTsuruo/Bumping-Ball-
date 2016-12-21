@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05B98691EA444D98383944D1 /* Pods_BumpingBallPlusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEBD6BE4DE7EB5EF657DEAAD /* Pods_BumpingBallPlusUITests.framework */; };
 		08A22B1E64776CEA0D05643B /* Pods_BumpingBall_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30DCAC577C964F02F7E22A26 /* Pods_BumpingBall_Tests.framework */; };
+		1BE4DFCF34DB261C93E4C9F7 /* Pods_BumpingBallPlusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF9C048346803EE8C092349 /* Pods_BumpingBallPlusTests.framework */; };
 		5600C3961D688B79009C5883 /* ChargeMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5600C3951D688B79009C5883 /* ChargeMeter.swift */; };
 		5603F4511DCDFC6500881FDF /* speedup_bk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5603F4501DCDFC6500881FDF /* speedup_bk@2x.png */; };
 		5603F4B01DD0079C00881FDF /* LevelSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5603F4AF1DD0079C00881FDF /* LevelSelectView.swift */; };
@@ -215,8 +217,8 @@
 		56F80F2D1E05857E008A6AF7 /* snow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56F80F2A1E05857E008A6AF7 /* snow@2x.png */; };
 		56F80F2F1E05857E008A6AF7 /* space@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56F80F2C1E05857E008A6AF7 /* space@2x.png */; };
 		56F80F331E058844008A6AF7 /* tmp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56F80F311E058844008A6AF7 /* tmp@2x.png */; };
+		C460BBFAF9F1B366BEFD4F50 /* Pods_BumpingBallPlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90659532E82B2D9BCD152329 /* Pods_BumpingBallPlus.framework */; };
 		D600E83EAF5F1E885000F294 /* Pods_BumpingBall_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87CF2D28E9E810DF7496242E /* Pods_BumpingBall_UITests.framework */; };
-		F83A228293B0F63D4E37196A /* Pods_BumpingBall_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B488E9EEA5EA8F0B356FB8 /* Pods_BumpingBall_.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -238,7 +240,7 @@
 
 /* Begin PBXFileReference section */
 		30DCAC577C964F02F7E22A26 /* Pods_BumpingBall_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BumpingBall_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		44F957790E5B779DC465ACC5 /* Pods-BumpingBall+.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+/Pods-BumpingBall+.debug.xcconfig"; sourceTree = "<group>"; };
+		3B1FC791DD1F8AC8634740D1 /* Pods-BumpingBallPlusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBallPlusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBallPlusTests/Pods-BumpingBallPlusTests.release.xcconfig"; sourceTree = "<group>"; };
 		5600C3951D688B79009C5883 /* ChargeMeter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChargeMeter.swift; path = component/ChargeMeter.swift; sourceTree = "<group>"; };
 		5603F4501DCDFC6500881FDF /* speedup_bk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "speedup_bk@2x.png"; path = "img/ball_item_bk/speedup_bk@2x.png"; sourceTree = SOURCE_ROOT; };
 		5603F4AF1DD0079C00881FDF /* LevelSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelSelectView.swift; path = view/LevelSelectView.swift; sourceTree = "<group>"; };
@@ -368,17 +370,17 @@
 		56BB367F1D73219F00AD1603 /* FlopDesignFONT.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FlopDesignFONT.otf; path = font/FlopDesignFONT.otf; sourceTree = "<group>"; };
 		56BB36811D7324F500AD1603 /* icon_bluetooth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_bluetooth@2x.png"; path = "img/prepare_multiplay/icon_bluetooth@2x.png"; sourceTree = SOURCE_ROOT; };
 		56BB36821D7324F500AD1603 /* play_bluetooth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play_bluetooth@2x.png"; path = "img/prepare_multiplay/play_bluetooth@2x.png"; sourceTree = SOURCE_ROOT; };
-		56BB7F2C1CAD345100675AE8 /* BumpingBall+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BumpingBall+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		56BB7F2C1CAD345100675AE8 /* BumpingBallPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BumpingBallPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BB7F2F1CAD345100675AE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56BB7F351CAD345100675AE8 /* SceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
 		56BB7F381CAD345200675AE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56BB7F3A1CAD345200675AE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56BB7F3D1CAD345200675AE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56BB7F3F1CAD345200675AE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56BB7F441CAD345200675AE8 /* BumpingBall+.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BumpingBall+.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		56BB7F441CAD345200675AE8 /* BumpingBallPlus.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BumpingBallPlus.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BB7F481CAD345200675AE8 /* BumpingBall_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumpingBall_Tests.swift; sourceTree = "<group>"; };
 		56BB7F4A1CAD345200675AE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56BB7F4F1CAD345200675AE8 /* BumpingBall+.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BumpingBall+.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		56BB7F4F1CAD345200675AE8 /* BumpingBallPlus.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BumpingBallPlus.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56BB7F531CAD345200675AE8 /* BumpingBall_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumpingBall_UITests.swift; sourceTree = "<group>"; };
 		56BB7F551CAD345200675AE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56BB7FAF1CAD766900675AE8 /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
@@ -460,13 +462,16 @@
 		56F80F2A1E05857E008A6AF7 /* snow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "snow@2x.png"; path = "img/background_particle/snow@2x.png"; sourceTree = SOURCE_ROOT; };
 		56F80F2C1E05857E008A6AF7 /* space@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "space@2x.png"; path = "img/background_particle/space@2x.png"; sourceTree = SOURCE_ROOT; };
 		56F80F311E058844008A6AF7 /* tmp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tmp@2x.png"; path = "img/background_particle/tmp@2x.png"; sourceTree = SOURCE_ROOT; };
+		66359A1B559863C7D08688E9 /* Pods-BumpingBallPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBallPlus.release.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBallPlus/Pods-BumpingBallPlus.release.xcconfig"; sourceTree = "<group>"; };
 		87CF2D28E9E810DF7496242E /* Pods_BumpingBall_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BumpingBall_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B488E9EEA5EA8F0B356FB8 /* Pods_BumpingBall_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BumpingBall_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE00D1DED0B5E6E2BD784D2F /* Pods-BumpingBall+Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+Tests/Pods-BumpingBall+Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B589F870FC4838D38D7DB33B /* Pods-BumpingBall+UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+UITests/Pods-BumpingBall+UITests.debug.xcconfig"; sourceTree = "<group>"; };
-		DF7A5C3C7B102B7CD7DD653C /* Pods-BumpingBall+Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+Tests/Pods-BumpingBall+Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		E917CB0D1A81FE1B5F5B5743 /* Pods-BumpingBall+.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+.release.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+/Pods-BumpingBall+.release.xcconfig"; sourceTree = "<group>"; };
-		F0FBC9EA10428232D3AD71F9 /* Pods-BumpingBall+UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBall+UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBall+UITests/Pods-BumpingBall+UITests.release.xcconfig"; sourceTree = "<group>"; };
+		8B2C55A187625078D9948915 /* Pods-BumpingBallPlusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBallPlusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBallPlusTests/Pods-BumpingBallPlusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		90659532E82B2D9BCD152329 /* Pods_BumpingBallPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BumpingBallPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9D4B8C4CA1705F2C625251F /* Pods-BumpingBallPlusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBallPlusUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBallPlusUITests/Pods-BumpingBallPlusUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CAF9C048346803EE8C092349 /* Pods_BumpingBallPlusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BumpingBallPlusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6BA6717FB385D5E85161FED /* Pods-BumpingBallPlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBallPlus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBallPlus/Pods-BumpingBallPlus.debug.xcconfig"; sourceTree = "<group>"; };
+		F128573EC1718D6806FA7AF1 /* Pods-BumpingBallPlusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBallPlusUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBallPlusUITests/Pods-BumpingBallPlusUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FEBD6BE4DE7EB5EF657DEAAD /* Pods_BumpingBallPlusUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BumpingBallPlusUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -476,7 +481,7 @@
 			files = (
 				561BCFF71D72EC5800766B36 /* GameKit.framework in Frameworks */,
 				56BF57851CD3B35400923509 /* Social.framework in Frameworks */,
-				F83A228293B0F63D4E37196A /* Pods_BumpingBall_.framework in Frameworks */,
+				C460BBFAF9F1B366BEFD4F50 /* Pods_BumpingBallPlus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08A22B1E64776CEA0D05643B /* Pods_BumpingBall_Tests.framework in Frameworks */,
+				1BE4DFCF34DB261C93E4C9F7 /* Pods_BumpingBallPlusTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +499,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D600E83EAF5F1E885000F294 /* Pods_BumpingBall_UITests.framework in Frameworks */,
+				05B98691EA444D98383944D1 /* Pods_BumpingBallPlusUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -747,9 +754,9 @@
 		56BB7F2D1CAD345100675AE8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				56BB7F2C1CAD345100675AE8 /* BumpingBall+.app */,
-				56BB7F441CAD345200675AE8 /* BumpingBall+.xctest */,
-				56BB7F4F1CAD345200675AE8 /* BumpingBall+.xctest */,
+				56BB7F2C1CAD345100675AE8 /* BumpingBallPlus.app */,
+				56BB7F441CAD345200675AE8 /* BumpingBallPlus.xctest */,
+				56BB7F4F1CAD345200675AE8 /* BumpingBallPlus.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1027,12 +1034,12 @@
 		E9F37341D0DFAFA518E3A727 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				44F957790E5B779DC465ACC5 /* Pods-BumpingBall+.debug.xcconfig */,
-				E917CB0D1A81FE1B5F5B5743 /* Pods-BumpingBall+.release.xcconfig */,
-				DF7A5C3C7B102B7CD7DD653C /* Pods-BumpingBall+Tests.debug.xcconfig */,
-				AE00D1DED0B5E6E2BD784D2F /* Pods-BumpingBall+Tests.release.xcconfig */,
-				B589F870FC4838D38D7DB33B /* Pods-BumpingBall+UITests.debug.xcconfig */,
-				F0FBC9EA10428232D3AD71F9 /* Pods-BumpingBall+UITests.release.xcconfig */,
+				D6BA6717FB385D5E85161FED /* Pods-BumpingBallPlus.debug.xcconfig */,
+				66359A1B559863C7D08688E9 /* Pods-BumpingBallPlus.release.xcconfig */,
+				8B2C55A187625078D9948915 /* Pods-BumpingBallPlusTests.debug.xcconfig */,
+				3B1FC791DD1F8AC8634740D1 /* Pods-BumpingBallPlusTests.release.xcconfig */,
+				A9D4B8C4CA1705F2C625251F /* Pods-BumpingBallPlusUITests.debug.xcconfig */,
+				F128573EC1718D6806FA7AF1 /* Pods-BumpingBallPlusUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1044,6 +1051,9 @@
 				88B488E9EEA5EA8F0B356FB8 /* Pods_BumpingBall_.framework */,
 				30DCAC577C964F02F7E22A26 /* Pods_BumpingBall_Tests.framework */,
 				87CF2D28E9E810DF7496242E /* Pods_BumpingBall_UITests.framework */,
+				90659532E82B2D9BCD152329 /* Pods_BumpingBallPlus.framework */,
+				CAF9C048346803EE8C092349 /* Pods_BumpingBallPlusTests.framework */,
+				FEBD6BE4DE7EB5EF657DEAAD /* Pods_BumpingBallPlusUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1051,9 +1061,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		56BB7F2B1CAD345100675AE8 /* BumpingBall+ */ = {
+		56BB7F2B1CAD345100675AE8 /* BumpingBallPlus */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56BB7F581CAD345200675AE8 /* Build configuration list for PBXNativeTarget "BumpingBall+" */;
+			buildConfigurationList = 56BB7F581CAD345200675AE8 /* Build configuration list for PBXNativeTarget "BumpingBallPlus" */;
 			buildPhases = (
 				4007D6C729ADF63A3153FF6E /* [CP] Check Pods Manifest.lock */,
 				56BB7F281CAD345100675AE8 /* Sources */,
@@ -1067,14 +1077,14 @@
 			);
 			dependencies = (
 			);
-			name = "BumpingBall+";
+			name = BumpingBallPlus;
 			productName = "BumpingBall+";
-			productReference = 56BB7F2C1CAD345100675AE8 /* BumpingBall+.app */;
+			productReference = 56BB7F2C1CAD345100675AE8 /* BumpingBallPlus.app */;
 			productType = "com.apple.product-type.application";
 		};
-		56BB7F431CAD345200675AE8 /* BumpingBall+Tests */ = {
+		56BB7F431CAD345200675AE8 /* BumpingBallPlusTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56BB7F5B1CAD345200675AE8 /* Build configuration list for PBXNativeTarget "BumpingBall+Tests" */;
+			buildConfigurationList = 56BB7F5B1CAD345200675AE8 /* Build configuration list for PBXNativeTarget "BumpingBallPlusTests" */;
 			buildPhases = (
 				87DFF50BD84C3C3A405DC7C7 /* [CP] Check Pods Manifest.lock */,
 				56BB7F401CAD345200675AE8 /* Sources */,
@@ -1088,14 +1098,14 @@
 			dependencies = (
 				56BB7F461CAD345200675AE8 /* PBXTargetDependency */,
 			);
-			name = "BumpingBall+Tests";
+			name = BumpingBallPlusTests;
 			productName = "BumpingBall+Tests";
-			productReference = 56BB7F441CAD345200675AE8 /* BumpingBall+.xctest */;
+			productReference = 56BB7F441CAD345200675AE8 /* BumpingBallPlus.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		56BB7F4E1CAD345200675AE8 /* BumpingBall+UITests */ = {
+		56BB7F4E1CAD345200675AE8 /* BumpingBallPlusUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 56BB7F5E1CAD345200675AE8 /* Build configuration list for PBXNativeTarget "BumpingBall+UITests" */;
+			buildConfigurationList = 56BB7F5E1CAD345200675AE8 /* Build configuration list for PBXNativeTarget "BumpingBallPlusUITests" */;
 			buildPhases = (
 				8CA837312F75726D11779BFA /* [CP] Check Pods Manifest.lock */,
 				56BB7F4B1CAD345200675AE8 /* Sources */,
@@ -1109,9 +1119,9 @@
 			dependencies = (
 				56BB7F511CAD345200675AE8 /* PBXTargetDependency */,
 			);
-			name = "BumpingBall+UITests";
+			name = BumpingBallPlusUITests;
 			productName = "BumpingBall+UITests";
-			productReference = 56BB7F4F1CAD345200675AE8 /* BumpingBall+.xctest */;
+			productReference = 56BB7F4F1CAD345200675AE8 /* BumpingBallPlus.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -1150,7 +1160,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 56BB7F271CAD345100675AE8 /* Build configuration list for PBXProject "BumpingBall+" */;
+			buildConfigurationList = 56BB7F271CAD345100675AE8 /* Build configuration list for PBXProject "BumpingBallPlus" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1164,9 +1174,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				56BB7F2B1CAD345100675AE8 /* BumpingBall+ */,
-				56BB7F431CAD345200675AE8 /* BumpingBall+Tests */,
-				56BB7F4E1CAD345200675AE8 /* BumpingBall+UITests */,
+				56BB7F2B1CAD345100675AE8 /* BumpingBallPlus */,
+				56BB7F431CAD345200675AE8 /* BumpingBallPlusTests */,
+				56BB7F4E1CAD345200675AE8 /* BumpingBallPlusUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1362,7 +1372,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BumpingBall+Tests/Pods-BumpingBall+Tests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BumpingBallPlusTests/Pods-BumpingBallPlusTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4007D6C729ADF63A3153FF6E /* [CP] Check Pods Manifest.lock */ = {
@@ -1406,7 +1416,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BumpingBall+/Pods-BumpingBall+-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BumpingBallPlus/Pods-BumpingBallPlus-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		87DFF50BD84C3C3A405DC7C7 /* [CP] Check Pods Manifest.lock */ = {
@@ -1451,7 +1461,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BumpingBall+/Pods-BumpingBall+-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BumpingBallPlus/Pods-BumpingBallPlus-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C1D86C0F02D1BDFE0529ADBB /* [CP] Copy Pods Resources */ = {
@@ -1466,7 +1476,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BumpingBall+Tests/Pods-BumpingBall+Tests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BumpingBallPlusTests/Pods-BumpingBallPlusTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DE8894267953BA093D2DB875 /* [CP] Copy Pods Resources */ = {
@@ -1481,7 +1491,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BumpingBall+UITests/Pods-BumpingBall+UITests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BumpingBallPlusUITests/Pods-BumpingBallPlusUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E9D2352E35AF61814F8EB5E0 /* [CP] Embed Pods Frameworks */ = {
@@ -1496,7 +1506,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BumpingBall+UITests/Pods-BumpingBall+UITests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BumpingBallPlusUITests/Pods-BumpingBallPlusUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1579,12 +1589,12 @@
 /* Begin PBXTargetDependency section */
 		56BB7F461CAD345200675AE8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 56BB7F2B1CAD345100675AE8 /* BumpingBall+ */;
+			target = 56BB7F2B1CAD345100675AE8 /* BumpingBallPlus */;
 			targetProxy = 56BB7F451CAD345200675AE8 /* PBXContainerItemProxy */;
 		};
 		56BB7F511CAD345200675AE8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 56BB7F2B1CAD345100675AE8 /* BumpingBall+ */;
+			target = 56BB7F2B1CAD345100675AE8 /* BumpingBallPlus */;
 			targetProxy = 56BB7F501CAD345200675AE8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1788,7 +1798,7 @@
 		};
 		56BB7F591CAD345200675AE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44F957790E5B779DC465ACC5 /* Pods-BumpingBall+.debug.xcconfig */;
+			baseConfigurationReference = D6BA6717FB385D5E85161FED /* Pods-BumpingBallPlus.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1798,7 +1808,7 @@
 				INFOPLIST_FILE = "BumpingBall+/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tsuruoka.BumpingBall-";
-				PRODUCT_NAME = "BumpingBall+";
+				PRODUCT_NAME = BumpingBallPlus;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -1808,7 +1818,7 @@
 		};
 		56BB7F5A1CAD345200675AE8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E917CB0D1A81FE1B5F5B5743 /* Pods-BumpingBall+.release.xcconfig */;
+			baseConfigurationReference = 66359A1B559863C7D08688E9 /* Pods-BumpingBallPlus.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1818,7 +1828,7 @@
 				INFOPLIST_FILE = "BumpingBall+/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tsuruoka.BumpingBall-";
-				PRODUCT_NAME = "BumpingBall+";
+				PRODUCT_NAME = BumpingBallPlus;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
@@ -1828,42 +1838,42 @@
 		};
 		56BB7F5C1CAD345200675AE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DF7A5C3C7B102B7CD7DD653C /* Pods-BumpingBall+Tests.debug.xcconfig */;
+			baseConfigurationReference = 8B2C55A187625078D9948915 /* Pods-BumpingBallPlusTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				INFOPLIST_FILE = "BumpingBall+Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tsuruoka.BumpingBall-Tests";
-				PRODUCT_NAME = "BumpingBall+";
+				PRODUCT_NAME = BumpingBallPlus;
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BumpingBall+.app/BumpingBall+";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BumpingBallPlus.app/BumpingBallPlus";
 			};
 			name = Debug;
 		};
 		56BB7F5D1CAD345200675AE8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE00D1DED0B5E6E2BD784D2F /* Pods-BumpingBall+Tests.release.xcconfig */;
+			baseConfigurationReference = 3B1FC791DD1F8AC8634740D1 /* Pods-BumpingBallPlusTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "BumpingBall+Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tsuruoka.BumpingBall-Tests";
-				PRODUCT_NAME = "BumpingBall+";
+				PRODUCT_NAME = BumpingBallPlus;
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BumpingBall+.app/BumpingBall+";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BumpingBallPlus.app/BumpingBallPlus";
 			};
 			name = Release;
 		};
 		56BB7F5F1CAD345200675AE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B589F870FC4838D38D7DB33B /* Pods-BumpingBall+UITests.debug.xcconfig */;
+			baseConfigurationReference = A9D4B8C4CA1705F2C625251F /* Pods-BumpingBallPlusUITests.debug.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				INFOPLIST_FILE = "BumpingBall+UITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tsuruoka.BumpingBall-UITests";
-				PRODUCT_NAME = "BumpingBall+";
+				PRODUCT_NAME = BumpingBallPlus;
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "BumpingBall+";
 				USES_XCTRUNNER = YES;
@@ -1872,12 +1882,12 @@
 		};
 		56BB7F601CAD345200675AE8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0FBC9EA10428232D3AD71F9 /* Pods-BumpingBall+UITests.release.xcconfig */;
+			baseConfigurationReference = F128573EC1718D6806FA7AF1 /* Pods-BumpingBallPlusUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "BumpingBall+UITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tsuruoka.BumpingBall-UITests";
-				PRODUCT_NAME = "BumpingBall+";
+				PRODUCT_NAME = BumpingBallPlus;
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "BumpingBall+";
 				USES_XCTRUNNER = YES;
@@ -1887,7 +1897,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		56BB7F271CAD345100675AE8 /* Build configuration list for PBXProject "BumpingBall+" */ = {
+		56BB7F271CAD345100675AE8 /* Build configuration list for PBXProject "BumpingBallPlus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56BB7F561CAD345200675AE8 /* Debug */,
@@ -1896,7 +1906,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		56BB7F581CAD345200675AE8 /* Build configuration list for PBXNativeTarget "BumpingBall+" */ = {
+		56BB7F581CAD345200675AE8 /* Build configuration list for PBXNativeTarget "BumpingBallPlus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56BB7F591CAD345200675AE8 /* Debug */,
@@ -1905,7 +1915,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		56BB7F5B1CAD345200675AE8 /* Build configuration list for PBXNativeTarget "BumpingBall+Tests" */ = {
+		56BB7F5B1CAD345200675AE8 /* Build configuration list for PBXNativeTarget "BumpingBallPlusTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56BB7F5C1CAD345200675AE8 /* Debug */,
@@ -1914,7 +1924,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		56BB7F5E1CAD345200675AE8 /* Build configuration list for PBXNativeTarget "BumpingBall+UITests" */ = {
+		56BB7F5E1CAD345200675AE8 /* Build configuration list for PBXNativeTarget "BumpingBallPlusUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56BB7F5F1CAD345200675AE8 /* Debug */,

@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_BumpingBall_UITestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_BumpingBall_UITestsVersionString[];
+FOUNDATION_EXPORT double Pods_BumpingBallPlusUITestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_BumpingBallPlusUITestsVersionString[];
 

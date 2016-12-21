@@ -1,0 +1,6 @@
+framework module Pods_BumpingBallPlusTests {
+  umbrella header "Pods-BumpingBallPlusTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

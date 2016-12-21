@@ -3,7 +3,7 @@
 # Uncomment this line if you're using Swift
 use_frameworks!
 
-target 'BumpingBall+' do
+target 'BumpingBallPlus' do
     pod 'Fabric'
     pod 'Crashlytics'
     pod 'NVActivityIndicatorView' , :git => "https://github.com/ninjaprox/NVActivityIndicatorView"
@@ -16,11 +16,11 @@ target 'BumpingBall+' do
 #    pod "BWWalkthrough"
 end
 
-target 'BumpingBall+Tests' do
+target 'BumpingBallPlusTests' do
 
 end
 
-target 'BumpingBall+UITests' do
+target 'BumpingBallPlusUITests' do
 
 end
 
