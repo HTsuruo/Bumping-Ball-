@@ -16,6 +16,7 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
     var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     let skView = SKView()
     var sceneView = SceneViewController()
+    var waitingView = WaitingView()
     @IBOutlet weak var onePlayBtn: SpringButton!
 //    @IBOutlet weak var pickerView: UIPickerView!
     var levelSelectView: LevelSelectView! = nil
@@ -34,7 +35,6 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
         if !Bgm.isPlaying() {
             Bgm.playBgm(filename: Bgm.topMusic)
         }
-        
     }
     
     override func viewDidLoad() {
@@ -99,6 +99,7 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
     /** ランキング **/
     @IBAction func onClickRankBtn(_ sender: UIButton) {
         Sound.play(audioPlayer: btnSound)
+        showWaitingView()
         sendAllScore()
         let localPlayer = GKLocalPlayer()
         localPlayer.loadDefaultLeaderboardIdentifier { (leaderboardIdentifier, error) in
@@ -110,6 +111,7 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
                 gcViewController.viewState = GKGameCenterViewControllerState.leaderboards
                 gcViewController.leaderboardIdentifier = "normal"
                 self.present(gcViewController, animated: true, completion: nil)
+                self.waitingView.hide()
             }
         }
     }
@@ -155,6 +157,12 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
     /** picker view setting **/
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
+    }
+    
+    func showWaitingView() {
+        self.view.addSubview(waitingView)
+        waitingView.txt.text = "Connecting.."
+        waitingView.show()
     }
     
     /*
