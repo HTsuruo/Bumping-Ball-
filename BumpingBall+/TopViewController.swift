@@ -111,8 +111,8 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
                 gcViewController.viewState = GKGameCenterViewControllerState.leaderboards
                 gcViewController.leaderboardIdentifier = "normal"
                 self.present(gcViewController, animated: true, completion: nil)
-                self.waitingView.hide()
             }
+            self.waitingView.hide()
         }
     }
     
