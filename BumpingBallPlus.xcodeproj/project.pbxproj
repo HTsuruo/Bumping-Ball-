@@ -462,6 +462,7 @@
 		56F80F2A1E05857E008A6AF7 /* snow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "snow@2x.png"; path = "img/background_particle/snow@2x.png"; sourceTree = SOURCE_ROOT; };
 		56F80F2C1E05857E008A6AF7 /* space@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "space@2x.png"; path = "img/background_particle/space@2x.png"; sourceTree = SOURCE_ROOT; };
 		56F80F311E058844008A6AF7 /* tmp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tmp@2x.png"; path = "img/background_particle/tmp@2x.png"; sourceTree = SOURCE_ROOT; };
+		56FF49601E0B5E330033394F /* BumpingBallPlus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BumpingBallPlus.entitlements; sourceTree = "<group>"; };
 		66359A1B559863C7D08688E9 /* Pods-BumpingBallPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumpingBallPlus.release.xcconfig"; path = "Pods/Target Support Files/Pods-BumpingBallPlus/Pods-BumpingBallPlus.release.xcconfig"; sourceTree = "<group>"; };
 		87CF2D28E9E810DF7496242E /* Pods_BumpingBall_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BumpingBall_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B488E9EEA5EA8F0B356FB8 /* Pods_BumpingBall_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BumpingBall_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -741,6 +742,7 @@
 		56BB7F231CAD345100675AE8 = {
 			isa = PBXGroup;
 			children = (
+				56FF49601E0B5E330033394F /* BumpingBallPlus.entitlements */,
 				56BF57841CD3B35400923509 /* Social.framework */,
 				56BB7F2E1CAD345100675AE8 /* BumpingBall+ */,
 				56BB7F471CAD345200675AE8 /* BumpingBall+Tests */,
@@ -1802,6 +1804,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BumpingBallPlus.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Hideki Tsuruoka (684A498CG8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
@@ -1822,6 +1825,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BumpingBallPlus.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Hideki Tsuruoka (684A498CG8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
