@@ -43,7 +43,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         // ここは物理世界.
         self.physicsWorld.contactDelegate   = self
         self.physicsWorld.speed = CGFloat(1.0)
-        self.backgroundColor = UIColor.black
+        setBackgroundColor()
         
         //set background
         if app.selectedDiffculty != .tutorial {
@@ -62,6 +62,10 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         self.view?.addSubview(countdownView)
         self.addChild(charge)
         finishView.setupAd() //表示にディレイが起きないよう広告をはじめに読み込んでおきます.
+    }
+    
+    func setBackgroundColor() {
+        self.backgroundColor = UIColor.black
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -180,7 +184,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
                             self.comboCount = 0
                         } else {
                             self.removeAction(forKey: "goldBk")
-                            self.backgroundColor = UIColor.black
+                            self.setBackgroundColor()
                         }
                     })
                 }
