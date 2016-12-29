@@ -207,8 +207,8 @@ class BallUtil {
     
     func getScale(name: String) -> CGFloat {
         if let valdic: NSDictionary = scaledic?.object(forKey: name) as? NSDictionary {
-            var min = valdic.object(forKey: "min") as! CGFloat * CGFloat(scaleVal)
-            let max = valdic.object(forKey: "max") as! CGFloat * CGFloat(scaleVal)
+            var min = valdic.object(forKey: "min") as! CGFloat
+            let max = valdic.object(forKey: "max") as! CGFloat
             let rand = Int(arc4random_uniform(2))
             var res: CGFloat = 0.0
             if rand == 0 { //min
@@ -219,6 +219,7 @@ class BallUtil {
             } else { //average
                 res = (min + max) / 2
             }
+            res = (min + max) / 2
             return res
         }
         return 1.0

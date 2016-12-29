@@ -48,7 +48,7 @@ class TargetBall: SimpleTargetBall {
         let speed = ballUtil.getTargetBallSpeed(name: color)
         self.dx = speed
         self.dy = speed
-        self.ballScale = self.ballScale * CGFloat(scaleVal)
+        self.ballScale *= CGFloat(scaleVal)
     }
     
     override func setAccelSpeed() {
