@@ -49,7 +49,7 @@ class FinishView: UIView {
         let highScore = ud.integer(forKey: "highscore-"+difficultyStr)
         if totalScore > highScore {
             ud.set(totalScore, forKey: "highscore-"+difficultyStr)
-            if app.selectedPlay == .one {
+            if app.selectedPlay == .one && !DeviceUtil.inches_3_5() {
                 highScoreStamp.isHidden = false
             }
         }

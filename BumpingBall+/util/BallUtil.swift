@@ -13,9 +13,9 @@ class BallUtil {
     
     let scaleFilepath = Bundle.main.path(forResource: "scale", ofType: "plist")
     let speedFilepath = Bundle.main.path(forResource: "speed", ofType: "plist")
-    let scaleVal = DeviceUtil.getOptionalScale(width: CGFloat.WIDTH)
-    let speedVal = DeviceUtil.getOptionalSpeed(height: Double(CGFloat.HEIGHT))
-    let increaseVal = DeviceUtil.getIncreaseScale(width: CGFloat.WIDTH)
+    let scaleVal = DeviceUtil.getOptionalScale()
+    let speedVal = DeviceUtil.getOptionalSpeed()
+    let increaseVal = DeviceUtil.getIncreaseScale()
     var scaledic: NSDictionary? = nil
     var speeddic: NSDictionary? = nil
     

@@ -16,9 +16,9 @@ struct PlayerBall {
     var ballSpeed = define.BALL_INIT_SPEED
     var isFire = false
     let ballUtil = BallUtil()
-    let scaleVal = DeviceUtil.getOptionalScale(width: CGFloat.WIDTH)
-    let speedVal = DeviceUtil.getOptionalSpeed(height: Double(CGFloat.HEIGHT))
-    let increaseVal = DeviceUtil.getIncreaseScale(width: CGFloat.WIDTH)
+    let scaleVal = DeviceUtil.getOptionalScale()
+    let speedVal = DeviceUtil.getOptionalSpeed()
+    let increaseVal = DeviceUtil.getIncreaseScale()
     var ballScale: Double = 0.0
     
     init() {
@@ -67,7 +67,7 @@ struct PlayerBall {
     }
     
     mutating func sizeChangeForward() {
-        self.ballScale += DeviceUtil.getIncreaseScale(width: CGFloat.WIDTH)
+        self.ballScale += DeviceUtil.getIncreaseScale()
         sizeChange()
         if ballUtil.isInScaleOverMax(scale: Double(self.ballScale)) {
             setBlue()
@@ -76,7 +76,7 @@ struct PlayerBall {
     }
     
     mutating func sizeChangeReverse() {
-        self.ballScale -= DeviceUtil.getIncreaseScale(width: CGFloat.WIDTH)
+        self.ballScale -= DeviceUtil.getIncreaseScale()
         sizeChange()
         if ballUtil.isInScaleOverMin(scale: Double(self.ballScale)) {
             setRed()

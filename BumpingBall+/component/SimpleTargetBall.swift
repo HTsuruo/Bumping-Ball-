@@ -19,8 +19,8 @@ class SimpleTargetBall {
     let childBall = SKNode()
     var randNum = 0
     var rotateDuration = 2.0
-    let scaleVal = DeviceUtil.getOptionalScale(width: CGFloat.WIDTH)
-    let speedVal = DeviceUtil.getOptionalSpeed(height: Double(CGFloat.HEIGHT))
+    let scaleVal = DeviceUtil.getOptionalScale()
+    let speedVal = DeviceUtil.getOptionalSpeed()
     
     init() {
         self.ball.alpha = 0.0 //フェードインのため.

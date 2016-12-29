@@ -129,6 +129,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         let actionMove = SKAction.moveTo(y: define.REMOVE_HEIGHT, duration: Double(playerBall.ballSpeed))
         playerBall.ball.run(actionMove)
         launchAnimation()
+        print("playerball size: \(playerBall.ballScale)")
     }
     
     override func update(_ currentTime: TimeInterval) {
