@@ -18,7 +18,7 @@
         <!--HELP-->
         <scene sceneID="rV9-dW-CQd">
             <objects>
-                <viewController id="1bK-kV-xTV" customClass="HelpViewController" customModule="BumpingBall_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1bK-kV-xTV" customClass="HelpViewController" customModule="BumpingBallPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oc8-Vj-hPq"/>
                         <viewControllerLayoutGuide type="bottom" id="MRQ-Pu-tF6"/>
@@ -62,17 +62,17 @@
         <!--SETTING-->
         <scene sceneID="Q0C-mg-8R2">
             <objects>
-                <tableViewController id="dNr-nV-plg" customClass="SettingViewController" customModule="BumpingBall_" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="dNr-nV-plg" customClass="SettingViewController" customModule="BumpingBallPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Aa4-UA-5dX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ijO-ZJ-NEp">
-                                <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ijO-ZJ-NEp" id="18Q-sM-UCh">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -101,7 +101,7 @@
         <!--LICENCE-->
         <scene sceneID="4mr-Xw-32c">
             <objects>
-                <viewController id="izY-Ut-ldt" customClass="LicenceViewController" customModule="BumpingBall_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="izY-Ut-ldt" customClass="LicenceViewController" customModule="BumpingBallPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vdl-oD-eSE"/>
                         <viewControllerLayoutGuide type="bottom" id="ndH-jt-AmO"/>
@@ -345,14 +345,14 @@ Cgo
         <!--Color Ball List-->
         <scene sceneID="cYG-gL-PO3">
             <objects>
-                <tableViewController id="BOr-jA-hJt" customClass="ColorBallViewController" customModule="BumpingBall_" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="BOr-jA-hJt" customClass="ColorBallViewController" customModule="BumpingBallPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="39Y-a1-GBb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GSV-Pq-Bab">
-                                <rect key="frame" x="0.0" y="56" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GSV-Pq-Bab" id="tzS-6e-s6y">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -374,7 +374,7 @@ Cgo
         <!--How to play match mode-->
         <scene sceneID="nAt-dy-TVo">
             <objects>
-                <viewController id="qOB-tV-w2w" customClass="BattleModeHelpViewController" customModule="BumpingBall_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qOB-tV-w2w" customClass="BattleModeHelpViewController" customModule="BumpingBallPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t1N-8r-D09"/>
                         <viewControllerLayoutGuide type="bottom" id="neT-Vt-Dqc"/>
@@ -434,7 +434,7 @@ Cgo
         <!--Scene View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController storyboardIdentifier="onePlayVC" id="BV1-FR-VrT" customClass="SceneViewController" customModule="BumpingBall_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onePlayVC" id="BV1-FR-VrT" customClass="SceneViewController" customModule="BumpingBallPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
                         <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
@@ -452,7 +452,7 @@ Cgo
         <!--Prepare Multi Play View Controller-->
         <scene sceneID="ha9-m7-xiq">
             <objects>
-                <viewController id="ybY-7A-oOF" customClass="PrepareMultiPlayViewController" customModule="BumpingBall_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ybY-7A-oOF" customClass="PrepareMultiPlayViewController" customModule="BumpingBallPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iLy-Wx-NKE"/>
                         <viewControllerLayoutGuide type="bottom" id="MDu-6F-tem"/>
@@ -475,7 +475,7 @@ Cgo
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multi Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogm-4G-WJX">
-                                        <rect key="frame" x="142" y="18" width="100" height="24"/>
+                                        <rect key="frame" x="139.5" y="16" width="105" height="28"/>
                                         <fontDescription key="fontDescription" name="Candara" family="Candara" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -686,7 +686,7 @@ Cgo
         <!--Top View Controller-->
         <scene sceneID="mg3-mZ-y76">
             <objects>
-                <viewController storyboardIdentifier="topVC" id="FFW-j8-PWE" customClass="TopViewController" customModule="BumpingBall_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="topVC" id="FFW-j8-PWE" customClass="TopViewController" customModule="BumpingBallPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TWV-0b-y95"/>
                         <viewControllerLayoutGuide type="bottom" id="v2V-mu-I55"/>
@@ -992,7 +992,7 @@ Cgo
         <!--Tutorial View Controller-->
         <scene sceneID="ZGf-hT-iTB">
             <objects>
-                <viewController storyboardIdentifier="tutorialVC" id="Rzr-R7-BoD" customClass="TutorialViewController" customModule="BumpingBall_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorialVC" id="Rzr-R7-BoD" customClass="TutorialViewController" customModule="BumpingBallPlus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mxc-ai-Ags"/>
                         <viewControllerLayoutGuide type="bottom" id="r9h-GS-dhS"/>

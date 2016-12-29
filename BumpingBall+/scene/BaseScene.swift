@@ -425,6 +425,7 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         }
         Sound.play(audioPlayer: btnSelectSound)
         let stageSign = StageSign(frame: CGRect(x: 0, y: 0, width: CGFloat.HEIGHT, height: define.STAGE_SIGN_HEIGHT))
+        stageSign.center = CGFloat.CENTER
         stageSign.setNumber(level: app.level)
         self.view?.addSubview(stageSign)
     }

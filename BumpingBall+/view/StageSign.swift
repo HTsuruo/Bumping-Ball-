@@ -29,7 +29,6 @@ class StageSign: UIView {
     fileprivate func loadXib(frame: CGRect) {
         Bundle.main.loadNibNamed("StageSign", owner: self, options: nil)
         contentView.frame = frame
-        contentView.center = CGFloat.CENTER
         self.addSubview(contentView)
     }
     
