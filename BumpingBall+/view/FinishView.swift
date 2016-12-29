@@ -26,9 +26,9 @@ class FinishView: UIView {
     var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     var vc: UIViewController!
     var scenevc: SceneViewController!
-    let btnSound = Sound.prepareToPlay("button")
     var totalScore = 0
     let adUtil = AdUitl()
+    let btnSound = Sound.prepareToPlay(Sound.button)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -81,7 +81,7 @@ class FinishView: UIView {
     }
     
     @IBAction func onClickToTopBtn(_ sender: UIButton) {
-        btnSound.play()
+        Sound.play(audioPlayer: btnSound)
         vc.dismiss(animated: true, completion: nil)
         scenevc.skView.isPaused = true
         if app.bluetoothSession != nil {
@@ -90,28 +90,28 @@ class FinishView: UIView {
     }
     
     @IBAction func onClickAgainBtn(_ sender: UIButton) {
-        btnSound.play()
+        Sound.play(audioPlayer: btnSound)
         scenevc.skView.isPaused = true
         vc.loadView()
         vc.viewDidLoad()
     }
     
     @IBAction func onClickTwitterBtn(_ sender: UIButton) {
-        btnSound.play()
+        Sound.play(audioPlayer: btnSound)
         let composeViewController: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
         composeViewController.setInitialText(getSnsMsg())
         vc.present(composeViewController, animated: true, completion: nil)
     }
     
     @IBAction func onClickFacebookBtn(_ sender: UIButton) {
-        btnSound.play()
+        Sound.play(audioPlayer: btnSound)
         let composeViewController: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
         composeViewController.setInitialText(getSnsMsg())
         vc.present(composeViewController, animated: true, completion: nil)
     }
     
     @IBAction func onClickLineBtn(_ sender: UIButton) {
-        btnSound.play()
+        Sound.play(audioPlayer: btnSound)
         let encodeMessage: String! = getSnsMsg().addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         let messageURL: URL! = URL( string: "line://msg/text/" + encodeMessage )
         if UIApplication.shared.canOpenURL(messageURL) {
