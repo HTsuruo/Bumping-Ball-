@@ -14,7 +14,7 @@ class DeviceUtil {
         let deviceheight = DeviceHeight(rawValue: Double(CGFloat.HEIGHT))! as DeviceHeight
         switch deviceheight {
         case .inches_3_5:
-            return  1.0 //縦横比が異なるので別途対処.
+            return  3.5 / define.BASE_DEVICE_INCH
         case .inches_4_0:
             return  4.0 / define.BASE_DEVICE_INCH
         case .inches_4_7:
