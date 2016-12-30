@@ -1,6 +1,7 @@
 # Bumping Ball+
-
-空き時間があったら随時更新していく予定.
+* [App Store](https://goo.gl/KpJbK5)
+* [Web Site](http://bumpingball.net/)
+ 
 
 ## Env.
 * Xcode 8.0
@@ -26,6 +27,8 @@
 * SCLAlertView (0.7.0)
 * Spring 1.0.3 (was 1.0.3)
 * SwiftyJSON (3.1.1)
+* Firebase (3.11.0)
+* FirebaseMessaging (1.2.1)
 
 ## Coding Guide.
 * [swift-style-guide](https://github.com/github/swift-style-guide)に準拠
