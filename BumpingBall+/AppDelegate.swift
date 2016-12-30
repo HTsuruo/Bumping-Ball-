@@ -11,6 +11,7 @@ import Fabric
 import Crashlytics
 import MultipeerConnectivity
 import SpriteKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -40,11 +41,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().barTintColor = ColorUtil.main
         
-//        let notificationSettings = UIUserNotificationSettings(
-//            types: [.badge, .sound, .alert], categories: nil)
-//        application.registerUserNotificationSettings(notificationSettings)
-//        application.registerForRemoteNotifications()
-//        FIRApp.configure()
+//        for firebase notification
+        let notificationSettings = UIUserNotificationSettings(
+            types: [.badge, .sound, .alert], categories: nil)
+        application.registerUserNotificationSettings(notificationSettings)
+        application.registerForRemoteNotifications()
+        FIRApp.configure()
+        
+//        if let token = FIRInstanceID.instanceID().token() {
+//             print("token: \(token)")
+//        }
         
         setInitialViewController()
         Bgm.setCategoryAmbient()
@@ -84,14 +90,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-//        let tokenChars = (deviceToken as NSData).bytes.bindMemory(to: CChar.self, capacity: deviceToken.count)
-//        var tokenString = ""
-//        
-//        for i in 0..<deviceToken.count {
-//            tokenString += String(format: "%02.2hhx", arguments: [tokenChars[i]])
-//        }
-//        
-//        FIRInstanceID.instanceID().setAPNSToken(deviceToken, type: FIRInstanceIDAPNSTokenType.unknown)
+        let tokenChars = (deviceToken as NSData).bytes.bindMemory(to: CChar.self, capacity: deviceToken.count)
+        var tokenString = ""
+        
+        for i in 0..<deviceToken.count {
+            tokenString += String(format: "%02.2hhx", arguments: [tokenChars[i]])
+        }
+        
+        FIRInstanceID.instanceID().setAPNSToken(deviceToken, type: FIRInstanceIDAPNSTokenType.unknown)
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+        
+        // Print message ID.
+//        print("Message ID: \(userInfo["gcm.message_id"]!)")
+        
+        // Print full message.
+//        print("%@", userInfo)
+        
+        if application.applicationState == .active {
+            if let aps = userInfo["aps"] as? NSDictionary {
+                if let title = aps["alert"] as? String {
+                    var label = ""
+                    if let l = userInfo["google.c.a.c_l"] as? String {
+                        label = l
+                    }
+                    AlertUtil().custom(title: title, msg: label)
+                }
+            }
+        }
     }
     
     func setInitialViewController() {

@@ -13,6 +13,7 @@ target 'BumpingBallPlus' do
     pod 'Alamofire', '~> 4.0'
     pod 'SwiftyJSON'
     pod 'Google-Mobile-Ads-SDK'
+    pod 'Firebase/Messaging'
 #    pod "BWWalkthrough"
 end
 
