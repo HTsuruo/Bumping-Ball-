@@ -107,18 +107,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Print full message.
 //        print("%@", userInfo)
-        
-        if application.applicationState == .active {
-            if let aps = userInfo["aps"] as? NSDictionary {
-                if let title = aps["alert"] as? String {
-                    var label = ""
-                    if let l = userInfo["google.c.a.c_l"] as? String {
-                        label = l
-                    }
-                    AlertUtil().custom(title: title, msg: label)
-                }
-            }
-        }
+
+//        とりあえず現段階のプッシュ通知はforeground状態を対象外とします
+//        if application.applicationState == .active {
+//            if let aps = userInfo["aps"] as? NSDictionary {
+//                if let title = aps["alert"] as? String {
+//                    var label = ""
+//                    if let l = userInfo["google.c.a.c_l"] as? String {
+//                        label = l
+//                    }
+//                    AlertUtil().custom(title: title, msg: label)
+//                }
+//            }
+//        }
     }
     
     func setInitialViewController() {
