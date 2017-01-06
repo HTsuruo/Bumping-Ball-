@@ -32,12 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Fabric.with([Crashlytics.self])
         
-        // GameCenter Auto Login
-        if let presentView = window?.rootViewController {
-            let targetViewController = presentView
-            GameCenterUtil.login(targetViewController)
-        }
-        
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().barTintColor = ColorUtil.main
         
@@ -54,6 +48,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setInitialViewController()
         Bgm.setCategoryAmbient()
+        
+        // GameCenter Auto Login
+        if let presentView = window?.rootViewController {
+            let targetViewController = presentView
+            GameCenterUtil.login(targetViewController)
+        }
         
         return true
     }

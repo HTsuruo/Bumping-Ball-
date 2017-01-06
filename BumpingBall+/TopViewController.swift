@@ -105,7 +105,7 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
         localPlayer.loadDefaultLeaderboardIdentifier { (leaderboardIdentifier, error) in
             if error != nil {
                 print(error!.localizedDescription)
-                AlertUtil().connectionError()
+                AlertUtil().eroorMsgWithCloseBtn(title: NSLocalizedString("error", comment: ""), msg: NSLocalizedString("error_gamecenter_msg", comment: ""))
             } else {
                 let gcViewController: GKGameCenterViewController = GKGameCenterViewController()
                 gcViewController.gameCenterDelegate = self

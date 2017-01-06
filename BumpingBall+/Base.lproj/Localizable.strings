@@ -68,6 +68,8 @@
 "how_to_play" = "How to play";
 
 //alert
+"error" = "Error";
+"error_gamecenter_msg" = "Please Login Gamecenter, or Connection Error.";
 "connection_error_title" = "Connection Error";
 "connection_error_subtitle" = "Please try in an environment with good radio conditions";
 "enable_play_hard_mode" = "Now, You can play hard mode!!";

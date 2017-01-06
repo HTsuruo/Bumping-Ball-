@@ -21,6 +21,12 @@ class AlertUtil: NSObject {
         alertView.showError(NSLocalizedString("connection_error_title", comment: ""), subTitle: NSLocalizedString("connection_error_subtitle", comment: ""))
     }
     
+    func eroorMsgWithCloseBtn(title: String, msg: String) {
+        let appearance = SCLAlertView.SCLAppearance()
+        let alertView = SCLAlertView(appearance: appearance)
+        alertView.showError(title, subTitle: msg)
+    }
+    
     func eroorMsg(title: String, msg: String) {
         let appearance = SCLAlertView.SCLAppearance(
             showCloseButton: false

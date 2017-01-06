@@ -41,6 +41,12 @@
 "enable_play_hard_mode" = "ハードモードが開放されました";
 
 /* No comment provided by engineer. */
+"error" = "エラー";
+
+/* No comment provided by engineer. */
+"error_gamecenter_msg" = "ランキング機能を利用にはGameCenterのログインが必要です。解決されない場合は、再度電波状況の良い環境でお試しください。";
+
+/* No comment provided by engineer. */
 "gamecenter_not_play" = "GameCenterによる対戦機能は現在ご利用いただけません";
 
 /* No comment provided by engineer. */
