@@ -52,9 +52,9 @@ class FinishView: UIView {
             if app.selectedPlay == .one && !DeviceUtil.inches_3_5() {
                 highScoreStamp.isHidden = false
             }
+            GameCenterUtil.sendScore(totalScore, leaderBoardId: difficultyStr)
         }
         self.totalScore = totalScore
-        GameCenterUtil.sendScore(totalScore, leaderBoardId: difficultyStr)
     }
     
     func setLevelLabel() {
