@@ -164,6 +164,7 @@ class BallUtil {
             texture = SKTexture.init(imageNamed: ballImage.BLUE)
             targetBall.userData?.setValue(BallType.blue.rawValue, forKey: "id")
         }
+        targetBall.userData?.setValue(false, forKey: "mix")
         return SKAction.setTexture(texture, resize: false)
     }
     
