@@ -14,12 +14,25 @@ class TargetBall: SimpleTargetBall {
     override init() {
         super.init()
         
-        // easy mode以外
-        if app.selectedDiffculty.canCreateHasNumber() {
-            if hasNumber() {
+        let ballTypeRand = Util.getRandom(range: 3)
+        
+        switch ballTypeRand {
+        case 0:
+            break
+        case 1: // has number ball
+            if app.selectedDiffculty.canCreateHasNumber() {
                 changeHasNumberBall(randNum)
             }
+            break
+        case 2:
+            if app.selectedDiffculty.canCreateMix() {
+                changeMixBall(randNum)
+            }
+            break
+        default:
+            break
         }
+        
     }
     
     override func setBall(num: BallType) {
@@ -61,15 +74,6 @@ class TargetBall: SimpleTargetBall {
         self.ball.name = "t_ball"//名前をつけるのはインスタンス化した後
     }
     
-    func hasNumber() -> Bool {
-        //0~2までのランダムな値を取得する
-        let randNumDetail = Int(arc4random_uniform(3))
-        if randNumDetail==0 {
-            return true
-        }
-        return false
-    }
-    
     func changeDevilBall(id: Int) {
         self.ball.userData?.setValue(id, forKey: "id")
         let rand = Int(arc4random_uniform(2))
@@ -105,7 +109,7 @@ class TargetBall: SimpleTargetBall {
         var num = 1
         switch randNum {
         case BallType.blue.rawValue:
-            let rand = Int(arc4random_uniform(2))
+            let rand = Util.getRandom(range: 2)
             if rand == 0 {
                 texture = SKTexture.init(imageNamed: ballImage.BLUE_5)
                 num = 5
@@ -115,17 +119,41 @@ class TargetBall: SimpleTargetBall {
             }
             break
         case BallType.green.rawValue:
-            texture = SKTexture.init(imageNamed: ballImage.GREEN_3)
-            let rand = Int(arc4random_uniform(2))
+            let rand = Util.getRandom(range: 2)
             if rand == 0 {
+                texture = SKTexture.init(imageNamed: ballImage.GREEN_2)
                 num = 2
             } else {
+                texture = SKTexture.init(imageNamed: ballImage.GREEN_3)
                 num = 3
             }
             break
         case BallType.orange.rawValue:
             texture = SKTexture.init(imageNamed: ballImage.ORANGE_2)
             num = 2
+            break
+        default:
+            return
+        }
+        let action = SKAction.setTexture(texture, resize: false)
+        self.ball.run(action)
+        self.ball.userData?.setValue(num, forKey: "num")
+    }
+    
+    func changeMixBall(_ randNum: Int) {
+        var texture = SKTexture.init()
+        let num = 2
+        switch randNum {
+        case BallType.blue.rawValue:
+            return
+        case BallType.green.rawValue:
+            texture = SKTexture.init(imageNamed: ballImage.MIX_BLUE_GREEN)
+            break
+        case BallType.orange.rawValue:
+            texture = SKTexture.init(imageNamed: ballImage.MIX_BLUE_ORANGE)
+            break
+        case BallType.orange.rawValue:
+            texture = SKTexture.init(imageNamed: ballImage.MIX_BLUE_RED)
             break
         default:
             return

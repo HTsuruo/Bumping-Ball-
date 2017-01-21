@@ -43,6 +43,10 @@ struct Util {
         return tc!
     }
     
+    static func getRandom(range: Int) -> Int {
+        return Int(arc4random_uniform(UInt32(range)))
+    }
+    
     static func versionCheck() {
         Alamofire.request(define.VERSION_URL, method: .get, encoding: JSONEncoding.default).responseJSON { response in
             print("response: \(response)")
