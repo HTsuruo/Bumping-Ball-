@@ -33,7 +33,7 @@ class TargetBall: SimpleTargetBall {
             }
             break
         case 2:
-            if app.selectedDiffculty.canCreateMix() {
+            if app.selectedDiffculty.canCreateMix(level: app.level) {
                 changeToMixBall(randNum)
             }
             break

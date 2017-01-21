@@ -93,15 +93,15 @@ enum DifficultyType: Int {
         }
     }
     
-    func canCreateMix() -> Bool {
-        switch self {
-        case .hard:
-            return true
-        case .impossible:
-            return true
-        default:
+    func canCreateMix(level: Int) -> Bool {
+        if self == .easy {
             return false
         }
+        
+        if level >= 10 {
+            return true
+        }
+        return false
     }
     
     func isEasy() -> Bool {
