@@ -182,10 +182,10 @@
                 <target>イージー</target>
                 <note>No comment provided by engineer.</note>
             </trans-unit>
-            <trans-unit id="enable_play_hard_mode">
-                <source>enable_play_hard_mode</source>
-                <target>ハードモードが開放されました</target>
+            <trans-unit id="enable_play_new_mode">
+                <source>enable_play_new_mode</source>
                 <note>No comment provided by engineer.</note>
+                <target>%@モードが解放されました</target>
             </trans-unit>
             <trans-unit id="error">
                 <source>error</source>
@@ -226,6 +226,11 @@
                 <source>how_to_play</source>
                 <target>遊び方</target>
                 <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="impossible">
+                <source>impossible</source>
+                <note>No comment provided by engineer.</note>
+                <target>インポッシブル</target>
             </trans-unit>
             <trans-unit id="info">
                 <source>info</source>
@@ -284,8 +289,8 @@
             </trans-unit>
             <trans-unit id="not_play_mode">
                 <source>not_play_mode</source>
+                <target>まだこのモードでは遊べません</target>
                 <note>No comment provided by engineer.</note>
-                <target>未解放のモードでは遊べません</target>
             </trans-unit>
             <trans-unit id="otherSubTxt_1">
                 <source>otherSubTxt_1</source>

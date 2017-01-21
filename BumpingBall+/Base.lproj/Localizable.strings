@@ -72,7 +72,7 @@
 "error_gamecenter_msg" = "Please Login Gamecenter, or Connection Error.";
 "connection_error_title" = "Connection Error";
 "connection_error_subtitle" = "Please try in an environment with good radio conditions";
-"enable_play_hard_mode" = "Now, You can play hard mode!!";
+"enable_play_new_mode" = "Now, You can play %@ mode!!";
 "info" = "Info";
 "not_play_mode" = "You cannot play this mode yet";
 "update_info_title" = "Update Info";
@@ -85,4 +85,5 @@
 "easy" = "easy";
 "normal" = "normal";
 "hard" = "hard";
+"impossible" = "impossible";
 "sns_message_with_score" = "Got %d bump.(%@)";

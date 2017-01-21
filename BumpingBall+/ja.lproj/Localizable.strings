@@ -38,7 +38,7 @@
 "easy" = "イージー";
 
 /* No comment provided by engineer. */
-"enable_play_hard_mode" = "ハードモードが開放されました";
+"enable_play_new_mode" = "%@モードが解放されました";
 
 /* No comment provided by engineer. */
 "error" = "エラー";
@@ -63,6 +63,9 @@
 
 /* No comment provided by engineer. */
 "how_to_play" = "遊び方";
+
+/* No comment provided by engineer. */
+"impossible" = "インポッシブル";
 
 /* No comment provided by engineer. */
 "info" = "お知らせ";

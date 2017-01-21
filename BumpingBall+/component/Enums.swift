@@ -74,7 +74,7 @@ enum DifficultyType: Int {
         case .hard:
             return NSLocalizedString("hard", comment: "")
         case .impossible:
-            return ""
+            return NSLocalizedString("impossible", comment: "")
         default:
             return ""
         }

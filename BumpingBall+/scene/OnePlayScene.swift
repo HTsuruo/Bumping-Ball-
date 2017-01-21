@@ -62,6 +62,7 @@ class OnePlayScene: BaseScene {
         Sound.play(node: self, action: Sound.gameover)
         self.finish()
         enableHardMode()
+        enableImpossibleMode()
     }
     
     
@@ -90,6 +91,25 @@ class OnePlayScene: BaseScene {
         }
         UserDefaults.standard.set(true, forKey: udKey.hard_mode_on)
         let alert = AlertUtil()
-        alert.custom(title: NSLocalizedString("info", comment: ""), msg: NSLocalizedString("enable_play_hard_mode", comment: ""))
+        let difficulty = DifficultyType.hard.getLocalizedString()
+        let msg = String(format: NSLocalizedString("enable_play_new_mode", comment: ""), difficulty)
+        alert.custom(title: NSLocalizedString("info", comment: ""), msg: msg)
+    }
+    
+    func enableImpossibleMode() {
+        if app.selectedDiffculty != .hard {
+            return
+        }
+        if UserDefaults.standard.bool(forKey: udKey.impossible_mode_on) {
+            return
+        }
+        if app.level < 17 {
+            return
+        }
+        UserDefaults.standard.set(true, forKey: udKey.impossible_mode_on)
+        let alert = AlertUtil()
+        let difficulty = DifficultyType.impossible.getLocalizedString()
+        let msg = String(format: NSLocalizedString("enable_play_new_mode", comment: ""), difficulty)
+        alert.custom(title: NSLocalizedString("info", comment: ""), msg: msg)
     }
 }
