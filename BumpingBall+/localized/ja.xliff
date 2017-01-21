@@ -117,6 +117,21 @@
             <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="8.2.1" build-num="8C1002"></tool>
         </header>
         <body>
+            <trans-unit id="color_ball_section_1">
+                <source>color_ball_section_1</source>
+                <note>No comment provided by engineer.</note>
+                <target>カラーボール</target>
+            </trans-unit>
+            <trans-unit id="color_ball_section_2">
+                <source>color_ball_section_2</source>
+                <note>No comment provided by engineer.</note>
+                <target>ちょっと変わったカラーボール</target>
+            </trans-unit>
+            <trans-unit id="color_ball_section_3">
+                <source>color_ball_section_3</source>
+                <note>No comment provided by engineer.</note>
+                <target>アイテムボール</target>
+            </trans-unit>
             <trans-unit id="commonSubTxt_1">
                 <source>commonSubTxt_1</source>
                 <target>スピードが速く小さい</target>
@@ -184,8 +199,8 @@
             </trans-unit>
             <trans-unit id="enable_play_new_mode">
                 <source>enable_play_new_mode</source>
-                <note>No comment provided by engineer.</note>
                 <target>%@モードが解放されました</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="error">
                 <source>error</source>
@@ -229,8 +244,8 @@
             </trans-unit>
             <trans-unit id="impossible">
                 <source>impossible</source>
-                <note>No comment provided by engineer.</note>
                 <target>インポッシブル</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="info">
                 <source>info</source>
@@ -307,6 +322,11 @@
                 <target>対戦相手に送りこまれた邪魔なボール</target>
                 <note>No comment provided by engineer.</note>
             </trans-unit>
+            <trans-unit id="otherSubTxt_4">
+                <source>otherSubTxt_4</source>
+                <target>色の数だけ当てたら消せる</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
             <trans-unit id="otherTxt_1">
                 <source>otherTxt_1</source>
                 <target>カウントボール</target>
@@ -320,6 +340,11 @@
             <trans-unit id="otherTxt_3">
                 <source>otherTxt_3</source>
                 <target>スケルトンボール</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="otherTxt_4">
+                <source>otherTxt_4</source>
+                <target>ミックスボール</target>
                 <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="setting_item_1">

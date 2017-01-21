@@ -29,17 +29,19 @@ class ColorBallViewController: UITableViewController {
     ]
     
     let otherIcon: [String] = [
-        ballImage.BLUE_3, ballImage.ITEM_BLUE, ballImage.DEVIL_BLUE
+        ballImage.BLUE_3, ballImage.ITEM_BLUE, ballImage.DEVIL_BLUE, ballImage.MIX_BLUE_RED
     ]
     let otherTxt: [String] = [
         NSLocalizedString("otherTxt_1", comment: ""),
         NSLocalizedString("otherTxt_2", comment: ""),
         NSLocalizedString("otherTxt_3", comment: ""),
+        NSLocalizedString("otherTxt_4", comment: ""),
     ]
     let otherSubTxt: [String] = [
         NSLocalizedString("otherSubTxt_1", comment: ""),
         NSLocalizedString("otherSubTxt_2", comment: ""),
         NSLocalizedString("otherSubTxt_3", comment: ""),
+        NSLocalizedString("otherSubTxt_4", comment: ""),
     ]
     
     let itemIcon: [String] = [
@@ -111,6 +113,19 @@ class ColorBallViewController: UITableViewController {
             return itemIcon.count
         default:
             return 0
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case COMMON:
+            return NSLocalizedString("color_ball_section_1", comment: "")
+        case OTHER:
+            return NSLocalizedString("color_ball_section_2", comment: "")
+        case ITEM:
+            return NSLocalizedString("color_ball_section_3", comment: "")
+        default:
+            return ""
         }
     }
 

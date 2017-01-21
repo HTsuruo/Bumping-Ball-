@@ -1,4 +1,13 @@
 /* No comment provided by engineer. */
+"color_ball_section_1" = "カラーボール";
+
+/* No comment provided by engineer. */
+"color_ball_section_2" = "ちょっと変わったカラーボール";
+
+/* No comment provided by engineer. */
+"color_ball_section_3" = "アイテムボール";
+
+/* No comment provided by engineer. */
 "commonSubTxt_1" = "スピードが速く小さい";
 
 /* No comment provided by engineer. */
@@ -113,6 +122,9 @@
 "otherSubTxt_3" = "対戦相手に送りこまれた邪魔なボール";
 
 /* No comment provided by engineer. */
+"otherSubTxt_4" = "色の数だけ当てたら消せる";
+
+/* No comment provided by engineer. */
 "otherTxt_1" = "カウントボール";
 
 /* No comment provided by engineer. */
@@ -120,6 +132,9 @@
 
 /* No comment provided by engineer. */
 "otherTxt_3" = "スケルトンボール";
+
+/* No comment provided by engineer. */
+"otherTxt_4" = "ミックスボール";
 
 /* No comment provided by engineer. */
 "setting_item_1" = "音楽";

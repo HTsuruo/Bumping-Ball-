@@ -50,9 +50,11 @@
 "otherTxt_1" = "Count Ball";
 "otherTxt_2" = "Question Ball";
 "otherTxt_3" = "Skeleton Ball";
+"otherTxt_4" = "Mix Ball";
 "otherSubTxt_1" = "Destroy when you hits the number.";
 "otherSubTxt_2" = "Can send skeleton ball to opponent.";
 "otherSubTxt_3" = "Received when opponent hits question ball.";
+"otherTxt_4" = "Destroy when you hits two color";
 
 "itemTxt_1" = "Reverse Ball";
 "itemTxt_2" = "Spped UP Ball";
