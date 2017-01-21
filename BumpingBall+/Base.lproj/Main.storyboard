@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rzr-R7-BoD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rzr-R7-BoD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -475,7 +475,7 @@ Cgo
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multi Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogm-4G-WJX">
-                                        <rect key="frame" x="142" y="18" width="100" height="24"/>
+                                        <rect key="frame" x="139.5" y="16" width="105" height="28"/>
                                         <fontDescription key="fontDescription" name="Candara" family="Candara" pointSize="24"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -695,8 +695,8 @@ Cgo
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleTxt.png" translatesAutoresizingMaskIntoConstraints="NO" id="X6h-on-Pm5" customClass="SpringImageView" customModule="Spring">
-                                <rect key="frame" x="21" y="30" width="333" height="74"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleTxt.png" translatesAutoresizingMaskIntoConstraints="NO" id="X6h-on-Pm5" customClass="SpringImageView" customModule="Spring">
+                                <rect key="frame" x="26" y="35" width="323" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="136" id="1Aq-wc-ERX"/>
                                     <constraint firstAttribute="width" secondItem="X6h-on-Pm5" secondAttribute="height" multiplier="45:10" id="75x-fk-6Dt"/>
@@ -822,10 +822,10 @@ Cgo
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jom-IV-K2p" userLabel="CenterView">
-                                <rect key="frame" x="56" y="114" width="263" height="453"/>
+                                <rect key="frame" x="56" y="117" width="263" height="450"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsc-yv-aM9" customClass="SpringButton" customModule="Spring">
-                                        <rect key="frame" x="0.0" y="10" width="263" height="120"/>
+                                        <rect key="frame" x="0.0" y="10" width="263" height="119.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="1Y8-5a-RGw"/>
                                             <constraint firstAttribute="height" constant="138" id="HCd-nC-3v5"/>
@@ -867,7 +867,7 @@ Cgo
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DC-Gf-4nI" userLabel="Multi Play Btn" customClass="SpringButton" customModule="Spring">
-                                        <rect key="frame" x="0.0" y="167" width="263" height="119"/>
+                                        <rect key="frame" x="0.0" y="166" width="263" height="119.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="233" id="EzX-YK-eNB"/>
                                             <constraint firstAttribute="height" constant="138" id="WtB-bg-SaO"/>
@@ -899,7 +899,7 @@ Cgo
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gp-8e-XhA" userLabel="ThirdBtn" customClass="SpringButton" customModule="Spring">
-                                        <rect key="frame" x="0.0" y="324" width="263" height="119"/>
+                                        <rect key="frame" x="0.0" y="320.5" width="263" height="119.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="0Gp-8e-XhA" secondAttribute="height" multiplier="22:10" id="1vB-b4-f1d"/>
                                         </constraints>
@@ -940,13 +940,13 @@ Cgo
                             <constraint firstItem="4Gg-oc-1cL" firstAttribute="top" secondItem="jom-IV-K2p" secondAttribute="bottom" constant="10" id="8xt-uv-8QA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jom-IV-K2p" secondAttribute="trailing" constant="40" id="8z9-Ou-GS4"/>
                             <constraint firstItem="4Gg-oc-1cL" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="10" id="CT9-Zh-3iH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="X6h-on-Pm5" secondAttribute="trailing" constant="5" id="GLa-Hq-eo1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="X6h-on-Pm5" secondAttribute="trailing" constant="10" id="GLa-Hq-eo1"/>
                             <constraint firstItem="v2V-mu-I55" firstAttribute="top" secondItem="4Gg-oc-1cL" secondAttribute="bottom" constant="30" id="GhN-kw-uLL"/>
                             <constraint firstItem="X6h-on-Pm5" firstAttribute="centerX" secondItem="OWX-VH-aeT" secondAttribute="centerX" id="PPB-83-Hgs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="X6h-on-Pm5" secondAttribute="trailing" constant="30" id="QfF-u3-6dL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4Gg-oc-1cL" secondAttribute="trailing" constant="10" id="Smh-fp-TpV"/>
-                            <constraint firstItem="X6h-on-Pm5" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="5" id="TNt-UP-YdW"/>
-                            <constraint firstItem="X6h-on-Pm5" firstAttribute="top" secondItem="TWV-0b-y95" secondAttribute="bottom" constant="10" id="Ubw-5Y-V1w"/>
+                            <constraint firstItem="X6h-on-Pm5" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="10" id="TNt-UP-YdW"/>
+                            <constraint firstItem="X6h-on-Pm5" firstAttribute="top" secondItem="TWV-0b-y95" secondAttribute="bottom" constant="15" id="Ubw-5Y-V1w"/>
                             <constraint firstItem="jom-IV-K2p" firstAttribute="top" secondItem="X6h-on-Pm5" secondAttribute="bottom" constant="10" id="ZeX-aR-vLz"/>
                             <constraint firstItem="jom-IV-K2p" firstAttribute="centerX" secondItem="OWX-VH-aeT" secondAttribute="centerX" id="c6S-6G-taV"/>
                             <constraint firstItem="X6h-on-Pm5" firstAttribute="leading" secondItem="OWX-VH-aeT" secondAttribute="leadingMargin" constant="30" id="tBi-DA-XpC"/>
@@ -1135,6 +1135,6 @@ Cgo
         <image name="setting.png" width="120" height="120"/>
         <image name="swipeFingerArrow.png" width="66" height="125"/>
         <image name="tapFinder.png" width="147" height="147"/>
-        <image name="titleTxt.png" width="567" height="126"/>
+        <image name="titleTxt.png" width="399" height="90"/>
     </resources>
 </document>
