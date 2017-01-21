@@ -62,6 +62,7 @@
 		5635C21B1DD89AFC00C6AACE /* beginnerIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5635C21A1DD89AFC00C6AACE /* beginnerIcon@2x.png */; };
 		56435B501E333EA70006AE49 /* impossibleBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56435B4E1E333EA70006AE49 /* impossibleBtn@2x.png */; };
 		56435B511E333EA70006AE49 /* impossibleBtnOff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56435B4F1E333EA70006AE49 /* impossibleBtnOff@2x.png */; };
+		56435B571E33A6090006AE49 /* splash_version2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56435B561E33A6090006AE49 /* splash_version2@2x.png */; };
 		564FCC1F1DCDF62300072657 /* reverse_bk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 564FCC1E1DCDF62300072657 /* reverse_bk@2x.png */; };
 		565DDA531CBD4707003C9F0D /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565DDA521CBD4707003C9F0D /* Animation.swift */; };
 		565EEF571E067E5600C67CB3 /* BattleModeHelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565EEF561E067E5600C67CB3 /* BattleModeHelpViewController.swift */; };
@@ -295,6 +296,7 @@
 		5635C21A1DD89AFC00C6AACE /* beginnerIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "beginnerIcon@2x.png"; path = "img/help/beginnerIcon@2x.png"; sourceTree = SOURCE_ROOT; };
 		56435B4E1E333EA70006AE49 /* impossibleBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "impossibleBtn@2x.png"; path = "img/level/impossibleBtn@2x.png"; sourceTree = SOURCE_ROOT; };
 		56435B4F1E333EA70006AE49 /* impossibleBtnOff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "impossibleBtnOff@2x.png"; path = "img/level/impossibleBtnOff@2x.png"; sourceTree = SOURCE_ROOT; };
+		56435B561E33A6090006AE49 /* splash_version2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "splash_version2@2x.png"; path = "img/splash_version2@2x.png"; sourceTree = SOURCE_ROOT; };
 		564FCC1E1DCDF62300072657 /* reverse_bk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "reverse_bk@2x.png"; path = "img/ball_item_bk/reverse_bk@2x.png"; sourceTree = SOURCE_ROOT; };
 		565DDA521CBD4707003C9F0D /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = component/Animation.swift; sourceTree = "<group>"; };
 		565EEF561E067E5600C67CB3 /* BattleModeHelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BattleModeHelpViewController.swift; path = help/BattleModeHelpViewController.swift; sourceTree = "<group>"; };
@@ -846,6 +848,7 @@
 				561B35821DD04B58002E13C9 /* level */,
 				566B38F81DC655200026083B /* closeBtn@2x.png */,
 				56BD47801DC5E507003AA705 /* splash@2x.png */,
+				56435B561E33A6090006AE49 /* splash_version2@2x.png */,
 				56BDE3DF1D7ACA6D00247E36 /* life */,
 				56BB36801D7324DD00AD1603 /* prepare_multiplay */,
 				56BB367D1D731AF300AD1603 /* backBtn@2x.png */,
@@ -1250,6 +1253,7 @@
 				56C7254F1DD371CE00DFA113 /* combo_2@2x.png in Resources */,
 				5635C2131DD875CC00C6AACE /* HelpCell.xib in Resources */,
 				56DDBD4A1DD7743900CDBD27 /* InfoPlist.strings in Resources */,
+				56435B571E33A6090006AE49 /* splash_version2@2x.png in Resources */,
 				56AD645B1DCCE69800DAC92B /* ball_red_1@2x.png in Resources */,
 				56DDBD321DD6C39300CDBD27 /* gamecenterBtnDisabled@2x.png in Resources */,
 				56BDE3E61D7ACA7600247E36 /* life_red_empty@2x.png in Resources */,
