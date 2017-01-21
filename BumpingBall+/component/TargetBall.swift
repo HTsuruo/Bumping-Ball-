@@ -18,6 +18,14 @@ class TargetBall: SimpleTargetBall {
         
         switch ballTypeRand {
         case 0:
+            if app.selectedDiffculty.isImpossible() { //impossible modeではノーマルボールが出現しない.
+                let rand = Util.getRandom(range: 2)
+                if rand == 0 {
+                    changeToHasNumberBall(randNum)
+                } else {
+                    changeToMixBall(randNum)
+                }
+            }
             break
         case 1: // has number ball
             if app.selectedDiffculty.canCreateHasNumber() {
@@ -161,7 +169,7 @@ class TargetBall: SimpleTargetBall {
         case BallType.orange.rawValue:
             texture = SKTexture.init(imageNamed: ballImage.MIX_BLUE_ORANGE)
             break
-        case BallType.orange.rawValue:
+        case BallType.red.rawValue:
             texture = SKTexture.init(imageNamed: ballImage.MIX_BLUE_RED)
             break
         default:

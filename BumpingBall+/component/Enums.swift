@@ -113,6 +113,15 @@ enum DifficultyType: Int {
         }
     }
     
+    func isImpossible() -> Bool {
+        switch self {
+        case .impossible:
+            return true
+        default:
+            return false
+        }
+    }
+    
 }
 
 enum PlayType: Int {

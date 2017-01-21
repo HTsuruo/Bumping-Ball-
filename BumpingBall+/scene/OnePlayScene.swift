@@ -103,7 +103,7 @@ class OnePlayScene: BaseScene {
         if UserDefaults.standard.bool(forKey: udKey.impossible_mode_on) {
             return
         }
-        if app.level < 17 {
+        if app.level < 15 {
             return
         }
         UserDefaults.standard.set(true, forKey: udKey.impossible_mode_on)
