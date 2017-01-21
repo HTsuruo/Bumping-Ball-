@@ -108,7 +108,7 @@
                 <source>$(PRODUCT_NAME)</source>
             </trans-unit>
             <trans-unit id="CFBundleShortVersionString">
-                <source>1.1</source>
+                <source>1.2.0</source>
             </trans-unit>
         </body>
     </file>
@@ -194,8 +194,8 @@
             </trans-unit>
             <trans-unit id="error_gamecenter_msg">
                 <source>error_gamecenter_msg</source>
-                <note>No comment provided by engineer.</note>
                 <target>ランキング機能を利用にはGameCenterのログインが必要です。解決されない場合は、再度電波状況の良い環境でお試しください。</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="gamecenter_not_play">
                 <source>gamecenter_not_play</source>
@@ -282,10 +282,10 @@
                 <target>ノーマル</target>
                 <note>No comment provided by engineer.</note>
             </trans-unit>
-            <trans-unit id="not_play_hard_mode">
-                <source>not_play_hard_mode</source>
-                <target>まだハードモードでは遊べません</target>
+            <trans-unit id="not_play_mode">
+                <source>not_play_mode</source>
                 <note>No comment provided by engineer.</note>
+                <target>未解放のモードでは遊べません</target>
             </trans-unit>
             <trans-unit id="otherSubTxt_1">
                 <source>otherSubTxt_1</source>

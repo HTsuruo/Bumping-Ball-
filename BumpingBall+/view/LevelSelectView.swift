@@ -13,9 +13,10 @@ class LevelSelectView: UIView {
 
     var app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     @IBOutlet var contentView: SpringButton!
-    @IBOutlet weak var easyBtn: UIButton!
-    @IBOutlet weak var normalBtn: UIButton!
-    @IBOutlet weak var hardBtn: UIButton!
+    @IBOutlet var easyBtn: SpringButton!
+    @IBOutlet var normalBtn: SpringButton!
+    @IBOutlet var hardBtn: SpringButton!
+    @IBOutlet var impossibleBtn: SpringButton!
     let btnSelectSound = Sound.prepareToPlay(Sound.buttonLevelSelect)
     let btnErorrSound = Sound.prepareToPlay(Sound.buttonError)
     
@@ -25,15 +26,38 @@ class LevelSelectView: UIView {
         easyBtn.isHidden = false
         normalBtn.isHidden = false
         hardBtn.isHidden = false
+        impossibleBtn.isHidden = false
+        
+        setExistUserData()
         
         if !UserDefaults.standard.bool(forKey: udKey.hard_mode_on) {
             let image = UIImage(named: "hardBtnOff")
             hardBtn.setImage(image, for: .normal)
         }
         
+        if !UserDefaults.standard.bool(forKey: udKey.impossible_mode_on) {
+            let image = UIImage(named: "impossibleBtnOff")
+            impossibleBtn.setImage(image, for: .normal)
+        }
+        
 //        contentView.layer.borderColor = UIColor.white.cgColor
 //        contentView.layer.borderWidth = 2
 //        contentView.layer.cornerRadius = 30
+    }
+    
+//    既存のユーザデータをセットします.
+    func setExistUserData() {
+//        udの名前が不適切であったため変換します.
+        if UserDefaults.standard.bool(forKey: "true") {
+            UserDefaults.standard.set(true, forKey: udKey.hard_mode_on)
+        }
+    }
+    
+    func startAnimation() {
+        easyBtn.animate()
+        normalBtn.animate()
+        hardBtn.animate()
+        impossibleBtn.animate()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -53,6 +77,7 @@ class LevelSelectView: UIView {
         transitionToPlay()
         normalBtn.isHidden = true
         hardBtn.isHidden = true
+        impossibleBtn.isHidden = true
     }
     
     @IBAction func onClickNormalBtn(_ sender: UIButton) {
@@ -61,13 +86,14 @@ class LevelSelectView: UIView {
         transitionToPlay()
         easyBtn.isHidden = true
         hardBtn.isHidden = true
+        impossibleBtn.isHidden = true
     }
     
     @IBAction func onClickHardBtn(_ sender: UIButton) {
         if !UserDefaults.standard.bool(forKey: udKey.hard_mode_on) {
             Sound.play(audioPlayer: btnErorrSound)
             let alert = AlertUtil()
-            alert.eroorMsg(title: NSLocalizedString("info", comment: ""), msg: NSLocalizedString("not_play_hard_mode", comment: ""))
+            alert.eroorMsg(title: NSLocalizedString("info", comment: ""), msg: NSLocalizedString("not_play_mode", comment: ""))
             return
         }
         
@@ -76,7 +102,26 @@ class LevelSelectView: UIView {
         transitionToPlay()
         easyBtn.isHidden = true
         normalBtn.isHidden = true
+        impossibleBtn.isHidden = true
     }
+    
+    @IBAction func onClickImpossibleBtn(_ sender: UIButton) {
+        if !UserDefaults.standard.bool(forKey: udKey.impossible_mode_on) {
+            Sound.play(audioPlayer: btnErorrSound)
+            let alert = AlertUtil()
+            alert.eroorMsg(title: NSLocalizedString("info", comment: ""), msg: NSLocalizedString("not_play_mode", comment: ""))
+            return
+        }
+        
+        Sound.play(audioPlayer: btnSelectSound)
+        app.selectedDiffculty = DifficultyType.impossible
+        transitionToPlay()
+        easyBtn.isHidden = true
+        normalBtn.isHidden = true
+        hardBtn.isHidden = true
+    }
+    
+    
     
     func transitionToPlay() {
         let vc = Util.getForegroundViewController()

@@ -142,6 +142,41 @@
         <key>interval</key>
         <real>0.75</real>
     </dict>
+    <key>21</key>
+    <dict>
+        <key>acceleration</key>
+        <real>2.1</real>
+        <key>interval</key>
+        <real>0.75</real>
+    </dict>
+    <key>22</key>
+    <dict>
+        <key>acceleration</key>
+        <real>2.2</real>
+        <key>interval</key>
+        <real>0.7</real>
+    </dict>
+    <key>23</key>
+    <dict>
+        <key>acceleration</key>
+        <real>2.3</real>
+        <key>interval</key>
+        <real>0.7</real>
+    </dict>
+    <key>24</key>
+    <dict>
+        <key>acceleration</key>
+        <real>2.4</real>
+        <key>interval</key>
+        <real>0.65</real>
+    </dict>
+    <key>25</key>
+    <dict>
+        <key>acceleration</key>
+        <real>2.5</real>
+        <key>interval</key>
+        <real>0.6</real>
+    </dict>
     
 </dict>
 </plist>

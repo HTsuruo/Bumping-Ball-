@@ -73,11 +73,11 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
     @IBAction func onClickOnePlayBtn(_ sender: UIButton) {
         Sound.play(audioPlayer: btnSound)
         app.selectedPlay = PlayType.one 
-        levelSelectView = LevelSelectView(frame: CGRect(x: 0, y: 0, width: CGFloat.WIDTH - (CGFloat.WIDTH * 0.33), height: CGFloat.HEIGHT - (CGFloat.HEIGHT * 0.37)))
+        levelSelectView = LevelSelectView(frame: CGRect(x: 0, y: 0, width: CGFloat.WIDTH - (CGFloat.WIDTH * 0.3), height: CGFloat.HEIGHT - (CGFloat.HEIGHT * 0.58)))
         levelSelectView.center = CGFloat.CENTER
         self.view.addSubview(levelSelectView)
         bkview.isHidden = false
-        levelSelectView.contentView.animate()
+        levelSelectView.startAnimation()
     }
     
     @IBAction func onClickSecondBtn(_ sender: UIButton) {

@@ -98,7 +98,7 @@
 "normal" = "ノーマル";
 
 /* No comment provided by engineer. */
-"not_play_hard_mode" = "まだハードモードでは遊べません";
+"not_play_mode" = "まだこのモードでは遊べません";
 
 /* No comment provided by engineer. */
 "otherSubTxt_1" = "数字の数だけ当てたら消せる";

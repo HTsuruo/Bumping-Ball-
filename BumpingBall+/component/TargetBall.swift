@@ -116,7 +116,12 @@ class TargetBall: SimpleTargetBall {
             break
         case BallType.green.rawValue:
             texture = SKTexture.init(imageNamed: ballImage.GREEN_3)
-            num = 3
+            let rand = Int(arc4random_uniform(2))
+            if rand == 0 {
+                num = 2
+            } else {
+                num = 3
+            }
             break
         case BallType.orange.rawValue:
             texture = SKTexture.init(imageNamed: ballImage.ORANGE_2)

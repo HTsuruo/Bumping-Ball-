@@ -66,9 +66,20 @@ class SceneViewController: UIViewController {
             return
         }
         
-        if app.selectedDiffculty == .hard {
+        switch app.selectedDiffculty {
+        case .easy:
+            app.level = 1
+            break
+        case .normal:
+            app.level = 1
+            break
+        case .hard:
             app.level = 10
-        } else {
+            break
+        case .impossible:
+            app.level = 15
+            break
+        default:
             app.level = 1
         }
     }
