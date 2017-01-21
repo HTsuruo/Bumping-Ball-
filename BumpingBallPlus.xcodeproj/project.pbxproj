@@ -45,6 +45,9 @@
 		561BA2131D699E25004FC052 /* swipeArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561BA2121D699E25004FC052 /* swipeArrow@2x.png */; };
 		561BCFF71D72EC5800766B36 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561BCFF61D72EC5800766B36 /* GameKit.framework */; };
 		561BCFFB1D72F9A400766B36 /* rankBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561BCFFA1D72F9A400766B36 /* rankBtn@2x.png */; };
+		561D9C351E332A5900281F04 /* blue_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561D9C341E332A5900281F04 /* blue_green@2x.png */; };
+		561D9C381E33349500281F04 /* blue_orange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561D9C361E33349500281F04 /* blue_orange@2x.png */; };
+		561D9C391E33349500281F04 /* blue_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 561D9C371E33349500281F04 /* blue_red@2x.png */; };
 		5630775E1DF2C90D00966F29 /* Bgm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5630775D1DF2C90C00966F29 /* Bgm.swift */; };
 		5632A6091DC738CB0064C498 /* ItemBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632A6081DC738CB0064C498 /* ItemBall.swift */; };
 		5635C2081DD8510F00C6AACE /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5635C2071DD8510F00C6AACE /* HelpViewController.swift */; };
@@ -273,6 +276,9 @@
 		561BA2121D699E25004FC052 /* swipeArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "swipeArrow@2x.png"; path = "img/touch_view/swipeArrow@2x.png"; sourceTree = SOURCE_ROOT; };
 		561BCFF61D72EC5800766B36 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		561BCFFA1D72F9A400766B36 /* rankBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rankBtn@2x.png"; path = "img/top/rankBtn@2x.png"; sourceTree = SOURCE_ROOT; };
+		561D9C341E332A5900281F04 /* blue_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "blue_green@2x.png"; path = "img/balls/mix/blue_green@2x.png"; sourceTree = SOURCE_ROOT; };
+		561D9C361E33349500281F04 /* blue_orange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "blue_orange@2x.png"; path = "img/balls/mix/blue_orange@2x.png"; sourceTree = SOURCE_ROOT; };
+		561D9C371E33349500281F04 /* blue_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "blue_red@2x.png"; path = "img/balls/mix/blue_red@2x.png"; sourceTree = SOURCE_ROOT; };
 		5630775D1DF2C90C00966F29 /* Bgm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bgm.swift; path = component/Bgm.swift; sourceTree = "<group>"; };
 		5632A6081DC738CB0064C498 /* ItemBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemBall.swift; path = component/ItemBall.swift; sourceTree = "<group>"; };
 		5635C2071DD8510F00C6AACE /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpViewController.swift; path = help/HelpViewController.swift; sourceTree = "<group>"; };
@@ -542,6 +548,16 @@
 				561BA20E1D69975D004FC052 /* touchView@2x.png */,
 			);
 			name = touch_view;
+			sourceTree = "<group>";
+		};
+		561D9C331E332A4F00281F04 /* mix */ = {
+			isa = PBXGroup;
+			children = (
+				561D9C361E33349500281F04 /* blue_orange@2x.png */,
+				561D9C371E33349500281F04 /* blue_red@2x.png */,
+				561D9C341E332A5900281F04 /* blue_green@2x.png */,
+			);
+			name = mix;
 			sourceTree = "<group>";
 		};
 		5635C2091DD8567500C6AACE /* help */ = {
@@ -934,6 +950,7 @@
 		56D160C21CC50E1B00257404 /* balls */ = {
 			isa = PBXGroup;
 			children = (
+				561D9C331E332A4F00281F04 /* mix */,
 				566D0CE71DCCC8AA0051BAD4 /* devil */,
 				56700B4F1DC715460099093D /* item */,
 				56BF57951CD7333A00923509 /* hasNumber */,
@@ -1234,6 +1251,7 @@
 				5669BD031DFBFAF800E08ECA /* level.plist in Resources */,
 				5613D4BD1DD05E7400B165E1 /* circle_green@2x.png in Resources */,
 				56F80F331E058844008A6AF7 /* tmp@2x.png in Resources */,
+				561D9C381E33349500281F04 /* blue_orange@2x.png in Resources */,
 				5666F82C1D645702001EFC57 /* ball_green_3@2x.png in Resources */,
 				5635C2181DD8979D00C6AACE /* gamecenterIcon@2x.png in Resources */,
 				566D0CE41DCCB7BF0051BAD4 /* spark_triangle@2x.png in Resources */,
@@ -1260,6 +1278,7 @@
 				56DDBD2E1DD6C30100CDBD27 /* bluetoothBtn@2x.png in Resources */,
 				56D160CB1CC50E2C00257404 /* ball_orange@2x.png in Resources */,
 				56C7254E1DD371CE00DFA113 /* combo_1@2x.png in Resources */,
+				561D9C391E33349500281F04 /* blue_red@2x.png in Resources */,
 				56E5FE441E03D562008EE4DD /* scale.plist in Resources */,
 				5666F81A1D643167001EFC57 /* helpBtn@2x.png in Resources */,
 				56DDBD471DD727D000CDBD27 /* ColorBallCell.xib in Resources */,
@@ -1325,6 +1344,7 @@
 				5666F83D1D646090001EFC57 /* one@2x.png in Resources */,
 				56B15EDD1E06A59800E81E92 /* high_score_stamp@2x.png in Resources */,
 				5635C20D1DD857BD00C6AACE /* colorBallListBtn@2x.png in Resources */,
+				561D9C351E332A5900281F04 /* blue_green@2x.png in Resources */,
 				56D160C81CC50E2C00257404 /* ball_blue@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

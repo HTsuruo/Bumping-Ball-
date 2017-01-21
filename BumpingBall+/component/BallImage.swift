@@ -37,4 +37,9 @@ struct ballImage {
     static let DEVIL_GREEN = "devil_green"
     static let DEVIL_ORANGE = "devil_orange"
     static let DEVIL_RED = "devil_red"
+    
+    //  mix ball
+    static let MIX_BLUE_GREEN = "blue_green"
+    static let MIX_BLUE_ORANGE = "blue_orange"
+    static let MIX_BLUE_RED = "blue_red"
 }
