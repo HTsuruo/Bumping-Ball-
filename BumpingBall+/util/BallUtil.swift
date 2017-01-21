@@ -146,6 +146,27 @@ class BallUtil {
         return SKAction.setTexture(texture, resize: false)
     }
     
+    func getBallImageForMix(_ playerBallId: Int, targetBall: SKNode) -> SKAction {
+        var texture = SKTexture.init()
+        let id = targetBall.userData?.value(forKey: "id") as! Int
+        if playerBallId == BallType.blue.rawValue {
+            switch BallType(rawValue: id)! as BallType {
+                case .green:
+                    texture = SKTexture.init(imageNamed: ballImage.GREEN)
+                case .orange:
+                    texture = SKTexture.init(imageNamed: ballImage.ORANGE)
+                case .red:
+                    texture = SKTexture.init(imageNamed: ballImage.RED)
+                default:
+                    break
+            }
+        } else {
+            texture = SKTexture.init(imageNamed: ballImage.BLUE)
+            targetBall.userData?.setValue(BallType.blue.rawValue, forKey: "id")
+        }
+        return SKAction.setTexture(texture, resize: false)
+    }
+    
     func getBlueBallImageByNum(_ num: Int) -> String {
         return "ball_blue_"+String(num)
     }
@@ -161,6 +182,7 @@ class BallUtil {
     func getRedBallImageByNum(_ num: Int) -> String {
         return "ball_red_"+String(num)
     }
+    
     
     func isInScaleRange(name: String, scale: Double) -> Bool {
         if let valdic: NSDictionary = scaledic?.object(forKey: name) as? NSDictionary {

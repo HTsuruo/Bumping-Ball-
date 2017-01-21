@@ -380,7 +380,15 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         let num = tBall.userData?.value(forKey: "num") as! Int
         let resNum = num - 1
         tBall.userData?.setValue(resNum, forKey: "num")
-        let action = ballUtil.getBallImageByNum(id, num: resNum)
+        
+        let mix = tBall.userData?.value(forKey: "mix") as! Bool
+        var action: SKAction! = nil
+        if mix {
+            let pBallId = pBall.userData?.value(forKey: "id") as! Int
+            action = ballUtil.getBallImageForMix(pBallId, targetBall: tBall)
+        } else {
+            action = ballUtil.getBallImageByNum(id, num: resNum)
+        }
         let scaleAnimation = animation.scaleAnimation(tBall)
         let group = SKAction.group([action, scaleAnimation])
         tBall.run(group)
