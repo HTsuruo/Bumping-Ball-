@@ -19,6 +19,7 @@ struct ballImage {
     
     //  has number ball
     static let BLUE_3 = "ball_blue_3"
+    static let BLUE_4 = "ball_blue_4"
     static let BLUE_5 = "ball_blue_5"
     static let GREEN_2 = "ball_green_2"
     static let GREEN_3 = "ball_green_3"

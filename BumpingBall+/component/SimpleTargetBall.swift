@@ -38,6 +38,7 @@ class SimpleTargetBall {
         self.ball.userData?.setValue(randNum, forKey: "id")
         self.ball.userData?.setValue(self.dx, forKey: "dx")
         self.ball.userData?.setValue(self.dy, forKey: "dy")
+        self.ball.userData?.setValue(false, forKey: "mix")
         
         setPhysicsBody()
         setRotate()

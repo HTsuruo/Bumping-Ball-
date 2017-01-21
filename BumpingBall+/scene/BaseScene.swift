@@ -288,8 +288,13 @@ class BaseScene: SKScene, SKPhysicsContactDelegate {
         let tId = targetId as! Int
         let isSame =  (myId as! Int == tId)
         
+        guard let mix = secondBody.node?.userData?.value(forKey: "mix") as? Bool else {
+            return
+        }
+        let isMixBlue = (mix && myId as! Int == BallType.blue.rawValue)
+        
         if !playerBall.isGold(firstBody.node!) {
-            if !isSame {
+            if !isSame && !isMixBlue {
                 return
             }
         }

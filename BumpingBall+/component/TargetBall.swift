@@ -21,12 +21,12 @@ class TargetBall: SimpleTargetBall {
             break
         case 1: // has number ball
             if app.selectedDiffculty.canCreateHasNumber() {
-                changeHasNumberBall(randNum)
+                changeToHasNumberBall(randNum)
             }
             break
         case 2:
             if app.selectedDiffculty.canCreateMix() {
-                changeMixBall(randNum)
+                changeToMixBall(randNum)
             }
             break
         default:
@@ -104,18 +104,27 @@ class TargetBall: SimpleTargetBall {
     }
     
     
-    func changeHasNumberBall(_ randNum: Int) {
+    func changeToHasNumberBall(_ randNum: Int) {
         var texture = SKTexture.init()
         var num = 1
         switch randNum {
         case BallType.blue.rawValue:
-            let rand = Util.getRandom(range: 2)
-            if rand == 0 {
-                texture = SKTexture.init(imageNamed: ballImage.BLUE_5)
-                num = 5
-            } else {
+            let rand = Util.getRandom(range: 3)
+            switch rand {
+            case 0:
                 texture = SKTexture.init(imageNamed: ballImage.BLUE_3)
                 num = 3
+                break
+            case 1:
+                texture = SKTexture.init(imageNamed: ballImage.BLUE_4)
+                num = 4
+                break
+            case 2:
+                texture = SKTexture.init(imageNamed: ballImage.BLUE_5)
+                num = 5
+                break
+            default:
+                break
             }
             break
         case BallType.green.rawValue:
@@ -140,7 +149,7 @@ class TargetBall: SimpleTargetBall {
         self.ball.userData?.setValue(num, forKey: "num")
     }
     
-    func changeMixBall(_ randNum: Int) {
+    func changeToMixBall(_ randNum: Int) {
         var texture = SKTexture.init()
         let num = 2
         switch randNum {
@@ -161,6 +170,7 @@ class TargetBall: SimpleTargetBall {
         let action = SKAction.setTexture(texture, resize: false)
         self.ball.run(action)
         self.ball.userData?.setValue(num, forKey: "num")
+        self.ball.userData?.setValue(true, forKey: "mix")
     }
     
 }
