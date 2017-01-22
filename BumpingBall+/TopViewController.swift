@@ -138,6 +138,7 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
         GameCenterUtil.sendScore(ud.integer(forKey: "highscore-easy"), leaderBoardId: DifficultyType.easy.getString())
         GameCenterUtil.sendScore(ud.integer(forKey: "highscore-normal"), leaderBoardId: DifficultyType.normal.getString())
         GameCenterUtil.sendScore(ud.integer(forKey: "highscore-hard"), leaderBoardId: DifficultyType.hard.getString())
+        GameCenterUtil.sendScore(ud.integer(forKey: "highscore-impossible"), leaderBoardId: DifficultyType.impossible.getString())
     }
     
     func popupBkInit() {
