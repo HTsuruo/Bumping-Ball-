@@ -76,7 +76,6 @@
 "connection_error_subtitle" = "Please try in an environment with good radio conditions";
 "enable_play_new_mode" = "Now, You can play %@ mode!!";
 "info" = "Info";
-"not_play_mode" = "You cannot play this mode yet";
 "update_info_title" = "Update Info";
 "update_info_subtitle" = "You can play Bumping Ball+ new version!! \nLet's update in app store!!";
 "update_yes" = "update now";
@@ -89,3 +88,7 @@
 "hard" = "hard";
 "impossible" = "impossible";
 "sns_message_with_score" = "Got %d bump.(%@)";
+
+//cannot play this mode
+"requirements" = "Requirements";
+"requirements_txt" = "In %@ mode, achieve over 【Level%d】";

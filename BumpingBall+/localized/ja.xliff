@@ -108,7 +108,7 @@
                 <source>$(PRODUCT_NAME)</source>
             </trans-unit>
             <trans-unit id="CFBundleShortVersionString">
-                <source>1.2.0</source>
+                <source>1.3.1</source>
             </trans-unit>
         </body>
     </file>
@@ -119,18 +119,18 @@
         <body>
             <trans-unit id="color_ball_section_1">
                 <source>color_ball_section_1</source>
-                <note>No comment provided by engineer.</note>
                 <target>カラーボール</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="color_ball_section_2">
                 <source>color_ball_section_2</source>
-                <note>No comment provided by engineer.</note>
                 <target>ちょっと変わったカラーボール</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="color_ball_section_3">
                 <source>color_ball_section_3</source>
-                <note>No comment provided by engineer.</note>
                 <target>アイテムボール</target>
+                <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="commonSubTxt_1">
                 <source>commonSubTxt_1</source>
@@ -199,7 +199,7 @@
             </trans-unit>
             <trans-unit id="enable_play_new_mode">
                 <source>enable_play_new_mode</source>
-                <target>%@モードが解放されました</target>
+                <target>%@モードが開放されました</target>
                 <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="error">
@@ -302,11 +302,6 @@
                 <target>ノーマル</target>
                 <note>No comment provided by engineer.</note>
             </trans-unit>
-            <trans-unit id="not_play_mode">
-                <source>not_play_mode</source>
-                <target>まだこのモードでは遊べません</target>
-                <note>No comment provided by engineer.</note>
-            </trans-unit>
             <trans-unit id="otherSubTxt_1">
                 <source>otherSubTxt_1</source>
                 <target>数字の数だけ当てたら消せる</target>
@@ -345,6 +340,16 @@
             <trans-unit id="otherTxt_4">
                 <source>otherTxt_4</source>
                 <target>ミックスボール</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="requirements">
+                <source>requirements</source>
+                <target>開放条件</target>
+                <note>No comment provided by engineer.</note>
+            </trans-unit>
+            <trans-unit id="requirements_txt">
+                <source>requirements_txt</source>
+                <target>%@モードで【Level%d】以上を達成する</target>
                 <note>No comment provided by engineer.</note>
             </trans-unit>
             <trans-unit id="setting_item_1">

@@ -93,7 +93,8 @@ class LevelSelectView: UIView {
         if !UserDefaults.standard.bool(forKey: udKey.hard_mode_on) {
             Sound.play(audioPlayer: btnErorrSound)
             let alert = AlertUtil()
-            alert.eroorMsg(title: NSLocalizedString("info", comment: ""), msg: NSLocalizedString("not_play_mode", comment: ""))
+            let msg = String(format: NSLocalizedString("requirements_txt", comment: ""), DifficultyType.normal.getLocalizedString(), define.REQUIRED_LEVEL_HARD)
+            alert.requirementsMode(title: NSLocalizedString("requirements", comment: ""), msg: msg, color: ColorUtil.hardmode)
             return
         }
         
@@ -109,7 +110,8 @@ class LevelSelectView: UIView {
         if !UserDefaults.standard.bool(forKey: udKey.impossible_mode_on) {
             Sound.play(audioPlayer: btnErorrSound)
             let alert = AlertUtil()
-            alert.eroorMsg(title: NSLocalizedString("info", comment: ""), msg: NSLocalizedString("not_play_mode", comment: ""))
+            let msg = String(format: NSLocalizedString("requirements_txt", comment: ""), DifficultyType.hard.getLocalizedString(), define.REQUIRED_LEVEL_IMPOSSIBLE)
+            alert.requirementsMode(title: NSLocalizedString("requirements", comment: ""), msg: msg, color: ColorUtil.impossiblemode)
             return
         }
         

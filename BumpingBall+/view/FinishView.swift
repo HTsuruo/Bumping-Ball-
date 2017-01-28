@@ -45,12 +45,15 @@ class FinishView: UIView {
     func setScoreLabel(_ totalScore: Int) {
         mainLabel.text = String(totalScore)
         let ud = UserDefaults.standard
-        let difficultyStr = app.selectedDiffculty.getString()
+        var difficultyStr = app.selectedDiffculty.getString()
         let highScore = ud.integer(forKey: "highscore-"+difficultyStr)
         if totalScore > highScore {
             ud.set(totalScore, forKey: "highscore-"+difficultyStr)
             if app.selectedPlay == .one && !DeviceUtil.inches_3_5() {
                 highScoreStamp.isHidden = false
+            }
+            if app.selectedDiffculty == DifficultyType.hard {
+                difficultyStr += "_2"
             }
             GameCenterUtil.sendScore(totalScore, leaderBoardId: difficultyStr)
         }

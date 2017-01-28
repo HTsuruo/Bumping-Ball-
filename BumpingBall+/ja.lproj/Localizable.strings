@@ -47,7 +47,7 @@
 "easy" = "イージー";
 
 /* No comment provided by engineer. */
-"enable_play_new_mode" = "%@モードが解放されました";
+"enable_play_new_mode" = "%@モードが開放されました";
 
 /* No comment provided by engineer. */
 "error" = "エラー";
@@ -110,9 +110,6 @@
 "normal" = "ノーマル";
 
 /* No comment provided by engineer. */
-"not_play_mode" = "まだこのモードでは遊べません";
-
-/* No comment provided by engineer. */
 "otherSubTxt_1" = "数字の数だけ当てたら消せる";
 
 /* No comment provided by engineer. */
@@ -135,6 +132,12 @@
 
 /* No comment provided by engineer. */
 "otherTxt_4" = "ミックスボール";
+
+/* No comment provided by engineer. */
+"requirements" = "開放条件";
+
+/* No comment provided by engineer. */
+"requirements_txt" = "%@モードで【Level%d】以上を達成する";
 
 /* No comment provided by engineer. */
 "setting_item_1" = "音楽";

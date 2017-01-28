@@ -30,6 +30,8 @@ struct define {
     static let VERSION_URL = "http://tsurutsuru.php.xdomain.jp/bumping_ball_plus/version.php"
     static let BASE_DEVICE_HEIGHT = 667.0
     static let BASE_DEVICE_INCH = 4.7
+    static let REQUIRED_LEVEL_HARD = 10
+    static let REQUIRED_LEVEL_IMPOSSIBLE = 15
 }
 
 struct Util {

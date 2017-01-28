@@ -137,7 +137,7 @@ class TopViewController: UIViewController, GKGameCenterControllerDelegate {
         let ud = UserDefaults.standard
         GameCenterUtil.sendScore(ud.integer(forKey: "highscore-easy"), leaderBoardId: DifficultyType.easy.getString())
         GameCenterUtil.sendScore(ud.integer(forKey: "highscore-normal"), leaderBoardId: DifficultyType.normal.getString())
-        GameCenterUtil.sendScore(ud.integer(forKey: "highscore-hard"), leaderBoardId: DifficultyType.hard.getString())
+        GameCenterUtil.sendScore(ud.integer(forKey: "highscore-hard"), leaderBoardId: DifficultyType.hard.getString() + "_2")
         GameCenterUtil.sendScore(ud.integer(forKey: "highscore-impossible"), leaderBoardId: DifficultyType.impossible.getString())
     }
     

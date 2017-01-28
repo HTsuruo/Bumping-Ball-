@@ -85,5 +85,16 @@ class AlertUtil: NSObject {
         icon?.addAttribute(NSForegroundColorAttributeName, value: UIColor.white)
         alertView.showCustom(title, subTitle: msg, color: ColorUtil.goldbk, icon: (icon?.image(with: size))!)
     }
+    
+    func requirementsMode(title: String, msg: String, color: UIColor) {
+        let appearance = SCLAlertView.SCLAppearance(
+            shouldAutoDismiss: false
+        )
+        let alertView = SCLAlertView(appearance: appearance)
+        let size = CGSize(width: 22, height: 22)
+        let icon = FAKFontAwesome.keyIcon(withSize:size.width)
+        icon?.addAttribute(NSForegroundColorAttributeName, value: UIColor.white)
+        alertView.showCustom(title, subTitle: msg, color: color, icon: (icon?.image(with: size))!)
+    }
 
 }

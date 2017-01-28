@@ -86,7 +86,7 @@ class OnePlayScene: BaseScene {
         if UserDefaults.standard.bool(forKey: udKey.hard_mode_on) {
             return
         }
-        if app.level < 10 {
+        if app.level < define.REQUIRED_LEVEL_HARD {
             return
         }
         UserDefaults.standard.set(true, forKey: udKey.hard_mode_on)
@@ -103,7 +103,7 @@ class OnePlayScene: BaseScene {
         if UserDefaults.standard.bool(forKey: udKey.impossible_mode_on) {
             return
         }
-        if app.level < 15 {
+        if app.level < define.REQUIRED_LEVEL_IMPOSSIBLE {
             return
         }
         UserDefaults.standard.set(true, forKey: udKey.impossible_mode_on)
